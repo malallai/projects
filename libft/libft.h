@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/10 17:48:33 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/10 17:55:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void				ft_putchar(char c); // TODO
 void				ft_putstr(char const *str); // TODO
 void				ft_putendl(char const *s); // TODO
 void				ft_putnbr(int n); // TODO
-void				ft_puthcar_fd(char c, int fd); // TODO
+void				ft_putchar_fd(char c, int fd); // TODO
 void				ft_putstr_fd(char const *s, int fd); // TODO
 void				ft_putendl_fd(char const *s, int fd); // TODO
 void				ft_putnbr_fd(int n, int fd); // TODO
