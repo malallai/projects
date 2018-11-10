@@ -1,0 +1,6 @@
+si size <= len dest
+	return len src + size
+sinon
+	strncat dest src size
+	return len src + len dest
+ 
