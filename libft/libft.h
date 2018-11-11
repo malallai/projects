@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/10 17:55:25 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/11 17:26:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,22 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle); // TODO
 char				*ft_strnstr(const char *haystack, const char *needle, size_t len); // TODO
-int					ft_strcmp(const char *s1, const char *s2); // TODO
-int					ft_strncmp(const char *s1, const char *s2, size_t n); // TODO
+int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str); // TODO
-int					ft_isalpha(int c); // TODO
-int					ft_isdigit(int c); // TODO
-int					ft_isalnum(int c); // TODO
-int					ft_isascii(int c); // TODO
-int					ft_isprint(int c); // TODO
-int					ft_toupper(int c); // TODO
-int					ft_tolower(int c); // TODO
-void				*ft_memalloc(size_t size); // TODO
-void				ft_memdel(void **ap); // TODO
-char				*ft_strnew(size_t size); // TODO
+int					ft_atoi_base(const char *str, int base); // TODO
+int					ft_isalpha(int c);
+int					ft_isdigit(int c);
+int					ft_isalnum(int c);
+int					ft_isascii(int c);
+int					ft_isprint(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
+void				*ft_memalloc(size_t size);
+void				ft_memdel(void **ap);
+char				*ft_strnew(size_t size);
 void				ft_strdel(char **as); // TODO
 void				ft_strclr(char *s); // TODO
 void				ft_striter(char *s, void (*f)(char *)); // TODO
