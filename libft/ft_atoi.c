@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:46:48 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/11 15:48:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:40:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int		ft_atoi(const char *str)
 {
+	char *t;
 
+	t = (char *)str;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:06:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 17:07:21 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:42:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-
+	(void)lst;
+	(void)(*f);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:54:41 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 16:59:18 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:41:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list next;
-
 	if (alst && *alst && *del)
 	{
 		while ((*alst)->next)

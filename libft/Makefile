@@ -65,7 +65,7 @@ SOURCES = \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
-	ft_toupper.c	
+	ft_toupper.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -80,10 +80,10 @@ SILENT_COLOR = \x1b[30;01m
 
 .PHONY: all re clean fclean
 
-all $(NAME)
+all: $(NAME)
 
-$(OBJECTS_FOLDER)%.o:
-	@$(CC) -c $(subst .o,.c,$(subst $(OBJECTS_FOLDER),$(SOURCES_FOLDER),$(subst __,/,$@))) -I$(INCLUDEFOLDERS) $(CFLAGS) -o $@
+%.o:
+	@$(CC) -c $(subst .o,.c,$(subst $(OBJECTS_FOLDER),$(SOURCES_FOLDER),$(subst __,/,$@))) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
 	@echo "$(OK_COLOR)✓$(NO_COLOR)"
 
 $(NAME): $(OBJECTS)
