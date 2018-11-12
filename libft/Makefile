@@ -1,4 +1,4 @@
-NAME = libft
+NAME = libft.a
 
 SOURCES_FOLDER = ./
 INCLUDES_FOLDER = ./
@@ -83,22 +83,22 @@ INFO_COLOR = \x1b[34;01m
 
 all: $(NAME)
 
+$(NAME): $(OBJECTS)
+	@echo "$(WARN_COLOR)Compiling LibFt..$(NO_COLOR)"
+	@ar rc $(NAME) $(OBJECTS)
+	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
+
 %.o:
 	@$(CC) -c $(subst .o,.c,$@) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
 	@printf "$(INFO_COLOR)$(subst .o,.c,$@).. $(NO_COLOR)"
 	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
-
-$(NAME): $(OBJECTS)
-	@echo "$(WARN_COLOR)Compiling LibFt..$(NO_COLOR)"
-	@ar rc $(NAME).a $(OBJECTS)
-	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
 
 clean:
 	@rm -f $(OBJECTS)
 	@echo "$(OK_COLOR)$(NAME) : Cleaned Objects.$(NO_COLOR)"
 
 fclean: clean
-	@rm -f $(NAME).a
+	@rm -f $(NAME)
 	@echo "$(OK_COLOR)$(NAME) : Cleaned Library.$(NO_COLOR)"
 
 re: fclean all

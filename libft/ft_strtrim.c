@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:12:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 15:23:36 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:15:40 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(char c)
+static int		ft_isspace(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t'
 		|| c == '\f' || c == '\v' || c == '\r')
@@ -36,5 +36,6 @@ char	*ft_strtrim(char const *s)
 	while (s[i] && ft_isspace(s[j]))
 		j--;
 	new = ft_strsub(s, i, j - i + 1);
+
 	return (new);
 }
