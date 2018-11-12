@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:12:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 14:06:08 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 15:23:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ char	*ft_strtrim(char const *s)
 	j = ft_strlen(s) - 1;
 	while (s[i] && ft_isspace(s[j]))
 		j--;
-	ft_strsub(s, i, j - i);
+	new = ft_strsub(s, i, j - i + 1);
 	return (new);
 }
