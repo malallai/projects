@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:24:55 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 11:25:28 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:49:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*new_s;
+	char	*new_s;
 	int				i;
 
 	if (!s || !f)
@@ -24,7 +24,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (*s)
 	{
-		new_s[i] = (*f)(i++, *s);
+		new_s[i] = (*f)(i, *s);
+		i++;
 		s++;
 	}
 	new_s[i] = '\0';

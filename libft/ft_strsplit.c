@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 16:21:01 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:49:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	tab[index] = NULL;
 	return (tab);
-}
-
-int		main(int argc, char **argv)
-{
-	char **t;
-
-	t = ft_strsplit(argv[1], *argv[2]);
-	while (*t)
-		printf("%s\n", *t++);
-	return (0);
 }

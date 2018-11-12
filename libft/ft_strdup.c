@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:35:22 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/08 16:40:25 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:43:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(char *src)
 	char	*dest;
 
 	size = ft_strlen(src);
-	if (!(dest = (char *)malloc(sizeof(char) * (size + 1)))
+	if (!(dest = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	ft_strcpy(src, dest);
 	return (dest);
