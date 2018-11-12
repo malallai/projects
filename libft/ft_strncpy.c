@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 13:17:47 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/10 13:52:51 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/12 15:17:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	unsigned char *t_dst;
+	char	*t_dst;
+	int		i;
 
 	if (!dst || !src)
-		return (0);
-	t_dst = (unsigned char*)dst;
+		return (NULL);
+	t_dst = (char*)dst;
+	i = 0;
 	while (*src && n-- > 0)
-		*t_dst++ = *src++;
-	while (n-- > 0)
-		*t_dst++ = '\0';
+		t_dst[i++] = *src++;
+	t_dst[i] = '\0';
 	return (t_dst);
 }
