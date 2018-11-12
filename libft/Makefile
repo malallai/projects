@@ -83,7 +83,8 @@ SILENT_COLOR = \x1b[30;01m
 all: $(NAME)
 
 %.o:
-	@$(CC) -c $(subst .o,.c,$(subst $(OBJECTS_FOLDER),$(SOURCES_FOLDER),$(subst __,/,$@))) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
+	@$(CC) -c $(subst .o,.c,$@) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
+	@printf "$(SILENT_COLOR)$(subst .o,.c,$@)..$(NO_COLOR)"
 	@echo "$(OK_COLOR)✓$(NO_COLOR)"
 
 $(NAME): $(OBJECTS)
