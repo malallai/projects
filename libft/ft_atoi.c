@@ -14,8 +14,6 @@
 
 int		ft_atoi(const char *str)
 {
-	char *t;
-
-	t = (char *)str;
+	(void)str;
 	return (0);
 }

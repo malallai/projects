@@ -14,8 +14,6 @@
 
 int		ft_atoi_base(const char *str, int base)
 {
-	char *t;
-
-	t = (char *)str;
+	(void)str;
 	return (base);
 }
