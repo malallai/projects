@@ -89,13 +89,18 @@ $(NAME): $(OBJECTS)
 	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
 
 %.o:
-	@$(CC) -c -fPIC $(subst .o,.c,$@) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
+	@$(CC) -c $(subst .o,.c,$@) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
 	@printf "$(INFO_COLOR)$(subst .o,.c,$@).. $(NO_COLOR)"
 	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
 
-so: $(OBJECTS)
+so%.o:
+	@$(CC) -c -fPIC $(subst .o,.c,$(subst so,  ,$@)) -I$(INCLUDES_FOLDER) $(FLAGS)
+	@printf "$(INFO_COLOR)$(subst .o,.c,$(subst so,  ,$@)).. $(NO_COLOR)"
+	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
+
+so: so$(OBJECTS)
 	@echo "$(WARN_COLOR)Compiling LibFt.. So$(NO_COLOR)"
-	@$(CC) $(FLAGS) -shared -fPIC -o libft.so ./*.o
+	@$(CC) $(FLAGS) -shared -fPIC -o $(subst .a,.so,$(NAME)) $(OBJECTS)
 	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
 
 clean:

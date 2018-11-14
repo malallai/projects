@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new;
+	/*char *new;
 	char *t_s1;
 	char *t_s2;
 	char nullchar = '\0';
@@ -30,6 +30,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!(new = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
 	ft_strcpy(new, s1);
-	ft_strcpy(new + ft_strlen(s1), s2);
-	return (new);
+	ft_strcpy(new + ft_strlen(s1), s2);*/
+	(void)s1;
+	(void)s2;
+	return (NULL);
 }
