@@ -1,10 +1,11 @@
 NAME = libft.a
 
 SOURCES_FOLDER = ./
-INCLUDES_FOLDER = ./
-OBJECTS_FOLDER = ./
+INCLUDES_FOLDER = .
+OBJECTS_FOLDER = objs/
 
 SOURCES = \
+	ft_abs.c \
 	ft_atoi.c \
 	ft_atoi_base.c \
 	ft_bzero.c \
@@ -69,33 +70,34 @@ SOURCES = \
 
 OBJECTS = $(SOURCES:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -fPIC
 CC = clang
 
 NO_COLOR =		\033[38;5;0m
-OK_COLOR =		\033[38;5;32m
-ERROR_COLOR =	\033[38;5;31m
-WARN_COLOR =	\033[38;5;33m
-SILENT_COLOR = \033[38;5;30m
-INFO_COLOR = \033[38;5;34m
+OK_COLOR =		\033[38;5;2m
+ERROR_COLOR =	\033[38;5;1m
+WARN_COLOR =	\033[38;5;3m
+SILENT_COLOR = \033[38;5;245m
+INFO_COLOR = \033[38;5;45m
 
-.PHONY: all re clean fclean
+.PHONY: all re clean fclean so
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@echo "$(WARN_COLOR)Compiling LibFt..$(NO_COLOR)"
 	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
 	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
 
-%.o:
-	@$(CC) -c -fPIC $(subst .o,.c,$@) -I$(INCLUDES_FOLDER) $(FLAGS) -o $@
-	@printf "$(INFO_COLOR)$(subst .o,.c,$@).. $(NO_COLOR)"
+%.o: %.c
+	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
+	@printf "$(INFO_COLOR)$<$(SILENT_COLOR)\t➤ $(INFO_COLOR)$@ $(NO_COLOR)"
 	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
 
 so: $(OBJECTS)
-	@echo "$(WARN_COLOR)Compiling LibFt.. So$(NO_COLOR)"
-	@$(CC) $(FLAGS) -shared -fPIC -o libft.so ./*.o
+	@echo "$(WARN_COLOR)Compiling LibFt as dynamic library..$(NO_COLOR)"
+	@$(CC) $(FLAGS) -shared -o $(subst .a,.so,$(NAME)) $(OBJECTS)
 	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 09:47:04 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/10 14:02:03 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 14:18:41 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memccpy(void *restrict d, const void *restrict s, int c, size_t n)
 	unsigned char		*t_d;
 	unsigned const char	*t_s;
 
-	if (!d || !s)
-		return (NULL);
 	ch = (unsigned char)c;
 	t_d = (unsigned char*)d;
 	t_s = (unsigned char*)s;

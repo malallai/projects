@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:34:15 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 12:43:37 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:20:52 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	if (c && fd)
-		write(fd, &c, 1);
+	write(fd, &c, 1);
 }
