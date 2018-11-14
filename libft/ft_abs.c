@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/11 16:32:25 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 12:36:56 by malallai         ###   ########.fr       */
+/*   Created: 2018/11/14 15:13:24 by malallai          #+#    #+#             */
+/*   Updated: 2018/11/14 15:13:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int		ft_abs(int i)
 {
-	if (c && ft_islower(c))
-		return (c - 32);
-	return (c);
+	if (i < 0)
+		return (-i);
+	return (i);
 }

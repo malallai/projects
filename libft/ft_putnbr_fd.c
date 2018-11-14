@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:36:39 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 12:45:12 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:18:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
-	if (n && fd)
-	{
-		nbr = n;
-		if (n < 0)
-			ft_putchar_fd('-', fd);
-		if (nbr >= 10)
-			ft_putnbr_fd(nbr / 10, fd);
-		ft_putchar_fd(nbr % 10 + 48, fd);
-	}
+	nbr = ft_abs(n);
+	if (n < 0)
+		ft_putchar_fd('-', fd);
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd((nbr % 10) + 48, fd);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 18:08:58 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 16:21:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	ft_getwordsize(char const *s, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		index;
@@ -53,7 +53,7 @@ char	**ft_strsplit(char const *s, char c)
 	if (!(tab = malloc(sizeof(char *) * words)))
 		return (NULL);
 	index = 0;
-	temp = (char *)s;
+	temp = ft_strdup(s);
 	while (index < words)
 	{
 		temp = ft_strtrim(temp);

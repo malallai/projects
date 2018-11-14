@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:34:46 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 12:45:52 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:22:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char const *str, int fd)
 {
-	if (str && fd)
+	if (str)
 	{
 		while (*str)
 			ft_putchar_fd(*str++, fd);

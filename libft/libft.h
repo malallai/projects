@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 15:34:55 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:14:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *src);
 char				*ft_strcat(char *restrict dst, const char *restrict src);
 char				*ft_strncat(char *restrict dst, const char *restrict src,
 					size_t n);
 size_t				ft_strlcat(char *restrict dst, const char *restrict src,
-					size_t size); // TODO
+					size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
@@ -49,8 +49,8 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-int					ft_atoi(const char *str); // TODO
-int					ft_atoi_base(const char *str, int base); // TODO
+int					ft_atoi(const char *str);
+int					ft_atoi_base(const char *str, int base);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -60,6 +60,7 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_abs(int i);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -74,9 +75,9 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-char				**ft_strsplit(char const *s1, char c); // TODO
-char				*ft_itoa(int n); // TODO
-char				*ft_itoa_base(int n, int base); // TODO
+char				**ft_strsplit(char const *s1, char c);
+char				*ft_itoa(int n);
+char				*ft_itoa_base(int n, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 void				ft_putendl(char const *s);
