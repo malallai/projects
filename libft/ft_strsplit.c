@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/15 15:10:29 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/15 19:00:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,26 @@ static size_t	ft_getwordsize(char const *s, char c)
 	return (count);
 }
 
+static char		*ft_trimchar(char *s, char c)
+{
+	char	*new;
+	int		i;
+	int		j;
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	j = ft_strlen(s) - 1;
+	while (s[i] && s[i] == c)
+		i++;
+	if (i == j + 1)
+		i = 0;
+	while (s[j] == c)
+		j--;
+	new = ft_strsub(s, i, j - i + 1);
+	return (new);
+}
+
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
@@ -53,7 +73,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!(tab = malloc(sizeof(char *) * ft_countwords(s, c))))
 		return (NULL);
 	index = 0;
-	temp = ft_strtrim(ft_strdup(s));
+	temp = ft_trimchar(ft_strdup(s), c);
 	while (index < ft_countwords(s, c))
 	{
 		i = 0;
@@ -61,8 +81,7 @@ char			**ft_strsplit(char const *s, char c)
 			return (NULL);
 		while (*temp && *temp != c)
 			tab[index][i++] = *temp++;
-		while (*temp == c)
-			temp++;
+		temp = ft_trimchar(ft_strdup(temp), c);
 		tab[index++][i] = '\0';
 	}
 	tab[index] = NULL;

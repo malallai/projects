@@ -6,34 +6,47 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:02:22 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/15 17:36:09 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:51:24 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	ft_len(int n)
+{
+	int		i;
+
+	i = (n < 0 ? 1 : 0);
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char		*ft_itoa(int n)
 {
 	char	*result;
 	int		temp;
 	size_t	i;
 	int		r;
-	int		index;
 
-	i = (n < 0 ? 1 : 0);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
+	i = ft_len(n);
 	temp = ft_abs(n);
-	while (temp /= 10 != 0)
-		i++;
-	index = i - 1;
-	result = ft_strnew(i);
+	if (!(result = ft_strnew(i)))
+		return (NULL);
 	if (n < 0)
 		result[0] = '-';
 	while (temp != 0)
 	{
 		r = temp % 10;
-		result[index--] = r + 48;
+		result[--i] = r + 48;
 		temp /= 10;
 	}
-	result[i] = '\0';
 	return (result);
 }
