@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 15:14:04 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/15 16:02:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_isspace(char c);
 int					ft_abs(int i);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
