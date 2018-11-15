@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 17:01:51 by malallai         ###   ########.fr       */
+/*   Created: 2018/11/13 15:43:52 by malallai          #+#    #+#             */
+/*   Updated: 2018/11/14 17:19:26 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	ft_getwordsize(char const *s, char c)
 	return (count);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**strsplittest(char const *s, char c)
 {
 	char	**tab;
 	int		index;
@@ -67,3 +67,31 @@ char			**ft_strsplit(char const *s, char c)
 	tab[index] = NULL;
 	return (tab);
 }
+
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
+int		main(void)
+{
+	char t[1024] = "Lorem ipsum dolor sit met";
+	char **tab;
+	int i;
+	
+	i = 0;
+	tab = strsplittest(t, 'i');
+	while (tab[i] != '\0')
+	{
+		ft_print_result(tab[i]);
+		write(1, "\n", 1);
+		i++;
+	}
+	return (0);
+}
+
