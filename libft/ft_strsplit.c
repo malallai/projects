@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 17:01:51 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:10:29 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,23 +45,24 @@ char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		index;
-	int		words;
 	char	*temp;
 	int		i;
 
-	words = ft_countwords(s, c);
-	if (!(tab = malloc(sizeof(char *) * words)))
+	if (!s)
+		return (NULL);
+	if (!(tab = malloc(sizeof(char *) * ft_countwords(s, c))))
 		return (NULL);
 	index = 0;
-	temp = ft_strdup(s);
-	while (index < words)
+	temp = ft_strtrim(ft_strdup(s));
+	while (index < ft_countwords(s, c))
 	{
-		temp = ft_strtrim(temp);
 		i = 0;
 		if (!(tab[index] = ft_strnew(ft_getwordsize(temp, c))))
 			return (NULL);
 		while (*temp && *temp != c)
 			tab[index][i++] = *temp++;
+		while (*temp == c)
+			temp++;
 		tab[index++][i] = '\0';
 	}
 	tab[index] = NULL;
