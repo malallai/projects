@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_trimchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:12:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/16 12:38:28 by malallai         ###   ########.fr       */
+/*   Created: 2018/11/16 12:35:06 by malallai          #+#    #+#             */
+/*   Updated: 2018/11/16 12:36:38 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *str)
+char	*ft_trimchar(char *str, char c)
 {
 	char	*new;
 	int		i;
@@ -22,11 +22,11 @@ char	*ft_strtrim(char const *str)
 		return (NULL);
 	i = 0;
 	j = ft_strlen(str) - 1;
-	while (str[i] && ft_isspace(str[i]))
+	while (str[i] && str[i] == c)
 		i++;
 	if (i == j + 1)
 		i = 0;
-	while (ft_isspace(str[j]))
+	while (str[j] == c)
 		j--;
 	new = ft_strsub(str, i, j - i + 1);
 	return (new);

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/15 19:00:30 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/16 12:38:55 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,26 +39,6 @@ static size_t	ft_getwordsize(char const *s, char c)
 	while (*s && *s++ != c)
 		count++;
 	return (count);
-}
-
-static char		*ft_trimchar(char *s, char c)
-{
-	char	*new;
-	int		i;
-	int		j;
-
-	if (!s)
-		return (NULL);
-	i = 0;
-	j = ft_strlen(s) - 1;
-	while (s[i] && s[i] == c)
-		i++;
-	if (i == j + 1)
-		i = 0;
-	while (s[j] == c)
-		j--;
-	new = ft_strsub(s, i, j - i + 1);
-	return (new);
 }
 
 char			**ft_strsplit(char const *s, char c)

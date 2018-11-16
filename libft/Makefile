@@ -67,6 +67,7 @@ SOURCES = \
 	ft_strtrim.c \
 	ft_tolower.c \
 	ft_toupper.c \
+	ft_trimchar.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 
