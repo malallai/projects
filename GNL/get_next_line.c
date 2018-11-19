@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 20:00:25 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 20:01:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int			get_next_line(const int fd, char **line)
 	//static t_list	file;
 	//int				i;
 	int				r;
-	char			*tmp;
+	static char		*tmp;
 
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
