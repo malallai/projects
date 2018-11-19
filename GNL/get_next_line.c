@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 19:43:27 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:45:09 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_copyuntil(char **dst, char *src, char c)
 
 int			get_next_line(const int fd, char **line)
 {
-	char			buff[BUFF_SIZE + 1];
+	char			buff[BUFF_SIZE];
 	//static t_list	file;
 	//int				i;
 	int				r;
