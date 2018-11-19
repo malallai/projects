@@ -32,7 +32,7 @@ $(NAME): libft $(OBJECTS)
 	@echo "$(WARN_COLOR)$(NAME) successfully compiled. $(OK_COLOR)✓$(NO_COLOR)"
 
 libft:
-	@make -C libft re
+	@make -C libft
 
 $(OBJECTS_FOLDER)%.o: %.c
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
