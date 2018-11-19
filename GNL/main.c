@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/10 13:17:47 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 15:04:39 by malallai         ###   ########.fr       */
+/*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
+/*   Updated: 2018/11/19 14:52:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <get_next_line.h>
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+int main(int argc, char **argv)
 {
-	size_t		i;
-	size_t		len;
+	int		fd;
 
-	if (!dest || !src)
-		return (NULL);
-	i = 0;
-	len = ft_strlen(src);
-	while (i < n)
+	if (argc == 2)
 	{
-		if (i < len)
-			dest[i] = src[i];
-		else
-			dest[i] = '\0';
-		i++;
+		fd = open(argv[1], O_RDONLY);
+		get_next_line(fd, NULL);
 	}
-	return (dest);
+	return (0);
 }
