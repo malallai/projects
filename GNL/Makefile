@@ -27,7 +27,7 @@ INFO_COLOR =	\033[38;5;45m
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): libft $(OBJECTS)
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
 	@echo "$(WARN_COLOR)$(NAME) successfully compiled. $(OK_COLOR)✓$(NO_COLOR)"
 
