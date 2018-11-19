@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 19:58:06 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:58:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int			get_next_line(const int fd, char **line)
 	}
 	ft_copyuntil(line, tmp, '\n');
 	printf("Line '%s'\n", *line);
-	//printf("tmp '%s'\n", tmp);
+	tmp[ft_strlen(tmp)] = '\0';
+	printf("tmp '%s'\n", tmp);
 	return (1);
 }
