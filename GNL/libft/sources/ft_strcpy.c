@@ -6,16 +6,18 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:41:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 15:52:05 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:54:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (src[i])
 	{

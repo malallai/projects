@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/16 12:38:55 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:52:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static int		ft_countwords(char const *s, char c)
 {
@@ -41,6 +41,14 @@ static size_t	ft_getwordsize(char const *s, char c)
 	return (count);
 }
 
+static void		**ft_freetab(char **tab, int index)
+{
+	while (index-- != 0)
+		free(tab[index]);
+	free(tab);
+	return (NULL);
+}
+
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
@@ -58,7 +66,7 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		i = 0;
 		if (!(tab[index] = ft_strnew(ft_getwordsize(temp, c))))
-			return (NULL);
+			return ((char **)ft_freetab(tab, index));
 		while (*temp && *temp != c)
 			tab[index][i++] = *temp++;
 		temp = ft_trimchar(ft_strdup(temp), c);

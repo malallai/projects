@@ -6,17 +6,19 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:46:48 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/15 15:58:27 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 13:04:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int		ft_atoi(const char *str)
 {
 	int r;
 	int inf;
 
+	if (!str)
+		return (0);
 	r = 0;
 	inf = 1;
 	while (*str && (*str == '\n' || *str == '\f'

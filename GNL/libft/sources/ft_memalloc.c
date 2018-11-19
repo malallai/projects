@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 16:18:50 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/11 16:57:21 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:17:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	*ft_memalloc(size_t size)
 {

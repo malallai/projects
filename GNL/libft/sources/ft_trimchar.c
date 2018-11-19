@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 12:35:06 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/16 12:36:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:17:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_trimchar(char *str, char c)
 {

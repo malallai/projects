@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:34:46 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 15:22:32 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:17:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_putstr_fd(char const *str, int fd)
 {

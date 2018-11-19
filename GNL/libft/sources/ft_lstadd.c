@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:59:39 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 15:24:47 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:17:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_lstadd(t_list **alst, t_list *new_list)
 {

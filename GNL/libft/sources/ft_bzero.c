@@ -6,16 +6,18 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:21:12 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:47 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:52:15 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	char *str;
 
+	if (!s)
+		return ;
 	str = (char *)s;
 	ft_memset(str, '\0', n);
 }
