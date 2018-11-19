@@ -41,10 +41,10 @@ SOURCES = \
 	ft_putstr.c \
 	ft_putstr_fd.c \
 	ft_strcat.c \
+	ft_strccpy.c \
 	ft_strchr.c \
 	ft_strclr.c \
 	ft_strcmp.c \
-	ft_strccpy.c \
 	ft_strcpy.c \
 	ft_strdel.c \
 	ft_strdup.c \
