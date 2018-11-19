@@ -6,16 +6,18 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:07:50 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/12 15:04:56 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:50:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 size_t	ft_strlen(const char *s)
 {
 	int i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (*s++)
 		i++;

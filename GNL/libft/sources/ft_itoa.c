@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:02:22 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/15 18:51:24 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 12:17:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static int	ft_len(int n)
 {
