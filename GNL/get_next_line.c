@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 19:45:09 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:50:27 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,17 @@ int			get_next_line(const int fd, char **line)
 	//static t_list	file;
 	//int				i;
 	int				r;
-	t_list			*lst;
+	char			*tmp;
 
 	lst = ft_lstnew(NULL, 0);
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
 		buff[r] = '\0';
-		lst->content = ft_strjoin(lst->content, buff);
+		tmp = ft_strjoin(tmp, buff);
 		if (ft_strchr(buff, '\n'))
 			break;
 	}
-	ft_copyuntil(line, lst->content, '\n');
+	ft_copyuntil(line, tmp, '\n');
 	printf("%s\n", *line);
 	return (1);
 }
