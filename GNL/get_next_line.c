@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 19:50:27 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:51:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int			get_next_line(const int fd, char **line)
 	int				r;
 	char			*tmp;
 
-	lst = ft_lstnew(NULL, 0);
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
 		buff[r] = '\0';
