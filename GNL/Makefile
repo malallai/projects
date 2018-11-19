@@ -23,7 +23,7 @@ WARN_COLOR =	\033[38;5;3m
 SILENT_COLOR =	\033[38;5;245m
 INFO_COLOR =	\033[38;5;45m
 
-.PHONY: all re clean fclean
+.PHONY: all re clean fclean libft
 
 all: $(NAME)
 
