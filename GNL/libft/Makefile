@@ -1,4 +1,5 @@
 NAME = libft.a
+PROJECT_NAME = LibFt
 
 SOURCES_FOLDER = sources/
 INCLUDES_FOLDER = includes/
@@ -81,18 +82,17 @@ NO_COLOR =		\033[38;5;0m
 OK_COLOR =		\033[38;5;2m
 ERROR_COLOR =	\033[38;5;1m
 WARN_COLOR =	\033[38;5;3m
-SILENT_COLOR = \033[38;5;245m
-INFO_COLOR = \033[38;5;45m
+SILENT_COLOR =	\033[38;5;245m
+INFO_COLOR =	\033[38;5;45m
 
 .PHONY: all re clean fclean so
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	@echo "$(WARN_COLOR)Compiling LibFt..$(NO_COLOR)"
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
-	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
+	@echo "$(WARN_COLOR)$(NAME) successfully compiled. $(OK_COLOR)✓$(NO_COLOR)"
 
 $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
@@ -100,17 +100,16 @@ $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
 	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
 
 so: $(OBJECTS)
-	@echo "$(WARN_COLOR)Compiling LibFt as dynamic library..$(NO_COLOR)"
 	@$(CC) $(FLAGS) -shared -o $(subst .a,.so,$(NAME)) $(OBJECTS)
-	@echo "$(OK_COLOR)Successful. ✓$(NO_COLOR)"
+	@echo "$(WARN_COLOR)$(subst .a,.so,$(NAME)) successfully compiled. $(OK_COLOR)✓$(NO_COLOR)"
 
 clean:
 	@rm -f $(OBJECTS)
-	@echo "$(OK_COLOR)$(NAME) : Cleaned Objects.$(NO_COLOR)"
+	@echo "$(WARN_COLOR)$(PROJECT_NAME) $(SILENT_COLOR): $(WARN_COLOR)Clean $(OK_COLOR)✓.$(NO_COLOR)"
 
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(subst .a,.so,$(NAME))
-	@echo "$(OK_COLOR)$(NAME) : Cleaned Library.$(NO_COLOR)"
+	@echo "$(WARN_COLOR)$(PROJECT_NAME) $(SILENT_COLOR): $(WARN_COLOR)Fclean $(OK_COLOR)✓.$(NO_COLOR)"
 
 re: fclean all
