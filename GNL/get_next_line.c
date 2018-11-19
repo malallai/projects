@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 15:22:30 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:25:38 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,16 @@
 
 static int	ft_copyuntil(char **dst, char *src, char c)
 {
+	int		i;
 
+	i = -1;
+	while (src[++i])
+		if (src[i] == c)
+			break ;
+	if (!(*dst = ft_strnew(i)))
+		return (0);
+	ft_strccpy(*dst, src, c);
+	return (i);
 }
 
 int			get_next_line(const int fd, char **line)
@@ -25,7 +34,6 @@ int			get_next_line(const int fd, char **line)
 	int				r;
 	t_list			*lst;
 
-	(void)line;
 	lst = ft_lstnew(NULL, 0);
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
