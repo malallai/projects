@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:07:50 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 12:50:59 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 12:49:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

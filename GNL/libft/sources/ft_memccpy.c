@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 09:47:04 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 12:49:29 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *restrict d, const void *restrict s, int c, size_t n)
 {
