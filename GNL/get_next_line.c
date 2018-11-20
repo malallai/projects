@@ -6,11 +6,47 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 14:11:36 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 18:19:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+static void	*ft_memalloc(size_t size)
+{
+	void *t;
+
+	if (!(t = malloc(size)) || size == 0)
+		return (NULL);
+	ft_bzero(t, size);
+	return (t);
+}
+
+
+static t_list	*ft_lstnew(void const *content, size_t content_size)
+{
+	t_list *new_list;
+
+	if (!(new_list = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (content)
+	{
+		if (!(new_list->content = ft_memalloc(content_size)))
+		{
+			free(new_list);
+			return (NULL);
+		}
+		ft_memcpy(new_list->content, content, content_size);
+		new_list->content_size = content_size;
+	}
+	else
+	{
+		new_list->content = NULL;
+		new_list->content_size = 0;
+	}
+	new_list->next = NULL;
+	return (new_list);
+}
 
 static t_list		*ft_getfile(t_list **files, int fd)
 {
@@ -44,32 +80,58 @@ static size_t		ft_copyuntil(char **dst, char *src, char c)
 	return (i);
 }
 
+static int			ft_free(t_list **files, int fd)
+{
+	t_list *tmp;
+	t_list *t;
+
+	tmp = *files;
+	while (tmp)
+	{
+		if ((int)tmp->content_size == fd)
+		{
+			t->next = tmp->next;
+			free(tmp->content);
+			free(tmp);
+			*files = t;
+			break ;
+		}
+		t = tmp;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
 int					get_next_line(const int fd, char **line)
 {
 	char			buff[BUFF_SIZE + 1];
 	static t_list	*files;
-	int				r;
+	size_t			r;
 	t_list			*list;
-	size_t			cpyret;
+	char			*tmp;
 
-	if (fd < 0 || line == NULL || read(fd, buff, 0) < 0)
-		return (-1);
-	if (!(list = ft_getfile(&files, fd)))
+	if (fd < 0 || line == NULL || read(fd, buff, 0) < 0
+		|| !(list = ft_getfile(&files, fd)))
 		return (-1);
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
 		buff[r] = '\0';
-		if (!(list->content = ft_strjoin(list->content, buff)))
+		if (!(list->content = ft_strjoin((tmp = ft_strdup(list->content)), buff)))
+		{
+			free(tmp);
 			return (-1);
+		}
+		free(tmp);
 		if (ft_strchr(buff, '\n'))
 			break ;
 	}
 	if (r < BUFF_SIZE && !ft_strlen(list->content))
-		return (0);
-	cpyret = ft_copyuntil(line, list->content, '\n');
-	if (cpyret < ft_strlen(list->content))
-		list->content = list->content + cpyret + 1;
+		return (ft_free(&files, fd));
+	r = ft_copyuntil(line, (tmp = ft_strdup(list->content)), '\n');
+	if (r < ft_strlen(list->content))
+		list->content = list->content + r + 1;
 	else
 		ft_bzero(list->content, ft_strlen(list->content));
+	free(tmp);
 	return (1);
 }
