@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/19 19:20:44 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 13:41:16 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
-char				*ft_strccpy(char *dest, const char *src, char c);
 char				*ft_strdup(const char *src);
 char				*ft_strcat(char *restrict dst, const char *restrict src);
 char				*ft_strncat(char *restrict dst, const char *restrict src,

@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:46:21 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 14:11:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_next_line.h>
+#include "get_next_line.h"
 
 static t_list		*ft_getfile(t_list **files, int fd)
 {
@@ -23,7 +23,8 @@ static t_list		*ft_getfile(t_list **files, int fd)
 			return (tmp);
 		tmp = tmp->next;
 	}
-	tmp = ft_lstnew("\0", fd);
+	if (!(tmp = ft_lstnew("\0", fd)))
+		return (NULL);
 	ft_lstadd(files, tmp);
 	tmp = *files;
 	return (tmp);
@@ -39,13 +40,13 @@ static size_t		ft_copyuntil(char **dst, char *src, char c)
 			break ;
 	if (!(*dst = ft_strnew(i)))
 		return (0);
-	ft_strccpy(*dst, src, c);
+	ft_strncpy(*dst, src, i);
 	return (i);
 }
 
 int					get_next_line(const int fd, char **line)
 {
-	char			buff[BUFF_SIZE];
+	char			buff[BUFF_SIZE + 1];
 	static t_list	*files;
 	int				r;
 	t_list			*list;
@@ -53,7 +54,8 @@ int					get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL || read(fd, buff, 0) < 0)
 		return (-1);
-	list = ft_getfile(&files, fd);
+	if (!(list = ft_getfile(&files, fd)))
+		return (-1);
 	while ((r = read(fd, buff, BUFF_SIZE)))
 	{
 		buff[r] = '\0';
@@ -62,7 +64,7 @@ int					get_next_line(const int fd, char **line)
 		if (ft_strchr(buff, '\n'))
 			break ;
 	}
-	if (r == 0)
+	if (r < BUFF_SIZE && !ft_strlen(list->content))
 		return (0);
 	cpyret = ft_copyuntil(line, list->content, '\n');
 	if (cpyret < ft_strlen(list->content))
