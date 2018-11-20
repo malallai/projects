@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:23:25 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 17:46:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	if (content)
 	{
 		if (!(new_list->content = ft_memalloc(content_size)))
+		{
+			free(new_list);
 			return (NULL);
+		}
 		ft_memcpy(new_list->content, content, content_size);
 		new_list->content_size = content_size;
 	}
