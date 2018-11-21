@@ -6,47 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 18:19:46 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 23:15:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-static void	*ft_memalloc(size_t size)
-{
-	void *t;
-
-	if (!(t = malloc(size)) || size == 0)
-		return (NULL);
-	ft_bzero(t, size);
-	return (t);
-}
-
-
-static t_list	*ft_lstnew(void const *content, size_t content_size)
-{
-	t_list *new_list;
-
-	if (!(new_list = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	if (content)
-	{
-		if (!(new_list->content = ft_memalloc(content_size)))
-		{
-			free(new_list);
-			return (NULL);
-		}
-		ft_memcpy(new_list->content, content, content_size);
-		new_list->content_size = content_size;
-	}
-	else
-	{
-		new_list->content = NULL;
-		new_list->content_size = 0;
-	}
-	new_list->next = NULL;
-	return (new_list);
-}
 
 static t_list		*ft_getfile(t_list **files, int fd)
 {

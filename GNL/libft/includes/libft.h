@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 18:08:07 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/20 22:02:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isspace(char c);
 int					ft_abs(int i);
-//void				*ft_memalloc(size_t size);
+void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
@@ -88,7 +88,7 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-//t_list				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new_list);
