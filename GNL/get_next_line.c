@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 14:41:37 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 15:29:16 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ static t_list		*ft_getfile(int fd)
 		}
 		tmp = tmp->next;
 	}
-	if (!(tmp = ft_lstnew("\0", fd)))
+	if (!(tmp = ft_lstnew("\0", 1)))
 		return (NULL);
+	tmp->content_size = fd;
 	ft_lstadd(&files, tmp);
 	tmp = files;
 	return (tmp);

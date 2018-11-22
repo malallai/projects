@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 17:06:45 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 14:41:45 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_next_line.h>
+#include "get_next_line.h"
 
 int main(int argc, char **argv)
 {
@@ -47,10 +47,12 @@ int main(int argc, char **argv)
 	else if (argc == 2)
 	{
 		fd = open(argv[1], O_RDONLY);
-		get_next_line(fd, &line);
+		while (get_next_line(fd, &line) == 1)
+		{
+			ft_putendl(line);
+			free(line);
+		}
 		close(fd);
-		sleep(15);
-		while (1);
 	}
 	return (0);
 }
