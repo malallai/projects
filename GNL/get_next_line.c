@@ -6,26 +6,16 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/11/22 13:01:24 by malallai         ###   ########.fr       */
-=======
-/*   Updated: 2018/11/20 23:15:23 by malallai         ###   ########.fr       */
->>>>>>> 9ee428cd5a8e8fe70165fea22e5544d533aa5655
+/*   Updated: 2018/11/22 13:07:03 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-<<<<<<< HEAD
 static t_list		*ft_getfile(int fd)
 {
 	t_list			*tmp;
 	static t_list	*files;
-=======
-static t_list		*ft_getfile(t_list **files, int fd)
-{
-	t_list *tmp;
->>>>>>> 9ee428cd5a8e8fe70165fea22e5544d533aa5655
 
 	tmp = files;
 	while (tmp)
