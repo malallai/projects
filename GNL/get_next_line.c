@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 17:18:30 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 17:28:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static int			ft_cpy(t_list *list, char *buff)
 static void			ft_check(t_list *list, size_t r)
 {
 	char	*tmp;
-	size_t 	len;
+	size_t	len;
 
 	if (r < ft_strlen(list->content))
 	{
@@ -65,6 +65,7 @@ static void			ft_check(t_list *list, size_t r)
 		tmp = ft_strdup(list->content);
 		free(list->content);
 		list->content = ft_strsub(tmp, r + 1, len);
+		free(tmp);
 	}
 	else
 		ft_bzero(list->content, ft_strlen(list->content));
