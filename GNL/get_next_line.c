@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 13:07:03 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 14:41:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ static t_list		*ft_getfile(int fd)
 	while (tmp)
 	{
 		if ((int)tmp->content_size == fd)
+		{
 			return (tmp);
+		}
 		tmp = tmp->next;
 	}
 	if (!(tmp = ft_lstnew("\0", fd)))
@@ -29,26 +31,6 @@ static t_list		*ft_getfile(int fd)
 	ft_lstadd(&files, tmp);
 	tmp = files;
 	return (tmp);
-}
-
-static size_t		ft_copyuntil(char **dst, char *src, char c)
-{
-	size_t		i;
-
-	i = -1;
-	while (src[++i])
-		if (src[i] == c)
-			break ;
-	if (!(*dst = ft_strnew(i)))
-		return (0);
-	ft_strncpy(*dst, src, i);
-	return (i);
-}
-
-static int			ft_free(t_list *list)
-{
-	free(list->content);
-	return (0);
 }
 
 static int			ft_cpy(t_list *list, char *buff)
@@ -66,34 +48,48 @@ static int			ft_cpy(t_list *list, char *buff)
 		free(tmp);
 		return (0);
 	}
-	list->content = ft_strcpy(list->content, tmp);
+	ft_strcpy(list->content, tmp);
 	free(tmp);
 	return (1);
 }
 
-int					get_next_line(const int fd, char **line)
+static void			ft_check(t_list *list, size_t r)
 {
-	char			buff[BUFF_SIZE + 1];
+	char *tmp;
+
+	if (r < ft_strlen(list->content))
+	{
+		tmp = list->content;
+		free(list->content);
+		list->content = ft_strdup(tmp + r + 1);
+	}
+	else
+		ft_bzero(list->content, ft_strlen(list->content));
+}
+
+int					get_next_line(const int f, char **line)
+{
+	char			b[BUFF_SIZE + 1];
 	size_t			r;
 	t_list			*list;
 
-	if (fd < 0 || line == NULL || read(fd, buff, 0) < 0
-		|| !(list = ft_getfile(fd)))
+	if (f < 0 || read(f, b, 0) < 0 || !(list = ft_getfile(f)))
 		return (-1);
-	while ((r = read(fd, buff, BUFF_SIZE)))
+	while ((r = read(f, b, BUFF_SIZE)))
 	{
-		buff[r] = '\0';
-		if (!(ft_cpy(list, buff)))
+		b[r] = '\0';
+		if (!(ft_cpy(list, b)))
 			return (-1);
-		if (ft_strchr(buff, '\n'))
+		if (ft_strchr(b, '\n'))
 			break ;
 	}
 	if (r < BUFF_SIZE && !ft_strlen(list->content))
-		return (ft_free(list));
+	{
+		free(list->content);
+		list->content_size = -1;
+		return (0);
+	}
 	r = ft_copyuntil(line, list->content, '\n');
-	if (r < ft_strlen(list->content))
-		list->content = list->content + r + 1;
-	else
-		ft_bzero(list->content, ft_strlen(list->content));
+	ft_check(list, r);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 13:06:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 13:18:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct		s_list
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
+size_t				ft_copyuntil(char **dst, char *src, char c);
 void				*ft_memcpy(void *restrict dst, const void *restrict src,
 					size_t n);
 void				*ft_memccpy(void *restrict dst, const void *restrict src,
