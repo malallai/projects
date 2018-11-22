@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 15:29:16 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 15:44:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int					get_next_line(const int f, char **line)
 	size_t			r;
 	t_list			*list;
 
-	if (f < 0 || read(f, b, 0) < 0 || !(list = ft_getfile(f)))
+	if (f < 0 || line == NULL || read(f, b, 0) < 0 || !(list = ft_getfile(f)))
 		return (-1);
 	while ((r = read(f, b, BUFF_SIZE)))
 	{
