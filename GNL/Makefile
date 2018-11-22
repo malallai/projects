@@ -35,7 +35,7 @@ libft:
 	@make -C libft
 
 $(OBJECTS_FOLDER)%.o: %.c
-	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
+	@$(CC) -v $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
 	@printf "$(INFO_COLOR)$<$(SILENT_COLOR)\t➤ $(INFO_COLOR)$@ $(NO_COLOR)"
 	@echo "$(OK_COLOR)✓ $(NO_COLOR)"
 
