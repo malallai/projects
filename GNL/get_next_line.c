@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 15:44:37 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 16:50:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ static void			ft_check(t_list *list, size_t r)
 {
 	char *tmp;
 
+	printf("===============================================\n");
+	printf(" == AVANT '%s' == \n", list->content);
 	if (r < ft_strlen(list->content))
 	{
 		tmp = list->content;
@@ -66,6 +68,8 @@ static void			ft_check(t_list *list, size_t r)
 	}
 	else
 		ft_bzero(list->content, ft_strlen(list->content));
+	printf(" == APRES '%s' == \n", list->content);
+	printf("===============================================\n");
 }
 
 int					get_next_line(const int f, char **line)
