@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:06:33 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 14:24:07 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 14:44:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	n = '\0';
 	if (!s1)
-	{
-		ft_putendl("CONTENT RESET");
 		s1 = &n;
-	}
 	if (!s2)
 		s2 = &n;
 	size = ft_strlen(s1) + ft_strlen(s2);
