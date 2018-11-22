@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 16:50:01 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/22 17:18:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,20 +56,18 @@ static int			ft_cpy(t_list *list, char *buff)
 
 static void			ft_check(t_list *list, size_t r)
 {
-	char *tmp;
+	char	*tmp;
+	size_t 	len;
 
-	printf("===============================================\n");
-	printf(" == AVANT '%s' == \n", list->content);
 	if (r < ft_strlen(list->content))
 	{
-		tmp = list->content;
+		len = ft_strlen(tmp) - r - 1;
+		tmp = ft_strdup(list->content);
 		free(list->content);
-		list->content = ft_strdup(tmp + r + 1);
+		list->content = ft_strsub(tmp, r + 1, len);
 	}
 	else
 		ft_bzero(list->content, ft_strlen(list->content));
-	printf(" == APRES '%s' == \n", list->content);
-	printf("===============================================\n");
 }
 
 int					get_next_line(const int f, char **line)
