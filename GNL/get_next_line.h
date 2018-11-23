@@ -13,7 +13,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "/Users/malallai/42/projects/GNL/libft/includes/libft.h"
+# include "~/42/projects/GNL/libft/includes/libft.h"
 
 # define BUFF_SIZE 4096
 
