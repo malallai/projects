@@ -79,7 +79,7 @@ SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 FLAGS = -Wall -Wextra -Werror -fPIC
 CC = clang
 
-NO_COLOR =		\033[38;5;0m
+NO_COLOR =		\033[38;5;15m
 OK_COLOR =		\033[38;5;2m
 ERROR_COLOR =	\033[38;5;1m
 WARN_COLOR =	\033[38;5;3m
