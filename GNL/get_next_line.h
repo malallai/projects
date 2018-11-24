@@ -6,14 +6,14 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:18:36 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 17:27:08 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:49:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "/root/42/projects/GNL/libft/includes/libft.h"
+# include "/Users/malallai/42/projects/GNL/libft/includes/libft.h"
 
 # define BUFF_SIZE 4096
 
