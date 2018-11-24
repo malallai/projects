@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/24 13:39:23 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/24 14:05:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,36 +25,41 @@ static int		ft_getfile(char *f)
 	return (fd);
 }
 
-int main(void)
+static void		ft_readfile(char *file)
 {
 	int		fd;
 	int		output;
+	int 	r;
+	char	*line;
+
+	output = ft_getfile(file);
+	fd = open(file, O_RDONLY);
+
+	while ((r = get_next_line(fd, &line)) == 1)
+	{
+		write(output, line, ft_strlen(line));
+		write(output, "\n", 1);
+	}
+	if (r < 0)
+		printf("%s>> %s%s%*sFAIL!%s\n", WARN_COLOR, NO_COLOR, file, 30 - ft_strlen(file), ERROR_COLOR, NO_COLOR);
+	else
+		printf("%s>> %s%s\t%sOK!%s\n", WARN_COLOR, NO_COLOR, file, OK_COLOR, NO_COLOR);
+	close(fd);
+	close(output);
+}
+
+int main(void)
+{
+
 	/*int		global_output;
 	int		diff;
 	int		diff_file_size;*/
-	char	*line;
 	char	*files[4] = {"lorem.txt", "tiny_file.txt", "large_file.txt", "big_file.txt"};
 	int		i = 0;
-	int		r = 0;
 
 	while (i < 4)
 	{
-		output = ft_getfile(files[i]);
-		fd = open(files[i], O_RDONLY);
-
-		while ((r = get_next_line(fd, &line)) == 1)
-		{
-			write(output, line, ft_strlen(line));
-			write(output, "\n", 1);
-		}
-
-		if (r < 0)
-			printf("%s>> %s%s\t%sFAIL!%s\n", WARN_COLOR, NO_COLOR, files[i], ERROR_COLOR, NO_COLOR);
-		else
-			printf("%s>> %s%s\t%sOK!%s\n", WARN_COLOR, NO_COLOR, files[i], OK_COLOR, NO_COLOR);
-
-		close(fd);
-		close(output);
+		ft_readfile(files[i]);
 		i++;
 	}
 	/*if (argc == 3)
