@@ -6,32 +6,58 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/24 11:32:14 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/24 13:39:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "testgnl.h"
 
-int main(int argc, char **argv)
+static int		ft_getfile(char *f)
+{
+	int fd;
+	char *output = "outputs/";
+	char *tmp = ft_strjoin(output, f);
+	output = ".output.log";
+	output = ft_strjoin(tmp, output);
+	fd = open(output, O_CREAT | O_RDWR | O_TRUNC, 0755);
+	free(output);
+	free(tmp);
+	return (fd);
+}
+
+int main(void)
 {
 	int		fd;
 	int		output;
+	/*int		global_output;
 	int		diff;
-	int		diff_file_size;
+	int		diff_file_size;*/
 	char	*line;
-	output = open("output.txt", O_CREAT | O_RDWR | O_TRUNC, 0755);
-	int		array[10] = {1, 8, 16, 32, 64, 128, 512, 1024, 2048, 4096};
+	char	*files[4] = {"lorem.txt", "tiny_file.txt", "large_file.txt", "big_file.txt"};
+	int		i = 0;
+	int		r = 0;
 
-	/* Basic test */
-	int i = 0;
-	while (i < 10)
+	while (i < 4)
 	{
-		system("sed -i '' -e \"s|TESTED_DIR.*=.*|TESTED_DIR = $TEST_PATH\/GNL\/gnl_testerizer\/gnl|\" Makefile");
+		output = ft_getfile(files[i]);
+		fd = open(files[i], O_RDONLY);
+
+		while ((r = get_next_line(fd, &line)) == 1)
+		{
+			write(output, line, ft_strlen(line));
+			write(output, "\n", 1);
+		}
+
+		if (r < 0)
+			printf("%s>> %s%s\t%sFAIL!%s\n", WARN_COLOR, NO_COLOR, files[i], ERROR_COLOR, NO_COLOR);
+		else
+			printf("%s>> %s%s\t%sOK!%s\n", WARN_COLOR, NO_COLOR, files[i], OK_COLOR, NO_COLOR);
+
+		close(fd);
+		close(output);
 		i++;
 	}
-	
-
-	if (argc == 3)
+	/*if (argc == 3)
 	{
 		fd = open(argv[1], O_RDONLY);
 		ft_putchar('\n');
@@ -80,6 +106,6 @@ int main(int argc, char **argv)
     diff_file_size = read(fd4, NULL, 10);
     close(fd3);
     close(fd4);
-	printf("%d\n", diff_file_size);
+	printf("%d\n", diff_file_size);*/
 	return (0);
 }
