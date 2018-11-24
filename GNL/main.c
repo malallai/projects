@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/24 10:47:58 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/24 11:32:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,25 @@
 int main(int argc, char **argv)
 {
 	int		fd;
-	int 	fd2;
-	int		fd3;
-	int		fd4;
+	int		output;
+	int		diff;
 	int		diff_file_size;
 	char	*line;
-	fd3 = open("output.txt", O_CREAT | O_RDWR | O_TRUNC, 0755);
+	output = open("output.txt", O_CREAT | O_RDWR | O_TRUNC, 0755);
+	int		array[10] = {1, 8, 16, 32, 64, 128, 512, 1024, 2048, 4096};
+
+	/* Basic test */
+	int i = 0;
+	while (i < 10)
+	{
+		system("sed -i '' -e \"s|TESTED_DIR.*=.*|TESTED_DIR = $TEST_PATH\/GNL\/gnl_testerizer\/gnl|\" Makefile");
+		i++;
+	}
+	
 
 	if (argc == 3)
 	{
 		fd = open(argv[1], O_RDONLY);
-		fd2 = open(argv[2], O_RDONLY);
-
 		ft_putchar('\n');
 		while (get_next_line(fd, &line) == 1)
 		{
@@ -34,14 +41,15 @@ int main(int argc, char **argv)
 			free(line);
 		}
 		ft_putchar('\n');
-		while (get_next_line(fd2, &line) == 1)
+		close(fd);
+		
+		while (get_next_line(fd, &line) == 1)
 		{
 			ft_putendl(line);
 			free(line);
 		}
 
 		close(fd);
-		close(fd2);
 	}
 	else if (argc == 2)
 	{
