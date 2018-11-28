@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/28 16:22:24 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/28 17:17:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static t_list		*ft_getfile(int fd)
 	static t_list	*files;
 
 	tmp = files;
+	if (fd && tmp && (int)tmp->content_size == fd)
+		return (tmp);
 	while (tmp)
 	{
 		if ((int)tmp->content_size == fd)
@@ -35,21 +37,15 @@ static t_list		*ft_getfile(int fd)
 static int			ft_cpy(t_list *list, char *buff)
 {
 	char	*tmp;
-	int		r;
 
-	r = 1;
 	if ((tmp = ft_strjoin(list->content, buff)))
 	{
 		free(list->content);
-		if ((list->content = ft_strnew(ft_strlen(tmp))))
-			ft_strcpy(list->content, tmp);
-		else
-			r = 0;
+		list->content = tmp;
 	}
 	else
-		r = 0;
-	free(tmp);
-	return (r);
+		return (0);
+	return (1);
 }
 
 static void			ft_check(t_list *list, size_t r)
@@ -66,16 +62,15 @@ static void			ft_check(t_list *list, size_t r)
 		free(tmp);
 	}
 	else
-		free(list->content);
+		((char *)list->content)[0] = '\0';
 }
 
 int					get_next_line(const int f, char **line)
 {
-	char			*b;
+	char			b[BUFF_SIZE + 1];
 	size_t			r;
 	t_list			*list;
 
-	b = ft_strnew(BUFF_SIZE);
 	if (f < 0 || line == NULL || read(f, b, 0) < 0 || !(list = ft_getfile(f)))
 		return (-1);
 	while ((r = read(f, b, BUFF_SIZE)))
@@ -83,11 +78,8 @@ int					get_next_line(const int f, char **line)
 		b[r] = '\0';
 		if (!(ft_cpy(list, b)))
 			return (-1);
-		if (r < BUFF_SIZE)
-		{
-			if (ft_strchr(b, '\n'))
-				break ;
-		}
+		if (ft_strchr(b, '\n'))
+			break ;
 	}
 	if (r < BUFF_SIZE && !ft_strlen(list->content))
 	{
