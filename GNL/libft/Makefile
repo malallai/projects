@@ -86,9 +86,12 @@ WARN_COLOR =	\033[38;5;3m
 SILENT_COLOR =	\033[38;5;245m
 INFO_COLOR =	\033[38;5;140m
 
-.PHONY: all re clean fclean so
+.PHONY: all re clean fclean so createdir
 
-all: $(NAME)
+all: createdir $(NAME)
+
+createdir:
+	@mkdir $(OBJECTS_FOLDER)
 
 $(NAME): $(OBJECTS)
 	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
