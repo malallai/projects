@@ -98,7 +98,7 @@ $(NAME): $(OBJECTS)
 
 $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
-	@printf "$(NO_COLOR)Creating $(INFO_COLOR)$@ $(OK_COLOR)✓ $(NO_COLOR)\r"
+	@printf "$(NO_COLOR)Creating $(INFO_COLOR)%-30s $(OK_COLOR)✓$(NO_COLOR)\r" "$@"
 
 clean:
 	@rm -f $(OBJECTS)

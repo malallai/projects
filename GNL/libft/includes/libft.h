@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 13:18:23 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/28 15:03:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <fcntl.h>
 
 typedef struct		s_list
 {

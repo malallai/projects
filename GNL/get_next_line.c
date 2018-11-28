@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/22 17:28:06 by malallai         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:48:20 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ static t_list		*ft_getfile(int fd)
 	while (tmp)
 	{
 		if ((int)tmp->content_size == fd)
-		{
 			return (tmp);
-		}
 		tmp = tmp->next;
 	}
 	if (!(tmp = ft_lstnew("\0", 1)))
