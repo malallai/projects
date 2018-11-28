@@ -91,7 +91,7 @@ INFO_COLOR =	\033[38;5;140m
 all: createdir $(NAME)
 
 createdir:
-	@mkdir $(OBJECTS_FOLDER)
+	@mkdir -p $(OBJECTS_FOLDER)
 
 $(NAME): $(OBJECTS)
 	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
