@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/06 22:29:19 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/07 11:40:58 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int main(int argc, char **argv)
 			ft_putendl(line);
 			free(line);
 		}
+		free(line);
 		close(fd);
 		//ft_putnbr(r);
 		//ft_putendl("");

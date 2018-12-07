@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/06 22:40:15 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/07 12:00:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,34 +26,34 @@ static int		get_line(int fd, char *buffer, char *files[fd])
 		if (ft_strchr(buffer, '\n'))
 			break;
 	}
-	if (buffer)
-		ft_strdel(&buffer);
+	ft_strdel(&buffer);
 	return (ret == -1 ? 0 : 1);
 }
 
-int				get_next_line(const int f, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	static char		*files[0];
-	char			*b;
+	char			*buffer;
 	char			*temp;
 	char			*temp2;
 
-	b = ft_strnew(BUFF_SIZE);
-	if (f < 0 || line == NULL || b == NULL || BUFF_SIZE < 1)
+	buffer = ft_strnew(BUFF_SIZE);
+	if (fd < 0 || line == NULL || buffer == NULL || BUFF_SIZE < 1)
 		return (-1);
-	if (!files[f])
-		files[f] = ft_strnew(1);
-	if (get_line(f, b, files) == 0)
+	if (!files[fd])
+		files[fd] = ft_strnew(1);
+	if (!get_line(fd, buffer, files))
 		return (-1);
-	if ((temp = ft_strchr(files[f], '\n')))
+	if ((temp = ft_strchr(files[fd], '\n')))
 	{
-		*line = ft_strsub(files[f], 0, temp - files[f]);
-		temp2 = files[f];
-		files[f] = ft_strdup(temp + 1);
+		*line = ft_strsub(files[fd], 0, temp - files[fd]);
+		temp2 = files[fd];
+		files[fd] = ft_strdup(temp + 1);
 		ft_strdel(&temp2);
 		return (1);
 	}
-	*line = ft_strdup(files[f]);
-	files[f] = NULL;
+	*line = ft_strdup(files[fd]);
+	ft_strdel(&files[fd]);
+	ft_strdel(files);
 	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
