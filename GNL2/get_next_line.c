@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/07 12:00:46 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/07 13:26:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int		get_line(int fd, char *buffer, char *files[fd])
 		files[fd] = ft_strjoin(temp, buffer);
 		ft_strdel(&temp);
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
 	ft_strdel(&buffer);
 	return (ret == -1 ? 0 : 1);
@@ -54,6 +54,5 @@ int				get_next_line(const int fd, char **line)
 	}
 	*line = ft_strdup(files[fd]);
 	ft_strdel(&files[fd]);
-	ft_strdel(files);
 	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
