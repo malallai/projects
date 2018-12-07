@@ -6,28 +6,28 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/07 13:26:05 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/07 14:36:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static int		get_line(int fd, char *buffer, char *files[fd])
+static int		get_line(int fd, char *buffer, char **file)
 {
-	int		ret;
+	int		r;
 	char	*temp;
 
-	while ((ret = read(fd, buffer, BUFF_SIZE)) > 0)
+	while ((r = read(fd, buffer, BUFF_SIZE)) > 0)
 	{
-		buffer[ret] = '\0';
-		temp = files[fd];
-		files[fd] = ft_strjoin(temp, buffer);
+		buffer[r] = '\0';
+		temp = *file;
+		*file = ft_strjoin(temp, buffer);
 		ft_strdel(&temp);
 		if (ft_strchr(buffer, '\n'))
 			break ;
 	}
 	ft_strdel(&buffer);
-	return (ret == -1 ? 0 : 1);
+	return (r == -1 ? 0 : 1);
 }
 
 int				get_next_line(const int fd, char **line)
@@ -42,7 +42,7 @@ int				get_next_line(const int fd, char **line)
 		return (-1);
 	if (!files[fd])
 		files[fd] = ft_strnew(1);
-	if (!get_line(fd, buffer, files))
+	if (!get_line(fd, buffer, &files[fd]))
 		return (-1);
 	if ((temp = ft_strchr(files[fd], '\n')))
 	{
