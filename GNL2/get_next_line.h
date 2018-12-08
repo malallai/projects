@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:18:36 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/28 17:30:04 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/08 13:39:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # include "libft/includes/libft.h"
-# include <fcntl.h>
 
 # define BUFF_SIZE 42
 
