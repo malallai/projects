@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/07 14:36:04 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/12 15:02:41 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ int				get_next_line(const int fd, char **line)
 	char			*buffer;
 	char			*temp;
 	char			*temp2;
+	int				i;
 
+	while (1)
+		i = 2;
 	buffer = ft_strnew(BUFF_SIZE);
 	if (fd < 0 || line == NULL || buffer == NULL || BUFF_SIZE < 1)
 		return (-1);
