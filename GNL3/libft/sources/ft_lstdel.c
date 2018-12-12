@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:54:41 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/12 14:15:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (alst && *alst && *del)
-	{
-		while ((*alst)->next)
-		{
-			(*del)((*alst)->content, (*alst)->content_size);
-			free(*alst);
-			*alst = (*alst)->next;
-		}
-		ft_lstdelone(alst, (*del));
-	}
+	if (!alst)
+		return ;
+	while ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(alst, del);
 }
