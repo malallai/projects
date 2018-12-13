@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:21:12 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/13 15:18:57 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *str;
-
-	if (!s)
-		return ;
-	str = (char *)s;
 	ft_memset(str, '\0', n);
 }

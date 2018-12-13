@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:29:59 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/13 15:20:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	*ft_memset(void *str, int a, size_t len)
 {
 	char *temp;
 
-	if (!str)
-		return (NULL);
 	temp = str;
-	while (len-- > 0)
-		*temp++ = (unsigned char)a;
+	while (len--)
+		*temp[n] = (unsigned char)a;
 	return (str);
 }
