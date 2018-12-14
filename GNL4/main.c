@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:40 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/14 13:34:19 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/14 14:15:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,54 +16,53 @@
 #include <time.h>
 
 int			global_print = 1;
-int			output_print = 1;
+int			output_print = 0;
+
 int			w = 0;
+
 int			testulimit = 0;
 int			ul = 15;
+
 int			single_fd = 0;
 
-static void print_multifd(char *str, int fd1, int fd2)
+static void print_multifd(char *str, int fd, int force)
 {
-	if (global_print)
-		ft_putstr_fd(str, fd1);
 	if (output_print)
-		ft_putstr_fd(str, fd2);
+		ft_putstr_fd(str, fd);
+	if (global_print || force)
+		ft_putstr_fd(str, 1);
+}
+
+static void print_nbr_multifd(int nbr, int fd, int force)
+{
+	char *t = ft_itoa(nbr);
+	print_multifd(t, fd, force);
+	free(t);
 }
 
 static void	put_line(char *line, int output, int fd, int r)
 {
-	char *t1 = ft_itoa(r);
-	char *t2 = ft_itoa(fd);
-
-	print_multifd(t1, output, 1);
-	print_multifd(" FD = ", output, 1);
-	print_multifd(t2, output, 1);
-	print_multifd(" | Line : ", output, 1);
-	print_multifd(line, output, 1);
-	print_multifd("\n", output, 1);
-	
-	free(t1);
-	free(t2);
+	print_nbr_multifd(r, output, 0);
+	print_multifd(" FD = ", output, 0);
+	print_nbr_multifd(fd, output, 0);
+	print_multifd(" | Line : ", output, 0);
+	print_multifd(line, output, 0);
+	print_multifd("\n", output, 0);
 	free(line);
 }
 
-
 static void put_ulimit(char *line, int output, int fd, int r)
 {
-	char *t1 = ft_itoa(fd);
-
-	print_multifd("Test ulimit for FD = ", output, 1);
-	print_multifd(t1, output, 1);
-	print_multifd("\n", output, 1);
+	print_multifd("Test ulimit for FD = ", output, 0);
+	print_nbr_multifd(fd, output, 0);
+	print_multifd("\n", output, 0);
 	if (r == 1 || r == 0)
 	{
 		put_line(line, output, fd, r);
-		print_multifd("OK!\n", output, 1);
+		print_multifd("OK!\n", output, 0);
 	}
 	else
-		print_multifd("ERROR!\n", output, 1);
-	
-	free(t1);
+		print_multifd("ERROR!\n", output, 0);
 }
 
 int 		main(int argc, char **argv)
@@ -86,9 +85,9 @@ int 		main(int argc, char **argv)
 		output = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0666);
 	}
 
-	ft_putstr("BUFF_SIZE = ");
-	ft_putnbr(BUFF_SIZE);
-	ft_putendl("");
+	print_multifd("BUFF_SIZE = ", output, 1);
+	print_nbr_multifd(BUFF_SIZE, output, 1);
+	print_multifd("\n", output, 1);
 
 	if (!testulimit)
 	{
@@ -129,7 +128,6 @@ int 		main(int argc, char **argv)
 			tf = ft_strjoin("testulimit/", t);
 
 			h[g] = open(tf, O_RDWR | O_CREAT | O_TRUNC, 0666);
-			write(h[g], "testtowpajtpo\n", 14);
 			write(h[g], t, ft_strlen(t));
 			close(h[g]);
 			h[g] = open(tf, O_RDONLY);
@@ -154,9 +152,9 @@ int 		main(int argc, char **argv)
 		free(file);
 		close(output);
 	}
-	ft_putstr("Final return = ");
-	ft_putnbr(r);
-	ft_putendl("");
+	print_multifd("Final return = ", output, 1);
+	print_nbr_multifd(r, output, 1);
+	print_multifd("\n", output, 1);
 	if (w)
 		while (1)
 			;
