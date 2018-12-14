@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:18:36 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/13 15:37:35 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/14 13:32:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include "libft/includes/libft.h"
 
-# define BUFF_SIZE 50000
+# define BUFF_SIZE 1024
+# define FDLIMIT 493
 
 int	get_next_line(const int fd, char **line);
 
