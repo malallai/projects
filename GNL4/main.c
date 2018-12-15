@@ -15,15 +15,15 @@
 #include <fcntl.h>
 #include <time.h>
 
-int			global_print = 1;
+int			global_print = 0;
 int			output_print = 0;
 
 int			w = 0;
 
-int			testulimit = 0;
-int			ul = 15;
+int			testulimit = 1;
+int			ul = 500;
 
-int			single_fd = 0;
+int			single_fd = 600;
 
 static void print_multifd(char *str, int fd, int force)
 {
