@@ -16,7 +16,7 @@
 # include "libft/includes/libft.h"
 
 # define BUFF_SIZE 1024
-# define FDLIMIT 493
+# define FDLIMIT 1500
 
 int	get_next_line(const int fd, char **line);
 
