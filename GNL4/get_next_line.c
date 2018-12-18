@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/15 17:52:11 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/16 14:31:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,6 @@ int				get_next_line(const int fd, char **line)
 	printf("Test : %d\n", fd);
 	if (!files[fd])
 		files[fd] = ft_strnew(1);
-	printf("tt : '%s'\n", files[fd]);
-	printf("%p : ", files[fd]);
-	printf("%zu\n", ft_strlen(files[fd]));
 	if (!get_line(fd, buffer, &files[fd]))
 		return (-1);
 	if ((temp = ft_strchr(files[fd], '\n')))
