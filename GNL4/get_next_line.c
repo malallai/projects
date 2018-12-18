@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/18 14:44:53 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/18 15:49:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int				get_next_line(const int fd, char **line)
 	char			*temp2;
 
 	buffer = ft_strnew(BUFF_SIZE);
-	if (fd >= OPEN_MAX || fd < 0 || line == NULL || buffer == NULL
+	if (fd > OPEN_MAX || fd < 0 || line == NULL || buffer == NULL
 		|| BUFF_SIZE < 1)
 		return (-1);
 	if (!files[fd])
