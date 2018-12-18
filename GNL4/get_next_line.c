@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/18 11:07:18 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/18 11:44:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,30 +31,43 @@ static int		get_line(int fd, char *buffer, char **save)
 	return (r == -1 ? 0 : 1);
 }
 
+static char		**check_static(int fd)
+{
+	static char *save;
+	static int	f;
+
+	if (!save)
+	{
+		f = fd;
+		save = ft_strnew(1);
+	}
+	if (f != fd)
+		return (NULL);
+	return (&save);
+}
+
 int				get_next_line(const int fd, char **line)
 {
-	static char		*save;
-	char			*buffer;
-	char			*temp;
-	char			*temp2;
+	char	*buffer;
+	char	*temp;
+	char	*temp2;
+	char	**content;
 
 	buffer = ft_strnew(BUFF_SIZE);
-	if (fd < 0 || line == NULL || buffer == NULL
-		|| BUFF_SIZE < 1)
+	if (!(content = check_static(fd)) || fd < 0 || line == NULL
+		|| buffer == NULL || BUFF_SIZE < 1)
 		return (-1);
-	if (!save)
-		save = ft_strnew(1);
-	if (!get_line(fd, buffer, &save))
+	if (!get_line(fd, buffer, &*content))
 		return (-1);
-	if ((temp = ft_strchr(save, '\n')))
+	if ((temp = ft_strchr(*content, '\n')))
 	{
-		*line = ft_strsub(save, 0, temp - save);
-		temp2 = save;
-		save = ft_strdup(temp + 1);
+		*line = ft_strsub(*content, 0, temp - *content);
+		temp2 = *content;
+		*content = ft_strdup(temp + 1);
 		ft_strdel(&temp2);
 		return (1);
 	}
-	*line = ft_strdup(save);
-	ft_strdel(&save);
+	*line = ft_strdup(*content);
+	ft_strdel(&*content);
 	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
