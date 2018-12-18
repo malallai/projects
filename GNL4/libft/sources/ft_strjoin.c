@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:06:33 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/06 21:20:27 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/18 11:04:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (!s1 || !s2)
-		return (NULL);
 	i = 0;
 	j = 0;
 	size = ft_strlen(s1) + ft_strlen(s2);
