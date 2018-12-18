@@ -6,14 +6,14 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/18 11:44:37 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/18 11:56:35 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
 
-static int		get_line(int fd, char *buffer, char **save)
+static int		get_line(int fd, char *buffer, char *file[fd])
 {
 	int		r;
 	char	*temp;
@@ -21,8 +21,8 @@ static int		get_line(int fd, char *buffer, char **save)
 	while ((r = read(fd, buffer, BUFF_SIZE)) > 0)
 	{
 		buffer[r] = '\0';
-		temp = *save;
-		*save = ft_strjoin(temp, buffer);
+		temp = file[fd];
+		file[fd] = ft_strjoin(temp, buffer);
 		ft_strdel(&temp);
 		if (ft_strchr(buffer, '\n'))
 			break ;
@@ -31,43 +31,30 @@ static int		get_line(int fd, char *buffer, char **save)
 	return (r == -1 ? 0 : 1);
 }
 
-static char		**check_static(int fd)
-{
-	static char *save;
-	static int	f;
-
-	if (!save)
-	{
-		f = fd;
-		save = ft_strnew(1);
-	}
-	if (f != fd)
-		return (NULL);
-	return (&save);
-}
-
 int				get_next_line(const int fd, char **line)
 {
-	char	*buffer;
-	char	*temp;
-	char	*temp2;
-	char	**content;
+	static char		*files[OPEN_MAX];
+	char			*buffer;
+	char			*temp;
+	char			*temp2;
 
 	buffer = ft_strnew(BUFF_SIZE);
-	if (!(content = check_static(fd)) || fd < 0 || line == NULL
-		|| buffer == NULL || BUFF_SIZE < 1)
+	if (fd >= OPEN_MAX || fd < 0 || line == NULL || buffer == NULL
+		|| BUFF_SIZE < 1)
 		return (-1);
-	if (!get_line(fd, buffer, &*content))
+	if (!files[fd])
+		files[fd] = ft_strnew(1);
+	if (!get_line(fd, buffer, files))
 		return (-1);
-	if ((temp = ft_strchr(*content, '\n')))
+	if ((temp = ft_strchr(files[fd], '\n')))
 	{
-		*line = ft_strsub(*content, 0, temp - *content);
-		temp2 = *content;
-		*content = ft_strdup(temp + 1);
+		*line = ft_strsub(files[fd], 0, temp - files[fd]);
+		temp2 = files[fd];
+		files[fd] = ft_strdup(temp + 1);
 		ft_strdel(&temp2);
 		return (1);
 	}
-	*line = ft_strdup(*content);
-	ft_strdel(&*content);
+	*line = ft_strdup(files[fd]);
+	ft_strdel(&files[fd]);
 	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
