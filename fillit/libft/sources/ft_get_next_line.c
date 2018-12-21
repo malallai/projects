@@ -1,93 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line.c                                 :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/03 13:55:07 by malallai         ###   ########.fr       */
+/*   Updated: 2018/12/20 12:33:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list		*ft_getfile(int fd)
+static int	get_line(int fd, char *buffer, char **file)
 {
-	t_list			*tmp;
-	static t_list	*files;
+	int		r;
+	char	*temp;
 
-	tmp = files;
-	if (fd && tmp && (int)tmp->content_size == fd)
-		return (tmp);
-	while (tmp)
+	while ((r = read(fd, buffer, BUFF_SIZE)) > 0)
 	{
-		if ((int)tmp->content_size == fd)
-			return (tmp);
-		tmp = tmp->next;
-	}
-	if (!(tmp = ft_lstnew("\0", 1)))
-		return (NULL);
-	tmp->content_size = fd;
-	ft_lstadd(&files, tmp);
-	tmp = files;
-	return (tmp);
-}
-
-static int			ft_cpy(t_list *list, char *buff)
-{
-	char	*tmp;
-
-	if ((tmp = ft_strjoin(list->content, buff)))
-	{
-		free(list->content);
-		list->content = tmp;
-	}
-	else
-		return (0);
-	return (1);
-}
-
-static void			ft_check(t_list *list, size_t r)
-{
-	char	*tmp;
-	size_t	len;
-
-	if (r < ft_strlen(list->content))
-	{
-		len = ft_strlen(tmp) - r - 1;
-		tmp = ft_strdup(list->content);
-		free(list->content);
-		list->content = ft_strsub(tmp, r + 1, len);
-		free(tmp);
-	}
-	else
-		((char *)list->content)[0] = '\0';
-}
-
-int					ft_get_next_line(const int f, char **line)
-{
-	char			b[BUFF_SIZE + 1];
-	size_t			r;
-	t_list			*list;
-
-	if (f < 0 || line == NULL || read(f, b, 0) < 0 || !(list = ft_getfile(f)))
-		return (-1);
-	while ((r = read(f, b, BUFF_SIZE)))
-	{
-		b[r] = '\0';
-		if (!(ft_cpy(list, b)))
-			return (-1);
-		if (ft_strchr(b, '\n'))
+		buffer[r] = '\0';
+		temp = *file;
+		*file = ft_strjoin(temp, buffer);
+		ft_strdel(&temp);
+		if (ft_strchr(buffer, '\n'))
 			break ;
 	}
-	if (r < BUFF_SIZE && !ft_strlen(list->content))
+	ft_strdel(&buffer);
+	return (r == -1 ? 0 : 1);
+}
+
+int		ft_get_next_line(const int fd, char **line)
+{
+	static char		*files[10240];
+	char			*buffer;
+	char			*temp;
+	char			*temp2;
+
+	buffer = ft_strnew(BUFF_SIZE);
+	if (fd > 10240 || fd < 0 || line == NULL || buffer == NULL
+		|| BUFF_SIZE < 1)
+		return (-1);
+	if (!files[fd])
+		files[fd] = ft_strnew(1);
+	if (!get_line(fd, buffer, &files[fd]))
+		return (-1);
+	if ((temp = ft_strchr(files[fd], '\n')))
 	{
-		free(list->content);
-		list->content_size = -1;
-		return (0);
+		*line = ft_strsub(files[fd], 0, temp - files[fd]);
+		temp2 = files[fd];
+		files[fd] = ft_strdup(temp + 1);
+		ft_strdel(&temp2);
+		return (1);
 	}
-	r = ft_copyuntil(line, list->content, '\n');
-	ft_check(list, r);
-	return (1);
+	*line = ft_strdup(files[fd]);
+	ft_strdel(&files[fd]);
+	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
