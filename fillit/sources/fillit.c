@@ -13,13 +13,11 @@ void	fillit(int argc, char ** argv)
 			ft_putendl("Error");
 			return ;
 		}
-		while ((r == ft_get_next_line(fd, &line)) == 1)
+		while ((r = ft_get_next_line(fd, &line)) > 0)
 		{
 			ft_putendl(line);
 			free(line);
 		}
 		close(fd);
-		ft_putnbr(r);
-		ft_putendl("");
 	}
 }
