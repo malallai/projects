@@ -49,6 +49,7 @@ SOURCES = \
 	ft_strcpy.c \
 	ft_strdel.c \
 	ft_strdup.c \
+	ft_strreplace.c \
 	ft_strequ.c \
 	ft_striter.c \
 	ft_striteri.c \
