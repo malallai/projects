@@ -1,4 +1,5 @@
 #include "../includes/fillit.h"
+#include <stdio.h>
 
 int is_char(char c)
 {
@@ -35,7 +36,7 @@ char **to_array(char *str) {
 void	print_tab(char **array)
 {
 	while (*array)
-		ft_putendl(*array++);
+		printf("%s\n", *array++);
 }
 
 void fillit(int argc, char **argv)
@@ -68,18 +69,13 @@ void fillit(int argc, char **argv)
 			int y = 0;
 			while (x != 3 && y != 3)
 			{
-				if (array[x][y] == '.')
+				printf("x: %d, y: %d c: %c\n", x, y, array[y][x]);
+				if (array[y][x] == '.')
 				{
-					if (array[x][y + 1] == '#' && array[x + 1][y] == '#')
-						array[x][y] = '@';
+					if (array[y][x + 1] == '#' && array[y + 1][x] == '#')
+						array[y][x] = '@';
 				}
-				if (x == 3 && y != 3)
-				{
-					x = 0;
-					y++;
-				}
-				else
-					x++;
+				
 			}
 			
 			print_tab(array);
