@@ -26,11 +26,26 @@ char **to_array(char *str) {
 		array[index] = ft_strnew(4);
 		while (str_index != 4)
 			array[index][str_index++] = str[j++];
+		array[index][str_index] = 0;
 		j++;
 		str_index = 0;
 		index++;
 	}
+	array[index] = 0;
 	return (array);
+}
+
+char *array_to_buff(char **array)
+{
+	char *tmp;
+
+	tmp = ft_strnew(1);
+	while (*array)
+	{
+		tmp = ft_strjoin(tmp, *array++);
+		tmp = ft_strjoin(tmp, "\n");
+	}
+	return (tmp);
 }
 
 void	print_tab(char **array)
@@ -62,23 +77,40 @@ void fillit(int argc, char **argv)
 		{
 			buffer[21] = '\0';
 
-			tmp = ft_strreplace(buffer, '.', 0);
-			tmp = ft_trimchar(tmp, '\n');
 			array = to_array(buffer);
 			int x = 0;
 			int y = 0;
-			while (x != 3 && y != 3)
+			while (!(x == 3 && y == 3))
 			{
-				printf("x: %d, y: %d c: %c\n", x, y, array[y][x]);
 				if (array[y][x] == '.')
 				{
-					if (array[y][x + 1] == '#' && array[y + 1][x] == '#')
-						array[y][x] = '@';
+					if ((array[y][x + 1] && array[y][x + 1] == '#')
+						|| (array[y][x + 2] && array[y][x + 2] == '#'))
+					{
+						if ((y + 1 <= 3 && array[y + 1] && array[y + 1][x] == '#')
+							|| (y - 1 >= 0 && array[y - 1] && array[y - 1][x] == '#'))
+							array[y][x] = '@';
+						else if ((y + 2 <= 3 && array[y + 2] && array[y + 2][x] == '#')
+							|| (y - 2 >= 0 && array[y - 2] && array[y - 2][x] == '#'))
+							array[y][x] = '@';
+					}
 				}
-				
+
+				if (x == 3 && y < 3)
+				{
+					x = 0;
+					y++;
+					continue ;
+				}
+				else if (x == 3 && y == 3)
+					continue ;
+				x++;
 			}
-			
-			print_tab(array);
+			tmp = array_to_buff(array);
+			tmp = ft_strreplace(tmp, '.', 0);
+			tmp = ft_strreplace(tmp, '@', ' ');
+			tmp = ft_trimchar(tmp, '\n');
+			printf("---tmp---\n%s\n---------\n", tmp);
 			free(buffer);
 			buffer = ft_strnew(22);
 		}
