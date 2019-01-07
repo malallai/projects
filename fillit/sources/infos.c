@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pos.c                                              :+:      :+:    :+:   */
+/*   infos.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:27:56 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/07 16:28:05 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/07 17:43:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int			edit_pos(t_pos **pos, char c)
+int			edit_infos(t_infos *infos, char c)
 {
 	if (c == '\n')
 		return (1);
-	if ((*pos)->x == 3 && (*pos)->y < 3)
+	if (infos->x == 3 && infos->y < 3)
 	{
-		(*pos)->x = 0;
-		(*pos)->y++;
+		infos->x = 0;
+		infos->y++;
 	}
-	else if ((*pos)->x < 3)
-		(*pos)->x++;
-	if ((*pos)->x > 3 && (*pos)->y > 3)
+	else if (infos->x < 3)
+		infos->x++;
+	if (infos->x > 3 && infos->y > 3)
 		return (0);
 	return (1);
 }
 
-t_pos		*new_pos()
+t_infos		*new_infos()
 {
-	t_pos *pos;
+	t_infos *infos;
 
-	pos = malloc(sizeof(t_pos));
-	pos->x = 0;
-	pos->y = 0;
-	return (pos);
+	infos = malloc(sizeof(t_infos));
+	infos->x = 0;
+	infos->y = 0;
+	infos->last = NULL;
+	infos->size = 0;
+	return (infos);
 }

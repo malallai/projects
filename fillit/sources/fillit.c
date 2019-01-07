@@ -21,8 +21,8 @@ void fillit(int argc, char **argv)
 {
 	int			ret;
 	int			fd;
-	t_pos		*pos;
 	t_tetris	*tetris;
+	t_infos		*infos;
 
 	ret = 0;
 	if (argc != 2)
@@ -35,14 +35,15 @@ void fillit(int argc, char **argv)
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 0)
 			return (print_error());
-		pos = new_pos();
-		tetris = init_tetris();
-		while ((ret = read_tetris(fd, &tetris, pos)) == 1)
+		infos = new_infos();
+		if (!new_tetris(&tetris, infos, 0))
+			return (print_error());
+		while ((ret = read_tetris(fd, &tetris, infos)) == 1)
 			;
 		if (ret == -1)
 			return (print_error());
-		//print_arrays(tetris);
+		print_arrays(tetris);
 		free_tetris(&tetris);
-		free(pos);
+		free(infos);
 	}
 }
