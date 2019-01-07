@@ -89,10 +89,10 @@ void fillit(int argc, char **argv)
 					{
 						if ((y + 1 <= 3 && array[y + 1] && array[y + 1][x] == '#')
 							|| (y - 1 >= 0 && array[y - 1] && array[y - 1][x] == '#'))
-							array[y][x] = '@';
+							array[y][x] = ' ';
 						else if ((y + 2 <= 3 && array[y + 2] && array[y + 2][x] == '#')
 							|| (y - 2 >= 0 && array[y - 2] && array[y - 2][x] == '#'))
-							array[y][x] = '@';
+							array[y][x] = ' ';
 					}
 				}
 
@@ -108,7 +108,6 @@ void fillit(int argc, char **argv)
 			}
 			tmp = array_to_buff(array);
 			tmp = ft_strreplace(tmp, '.', 0);
-			tmp = ft_strreplace(tmp, '@', ' ');
 			tmp = ft_trimchar(tmp, '\n');
 			printf("---tmp---\n%s\n---------\n", tmp);
 			free(buffer);
