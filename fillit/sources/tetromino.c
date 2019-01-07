@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/07 17:16:17 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/07 17:50:22 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,39 +62,31 @@ void		free_tetris(t_tetris **tetris)
 	}
 }
 
-t_tetris		*init_tetris()
+int			new_tetris(t_tetris **tetris, t_infos *infos, int id)
 {
 	t_tetris *tmp;
+	t_tetris *last;
 
-	if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))))
-		return (NULL);
-	tmp->next = NULL;
-	tmp->array = new_array();
-	tmp->id = 0;
-	return (tmp);
-}
-
-int			new_tetris(t_tetris **tetris)
-{
-	t_tetris *tmp;
-
-	if (!tetris)
+	if (!id)
 	{
 		if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))))
 			return (-1);
 		tmp->next = NULL;
 		tmp->array = new_array();
 		tmp->id = 0;
+		infos->last = tmp;
 		*tetris = tmp;
 	}
 	else
 	{
+		last = infos->last;
 		if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))))
 			return (-1);
-		tmp->next = *tetris;
-		tmp->id = (*tetris)->id + 1;
+		tmp->next = NULL;
+		tmp->id = last->id + 1;
 		tmp->array = new_array();
-		*tetris = tmp;
+		last->next = tmp;
+		infos->last = tmp;
 	}
 	return (1);
 }

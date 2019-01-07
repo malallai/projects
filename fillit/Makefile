@@ -13,7 +13,7 @@ SOURCES = \
 	fillit.c \
 	tetromino.c \
 	utils.c \
-	pos.c \
+	infos.c \
 	reader.c \
 
 MAIN = main.c
