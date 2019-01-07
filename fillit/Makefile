@@ -11,6 +11,8 @@ OUTPUTS_FOLDER = outputs/
 SOURCES = \
 	main.c \
 	fillit.c \
+	tetris.c \
+	utils.c \
 
 MAIN = main.c
 

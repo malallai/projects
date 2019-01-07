@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 15:21:12 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/07 15:12:00 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/07 14:28:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/fillit.h"
 
-void	ft_bzero(void *s, size_t n)
+void	print_error()
 {
-	char *str;
+	ft_putendl("error");
+}
 
-	if (!s)
-		return ;
-	str = (char *)s;
-	ft_memset(str, '\0', n);
+int		is_valid_char(char c)
+{
+	return (c == '.' || c == '#' || c == '\n');
 }
