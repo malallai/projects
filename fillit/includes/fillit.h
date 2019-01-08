@@ -19,11 +19,12 @@ typedef	struct		s_infos
 	int				y;
 }					t_infos;
 
-void				fillit(int argc, char **argv);
+void				fillit(char **argv);
 int					read_tetris(int fd, t_tetris **tetris, t_infos *infos);
 
 int					is_valid_char(char c);
 void				print_error();
+int					print_int_error();
 
 char				**new_array();
 void				**free_array(char **array);
