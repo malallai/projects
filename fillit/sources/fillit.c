@@ -17,33 +17,21 @@ void    print_arrays(t_tetris *tetris)
 	}
 }
 
-void fillit(int argc, char **argv)
+void fillit(char **argv)
 {
 	int			ret;
-	int			fd;
 	t_tetris	*tetris;
 	t_infos		*infos;
 
 	ret = 0;
-	if (argc != 2)
-	{
-		ft_putendl("Usage: ./fillit [file]");
-		return;
-	}
-	else
-	{
-		fd = open(argv[1], O_RDONLY);
-		if (fd < 0)
-			return (print_error());
-		infos = new_infos();
-		if (!new_tetris(&tetris, infos, 0))
-			return (print_error());
-		while ((ret = read_tetris(fd, &tetris, infos)) == 1)
-			;
-		if (ret == -1)
-			return (print_error());
-		print_arrays(tetris);
-		free_tetris(&tetris);
-		free(infos);
-	}
+	infos = new_infos();
+	if (!new_tetris(&tetris, infos, 0))
+		return (print_error());
+	while ((ret = read_tetris(ft_atoi(argv[2]), &tetris, infos)) == 1)
+		;
+	if (ret == -1)
+		return (print_error());
+	print_arrays(tetris);
+	free_tetris(&tetris);
+	free(infos);
 }
