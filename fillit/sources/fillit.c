@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 12:34:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 12:41:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	fillit(char **argv)
 		;
 	if (ret == -1)
 		return (print_error());
-	print_arrays(tetris);
+	//print_arrays(tetris);
 	free_tetris(&tetris);
 	free(infos);
 }
