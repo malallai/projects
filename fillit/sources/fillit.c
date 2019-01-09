@@ -6,26 +6,18 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:19:43 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:53:11 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-void	print_arrays(t_tetris *tetris)
+void	print_tetros(t_tetris *tetris)
 {
-	char	**array;
-	int		index;
-
-	index = 0;
 	while (tetris)
 	{
-		array = tetris->array;
-		while (array[index])
-			printf("id : %d line : %s\n", tetris->id, array[index++]);
-		printf("\n");
+		ft_putendl(tetris->charl);
 		tetris = tetris->next;
-		index = 0;
 	}
 }
 
@@ -38,16 +30,17 @@ int		fillit(int fd)
 	ret = 0;
 	if (!(infos = new_infos(fd)))
 		return (-1);
-	if ((new_tetris(&tetris, infos, 0)) != 1)
+	if ((init_tetris(&tetris, infos)) != 1)
 		return (print_error(infos));
 	infos->tetris = &tetris;
-	while ((ret = read_tetris(fd, &tetris, infos)) == 1)
+	while ((ret = read_tetris(fd, infos)) == 1)
 	{
-		convert_to_array(infos->last, infos);
+		if ((check_tetro(infos->last, infos)) != 1)
+			return (print_error(infos));
 	}
 	if (ret == -1)
 		return (print_error(infos));
-	//print_arrays(tetris);
+	print_tetros(tetris);
 	exit_fillit(infos);
 	return (1);
 }

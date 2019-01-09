@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/09 14:02:56 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:26:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:42:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ int		free_tetris(t_tetris **tetris)
 	{
 		tmp_next = tmp->next;
 		free_array(tmp->array);
-		free(tmp->tochar);
+		free(tmp->charl);
+		free(tmp->chard);
 		free(tmp);
 		tmp = tmp_next;
 	}

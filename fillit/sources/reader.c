@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:10:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:47:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int			read_tetris(int fd, t_tetris **tetris, t_infos *infos)
+int			read_tetris(int fd, t_infos *infos)
 {
 	int			r;
 	char		*buffer;
@@ -24,7 +24,7 @@ int			read_tetris(int fd, t_tetris **tetris, t_infos *infos)
 	if ((r = read(fd, buffer, 21)))
 	{
 		if (infos->size > 0)
-			new_tetris(tetris, infos, 1);
+			new_tetris(infos);
 		tetro = infos->last;
 		buffer[21] = '\0';
 		while (buffer[index] && is_valid_char(buffer[index]))
