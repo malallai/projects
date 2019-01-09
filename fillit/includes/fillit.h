@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/08 12:32:08 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:20:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct		s_tetris
 	char			**array;
 	struct s_tetris	*next;
 	int				id;
+	char			*tochar;
 }					t_tetris;
 
 typedef	struct		s_infos
@@ -29,17 +30,22 @@ typedef	struct		s_infos
 	int				size;
 	int				x;
 	int				y;
+	int				fd;
+	t_tetris		**tetris;
 }					t_infos;
 
-void				fillit(char **argv);
+int					fillit(int fd);
 int					read_tetris(int fd, t_tetris **tetris, t_infos *infos);
 int					is_valid_char(char c);
-void				print_error(void);
+int					print_error(t_infos *infos);
+int					exit_fillit(t_infos *infos);
 char				**new_array(void);
-void				**free_array(char **array);
-void				free_tetris(t_tetris **tetris);
 int					new_tetris(t_tetris **tetris, t_infos *infos, int id);
 int					edit_infos(t_infos *infos, char c, int end);
-t_infos				*new_infos(void);
+int					free_infos(t_infos *infos);
+int					free_tetris(t_tetris **tetris);
+int					free_array(char **array);
+t_infos				*new_infos(int fd);
+int					convert_to_array(t_tetris *tetris, t_infos *infos);
 
 #endif
