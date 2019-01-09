@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:16:21 by malallai          #+#    #+#             */
-/*   Updated: 2018/12/20 12:33:14 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/08 11:58:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	get_line(int fd, char *buffer, char **file)
 	return (r == -1 ? 0 : 1);
 }
 
-int		ft_get_next_line(const int fd, char **line)
+int			ft_get_next_line(const int fd, char **line)
 {
 	static char		*files[10240];
 	char			*buffer;

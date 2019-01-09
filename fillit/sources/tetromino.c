@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/07 17:50:22 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/08 11:51:29 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-char		**new_array()
+char		**new_array(void)
 {
 	char	**new_array;
 	size_t	i;
@@ -44,7 +44,7 @@ void		**free_array(char **array)
 		index++;
 	}
 	free(array);
-	return 0;
+	return (0);
 }
 
 void		free_tetris(t_tetris **tetris)
