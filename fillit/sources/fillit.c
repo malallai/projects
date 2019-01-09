@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fillit.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/08 11:44:55 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/08 12:17:17 by malallai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/fillit.h"
 
-void    print_arrays(t_tetris *tetris)
+void	print_arrays(t_tetris *tetris)
 {
 	char	**array;
 	int		index;
@@ -17,7 +29,7 @@ void    print_arrays(t_tetris *tetris)
 	}
 }
 
-void fillit(char **argv)
+void	fillit(char **argv)
 {
 	int			ret;
 	t_tetris	*tetris;
