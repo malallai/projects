@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:53:11 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 17:31:38 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int		fillit(int fd)
 		return (-1);
 	if ((init_tetris(&tetris, infos)) != 1)
 		return (print_error(infos));
-	infos->tetris = &tetris;
 	while ((ret = read_tetris(fd, infos)) == 1)
 	{
 		if ((check_tetro(infos->last, infos)) != 1)

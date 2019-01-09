@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:50:54 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 17:41:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int					free_array(char **array);
 t_infos				*new_infos(int fd);
 char				*convert_to_array(t_tetris *tetris, char c);
 int					check_tetro(t_tetris *tetris, t_infos *infos);
+int					check_connection(t_tetris *tetris);
 
 #endif

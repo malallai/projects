@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_arraynew.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 16:22:30 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/09 17:34:45 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/09 17:36:35 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "../includes/libft.h"
 
-int		print_error(t_infos *infos)
+char	**ft_arraynew(size_t size1, size_t size2)
 {
-	ft_putendl("error");
-	exit_fillit(infos);
-	return (-1);
-}
+	char	**new_array;
+	size_t	i;
 
-int		exit_fillit(t_infos *infos)
-{
-	if (infos)
+	i = 0;
+	if ((new_array = (char **)malloc(sizeof(char **) * size1)))
 	{
-		if (infos->tetris)
-			free_tetris(infos->tetris);
-		free(infos);
+		while (i < size2)
+		{
+			if (!(new_array[i] = ft_strnew(size2)))
+				return (NULL);
+			i++;
+		}
+		new_array[i] = 0;
 	}
-	exit(-1);
-	return (-1);
-}
-
-int		is_valid_char(char c)
-{
-	return (c == '.' || c == '#' || c == '\n');
+	else
+		return (NULL);
+	return (new_array);
 }
