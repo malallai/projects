@@ -57,7 +57,7 @@ $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
 
 libft:
 	@printf "\n$(NO_COLOR)-------- $(INFO_COLOR)Libft $(NO_COLOR)--------\n"
-	@make -C libft
+	@make -C libft re
 	@printf "$(NO_COLOR)-----------------------\n\n"
 
 libfclean:

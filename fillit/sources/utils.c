@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 14:42:16 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:56:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		exit_fillit(t_infos *infos)
 			free_tetris(infos->tetris);
 		free(infos);
 	}
-	exit(-1);	
+	exit(-1);
 	return (-1);
 }
 

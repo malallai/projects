@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_count_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/08 11:45:13 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:55:40 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/09 15:31:51 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/09 15:39:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "../includes/libft.h"
 
-int		main(int argc, char **argv)
+size_t	ft_count_char(char *str, char ch)
 {
-	int fd;
+	int		index;
+	size_t	count;
 
-	if (argc != 2)
+	index = 0;
+	count = 0;
+	while (str[index])
 	{
-		ft_putendl("Usage: ./fillit [file]");
-		return (0);
+		if (str[index] == ch)
+			count++;
+		index++;
 	}
-	else
-	{
-		fd = open(argv[1], O_RDONLY);
-		if (fd < 0)
-		{
-			ft_putendl("error");
-			exit(-1);
-		}
-		if ((fillit(fd)) != 1)
-		{
-			ft_putendl("error");
-			exit(-1);
-			close(fd);
-		}
-	}
-	return (0);
+	return (count);
 }
