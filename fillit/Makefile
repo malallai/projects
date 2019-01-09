@@ -15,6 +15,7 @@ SOURCES = \
 	utils.c \
 	infos.c \
 	reader.c \
+	freeutils.c \
 
 MAIN = main.c
 

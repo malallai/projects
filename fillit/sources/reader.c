@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 12:26:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:10:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int			read_tetris(int fd, t_tetris **tetris, t_infos *infos)
 				tetro->array[infos->y][infos->x] : buffer[index];
 			edit_infos(infos, buffer[index++], 0);
 		}
-		edit_infos(infos, buffer[index], 1);
-		if (index != 21)
+		if (!edit_infos(infos, buffer[index], 1) || index != 21)
 			r = -1;
 	}
 	ft_strdel(&buffer);

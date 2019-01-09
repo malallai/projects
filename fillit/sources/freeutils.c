@@ -1,37 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   freeutils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 14:42:16 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/09 14:02:56 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/09 15:26:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int		print_error(t_infos *infos)
+int		free_array(char **array)
 {
-	ft_putendl("error");
-	exit_fillit(infos);
-	return (-1);
-}
+	int index;
 
-int		exit_fillit(t_infos *infos)
-{
-	if (infos)
+	index = 0;
+	while (array[index])
 	{
-		if (infos->tetris)
-			free_tetris(infos->tetris);
-		free(infos);
+		free(array[index]);
+		index++;
 	}
-	exit(-1);	
-	return (-1);
+	free(array);
+	return (1);
 }
 
-int		is_valid_char(char c)
+int		free_tetris(t_tetris **tetris)
 {
-	return (c == '.' || c == '#' || c == '\n');
+	t_tetris *tmp;
+	t_tetris *tmp_next;
+
+	tmp = *tetris;
+	while (tmp)
+	{
+		tmp_next = tmp->next;
+		free_array(tmp->array);
+		free(tmp->tochar);
+		free(tmp);
+		tmp = tmp_next;
+	}
+	return (1);
+}
+
+int		free_infos(t_infos *infos)
+{
+	free(infos);
+	return (1);
 }
