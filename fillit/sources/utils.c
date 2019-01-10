@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 15:05:57 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 16:40:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,34 @@ int		exit_fillit(t_infos *infos)
 {
 	if (infos)
 	{
-		if (infos->tetris)
-			free_tetris(infos->tetris);
 		close(infos->fd);
+		free_tetris(infos->tetris);
+		free(infos->pos);
 		free(infos);
 	}
 	exit(-1);
 	return (-1);
 }
 
-int		is_valid_char(char c)
+int		free_tetris(t_tetris *tetris)
 {
-	return (c == '.' || c == '#' || c == '\n');
+	t_tetris *tmp;
+	int index;
+
+	while (tetris)
+	{
+		tmp = tetris->next;
+		index = 0;
+		while (tetris->array[index])
+		{
+			free(tetris->array[index]);
+			index++;
+		}
+		free(tetris->array);
+		free(tetris->charl);
+		free(tetris->chard);
+		free(tetris);
+		tetris = tmp;
+	}
+	return (1);
 }
