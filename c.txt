@@ -1,4 +1,0 @@
-fillit.c \
-solver.c \
-tetrimino.c \
-utils.c \
