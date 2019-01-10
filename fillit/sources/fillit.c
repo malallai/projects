@@ -6,12 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 17:31:38 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 13:27:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
+/* TODO temp */
 void	print_tetros(t_tetris *tetris)
 {
 	while (tetris)
@@ -21,25 +22,20 @@ void	print_tetros(t_tetris *tetris)
 	}
 }
 
-int		fillit(int fd)
+int		fillit(t_infos *infos)
 {
-	int			ret;
-	t_tetris	*tetris;
-	t_infos		*infos;
+	int	ret;
 
 	ret = 0;
-	if (!(infos = new_infos(fd)))
-		return (-1);
-	if ((init_tetris(&tetris, infos)) != 1)
-		return (print_error(infos));
-	while ((ret = read_tetris(fd, infos)) == 1)
+	if (!init_tetris(infos))
+		return (0);
+	while ((ret = read_tetris(infos)) == 1)
 	{
-		if ((check_tetro(infos->last, infos)) != 1)
-			return (print_error(infos));
+		if (!check_tetro(infos))
+			return (0);
 	}
 	if (ret == -1)
-		return (print_error(infos));
-	print_tetros(tetris);
-	exit_fillit(infos);
+		return (0);
+	print_tetros(infos->tetris);
 	return (1);
 }
