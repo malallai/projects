@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tetromino.c                                        :+:      :+:    :+:   */
+/*   tetrimino.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 13:28:48 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 16:34:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int			init_tetris(t_infos *infos)
-{
-	t_tetris *tmp;
-
-	if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))))
-		return (0);
-	tmp->next = NULL;
-	if (!(tmp->array = ft_newarray(5, 4)))
-		return (0);
-	tmp->id = 0;
-	infos->last = tmp;
-	infos->tetris = tmp;
-	return (1);
-}
-
 int			new_tetris(t_infos *infos)
 {
 	t_tetris *tmp;
-	t_tetris *last;
 
-	last = infos->last;
-	if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))))
+	if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))) || \
+		!(tmp->array = ft_newarray(5, 4)))
 		return (0);
-	tmp->next = NULL;
-	tmp->id = last->id + 1;
-	if (!(tmp->array = ft_newarray(5, 4)))
-		return (0);
-	last->next = tmp;
-	infos->last = tmp;
+	if (!infos->init)
+	{
+		infos->init = 1;
+		tmp->next = NULL;
+		tmp->id = 0;
+		infos->last = tmp;
+		infos->tetris = tmp;
+	}
+	else
+	{
+		tmp->next = NULL;
+		tmp->id = infos->last->id + 1;
+		infos->last->next = tmp;
+		infos->last = tmp;
+	}
 	return (1);
 }
 
