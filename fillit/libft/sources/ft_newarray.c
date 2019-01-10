@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arraynew.c                                      :+:      :+:    :+:   */
+/*   ft_newarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/09 17:34:45 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 17:36:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 12:57:26 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	**ft_arraynew(size_t size1, size_t size2)
+char	**ft_newarray(size_t size1, size_t size2)
 {
 	char	**new_array;
 	size_t	i;

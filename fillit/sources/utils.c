@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 16:22:30 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 13:03:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		exit_fillit(t_infos *infos)
 	{
 		if (infos->tetris)
 			free_tetris(infos->tetris);
+		close(infos->fd);
 		free(infos);
 	}
 	exit(-1);

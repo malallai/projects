@@ -6,31 +6,32 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:47:07 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 13:29:13 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int			read_tetris(int fd, t_infos *infos)
+int			read_tetris(t_infos *infos)
 {
 	int			r;
 	char		*buffer;
 	int			index;
-	t_tetris	*tetro;
+	t_tetris	*tetris;
 
 	index = 0;
 	buffer = ft_strnew(22);
-	if ((r = read(fd, buffer, 21)))
+	if ((r = read(infos->fd, buffer, 21)))
 	{
-		if (infos->size > 0)
-			new_tetris(infos);
-		tetro = infos->last;
 		buffer[21] = '\0';
+		if (infos->size > 0)
+			if (!new_tetris(infos))
+				return (0);
+		tetris = infos->last;
 		while (buffer[index] && is_valid_char(buffer[index]))
 		{
-			tetro->array[infos->y][infos->x] = buffer[index] == '\n' ? \
-				tetro->array[infos->y][infos->x] : buffer[index];
+			tetris->array[infos->tmp_y][infos->tmp_x] = buffer[index] == '\n' ? \
+				tetris->array[infos->tmp_y][infos->tmp_x] : buffer[index];
 			edit_infos(infos, buffer[index++], 0);
 		}
 		if (!edit_infos(infos, buffer[index], 1) || index != 21)

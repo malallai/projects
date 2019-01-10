@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:27:56 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:25:17 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 13:15:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ int		edit_infos(t_infos *infos, char c, int end)
 {
 	if (c == '\n')
 		return (1);
-	if (infos->x == 3 && infos->y < 3)
+	if (infos->tmp_x == 3 && infos->tmp_y < 3)
 	{
-		infos->x = 0;
-		infos->y++;
+		infos->tmp_x = 0;
+		infos->tmp_y++;
 	}
-	else if (infos->x < 3)
-		infos->x++;
+	else if (infos->tmp_x < 3)
+		infos->tmp_x++;
 	if (end)
 	{
-		if (infos->x == 3 && infos->y == 3)
+		if (infos->tmp_x == 3 && infos->tmp_y == 3)
 		{
-			infos->x = 0;
-			infos->y = 0;
+			infos->tmp_x = 0;
+			infos->tmp_y = 0;
 			infos->size = infos->size + 1;
 		}
 		else
@@ -42,13 +42,9 @@ t_infos	*new_infos(int fd)
 	t_infos *infos;
 
 	if (!(infos = malloc(sizeof(t_infos))))
-	{
-		ft_putendl("error");
-		exit(-1);
 		return (NULL);
-	}
-	infos->x = 0;
-	infos->y = 0;
+	infos->tmp_x = 0;
+	infos->tmp_y = 0;
 	infos->last = NULL;
 	infos->size = 0;
 	infos->fd = fd;

@@ -7,7 +7,6 @@ OBJECTS_FOLDER = objects/
 
 SOURCES = \
 	ft_abs.c \
-	ft_arraynew.c \
 	ft_atoi.c \
 	ft_bzero.c \
 	ft_count_char.c \
@@ -36,6 +35,7 @@ SOURCES = \
 	ft_memdel.c \
 	ft_memmove.c \
 	ft_memset.c \
+	ft_newarray.c \
 	ft_putchar.c \
 	ft_putchar_fd.c \
 	ft_putendl.c \
