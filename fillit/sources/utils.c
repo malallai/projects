@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 16:50:05 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 17:16:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,11 @@ t_infos	*new_infos(int fd)
 	if (!(infos = malloc(sizeof(t_infos))) || \
 		!(infos->pos = malloc(sizeof(t_pos))))
 		return (NULL);
+	infos->pos->x = 0;
+	infos->pos->y = 0;
+	infos->init = 0;
 	infos->last = NULL;
 	infos->size = 0;
 	infos->fd = fd;
-	infos->init = 0;
 	return (infos);
 }
