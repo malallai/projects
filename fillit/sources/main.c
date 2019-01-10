@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:45:13 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 15:34:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 16:45:00 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int		main(int argc, char **argv)
 	{
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 0)
-			return (print_error(infos));
+			return (exit_fillit(infos, 1));
 		if (!(infos = new_infos(fd)))
-			return (print_error(infos));
+			return (exit_fillit(infos, 1));
 		if (!fillit(infos))
-			return (print_error(infos));
-		exit_fillit(infos);
+			return (exit_fillit(infos, 1));
+		exit_fillit(infos, 0);
 	}
 	return (0);
 }

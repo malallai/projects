@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 16:40:54 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 16:43:57 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ typedef	struct		s_infos
 int					fillit(t_infos *infos);
 int					read_tetris(t_infos *infos);
 int					is_valid_char(char c);
-int					print_error(t_infos *infos);
-int					exit_fillit(t_infos *infos);
+int					exit_fillit(t_infos *infos, int error);
 char				**new_array(void);
 int					new_tetris(t_infos *infos);
 int					edit_infos(t_infos *infos, char c, int end);
