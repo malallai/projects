@@ -9,7 +9,6 @@ ULIMIT_FOLDER = ulimit/
 OUTPUTS_FOLDER = outputs/
 
 SOURCES = \
-	main.c \
 	fillit.c \
 	tetrimino.c \
 	utils.c \
