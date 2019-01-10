@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:45:13 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 13:27:30 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 14:47:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int		main(int argc, char **argv)
 {
 	int		fd;
-	t_infos *infos = NULL;
+	t_infos *infos;
 
+	infos = NULL;
 	if (argc != 2)
 	{
 		ft_putendl("Usage: ./fillit [file]");
