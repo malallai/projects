@@ -6,13 +6,12 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 13:27:37 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/10 14:46:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-/* TODO temp */
 void	print_tetros(t_tetris *tetris)
 {
 	while (tetris)
