@@ -10,9 +10,9 @@ OUTPUTS_FOLDER = outputs/
 
 SOURCES = \
 	fillit.c \
+	solver.c \
 	tetrimino.c \
 	utils.c \
-	solver.c \
 
 MAIN = main.c
 
