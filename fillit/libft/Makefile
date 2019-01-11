@@ -1,9 +1,9 @@
 NAME = libft.a
 PROJECT_NAME = LibFt
 
-SOURCES_FOLDER = sources/
-INCLUDES_FOLDER = includes/
-OBJECTS_FOLDER = objects/
+SOURCES_FOLDER = ./
+INCLUDES_FOLDER = ./
+OBJECTS_FOLDER = ./
 
 SOURCES = \
 	ft_abs.c \

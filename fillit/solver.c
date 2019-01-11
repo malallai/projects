@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 17:17:38 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 13:22:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int			is_valid_char(char c)
 {

@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 16:43:57 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 13:22:45 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
-# include "../libft/includes/libft.h"
+# include "libft/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
 
