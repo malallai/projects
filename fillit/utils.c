@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 13:22:23 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 14:21:31 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int		exit_fillit(t_infos *infos, int error)
 		close(infos->fd);
 		free_tetris(infos->tetris);
 		free(infos->pos);
+		ft_freearray(infos->map->map);
+		free(infos->map);
 		free(infos);
 	}
 	exit(-1);
@@ -30,18 +32,11 @@ int		exit_fillit(t_infos *infos, int error)
 int		free_tetris(t_tetris *tetris)
 {
 	t_tetris	*tmp;
-	int			index;
 
 	while (tetris)
 	{
 		tmp = tetris->next;
-		index = 0;
-		while (tetris->array[index])
-		{
-			free(tetris->array[index]);
-			index++;
-		}
-		free(tetris->array);
+		ft_freearray(tetris->array);
 		free(tetris->charl);
 		free(tetris->chard);
 		free(tetris);

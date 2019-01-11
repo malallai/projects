@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/10 12:57:32 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 14:20:06 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ size_t				ft_count_char(char *str, char ch);
 size_t				ft_copyuntil(char **dst, char *src, char c);
 void				*ft_memcpy(void *restrict dst, const void *restrict src,
 					size_t n);
+void				ft_freearray(char **array);
 void				*ft_memccpy(void *restrict dst, const void *restrict src,
 					int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 13:22:45 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 14:17:33 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,18 @@ typedef struct		s_pos
 	int				y;
 }					t_pos;
 
+typedef struct		s_map
+{
+	char			**map;
+	size_t			size;
+}					t_map;
+
 typedef	struct		s_infos
 {
 	t_tetris		*tetris;
 	t_tetris		*last;
 	t_pos			*pos;
+	t_map 			*map;	
 	int				size;
 	int				fd;
 	int				init;
@@ -53,5 +60,7 @@ t_infos				*new_infos(int fd);
 char				*convert_to_string(t_tetris *tetris, char c);
 int					check_tetro(t_infos *infos);
 int					check_connection(t_tetris *tetris);
+t_map				*new_map(t_infos *infos);
+int					solve(t_infos *infos);
 
 #endif
