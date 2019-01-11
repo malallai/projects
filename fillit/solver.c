@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 16:09:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 17:23:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,8 +134,14 @@ int				solve(t_infos *infos)
 	t = to_array(next->charl);
 	int i = 0;
 	int j = 0;
+	int x = 0;
 	while (next)
 	{
+		if (next->valid)
+		{
+			next = next->next;
+			continue ;
+		}
 		if (next->next)
 		{
 			char **tmp;
@@ -145,20 +151,21 @@ int				solve(t_infos *infos)
 			tmp2 = to_array(next->next->charl);
 			while (i < 4)
 			{
-				if ((ft_strlen(t[i]) <= ft_strlen(tmp2[j])) && ft_strlen(t[i]) + ft_strlen(tmp2[i]) < 4)
+				if ((ft_strlen(t[i]) <= ft_strlen(tmp2[j])) && ft_strlen(t[i]) + ft_strlen(tmp2[i]) == 4)
 					t[i] = ft_strjoin(t[i], tmp2[j++]);
 				i++;
 			}
-			/*if (!j)
-			{
-				infos->map->size++;
-				update_map(infos);
-			}*/
+			if (!j)
+				x = 1;
+			else
+				next->valid = 1;
 		}
 		i = 0;
 		j = 0;
 		next = next->next;
 	}
+	if (x)
+		next = infos->tetris;
 	i = -1;
 	while (++i < 4)
 		while (ft_strlen(t[i]) < 4)

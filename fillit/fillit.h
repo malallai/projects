@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 14:17:33 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/01/11 17:21:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_tetris
 	int				id;
 	char			*charl;
 	char			*chard;
+	int				valid;
 }					t_tetris;
 
 typedef struct		s_pos
