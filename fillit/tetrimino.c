@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 13:22:23 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 17:22:20 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@ int			new_tetris(t_infos *infos)
 		infos->init = 1;
 		tmp->next = NULL;
 		tmp->id = 0;
+		tmp->valid = 0;
 		infos->last = tmp;
 		infos->tetris = tmp;
 	}
 	else
 	{
 		tmp->next = NULL;
+		tmp->valid = 0;
 		tmp->id = infos->last->id + 1;
 		infos->last->next = tmp;
 		infos->last = tmp;
