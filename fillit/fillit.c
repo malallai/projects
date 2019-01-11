@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 13:22:25 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 14:17:41 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ int		main(int argc, char **argv)
 		if (!(infos = new_infos(fd)))
 			return (exit_fillit(infos, 1));
 		if (!fillit(infos))
+			return (exit_fillit(infos, 1));
+		if (!solve(infos))
 			return (exit_fillit(infos, 1));
 		exit_fillit(infos, 0);
 	}

@@ -11,6 +11,7 @@ SOURCES = \
 	ft_bzero.c \
 	ft_count_char.c \
 	ft_copyuntil.c \
+	ft_freearray.c \
 	ft_get_next_line.c \
 	ft_isalnum.c \
 	ft_isalpha.c \
