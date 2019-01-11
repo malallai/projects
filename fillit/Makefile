@@ -1,9 +1,9 @@
 NAME = fillit
 PROJECT_NAME = Fillit
 
-SOURCES_FOLDER = sources/
-INCLUDES_FOLDER = includes/
-OBJECTS_FOLDER = objects/
+SOURCES_FOLDER = ./
+INCLUDES_FOLDER = ./
+OBJECTS_FOLDER = ./
 TESTFILES_FOLDER = files/
 ULIMIT_FOLDER = ulimit/
 OUTPUTS_FOLDER = outputs/
@@ -18,8 +18,6 @@ MAIN = main.c
 
 DIRS = \
 	$(TESTFILES_FOLDER) \
-	$(OUTPUTS_FOLDER) \
-	$(OBJECTS_FOLDER) \
 
 OBJECTS = $(SOURCES:.c=.o)
 OBJECTS := $(subst /,__,$(OBJECTS))

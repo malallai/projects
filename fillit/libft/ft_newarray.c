@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_char.c                                    :+:      :+:    :+:   */
+/*   ft_newarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/09 15:31:51 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/09 15:39:47 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/09 17:34:45 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/11 13:21:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-size_t	ft_count_char(char *str, char ch)
+char	**ft_newarray(size_t size1, size_t size2)
 {
-	int		index;
-	size_t	count;
+	char	**new_array;
+	size_t	i;
 
-	index = 0;
-	count = 0;
-	while (str[index])
+	i = 0;
+	if ((new_array = (char **)malloc(sizeof(char **) * size1)))
 	{
-		if (str[index] == ch)
-			count++;
-		index++;
+		while (i < size2)
+		{
+			if (!(new_array[i] = ft_strnew(size2)))
+				return (NULL);
+			i++;
+		}
+		new_array[i] = 0;
 	}
-	return (count);
+	else
+		return (NULL);
+	return (new_array);
 }
