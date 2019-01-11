@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 17:23:14 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/11 19:12:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,22 @@ int			read_tetris(t_infos *infos)
 void t(t_tetris *tetris)
 {
 	char *array = tetris->charl;
-
+	char c = 'A' + tetris->id;
 	int i = 0;
+
 	while (i != 21)
 	{
 		if (array[i] == '.')
 		{
-			if ((array[i + 1] && array[i + 1] == '#')
-				|| (array[i + 2] && array[i + 2] == '#'))
+			if ((i + 1 < 20 && array[i + 1] == c)
+				|| (i + 2 < 20 && array[i + 2] == c))
 			{
-				if ((i + 5 <= 20 && array[i + 5]  == '#')
-					|| (i - 5 >= 0 && array[i  - 5] == '#'))
+
+				if ((i + 5 < 20 && array[i + 5]  == c)
+					|| (i - 5 >= 0 && array[i  - 5] == c))
 					array[i] = ' ';
-				if ((i + 10 <= 20 && array[i + 10]  == '#')
-					|| (i - 10 >= 0 && array[i  - 10] == '#'))
+				if ((i + 10 <= 20 && array[i + 10]  == c)
+					|| (i - 10 >= 0 && array[i  - 10] == c))
 					array[i] = ' ';
 			}
 		}
@@ -135,6 +137,7 @@ int				solve(t_infos *infos)
 	int i = 0;
 	int j = 0;
 	int x = 0;
+	ft_putendl(next->next->charl);
 	while (next)
 	{
 		if (next->valid)
@@ -151,7 +154,7 @@ int				solve(t_infos *infos)
 			tmp2 = to_array(next->next->charl);
 			while (i < 4)
 			{
-				if ((ft_strlen(t[i]) <= ft_strlen(tmp2[j])) && ft_strlen(t[i]) + ft_strlen(tmp2[i]) == 4)
+				if ((ft_strlen(t[i]) <= ft_strlen(tmp2[j])) && ft_strlen(t[i]) + ft_strlen(tmp2[i]) < 4)
 					t[i] = ft_strjoin(t[i], tmp2[j++]);
 				i++;
 			}
@@ -171,7 +174,7 @@ int				solve(t_infos *infos)
 		while (ft_strlen(t[i]) < 4)
 			t[i] = ft_strjoin(t[i], ".");
 	char *test = array_to_buff(t);
-	test = ft_strreplace(test, 0, '.');
+	test = ft_strreplace(test, ' ', '.');
 	test[21] = '\0';
 	ft_putendl(test);
 
