@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 14:20:06 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/01/13 13:38:11 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_list
 }					t_list;
 
 void				*ft_memset(void *b, int c, size_t len);
-char				**ft_newarray(size_t size1, size_t size2);
+char				**ft_newarray(size_t size1, size_t size2, char memset);
 void				ft_bzero(void *s, size_t n);
 size_t				ft_count_char(char *str, char ch);
 size_t				ft_copyuntil(char **dst, char *src, char c);
