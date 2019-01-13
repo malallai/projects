@@ -14,6 +14,8 @@ SOURCES = \
 	solver.c \
 	tetrimino.c \
 	utils.c \
+	maths.c \
+	params.c \
 
 MAIN = main.c
 

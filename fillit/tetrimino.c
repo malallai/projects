@@ -6,35 +6,34 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 17:22:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/13 17:44:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			new_tetris(t_infos *infos)
+int			new_tetris(t_params *params)
 {
 	t_tetris *tmp;
 
 	if (!(tmp = (t_tetris *)malloc(sizeof(t_tetris))) || \
-		!(tmp->array = ft_newarray(5, 4)))
+		!(tmp->full_array = ft_newarray(5, 4, 0)) || \
+		!(tmp->array = ft_newarray(5, 4, 0)))
 		return (0);
-	if (!infos->init)
+	if (!params->init)
 	{
-		infos->init = 1;
+		params->init = 1;
 		tmp->next = NULL;
 		tmp->id = 0;
-		tmp->valid = 0;
-		infos->last = tmp;
-		infos->tetris = tmp;
+		params->last = tmp;
+		params->tetris = tmp;
 	}
 	else
 	{
 		tmp->next = NULL;
-		tmp->valid = 0;
-		tmp->id = infos->last->id + 1;
-		infos->last->next = tmp;
-		infos->last = tmp;
+		tmp->id = params->last->id + 1;
+		params->last->next = tmp;
+		params->last = tmp;
 	}
 	return (1);
 }
@@ -65,13 +64,11 @@ char		*convert_to_string(t_tetris *tetris, char c)
 	return (tmp);
 }
 
-int			check_tetro(t_infos *infos)
+int			check_tetro(t_params *params)
 {
 	t_tetris *tetris;
 
-	tetris = infos->last;
-	if (!(tetris->charl = convert_to_string(tetris, 'A' + tetris->id)))
-		return (0);
+	tetris = params->last;
 	if (!(tetris->chard = convert_to_string(tetris, '#')))
 		return (0);
 	if (ft_count_char(tetris->chard, '#') != 4 || !check_connection(tetris))

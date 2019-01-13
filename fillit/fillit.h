@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 17:21:56 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/13 18:15:20 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 
 typedef struct		s_tetris
 {
+	char			**full_array;
 	char			**array;
-	struct s_tetris	*next;
-	int				id;
-	char			*charl;
 	char			*chard;
-	int				valid;
+	int				id;
+	struct s_tetris	*next;
 }					t_tetris;
 
 typedef struct		s_pos
@@ -34,34 +33,39 @@ typedef struct		s_pos
 
 typedef struct		s_map
 {
-	char			**map;
-	size_t			size;
+	char			**array;
+	int				size;
 }					t_map;
 
-typedef	struct		s_infos
+typedef	struct		s_params
 {
 	t_tetris		*tetris;
 	t_tetris		*last;
-	t_pos			*pos;
-	t_map 			*map;	
+	t_map			*map;
 	int				size;
 	int				fd;
 	int				init;
-}					t_infos;
+}					t_params;
 
-int					fillit(t_infos *infos);
-int					read_tetris(t_infos *infos);
+int					fillit(t_params *params);
+int					ft_sqrt(int x);
+int					read_tetris(t_params *params);
 int					is_valid_char(char c);
-int					exit_fillit(t_infos *infos, int error);
+int					exit_fillit(t_params *params, int error);
 char				**new_array(void);
-int					new_tetris(t_infos *infos);
-int					edit_infos(t_infos *infos, char c, int end);
+int					new_tetris(t_params *params);
 int					free_tetris(t_tetris *tetris);
-t_infos				*new_infos(int fd);
+t_params			*new_params(int fd);
 char				*convert_to_string(t_tetris *tetris, char c);
-int					check_tetro(t_infos *infos);
+int					check_tetro(t_params *params);
 int					check_connection(t_tetris *tetris);
-t_map				*new_map(t_infos *infos);
-int					solve(t_infos *infos);
+t_map				*new_map(t_params *params, size_t size);
+int					solve(t_params *params);
+int					solve_map(t_params *params, t_tetris *tetris);
+int					try_set(t_params *params, t_tetris *tetris, t_pos *pos);
+int					set(t_params *params, t_tetris *tetris, t_pos *pos, \
+					char to_set);
+t_pos				*new_pos(int x, int y);
+int					edit_pos(t_pos *pos, int max_x, int max_y, char c);
 
 #endif
