@@ -6,72 +6,68 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:39 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 17:46:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_countwords(char const *s, char c)
+static	short	is_a_word(char before, char current, char strip)
 {
-	int count;
+	return ((before == strip || before == 0) && current != strip);
+}
 
-	count = 0;
-	while (*s)
+static	int		total_words(char const *s, char strip)
+{
+	int i;
+	int total;
+
+	i = 0;
+	total = 0;
+	while (s[i])
 	{
-		if (*s == c)
-			s++;
-		else
-		{
-			count++;
-			while (*s && *s != c)
-				s++;
-		}
+		if (is_a_word(s[i - 1], s[i], strip))
+			total++;
+		i++;
 	}
-	return (count);
+	return (total);
 }
 
-static size_t	ft_getwordsize(char const *s, char c)
+static	int		word_len(const char *c, char strip)
 {
-	size_t	count;
+	unsigned int	i;
 
-	count = 0;
-	while (*s && *s++ != c)
-		count++;
-	return (count);
-}
-
-static void		**ft_freetab(char **tab, int index)
-{
-	while (index-- != 0)
-		free(tab[index]);
-	free(tab);
-	return (NULL);
+	i = 0;
+	while (c[i] && c[i] != strip)
+		i++;
+	return (i);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char	**tab;
-	int		index;
-	char	*temp;
+	char	**str;
+	char	*tmp;
 	int		i;
+	int		stri;
 
-	if (!s)
+	if (!s || !(str = (char**)malloc((total_words(s, c) + 1) * sizeof(char*))))
 		return (NULL);
-	if (!(tab = malloc(sizeof(char *) * ft_countwords(s, c))))
-		return (NULL);
-	index = 0;
-	temp = ft_trimchar(ft_strdup(s), c);
-	while (index < ft_countwords(s, c))
+	tmp = (char*)s;
+	i = 0;
+	stri = 0;
+	while (tmp[i])
 	{
-		i = 0;
-		if (!(tab[index] = ft_strnew(ft_getwordsize(temp, c))))
-			return ((char **)ft_freetab(tab, index));
-		while (*temp && *temp != c)
-			tab[index][i++] = *temp++;
-		temp = ft_trimchar(ft_strdup(temp), c);
-		tab[index++][i] = '\0';
+		if (is_a_word(i > 0 ? tmp[i - 1] : c, tmp[i], c))
+		{
+			if (!(str[stri] = ft_strndup(&tmp[i], word_len(&tmp[i], c))))
+			{
+				free(str);
+				return (NULL);
+			}
+			stri++;
+		}
+		i++;
 	}
-	tab[index] = NULL;
-	return (tab);
+	str[stri] = 0;
+	return (str);
 }

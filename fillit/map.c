@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/15 15:02:53 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 17:24:31 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 		{
 			if (tetris->array[tetri_pos->y][tetri_pos->x] == '#'
 				&& params->map->array[tetri_pos->y + pos->y][tetri_pos->x + pos->x] != '.')
+			{
+				free(tetri_pos);
 				return (0);
+			}
 			tetri_pos->y++;
 		}
 		tetri_pos->x++;

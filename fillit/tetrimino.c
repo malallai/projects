@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 13:19:50 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 17:50:19 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int			new_tetris(t_params *params)
 	}
 	tmp->width = 0;
 	tmp->height = 0;
-	params->last = tmp;
 	params->last = tmp;
 	return (1);
 }
@@ -68,9 +67,7 @@ char		*convert_to_string(t_tetris *tetris, char c)
 int			check_tetro(t_params *params)
 {
 	t_tetris	*tetris;
-	t_pos		*pos;
 
-	pos = new_pos(0, 0);
 	tetris = params->last;
 	if (!(tetris->chard = convert_to_string(tetris, '#')))
 		return (0);

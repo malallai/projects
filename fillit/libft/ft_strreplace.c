@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 15:40:03 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/11 15:57:19 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 17:35:00 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ char	*ft_strreplace(const char *str, char to_replace, char replace)
 			str_index++;
 		else
 		{
-			if (str[str_index] == to_replace)
-				c = replace;
-			else
-				c = str[str_index];
+			c = str[str_index] == to_replace ? replace : str[str_index];
 			new_str[newstr_index] = c;
 			newstr_index++;
 			str_index++;

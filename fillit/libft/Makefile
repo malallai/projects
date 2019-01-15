@@ -52,7 +52,6 @@ SOURCES = \
 	ft_strcpy.c \
 	ft_strdel.c \
 	ft_strdup.c \
-	ft_strreplace.c \
 	ft_strequ.c \
 	ft_striter.c \
 	ft_striteri.c \
@@ -64,10 +63,12 @@ SOURCES = \
 	ft_strncat.c \
 	ft_strncmp.c \
 	ft_strncpy.c \
+	ft_strndup.c \
 	ft_strnequ.c \
 	ft_strnew.c \
 	ft_strnstr.c \
 	ft_strrchr.c \
+	ft_strreplace.c \
 	ft_strsplit.c \
 	ft_strstr.c \
 	ft_strsub.c \
