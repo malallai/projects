@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 13:38:11 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 17:48:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strreplace(const char *str, char tr, char r);
+char				*ft_strndup(const char *str, int len);
 char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
