@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 12:56:44 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 13:19:50 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int			check_tetro(t_params *params)
 
 	pos = new_pos(0, 0);
 	tetris = params->last;
-	if (!remove_dots(tetris))
-		return (0);
 	if (!(tetris->chard = convert_to_string(tetris, '#')))
+		return (0);
+	if (!remove_dots(tetris))
 		return (0);
 	if (ft_count_char(tetris->chard, '#') != 4 || !check_connection(tetris))
 		return (0);
