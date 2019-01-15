@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 18:18:09 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 13:09:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ int		exit_fillit(t_params *params, int error)
 	{
 		close(params->fd);
 		free_tetris(params->tetris);
-		ft_freearray(params->map->array);
-		free(params->map);
+		if (params->map)
+		{
+			ft_freearray(params->map->array);
+			free(params->map);
+		}
 		free(params);
 	}
 	exit(-1);
@@ -42,4 +45,73 @@ int		free_tetris(t_tetris *tetris)
 		tetris = tmp;
 	}
 	return (1);
+}
+
+int		remove_dots(t_tetris *tetris)
+{
+	char	c;
+	int		index;
+	char	*tmp;
+
+	index = 0;
+	tmp = ft_strcpy(tmp, tetris->chard);
+	while (index < 21)
+	{
+		if (!is_valid_char(tmp[index]))
+			return (0);
+		if (check(tmp, index))
+			c = ' ';
+		else
+			c = tmp[index] == '#' ? '#' : 0;
+		tmp[index] = c;
+		index++;
+	}
+	free(tetris->array);
+	tetris->array = ft_strsplit(tmp, '\n');
+	free(tmp);
+	return (1);
+}
+
+int		check(char *str, int index)
+{
+	if (str[index] == '.')
+	{
+		if ((index + 1 < 20 && str[index + 1] == '#')
+			|| (index + 2 < 20 && str[index + 2] == '#'))
+		{
+			if ((index + 5 < 20 && str[index + 5] == '#')
+				|| (index - 5 >= 0 && str[index - 5] == '#'))
+				return (1);
+			else if ((index + 10 < 20 && str[index - 10]] == '#')
+				|| (pos->y - 2 >= 0 && array[pos->y - 2][pos->x] == '#'))
+				return (1);
+		}
+	}
+	return (0);
+}
+
+void	get_size(t_tetris *tetris)
+{
+	t_pos	*pos;
+
+	pos = new_pos(0, 0);
+	while (!pos->index)
+	{
+		if (!tetris->height)
+		{
+			while (tetris->array[pos->y])
+			{
+				tetris->height += tetris->array[pos->y][0] ? 1 : 0;
+				pos->y++;
+			}
+			pos->y = 0;
+		}
+		while (tetris->array[pos->y][pos->x])
+			pos->x++;
+		tetris->width = tetris->width < pos->x ? pos->x : tetris->width;
+		pos->y++;
+		pos->x = 0;
+		pos->index = pos->y == 4 ? 1 : 0;
+	}
+	free(pos);
 }
