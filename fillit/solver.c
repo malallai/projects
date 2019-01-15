@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 18:15:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 11:19:41 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int		solve(t_params *params)
 	i = 0;
 	size = ft_sqrt(params->size * 4);
 	map = new_map(params, size);
+	ft_putnbr(size);
+	ft_putendl(" start");
 	while (!solve_map(params, params->tetris))
 	{
 		size++;
@@ -55,6 +57,8 @@ int		solve(t_params *params)
 		free(params->map);
 		map = new_map(params, size);
 	}
+	ft_putnbr(size);
+	ft_putendl(" end");
 	while (params->map->array[i])
 		ft_putendl(params->map->array[i++]);
 	return (1);
@@ -65,14 +69,16 @@ int		solve_map(t_params *params, t_tetris *tetris)
 	t_pos	*pos;
 
 	pos = new_pos(0, 0);
+	if (!tetris->next)
+		return (1);
 	while (pos->y < params->map->size && pos->x < params->map->size)
 	{
-		if (try_set(params, tetris, new_pos(pos->x, pos->y)))
+		if (try_set(params, tetris, pos))
 		{
-			if (!tetris->next || solve_map(params, tetris->next))
+			if (solve_map(params, tetris->next))
 				return (1);
 			else
-				set(params, tetris, new_pos(pos->x, pos->y), '.');
+				set(params, tetris, pos, '.');
 		}
 		edit_pos(pos, params->map->size, params->map->size, 0);
 	}

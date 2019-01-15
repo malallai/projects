@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 17:44:01 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 12:56:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@ int			new_tetris(t_params *params)
 	if (!params->init)
 	{
 		params->init = 1;
-		tmp->next = NULL;
 		tmp->id = 0;
-		params->last = tmp;
 		params->tetris = tmp;
 	}
 	else
 	{
-		tmp->next = NULL;
 		tmp->id = params->last->id + 1;
 		params->last->next = tmp;
-		params->last = tmp;
 	}
+	tmp->width = 0;
+	tmp->height = 0;
+	params->last = tmp;
+	params->last = tmp;
 	return (1);
 }
 
@@ -50,11 +50,12 @@ char		*convert_to_string(t_tetris *tetris, char c)
 	index = 0;
 	if (!(tmp = ft_strnew(21)))
 		return (NULL);
-	while (tetris->array[i])
+	while (tetris->full_array[i])
 	{
-		while (tetris->array[i][j])
+		while (tetris->full_array[i][j])
 		{
-			tmp[index++] = tetris->array[i][j] == '#' ? c : tetris->array[i][j];
+			tmp[index++] = tetris->full_array[i][j] == '#' ? c \
+				: tetris->full_array[i][j];
 			j++;
 		}
 		tmp[index++] = '\n';
@@ -66,13 +67,18 @@ char		*convert_to_string(t_tetris *tetris, char c)
 
 int			check_tetro(t_params *params)
 {
-	t_tetris *tetris;
+	t_tetris	*tetris;
+	t_pos		*pos;
 
+	pos = new_pos(0, 0);
 	tetris = params->last;
+	if (!remove_dots(tetris))
+		return (0);
 	if (!(tetris->chard = convert_to_string(tetris, '#')))
 		return (0);
 	if (ft_count_char(tetris->chard, '#') != 4 || !check_connection(tetris))
 		return (0);
+	get_size(tetris);
 	return (1);
 }
 

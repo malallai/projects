@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 17:54:55 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 18:13:44 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 11:58:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int			edit_pos(t_pos *pos, int max_x, int max_y, char c)
 	}
 	else if (pos->x < max_x)
 		pos->x++;
+	pos->index++;
 	return (1);
 }
 
@@ -34,6 +35,7 @@ t_pos		*new_pos(int x, int y)
 		return (NULL);
 	pos->x = x;
 	pos->y = y;
+	pos->index = 0;
 	return (pos);
 }
 
@@ -47,5 +49,6 @@ t_params	*new_params(int fd)
 	params->last = NULL;
 	params->size = 0;
 	params->fd = fd;
+	params->map = NULL;
 	return (params);
 }
