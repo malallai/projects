@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/15 12:57:22 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 15:02:53 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,34 +25,42 @@ t_map	*new_map(t_params *params, size_t size)
 
 int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 {
-	t_pos	*pos2;
+	t_pos	*tetri_pos;
 
-	pos2 = new_pos(0, 0);
-	while (pos2->y < params->map->size - tetris->height
-		&& pos2->x < params->map->size - tetris->width)
+	tetri_pos = new_pos(0, 0);
+	while (tetri_pos->x < tetris->width)
 	{
-		if (tetris->array[pos2->y][pos2->x] == '#'
-			&& params->map->array[pos2->y + pos->y][pos2->x + pos->x] != '.')
-			return (0);
-		edit_pos(pos2, 3, 3, 0);
+		tetri_pos->y = 0;
+		while (tetri_pos->y < tetris->height)
+		{
+			if (tetris->array[tetri_pos->y][tetri_pos->x] == '#'
+				&& params->map->array[tetri_pos->y + pos->y][tetri_pos->x + pos->x] != '.')
+				return (0);
+			tetri_pos->y++;
+		}
+		tetri_pos->x++;
 	}
-	set(params, tetris, pos2, 'A' + tetris->id);
+	set(params, tetris, pos, 'A' + tetris->id);
+	free(tetri_pos);
 	return (1);
 }
 
 int		set(t_params *params, t_tetris *tetris, t_pos *pos, char to_set)
 {
-	t_pos	*pos2;
+	t_pos	*tetri_pos;
 
-	pos2 = new_pos(0, 0);
-	while (pos2->y < 4 && pos2->x < 4)
+	tetri_pos = new_pos(0, 0);
+	while (tetri_pos->x < tetris->width)
 	{
-		if (tetris->array[pos2->y][pos2->x] == '#')
-			params->map->array[pos2->y + pos->y][pos2->x + pos->x] = to_set;
-		edit_pos(pos2, 3, 3, 0);
+		tetri_pos->y = 0;
+		while (tetri_pos->y < tetris->height)
+		{
+			if (tetris->array[tetri_pos->y][tetri_pos->x] == '#')
+				params->map->array[tetri_pos->y + pos->y][tetri_pos->x + pos->x] = to_set;
+			tetri_pos->y++;
+		}
+		tetri_pos->x++;
 	}
-	printf("%d %d\n", pos2->x, pos2->y);
-	free(pos2);
-	free(pos);
+	free(tetri_pos);
 	return (1);
 }

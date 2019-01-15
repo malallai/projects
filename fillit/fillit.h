@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 12:51:58 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/15 13:12:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int					set(t_params *params, t_tetris *tetris, t_pos *pos, \
 					char to_set);
 t_pos				*new_pos(int x, int y);
 int					edit_pos(t_pos *pos, int max_x, int max_y, char c);
-int					check(t_tetris *tetris, t_pos *pos);
+int					check(char *str, int index);
 int					remove_dots(t_tetris *tetris);
 void				get_size(t_tetris *tetris);
 
