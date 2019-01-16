@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 17:50:19 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/16 16:45:48 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ int			new_tetris(t_params *params)
 	{
 		params->init = 1;
 		tmp->id = 0;
+		tmp->parent = NULL;
 		params->tetris = tmp;
 	}
 	else
 	{
+		tmp->parent = params->last;
 		tmp->id = params->last->id + 1;
 		params->last->next = tmp;
 	}
@@ -37,39 +39,14 @@ int			new_tetris(t_params *params)
 	return (1);
 }
 
-char		*convert_to_string(t_tetris *tetris, char c)
-{
-	char	*tmp;
-	int		i;
-	int		j;
-	int		index;
-
-	i = 0;
-	j = 0;
-	index = 0;
-	if (!(tmp = ft_strnew(21)))
-		return (NULL);
-	while (tetris->full_array[i])
-	{
-		while (tetris->full_array[i][j])
-		{
-			tmp[index++] = tetris->full_array[i][j] == '#' ? c \
-				: tetris->full_array[i][j];
-			j++;
-		}
-		tmp[index++] = '\n';
-		j = 0;
-		i++;
-	}
-	return (tmp);
-}
-
 int			check_tetro(t_params *params)
 {
 	t_tetris	*tetris;
+	size_t		size;
 
 	tetris = params->last;
-	if (!(tetris->chard = convert_to_string(tetris, '#')))
+	size = ft_strlen(tetris->chard);
+	if (size < 20)
 		return (0);
 	if (!remove_dots(tetris))
 		return (0);

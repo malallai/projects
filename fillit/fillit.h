@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 13:12:02 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/16 16:29:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct		s_tetris
 	int				width;
 	int				height;
 	int				id;
+	struct s_tetris *parent;
 	struct s_tetris	*next;
 }					t_tetris;
 
@@ -49,6 +50,7 @@ typedef	struct		s_params
 	int				size;
 	int				fd;
 	int				init;
+	char			*buff_tmp;
 }					t_params;
 
 int					fillit(t_params *params);

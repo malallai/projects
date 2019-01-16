@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 17:55:02 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/16 16:57:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ int		check(char *str, int index)
 			if ((index + 5 < 20 && str[index + 5] == '#')
 				|| (index - 5 >= 0 && str[index - 5] == '#'))
 				return (1);
-			else if ((index + 10 < 20 && str[index - 10] == '#')
-				|| (index - 10 < 20 && str[index - 10] == '#'))
+			else if ((index + 10 < 20 && str[index + 10] == '#')
+				|| (index - 10 >= 0 && str[index - 10] == '#'))
 				return (1);
 		}
 	}

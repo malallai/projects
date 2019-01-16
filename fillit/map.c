@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/15 17:24:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/16 15:45:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,45 +25,45 @@ t_map	*new_map(t_params *params, size_t size)
 
 int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 {
-	t_pos	*tetri_pos;
+	t_pos	*tpos;
 
-	tetri_pos = new_pos(0, 0);
-	while (tetri_pos->x < tetris->width)
+	tpos = new_pos(0, 0);
+	while (tpos->x < tetris->width)
 	{
-		tetri_pos->y = 0;
-		while (tetri_pos->y < tetris->height)
+		tpos->y = 0;
+		while (tpos->y < tetris->height)
 		{
-			if (tetris->array[tetri_pos->y][tetri_pos->x] == '#'
-				&& params->map->array[tetri_pos->y + pos->y][tetri_pos->x + pos->x] != '.')
+			if (tetris->array[tpos->y][tpos->x] == '#' && \
+				params->map->array[tpos->y + pos->y][tpos->x + pos->x] != '.')
 			{
-				free(tetri_pos);
+				free(tpos);
 				return (0);
 			}
-			tetri_pos->y++;
+			tpos->y++;
 		}
-		tetri_pos->x++;
+		tpos->x++;
 	}
 	set(params, tetris, pos, 'A' + tetris->id);
-	free(tetri_pos);
+	free(tpos);
 	return (1);
 }
 
 int		set(t_params *params, t_tetris *tetris, t_pos *pos, char to_set)
 {
-	t_pos	*tetri_pos;
+	t_pos	*tpos;
 
-	tetri_pos = new_pos(0, 0);
-	while (tetri_pos->x < tetris->width)
+	tpos = new_pos(0, 0);
+	while (tpos->x < tetris->width)
 	{
-		tetri_pos->y = 0;
-		while (tetri_pos->y < tetris->height)
+		tpos->y = 0;
+		while (tpos->y < tetris->height)
 		{
-			if (tetris->array[tetri_pos->y][tetri_pos->x] == '#')
-				params->map->array[tetri_pos->y + pos->y][tetri_pos->x + pos->x] = to_set;
-			tetri_pos->y++;
+			if (tetris->array[tpos->y][tpos->x] == '#')
+				params->map->array[tpos->y + pos->y][tpos->x + pos->x] = to_set;
+			tpos->y++;
 		}
-		tetri_pos->x++;
+		tpos->x++;
 	}
-	free(tetri_pos);
+	free(tpos);
 	return (1);
 }
