@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 17:52:42 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/16 16:42:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,30 @@
 int		read_tetris(t_params *p)
 {
 	int			r;
-	char		*buffer;
 	int			index;
 	t_tetris	*tetris;
 	t_pos		*pos;
 
 	index = 0;
-	buffer = ft_strnew(22);
-	tetris = p->last;
+	p->buff_tmp = ft_strnew(22);
 	pos = new_pos(0, 0);
-	if ((r = read(p->fd, buffer, 21)))
+	if ((r = read(p->fd, p->buff_tmp, 21)))
 	{
-		buffer[21] = '\0';
-		while (buffer[index] && is_valid_char(buffer[index]))
+		p->buff_tmp[21] = '\0';
+		if (!new_tetris(p))
+			exit_fillit(p, 1);
+		tetris = p->last;
+		tetris->chard = ft_strdup(p->buff_tmp);
+		while (p->buff_tmp[index] && is_valid_char(p->buff_tmp[index]))
 		{
-			tetris->full_array[pos->y][pos->x] = buffer[index] == '\n'
-				? tetris->full_array[pos->y][pos->x] : buffer[index];
-			edit_pos(pos, 3, 3, buffer[index++]);
+			tetris->full_array[pos->y][pos->x] = p->buff_tmp[index] == '\n'
+				? tetris->full_array[pos->y][pos->x] : p->buff_tmp[index];
+			edit_pos(pos, 3, 3, p->buff_tmp[index++]);
 		}
 	}
-	ft_strdel(&buffer);
+	free(p->buff_tmp);
 	free(pos);
-	return (r && index == 21 ? 1 : 0);
+	return (!r ? 0 : 1);
 }
 
 int		solve(t_params *params)
@@ -64,8 +66,6 @@ int		solve_map(t_params *params, t_tetris *tetris)
 {
 	t_pos	*pos;
 
-	if (!tetris->next)
-		return (1);
 	pos = new_pos(0, 0);
 	while (pos->y < params->map->size - tetris->height + 1)
 	{
@@ -74,7 +74,7 @@ int		solve_map(t_params *params, t_tetris *tetris)
 		{
 			if (try_set(params, tetris, pos))
 			{
-				if (solve_map(params, tetris->next))
+				if (!tetris->next || solve_map(params, tetris->next))
 				{
 					free(pos);
 					return (1);
