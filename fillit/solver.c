@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/19 16:11:15 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 17:48:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,11 @@ int		solve_map(t_params *params, t_tetris *tetris)
 	int		y;
 
 	if (tetris == NULL)
+	{
+		_DEBUG_("%p\n", tetris);
+		ft_putendl("null");
 		return (1);
+	}
 	y = 0;
 	while (y < params->map->size - tetris->height + 1)
 	{
@@ -85,5 +89,9 @@ int		solve_map(t_params *params, t_tetris *tetris)
 		}
 		y++;
 	}
-	return (0);
+	/*int i = 0;
+	while (tetris->array[i])
+		printf("%s\n", tetris->array[i++]);
+	_DEBUG_("%d %d (%d %d)\n", x, y, params->map->size - tetris->width + 1, params->map->size - tetris->height + 1);
+	*/return (0);
 }

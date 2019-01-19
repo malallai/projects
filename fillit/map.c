@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/19 14:38:16 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 17:16:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 	int		x;
 	int		y;
 
-	x = 0;
-	while (x < tetris->width)
+	y = 0;
+	while (y < tetris->height)
 	{
-		y = 0;
-		while (y < tetris->height)
+		x = 0;
+		while (x < tetris->width)
 		{
 			if (tetris->array[y][x] == '#' && \
 				params->map->array[y + pos->y][x + pos->x] != '.')
 				return (0);
-			y++;
+			x++;
 		}
-		x++;
+		y++;
 	}
 	set(params, tetris, pos, 'A' + tetris->id);
 	return (1);
@@ -50,17 +50,17 @@ int		set(t_params *params, t_tetris *tetris, t_pos *pos, char to_set)
 	int		x;
 	int		y;
 
-	x = 0;
-	while (x < tetris->width)
+	y = 0;
+	while (y < tetris->height)
 	{
-		y = 0;
-		while (y < tetris->height)
+		x = 0;
+		while (x < tetris->width)
 		{
 			if (tetris->array[y][x] == '#')
 				params->map->array[y + pos->y][x + pos->x] = to_set;
-			y++;
+			x++;
 		}
-		x++;
+		y++;
 	}
 	free(pos);
 	return (1);
