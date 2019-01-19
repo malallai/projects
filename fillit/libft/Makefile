@@ -78,9 +78,6 @@ SOURCES = \
 	ft_trimchar.c \
 
 OBJECTS = $(SOURCES:.c=.o)
-OBJECTS := $(subst /,__,$(OBJECTS))
-OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
-SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FLAGS = -Wall -Wextra -Werror
 CC = clang
@@ -92,12 +89,9 @@ WARN_COLOR =	\033[38;5;3m
 SILENT_COLOR =	\033[38;5;245m
 INFO_COLOR =	\033[38;5;140m
 
-.PHONY: all re clean fclean so createdir
+.PHONY: all re clean fclean
 
-all: createdir $(NAME)
-
-createdir:
-	@mkdir -p $(OBJECTS_FOLDER)
+all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
