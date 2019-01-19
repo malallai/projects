@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/19 16:13:10 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 17:38:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		fillit(t_params *params)
 		if (!check_tetro(params) || params->size > 26)
 			exit_fillit(params, 1);
 	}
-	if (!ret && !params->size)
+	if (!ret && (!params->size || ft_strlen(params->last->chard) != 20))
 		exit_fillit(params, 1);
 	if (!solve(params))
 		exit_fillit(params, 1);
