@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/16 16:57:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 15:07:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		remove_dots(t_tetris *tetris)
 	tmp = ft_strdup(tetris->chard);
 	while (index < 20)
 	{
-		if (!is_valid_char(tmp[index]))
+		if (!is_valid_char(tmp[index], 1))
 		{
 			free(tmp);
 			return (0);

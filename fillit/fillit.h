@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/16 16:29:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 15:03:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef	struct		s_params
 int					fillit(t_params *params);
 int					ft_sqrt(int x);
 int					read_tetris(t_params *params);
-int					is_valid_char(char c);
+int					is_valid_char(char c, int i);
 int					exit_fillit(t_params *params, int error);
 char				**new_array(void);
 int					new_tetris(t_params *params);
