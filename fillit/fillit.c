@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/16 16:38:11 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 16:13:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ int		fillit(t_params *params)
 {
 	int	ret;
 
-	while ((ret = read_tetris(params)) == 1)
+	while ((ret = read_tetris(params)) > 0)
 	{
+		if (ret < 20)
+			exit_fillit(params, 1);
 		params->size = params->size + 1;
 		if (!check_tetro(params) || params->size > 26)
 			exit_fillit(params, 1);

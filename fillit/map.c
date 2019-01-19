@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/16 15:45:34 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 14:38:16 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,45 +25,43 @@ t_map	*new_map(t_params *params, size_t size)
 
 int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 {
-	t_pos	*tpos;
+	int		x;
+	int		y;
 
-	tpos = new_pos(0, 0);
-	while (tpos->x < tetris->width)
+	x = 0;
+	while (x < tetris->width)
 	{
-		tpos->y = 0;
-		while (tpos->y < tetris->height)
+		y = 0;
+		while (y < tetris->height)
 		{
-			if (tetris->array[tpos->y][tpos->x] == '#' && \
-				params->map->array[tpos->y + pos->y][tpos->x + pos->x] != '.')
-			{
-				free(tpos);
+			if (tetris->array[y][x] == '#' && \
+				params->map->array[y + pos->y][x + pos->x] != '.')
 				return (0);
-			}
-			tpos->y++;
+			y++;
 		}
-		tpos->x++;
+		x++;
 	}
 	set(params, tetris, pos, 'A' + tetris->id);
-	free(tpos);
 	return (1);
 }
 
 int		set(t_params *params, t_tetris *tetris, t_pos *pos, char to_set)
 {
-	t_pos	*tpos;
+	int		x;
+	int		y;
 
-	tpos = new_pos(0, 0);
-	while (tpos->x < tetris->width)
+	x = 0;
+	while (x < tetris->width)
 	{
-		tpos->y = 0;
-		while (tpos->y < tetris->height)
+		y = 0;
+		while (y < tetris->height)
 		{
-			if (tetris->array[tpos->y][tpos->x] == '#')
-				params->map->array[tpos->y + pos->y][tpos->x + pos->x] = to_set;
-			tpos->y++;
+			if (tetris->array[y][x] == '#')
+				params->map->array[y + pos->y][x + pos->x] = to_set;
+			y++;
 		}
-		tpos->x++;
+		x++;
 	}
-	free(tpos);
+	free(pos);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 17:03:07 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 17:05:07 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/19 15:27:15 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int		ft_sqrt(int n)
 	return (size);
 }
 
-int		is_valid_char(char c)
+int		is_valid_char(char c, int i)
 {
+	if (!i)
+		return (c == '\n' ? 0 : 1);
 	return (c == '.' || c == '#' || c == '\n');
 }
