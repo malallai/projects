@@ -105,10 +105,8 @@ $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
 
 clean:
 	@rm -f $(OBJECTS)
-	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed all objects$(NO_COLOR).\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed $(INFO_COLOR)$(NAME)$(NO_COLOR).\n"
 
 re: fclean all
