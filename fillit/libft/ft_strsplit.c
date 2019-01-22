@@ -5,69 +5,113 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 15:40:17 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 17:46:39 by malallai         ###   ########.fr       */
+/*   Created: 2019/01/21 16:59:15 by malallai          #+#    #+#             */
+/*   Updated: 2019/01/21 17:48:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	short	is_a_word(char before, char current, char strip)
+static size_t	count_words(const char *str, char splitter)
 {
-	return ((before == strip || before == 0) && current != strip);
-}
+	int		count;
+	char	*tmp;
+	int		index;
 
-static	int		total_words(char const *s, char strip)
-{
-	int i;
-	int total;
-
-	i = 0;
-	total = 0;
-	while (s[i])
+	count = 0;
+	tmp = ft_strdup(str);
+	while (tmp[index])
 	{
-		if (is_a_word(s[i - 1], s[i], strip))
-			total++;
-		i++;
+		if (tmp[index] == splitter)
+			index++;
+		else
+		{
+			count++;
+			while (tmp[index] && tmp[index] != splitter)
+				index++;
+		}
 	}
-	return (total);
+	free(tmp);
+	return (count);
 }
 
-static	int		word_len(const char *c, char strip)
+static char		**free_tab(char **array, size_t size)
 {
-	unsigned int	i;
+	int index;
 
-	i = 0;
-	while (c[i] && c[i] != strip)
-		i++;
-	return (i);
+	index = 0;
+	while (index != size)
+		free(array[index++]);
+	free(array);
+	return (NULL);
 }
 
-char			**ft_strsplit(char const *s, char c)
+static char		*copy(char *str, char splitter)
 {
-	char	**str;
 	char	*tmp;
 	int		i;
-	int		stri;
+	int		size;
 
-	if (!s || !(str = (char**)malloc((total_words(s, c) + 1) * sizeof(char*))))
-		return (NULL);
-	tmp = (char*)s;
+	size = 0;
+	while (str[size] != splitter)
+		size++;
+	tmp = ft_strnew(size);
 	i = 0;
-	stri = 0;
-	while (tmp[i])
+	while (i < size)
 	{
-		if (is_a_word(i > 0 ? tmp[i - 1] : c, tmp[i], c))
-		{
-			if (!(str[stri] = ft_strndup(&tmp[i], word_len(&tmp[i], c))))
-			{
-				free(str);
-				return (NULL);
-			}
-			stri++;
-		}
+		tmp[i] = str[i];
 		i++;
 	}
-	str[stri] = 0;
-	return (str);
+	tmp[i] = '\0';
+	ft_putendl(tmp);
+	return (tmp);
+}
+
+char			**ft_strsplit(char const *str, char splitter)
+{
+	char	**array;
+	char	*tmp_str;
+	int		index;
+	size_t	words;
+	char	*tmp;
+
+	words = count_words(str, splitter);
+	if (!(array = malloc(sizeof(char *) * words)))
+		return (NULL);
+	tmp_str = ft_strdup(str);
+	index = 0;
+	while (index < words)
+	{
+		if (!(array[index] = copy(tmp_str, splitter)))
+			return (free_tab(array, words));
+		tmp = tmp_str;
+		tmp_str = ft_trimchar(tmp, splitter);
+		free(tmp);
+		index++;
+	}
+	free(tmp_str);
+	array[index] = NULL;
+	index = 0;
+	while (index < words)
+	{
+		ft_putstr("Word : ");
+		ft_putendl(array[index++]);
+	}
+	return (array);
+}
+
+int	main(int argc, char **argv)
+{
+	char	**array;
+
+	if (argc > 1)
+		array = ft_strsplit(argv[1], *argv[2]);
+	int i = 0;
+	ft_putendl("test");
+	while (array[i])
+	{
+		ft_putstr("Word : ");
+		ft_putendl(array[i++]);
+	}
+	return (0);
 }

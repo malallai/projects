@@ -1,1 +1,1 @@
-cat /var/run/sshd.pid
+ps axf | grep ssh
