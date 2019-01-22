@@ -10,6 +10,7 @@ SOURCES = \
 	ft_atoi.c \
 	ft_bzero.c \
 	ft_count_char.c \
+	ft_countwords.c \
 	ft_copyuntil.c \
 	ft_freearray.c \
 	ft_get_next_line.c \
