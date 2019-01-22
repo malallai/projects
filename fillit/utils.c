@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/21 15:02:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/21 16:54:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ int		remove_dots(t_tetris *tetris)
 	}
 	t2 = tmp;
 	tmp = ft_strreplace(tmp, '.', 0);
-	tmp = ft_strreplace(tmp, ' ', '.');
 	ft_freearray(tetris->array);
 	free(t2);
 	tetris->array = ft_strsplit(tmp, '\n');

@@ -1,1 +1,1 @@
-hostname <new_name>
+echo "Pour changer le hostname en commande c'est :\n hostname <nom>"

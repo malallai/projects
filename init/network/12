@@ -1,0 +1,2 @@
+echo "L'IP donnee par le serveur DHCP est"
+ipconfig getifaddr en0

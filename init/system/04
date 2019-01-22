@@ -1,1 +1,2 @@
+echo 'La commande est uptime'
 uptime

@@ -1,1 +1,1 @@
-~/.ssh/authorized_keys
+Le fichier contenant les cles RSA se trouve dans ~/.ssh/authorized_keys
