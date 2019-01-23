@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/22 12:31:49 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/23 17:40:49 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		fd = open(argv[1], O_RDONLY);
-		if (fd < 0)
+		if((fd = open(argv[1], O_RDONLY)) < 0)
 			return (exit_fillit(params, 1));
 		if (!(params = new_params(fd)))
 			return (exit_fillit(params, 1));

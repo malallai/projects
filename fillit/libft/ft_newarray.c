@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_newarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/09 17:34:45 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/13 13:39:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/23 17:20:59 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@ char	**ft_newarray(size_t size1, size_t size2, char m)
 	size_t	i;
 
 	i = 0;
-	if ((new_array = (char **)malloc(sizeof(char **) * size1)))
+	if ((new_array = (char **)malloc(sizeof(char*) * size1)))
 	{
 		while (i < size2)
 		{
 			if (!(new_array[i] = ft_strnew(size2)))
+			{
+				free(new_array);
 				return (NULL);
+			}
 			ft_memset(new_array[i], m, size2);
 			i++;
 		}
