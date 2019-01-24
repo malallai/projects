@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 23:29:26 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 23:36:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int		read_tetris(t_params *params)
 	{
 		if (!copy_read(params))
 			exit_fillit(params, 1);
-		check_tetro(params, r);
 	}
 	free(params->buff_tmp);
 	return (r);
