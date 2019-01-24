@@ -20,7 +20,8 @@ MAIN = main.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
-FLAGS = -fsanitize=address -Wall -Wextra -Werror
+FSANITIZE = -fsanitize=address
+FLAGS = $(FSANITIZE) -Wall -Wextra -Werror
 CC = clang
 
 NO_COLOR =		\033[38;5;15m

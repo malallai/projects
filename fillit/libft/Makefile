@@ -44,6 +44,8 @@ SOURCES = \
 	ft_putendl_fd.c \
 	ft_putnbr.c \
 	ft_putnbr_fd.c \
+	ft_putnbrln_fd.c \
+	ft_putnbrln.c \
 	ft_putstr.c \
 	ft_putstr_fd.c \
 	ft_strcat.c \
