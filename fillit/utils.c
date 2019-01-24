@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/23 18:33:41 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/01/24 16:01:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		exit_fillit(t_params *params, int error)
 	if (params)
 	{
 		close(params->fd);
-		free_tetris(params->tetris);
+		free_tetris(params);
 		if (params->map)
 		{
 			ft_freearray(params->map->array);
@@ -31,18 +31,23 @@ int		exit_fillit(t_params *params, int error)
 	return (-1);
 }
 
-int		free_tetris(t_tetris *tetris)
+int		free_tetris(t_params *params)
 {
 	t_tetris	*tmp;
-
-	while (tetris)
+	t_tetris	*tetris;
+	
+	tetris = params->tetris;
+	while (tetris && params->size)
 	{
-		tmp = tetris->next;
-		ft_freearray(tetris->array);
-		ft_freearray(tetris->full_array);
-		free(tetris->chard);
-		free(tetris);
-		tetris = tmp;
+		tmp = tetris;
+		if (tmp->id + 1 < params->size)
+			tetris = tmp->next;
+		else
+			tetris = NULL;
+		ft_freearray(tmp->array);
+		ft_freearray(tmp->full_array);
+		free(tmp->chard);
+		free(tmp);
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/21 14:42:14 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:54:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int					is_valid_char(char c, int i);
 int					exit_fillit(t_params *params, int error);
 char				**new_array(void);
 int					new_tetris(t_params *params);
-int					free_tetris(t_tetris *tetris);
+int					free_tetris(t_params *params);
 t_params			*new_params(int fd);
 char				*convert_to_string(t_tetris *tetris, char c);
 int					check_tetro(t_params *params);
