@@ -1,0 +1,11 @@
+SSH :
+1. ssh host -p port -u user
+2. Enter password/pubkey
+3. Enjoy ssh
+
+Graphic:
+
+1. Power button
+2. Switch user
+3. Select new user
+4. Enter password
