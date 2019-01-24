@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 19:16:49 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 23:30:19 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int					new_tetris(t_params *params);
 int					free_tetris(t_params *params);
 t_params			*new_params(int fd);
 char				*convert_to_string(t_tetris *tetris, char c);
-int					check_tetro(t_params *params);
+int					check_tetro(t_params *params, int size);
 int					check_connection(t_tetris *tetris);
 t_map				*new_map(t_params *params, size_t size);
 int					solve(t_params *params);
@@ -76,5 +76,6 @@ int					edit_pos(t_pos *pos, int max_x, int max_y, char c);
 int					check(char *str, int index);
 int					remove_dots(t_tetris *tetris);
 void				get_size(t_tetris *tetris);
+int					copy_read(t_params *params);
 
 #endif
