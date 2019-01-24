@@ -31,7 +31,7 @@ WARN_COLOR =	\033[38;5;3m
 SILENT_COLOR =	\033[38;5;245m
 INFO_COLOR =	\033[38;5;140m
 
-.PHONY: all re clean fclean libft force
+.PHONY: all re clean fclean libft force doclean
 
 all: $(NAME)
 
@@ -63,5 +63,7 @@ fclean: clean
 	@make -C $(LIBS) fclean
 	@rm -f $(NAME)
 	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed $(INFO_COLOR)$(NAME)$(NO_COLOR).\n"
+
+doclean: all clean
 
 re: fclean all
