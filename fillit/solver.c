@@ -6,38 +6,47 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 19:16:49 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 23:29:26 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		read_tetris(t_params *p)
+int		read_tetris(t_params *params)
 {
-	int			r;
-	int			index;
+	int	r;
+
+	params->buff_tmp = ft_strnew(22);
+	if ((r = read(params->fd, params->buff_tmp, 21)) >= 20)
+	{
+		if (!copy_read(params))
+			exit_fillit(params, 1);
+		check_tetro(params, r);
+	}
+	free(params->buff_tmp);
+	return (r);
+}
+
+int		copy_read(t_params *p)
+{
 	t_tetris	*tetris;
 	t_pos		*pos;
+	int			index;
 
 	index = 0;
-	p->buff_tmp = ft_strnew(22);
+	if (!new_tetris(p))
+		return (0);
 	pos = new_pos(0, 0);
-	if ((r = read(p->fd, p->buff_tmp, 21)) >= 20)
+	tetris = p->last;
+	tetris->string = ft_strdup(p->buff_tmp);
+	while (p->buff_tmp[index] && is_valid_char(p->buff_tmp[index], 1))
 	{
-		if (!new_tetris(p))
-			exit_fillit(p, 1);
-		tetris = p->last;
-		tetris->string = ft_strdup(p->buff_tmp);
-		while (p->buff_tmp[index] && is_valid_char(p->buff_tmp[index], 1))
-		{
-			tetris->full_array[pos->y][pos->x] = p->buff_tmp[index] == '\n'
-				? tetris->full_array[pos->y][pos->x] : p->buff_tmp[index];
-			edit_pos(pos, 3, 3, p->buff_tmp[index++]);
-		}
+		tetris->full_array[pos->y][pos->x] = p->buff_tmp[index] == '\n'
+			? tetris->full_array[pos->y][pos->x] : p->buff_tmp[index];
+		edit_pos(pos, 3, 3, p->buff_tmp[index++]);
 	}
-	free(p->buff_tmp);
 	free(pos);
-	return (r);
+	return (1);
 }
 
 int		solve(t_params *params)
