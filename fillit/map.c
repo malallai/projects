@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 14:07:49 by bclerc            #+#    #+#             */
-/*   Updated: 2019/01/24 16:07:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 18:31:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int		try_set(t_params *params, t_tetris *tetris, t_pos *pos)
 		x = 0;
 		while (x < tetris->width)
 		{
+			if (!tetris->array[y][x])
+				break ;
 			if (tetris->array[y][x] == '#' && \
 				params->map->array[pos->y + y][pos->x + x] != '.')
 			{
@@ -59,6 +61,8 @@ void	set(t_params *params, t_tetris *tetris, t_pos *pos, char to_set)
 		x = 0;
 		while (x < tetris->width)
 		{
+			if (!tetris->array[y][x])
+				break ;
 			if (tetris->array[y][x] == '#')
 				params->map->array[pos->y + y][pos->x + x] = to_set;
 			x++;
