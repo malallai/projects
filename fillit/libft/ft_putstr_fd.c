@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:34:46 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/23 17:41:30 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/01/23 18:36:31 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char const *str, int fd)
 {
-	write (fd, str, ft_strlen(str));
+	write(fd, str, ft_strlen(str));
 }
