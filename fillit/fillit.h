@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 15:54:02 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 19:16:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct		s_tetris
 {
 	char			**full_array;
 	char			**array;
-	char			*chard;
+	char			*string;
 	int				width;
 	int				height;
 	int				id;

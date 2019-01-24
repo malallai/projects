@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 16:02:14 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 19:16:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		read_tetris(t_params *p)
 		if (!new_tetris(p))
 			exit_fillit(p, 1);
 		tetris = p->last;
-		tetris->chard = ft_strdup(p->buff_tmp);
+		tetris->string = ft_strdup(p->buff_tmp);
 		while (p->buff_tmp[index] && is_valid_char(p->buff_tmp[index], 1))
 		{
 			tetris->full_array[pos->y][pos->x] = p->buff_tmp[index] == '\n'

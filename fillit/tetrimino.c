@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/19 17:35:14 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/24 19:16:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,15 @@ int			check_tetro(t_params *params)
 	{
 		if (i % 5 < 4)
 		{
-			if (!is_valid_char(tetris->chard[i], 0))
+			if (!is_valid_char(tetris->string[i], 0))
 				return (0);
 		}
-		else if (tetris->chard[i] != '\n')
+		else if (tetris->string[i] != '\n')
 			return (0);
 		i++;
 	}
-	if ((ft_strlen(tetris->chard) == 21 && tetris->chard[20] != '\n') \
-		|| ft_count_char(tetris->chard, '#') != 4 || !check_connection(tetris))
+	if ((ft_strlen(tetris->string) == 21 && tetris->string[20] != '\n') \
+		|| ft_count_char(tetris->string, '#') != 4 || !check_connection(tetris))
 		return (0);
 	if (!remove_dots(tetris))
 		return (0);
@@ -76,15 +76,15 @@ int			check_connection(t_tetris *tetris)
 	i = 0;
 	while (i < 20)
 	{
-		if (tetris->chard[i] == '#')
+		if (tetris->string[i] == '#')
 		{
-			if ((i + 1) < 20 && tetris->chard[i + 1] == '#')
+			if ((i + 1) < 20 && tetris->string[i + 1] == '#')
 				block++;
-			if ((i - 1) >= 0 && tetris->chard[i - 1] == '#')
+			if ((i - 1) >= 0 && tetris->string[i - 1] == '#')
 				block++;
-			if ((i + 5) < 20 && tetris->chard[i + 5] == '#')
+			if ((i + 5) < 20 && tetris->string[i + 5] == '#')
 				block++;
-			if ((i - 5) >= 0 && tetris->chard[i - 5] == '#')
+			if ((i - 5) >= 0 && tetris->string[i - 5] == '#')
 				block++;
 		}
 		i++;
