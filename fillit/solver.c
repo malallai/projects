@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 13:43:57 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 23:36:36 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:45:29 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		read_tetris(t_params *params)
 	if ((r = read(params->fd, params->buff_tmp, 21)) >= 20)
 	{
 		if (!copy_read(params))
-			exit_fillit(params, 1);
+			exit_fillit(params, 3);
 	}
 	free(params->buff_tmp);
 	return (r);
