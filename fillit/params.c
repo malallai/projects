@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 17:54:55 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/15 11:58:37 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:46:14 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ t_params	*new_params(int fd)
 	params->size = 0;
 	params->fd = fd;
 	params->map = NULL;
+	params->tetris = NULL;
 	return (params);
 }

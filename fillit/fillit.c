@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:53:22 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/25 04:17:22 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:46:57 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		main(int argc, char **argv)
 			|| !(params = new_params(fd)))
 			return (exit_fillit(params, 1));
 		if (!fillit(params))
-			exit_fillit(params, 1);
+			exit_fillit(params, 2);
 		exit_fillit(params, 0);
 	}
 	return (0);
