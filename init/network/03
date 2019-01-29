@@ -1,1 +1,1 @@
-ifconfig -L en0 | grep ether | cut -c8-
+networksetup -listallhardwareports | grep -A 2 'Wi-Fi' | sed -n 's/Ethernet Address: //p'

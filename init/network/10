@@ -1,2 +1,1 @@
-echo 'La commande pour afficher les differents appreils entre le spote et slash16.org est traceroute slash16.org'
 traceroute slash16.org
