@@ -1,1 +1,2 @@
-le service s'appelle deamon "cron"
+Le service qui permet de lncer des taches a horaires regulieres est 'cron'
+

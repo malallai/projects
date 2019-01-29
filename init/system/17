@@ -1,1 +1,3 @@
-ssh [user@]host [-p port]
+#ssh [user@]host [-P port]
+
+ssh malallai@malallai.fr -p 2201
