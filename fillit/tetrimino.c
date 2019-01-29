@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:22:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/25 04:16:03 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/29 12:11:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int			check_connection(t_tetris *tetris)
 	return (block == 6 || block == 8);
 }
 
-int		check(char *str, int index)
+int			check(char *str, int index)
 {
 	if (str[index] == '.')
 	{
@@ -111,7 +111,7 @@ int		check(char *str, int index)
 	return (0);
 }
 
-int		remove_dots(t_tetris *tetris)
+int			remove_dots(t_tetris *tetris)
 {
 	int		index;
 	char	*tmp;
