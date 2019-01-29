@@ -1,0 +1,5 @@
+ifconfig en0
+
+Masque : 255.255.0.0
+
+Adresses du sous réseau : 10.12.0.1 -> 10.12.255.254

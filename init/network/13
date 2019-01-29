@@ -1,1 +1,0 @@
-ipconfig getifaddr en0 | nslookup | grep name | cut -c33- 

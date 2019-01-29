@@ -1,1 +1,1 @@
-route get default | grep "gateway" | cut -c14-
+route get default | grep 'gateway' | grep -o '[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*'
