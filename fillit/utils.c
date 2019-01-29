@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 14:03:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/25 04:15:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:47:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@ int		exit_fillit(t_params *params, int error)
 	if (params)
 	{
 		close(params->fd);
-		free_tetris(params);
-		if (params->map)
+		if (error != 1)
 		{
-			ft_freearray(params->map->array);
-			free(params->map);
+			free_tetris(params);
+			if (params->map)
+			{	
+				ft_freearray(params->map->array);
+				free(params->map);
+			}
 		}
 		free(params);
 	}
@@ -37,9 +40,10 @@ int		free_tetris(t_params *params)
 	t_tetris	*tetris;
 
 	tetris = params->tetris;
-	while (tetris && params->size)
+	while (tetris)
 	{
 		tmp = tetris;
+		
 		if (tmp->id + 1 < params->size)
 			tetris = tmp->next;
 		else
