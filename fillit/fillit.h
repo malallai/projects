@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 11:57:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/01/24 23:30:19 by malallai         ###   ########.fr       */
+/*   Updated: 2019/01/30 14:23:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include "libft/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
-# define _DEBUG_ printf
 
 typedef struct		s_tetris
 {
