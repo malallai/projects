@@ -1,1 +1,1 @@
-ps axf | grep ssh
+pgrep sshd
