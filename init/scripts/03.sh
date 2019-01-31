@@ -70,7 +70,7 @@ function check_branch {
 	fi
 	if [ "$PUSH_STATUS" == "" ]
 	then
-		printf "${YELLOW}Nothing to be commit."
+		printf "${YELLOW}Nothing to be commit.\n"
 		exit
 	fi
 }
