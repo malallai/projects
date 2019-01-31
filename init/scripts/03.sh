@@ -83,7 +83,6 @@ function check_branch {
 }
 
 function add_files {
-	cd $FOLDER
 	if [ "$FILE" == "0" ]
 	then
 		git add . >> /dev/null
@@ -121,6 +120,7 @@ function push_files {
 	printf "${YELLOW}Pushed ${GREEN}%s ${YELLOW}files changed, for branch ${GREEN}%s\n" "$DIFF" "$BRANCH"
 }
 
+cd $FOLDER
 check_branch
 add_files
 commit_files
