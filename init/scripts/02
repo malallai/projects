@@ -1,0 +1,12 @@
+#!/bin/bash
+
+RED="\033[38;5;1m"
+GREEN="\033[38;5;40m"
+YELLOW="\033[38;5;226m"
+
+user=$1
+
+passwd -l $user >> /dev/null
+killall -KILL -u $user >> /dev/null
+deluser --remove-home $user >> /dev/null
+printf "${GREEN}User ${YELLOW}%s ${GREEN}removed.\n" $user
