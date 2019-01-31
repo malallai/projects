@@ -40,8 +40,8 @@ do
 		;;
 	i)
 		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
-		. "$OPTARG"
-		printf "${GREEN}GPush installed"
+		source "$OPTARG"
+		printf "${GREEN}GPush installed\n"
 		exit
 		;;
 	h)
