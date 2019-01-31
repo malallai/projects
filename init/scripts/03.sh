@@ -72,15 +72,15 @@ function commit_files {
 	then
 		MESSAGE=`git diff --stat --cached origin/master | tail -1`
 	fi
-	git commit -m "$MESSAGE"
+	git commit -m "$MESSAGE" >> /dev/null
 }
 
 function push_files {
 	BRANCH=`git branch | cut -c3-`
 	DIFF=`git diff --stat --cached origin/master | tail -1 | cut -d ' ' -f2`
-	git push
+	git push >> /dev/null
 	echo $DIFF
-	printf "${YELLOW}Pushed ${GREEN}%s ${YELLOW}files for branch ${GREEN}%s\n" "$DIFF" "$BRANCH"
+	printf "${YELLOW}Pushed ${GREEN}%s ${YELLOW}files changed, for branch ${GREEN}%s\n" "$DIFF" "$BRANCH"
 }
 
 add_files
