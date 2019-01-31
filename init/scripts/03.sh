@@ -39,8 +39,8 @@ do
 		EXCLUDE=$OPTARG
 		;;
 	i)
+		alias "gpush=\"$PWD/$0\""
 		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
-		source "$OPTARG"
 		printf "${GREEN}GPush installed\n"
 		exit
 		;;
