@@ -59,12 +59,13 @@ function check_branch {
 	PUSH_STATUS=`git status -u | grep 'git commit'`
 	if [ "$PULL_STATUS" != "" ]
 	then
-		printf "${YELLOW}An update is available for this git repo. (Use 'git pull' or '-b' to bypass update verfication or '-u' to pull automaticcaly pull)"
+		printf "${YELLOW}An update is available for this git repo. (Use 'git pull' or '-b' to bypass update verfication or '-u' to pull automaticcaly pull)\n"
 		if [ "$PULL" == "1" ]; then
 			git pull >> /dev/null
-		fi
-		if [ "$FORCE" == "0" && "$PULL" == "0" ]; then
-			exit
+		else
+			if [ "$FORCE" == "0" ]; then
+				exit
+			fi
 		fi
 	fi
 	if [ "$PUSH_STATUS" == "" ]
