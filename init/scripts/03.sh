@@ -63,7 +63,7 @@ function check_branch {
 		if [ "$PULL" == "1" ]; then
 			git pull >> /dev/null
 		fi
-		if [ "$FORCE" == "0" AND "$PULL" == "0" ]; then
+		if [ "$FORCE" == "0" && "$PULL" == "0" ]; then
 			exit
 		fi
 	fi
