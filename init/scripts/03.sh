@@ -10,7 +10,7 @@ MESSAGE=0
 FORCE=0
 PULL=0
 
-while getopts "f:F:m:e:vhbu" flag
+while getopts "f:F:m:e:i:vhbu" flag
 do
 	case $flag in
 
@@ -38,10 +38,17 @@ do
 		FILE=2
 		EXCLUDE=$OPTARG
 		;;
+	i)
+		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
+		. $OPTARG
+		printf "${GREEN}GPush installed"
+		exit
+		;;
 	h)
 		printf "%s -- :\n" "Help page"
 		printf "\t-%s : %s\n" "h" "Open help page"
 		printf "\t-%s : %s\n" "v" "Print current version"
+		printf "\t-%s : %s\n" "i" "Install GPush alias"
 		printf "\t-%s : %s\n" "b" "Bypass update verification"
 		printf "\t-%s : %s\n" "u" "Force git pull"
 		printf "\t-%s : %s\n" "F" "Choose git repo folder"
