@@ -1,11 +1,12 @@
 #!/bin/bash
 
 RED="\033[38;5;1m"
-GREEN="\033[38;5;70m"
-YELLOW="\033[38;5;3m"
+GREEN="\033[38;5;40m"
+YELLOW="\033[38;5;226m"
 VERSION=0.0.1
 FOLDER=./
 FILE=0
+MESSAGE=0
 
 while getopts "f:F:m:e:vh" flag
 do
@@ -67,9 +68,21 @@ function add_files {
 }
 
 function commit_files {
-	echo "commited"
+	if [ "$MESSAGE" == "0" ]
+	then
+		MESSAGE=`git diff --stat --cached origin/master | tail -1`
+	fi
+	git commit -m "$MESSAGE"
+}
+
+function push_files {
+	git push
+	BRANCH=`git branch | cut -c3-`
+	DIFF=`git diff --stat --cached origin/master | tail -1 | cut -d ' ' -f2`
+	echo $DIFF
+	printf "${YELLOW}Pushed ${GREEN}%s ${YELLOW}files for branch ${GREEN}%s\n" "$DIFF" "$BRANCH"
 }
 
 add_files
 commit_files
-
+push_files
