@@ -46,8 +46,9 @@ function add_files {
 		IFS=','
 		read -ra array <<< "$EXCLUDE"
 		for arg in "${array[@]}"; do
-			echo $arg
+			git reset -- $arg
 		done
+		git status
 		IFS=$OLDIFS
 	else
 		echo "nop"
