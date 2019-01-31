@@ -47,7 +47,7 @@ function add_files {
 	cd $FOLDER
 	if [ "$FILE" == "0" ]
 	then
-		git add .
+		git add . >> /dev/null
 	else
 		OLDIFS=$IFS
 		IFS=','
