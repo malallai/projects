@@ -94,7 +94,8 @@ function add_files {
 			for arg in "${array[@]}"; do
 				git add $arg >> /dev/null
 			done
-		else
+		elif [ "$FILE" == "2" ]; then
+			git add . >> /dev/null
 			read -ra array <<< "$EXCLUDE"
 			for arg in "${array[@]}"; do
 				git reset -- $arg >> /dev/null
