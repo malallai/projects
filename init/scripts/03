@@ -39,7 +39,7 @@ do
 		;;
 	i)
 		alias "gpush=\"$PWD/$0\""
-		echo -e "alias gpush=\"$PWD/$0\"" >> $OPTARG
+		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
 		echo -e "${GREEN}GPush installed"
 		exit
 		;;
