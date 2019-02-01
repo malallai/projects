@@ -39,8 +39,8 @@ do
 		;;
 	i)
 		alias "gpush=\"$PWD/$0\""
-		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
-		echo "${GREEN}GPush installed"
+		echo -e "alias gpush=\"$PWD/$0\"" >> $OPTARG
+		echo -e "${GREEN}GPush installed"
 		exit
 		;;
 	h)
@@ -66,7 +66,7 @@ function check_branch {
 	PUSH_STATUS=`git status -u | grep 'git commit'`
 	if [ "$PULL_STATUS" != "" ]
 	then
-		echo "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')"
+		echo -e "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')"
 		if [ "$PULL" == "1" ]; then
 			git pull >> /dev/null
 			exit
@@ -76,7 +76,7 @@ function check_branch {
 	fi
 	if [ "$PUSH_STATUS" == "" ]
 	then
-		echo "${YELLOW}Nothing to be commit."
+		echo -e "${YELLOW}Nothing to be commit."
 		exit
 	fi
 }
@@ -116,7 +116,7 @@ function push_files {
 	BRANCH=`git branch | cut -c3-`
 	DIFF=`git diff --stat --cached origin/master | tail -1 | cut -d ' ' -f2`
 	git push -q
-	echo "${YELLOW}Pushed ${GREEN}$DIFF ${YELLOW}modifications, for branch ${GREEN}$BRANCH"
+	echo -e "${YELLOW}Pushed ${GREEN}$DIFF ${YELLOW}modifications, for branch ${GREEN}$BRANCH"
 }
 
 cd $FOLDER
