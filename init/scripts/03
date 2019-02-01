@@ -7,10 +7,9 @@ VERSION=0.0.1
 FOLDER=./
 FILE=0
 MESSAGE=0
-FORCE=0
 PULL=0
 
-while getopts "f:F:m:e:i:vhbu" flag
+while getopts "f:F:m:e:i:vhup" flag
 do
 	case $flag in
 
@@ -18,11 +17,11 @@ do
 		printf "${GREEN}%s : %s\n" "Version" ${VERSION}
 		exit
 		;;
-	b)
-		FORCE=1
-		;;
-	u)
+	p)
 		PULL=1
+		;;
+	P)
+		PULL=2
 		;;
 	F)
 		FOLDER=$OPTARG
@@ -49,7 +48,8 @@ do
 		printf "\t-%s : %s\n" "h" "Open help page"
 		printf "\t-%s : %s\n" "v" "Print current version"
 		printf "\t-%s : %s\n" "i" "Install GPush alias"
-		printf "\t-%s : %s\n" "b" "Bypass update verification"
+		printf "\t-%s : %s\n" "p" "Pull without push"
+		printf "\t-%s : %s\n" "P" "Pull and push"
 		printf "\t-%s : %s\n" "u" "Force git pull"
 		printf "\t-%s : %s\n" "F" "Choose git repo folder"
 		printf "\t-%s : %s\n" "f" "File to include from commit (Seperate by ',')"
@@ -66,13 +66,12 @@ function check_branch {
 	PUSH_STATUS=`git status -u | grep 'git commit'`
 	if [ "$PULL_STATUS" != "" ]
 	then
-		printf "${YELLOW}An update is available for this git repo. (Use 'git pull' or '-b' to bypass update verfication or '-u' to pull automaticcaly pull)\n"
+		printf "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')\n"
 		if [ "$PULL" == "1" ]; then
 			git pull >> /dev/null
-		else
-			if [ "$FORCE" == "0" ]; then
-				exit
-			fi
+			exit
+		elif [ "$PULL" == "2" ]; then
+			git pull >> /dev/null
 		fi
 	fi
 	if [ "$PUSH_STATUS" == "" ]
