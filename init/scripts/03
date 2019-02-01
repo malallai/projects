@@ -63,7 +63,7 @@ done
 function check_branch {
 	git fetch >> /dev/null
 	PULL_STATUS=`git status -uno | grep 'git pull'`
-	PUSH_STATUS=`git status -u | grep 'git commit'`
+	PUSH_STATUS=`git status -u | grep 'untracked files present'`
 	if [ "$PULL_STATUS" != "" ]
 	then
 		echo -e "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')"
