@@ -40,21 +40,21 @@ do
 	i)
 		alias "gpush=\"$PWD/$0\""
 		echo "alias gpush=\"$PWD/$0\"" >> $OPTARG
-		printf "${GREEN}GPush installed\n"
+		echo "${GREEN}GPush installed"
 		exit
 		;;
 	h)
-		printf "%s -- :\n" "Help page"
-		printf "\t-%s : %s\n" "h" "Open help page"
-		printf "\t-%s : %s\n" "v" "Print current version"
-		printf "\t-%s : %s\n" "i" "Install GPush alias"
-		printf "\t-%s : %s\n" "p" "Pull without push"
-		printf "\t-%s : %s\n" "P" "Pull and push"
-		printf "\t-%s : %s\n" "u" "Force git pull"
-		printf "\t-%s : %s\n" "F" "Choose git repo folder"
-		printf "\t-%s : %s\n" "f" "File to include from commit (Seperate by ',')"
-		printf "\t-%s : %s\n" "e" "File to exclude from commit (Seperate by ',')"
-		printf "\t-%s : %s\n" "m" "Define commit message"
+		echo -e "Help page -- :"
+		echo -e "\t-h : Open help page"
+		echo -e "\t-v : Print current version"
+		echo -e "\t-i : Install GPush alias"
+		echo -e "\t-p : Pull without push"
+		echo -e "\t-P : Pull and push"
+		echo -e "\t-u : Force git pull"
+		echo -e "\t-F : Choose git repo folder"
+		echo -e "\t-f : File to include from commit (Seperate by ',')"
+		echo -e "\t-e : File to exclude from commit (Seperate by ',')"
+		echo -e "\t-m : Define commit message"
 		exit
 		;;
 	esac
@@ -66,7 +66,7 @@ function check_branch {
 	PUSH_STATUS=`git status -u | grep 'git commit'`
 	if [ "$PULL_STATUS" != "" ]
 	then
-		printf "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')\n"
+		echo "${YELLOW}An update is available for this git repo. (Use '-p' or '-P')"
 		if [ "$PULL" == "1" ]; then
 			git pull >> /dev/null
 			exit
@@ -76,7 +76,7 @@ function check_branch {
 	fi
 	if [ "$PUSH_STATUS" == "" ]
 	then
-		printf "${YELLOW}Nothing to be commit.\n"
+		echo "${YELLOW}Nothing to be commit."
 		exit
 	fi
 }
@@ -116,7 +116,7 @@ function push_files {
 	BRANCH=`git branch | cut -c3-`
 	DIFF=`git diff --stat --cached origin/master | tail -1 | cut -d ' ' -f2`
 	git push -q
-	printf "${YELLOW}Pushed ${GREEN}%s ${YELLOW}modifications, for branch ${GREEN}%s\n" "$DIFF" "$BRANCH"
+	echo "${YELLOW}Pushed ${GREEN}$DIFF ${YELLOW}modifications, for branch ${GREEN}$BRANCH"
 }
 
 cd $FOLDER
