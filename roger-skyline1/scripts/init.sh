@@ -8,7 +8,6 @@ function install_default {
 	apt-get install -y net-tools
 	apt-get install -y dnsutils
 	apt-get install -y iptables-persistent
-	apt-get install -y sendmail
 	apt-get install -y mailutils
 	apt-get install -y fail2ban
 }
