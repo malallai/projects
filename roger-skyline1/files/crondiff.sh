@@ -7,7 +7,7 @@ fi;
 
 if [ -f /root/crondiff ]; then
 	if [ -n "$(diff /etc/crontab /root/crondiff)" ]; then
-		echo "Crontab has been edited. Please check new modifications." | mail -s "Crontab edited !" root
+		echo "Crontab has been edited. Please check new modifications." | mail -s "Crontab edited" root
 	fi;
 fi;
 
