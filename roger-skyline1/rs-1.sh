@@ -16,7 +16,13 @@ parse_yaml() {
    }'
 }
 
-eval $(parse_yaml host.yml)
+onoffcolor() {
+    if [ $1 == 1 ] ; then
+        echo "$2"
+    else
+        echo "$3"
+    fi
+}
 
 RED="\033[38;5;1m"
 GREEN="\033[38;5;40m"
@@ -24,16 +30,9 @@ YELLOW="\033[38;5;226m"
 RESET="\033[0m"
 
 deploy=0
-
-while getopts "f:hdi" flag
-do
-    case $flag in
-    h)
-        echo -e "Help page -- :"
-        echo -e "\t-h : Open help page"
-        exit ;;
-    esac
-done
+files="./"
+host="localhost"
+port="22"
 
 function check_pub_key {
     if ! [ -f $PUBKEY ]; then
@@ -59,7 +58,7 @@ function check_pub_key {
 function clone_files {
     rm -rf /tmp/deployment
     git clone -q https://malallai@gitlab.com/malallai.42/deployment-files.git /tmp/deployment/ && rm -rf /tmp/deployment/.git
-    if [ -d ./deploy ]; then
+    if [ -d $files ]; then
         for entry in `find /tmp/deployment/* -type f`
         do
             f=`echo "$entry" | cut -c17-`
@@ -68,22 +67,37 @@ function clone_files {
             if [ $folder == $file ]; then
                 folder=""
             fi
-            if ! [ -f ./deploy/$f ]; then
+            if ! [ -f $files/$f ]; then
                 echo "Copying \`$f\`.."
-                mkdir -p ./deploy/$folder
-                cp -R $entry ./deploy/$folder/$file
+                mkdir -p $files/$folder
+                cp -R $entry $files/$folder/$file
             fi
         done
     else
-        mkdir ./deploy
-        cp -R /tmp/deployment/* ./deploy/
+        mkdir -p $files
+        cp -R /tmp/deployment/* $files/
+    fi
+    sed -i "s|host: localhost|host: $host|" $files/host.yml
+    sed -i "s|port: 22|port: $port|" $files/host.yml
+    sed -i "s|files: .\/|files: $files|" $files/host.yml
+}
+
+function source_files {
+    if [ -f $files/host.yml ]; then
+        eval $(parse_yaml $files/host.yml)
     fi
 }
 
 function print_details {
+    source_files
     echo -e "Informations before deployment : --"
     echo -e "\tHost: ${GREEN}$host${RESET}"
     echo -e "\tPort: ${GREEN}$port${RESET}"
+    echo -e "\tDeployment Files: ${GREEN}$files${RESET}"
+    if ! [ -f $files/host.yml ]; then
+        echo -e ""
+        echo -e "(No \`host.yml\` file found, use \`-i\` option to initialize files, and get better configurations options.)"
+    fi
 }
 
 function copy_files {
@@ -91,13 +105,36 @@ function copy_files {
     scp -P $port ./files root@$host:/root/rs1-files
 }
 
-onoffcolor() {
-    if [ $1 == 1 ] ; then
-        echo "$2"
-    else
-        echo "$3"
-    fi
-}
-
-clone_files
-print_details
+while getopts "H:p:f:hdiD" flag
+do
+    case $flag in
+    H)
+        host=$OPTARG
+        ;;
+    p)
+        port=$OPTARG
+        ;;
+    f)
+        files=$OPTARG
+        ;;
+    d)
+        deploy=1
+        ;;
+    i)
+        clone_files
+        ;;
+    D)
+        print_details
+        exit ;;
+    h)
+        echo -e "Help page -- :"
+        echo -e "\t-h : Open help page"
+        echo -e "\t-f : Define folder where to find all deployment files, can be used with -i"
+        echo -e "\t-d : Launch deployment"
+        echo -e "\t-i : Copy default files, can be used with -f"
+        echo -e "\t-D : Print details about deployment"
+        echo -e "\t-H : Manually define host for deployment, can be used with -i"
+        echo -e "\t-p : Manually define port for deployment, can be used with -i"
+        exit ;;
+    esac
+done
