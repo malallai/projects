@@ -86,10 +86,16 @@ function print_details {
 }
 
 function deploy {
+    source_files
+    echo -e "Please enter password for root user on $host..\n(If you see nothing it's normal don't panic frérot)"
+    read -p "Password: " -s password
+    echo -e ""
+    echo -e "Thank you frérot, i'm gonna hack you lol"
     echo -e "Copying files to $host:$port.."
-    scp -P $port $files/deploy root@$host:/root/rs1-files
-    ssh root@$host -p $port '/root/rs1-files/files/deploy.sh'
-    scp -P $port root@$host:/root/rs1-files/files/deployment.log ./.log && cat ./.log | grep "Work"
+    sshpass -p $password ssh root@$host -p $port 'rm -rf /root/deployment.log /root/rs1-files'
+    sshpass -p $password scp -r -P $port $files/deploy root@$host:/root/rs1-files
+    sshpass -p $password ssh root@$host -p $port '/root/rs1-files/scripts/deploy.sh'
+    sshpass -p $password scp -r -P $port root@$host:/root/deployment.log ./.log && cat ./.log | grep "Work"
 }
 
 while getopts "H:p:f:hdiD" flag
@@ -133,3 +139,7 @@ do
         exit ;;
     esac
 done
+
+if [ $deploy == 1 ]; then
+    deploy
+fi
