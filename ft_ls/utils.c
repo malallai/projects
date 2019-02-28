@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 16:25:40 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 13:02:19 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/02/28 13:36:12 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char get_dtype(unsigned char type)
  return ('-');
 }
 
-char *get_color_of(char type, int mode)
+char *get_color(char type, int mode)
 {
 	char *color;
 
@@ -74,69 +74,3 @@ void	destroyls(t_folder *folder)
 	free(folder->t_file);
 	free(folder);
 }
-
-void	printls_l(t_folder *folder)
-{
-		char *color;
-
-		color = get_color_of(get_dtype(folder->t_file->dirent->d_type), folder->t_file->stat.st_mode);
-		ft_putstr(folder->t_file->mode);
-		ft_putchar('	');
-		ft_putstr(folder->t_file->passwd->pw_name);
-		ft_putchar('	');
-		ft_putstr(folder->t_file->group->gr_name);
-		ft_putchar('	');
-		ft_putnbr(folder->t_file->stat.st_size);
-		ft_putchar('	');
-		ft_putstr("*");
-		ft_putchar('	');
-		ft_putstr(color);
- 		ft_putstr(folder->t_file->name);
-		ft_putstr(color);
- 	 	ft_putstr("\033[0m");
-		ft_putchar('\n');
-		free(color);	
-		folder = folder->next;
-
-}
-
-
-void	printls_n(t_folder *folder)
-{
-		char *color;
-
-		color = get_color_of(get_dtype(folder->t_file->dirent->d_type), folder->t_file->stat.st_mode);
-		ft_putstr(color);
- 		ft_putstr(folder->t_file->name);
-		ft_putchar('\n');
- 	 	ft_putstr("\033[0m");
-		free(color);	
-}
-
-void	printls(t_folder *folder, t_opt *opt)
-{
-	char id;
-	int first;
-
-	first = 1;
-	id = -1;
-	while (folder)
-	{
-		if(!(opt->flag & F_CACH) && folder->t_file->name[0] == '.')
-		{
-			folder = folder->next;
-			continue;
-		}
-		if (opt->total > 1  && (id == -1 || folder->id != id))
-		{
-			first ? 0 : printf("\n");
-			ft_putstr(folder->name);
-			ft_putstr(":\n");
-			first = 0;
-			id = folder->id;
-		}
-		(opt->flag & F_DETA) ? printls_l(folder) : printls_n(folder);
-		folder = folder->next;
-	}
-	printf("\n");
-}	

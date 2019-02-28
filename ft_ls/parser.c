@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 15:03:06 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 12:04:20 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/02/28 13:30:37 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int set_flag(char c_flag, t_opt *opt)
 	{
 		opt->flag |= 1 << bi;
 		return (1);
+
 	}
 	else
 	{
