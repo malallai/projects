@@ -1,6 +1,3 @@
-host: localhost
-port: 22
-
 packages:
   force-deploy: true
   custom-repo:
