@@ -68,23 +68,36 @@ function check_pub_key {
 
 function clone_files {
     rm -rf /tmp/deployment
-    git clone -q https://malallai@gitlab.com/malallai.42/deployment-files.git /tmp/deployment/
+    git clone -q https://malallai@gitlab.com/malallai.42/deployment-files.git /tmp/deployment/ && rm -rf /tmp/deployment/.git
     if [ -d ./deploy ]; then
-        for entry in /tmp/deployment/**/**
+        for entry in `find /tmp/deployment/* -type f`
         do
             f=`echo "$entry" | cut -c17-`
             folder=`echo $f | cut -d/ -f1`
             file=`echo $f | cut -d/ -f2`
+            if [ $folder == $file ]; then
+                folder=""
+            fi
             if ! [ -f ./deploy/$f ]; then
                 echo "Copying \`$f\`.."
                 mkdir -p ./deploy/$folder
-                cp $entry ./deploy/$folder/$file
+                cp -R $entry ./deploy/$folder/$file
             fi
         done
     else
         mkdir ./deploy
         cp -R /tmp/deployment/* ./deploy/
     fi
+}
+
+function test {
+    for entry in `find /tmp/deployment/* -type f`
+    do
+        f=`echo "$entry" | cut -c17-`
+        folder=`echo $f | cut -d/ -f1`
+        file=`echo $f | cut -d/ -f2`
+        echo "$entry | $f | $folder | $file"
+    done
 }
 
 function copy_files {
