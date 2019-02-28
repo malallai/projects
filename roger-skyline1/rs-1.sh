@@ -101,8 +101,3 @@ onoffcolor() {
 }
 
 clone_files
-
-#check_pub_key
-#if [ $DEPLOY == 1 ]; then
-#    copy_files
-#fi
