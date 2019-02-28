@@ -1,8 +1,0 @@
-host: localhost
-port: 22
-pub-key: ~/.ssh/id_rsa.pub
-ssh: false
-firewalls: false
-dos: false
-crondiff-script: false
-update-script: false
