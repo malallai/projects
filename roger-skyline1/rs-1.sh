@@ -30,7 +30,7 @@ YELLOW="\033[38;5;226m"
 RESET="\033[0m"
 
 deploy=0
-files="./"
+files="."
 host="localhost"
 port="22"
 
@@ -58,28 +58,13 @@ function check_pub_key {
 function clone_files {
     rm -rf /tmp/deployment
     git clone -q https://malallai@gitlab.com/malallai.42/deployment-files.git /tmp/deployment/ && rm -rf /tmp/deployment/.git
-    if [ -d $files ]; then
-        for entry in `find /tmp/deployment/* -type f`
-        do
-            f=`echo "$entry" | cut -c17-`
-            folder=`echo $f | cut -d/ -f1`
-            file=`echo $f | cut -d/ -f2`
-            if [ $folder == $file ]; then
-                folder=""
-            fi
-            if ! [ -f $files/$f ]; then
-                echo "Copying \`$f\`.."
-                mkdir -p $files/$folder
-                cp -R $entry $files/$folder/$file
-            fi
-        done
-    else
+    if ! [ -d $files ]; then
         mkdir -p $files
-        cp -R /tmp/deployment/* $files/
     fi
+    cp -R -n /tmp/deployment/* $files/
     sed -i "s|host: localhost|host: $host|" $files/host.yml
     sed -i "s|port: 22|port: $port|" $files/host.yml
-    sed -i "s|files: .\/|files: $files|" $files/host.yml
+    sed -i "s|files: .|files: $files|" $files/host.yml
 }
 
 function source_files {
