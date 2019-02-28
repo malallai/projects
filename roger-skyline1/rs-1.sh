@@ -90,6 +90,12 @@ function clone_files {
     fi
 }
 
+function print_details {
+    echo -e "Informations before deployment : --"
+    echo -e "\tHost: ${GREEN}$host${RESET}"
+    echo -e "\tPort: ${GREEN}$port${RESET}"
+}
+
 function copy_files {
     echo -e "Copying files to "
     scp -P $port ./files root@$host:/root/rs1-files
@@ -104,3 +110,4 @@ onoffcolor() {
 }
 
 clone_files
+print_details
