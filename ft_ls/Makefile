@@ -11,6 +11,7 @@ SOURCES = \
 	ft_ls.c \
 	display.c \
 	parser.c \
+	print.c \
 	utils.c \
 
 OBJECTS = $(SOURCES:.c=.o)

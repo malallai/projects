@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 14:33:12 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 13:02:35 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/02/28 13:36:10 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 # include <dirent.h>
 # include "libft/libft.h"
 
-# define F_DETA 1
-# define F_RECU 2
-# define F_CACH 4
-# define F_REVE 8
+# define F_DETAIL 1
+# define F_RECURS 2
+# define F_ALL 4
+# define F_REVERSE 8
 # define F_TIME 16
 
 # define F_DIR (char)'d'
@@ -56,17 +56,20 @@ typedef struct		s_opt
 {
 	int					flag;
 	struct	s_folder	*folder;
+	struct	s_folder	*file;
 	int					skip;
 	int 				max;
 	int					total;
 }					t_opt;
 
-char	*get_path(char *argv, char *name);
 t_file	*ls(struct dirent *sd, char *name);
+int		parse(char **argc, t_opt *opt);
+int		read_file(char **argv, int index, t_opt *opt);
+char	*get_color(char type, int mode);
+char	*get_path(char *argv, char *name);
 char	*print_mode(int mode, unsigned char type);
 char	get_dtype(unsigned char type);
 void	printls(t_folder *folder, t_opt *opt);
-int		parse(char **argc, t_opt *opt);
 void	destroyls(t_folder *folder);
-int		read_file(char **argv, int index, t_opt *opt);
-#endif
+
+# endif

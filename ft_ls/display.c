@@ -6,11 +6,12 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 11:55:16 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 12:06:35 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/02/28 13:37:24 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ft_ls.h"
+
 
 char *get_path(char *argv, char *name)
 {
@@ -29,6 +30,32 @@ char *get_path(char *argv, char *name)
 	tmp = ft_strjoin(argv, "/");
 	return (ft_strcat(tmp, name));
 }
+
+
+t_file *ls(struct dirent *sd, char *name)
+{
+	t_file			*ls;
+	char			*tmp;
+	struct stat 	buff;
+	struct passwd	*pInfo;
+	struct group	*gInfo;
+
+	if (!(ls = (t_file*)malloc(sizeof(t_file) * 1)))
+		return NULL;
+	tmp = get_path(name, sd->d_name);
+	stat(tmp, &buff);
+	pInfo 		=	getpwuid(buff.st_uid);
+    gInfo 		= 	getgrgid(buff.st_gid);
+	ls->name	= 	ft_strdup(sd->d_name);
+	ls->stat 	= 	buff;
+	ls->dirent 	= 	sd;
+	ls->mode 	= 	print_mode(buff.st_mode, sd->d_type);
+	ls->group 	= 	gInfo;
+	ls->passwd 	=	pInfo;
+	free(tmp);
+	return ls;
+}
+
 
 int	read_file(char **argv, int index, t_opt *opt)
 {
