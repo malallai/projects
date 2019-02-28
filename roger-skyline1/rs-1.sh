@@ -23,21 +23,11 @@ GREEN="\033[38;5;40m"
 YELLOW="\033[38;5;226m"
 RESET="\033[0m"
 
-while getopts "H:p:k:hd" flag
+deploy=0
+
+while getopts "f:hdi" flag
 do
     case $flag in
-    p)
-        PORT=$OPTARG
-        ;;
-    H)
-        HOST=$OPTARG
-        ;;
-    d)
-        DEPLOY=1
-        ;;
-    k)
-        PUBKEY=$OPTARG
-        ;;
     h)
         echo -e "Help page -- :"
         echo -e "\t-h : Open help page"
