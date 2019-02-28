@@ -90,16 +90,6 @@ function clone_files {
     fi
 }
 
-function test {
-    for entry in `find /tmp/deployment/* -type f`
-    do
-        f=`echo "$entry" | cut -c17-`
-        folder=`echo $f | cut -d/ -f1`
-        file=`echo $f | cut -d/ -f2`
-        echo "$entry | $f | $folder | $file"
-    done
-}
-
 function copy_files {
     echo -e "Copying files to "
     scp -P $port ./files root@$host:/root/rs1-files
