@@ -1,19 +1,27 @@
 #!/bin/bash
 
+parse_yaml() {
+   local prefix=$2
+   local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
+   sed -ne "s|^\($s\)\($w\)$s:$s\"\(.*\)\"$s\$|\1$fs\2$fs\3|p" \
+        -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\1$fs\2$fs\3|p"  $1 |
+   awk -F$fs '{
+      indent = length($1)/2;
+      vname[indent] = $2;
+      for (i in vname) {if (i > indent) {delete vname[i]}}
+      if (length($3) > 0) {
+         vn=""; for (i=0; i<indent; i++) {vn=(vn)(vname[i])("_")}
+         printf("%s%s%s=\"%s\"\n", "'$prefix'",vn, $2, $3);
+      }
+   }'
+}
+
+eval $(parse_yaml host.yml)
+
 RED="\033[38;5;1m"
 GREEN="\033[38;5;40m"
 YELLOW="\033[38;5;226m"
 RESET="\033[0m"
-
-HOST=localhost
-PORT=22
-PUBKEY=""
-DEPLOY=0
-DSSH=0
-DFIREWALL=0
-DDOS=0
-DCRONDIFF=0
-DUPDATE=0
 
 while getopts "H:p:k:hd" flag
 do
@@ -58,22 +66,30 @@ function check_pub_key {
     echo -e "Using \`$PUBKEY\` as public ssh key for deployment."
 }
 
-function print_infos {
-    echo -e "Deployment settings : --"
-    echo -e "\tHost: ${GREEN}$HOST${RESET}"
-    echo -e "\tPort: ${GREEN}$PORT${RESET}"
-    echo -e "\tPublic Key: ${GREEN}$PUBKEY${RESET}"
-    echo -e "WTD: --"
-    echo -e "\tSSH: $(onoffcolor "$DSSH" "${GREEN}true" "${RED}false")${RESET}"
-    echo -e "\tFirewall: $(onoffcolor "$DFIREWALL" "${GREEN}true" "${RED}false")${RESET}"
-    echo -e "\tDOS Protection: $(onoffcolor "$DDOS" "${GREEN}true" "${RED}false")${RESET}"
-    echo -e "\tCrondiff Script: $(onoffcolor "$DCRONDIFF" "${GREEN}true" "${RED}false")${RESET}"
-    echo -e "\tUpdate Script: $(onoffcolor "$DUPDATE" "${GREEN}true" "${RED}false")${RESET}"
+function clone_files {
+    rm -rf /tmp/deployment
+    git clone -q https://malallai@gitlab.com/malallai.42/deployment-files.git /tmp/deployment/
+    if [ -d ./deploy ]; then
+        for entry in /tmp/deployment/**/**
+        do
+            f=`echo "$entry" | cut -c17-`
+            folder=`echo $f | cut -d/ -f1`
+            file=`echo $f | cut -d/ -f2`
+            if ! [ -f ./deploy/$f ]; then
+                echo "Copying \`$f\`.."
+                mkdir -p ./deploy/$folder
+                cp $entry ./deploy/$folder/$file
+            fi
+        done
+    else
+        mkdir ./deploy
+        cp -R /tmp/deployment/* ./deploy/
+    fi
 }
 
 function copy_files {
     echo -e "Copying files to "
-    scp -P $PORT ./files root@$HOST:/root/rs1-files
+    scp -P $port ./files root@$host:/root/rs1-files
 }
 
 onoffcolor() {
@@ -84,7 +100,7 @@ onoffcolor() {
     fi
 }
 
-print_infos
+clone_files
 
 #check_pub_key
 #if [ $DEPLOY == 1 ]; then
