@@ -11,6 +11,7 @@ PUBKEY=""
 DEPLOY=0
 DSSH=0
 DFIREWALL=0
+DDOS=0
 DCRONDIFF=0
 DUPDATE=0
 
@@ -65,6 +66,7 @@ function print_infos {
     echo -e "WTD: --"
     echo -e "\tSSH: $(onoffcolor "$DSSH" "${GREEN}true" "${RED}false")${RESET}"
     echo -e "\tFirewall: $(onoffcolor "$DFIREWALL" "${GREEN}true" "${RED}false")${RESET}"
+    echo -e "\tDOS Protection: $(onoffcolor "$DDOS" "${GREEN}true" "${RED}false")${RESET}"
     echo -e "\tCrondiff Script: $(onoffcolor "$DCRONDIFF" "${GREEN}true" "${RED}false")${RESET}"
     echo -e "\tUpdate Script: $(onoffcolor "$DUPDATE" "${GREEN}true" "${RED}false")${RESET}"
 }
