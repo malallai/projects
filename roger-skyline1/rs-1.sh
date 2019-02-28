@@ -85,19 +85,29 @@ function print_details {
     fi
 }
 
-function copy_files {
-    echo -e "Copying files to "
-    scp -P $port ./files root@$host:/root/rs1-files
+function deploy {
+    echo -e "Copying files to $host:$port.."
+    scp -P $port $files/deploy root@$host:/root/rs1-files
+    ssh root@$host -p $port '/root/rs1-files/files/deploy.sh'
+    scp -P $port root@$host:/root/rs1-files/files/deployment.log ./.log && cat ./.log | grep "Work"
 }
 
 while getopts "H:p:f:hdiD" flag
 do
     case $flag in
     H)
-        host=$OPTARG
+        if [ -f $files/host.yml ]; then
+            echo -e "\`host.yml\` file found, update host file to use another host."
+        else
+            host=$OPTARG
+        fi
         ;;
     p)
-        port=$OPTARG
+        if [ -f $files/host.yml ]; then
+            echo -e "\`host.yml\` file found, update host file to use another port."
+        else
+            port=$OPTARG
+        fi
         ;;
     f)
         files=$OPTARG
