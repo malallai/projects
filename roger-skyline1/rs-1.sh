@@ -108,7 +108,7 @@ function deploy_web {
     sshpass -p $password ssh root@$host -p $port 'rm -rf /tmp/rs1-web'
     sshpass -p $password scp -r -P $port $files/web root@$host:/tmp/rs1-web
     echo -e "Updating files to /var/www/html"
-    sshpass -p $password ssh root@$host -p $port 'cp -Rn /tmp/rs1-web/* /var/www/html/'
+    sshpass -p $password ssh root@$host -p $port 'cp -Rn /tmp/rs1-web/* /var/www/html/$web_remote-folder'
 }
 
 while getopts "H:p:f:d:hiD" flag
