@@ -33,6 +33,7 @@ deploy=""
 files="."
 host="localhost"
 port="22"
+user="root"
 
 function check_pub_key {
     if ! [ -f $PUBKEY ]; then
@@ -64,6 +65,7 @@ function clone_files {
     cp -R -n /tmp/deployment/* $files/
     sed -i "s|host: localhost|host: $host|" $files/host.yml
     sed -i "s|port: 22|port: $port|" $files/host.yml
+    sed -i "s|user: root|user: $user|" $files/host.yml
     sed -i "s|files: .|files: $files|" $files/host.yml
 }
 
@@ -78,6 +80,7 @@ function print_details {
     echo -e "Informations before deployment : --"
     echo -e "\tHost: ${GREEN}$host${RESET}"
     echo -e "\tPort: ${GREEN}$port${RESET}"
+    echo -e "\tUser: ${GREEN}$user${RESET}"
     echo -e "\tDeployment Files: ${GREEN}$files${RESET}"
     if ! [ -f $files/host.yml ]; then
         echo -e ""
@@ -91,11 +94,11 @@ function deploy_system {
     read -p "Password: " -s password
     echo -e ""
     echo -e "Thank you frérot, i'm gonna hack you lol"
-    echo -e "Copying files to $host:$port.."
-    sshpass -p $password ssh root@$host -p $port 'rm -rf /root/deployment.log /root/rs1-files'
-    sshpass -p $password scp -r -P $port $files/deploy root@$host:/root/rs1-files
-    sshpass -p $password ssh root@$host -p $port '/root/rs1-files/scripts/deploy.sh'
-    sshpass -p $password scp -r -P $port root@$host:/root/deployment.log ./.log && cat ./.log | grep "Work"
+    echo -e "Copying files to $user@$host:$port.."
+    sshpass -p $password ssh $user@$host -p $port 'rm -rf /root/deployment.log /root/rs1-files'
+    sshpass -p $password scp -r -P $port $files/deploy $user@$host:/root/rs1-files
+    sshpass -p $password ssh $user@$host -p $port '/root/rs1-files/scripts/deploy.sh'
+    sshpass -p $password scp -r -P $port $user@$host:/root/deployment.log ./.log && cat ./.log | grep "Work"
 }
 
 function deploy_web {
@@ -104,16 +107,23 @@ function deploy_web {
     read -p "Password: " -s password
     echo -e ""
     echo -e "Thank you frérot, i'm gonna hack you lol"
-    echo -e "Copying files to $host:$port:/tmp/rs1-web.."
-    sshpass -p $password ssh root@$host -p $port 'rm -rf /tmp/rs1-web'
-    sshpass -p $password scp -r -P $port $files/web root@$host:/tmp/rs1-web
-    echo -e "Updating files to /var/www/html"
-    sshpass -p $password ssh root@$host -p $port 'cp -Rn /tmp/rs1-web/* /var/www/html/$web_remote-folder'
+    echo -e "Copying files to $user@$host:$port:/tmp/rs1-web.."
+    sshpass -p $password ssh $user@$host -p $port 'rm -rf /tmp/rs1-web'
+    sshpass -p $password scp -r -P $port $files/web $user@$host:/tmp/rs1-web
+    echo -e "Updating files to /var/www/html/${web_remotefolder}"
+    sshpass -p $password ssh $user@$host -p $port "mkdir -p /var/www/html/${web_remotefolder} && cp -Rn /tmp/rs1-web/* /var/www/html/${web_remotefolder}"
 }
 
-while getopts "H:p:f:d:hiD" flag
+while getopts "u:H:p:f:d:hiD" flag
 do
     case $flag in
+    u)
+        if [ -f $files/host.yml ]; then
+            echo -e "\`host.yml\` file found, update host file to use another user."
+        else
+            user=$OPTARG
+        fi
+        ;;
     H)
         if [ -f $files/host.yml ]; then
             echo -e "\`host.yml\` file found, update host file to use another host."
@@ -156,7 +166,6 @@ done
 if [ "$deploy" == "SYSTEM" ]; then
     deploy_system
 fi
-
 if [ "$deploy" == "WEB" ]; then
     deploy_web
 fi
