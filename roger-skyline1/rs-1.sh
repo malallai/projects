@@ -29,7 +29,7 @@ GREEN="\033[38;5;40m"
 YELLOW="\033[38;5;226m"
 RESET="\033[0m"
 
-deploy=0
+deploy=""
 files="."
 host="localhost"
 port="22"
@@ -85,7 +85,7 @@ function print_details {
     fi
 }
 
-function deploy {
+function deploy_system {
     source_files
     echo -e "Please enter password for root user on $host..\n(If you see nothing it's normal don't panic frérot)"
     read -p "Password: " -s password
@@ -98,7 +98,20 @@ function deploy {
     sshpass -p $password scp -r -P $port root@$host:/root/deployment.log ./.log && cat ./.log | grep "Work"
 }
 
-while getopts "H:p:f:hdiD" flag
+function deploy_web {
+    source_files
+    echo -e "Please enter password for root user on $host..\n(If you see nothing it's normal don't panic frérot)"
+    read -p "Password: " -s password
+    echo -e ""
+    echo -e "Thank you frérot, i'm gonna hack you lol"
+    echo -e "Copying files to $host:$port:/tmp/rs1-web.."
+    sshpass -p $password ssh root@$host -p $port 'rm -rf /tmp/rs1-web'
+    sshpass -p $password scp -r -P $port $files/web root@$host:/tmp/rs1-web
+    echo -e "Updating files to /var/www/html"
+    sshpass -p $password ssh root@$host -p $port 'cp -Rn /tmp/rs1-web/* /var/www/html/'
+}
+
+while getopts "H:p:f:d:hiD" flag
 do
     case $flag in
     H)
@@ -119,7 +132,7 @@ do
         files=$OPTARG
         ;;
     d)
-        deploy=1
+        deploy=$OPTARG
         ;;
     i)
         clone_files
@@ -131,7 +144,7 @@ do
         echo -e "Help page -- :"
         echo -e "\t-h : Open help page"
         echo -e "\t-f : Define folder where to find all deployment files, can be used with -i"
-        echo -e "\t-d : Launch deployment"
+        echo -e "\t-d : Init deployment, \`WEB\` or \`SYSTEM\`"
         echo -e "\t-i : Copy default files, can be used with -f"
         echo -e "\t-D : Print details about deployment"
         echo -e "\t-H : Manually define host for deployment, can be used with -i"
@@ -140,6 +153,10 @@ do
     esac
 done
 
-if [ $deploy == 1 ]; then
-    deploy
+if [ "$deploy" == "SYSTEM" ]; then
+    deploy_system
+fi
+
+if [ "$deploy" == "WEB" ]; then
+    deploy_web
 fi
