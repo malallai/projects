@@ -1,0 +1,248 @@
+﻿.cont-cont{
+    /*min-width:1280px;
+    margin: 0 auto;*/
+}
+/*Colonne droite*/
+.cours-container1{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFF;
+}
+/*Colonne centre*/
+.cours-container2{
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: RGBa(216, 216, 216, 0.2);
+}
+/*Colonne gauche*/
+.cours-container3{
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 75%;
+    border-right: 1px solid #EEE;
+    background-color: #424558;
+}
+
+.fixe {
+    position: fixed;
+}
+
+/*.sommaire-wrapper,*/ .cours-wrapper, .right-colomn-wrapper{
+    float: right;
+    position : relative;
+    left: 75%;
+}
+.sommaire-wrapper{
+    width: 25%;
+    float: left;
+    position : relative;
+    left: 75%;
+}
+.cours-wrapper{
+    width: 75%;
+    margin-bottom: 50px;
+}
+.right-column-wrapper{
+    display:none;
+    width: 0%;
+}
+.sommaire-content h2{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+.sommaire-content h3{
+    text-align: left;
+    padding: 0px 0px 0px 15px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.sommaire-content ol{
+    padding-left: 50px;
+}
+.sommaire-content li{
+    /*list-style-type: none;*/
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    color: #fff;
+    text-align: left;
+}
+.sommaire-content li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#jv-pres:hover, 
+#jv-requis:hover, 
+#jv-start:hover, 
+#jv-var:hover, 
+#jv-cond:hover, 
+#jv-boucle:hover, 
+#jv-firsttp:hover, 
+#jv-list:hover {
+    font-weight: bold;
+}
+
+/*.listehtml li{
+    color: rgba(227, 125, 44, 0.86);
+}
+
+.listecss li{
+    color: rgba(83, 174, 210, 0.93);
+    
+liste js ou mysql : color:rgba(210,174,83,0.93);
+}*/
+
+.pub, .pub2, .pub3, .pub4, .pub5, .pub6, .pub7{
+     height: 100px;
+     width: 100%;
+}
+
+.cours-content{
+    padding: 20px 80px;
+}
+
+.cours-content h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #e46d26;
+}
+
+.cours-content h2{
+    border-top: 1px solid #BBB;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 40px;
+    margin-bottom: 10px;
+    color: #322f2a;
+}
+
+.cours-content p,li{
+    font-size: 15px;
+    line-height: 26px;
+    color: #333;
+}
+
+.cours-content img{
+    margin: 5px auto;
+    padding: 3px;
+    /*border: 1px solid #42434e;
+    border-radius: 7px;*/
+    background-color:rgba(168, 197, 36, 0.47);
+    box-shadow: 0px 0px 9px;
+    width: 100%;
+    max-width: 694px;       
+}
+
+.cours-content li{
+    margin-bottom: 12px;
+}
+
+.cours-content code{
+    border: 1px solid #AAA;
+    padding: 0px 3px;
+    background-color: #EEE;
+}
+
+.ch-precedent{
+    float:left;
+    padding: 10px 15px;
+    margin-top:20px;
+    background-color: #333;
+    color: #E88C00;
+    text-decoration: none;
+}
+.ch-precedent:hover{
+    padding: 9px 15px;
+    border: 1px solid #333;
+    box-shadow: 0px 0px 2px #555;
+    color: #333;
+    background-color: #E88C00;
+}
+.ch-suivant{
+    float:right;
+    padding: 10px 15px;
+    margin-top:20px;
+    background-color: #333;
+    color: #E88C00;
+    text-decoration: none;
+}
+.ch-suivant:hover{
+    padding: 9px 15px;
+    border: 1px solid #333;
+    box-shadow: 0px 0px 2px #555;
+    color: #333;
+    background-color: #E88C00;
+}
+.idee-recue{
+    font-weight: bold;
+}
+p.idee-pros, p.idee-cons{
+    padding-left: 30px;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th{
+    background-color: #CCC;
+    text-align: center;
+}
+td,th{
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.container-qs{
+    background-color: #42434e;
+    border-radius: 7px;
+    color: #FFF;
+    padding: 20px 60px;
+    box-shadow: 1px 1px 1px #42434e;
+    margin-bottom: 50px;
+}
+.container-qs h2{
+    font-weight: 500;
+    font-size: 28px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    border-bottom: 1px solid #CCC;
+    border-top: none;
+    color: #fff;
+}
+.container-qs p, .container-qs li{
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.container-qs button{
+    background-color: #ec971f;
+    border-color: #d58512;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container-qs button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#rep{
+    background-color: #fff;
+    border-radius: 7px;
+    color: #444;
+    padding: 20px 60px;
+    margin-bottom: 10px;
+}
