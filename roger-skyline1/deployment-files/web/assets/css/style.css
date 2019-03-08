@@ -11,7 +11,7 @@ body {
     text-align: center;
     height: 100%;
     color: #FFF;
-    box-shadow: inset 0 0 4rem rgba(0, 0, 0, .25);
+    /*box-shadow: inset 0 0 4rem rgba(0, 0, 0, .25);*/
 }
 
 .container {
@@ -103,9 +103,6 @@ footer p {
 h1 {
     font-size: 3rem;
     text-transform: uppercase;
-}
-
-h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
     font-family: inherit;
@@ -114,7 +111,19 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
 .btn {
+    cursor: pointer;
     font-size: 1.25rem;
     display: inline-block;
     white-space: nowrap;
@@ -126,6 +135,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0.2rem solid transparent;
 }
 
+.btn-large {
+    width: 100%;
+    padding: 1rem 0;
+}
+
 .disabled {
     color: rgba(255, 255, 255, .25);
     cursor: default;
@@ -134,7 +148,6 @@ h1, h2, h3, h4, h5, h6 {
 .disabled:hover {
     border-bottom: 0.2rem solid rgba(255, 255, 255, .05);
     background-color: rgba(255, 255, 255, 0.05);
-
 }
 
 .btn:not(.disabled):hover {
@@ -143,9 +156,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:not(.disabled):active {
-    transform: translateY(0.85%);
+    transform: translateY(.05rem);
 }
 
-.crossRotate:active {
-    pointer-events: none;
+.btn-login {
+    background-color: transparent;
+    border: 0.2rem solid transparent;
+}
+
+.btn-login:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(95, 172, 255, .25);
+    background-color: rgba(95, 172, 255, 0.25);
+}
+
+input {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: .5rem 0;
+    margin-bottom: 10px;
+    width: 100%;
+    color: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .25rem;
+}
+
+input:focus {
+    border: 1px solid rgba(255, 255, 255, .9);
 }
