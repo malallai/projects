@@ -36,7 +36,7 @@ function custom_repo {
 }
 
 function deploy_init {
-	if [ "$package_deploy" == "true" ]; then
+	if [ "$packages_deploy" == "true" ]; then
 		update_apt
 		install_default
 		install_web
