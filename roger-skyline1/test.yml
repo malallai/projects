@@ -1,5 +1,0 @@
-packages:
-  deploy: true
-  # Split using `|` eg: `customrepo: "Repo1 | Repo2"` or eg: `"custompackages: package1 | package2"`
-  customrepo: "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-  custompackages: "oracle-java8-installer"
