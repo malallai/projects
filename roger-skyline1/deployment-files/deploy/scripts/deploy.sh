@@ -36,12 +36,13 @@ RED="\033[38;5;1m"
 GREEN="\033[38;5;40m"
 YELLOW="\033[38;5;226m"
 
-source ./*.sh
-source_files
+source "/root/rs1-files/scripts/fail2ban.sh"
+source "/root/rs1-files/scripts/firewalls.sh"
+source "/root/rs1-files/scripts/init.sh"
+source "/root/rs1-files/scripts/scripts.sh"
+source "/root/rs1-files/scripts/ssh.sh"
 
-function deploy {
-    
-}
+source_files
 
 function work {
     echo "Work" >> /root/deployment.log
