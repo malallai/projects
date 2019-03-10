@@ -18,4 +18,9 @@ parse_yaml() {
 
 eval $(parse_yaml test.yml)
 
-echo $packages_customrepo
+OLD_IFS=$IFS
+IFS='|' read -ra ADDR <<< "$packages_customrepo"
+for i in "${ADDR[@]}"; do
+    echo $i
+done
+IFS=$OLD_IFS
