@@ -12,10 +12,10 @@ ssh:
   user: malallai
 
 firewalls:
-  deploy: true
+  deploy: false
 
 dos:
-  deploy: true
+  deploy: false
 
 scripts:
   crondiff:
