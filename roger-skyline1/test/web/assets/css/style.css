@@ -1,0 +1,269 @@
+@font-face {
+    font-family: Gothic;
+    src: local("Gothic"),
+    local("Gothic"),
+    url("../fonts/GOTHIC.TTF");
+}
+
+html, body {
+    height: 100%;
+    background: #333;
+}
+
+body {
+    display: flex;
+    font-family: Gothic, 'Century Gothic', Verdana, Calibri, serif;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    color: #FFF;
+    /*box-shadow: inset 0 0 4rem rgba(0, 0, 0, .25);*/
+}
+
+.container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column !important;
+    max-width: 30rem;
+}
+
+header {
+    width: 100%;
+    margin-bottom: auto !important;
+}
+
+header .logo {
+    position: absolute;
+    left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+nav {
+    width: 100%;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.3rem 1rem;
+    color: rgba(255, 255, 255, .5);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    border-bottom: 0.2rem solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.active {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 0.2rem solid rgba(255, 255, 255, .5);
+}
+
+footer {
+    margin-top: auto !important;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer a:hover {
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 1);
+}
+
+footer p {
+    margin-top: 1rem;
+    margin-bottom: 2em;
+    color: rgba(255, 255, 255, .5);
+}
+
+.inner {
+    padding: 0 1.5rem;
+    display: block;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: inherit;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    color: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-bottom: 0.2rem solid transparent;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.disabled {
+    color: rgba(255, 255, 255, .25);
+    cursor: default;
+}
+
+.disabled:hover {
+    border-bottom: 0.2rem solid rgba(255, 255, 255, .05);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn:not(.disabled):active {
+    transform: translateY(.05rem);
+}
+
+form .btn-login {
+    background-color: transparent;
+    border: 0rem solid transparent;
+    border-bottom: .2rem solid transparent;
+}
+
+form .btn-login:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(95, 172, 255, .25);
+    background-color: rgba(95, 172, 255, 0.25);
+}
+
+input {
+    text-align: center;
+    font-size: inherit;
+    padding: .5rem 0;
+    margin-bottom: 10px;
+    width: 100%;
+    color: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .25rem;
+}
+
+input:focus {
+    border: 1px solid rgba(255, 255, 255, .9);
+}
+
+@media only screen and (max-width:400px) {
+    header .logo {
+        position: absolute;
+        left: 0.75rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    nav a {
+        padding: .95rem .60rem;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1rem;
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+}
+
+@media only screen and (max-width:300px) {
+    header .logo {
+        position: absolute;
+        left: 0.50rem;
+        margin-top: 0.50rem;
+        margin-bottom: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    nav a {
+        padding: .5rem .25rem;
+    }
+
+    body {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.50rem 0.75rem;
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+}
