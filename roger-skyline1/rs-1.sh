@@ -98,8 +98,7 @@ function deploy_system {
     sshpass -p $password ssh $user@$host -p $port 'rm -rf /root/deployment.log /root/rs1-files'
     sshpass -p $password scp -r -P $port $files/deploy $user@$host:/root/rs1-files
     sshpass -p $password scp -P $port "$deploy_pubkey" $user@$host:/root/rs1-files/id_rsa.pub
-    sshpass -p $password ssh $user@$host -p $port '/root/rs1-files/scripts/deploy.sh'
-    sshpass -p $password scp -r -P $port $user@$host:/root/deployment.log ./.log && cat ./.log | grep "Work"
+    sshpass -p $password ssh $user@$host -p $port 'cd /root/rs1-files/scripts && ./deploy.sh'
 }
 
 function deploy_web {
