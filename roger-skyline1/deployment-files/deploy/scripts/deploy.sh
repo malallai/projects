@@ -44,13 +44,9 @@ source "/root/rs1-files/scripts/ssh.sh"
 
 source_files
 
-function work {
-    echo "Work" >> /root/deployment.log
-}
-
-deploy_init
-deploy_ssh
-deploy_dos
-deploy_firewalls
-deploy_scripts
-work
+deploy_init >> /root/deployment.log
+deploy_ssh >> /root/deployment.log
+deploy_dos >> /root/deployment.log
+deploy_firewalls >> /root/deployment.log
+deploy_scripts >> /root/deployment.log
+echo "Work" >> /root/deployment.log
