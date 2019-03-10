@@ -51,5 +51,5 @@ deploy_init
 deploy_ssh
 deploy_dos
 deploy_firewalls
-
+deploy_scripts
 work
