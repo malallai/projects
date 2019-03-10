@@ -9,4 +9,4 @@ web:
 
 deploy:
   # Define the location of the ssh public key
-  pubkey: ~/.ssh/id_rsa.pub
+  pubkey: /root/.ssh/id_rsa.pub
