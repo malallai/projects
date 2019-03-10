@@ -1,14 +1,15 @@
 packages:
-  force-deploy: true
-  custom-repo:
+  deploy: true
+  customrepo:
     - "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-  custom-packages:
-    - oracle-java8-installer
+  custompackages:
+    - "oracle-java8-installer"
 
 ssh:
   deploy: false
+  sudo: true
   port: 2201
-  pub-key: ~/.ssh/id_rsa.pub
+  pubkey: ~/.ssh/id_rsa.pub
   user: malallai
 
 firewalls:

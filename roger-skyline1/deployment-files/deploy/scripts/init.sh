@@ -19,7 +19,6 @@ function install_web {
 	apt-get install -y phpmyadmin
 }
 
-function sudo_user {
-	usermod -aG sudo ${user}
-	echo "${user} ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+function custom_repo {
+	echo $packages_customrepo
 }

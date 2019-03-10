@@ -4,5 +4,9 @@ user: root
 files: .
 
 web:
-  # Full path : `/var/www/html/{remote-folder}`
+  # Define remote location of `{files}/web` (Full path is `/var/www/html/{remote-folder}`)
   remotefolder: .
+
+deploy:
+  # Define the location of the ssh public key
+  pubkey: ~/.ssh/id_rsa.pub
