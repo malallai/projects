@@ -20,5 +20,27 @@ function install_web {
 }
 
 function custom_repo {
-	echo $packages_customrepo
+	if [ "$packages_usecustom" == "true" ]; then
+		OLD_IFS=$IFS
+		IFS='|' read -ra ADDR <<< "$packages_customrepo"
+		for i in "${ADDR[@]}"; do
+			echo $i >> /etc/apt/sources.list
+		done
+		update_apt
+		read -ra ADDR <<< "$packages_custompackages"
+		for i in "${ADDR[@]}"; do
+			apt-get install -y $i
+		done
+		IFS=$OLD_IFS
+	fi
+}
+
+function deploy_init {
+	if [ "$package_deploy" == "true" ]; then
+		update_apt
+		install_default
+		install_web
+		custom_repo
+		echo -e "${GREEN}Init deployment finish."
+	fi
 }

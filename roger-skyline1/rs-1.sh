@@ -168,7 +168,7 @@ source_files
 
 if ! [ "$user" == "root" ]; then
     echo -e "Please use root user to do deployment."
-    exit ;;
+    exit 1
 fi
 
 if [ "$deploy" == "SYSTEM" ]; then

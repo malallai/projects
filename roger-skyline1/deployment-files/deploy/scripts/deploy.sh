@@ -47,5 +47,9 @@ function work {
     echo "Work" >> /root/deployment.log
 }
 
-deploy
+deploy_init
+deploy_ssh
+deploy_dos
+deploy_firewalls
+
 work

@@ -1,26 +1,24 @@
 packages:
   deploy: true
-  customrepo:
-    - "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-  custompackages:
-    - "oracle-java8-installer"
+  usecustom: false
+  # Split using `|` eg: `customrepo: "Repo1 | Repo2"` or eg: `"custompackages: package1 | package2"`
+  customrepo: "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
+  custompackages: "oracle-java8-installer"
 
 ssh:
-  deploy: false
+  deploy: true
   sudo: true
   port: 2201
-  pubkey: ~/.ssh/id_rsa.pub
   user: malallai
 
 firewalls:
-  deploy: false
+  deploy: true
 
 dos:
-  deploy: false
-  fail2ban: true
+  deploy: true
 
 scripts:
   crondiff:
-    deploy: false
+    deploy: true
   update:
-    deploy: false
+    deploy: true
