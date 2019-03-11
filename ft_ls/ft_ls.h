@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,7 +7,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 14:33:12 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 13:36:10 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/03/09 15:16:09 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,45 +32,30 @@
 # define F_LINK (char)'l'
 # define ILLEGAL_OPTION 150
 
+
+
+
 typedef struct		s_file
 {
 	char			*name;
-	char			*mode;
-	struct dirent	*dirent;
-	struct group	*group;
-	struct passwd	*passwd;
-	struct stat		stat;
+	struct s_file	*next;
+
 }					t_file;
 
-typedef struct		s_folder	
-{
-	int i;
-	int id;
-	char *name;
-	t_file *t_file;
-	struct s_folder *first;
-	struct s_folder *last;
-	struct s_folder *next;
-}					t_folder;
+
+
 
 typedef struct		s_opt
 {
 	int					flag;
-	struct	s_folder	*folder;
-	struct	s_folder	*file;
-	int					skip;
-	int 				max;
-	int					total;
+	int					max;
+	char				*path;
+	t_file				*file;
+	t_file				*folder;
+
 }					t_opt;
 
-t_file	*ls(struct dirent *sd, char *name);
-int		parse(char **argc, t_opt *opt);
-int		read_file(char **argv, int index, t_opt *opt);
-char	*get_color(char type, int mode);
-char	*get_path(char *argv, char *name);
-char	*print_mode(int mode, unsigned char type);
-char	get_dtype(unsigned char type);
-void	printls(t_folder *folder, t_opt *opt);
-void	destroyls(t_folder *folder);
+int parse(char **argv, t_opt *opt);
+int	ls_print(t_opt *opt);
 
 # endif
