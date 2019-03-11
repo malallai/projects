@@ -6,29 +6,29 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 16:25:40 by bclerc            #+#    #+#             */
-/*   Updated: 2019/02/28 13:36:12 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/03/11 13:38:01 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ft_ls.h"
 
-char	*print_mode(int mode, unsigned char type)
-{
-	char perm[11];
+// char	*print_mode(int mode, unsigned char type)
+// {
+// 	char perm[11];
 
-	perm[0] = get_dtype(type); 
-	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
-	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
-	perm[4] = (mode & S_IRGRP) && (mode & S_IREAD) ? 'r' : '-';
-	perm[5] = (mode & S_IWGRP) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 'x' : '-';
-	perm[7] = (mode & S_IROTH) && (mode & S_IREAD) ? 'r' : '-';
-	perm[8] = (mode & S_IWOTH) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 'x' : '-';
-	perm[10] = 0;
-	return (ft_strdup(perm));
-}
+// 	perm[0] = get_dtype(type); 
+// 	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
+// 	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
+// 	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
+// 	perm[4] = (mode & S_IRGRP) && (mode & S_IREAD) ? 'r' : '-';
+// 	perm[5] = (mode & S_IWGRP) && (mode & S_IWRITE) ? 'w' : '-';
+// 	perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 'x' : '-';
+// 	perm[7] = (mode & S_IROTH) && (mode & S_IREAD) ? 'r' : '-';
+// 	perm[8] = (mode & S_IWOTH) && (mode & S_IWRITE) ? 'w' : '-';
+// 	perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 'x' : '-';
+// 	perm[10] = 0;
+// 	return (ft_strdup(perm));
+// }
 
 char get_dtype(unsigned char type)
 {
@@ -64,13 +64,4 @@ char *get_color(char type, int mode)
 	return (color);
 }
 
-void	destroyls(t_folder *folder)
-{
-	if (!folder)
-		return ;
-	destroyls(folder->next);
-	free(folder->t_file->mode);
-	free(folder->t_file->name);
-	free(folder->t_file);
-	free(folder);
-}
+
