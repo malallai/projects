@@ -7,6 +7,7 @@ function deploy_firewalls {
 		ufw allow 2201/tcp
 		ufw allow 80/tcp
 		ufw allow 443
+		ufw reload
 		echo -e "${GREEN}Firewalls deployment finish."
 	fi
 }
