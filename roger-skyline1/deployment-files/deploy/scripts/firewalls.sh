@@ -1,7 +1,7 @@
 function deploy_firewalls {
 	if [ "$firewalls_deploy" == "true" ]; then
 		#/bin/bash ../files/iptables
-		if ! [ "`ufw status | grep \"inactive\"" == "" ]; then
+		if ! [ "`ufw status | grep \"inactive\"`" == "" ]; then
 			ufw enable
 		fi
 		ufw allow 2201/tcp
