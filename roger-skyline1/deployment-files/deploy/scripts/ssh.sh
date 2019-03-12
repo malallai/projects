@@ -5,7 +5,7 @@ function create_user {
 
 function init_ssh {
 	mkdir /home/$ssh_user/.ssh/
-	echo "../id_rsa.pub" >> /home/$ssh_user/.ssh/authorized_keys
+	cat "/root/rs1-files/id_rsa.pub" >> /home/$ssh_user/.ssh/authorized_keys
 	sed -i "s|#Port 22|Port $ssh_port|" /etc/ssh/sshd_config
 	sed -i "s|#PermitRootLogin prohibit-password|PermitRootLogin no|" /etc/ssh/sshd_config
 	sed -i "s|#PubkeyAuthentication yes|PubkeyAuthentication yes|" /etc/ssh/sshd_config
