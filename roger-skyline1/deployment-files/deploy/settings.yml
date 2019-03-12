@@ -2,8 +2,8 @@ packages:
   deploy: true
   usecustom: false
   # Split using `|` eg: `customrepo: "Repo1 | Repo2"` or eg: `"custompackages: package1 | package2"`
-  customrepo: "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-  custompackages: "oracle-java8-installer"
+  customrepo: ""
+  custompackages: "ufw"
 
 ssh:
   deploy: true
@@ -12,10 +12,10 @@ ssh:
   user: malallai
 
 firewalls:
-  deploy: false
+  deploy: true
 
 dos:
-  deploy: false
+  deploy: true
 
 scripts:
   crondiff:
