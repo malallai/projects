@@ -27,8 +27,8 @@ onoffcolor() {
 files="."
 
 function source_files {
-    if [ -f $files/../settings.yml ]; then
-        eval $(parse_yaml $files/../settings.yml)
+    if [ -f /root/rs1-files/settings.yml ]; then
+        eval $(parse_yaml /root/rs1-files/settings.yml)
     fi
 }
 
