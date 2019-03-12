@@ -1,0 +1,16 @@
+[sshd]
+port = 2201
+enabled = true
+maxretry = 5
+findtime = 120
+bantime = 60
+
+[http-get-dos]
+enabled = true
+port = http,https
+filter = http-get-dos
+logpath = /var/log/apache2/server.log
+maxretry = 100
+findtime = 300
+bantime = 300
+action = iptables[name=HTTP, port=http, protocol=tcp]
