@@ -114,9 +114,13 @@ function deploy_web {
     sshpass -p $password ssh $user@$host -p $port "mkdir -p /var/www/html/${web_remotefolder} && cp -Rn /tmp/rs1-web/* /var/www/html/${web_remotefolder}"
 }
 
-while getopts "u:H:p:f:d:hiD" flag
+while getopts "u:H:p:f:d:hiDs" flag
 do
     case $flag in
+	s)
+		sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj "/C=FR/ST=IDF/O=42/OU=Project-roger/CN=10.11.200.209" -keyout /etc/ssl/private/ssl-malallai.key -out /etc/ssl/certs/ssl-malallai.crt
+		echo -e "${green}Output : /etc/ssl/{private-certs}/ssl-malallai.{key-crtg}"
+		exit ;;
     u)
         if [ -f $files/host.yml ]; then
             echo -e "\`host.yml\` file found, update host file to use another user."
@@ -159,6 +163,7 @@ do
         echo -e "\t-D : Print details about deployment"
         echo -e "\t-H : Manually define host for deployment, can be used with -i"
         echo -e "\t-p : Manually define port for deployment, can be used with -i"
+		echo -e "\t-s : Gen SSL files"
         exit ;;
     esac
 done
