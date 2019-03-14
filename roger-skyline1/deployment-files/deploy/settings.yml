@@ -3,7 +3,7 @@ packages:
   usecustom: false
   # Split using `|` eg: `customrepo: "Repo1 | Repo2"` or eg: `"custompackages: package1 | package2"`
   customrepo: ""
-  custompackages: "ufw"
+  custompackages: ""
 
 ssh:
   deploy: true

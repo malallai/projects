@@ -13,8 +13,8 @@ function install_default {
 
 function install_web {
 	apt-get install -y apache2
-	apt-get install -y mysql-server
-	apt-get install -y mysql-client
+	#apt-get install -y mysql-server
+	#apt-get install -y mysql-client
 }
 
 function custom_repo {
