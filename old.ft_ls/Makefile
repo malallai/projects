@@ -1,24 +1,20 @@
 NAME = ft_ls
 PROJECT_NAME = ft_ls
 
-SOURCES_FOLDER = ./sources/
+SOURCES_FOLDER = ./
 INCLUDES_FOLDER = ./
-OBJECTS_FOLDER = ./objects/
+OBJECTS_FOLDER = ./
 
 LIBS = libft
 
 SOURCES = \
-	free_utils.c \
+	display.c \
 	ft_ls.c \
-	lst.c \
 	parser.c \
-	reader.c \
+	print.c \
 	utils.c \
 
 OBJECTS = $(SOURCES:.c=.o)
-OBJECTS := $(subst /,__,$(OBJECTS))
-OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
-SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FSANITIZE = -fsanitize=address
 FLAGS = -Wall -Wextra -Werror
@@ -36,23 +32,21 @@ INFO_COLOR =	\033[38;5;140m
 all: $(NAME)
 
 $(LIBS):
+	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
 	@printf "\n$(NO_COLOR)-------- $(INFO_COLOR)Libft $(NO_COLOR)--------\n"
 	@make -C $(@)
 	@printf "$(NO_COLOR)-----------------------\n\n"
 
-$(NAME): $(LIBS) $(OBJECTS)
+$(NAME): $(OBJECTS) $(LIBS)
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
-	@printf "%-50s \r"
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 
 force: $(OBJECTS)
 	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
-	@printf "%-50s \r"
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 
-$(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
-	@mkdir -p $(OBJECTS_FOLDER)
+%.o: %.c
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
 	@printf "$(NO_COLOR)Creating $(INFO_COLOR)%-30s $(OK_COLOR)✓$(NO_COLOR)\r" "$@"
 
