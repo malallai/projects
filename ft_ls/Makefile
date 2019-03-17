@@ -17,6 +17,7 @@ SOURCES = \
 	lst.c \
 	parser.c \
 	reader.c \
+	sort.c \
 	utils.c \
 
 OBJECTS = $(SOURCES:.c=.o)

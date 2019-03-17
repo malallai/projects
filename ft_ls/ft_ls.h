@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/16 19:00:12 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 17:12:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,28 +28,31 @@
 
 # define DEBUG printf
 
-typedef struct			s_entry
-{
-	struct dirent		*dirent;
-	struct s_entry		*next;
+typedef struct			s_entry {
+	char				**array;
+	int					count;
 }						t_entry;
+
+typedef struct			s_file {
+	struct dirent		*dirent;
+	struct s_file		*next;
+}						t_file;
 
 typedef struct			s_opt
 {
 	int					flag;
-	char				**argv;
-	char				**folders;
-	char				**files;
-	int					files_count;
-	int					folders_count;
-	int					current;
+	int					init;
 	t_entry				*entries;
-	t_entry				*first_entry;
+	t_entry				*files;
+	t_entry				*folders;
+	t_file				*first;
+	t_file				*last;
 }						t_opt;
 
-t_entry					*new_entry(void);
-void					add_entry(t_opt *opt, struct dirent *dirent);
+t_file					*new_file(void);
+void					add_file(t_opt *opt, struct dirent *dirent);
 void					free_entries(t_entry *entry);
+void					free_file(t_file *file);
 t_opt					*new_opt(void);
 void					set_opt_folders(t_opt *opt, int argc, char **argv,
 						int index);
@@ -62,5 +65,9 @@ int						ls_read(t_opt *opt);
 void					free_array(char **array);
 int						is_regular_file(const char *path);
 int						is_folder(const char *path);
+
+void	split_entries(t_opt *opt);
+void quicksort(char **array, int low, int high);
+void swap(char **array, int a, int b);
 
 #endif
