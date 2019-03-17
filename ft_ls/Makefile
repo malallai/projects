@@ -1,3 +1,7 @@
+ifndef VERBOSE
+MAKEFLAGS += --no-print-directory
+endif
+
 NAME = ft_ls
 PROJECT_NAME = ft_ls
 

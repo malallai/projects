@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/16 19:36:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 12:46:18 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main(int argc, char **argv)
 {
-	/*t_opt	*opt;
+	t_opt	*opt;
 	int		i;
 
 	opt = new_opt();
@@ -31,8 +31,6 @@ int		main(int argc, char **argv)
 		set_opt_folders(opt, argc, argv, i);
 		ls_read(opt);
 	}
-	free_opt(opt);*/
-	ft_putnbrln(ft_strcmp(argv[1], argv[2]));
-	(void)argc;
+	free_opt(opt);
 	return (0);
 }
