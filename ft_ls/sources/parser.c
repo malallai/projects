@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:32:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/16 17:32:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 16:45:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		parse(char **argv, t_opt *opt)
 	int		i;
 	int		b;
 
-	if (opt->folders_count == 1 || !argv || argv[1][0] != '-')
+	if (opt->entries->count == 1 || !argv || argv[1][0] != '-')
 		return (1);
 	i = 1;
 	while (argv[i])
