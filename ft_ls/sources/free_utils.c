@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 16:50:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 20:58:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/18 14:01:42 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	free_entries(t_entry *entry)
 {
-	free_array(entry->array);
+	free_array(entry->a, entry->count);
 	free(entry);
 }
 
@@ -27,17 +27,18 @@ void	free_file(t_file *file)
 	free(file);
 }
 
-void	free_array(char **array)
+void	free_array(char **array, int size)
 {
 	int index;
 
 	index = 0;
 	if (!array)
 		return ;
-	while (array && array[index])
+	while (index < size)
 		free(array[index++]);
 	if (array)
 		free(array);
+
 }
 
 void	free_opt(t_opt *opt)
