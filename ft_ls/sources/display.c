@@ -12,4 +12,7 @@
 
 #include <ft_ls.h>
 
+void	display(t_opt *opt, t_file *file)
+{
 
+}

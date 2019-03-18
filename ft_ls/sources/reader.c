@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 17:13:10 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 21:43:09 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,13 @@ int		ls_read(t_opt *opt)
 	closedir(dir);
 	return (0);
 }
+
+/*int		ls_read_single(t_opt *opt)
+{
+	
+}
+
+void	read_and_display(t_opt *opt)
+{
+	
+}*/
