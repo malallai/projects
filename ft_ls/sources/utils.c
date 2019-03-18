@@ -46,7 +46,7 @@ char	*get_color(char type, int mode)
 	return (color);
 }
 
-char	*print_mode(int mode, unsigned char type)
+char	*get_mode(int mode, unsigned char type)
 {
 	char *perm;
 

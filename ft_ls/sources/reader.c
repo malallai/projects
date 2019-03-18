@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:49:04 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/18 18:00:30 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,21 @@ t_infos	*get_finfos(char *path)
 {
 	t_infos			*infos;
 	struct stat		path_stat;
+	struct passwd	*uid;
+	struct group 	*gid;
 
 	stat(path, &path_stat);
+	uid = getpwuid(path_stat.st_uid);
+	gid = getgrgid(path_stat.st_gid);
 	infos = (t_infos *)malloc(sizeof(t_infos *) * 6);
-	infos->dirent = NULL;
-	infos->gid = getgrgid(path_stat.st_gid); // plante
-	infos->uid = getpwuid(path_stat.st_uid);
-	infos->stat = path_stat;
 	infos->name = path;
+	infos->mode = get_mode(path_stat.st_mode, 0);
+	infos->stat = path_stat;
+	infos->dirent = NULL;
+	infos->uid = uid;
+	infos->gid = gid;
+	DEBUG("D1\n");
+
 	return (infos);
 }
 

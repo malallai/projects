@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:42:54 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/18 17:54:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ t_infos					*get_finfos(char *path);
 t_infos					*get_dinfos(char *path, struct dirent *dirent);
 int						has_flag(t_opt *opt, int flag);
 void					max_size(t_opt *opt);
+char					*get_mode(int mode, unsigned char type);
 
 #endif
