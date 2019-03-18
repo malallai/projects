@@ -12,6 +12,9 @@ OBJECTS_FOLDER = ./objects/
 LIBS = libft
 
 SOURCES = \
+	display.c \
+	error.c \
+	file_utils.c \
 	free_utils.c \
 	ft_ls.c \
 	lst.c \

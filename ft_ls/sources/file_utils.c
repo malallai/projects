@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   file_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:37:24 by malallai         ###   ########.fr       */
+/*   Created: 2019/03/18 14:35:04 by malallai          #+#    #+#             */
+/*   Updated: 2019/03/18 14:35:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-int		main(int argc, char **argv)
+int		is_regular_file(const char *path)
 {
-	t_opt	*opt;
-	int		i;
+    struct stat path_stat;
 
-	opt = new_opt();
-	if (argc == 1)
-	{
-		opt->entries->a = malloc(sizeof(char *));
-		opt->entries->a[0] = ft_strdup(".");
-		opt->entries->a[1] = NULL;
-	}
-	else
-	{
-		i = parse(argv, opt);
-		set_opt_folders(opt, argc, argv, i);
-		quicksort(opt->entries->a, 0, opt->entries->count - 1);
-		split_entries(opt);
-	}
-	read_files(opt);
-	free_opt(opt);
-	return (0);
+    stat(path, &path_stat);
+    return (S_ISREG(path_stat.st_mode));
+}
+
+int		is_folder(const char *path)
+{
+    struct stat path_stat;
+
+    stat(path, &path_stat);
+    return (S_ISDIR(path_stat.st_mode));
+}
+
+int		exist(const char *path)
+{
+	return (is_regular_file(path) || is_folder(path));
 }

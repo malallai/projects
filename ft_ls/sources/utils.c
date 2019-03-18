@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/* *************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:33:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 13:57:49 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/18 14:35:17 by malallai         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/* *************************************************************************/
 
 #include <ft_ls.h>
 
@@ -46,18 +46,26 @@ char	*get_color(char type, int mode)
 	return (color);
 }
 
-int		is_regular_file(const char *path)
+char	*print_mode(int mode, unsigned char type)
 {
-    struct stat path_stat;
+	char *perm;
 
-    stat(path, &path_stat);
-    return (S_ISREG(path_stat.st_mode));
+	perm = (char *)malloc(sizeof(char *) * 11);
+	perm[0] = get_dtype(type);
+	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
+	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
+	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
+	perm[4] = (mode & S_IRGRP) && (mode & S_IREAD) ? 'r' : '-';
+	perm[5] = (mode & S_IWGRP) && (mode & S_IWRITE) ? 'w' : '-';
+	perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 'x' : '-';
+	perm[7] = (mode & S_IROTH) && (mode & S_IREAD) ? 'r' : '-';
+	perm[8] = (mode & S_IWOTH) && (mode & S_IWRITE) ? 'w' : '-';
+	perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 'x' : '-';
+	perm[10] = 0;
+	return (perm);
 }
 
-int		is_folder(const char *path)
+int		has_flag(t_opt *opt, int flag)
 {
-    struct stat path_stat;
-
-    stat(path, &path_stat);
-    return (S_ISDIR(path_stat.st_mode) || S_ISLNK(path_stat.st_mode));
+	return ((opt->flag & flag) > 0);
 }
