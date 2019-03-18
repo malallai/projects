@@ -1,1 +1,0 @@
-/Users/malallai/42/projects/c.sh
