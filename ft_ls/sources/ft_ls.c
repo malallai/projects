@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 17:13:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 21:42:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main(int argc, char **argv)
 {
-	t_opt	*opt;
+	/*t_opt	*opt;
 	int		i;
 
 	opt = new_opt();
@@ -27,12 +27,12 @@ int		main(int argc, char **argv)
 	else
 	{
 		i = parse(argv, opt);
-		DEBUG("%d\n", i);
 		set_opt_folders(opt, argc, argv, i);
 		quicksort(opt->entries->array, 0, opt->entries->count - 1);
 		split_entries(opt);
 	}
-	ls_read(opt);
-	free_opt(opt);
+	free_opt(opt);*/
+	(void)argc;
+	ft_putnbrln(is_regular_file(argv[1]));
 	return (0);
 }

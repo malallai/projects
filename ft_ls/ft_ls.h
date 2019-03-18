@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 17:12:23 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 20:55:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ typedef struct			s_opt
 {
 	int					flag;
 	int					init;
-	t_entry				*entries;
-	t_entry				*files;
-	t_entry				*folders;
-	t_file				*first;
-	t_file				*last;
+	struct s_entry		*entries;
+	struct s_entry		*files;
+	struct s_entry		*folders;
+	struct s_file		*first;
+	struct s_file		*last;
 }						t_opt;
 
 t_file					*new_file(void);

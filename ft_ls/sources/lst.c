@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 17:12:43 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/17 20:57:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_file		*new_file(void)
 {
 	t_file *file;
 
-	file = (t_file *)malloc(sizeof(t_file *));
+	file = (t_file *)malloc(sizeof(t_file *) * 2);
 	file->next = NULL;
 	return (file);
 }
@@ -29,7 +29,10 @@ void		add_file(t_opt	*opt, struct dirent *dirent)
 	new->dirent = dirent;
 	if (!opt->init)
 	{
+		opt->init = 1;
 		opt->first = new;
+		DEBUG("Test -> '%s'\n", opt->entries->array[0]);
+
 		opt->last = opt->first;
 	}
 	else
@@ -45,10 +48,12 @@ t_opt		*new_opt(void)
 	int		index;
 
 	index = 0;
-	opt = malloc(sizeof(t_opt *));
-	opt->entries = malloc(sizeof(t_entry *));
-	opt->files = malloc(sizeof(t_entry *));
-	opt->folders = malloc(sizeof(t_entry *));
+	opt = malloc(sizeof(t_opt *) * 7);
+	opt->entries = malloc(sizeof(t_entry *) * 2);
+	opt->files = malloc(sizeof(t_entry *) * 2);
+	opt->folders = malloc(sizeof(t_entry *) * 2);
+	opt->first = NULL;
+	opt->last = NULL;
 	opt->init = 0;
 	return (opt);
 }
