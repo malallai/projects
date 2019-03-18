@@ -19,8 +19,8 @@ void	display(t_opt *opt, t_infos *infos, int size_max)
 	i = 0;
 	if (has_flag(opt, F_DETAIL))
 		return (display_details(opt, infos, size_max));
-	if (!has_flag(opt, F_ALL) && ft_strequ(&infos->name[0], "."))
-		return ;
+	/*if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
+		return ;*/
 	ft_putstr(infos->name);
 	while (i++ < size_max + 2)
 		ft_putstr(" ");

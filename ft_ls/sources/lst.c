@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:32:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/18 17:49:27 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
 	argv_index = index;
 	folder_index = 0;
 	opt->entries->count = argc - argv_index;
-	opt->entries->a = malloc(sizeof(char *) * opt->entries->count + 1);
+	opt->entries->a = (char **)malloc(sizeof(char **) * (opt->entries->count + 1));
 	while (argv_index < argc)
 		opt->entries->a[folder_index++] = ft_strdup(argv[argv_index++]);
-	opt->entries->a[folder_index] = NULL;
+	opt->entries->a[opt->entries->count] = 0;
 	free(opt->files->a);
 	free(opt->folders->a);
 	opt->files->a = malloc(sizeof(char *) * opt->entries->count);
