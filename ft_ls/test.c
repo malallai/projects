@@ -1,16 +1,11 @@
-#include <ft_ls.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int main(int argc, char **argv)
-{
-	struct stat path_stat;
+int main(int argc, char **argv) {
+    t_test	test;
 
-    stat(argv[1], &path_stat);
-	ft_putnbrln(S_ISDIR(path_stat.st_mode));
-	ft_putnbrln(S_ISLNK(path_stat.st_mode));
-	ft_putnbrln(path_stat.st_mode);
-	stat(argv[2], &path_stat);
-	ft_putnbrln(S_ISDIR(path_stat.st_mode));
-	ft_putnbrln(S_ISLNK(path_stat.st_mode));
-	ft_putnbrln(path_stat.st_mode);
-	return (0);
+	test.test = 2;
+	t(&test);
+	printf("%d\n", test.test);
+	return 0;
 }

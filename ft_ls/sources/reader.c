@@ -6,28 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 18:00:30 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 00:20:26 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-t_infos	*get_dinfos(char *path, struct dirent *dirent)
-{
-	t_infos			*infos;
-	struct stat		path_stat;
-
-	stat(path, &path_stat);
-	infos = (t_infos *)malloc(sizeof(t_infos *) * 6);
-	infos->dirent = dirent;
-	infos->gid = getgrgid(path_stat.st_gid);
-	infos->uid = getpwuid(path_stat.st_uid);
-	infos->stat = path_stat;
-	infos->name = path;
-	return (infos);
-}
-
-t_infos	*get_finfos(char *path)
+t_infos		*get_infos(char *path, struct dirent *dirent)
 {
 	t_infos			*infos;
 	struct stat		path_stat;
@@ -37,45 +22,39 @@ t_infos	*get_finfos(char *path)
 	stat(path, &path_stat);
 	uid = getpwuid(path_stat.st_uid);
 	gid = getgrgid(path_stat.st_gid);
-	infos = (t_infos *)malloc(sizeof(t_infos *) * 6);
+	infos = (t_infos *)malloc(sizeof(t_infos *) * sizeof(struct stat));
 	infos->name = path;
 	infos->mode = get_mode(path_stat.st_mode, 0);
 	infos->stat = path_stat;
-	infos->dirent = NULL;
+	infos->dirent = dirent;
 	infos->uid = uid;
 	infos->gid = gid;
-	DEBUG("D1\n");
-
 	return (infos);
 }
 
-void	read_folders(t_opt *opt)
+void		read_folders(t_opt *opt)
 {
 	DIR				*dir;
 	struct dirent	*sd;
+	t_file			*folder;
+	int				index;
 
-	if ((dir = opendir(opt->entries->a[0])))
-	{
-		while ((sd = readdir(dir)))
-		{
-			add_file(opt, sd);
-			ft_putcharln(get_dtype(sd->d_type));
-		}
-		closedir(dir);
-	}
-}
-
-void	read_files(t_opt *opt)
-{
-	int		index;
-	t_infos	*infos;
-
+	folder = opt->folders->first;
 	index = 0;
-	while (index < opt->files->count)
+	while (index++ < opt->folders->count)
 	{
-		infos = get_finfos(opt->files->a[index++]);
-		display(opt, infos, opt->files->max);
-		free(infos);
+		opt->tmp_dir = new_entry();
+		opt->tmp_dir->name = folder->name;
+		if ((dir = opendir(folder->name)))
+		{
+			opt->tmp_dir->count = 0;
+			while ((sd = readdir(dir)))
+				add_file(opt->tmp_dir, sd->d_name, sd);
+			quicksort(opt->tmp_dir, 0, opt->tmp_dir->count - 1);
+			display_folder(opt, opt->tmp_dir);
+			closedir(dir);
+		}
+		if ((folder = folder->next))
+			ft_putendl("");
 	}
-	ft_putendl("");
 }
