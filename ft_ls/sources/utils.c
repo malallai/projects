@@ -12,7 +12,7 @@
 
 #include <ft_ls.h>
 
-char	get_dtype(unsigned char type)
+char	get_dtype(int type)
 {
 	if (type == DT_BLK)
 		return ('p');
@@ -31,19 +31,16 @@ char	get_dtype(unsigned char type)
 	return ('-');
 }
 
-char	*get_color(char type, int mode)
+char	*get_color(int mode)
 {
-	char *color;
-
-	if (type == F_DIR)
-		color = ft_strdup("\033[1;36m");
-	else if (type == F_LINK)
-		color = ft_strdup("\033[0;35m");
+	DEBUG("%d %d %d %d\n", mode, mode & S_IFREG, mode & S_IFDIR, mode & S_IXUSR);
+	if (mode & S_IFLNK)
+		return ("\033[0;35m");
+	else if (mode & S_IFDIR)
+		return ("\033[1;36m");
 	else if (mode & S_IXUSR)
-		color = ft_strdup("\033[0;31m");
-	else
-		color = ft_strdup("\033[0m");
-	return (color);
+		return ("\033[0;31m");
+	return ("\033[0m");
 }
 
 char	*get_mode(int mode, unsigned char type)

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 17:54:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 00:37:02 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,25 +35,28 @@
 # define DEBUG printf
 
 typedef struct			s_entry {
-	char				**a;
+	int					init;
+	struct s_file		*first;
+	struct s_file		*file;
 	int					count;
 	int					max;
+	char				*name;
 }						t_entry;
 
 typedef struct			s_file {
-	struct dirent		*dirent;
+	char				*name;
 	struct s_file		*next;
+	struct dirent		*dirent;
+	int					id;
+	int					name_size;
 }						t_file;
 
-typedef struct			s_opt
-{
+typedef struct			s_opt {
 	int					flag;
-	int					init;
 	struct s_entry		*entries;
 	struct s_entry		*files;
 	struct s_entry		*folders;
-	struct s_file		*first;
-	struct s_file		*last;
+	struct s_entry		*tmp_dir;
 }						t_opt;
 
 typedef struct			s_infos {
@@ -65,39 +68,46 @@ typedef struct			s_infos {
 	struct group		*gid;
 }						t_infos;
 
-t_file					*new_file(void);
-void					add_file(t_opt *opt, struct dirent *dirent);
-void					free_entries(t_entry *entry);
-void					free_file(t_file *file);
-t_opt					*new_opt(void);
-void					set_opt_folders(t_opt *opt, int argc, char **argv,
-						int index);
-void					free_opt(t_opt *opt);
-char					get_dtype(unsigned char type);
-char					*get_color(char type, int mode);
-int						set_flag(char c_flag, t_opt *opt);
-int						parse(char **argv, t_opt *opt);
-void					free_array(char **array, int size);
+void					print_nexist(char *path);
+
 int						is_regular_file(const char *path);
 int						is_folder(const char *path);
-void					print_nexist(char *str);
 int						exist(const char *path);
+
+void					free_entries(t_entry *entry);
+void					free_file(t_file *file);
+void					free_opt(t_opt *opt);
+
+t_file					*new_file(char *name, struct dirent *dir);
+void					add_file(t_entry *entry, char *str, \
+						struct dirent *dir);
 t_entry					*new_entry(void);
-void					read_folders(t_opt *opt);
-void					read_files(t_opt *opt);
-char					*print_mode(int mode, unsigned char type);
-void					split_entries(t_opt *opt);
-void					quicksort(char **array, int low, int high);
-void					swap(char **array, int a, int b);
-void					display(t_opt *opt, t_infos *infos, int size_max);
-void					display_details(t_opt *opt, t_infos *infos,\
+t_opt					*new_opt(void);
+t_file					*get_file(t_file *first, int id);
+
+int						set_flag(char c_flag, t_opt *opt);
+int						parse(char **argv, t_opt *opt);
+void					set_opt_folders(t_opt *opt, int argc, \
+						char **argv, int index);
+
+void					print(t_opt *opt, t_file *file, t_infos *infos, int size_max);
+void					print_details(t_opt *opt, t_infos *infos, \
 						int size_max);
-void					read_files(t_opt *opt);
+void					display_folder(t_opt *opt, t_entry *entry);
+void					display(t_opt *opt, t_entry *entry);
+void					print_ls(t_opt *opt);
+
+t_infos					*get_infos(char *path, struct dirent *dirent);
 void					read_folders(t_opt *opt);
-t_infos					*get_finfos(char *path);
-t_infos					*get_dinfos(char *path, struct dirent *dirent);
-int						has_flag(t_opt *opt, int flag);
+
+void					split_entries(t_opt *opt);
 void					max_size(t_opt *opt);
+void					swap(t_file *a, t_file *b);
+void					quicksort(t_entry *entry, int low, int high);
+
+char					get_dtype(int type);
+char					*get_color(int mode);
 char					*get_mode(int mode, unsigned char type);
+int						has_flag(t_opt *opt, int flag);
 
 #endif

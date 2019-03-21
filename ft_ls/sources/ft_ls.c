@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:37:24 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 00:37:17 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,15 @@ int		main(int argc, char **argv)
 
 	opt = new_opt();
 	if (argc == 1)
-	{
-		opt->entries->a = malloc(sizeof(char *));
-		opt->entries->a[0] = ft_strdup(".");
-		opt->entries->a[1] = NULL;
-	}
+		add_file(opt->entries, ft_strdup("."), NULL);
 	else
 	{
 		i = parse(argv, opt);
 		set_opt_folders(opt, argc, argv, i);
-		quicksort(opt->entries->a, 0, opt->entries->count - 1);
-		split_entries(opt);
+		quicksort(opt->entries, 0, opt->entries->count - 1);
 	}
-	read_files(opt);
+	split_entries(opt);
+	print_ls(opt);
 	free_opt(opt);
 	return (0);
 }

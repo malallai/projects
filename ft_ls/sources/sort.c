@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 15:29:16 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 15:44:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/20 22:56:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,66 +14,73 @@
 
 void	split_entries(t_opt *opt)
 {
-	int index;
-	int	folder_i;
-	int	file_i;
+	int		index;
+	t_file	*file;
 
 	index = 0;
-	folder_i = 0;
-	file_i = 0;
-	while (opt->entries->a[index])
+	file = opt->entries->first;
+	while (index++ < opt->entries->count)
 	{
-		if (!exist(opt->entries->a[index]))
+		if (!exist(file->name))
 		{
-			print_nexist(opt->entries->a[index++]);
+			print_nexist(file->name);
+			file = file->next;
 			continue ;
 		}
-		if (is_regular_file(opt->entries->a[index]))
-			opt->files->a[file_i++] = ft_strdup(opt->entries->a[index]);
-		else if (is_folder(opt->entries->a[index]))
-			opt->folders->a[folder_i++] = ft_strdup(opt->entries->a[index]);
-		index++;
+		if (is_regular_file(file->name))
+			add_file(opt->files, file->name, NULL);
+		else if (is_folder(file->name))
+			add_file(opt->folders, file->name, NULL);
+		file = file->next;
 	}
-	opt->folders->count = folder_i;
-	opt->files->count = file_i;
 	max_size(opt);
 }
 
 void	max_size(t_opt *opt)
 {
+	t_file	*file;
 	int		index;
-	int		len;
 
+	file = opt->files->first;
 	index = 0;
-	while (index < opt->files->count)
+	while (index++ < opt->files->count)
 	{
-		if ((len = (int)ft_strlen(opt->files->a[index])) > opt->files->max)
-			opt->files->max = (int)len;
-		index++;
+		if (file->name_size > opt->files->max)
+			opt->files->max = file->name_size;
+		file = file->next;
 	}
 	index = 0;
-	while (index < opt->folders->count)
+	file = opt->folders->first;
+	while (index++ < opt->folders->count)
 	{
-		if ((len = (int)ft_strlen(opt->folders->a[index])) > opt->folders->max)
-			opt->folders->max = len;
-		index++;
+		if (file->name_size > opt->folders->max)
+			opt->folders->max = file->name_size;
+		file = file->next;
 	}
 }
 
-void	swap(char **array, int a, int b)
+void	swap(t_file *a, t_file *b)
 {
-	char *temp;
+	char			*name_tmp;
+	struct dirent	*dirent_tmp;
+	int				size_tmp;
 
-	temp = array[a];
-	array[a] = array[b];
-	array[b] = temp;
+	name_tmp = a->name;
+	dirent_tmp = a->dirent;
+	size_tmp = a->name_size;
+	a->name = b->name;
+	a->dirent = b->dirent;
+	a->name_size = b->name_size;
+	b->name = name_tmp;
+	b->dirent = dirent_tmp;
+	b->name_size = size_tmp;
 }
 
-void	quicksort(char **array, int low, int high)
+void	quicksort(t_entry *entry, int low, int high)
 {
-	int pivot;
-	int i;
-	int j;
+	int 	pivot;
+	int 	i;
+	int 	j;
 
 	if (low < high)
 	{
@@ -82,15 +89,17 @@ void	quicksort(char **array, int low, int high)
 		j = high;
 		while (i < j)
 		{
-			while (ft_strcmp(array[i], array[pivot]) < 0 && i <= high)
+			while (ft_strcmp(get_file(entry->first, i)->name, \
+				get_file(entry->first, pivot)->name) < 0 && i <= high)
 				i++;
-			while (ft_strcmp(array[j], array[pivot]) > 0 && j >= low)
+			while (ft_strcmp(get_file(entry->first, j)->name, \
+				get_file(entry->first, pivot)->name) > 0 && j >= low)
 				j--;
 			if (i < j)
-				swap(array, i, j);
+				swap(get_file(entry->first, i), get_file(entry->first, j));
 		}
-		swap(array, j, pivot);
-		quicksort(array, low, j - 1);
-		quicksort(array, j + 1, high);
+		swap(get_file(entry->first, j), get_file(entry->first, pivot));
+		quicksort(entry, low, j - 1);
+		quicksort(entry, j + 1, high);
 	}
 }

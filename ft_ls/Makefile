@@ -12,13 +12,13 @@ OBJECTS_FOLDER = ./objects/
 LIBS = libft
 
 SOURCES = \
-	display.c \
 	error.c \
 	file_utils.c \
 	free_utils.c \
 	ft_ls.c \
 	lst.c \
 	parser.c \
+	printer.c \
 	reader.c \
 	sort.c \
 	utils.c \
@@ -30,6 +30,7 @@ SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FSANITIZE = -fsanitize=address
 FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
+#FLAGS = -Wall -Wextra -Werror
 CC = clang
 
 NO_COLOR =		\033[38;5;15m
