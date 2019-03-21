@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 00:05:58 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 19:10:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ t_file		*new_file(char *name, struct dirent *dir)
 {
 	t_file *file;
 
-	file = (t_file *)malloc(sizeof(t_file *) * 5);
+	file = (t_file *)malloc(sizeof(t_file *) * 6);
 	file->next = NULL;
+	file->prev = NULL;
 	file->name = name;
 	file->dirent = dir;
 	file->name_size = (int)ft_strlen(name);
@@ -26,9 +27,12 @@ t_file		*new_file(char *name, struct dirent *dir)
 
 void		add_file(t_entry *entry, char *str, struct dirent *dir)
 {
-	t_file	*new;
+	t_file		*new;
+	struct stat	pstat;
 
+	lstat(get_path(entry->name, str), &pstat);
 	new = new_file(str, dir);
+	new->date = get_date(pstat.st_mtime);
 	if (!entry->init)
 	{
 		entry->init = 1;
@@ -37,6 +41,7 @@ void		add_file(t_entry *entry, char *str, struct dirent *dir)
 	}
 	else
 	{
+		new->prev = entry->file;
 		entry->file->next = new;
 		entry->file = new;
 	}
@@ -44,17 +49,25 @@ void		add_file(t_entry *entry, char *str, struct dirent *dir)
 	entry->count = entry->count + 1;
 	if (entry->max < new->name_size)
 		entry->max = new->name_size;
+	entry->totalall = entry->totalall + pstat.st_blocks;
+	entry->total = entry->total + (str[0] == '.' ? 0 : pstat.st_blocks);
+	update_entry_sizes(new, &(entry->size), str, pstat);
 }
 
 t_entry		*new_entry(void)
 {
 	t_entry	*entry;
 
-	entry = (t_entry *)malloc(sizeof(t_entry *) * 6);
+	entry = (t_entry *)malloc(sizeof(t_entry *) * 11);
 	entry->init = 0;
 	entry->max = 0;
 	entry->first = NULL;
 	entry->count = 0;
+	entry->total = 0;
+	entry->totalall = 0;
+	entry->name = NULL;
+	entry->tmp_dir = NULL;
+	entry->recurs = 0;
 	return (entry);
 }
 
@@ -69,7 +82,6 @@ t_opt		*new_opt(void)
 	opt->entries = new_entry();
 	opt->files = new_entry();
 	opt->folders = new_entry();
-	opt->tmp_dir = new_entry();
 	return (opt);
 }
 

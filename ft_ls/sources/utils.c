@@ -1,54 +1,53 @@
-/* *************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/16 17:33:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/18 14:35:17 by malallai         ###   ########.fr       */
+/*   Created: 2019/03/21 15:44:43 by malallai          #+#    #+#             */
+/*   Updated: 2019/03/21 18:32:23 by malallai         ###   ########.fr       */
 /*                                                                            */
-/* *************************************************************************/
+/* ************************************************************************** */
 
 #include <ft_ls.h>
 
-char	get_dtype(int type)
+char	get_dtype(int mode)
 {
-	if (type == DT_BLK)
+	if (S_ISBLK(mode))
 		return ('p');
-	else if (type == DT_CHR)
+	else if (S_ISCHR(mode))
 		return ('c');
-	else if (type == DT_DIR)
+	else if (S_ISDIR(mode))
 		return ('d');
-	else if (type == DT_FIFO)
+	else if (S_ISFIFO(mode))
 		return ('t');
-	else if (type == DT_LNK)
+	else if (S_ISLNK(mode))
 		return ('l');
-	else if (type == DT_REG)
+	else if (S_ISREG(mode))
 		return ('-');
-	else if (type == DT_SOCK)
+	else if (S_ISSOCK(mode))
 		return ('s');
 	return ('-');
 }
 
 char	*get_color(int mode)
 {
-	DEBUG("%d %d %d %d\n", mode, mode & S_IFREG, mode & S_IFDIR, mode & S_IXUSR);
-	if (mode & S_IFLNK)
-		return ("\033[0;35m");
-	else if (mode & S_IFDIR)
-		return ("\033[1;36m");
+	if (S_ISLNK(mode))
+		return (PURPLE);
+	else if (S_ISDIR(mode))
+		return (CYAN);
 	else if (mode & S_IXUSR)
-		return ("\033[0;31m");
-	return ("\033[0m");
+		return (RED);
+	return (WHITE);
 }
 
-char	*get_mode(int mode, unsigned char type)
+char	*get_mode(int mode)
 {
 	char *perm;
 
 	perm = (char *)malloc(sizeof(char *) * 11);
-	perm[0] = get_dtype(type);
+	perm[0] = get_dtype(mode);
 	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
 	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
 	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
@@ -65,4 +64,22 @@ char	*get_mode(int mode, unsigned char type)
 int		has_flag(t_opt *opt, int flag)
 {
 	return ((opt->flag & flag) > 0);
+}
+
+void	update_entry_sizes(t_file *file, t_infosize *i, char *str,\
+		struct stat pstat)
+{
+	int len;
+	struct passwd	*uid;
+	struct group	*gid;
+	
+	len = 0;
+	uid = getpwuid(pstat.st_uid);
+	gid = getgrgid(pstat.st_gid);
+	i->name = (len = (int)ft_strlen(str)) > i->name ? len : i->name;
+	i->blks = (len = ft_len((int)pstat.st_blocks)) > i->blks ? len : i->blks;
+	i->uid = (len = (int)ft_strlen(uid->pw_name)) > i->uid ? len : i->uid;
+	i->gid = (len = (int)ft_strlen(gid->gr_name)) > i->gid ? len : i->gid;
+	i->size = (len = ft_len((int)pstat.st_size)) > i->size ? len : i->size;
+	i->t = (len = (int)ft_strlen(file->date)) > i->t ? len : i->t;	
 }

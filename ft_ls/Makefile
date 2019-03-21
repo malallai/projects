@@ -12,6 +12,7 @@ OBJECTS_FOLDER = ./objects/
 LIBS = libft
 
 SOURCES = \
+	display.c \
 	error.c \
 	file_utils.c \
 	free_utils.c \
@@ -21,6 +22,7 @@ SOURCES = \
 	printer.c \
 	reader.c \
 	sort.c \
+	time.c \
 	utils.c \
 
 OBJECTS = $(SOURCES:.c=.o)

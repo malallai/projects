@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_len.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/18 13:45:42 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 16:45:44 by malallai         ###   ########.fr       */
+/*   Created: 2019/03/21 16:03:39 by malallai          #+#    #+#             */
+/*   Updated: 2019/03/21 16:03:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "libft.h"
 
-void	print_nexist(char *path)
+int	ft_len(int n)
 {
-	ft_putstr("ft_ls: ");
-	ft_putstr(path);
-	ft_putendl(": No such file or directory");
+	int		i;
+
+	i = (n < 0 ? 1 : 0);
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }

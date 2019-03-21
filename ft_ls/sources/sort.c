@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 15:29:16 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/20 22:56:39 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 17:20:41 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ void	swap(t_file *a, t_file *b)
 
 void	quicksort(t_entry *entry, int low, int high)
 {
-	int 	pivot;
-	int 	i;
-	int 	j;
+	int		pivot;
+	int		i;
+	int		j;
 
 	if (low < high)
 	{
