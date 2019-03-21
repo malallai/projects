@@ -1,79 +1,84 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display.c                                          :+:      :+:    :+:   */
+/*   printer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/17 16:13:29 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/17 16:13:29 by malallai         ###   ########.fr       */
+/*   Created: 2019/03/21 15:46:40 by malallai          #+#    #+#             */
+/*   Updated: 2019/03/21 19:23:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-void	print(t_opt *opt, t_file *file, t_infos *infos, int size_max)
+int		print(t_opt *opt, t_entry *entry, t_file *file, t_infos *infos)
 {
 	int i;
 
 	i = 0;
 	if (has_flag(opt, F_DETAIL))
 	{
-		print_details(opt, infos, size_max);
-		return ;
+		print_details(opt, entry, file, infos);
+		return (0);
 	}
 	if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
-		return ;
-		(void)file;
-		ft_putendl(infos->name);
-		get_color(infos->stat.st_mode);
-	/*ft_putstr(get_color(infos->stat.st_mode));
-	ft_putstr(infos->name);
-	while (i++ < 1 + (size_max - file->name_size))
-		ft_putstr(" ");*/
-}
-
-void	print_details(t_opt *opt, t_infos *infos, int size_max)
-{
-	(void)opt;
-	(void)infos;
-	(void)size_max;
-}
-
-void		display_folder(t_opt *opt, t_entry *entry)
-{
-	if (opt->folders->count > 1 || opt->files->count)
 	{
-		ft_putstr(entry->name);
-		ft_putendl(":");
+		free_infos(infos);
+		return (0);
 	}
-	display(opt, entry);
+	ft_putstr(get_color(infos->stat.st_mode));
+	ft_putstr(infos->name);
+	ft_putstr(WHITE);
+	free_infos(infos);
+	return (1);
 }
 
-void		display(t_opt *opt, t_entry *entry)
+void	print_details(t_opt *opt, t_entry *entry, t_file *file, \
+		t_infos *infos)
 {
-	int		index;
-	t_infos	*infos;
-	t_file	*file;
+	char	*tmp;
 
-	if (!entry->count)
-		return ;
-	index = 0;
-	file = entry->first;
-	while (index++ < entry->count)
+	if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
 	{
-		infos = get_infos(file->name, file->dirent);
-		print(opt, file, infos, entry->max);
-		file = file->next;
-		free(infos);
+		free_infos(infos);
+		return ;
 	}
 	ft_putendl("");
+	put(infos->mode, 0, 0, 0);
+	put((tmp = ft_itoa(infos->stat.st_nlink)), 1, 1, entry->size.blks);
+	free(tmp);
+	put(infos->uid->pw_name, 1, 1, entry->size.uid);
+	put(infos->gid->gr_name, 1, 2, entry->size.gid);
+	put((tmp = ft_itoa(infos->stat.st_size)), 1, 2, entry->size.size);
+	free(tmp);
+	put(file->date, 1, 1, entry->size.t);
+	ft_putstr(get_color(infos->stat.st_mode));
+	ft_putchar(' ');
+	put(infos->name, 0, 0, 0);
+	ft_putstr(WHITE);
+	print_lnk(opt, entry, file, infos);	
+	free_infos(infos);
 }
 
-void		print_ls(t_opt *opt)
+void	print_lnk(t_opt *opt, t_entry *entry, t_file *file, \
+		t_infos *infos)
 {
-	display(opt, opt->files);
-	if (opt->files->count && opt->folders->count)
-		ft_putendl("");
-	read_folders(opt);
+	(void)opt;
+	(void)entry;
+	(void)file;
+	if (!S_ISLNK(infos->stat.st_mode))
+		return ;
+	ft_putstr(" -> ");
+	ft_putstr(lsgetlink(infos->full_path));
+}
+
+void	put(char *str, int tab, int spaces, int max)
+{
+	int index;
+
+	index = 0;
+	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
+		ft_putchar(' ');
+	ft_putstr(str);
 }

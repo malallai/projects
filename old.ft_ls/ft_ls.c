@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 14:36:09 by bclerc            #+#    #+#             */
-/*   Updated: 2019/03/16 13:44:03 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 16:45:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ls.h"
+#include <ft_ls.h>
 
 void	add_list(t_file **alst, t_file *new)
 {

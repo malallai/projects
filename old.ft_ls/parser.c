@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 15:03:06 by bclerc            #+#    #+#             */
-/*   Updated: 2019/03/16 13:47:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 16:45:44 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ls.h"
+#include <ft_ls.h>
 
 int		set_flag(char c_flag, t_opt *opt)
 {

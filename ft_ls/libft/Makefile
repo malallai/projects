@@ -24,6 +24,7 @@ SOURCES = \
 	ft_isspace.c \
 	ft_isupper.c \
 	ft_itoa.c \
+	ft_len.c \
 	ft_lstadd.c \
 	ft_lstdel.c \
 	ft_lstdelone.c \

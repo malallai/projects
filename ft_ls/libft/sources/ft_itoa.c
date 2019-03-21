@@ -6,24 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:02:22 by malallai          #+#    #+#             */
-/*   Updated: 2018/11/20 12:49:38 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 16:04:01 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_len(int n)
-{
-	int		i;
-
-	i = (n < 0 ? 1 : 0);
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
 
 char		*ft_itoa(int n)
 {
