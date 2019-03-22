@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 19:23:47 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 15:38:03 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define F_ALL 4
 # define F_REVERSE 8
 # define F_TIME 16
+# define F_BLOCKS 32
 
 # define WHITE (char *)"\033[0m"
 # define CYAN (char *)"\033[1;36m"
@@ -45,7 +46,8 @@
 typedef struct			s_infosize
 {
 	int					name;
-	int					blks;
+	int					blocks;
+	int					links;
 	int					uid;
 	int					gid;
 	int					size;
@@ -71,6 +73,7 @@ typedef struct			s_file
 {
 	char				*name;
 	char				*date;
+	time_t				millis;
 	struct s_file		*next;
 	struct s_file		*prev;
 	struct dirent		*dirent;
@@ -100,6 +103,11 @@ typedef struct			s_infos
 void					display_folder(t_opt *opt, t_entry *entry);
 void					display(t_opt *opt, t_entry *entry);
 void					print_ls(t_opt *opt);
+
+void					split_entries(t_opt *opt);
+void					max_size(t_opt *opt);
+void					update_entry_sizes(t_file *file, t_infosize *i, \
+						char *str, struct stat pstat);
 
 void					print_nexist(char *path);
 
@@ -132,6 +140,7 @@ void					print_details(t_opt *opt, t_entry *entry, \
 						t_file *file, t_infos *infos);
 void					print_lnk(t_opt *opt, t_entry *entry, \
 						t_file *file, t_infos *infos);
+void					put_nbr(int nbr, int tab, int spaces, int max);
 void					put(char *str, int tab, int spaces, int max);
 
 t_infos					*get_infos(char *parent_path, char *path, \
@@ -140,12 +149,13 @@ void					read_folders(t_opt *opt, t_entry *entry, int ln);
 void					add_for_recurs(t_entry *entry, t_file *file, \
 						t_file *new);
 void					recurs(t_opt *opt, t_entry *entry);
-t_entry					*check_recurs(t_entry *entry);
+t_entry					*check_recurs(t_opt *opt, t_entry *entry);
 
-void					split_entries(t_opt *opt);
-void					max_size(t_opt *opt);
 void					swap(t_file *a, t_file *b);
-void					quicksort(t_entry *entry, int low, int high);
+void					sort(t_opt *opt, t_entry *entry, int low, int high);
+void					sort_ascii(t_entry *entry, int low, int high);
+void					sort_time(t_entry *entry, int low, int high);
+int						compare(int t, t_file *f1, t_file *f2, int i);
 
 char					*get_date(time_t date);
 
@@ -153,7 +163,5 @@ char					get_dtype(int type);
 char					*get_color(int mode);
 char					*get_mode(int mode);
 int						has_flag(t_opt *opt, int flag);
-void					update_entry_sizes(t_file *file, t_infosize *i, \
-						char *str, struct stat pstat);
 
 #endif

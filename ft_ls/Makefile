@@ -13,6 +13,7 @@ LIBS = libft
 
 SOURCES = \
 	display.c \
+	entries.c \
 	error.c \
 	file_utils.c \
 	free_utils.c \
