@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 19:31:08 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 14:33:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void		read_folders(t_opt *opt, t_entry *entry, int ln)
 			entry->tmp_dir->count = 0;
 			while ((sd = readdir(dir)))
 				add_file(entry->tmp_dir, sd->d_name, sd);
-			quicksort(entry->tmp_dir, 0, entry->tmp_dir->count - 1);
+			sort(opt, entry->tmp_dir, 0, entry->tmp_dir->count - 1);
 			ft_putstr(ln ? "\n" : "");
 			recurs(opt, entry);
 			closedir(dir);
@@ -67,33 +67,18 @@ void		recurs(t_opt *opt, t_entry *entry)
 	t_entry	*tmp;
 
 	tmp = NULL;
-	if (has_flag(opt, F_REVERSE))
-	{
-		if (has_flag(opt, F_RECURS))
+	display_folder(opt, entry->tmp_dir);
+	if (has_flag(opt, F_RECURS))
+	{	
+		if ((tmp = check_recurs(opt, entry)))
 		{
-			if ((tmp = check_recurs(entry)))
-			{
-				read_folders(opt, tmp, 1);
-				free_entries(tmp);
-			}
+			read_folders(opt, tmp, 1);
+			free_entries(tmp);
 		}
-		display_folder(opt, entry->tmp_dir);
 	}
-	else
-	{
-		display_folder(opt, entry->tmp_dir);
-		if (has_flag(opt, F_RECURS))
-		{	
-			if ((tmp = check_recurs(entry)))
-			{
-				read_folders(opt, tmp, 1);
-				free_entries(tmp);
-			}
-		}
-	}	
 }
 
-t_entry		*check_recurs(t_entry *folder)
+t_entry		*check_recurs(t_opt *opt, t_entry *folder)
 {
 	int		index;
 	t_file	*file;
@@ -106,18 +91,16 @@ t_entry		*check_recurs(t_entry *folder)
 	tmp->recurs = 1;
 	while (file && index++ < folder->tmp_dir->count)
 	{
-		DEBUG("Test : %s %d\n", file->name, is_folder(file->name));		
-		if (is_folder(file->name) && !(ft_strequ(file->name, ".") \
+		strtmp = ft_strdup(folder->tmp_dir->name);
+		strtmp = ft_strjoin(strtmp, "/");
+		strtmp = ft_strjoin(strtmp, file->name);
+		if (is_folder(strtmp) && !(ft_strequ(file->name, ".") \
 			|| ft_strequ(file->name, "..")))
-		{
-			strtmp = ft_strdup(folder->tmp_dir->name);
-			strtmp = ft_strjoin(strtmp, "/");
-			add_file(tmp, ft_strjoin(strtmp, file->name), NULL);
-		}
+			add_file(tmp, strtmp, NULL);
 		file = file->next;
 	}
 	if (tmp->count)
-		quicksort(tmp, 0, tmp->count - 1);
+		sort(opt, tmp, 0, tmp->count - 1);
 	else
 		return (NULL);
 	return (tmp);

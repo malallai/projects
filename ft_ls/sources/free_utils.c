@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 16:50:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 18:16:03 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 11:54:35 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ void	free_file(t_file *file)
 
 void	free_infos(t_infos *infos)
 {
-	free(infos->mode);
+	if (!infos)
+		return ;
+	if (infos->mode)
+		free(infos->mode);
 	free(infos);
 }
 

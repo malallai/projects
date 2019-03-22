@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 19:10:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 15:09:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ t_file		*new_file(char *name, struct dirent *dir)
 {
 	t_file *file;
 
-	file = (t_file *)malloc(sizeof(t_file *) * 6);
+	file = (t_file *)malloc(sizeof(t_file *) * 8);
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = name;
 	file->dirent = dir;
+	file->date = NULL;
+	file->millis = 0;
 	file->name_size = (int)ft_strlen(name);
 	return (file);
 }
@@ -32,7 +34,8 @@ void		add_file(t_entry *entry, char *str, struct dirent *dir)
 
 	lstat(get_path(entry->name, str), &pstat);
 	new = new_file(str, dir);
-	new->date = get_date(pstat.st_mtime);
+	new->id = entry->count;
+	new->date = get_date((new->millis = pstat.st_mtime));
 	if (!entry->init)
 	{
 		entry->init = 1;
@@ -45,7 +48,6 @@ void		add_file(t_entry *entry, char *str, struct dirent *dir)
 		entry->file->next = new;
 		entry->file = new;
 	}
-	new->id = entry->count;
 	entry->count = entry->count + 1;
 	if (entry->max < new->name_size)
 		entry->max = new->name_size;
@@ -58,7 +60,7 @@ t_entry		*new_entry(void)
 {
 	t_entry	*entry;
 
-	entry = (t_entry *)malloc(sizeof(t_entry *) * 11);
+	entry = (t_entry *)malloc(sizeof(t_entry *) * (sizeof(t_infosize) + 11));
 	entry->init = 0;
 	entry->max = 0;
 	entry->first = NULL;
@@ -87,7 +89,7 @@ t_opt		*new_opt(void)
 
 t_file		*get_file(t_file *first, int id)
 {
-	if (!first)
+	if (!first || id < 0)
 		return (NULL);
 	if (first->id == id)
 		return (first);
