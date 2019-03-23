@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 13:50:27 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 16:23:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,6 @@ int						is_regular_file(const char *path);
 int						is_folder(const char *path);
 int						exist(const char *path);
 char					*lsgetlink(char *path);
-char					*get_path(char *parent, char *file);
 
 void					free_entries(t_entry *entry);
 void					free_file(t_file *file);
@@ -138,6 +137,11 @@ int						set_flag(char c_flag, t_opt *opt);
 int						parse(char **argv, t_opt *opt);
 void					set_opt_folders(t_opt *opt, int argc, \
 						char **argv, int index);
+
+int						is_parent_path(char *str);
+char					*join_path(char *str1, char *str2);
+char					*get_path(char *parent, char *file);
+
 
 int						print(t_opt *opt, t_entry *entry, t_file *file, \
 						t_infos *infos);
