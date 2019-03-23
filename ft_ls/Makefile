@@ -20,6 +20,7 @@ SOURCES = \
 	lst.c \
 	p_exit.c \
 	parser.c \
+	paths.c \
 	printer.c \
 	reader.c \
 	sort.c \
@@ -32,8 +33,8 @@ OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
 SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FSANITIZE = -fsanitize=address
-FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
-#FLAGS = -Wall -Wextra -Werror
+#FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
+FLAGS = -Wall -Wextra -Werror
 CC = clang
 
 NO_COLOR =		\033[38;5;15m
