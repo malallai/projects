@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 13:56:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 13:50:17 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:45:45 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		display(t_opt *opt, t_entry *entry)
 	file = has_flag(opt, F_REVERSE) ? entry->file : entry->first;
 	while (index++ < entry->count && file)
 	{
-		tmp = print(opt, entry, file, (infos = get_infos(entry->name, \
+		tmp = print(opt, entry, file, (infos = get_infos(file, \
 			file->name, file->dirent)));
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
 		if (file && tmp && can_print_next(opt, file))
@@ -60,7 +60,5 @@ int			can_print_next(t_opt *opt, t_file *file)
 void		print_ls(t_opt *opt)
 {
 	display(opt, opt->files);
-	if (opt->files->count && opt->folders->count)
-		ft_putendl("");
 	read_folders(opt, opt->folders, 0);
 }

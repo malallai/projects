@@ -14,7 +14,7 @@
 
 int		is_parent_path(char *str)
 {
-	return (ft_strequ(str, ".") || ft_strequ(str, ".."));
+	return (str[0] == '.' || (str[0] == '.' && str[1] == '.'));
 }
 
 char	*join_path(char *str1, char *str2)
@@ -28,19 +28,4 @@ char	*join_path(char *str1, char *str2)
 	tmp = ft_strjoin(tmp2, str2);
 	free(tmp2);
 	return (tmp);
-}
-
-char	*get_path(char *parent, char *file)
-{
-	char *tmp;
-
-	if (!parent)
-		return (file);
-	if (parent[ft_strlen(parent) - 1] == '/')
-	{
-		tmp = ft_strjoin(parent, file);
-		return (tmp);
-	}
-	tmp = ft_strjoin(parent, "/");
-	return (ft_strcat(tmp, file));
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:32:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 13:39:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:39:42 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int			parse(char **argv, t_opt *opt)
 
 void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
 {
-	int argv_index;
+	int		argv_index;
 
 	argv_index = index;
 	if (argv_index == argc)
@@ -56,7 +56,7 @@ void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
 	while (argv_index < argc)
 	{
 		if (exist(argv[argv_index]))
-			add_file(opt->entries, ft_strdup(argv[argv_index]), NULL);
+			add_file(opt->entries, argv[argv_index], NULL);
 		else
 			print_nexist(opt, argv[argv_index]);
 		argv_index++;

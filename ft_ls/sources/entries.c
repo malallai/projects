@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/22 14:27:44 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 14:27:44 by malallai         ###   ########.fr       */
+/*   Created: 2019/03/23 18:45:24 by malallai          #+#    #+#             */
+/*   Updated: 2019/03/23 18:45:24 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,7 @@ void	max_size(t_opt *opt)
 	}
 }
 
-void	update_entry_sizes(t_file *file, t_infosize *i, char *str,\
-		struct stat pstat)
+void	update_entry_sizes(t_file *file, t_infosize *i, struct stat pstat)
 {
 	int len;
 	struct passwd	*uid;
@@ -63,11 +62,10 @@ void	update_entry_sizes(t_file *file, t_infosize *i, char *str,\
 	len = 0;
 	uid = getpwuid(pstat.st_uid);
 	gid = getgrgid(pstat.st_gid);
-	i->name = (len = (int)ft_strlen(str)) > i->name ? len : i->name;
 	i->blocks = (len = ft_len((int)pstat.st_blocks)) > i->blocks ? len : i->blocks;
 	i->links = (len = ft_len((int)pstat.st_nlink)) > i->links ? len : i->links;
 	i->uid = (len = (int)ft_strlen(uid->pw_name)) > i->uid ? len : i->uid;
 	i->gid = (len = (int)ft_strlen(gid->gr_name)) > i->gid ? len : i->gid;
 	i->size = (len = ft_len((int)pstat.st_size)) > i->size ? len : i->size;
-	i->t = (len = (int)ft_strlen(file->date)) > i->t ? len : i->t;	
+	i->t = (len = (int)ft_strlen(file->date)) > i->t ? len : i->t;
 }

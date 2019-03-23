@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 15:29:16 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 15:40:23 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 16:55:29 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,31 @@
 
 void	swap(t_file *a, t_file *b)
 {
-	char			*name_tmp;
+	char			*strtmp;
 	struct dirent	*dirent_tmp;
 	int				size_tmp;
 	time_t			millis_tmp;
-	char			*date_tmp;
 
 	if (!a || !b)
 		return ;
-	name_tmp = a->name;
-	dirent_tmp = a->dirent;
-	size_tmp = a->name_size;
-	millis_tmp = a->millis;
-	date_tmp = a->date;
+	strtmp = a->name;
 	a->name = b->name;
-	a->dirent = b->dirent;
-	a->name_size = b->name_size;
-	a->millis = b->millis;
+	b->name = strtmp;
+	strtmp = a->namesl;
+	a->namesl = b->namesl;
+	b->namesl = strtmp;
+	strtmp = a->date;
 	a->date = b->date;
-	b->name = name_tmp;
+	b->date = strtmp;
+	dirent_tmp = a->dirent;
+	a->dirent = b->dirent;
 	b->dirent = dirent_tmp;
+	size_tmp = a->name_size;
+	a->name_size = b->name_size;
 	b->name_size = size_tmp;
+	millis_tmp = a->millis;
+	a->millis = b->millis;
 	b->millis = millis_tmp;
-	b->date = date_tmp;
 }
 
 void	sort(t_opt *opt, t_entry *entry, int low, int high)
