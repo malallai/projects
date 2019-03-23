@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 16:50:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 11:54:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 16:05:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	free_entries(t_entry *entry)
 {
+	if (!entry)
+		return ;
 	free_file(entry->first);
-	if (entry->tmp_dir)
-		free_entries(entry->tmp_dir);
+	free_entries(entry->tmp_dir);
 	free(entry);
 }
 
@@ -24,6 +25,8 @@ void	free_file(t_file *file)
 {
 	if (!file)
 		return ;
+	if (file->date)
+		free(file->date);
 	if (file->next)
 		free_file(file->next);
 	free(file);
@@ -33,6 +36,8 @@ void	free_infos(t_infos *infos)
 {
 	if (!infos)
 		return ;
+	if (infos->full_path)
+		free(infos->full_path);
 	if (infos->mode)
 		free(infos->mode);
 	free(infos);

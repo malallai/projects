@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:42:50 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/21 17:20:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 16:22:39 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,4 @@ char	*lsgetlink(char *path)
 	if ((link_len = readlink(path, buf, 1024)))
 		return (buf);
 	return (NULL);
-}
-
-char	*get_path(char *parent, char *file)
-{
-	char *tmp;
-
-	if (!parent)
-		return (file);
-	if (parent[ft_strlen(parent) - 1] == '/')
-	{
-		tmp = ft_strjoin(parent, file);
-		return (tmp);
-	}
-	tmp = ft_strjoin(parent, "/");
-	return (ft_strcat(tmp, file));
 }
