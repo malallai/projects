@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 14:33:07 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 16:20:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void		read_folders(t_opt *opt, t_entry *entry, int ln)
 	index = 0;
 	while (index++ < entry->count)
 	{
+		free_entries(entry->tmp_dir);
 		entry->tmp_dir = new_entry();
 		entry->tmp_dir->recurs = entry->recurs;
 		entry->tmp_dir->name = folder->name;
@@ -91,17 +92,19 @@ t_entry		*check_recurs(t_opt *opt, t_entry *folder)
 	tmp->recurs = 1;
 	while (file && index++ < folder->tmp_dir->count)
 	{
-		strtmp = ft_strdup(folder->tmp_dir->name);
-		strtmp = ft_strjoin(strtmp, "/");
-		strtmp = ft_strjoin(strtmp, file->name);
-		if (is_folder(strtmp) && !(ft_strequ(file->name, ".") \
-			|| ft_strequ(file->name, "..")))
+		strtmp = join_path(folder->tmp_dir->name, file->name);
+		if (is_folder(strtmp) && !(is_parent_path(file->name)))
 			add_file(tmp, strtmp, NULL);
+		else
+			free(strtmp);
 		file = file->next;
 	}
 	if (tmp->count)
 		sort(opt, tmp, 0, tmp->count - 1);
 	else
+	{
+		free_entries(tmp);
 		return (NULL);
+	}
 	return (tmp);
 }

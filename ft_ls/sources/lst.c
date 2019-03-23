@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 15:09:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/22 16:00:03 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,15 @@ void		add_file(t_entry *entry, char *str, struct dirent *dir)
 {
 	t_file		*new;
 	struct stat	pstat;
+	char		*tmp;
 
-	lstat(get_path(entry->name, str), &pstat);
+	lstat((tmp = get_path(entry->name, str)), &pstat);
+	free(tmp);
 	new = new_file(str, dir);
 	new->id = entry->count;
 	new->date = get_date((new->millis = pstat.st_mtime));
-	if (!entry->init)
-	{
-		entry->init = 1;
-		entry->first = new;
-		entry->file = entry->first;
-	}
+	if (!entry->init++)
+		entry->file = (entry->first = new);
 	else
 	{
 		new->prev = entry->file;
