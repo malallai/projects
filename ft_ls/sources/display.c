@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 13:56:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 14:34:15 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:50:17 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,18 @@ void		display(t_opt *opt, t_entry *entry)
 		tmp = print(opt, entry, file, (infos = get_infos(entry->name, \
 			file->name, file->dirent)));
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
-		if (file && tmp)
+		if (file && tmp && can_print_next(opt, file))
 			ft_putchar('\n');
 		free_infos(infos);		
 	}
 	ft_putchar('\n');
+}
+
+int			can_print_next(t_opt *opt, t_file *file)
+{
+	if (!has_flag(opt, F_ALL) && file->name[0] == '.')
+		return (0);
+	return (1);
 }
 
 void		print_ls(t_opt *opt)

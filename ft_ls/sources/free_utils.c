@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 16:50:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 11:54:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:37:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	free_opt(t_opt *opt)
 	free_entries(opt->entries);
 	free_entries(opt->files);
 	free_entries(opt->folders);
+	free(opt->flags);
 	free(opt);
 }
