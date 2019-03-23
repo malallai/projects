@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 14:31:54 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:44:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ int		main(int argc, char **argv)
 	print_ls(opt);
 	if (argc == 1)
 		free(opt->entries->first->name);
-	free_opt(opt);
-	return (0);
+	return (exit_ftls(opt));
 }

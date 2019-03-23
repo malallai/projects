@@ -14,11 +14,11 @@ LIBS = libft
 SOURCES = \
 	display.c \
 	entries.c \
-	error.c \
 	file_utils.c \
 	free_utils.c \
 	ft_ls.c \
 	lst.c \
+	p_exit.c \
 	parser.c \
 	printer.c \
 	reader.c \

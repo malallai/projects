@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 15:09:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:43:31 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,13 @@ t_opt		*new_opt(void)
 	int		index;
 
 	index = 0;
-	opt = (t_opt *)malloc(sizeof(t_opt *) * 5);
+	opt = (t_opt *)malloc(sizeof(t_opt *) * 6);
 	opt->flag = 0;
 	opt->entries = new_entry();
 	opt->files = new_entry();
 	opt->folders = new_entry();
+	opt->error = 0;
+	opt->flags = ft_strdup("lRarts");
 	return (opt);
 }
 

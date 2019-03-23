@@ -21,12 +21,6 @@ void	split_entries(t_opt *opt)
 	file = opt->entries->first;
 	while (index++ < opt->entries->count)
 	{
-		if (!exist(file->name))
-		{
-			print_nexist(file->name);
-			file = file->next;
-			continue ;
-		}
 		if (is_regular_file(file->name))
 			add_file(opt->files, file->name, NULL);
 		else if (is_folder(file->name))

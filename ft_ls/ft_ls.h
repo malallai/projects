@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 15:38:03 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:50:27 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ typedef struct			s_file
 typedef struct			s_opt
 {
 	int					flag;
+	int					error;
+	char				*flags;
 	struct s_entry		*entries;
 	struct s_entry		*files;
 	struct s_entry		*folders;
@@ -102,14 +104,13 @@ typedef struct			s_infos
 
 void					display_folder(t_opt *opt, t_entry *entry);
 void					display(t_opt *opt, t_entry *entry);
+int						can_print_next(t_opt *opt, t_file *file);
 void					print_ls(t_opt *opt);
 
 void					split_entries(t_opt *opt);
 void					max_size(t_opt *opt);
 void					update_entry_sizes(t_file *file, t_infosize *i, \
 						char *str, struct stat pstat);
-
-void					print_nexist(char *path);
 
 int						is_regular_file(const char *path);
 int						is_folder(const char *path);
@@ -128,6 +129,10 @@ void					add_file(t_entry *entry, char *str, \
 t_entry					*new_entry(void);
 t_opt					*new_opt(void);
 t_file					*get_file(t_file *first, int id);
+
+int						bad_option(t_opt *opt, char option);
+void					print_nexist(t_opt *opt, char *path);
+int						exit_ftls(t_opt *opt);
 
 int						set_flag(char c_flag, t_opt *opt);
 int						parse(char **argv, t_opt *opt);
