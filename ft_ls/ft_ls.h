@@ -73,7 +73,6 @@ typedef struct			s_entry
 typedef struct			s_file
 {
 	char				*name;
-	char				*namesl;
 	char				*path;
 	struct stat			stat;
 	char				*date;
@@ -145,7 +144,6 @@ void					set_opt_folders(t_opt *opt, int argc, \
 int						is_parent_path(char *str);
 char					*join_path(char *str1, char *str2);
 
-
 int						print(t_opt *opt, t_entry *entry, t_file *file, \
 						t_infos *infos);
 void					print_details(t_opt *opt, t_entry *entry, \
@@ -162,11 +160,14 @@ void					add_for_recurs(t_entry *entry, t_file *file, \
 void					recurs(t_opt *opt, t_entry *entry);
 t_entry					*check_recurs(t_opt *opt, t_entry *entry);
 
-void					swap(t_file *a, t_file *b);
+//void					swap(t_file *a, t_file *b);
 void					sort(t_opt *opt, t_entry *entry, int low, int high);
 void					sort_ascii(t_entry *entry, int low, int high);
 void					sort_time(t_entry *entry, int low, int high);
 int						compare(int t, t_file *f1, t_file *f2, int i);
+
+void    				swap(t_file *a, t_file *b);
+void    				swap_item(t_file **a, t_file *cpy);
 
 char					*get_date(time_t date);
 

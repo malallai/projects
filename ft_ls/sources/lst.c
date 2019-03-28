@@ -23,11 +23,10 @@ t_file		*new_file(char *entry_name, char *name, struct dirent *dir)
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = name;
-	if (name[ft_strlen(name) - 1] == '/' || !is_folder(name))
+	if (name[ft_strlen(name) - 1] == '/' || is_regular_file(name))
 		tmp = ft_strdup(name);
 	else
 		tmp = ft_strjoin(name, "/");
-	file->namesl = tmp;
 	file->path = ft_strjoin(entry_name ? \
 		entry_name : "", (tmp = ft_strdup(tmp)));
 	file->dirent = dir;

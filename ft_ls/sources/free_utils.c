@@ -29,8 +29,6 @@ void	free_file(t_file *file)
 
 	if (file->path)
 		free(file->path);
-	if (file->namesl)
-		free(file->namesl);
 	if (file->date)
 		free(file->date);
 	if (file->next)
