@@ -48,7 +48,7 @@ int			parse(char **argv, t_opt *opt)
 
 void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
 {
-	int argv_index;
+	int		argv_index;
 
 	argv_index = index;
 	if (argv_index == argc)
@@ -56,7 +56,7 @@ void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
 	while (argv_index < argc)
 	{
 		if (exist(argv[argv_index]))
-			add_file(opt->entries, ft_strdup(argv[argv_index]), NULL);
+			add_file(opt->entries, argv[argv_index], NULL);
 		else
 			print_nexist(opt, argv[argv_index]);
 		argv_index++;

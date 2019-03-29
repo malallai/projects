@@ -12,33 +12,6 @@
 
 #include <ft_ls.h>
 
-void	swap(t_file *a, t_file *b)
-{
-	char			*name_tmp;
-	struct dirent	*dirent_tmp;
-	int				size_tmp;
-	time_t			millis_tmp;
-	char			*date_tmp;
-
-	if (!a || !b)
-		return ;
-	name_tmp = a->name;
-	dirent_tmp = a->dirent;
-	size_tmp = a->name_size;
-	millis_tmp = a->millis;
-	date_tmp = a->date;
-	a->name = b->name;
-	a->dirent = b->dirent;
-	a->name_size = b->name_size;
-	a->millis = b->millis;
-	a->date = b->date;
-	b->name = name_tmp;
-	b->dirent = dirent_tmp;
-	b->name_size = size_tmp;
-	b->millis = millis_tmp;
-	b->date = date_tmp;
-}
-
 void	sort(t_opt *opt, t_entry *entry, int low, int high)
 {
 	if (has_flag(opt, F_TIME))
