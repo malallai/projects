@@ -45,7 +45,6 @@
 
 typedef struct			s_infosize
 {
-	int					name;
 	int					blocks;
 	int					links;
 	int					uid;
@@ -64,7 +63,7 @@ typedef struct			s_entry
 	char				*name;
 	int					totalall;
 	int					total;
-	t_infosize			size;
+	t_infosize			*size;
 	struct s_entry		*tmp_dir;
 	int					recurs;
 }						t_entry;
@@ -72,6 +71,8 @@ typedef struct			s_entry
 typedef struct			s_file
 {
 	char				*name;
+	struct stat			stat;
+	char				*path;
 	char				*date;
 	time_t				millis;
 	struct s_file		*next;
@@ -94,7 +95,6 @@ typedef struct			s_opt
 typedef struct			s_infos
 {
 	char				*name;
-	char				*full_path;
 	char				*mode;
 	struct stat			stat;
 	struct dirent		*dirent;
@@ -110,24 +110,25 @@ void					print_ls(t_opt *opt);
 void					split_entries(t_opt *opt);
 void					max_size(t_opt *opt);
 void					update_entry_sizes(t_file *file, t_infosize *i, \
-						char *str, struct stat pstat);
+						struct stat pstat);
 
 int						is_regular_file(const char *path);
 int						is_folder(const char *path);
 int						exist(const char *path);
 char					*lsgetlink(char *path);
+t_file					*get_file(t_file *first, int id);
 
 void					free_entries(t_entry *entry);
 void					free_file(t_file *file);
 void					free_infos(t_infos *infos);
 void					free_opt(t_opt *opt);
 
-t_file					*new_file(char *name, struct dirent *dir);
+t_file					*new_file(char *e, char *name, struct dirent *dir);
 void					add_file(t_entry *entry, char *str, \
 						struct dirent *dir);
 t_entry					*new_entry(void);
 t_opt					*new_opt(void);
-t_file					*get_file(t_file *first, int id);
+t_infosize				*new_size(void);
 
 int						bad_option(t_opt *opt, char option);
 void					print_nexist(t_opt *opt, char *path);
@@ -139,6 +140,7 @@ void					set_opt_folders(t_opt *opt, int argc, \
 						char **argv, int index);
 
 int						is_parent_path(char *str);
+int						to_folder(char *name, char *entryname);
 char					*join_path(char *str1, char *str2);
 char					*get_path(char *parent, char *file);
 
@@ -152,19 +154,20 @@ void					print_lnk(t_opt *opt, t_entry *entry, \
 void					put_nbr(int nbr, int tab, int spaces, int max);
 void					put(char *str, int tab, int spaces, int max);
 
-t_infos					*get_infos(char *parent_path, char *path, \
-						struct dirent *dirent);
+t_infos					*get_infos(t_file *f, char *str, struct dirent *dirent);
 void					read_folders(t_opt *opt, t_entry *entry, int ln);
 void					add_for_recurs(t_entry *entry, t_file *file, \
 						t_file *new);
 void					recurs(t_opt *opt, t_entry *entry);
 t_entry					*check_recurs(t_opt *opt, t_entry *entry);
 
-void					swap(t_file *a, t_file *b);
 void					sort(t_opt *opt, t_entry *entry, int low, int high);
 void					sort_ascii(t_entry *entry, int low, int high);
 void					sort_time(t_entry *entry, int low, int high);
 int						compare(int t, t_file *f1, t_file *f2, int i);
+
+void    				swap(t_file *a, t_file *b);
+void    				swap_item(t_file **a, t_file *cpy);
 
 char					*get_date(time_t date);
 

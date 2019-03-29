@@ -12,22 +12,18 @@
 
 #include <ft_ls.h>
 
-t_infos		*get_infos(char *parent_path, char *path, struct dirent *dirent)
+t_infos		*get_infos(t_file *file, char *name, struct dirent *dirent)
 {
 	t_infos			*infos;
-	struct stat		path_stat;
 	struct passwd	*uid;
 	struct group	*gid;
-	char			*tmp;
 
-	lstat((tmp = get_path(parent_path, path)), &path_stat);
-	uid = getpwuid(path_stat.st_uid);
-	gid = getgrgid(path_stat.st_gid);
+	uid = getpwuid(file->stat.st_uid);
+	gid = getgrgid(file->stat.st_gid);
 	infos = (t_infos *)malloc(sizeof(t_infos *) * sizeof(struct stat));
-	infos->name = path;
-	infos->full_path = tmp;
-	infos->mode = get_mode(path_stat.st_mode);
-	infos->stat = path_stat;
+	infos->name = name;
+	infos->mode = get_mode(file->stat.st_mode);
+	infos->stat = file->stat;
 	infos->dirent = dirent;
 	infos->uid = uid;
 	infos->gid = gid;
@@ -48,7 +44,7 @@ void		read_folders(t_opt *opt, t_entry *entry, int ln)
 		free_entries(entry->tmp_dir);
 		entry->tmp_dir = new_entry();
 		entry->tmp_dir->recurs = entry->recurs;
-		entry->tmp_dir->name = folder->name;
+		entry->tmp_dir->name = folder->path;
 		if ((dir = opendir(folder->name)))
 		{
 			entry->tmp_dir->count = 0;

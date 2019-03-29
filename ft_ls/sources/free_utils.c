@@ -36,8 +36,6 @@ void	free_infos(t_infos *infos)
 {
 	if (!infos)
 		return ;
-	if (infos->full_path)
-		free(infos->full_path);
 	if (infos->mode)
 		free(infos->mode);
 	free(infos);
