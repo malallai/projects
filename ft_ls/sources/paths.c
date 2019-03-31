@@ -56,18 +56,3 @@ char	*join_path(char *str1, char *str2)
 	free(tmp2);
 	return (tmp);
 }
-
-char	*get_path(char *parent, char *file)
-{
-	char *tmp;
-
-	if (!parent)
-		return (file);
-	if (parent[ft_strlen(parent) - 1] == '/')
-	{
-		tmp = ft_strjoin(parent, file);
-		return (tmp);
-	}
-	tmp = ft_strjoin(parent, "/");
-	return (ft_strcat(tmp, file));
-}
