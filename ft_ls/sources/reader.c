@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 17:46:34 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 16:20:37 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:47:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void		read_folders(t_opt *opt, t_entry *entry, int ln)
 		entry->tmp_dir = new_entry();
 		entry->tmp_dir->recurs = entry->recurs;
 		entry->tmp_dir->name = folder->path;
-		if ((dir = opendir(folder->name)))
+		if ((dir = opendir(folder->path)))
 		{
 			entry->tmp_dir->count = 0;
 			while ((sd = readdir(dir)))
@@ -89,7 +89,7 @@ t_entry		*check_recurs(t_opt *opt, t_entry *folder)
 	while (file && index++ < folder->tmp_dir->count)
 	{
 		strtmp = join_path(folder->tmp_dir->name, file->name);
-		if (is_folder(strtmp) && !(is_parent_path(file->name)))
+		if (is_folder(strtmp) && !(is_parent_path(file->path)))
 			add_file(tmp, strtmp, NULL);
 		else
 			free(strtmp);

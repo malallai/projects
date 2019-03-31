@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 16:00:03 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:54:03 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ t_entry		*new_entry(void)
 {
 	t_entry	*entry;
 
-	entry = (t_entry *)malloc(sizeof(t_entry *) * (sizeof(t_infosize) + 11));
+	entry = (t_entry *)malloc(sizeof(t_entry *) * 11);
 	entry->init = 0;
 	entry->max = 0;
 	entry->first = NULL;

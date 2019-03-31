@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/22 16:23:39 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:53:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@
 # define F_DIR (char)'d'
 # define F_LINK (char)'l'
 
+# define fwree(m)
+
 # define DEBUG printf
 
 typedef struct			s_infosize
@@ -71,8 +73,8 @@ typedef struct			s_entry
 typedef struct			s_file
 {
 	char				*name;
-	struct stat			stat;
 	char				*path;
+	struct stat			stat;
 	char				*date;
 	time_t				millis;
 	struct s_file		*next;
@@ -142,8 +144,6 @@ void					set_opt_folders(t_opt *opt, int argc, \
 int						is_parent_path(char *str);
 int						to_folder(char *name, char *entryname);
 char					*join_path(char *str1, char *str2);
-char					*get_path(char *parent, char *file);
-
 
 int						print(t_opt *opt, t_entry *entry, t_file *file, \
 						t_infos *infos);
