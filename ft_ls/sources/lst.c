@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 14:58:02 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:33:37 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ t_file		*new_file(int id, char *name, char *parent)
 	t_file		*file;
 	char		*tmp;
 
-	file = malloc(sizeof(t_file *) * 6);
+	file = malloc(sizeof(t_file *) * 7);
 	file->id = id;
+	file->first = 0;
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = ft_strdup(name);
@@ -77,4 +78,18 @@ t_infosize	*get_sizes(t_infos *info, struct stat pstat)
 	len = (int)ft_strlen(info->date);
 	isize->date = len > isize->date ? len : isize->date;
 	return (isize);
+}
+
+t_folder	*new_folder(t_file *file)
+{
+	t_folder	*folder;
+
+	folder = malloc(sizeof(t_folder *) * 6);
+	folder->folder = file;
+	folder->file = NULL;
+	folder->first = NULL;
+	folder->size = 0;
+	folder->size_all = 0;
+	folder->count = 0;
+	return (folder);
 }
