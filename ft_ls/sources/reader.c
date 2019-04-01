@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 17:50:36 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 20:02:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-void	read_folder(t_opt *opt, t_folder *folder)
+void	read_folder(t_opt *opt, t_folder *folder, int name)
 {
 	int				index;
 	DIR				*dir;
@@ -28,8 +28,9 @@ void	read_folder(t_opt *opt, t_folder *folder)
 			update_read_folder(folder, tmp, index++);
 		}
 		closedir(dir);
-		sort(opt, folder->first, 0, index);
-		ls(opt, has_flag(opt, F_REVERSE) ? folder->file : folder->first);
+		folder->count = index;
+		sort(opt, folder, 0, folder->count);
+		print_folder(opt, folder, name);
 	}
 }
 
@@ -48,39 +49,18 @@ void	update_read_folder(t_folder *folder, t_file *tmp, int index)
 		folder->file->infos->file_stat.st_blocks);
 }
 
-int		read_ls(t_opt *opt, t_file *file, t_file *tmp, int folders)
+void	ls(t_opt *opt, t_file *file, int f)
 {
-	if (!tmp)
-		return (folders);
-	if (is_folder(tmp->path))
-	{
-		if (folders == 2)
-			read_folder(opt, tmp);
-		else
-		{
-			if (!tmp->first)
-				print_file(opt, tmp);
-			folders = 1;
-		}
-	}
-	else if (folders <= 1)
-		print_file(opt, tmp);
-	return (read_ls(opt, file, has_flag(opt, F_REVERSE) \
-		? tmp->prev : tmp->next, folders));
-}
-
-void	first_ls(t_opt *opt, int f)
-{
-	t_file	*file;
-
-	file = has_flag(opt, F_REVERSE) ? opt->main->file : opt->main->first;
 	if (f)
 	{
 		while (file)
 		{
 			if (is_folder(file->path))
-				read_folder(opt, new_folder(file));
+				read_folder(opt, new_folder(file), file->prev || file->next);
 			file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
+			if (file && !has_flag(opt, F_ALL) && is_parent_path(file->name))
+				file = NULL;
+			ft_putstr(file ? "\n\n" : "\n");
 		}
 	}
 	else
@@ -93,6 +73,7 @@ void	first_ls(t_opt *opt, int f)
 			file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
 		}
 		if (f)
-			first_ls(opt, f);
+			ls(opt, has_flag(opt, F_REVERSE) \
+				? opt->main->file : opt->main->first, f);
 	}
 }
