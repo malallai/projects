@@ -6,11 +6,16 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:52:52 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 15:03:39 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:06:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
+
+int		is_parent_path(char *str)
+{
+	return (str[0] == '.' || (str[0] == '.' && str[1] == '.'));
+}
 
 int		to_folder(char *name, char *entry_name)
 {

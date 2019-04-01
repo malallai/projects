@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 15:28:05 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:43:11 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,9 @@ typedef struct			s_folder
 	t_file				*folder;
 	t_file				*first;
 	t_file				*file;
+	int					size;
+	int					size_all;
+	int					count;
 }						t_folder;
 
 /*
@@ -103,13 +106,13 @@ typedef struct			s_opt
 	int					flag;
 	int					error;
 	char				*flags;
-	t_file				*main;
-	int					main_count;
+	t_folder			*main;
 }						t_opt;
 
 /*
 ** files.c
 */
+int						is_parent_path(char *str);
 int						to_folder(char *name, char *entry_name);
 
 /*
@@ -136,6 +139,7 @@ int						exit_ftls(t_opt *opt);
 t_file					*new_file(int id, char *name, char *parent);
 t_infos					*get_infos(t_file *file);
 t_infosize				*get_sizes(t_infos *info, struct stat pstat);
+t_folder				*new_folder(t_file *file);
 
 /*
 ** opt.c
@@ -154,15 +158,26 @@ void					set_main_files(t_opt *opt, int argc, \
 /*
 ** printer.c
 */
+void					print_file(t_opt *opt, t_file *file);
+void					print_details(t_file *file);
+void					put_lnk(t_file *file);
+void					put_nbr(int nbr, int tab, int spaces, int max);
+void					put_str(char *str, int tab, int spaces, int max);
 
 /*
 ** reader.c
 */
+void					read_folder(t_opt *opt, t_folder *folder);
+void					update_read_folder(t_folder *folder, \
+						t_file *tmp, int index);
+int						read_ls(t_opt *opt, t_file *file, \
+						t_file *tmp, int folders);
+void					ls(t_opt *opt);
 
 /*
 ** sort.c
 */
-void					sort(t_opt *opt, t_file *files, int low, int high);
+void					sort(t_opt *opt, t_folder *folder, int low, int high);
 void					sort_ascii(t_file *file, int low, int high);
 void					sort_time(t_file *file, int low, int high);
 int						compare(int t, t_file *f1, t_file *f2, int i);
