@@ -1,0 +1,14 @@
+files.c \
+free_ftls.c \
+ft_ls.c \
+ft_ls_exit.c \
+lst.c \
+opt.c \
+parser.c \
+printer.c \
+reader.c \
+sort.c \
+stat_ftls.c \
+swap.c \
+time.c \
+utils.c \
