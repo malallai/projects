@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 17:43:11 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 19:21:53 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,30 +156,33 @@ void					set_main_files(t_opt *opt, int argc, \
 						char **argv, int index);
 
 /*
-** printer.c
+** print_put.c
 */
-void					print_file(t_opt *opt, t_file *file);
-void					print_details(t_file *file);
 void					put_lnk(t_file *file);
 void					put_nbr(int nbr, int tab, int spaces, int max);
 void					put_str(char *str, int tab, int spaces, int max);
 
 /*
+** printer.c
+*/
+void					print_file(t_opt *opt, t_file *file);
+void					print_folder(t_opt *opt, t_folder *folder, int name);
+void					print_details(t_file *file);
+
+/*
 ** reader.c
 */
-void					read_folder(t_opt *opt, t_folder *folder);
+void					read_folder(t_opt *opt, t_folder *folder, int name);
 void					update_read_folder(t_folder *folder, \
 						t_file *tmp, int index);
-int						read_ls(t_opt *opt, t_file *file, \
-						t_file *tmp, int folders);
-void					ls(t_opt *opt);
+void					ls(t_opt *opt, t_file *file, int f);
 
 /*
 ** sort.c
 */
 void					sort(t_opt *opt, t_folder *folder, int low, int high);
-void					sort_ascii(t_file *file, int low, int high);
-void					sort_time(t_file *file, int low, int high);
+void					sort_ascii(t_folder *folder, int low, int high);
+void					sort_time(t_folder *folder, int low, int high);
 int						compare(int t, t_file *f1, t_file *f2, int i);
 
 /*

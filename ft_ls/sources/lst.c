@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 17:33:37 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 19:06:53 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ t_file		*new_file(int id, char *name, char *parent)
 
 	file = malloc(sizeof(t_file *) * 7);
 	file->id = id;
-	file->first = 0;
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = ft_strdup(name);

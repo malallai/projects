@@ -19,6 +19,7 @@ SOURCES = \
 	lst.c \
 	opt.c \
 	parser.c \
+	print_put.c \
 	printer.c \
 	reader.c \
 	sort.c \
