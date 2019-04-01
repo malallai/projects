@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 19:21:53 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/01 23:18:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,8 @@ typedef struct			s_opt
 /*
 ** files.c
 */
-int						is_parent_path(char *str);
+int						is_hidden_file(char *str);
+int						can_print(t_opt *opt, char *str);
 int						to_folder(char *name, char *entry_name);
 
 /*
@@ -165,9 +166,9 @@ void					put_str(char *str, int tab, int spaces, int max);
 /*
 ** printer.c
 */
-void					print_file(t_opt *opt, t_file *file);
+int						print_file(t_opt *opt, t_file *file);
 void					print_folder(t_opt *opt, t_folder *folder, int name);
-void					print_details(t_file *file);
+int						print_details(t_file *file);
 
 /*
 ** reader.c
@@ -175,6 +176,7 @@ void					print_details(t_file *file);
 void					read_folder(t_opt *opt, t_folder *folder, int name);
 void					update_read_folder(t_folder *folder, \
 						t_file *tmp, int index);
+void					ls_folder(t_opt *opt, t_file *file);
 void					ls(t_opt *opt, t_file *file, int f);
 
 /*
