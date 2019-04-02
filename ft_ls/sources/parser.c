@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 20:05:13 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/02 17:32:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int			parse(char **argv, t_opt *opt)
 	while (argv[i])
 	{
 		if (argv[i][0] != '-')
+			return (i);
+		if (!argv[i][1])
 			return (i);
 		b = 0;
 		while (argv[i][++b])
@@ -74,7 +76,7 @@ void		set_main_files(t_opt *opt, int argc, char **argv, int a_index)
 			else
 				opt->main->first = file;
 			opt->main->file = file;
+			opt->main->count++;
 		}
 	}
-	opt->main->count++;
 }
