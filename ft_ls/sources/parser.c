@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/02 17:32:56 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/04 17:56:40 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,14 @@ void		set_main_files(t_opt *opt, int argc, char **argv, int a_index)
 	while (a_index < argc)
 	{
 		file = new_file(index, argv[a_index++], NULL);
-		if (!exist(file))
-			print_nexist(opt, file);
-		else
+		if (index++)
 		{
-			if (index++)
-			{
-				file->prev = opt->main->file;
-				opt->main->file->next = file;
-			}
-			else
-				opt->main->first = file;
-			opt->main->file = file;
-			opt->main->count++;
+			file->prev = opt->main->file;
+			opt->main->file->next = file;
 		}
+		else
+			opt->main->first = file;
+		opt->main->file = file;
+		opt->main->count++;
 	}
 }

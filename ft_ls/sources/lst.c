@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 19:06:53 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/04 18:02:09 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_file		*new_file(int id, char *name, char *parent)
 	t_file		*file;
 	char		*tmp;
 
-	file = malloc(sizeof(t_file *) * 7);
+	file = malloc(sizeof(t_file *) * 8);
 	file->id = id;
 	file->next = NULL;
 	file->prev = NULL;
@@ -32,6 +32,7 @@ t_file		*new_file(int id, char *name, char *parent)
 		file->path = ft_strjoin(name[0] == '/' ? "" : "./", tmp);
 	free(tmp);
 	file->infos = get_infos(file);
+	file->exist = exist(file);
 	return (file);
 }
 

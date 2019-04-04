@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 23:47:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/04 18:19:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,33 +51,43 @@ void	update_read_folder(t_folder *folder, t_file *tmp, int index)
 
 void	ls_folder(t_opt *opt, t_file *file)
 {
-	
+	t_file	*prev;
+
 	while (file)
 	{
-		if (is_folder(file->path))
+		if (file->exist && is_folder(file->path))
 			read_folder(opt, new_folder(file), file->prev || file->next);
+		prev = file;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
-		if (file && is_folder(file->path))
+		if (file && is_folder(file->path) && prev->exist)
 			ft_putchar('\n');
 	}
 }
 
-void	ls(t_opt *opt, t_file *file, int f)
+void	ls(t_opt *opt, t_file *file)
 {
 	int		ret;
-	
-	ret = 0;
+	int		f;
+	int		fi;
+
+	fi = 0;
 	while (file)
 	{
+		ret = 0;
 		f = f ? f : is_folder(file->path);
-		if (!is_folder(file->path))
+		if (file->exist && !is_folder(file->path))
 			ret = print_file(opt, file);
+		else if (!file->exist)
+			print_nexist(opt, file);
+		fi = ret && !fi ? 1 : fi;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
 		if (ret && file && !is_folder(file->path) && can_print(opt, file->name))
 			ft_putchar('\n');
-		if (!file && ret)
-			ft_putchar('\n');
 	}
+	if (ret)
+		ft_putchar('\n');
+	if (f && fi)
+		ft_putchar('\n');
 	if (f)
 		ls_folder(opt, has_flag(opt, F_REVERSE) \
 			? opt->main->file : opt->main->first);
