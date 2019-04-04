@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:44 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 20:05:37 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/04 18:17:53 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int		main(int argc, char **argv)
 			sort(opt, opt->main, 0, opt->main->count);
 	}
 	ls(opt, has_flag(opt, F_REVERSE) \
-		? opt->main->file : opt->main->first, 0);
+		? opt->main->file : opt->main->first);
 	return (exit_ftls(opt));
 }

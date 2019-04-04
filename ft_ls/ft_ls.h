@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/02 17:30:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/04 18:17:48 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ typedef struct			s_file
 	char				*name;
 	char				*path;
 	t_infos				*infos;
+	int					exist;
 }						t_file;
 
 typedef struct			s_folder
@@ -177,7 +178,7 @@ void					read_folder(t_opt *opt, t_folder *folder, int name);
 void					update_read_folder(t_folder *folder, \
 						t_file *tmp, int index);
 void					ls_folder(t_opt *opt, t_file *file);
-void					ls(t_opt *opt, t_file *file, int f);
+void					ls(t_opt *opt, t_file *file);
 
 /*
 ** sort.c
