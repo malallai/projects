@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/04 18:02:09 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/06 18:12:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-t_file		*new_file(int id, char *name, char *parent)
+t_file		*new_file(int id, char *name, t_folder *parent)
 {
 	t_file		*file;
 	char		*tmp;
@@ -91,5 +91,6 @@ t_folder	*new_folder(t_file *file)
 	folder->size = 0;
 	folder->size_all = 0;
 	folder->count = 0;
+	folder->sizes = NULL;
 	return (folder);
 }
