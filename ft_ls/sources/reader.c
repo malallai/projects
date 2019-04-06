@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/04 18:19:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/06 17:25:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ void	ls_folder(t_opt *opt, t_file *file)
 			read_folder(opt, new_folder(file), file->prev || file->next);
 		prev = file;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
-		if (file && is_folder(file->path) && prev->exist)
-			ft_putchar('\n');
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/04 18:17:48 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/06 18:10:05 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ typedef struct			s_folder
 	t_file				*folder;
 	t_file				*first;
 	t_file				*file;
+	t_infosize			*sizes;
 	int					size;
 	int					size_all;
 	int					count;
@@ -106,6 +107,7 @@ typedef struct			s_opt
 {
 	int					flag;
 	int					error;
+	int					print;
 	char				*flags;
 	t_folder			*main;
 }						t_opt;
@@ -169,7 +171,7 @@ void					put_str(char *str, int tab, int spaces, int max);
 */
 int						print_file(t_opt *opt, t_file *file);
 void					print_folder(t_opt *opt, t_folder *folder, int name);
-int						print_details(t_file *file);
+int						print_details(t_opt *opt, t_file *file);
 
 /*
 ** reader.c

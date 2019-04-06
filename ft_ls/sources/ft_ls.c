@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:44 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/04 18:17:53 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/06 18:13:32 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		main(int argc, char **argv)
 	opt = init_opt();
 	if (argc == 1)
 	{
-		opt->main->first = new_file(0, ".", "");
+		opt->main->first = new_file(0, ".", opt->main);
 		opt->main->file = opt->main->first;
 		opt->main->count = 1;
 	}
