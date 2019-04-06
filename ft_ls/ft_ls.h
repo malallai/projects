@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 18:10:05 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/06 18:41:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ int						exit_ftls(t_opt *opt);
 /*
 ** lst.c
 */
-t_file					*new_file(int id, char *name, char *parent);
+t_file					*new_file(int id, char *name, t_folder *parent);
 t_infos					*get_infos(t_file *file);
 t_infosize				*get_sizes(t_infos *info, struct stat pstat);
 t_folder				*new_folder(t_file *file);
