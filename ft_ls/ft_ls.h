@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:18:56 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 17:45:18 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <time.h>
 # include <stdio.h>
 # include "libft/libft.h"
+# include <errno.h>
 
 # define F_DETAIL 1
 # define F_RECURS 2
@@ -139,6 +140,7 @@ void					free_opt(t_opt *opt);
 */
 int						bad_option(t_opt *opt, char option);
 void					print_nexist(t_opt *opt, t_file *file);
+void					print_error(t_opt *opt, t_file *file);
 int						exit_ftls(t_opt *opt);
 
 /*

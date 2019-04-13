@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:45 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 20:01:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 17:56:12 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ void	swap_item(t_file **a, t_file *cpy)
 {
 	(*a)->name = cpy->name;
 	(*a)->path = cpy->path;
+	(*a)->clean_path = cpy->clean_path;
 	(*a)->infos = cpy->infos;
 }

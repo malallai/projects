@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:15:36 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:13:35 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		print_file(t_opt *opt, t_file *file)
 	if (!has_flag(opt, F_ALL) && is_hidden_file(file->name))
 		return (0);
 	opt->print = 1;
+	if (!file->infos)
+		return (0);
 	if (has_flag(opt, F_DETAIL))
 		return (print_details(opt, file));
 	else
@@ -48,6 +50,8 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 		ft_putstr(folder->folder->clean_path);
 		ft_putendl(":");
 	}
+	if (!file)
+		return ;
 	if (has_flag(opt, F_DETAIL))
 	{
 		ft_putstr("total ");
