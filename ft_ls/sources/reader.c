@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 14:32:55 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:12:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,15 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 	t_file			*tmp;
 
 	index = 0;
-	if ((dir = opendir(folder->folder->path)))
+	if (!(dir = opendir(folder->folder->path)))
+	{
+		if (errno != ENOTDIR)
+		{
+			print_folder(opt, folder, name);
+			print_error(opt, folder->folder);
+		}
+	}
+	else
 	{
 		while ((sd = readdir(dir)))
 		{
@@ -32,8 +40,8 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 		sort(opt, folder, 0, folder->count);
 		print_folder(opt, folder, name);
 		recurs(opt, folder);
-		free_folder(folder);
 	}
+	free_folder(folder);
 }
 
 void	update_read_folder(t_folder *folder, t_file *tmp, int index)
@@ -46,9 +54,12 @@ void	update_read_folder(t_folder *folder, t_file *tmp, int index)
 	else
 		folder->first = tmp;
 	folder->file = tmp;
-	folder->size_all += folder->file->infos->file_stat.st_blocks;
-	folder->size += (folder->file->name[0] == '.' ? 0 : \
-		folder->file->infos->file_stat.st_blocks);
+	if (folder->file->infos)
+	{
+		folder->size_all += folder->file->infos->file_stat.st_blocks;
+		folder->size += (folder->file->name[0] == '.' ? 0 : \
+			folder->file->infos->file_stat.st_blocks);
+	}
 }
 
 void	ls_folder(t_opt *opt, t_file *file)
