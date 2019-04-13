@@ -5,87 +5,108 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/21 15:46:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 17:28:32 by malallai         ###   ########.fr       */
+/*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
+/*   Updated: 2019/04/13 18:22:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-int		print(t_opt *opt, t_entry *entry, t_file *file, t_infos *infos)
+int		print_file(t_opt *opt, t_file *file)
 {
-	int i;
-
-	i = 0;
+	if (!has_flag(opt, F_ALL) && is_hidden_file(file->name))
+		return (0);
+	opt->print = 1;
+	if (!file->infos)
+		return (0);
 	if (has_flag(opt, F_DETAIL))
+		return (print_details(opt, file));
+	else
 	{
-		print_details(opt, entry, file, infos);
-		return (0);
+		if (has_flag(opt, F_BLOCKS))
+		{
+			ft_putnbr(file->infos->file_stat.st_blocks);
+			ft_putchar(' ');
+		}
+		ft_putstr(get_color(file->infos->file_stat.st_mode));
+		ft_putstr(file->name);
+		ft_putstr(WHITE);
 	}
-	if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
-		return (0);
-	ft_putstr(get_color(infos->stat.st_mode));
-	ft_putstr(infos->name);
-	ft_putstr(WHITE);
 	return (1);
 }
 
-void	print_details(t_opt *opt, t_entry *entry, t_file *file, \
-		t_infos *infos)
+void	print_folder(t_opt *opt, t_folder *folder, int name)
 {
-	if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
+	t_file	*file;
+	int		ret;
+
+	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
+	ft_putstr(opt->print ? "\n" : "");
+	opt->print = 1;
+	if (name)
+	{
+		ft_putstr(folder->folder->clean_path);
+		ft_putendl(":");
+	}
+	if (!file)
 		return ;
-	ft_putendl("");
+	if (has_flag(opt, F_DETAIL))
+	{
+		ft_putstr("total ");
+		ft_putnbrln(has_flag(opt, F_ALL) ? folder->size_all : folder->size);
+	}
+	while (file)
+	{
+		ret = print_file(opt, file);
+		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
+		if (ret)
+			ft_putchar('\n');
+	}
+}
+
+int		print_details(t_opt *opt, t_file *file)
+{
+	t_infos		*infos;
+
+	infos = file->infos;
 	if (has_flag(opt, F_BLOCKS))
 	{
-		put_nbr(infos->stat.st_blocks, 1, 0, entry->size->blocks);
-		put(infos->mode, 1, 1, 10);
+		put_nbr(infos->file_stat.st_blocks, 1, 0, infos->sizes->blocks);
+		put_str(infos->perms, 1, 1, 10);
 	}
 	else
-		put(infos->mode, 0, 0, 0);
-	put_nbr(infos->stat.st_nlink, 1, 2, entry->size->links);
-	put(infos->uid->pw_name, 1, 1, entry->size->uid);
-	put(infos->gid->gr_name, 1, 2, entry->size->gid);
-	put_nbr(infos->stat.st_size, 1, 2, entry->size->size);
-	put(file->date, 1, 1, entry->size->t);
-	ft_putstr(get_color(infos->stat.st_mode));
+		put_str(infos->perms, 0, 0, 0);
+	put_nbr(infos->file_stat.st_nlink, 1, 2, infos->sizes->links);
+	put_str(infos->uid->pw_name, 1, 1, infos->sizes->uid);
+	put_str(infos->gid->gr_name, 1, 2, infos->sizes->gid);
+	put_nbr(infos->file_stat.st_size, 1, 2, infos->sizes->size);
+	put_str(infos->date, 1, 1, infos->sizes->date);
+	ft_putstr(get_color(infos->file_stat.st_mode));
 	ft_putchar(' ');
-	put(infos->name, 0, 0, 0);
+	put_str(file->name, 0, 0, 0);
 	ft_putstr(WHITE);
-	print_lnk(opt, entry, file, infos);
+	put_lnk(file);
+	return (1);
 }
 
-void	print_lnk(t_opt *opt, t_entry *entry, t_file *file, \
-		t_infos *infos)
+int		print_lnk(t_opt *opt, t_file *file)
 {
-	(void)opt;
-	(void)entry;
-	(void)file;
-	if (!S_ISLNK(infos->stat.st_mode))
-		return ;
-	ft_putstr(" -> ");
-	ft_putstr(lsgetlink(file->path));
-}
+	char	*tmp;
+	char	*tmp2;
 
-void	put_nbr(int nbr, int tab, int spaces, int max)
-{
-	int		index;
-	char	*str;
-
-	index = 0;
-	str = ft_itoa(nbr);
-	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
-		ft_putchar(' ');
-	ft_putstr(str);
-	free(str);
-}
-
-void	put(char *str, int tab, int spaces, int max)
-{
-	int index;
-
-	index = 0;
-	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
-		ft_putchar(' ');
-	ft_putstr(str);
+	tmp = file->path;
+	if (has_flag(opt, F_DETAIL))
+		return (0);
+	tmp2 = ft_strjoin(tmp, "/");
+	if (is_folder(tmp2))
+	{
+		file->path = tmp2;
+		free(tmp);
+	}
+	else
+	{
+		free(tmp2);
+		return (0);
+	}
+	return (0);
 }

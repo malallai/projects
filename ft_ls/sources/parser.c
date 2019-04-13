@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/16 17:32:14 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 18:39:42 by malallai         ###   ########.fr       */
+/*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
+/*   Updated: 2019/04/13 15:24:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int			parse(char **argv, t_opt *opt)
 	{
 		if (argv[i][0] != '-')
 			return (i);
+		if (!argv[i][1])
+			return (i);
 		b = 0;
 		while (argv[i][++b])
 			set_flag(argv[i][b], opt);
@@ -46,19 +48,30 @@ int			parse(char **argv, t_opt *opt)
 	return (i);
 }
 
-void		set_opt_folders(t_opt *opt, int argc, char **argv, int index)
+void		set_main_files(t_opt *opt, int argc, char **argv, int a_index)
 {
-	int		argv_index;
+	int		index;
+	t_file	*file;
 
-	argv_index = index;
-	if (argv_index == argc)
-		add_file(opt->entries, ft_strdup("."), NULL);
-	while (argv_index < argc)
+	index = 0;
+	if (a_index == argc)
 	{
-		if (exist(argv[argv_index]))
-			add_file(opt->entries, argv[argv_index], NULL);
+		opt->main->first = new_file(0, ".", opt->main);
+		opt->main->file = opt->main->first;
+		opt->main->count = 1;
+		index++;
+	}
+	while (a_index < argc)
+	{
+		file = new_file(index, argv[a_index++], opt->main);
+		if (index++)
+		{
+			file->prev = opt->main->file;
+			opt->main->file->next = file;
+		}
 		else
-			print_nexist(opt, argv[argv_index]);
-		argv_index++;
+			opt->main->first = file;
+		opt->main->file = file;
+		opt->main->count++;
 	}
 }

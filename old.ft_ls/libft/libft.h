@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:38:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/16 13:33:46 by malallai         ###   ########.fr       */
+/*   Updated: 2019/03/21 16:04:19 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,9 @@ char				*ft_strtrim(char const *s);
 char				*ft_trimchar(char *str, char c);
 char				**ft_strsplit(char const *s1, char c);
 char				*ft_itoa(int n);
+int					ft_len(int n);
 void				ft_putchar(char c);
+void				ft_putcharln(char c);
 void				ft_putstr(char const *str);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);

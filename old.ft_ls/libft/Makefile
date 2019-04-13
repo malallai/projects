@@ -1,9 +1,9 @@
 NAME = libft.a
 PROJECT_NAME = LibFt
 
-SOURCES_FOLDER = ./
+SOURCES_FOLDER = ./sources/
 INCLUDES_FOLDER = ./
-OBJECTS_FOLDER = ./
+OBJECTS_FOLDER = ./objects/
 
 SOURCES = \
 	ft_abs.c \
@@ -24,6 +24,7 @@ SOURCES = \
 	ft_isspace.c \
 	ft_isupper.c \
 	ft_itoa.c \
+	ft_len.c \
 	ft_lstadd.c \
 	ft_lstdel.c \
 	ft_lstdelone.c \
@@ -40,6 +41,7 @@ SOURCES = \
 	ft_memset.c \
 	ft_newarray.c \
 	ft_putchar.c \
+	ft_putcharln.c \
 	ft_putchar_fd.c \
 	ft_putendl.c \
 	ft_putendl_fd.c \
@@ -82,6 +84,9 @@ SOURCES = \
 	ft_trimchar.c \
 
 OBJECTS = $(SOURCES:.c=.o)
+OBJECTS := $(subst /,__,$(OBJECTS))
+OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
+SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FLAGS = -Wall -Wextra -Werror
 CC = clang
@@ -104,11 +109,13 @@ $(NAME): $(OBJECTS)
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 
 $(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
+	@mkdir -p $(OBJECTS_FOLDER)
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
 	@printf "$(NO_COLOR)Creating $(INFO_COLOR)%-30s $(OK_COLOR)✓$(NO_COLOR)\r" "$@"
 
 clean:
 	@rm -f $(OBJECTS)
+	@rm -rf $(OBJECTS_FOLDER)
 
 fclean: clean
 	@rm -f $(NAME)

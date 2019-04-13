@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/16 14:19:35 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 18:41:09 by malallai         ###   ########.fr       */
+/*   Created: 2019/04/01 12:21:44 by malallai          #+#    #+#             */
+/*   Updated: 2019/04/13 16:52:43 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,26 @@
 
 int		main(int argc, char **argv)
 {
-	t_opt	*opt;
-	int		i;
+	t_opt		*opt;
+	int			i;
 
-	opt = new_opt();
+	opt = init_opt();
 	if (argc == 1)
-		add_file(opt->entries, ft_strdup("."), NULL);
+	{
+		opt->main->first = new_file(0, ".", opt->main);
+		opt->main->file = opt->main->first;
+		opt->main->count = 1;
+	}
 	else
 	{
 		i = parse(argv, opt);
-		set_opt_folders(opt, argc, argv, i);
-		sort(opt, opt->entries, 0, opt->entries->count - 1);
+		if (has_flag(opt, F_UNSORT))
+			set_flag('a', opt);
+		set_main_files(opt, argc, argv, i);
+		if (i != argc)
+			sort(opt, opt->main, 0, opt->main->count);
 	}
-	split_entries(opt);
-	print_ls(opt);
-	if (argc == 1)
-		free(opt->entries->first->name);
+	ls(opt, has_flag(opt, F_REVERSE) \
+		? opt->main->file : opt->main->first);
 	return (exit_ftls(opt));
 }
