@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 17:45:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:18:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,8 @@ void					free_opt(t_opt *opt);
 */
 int						bad_option(t_opt *opt, char option);
 void					print_nexist(t_opt *opt, t_file *file);
+void					error_dir(t_opt *opt, t_folder *folder, \
+						int name);
 void					print_error(t_opt *opt, t_file *file);
 int						exit_ftls(t_opt *opt);
 

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:45 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 17:56:12 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:16:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap(t_file *a, t_file *b)
 {
-	t_file  tmp;
+	t_file	tmp;
 
 	if (!a || !b)
 		return ;
