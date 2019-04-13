@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:10:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:10:58 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:16:20 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char		*get_finaldate(time_t date, char *file_time, \
 	}
 	else
 	{
-		tmp = ft_strsub(file_time, 10, 6);		
+		tmp = ft_strsub(file_time, 10, 6);
 		final_time = ft_strjoin(base_time, tmp);
 	}
 	free(tmp);

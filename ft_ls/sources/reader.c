@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:12:25 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:18:57 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,7 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 
 	index = 0;
 	if (!(dir = opendir(folder->folder->path)))
-	{
-		if (errno != ENOTDIR)
-		{
-			print_folder(opt, folder, name);
-			print_error(opt, folder->folder);
-		}
-	}
+		error_dir(opt, folder, name);
 	else
 	{
 		while ((sd = readdir(dir)))

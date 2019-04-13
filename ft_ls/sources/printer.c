@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:13:35 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:22:10 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	int		ret;
 
 	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
-	if (opt->print)
-		ft_putchar('\n');
-	else
-		opt->print = 1;
+	ft_putstr(opt->print ? "\n" : "");
+	opt->print = 1;
 	if (name)
 	{
 		ft_putstr(folder->folder->clean_path);
@@ -79,7 +77,7 @@ int		print_details(t_opt *opt, t_file *file)
 	else
 		put_str(infos->perms, 0, 0, 0);
 	put_nbr(infos->file_stat.st_nlink, 1, 2, infos->sizes->links);
-	put_str(infos->uid->pw_name, 1, 1,infos->sizes->uid);
+	put_str(infos->uid->pw_name, 1, 1, infos->sizes->uid);
 	put_str(infos->gid->gr_name, 1, 2, infos->sizes->gid);
 	put_nbr(infos->file_stat.st_size, 1, 2, infos->sizes->size);
 	put_str(infos->date, 1, 1, infos->sizes->date);
@@ -88,8 +86,6 @@ int		print_details(t_opt *opt, t_file *file)
 	put_str(file->name, 0, 0, 0);
 	ft_putstr(WHITE);
 	put_lnk(file);
-	//DEBUG("\nblocks %d links %d uid %d gid %d size %d date %d\n", infos->sizes->blocks, infos->sizes->links, 
-	//infos->sizes->uid, infos->sizes->gid, infos->sizes->size, infos->sizes->date);
 	return (1);
 }
 

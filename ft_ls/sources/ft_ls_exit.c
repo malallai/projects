@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:22:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:08:10 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 18:18:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,15 @@ void	print_nexist(t_opt *opt, t_file *file)
 	ft_putstr(file->name);
 	ft_putendl(": No such file or directory");
 	opt->error = 1;
+}
+
+void	error_dir(t_opt *opt, t_folder *folder, int name)
+{
+	if (errno != ENOTDIR)
+	{
+		print_folder(opt, folder, name);
+		print_error(opt, folder->folder);
+	}
 }
 
 void	print_error(t_opt *opt, t_file *file)
