@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:06:12 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 20:02:04 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:19:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void		sort(t_opt *opt, t_folder *folder, int low, int high)
 {
+	if (has_flag(opt, F_UNSORT))
+		return ;
 	if (has_flag(opt, F_TIME))
 		sort_time(folder, low, high);
 	else

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:44 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 18:13:32 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:24:29 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int		main(int argc, char **argv)
 	else
 	{
 		i = parse(argv, opt);
+		if (has_flag(opt, F_UNSORT))
+			set_flag('a', opt);
 		set_main_files(opt, argc, argv, i);
 		if (i != argc)
 			sort(opt, opt->main, 0, opt->main->count);

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 18:41:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:18:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # define F_REVERSE 8
 # define F_TIME 16
 # define F_BLOCKS 32
+# define F_UNSORT 64
 
 # define WHITE (char *)"\033[0m"
 # define CYAN (char *)"\033[1;36m"
@@ -82,6 +83,7 @@ typedef struct			s_file
 	struct s_file		*prev;
 	char				*name;
 	char				*path;
+	char				*clean_path;
 	t_infos				*infos;
 	int					exist;
 }						t_file;
@@ -116,8 +118,10 @@ typedef struct			s_opt
 ** files.c
 */
 int						is_hidden_file(char *str);
+int						is_parent(char *str);
 int						can_print(t_opt *opt, char *str);
 int						to_folder(char *name, char *entry_name);
+t_file					*get_file(t_file *first, int id);
 
 /*
 ** free_ftls.c
@@ -141,8 +145,10 @@ int						exit_ftls(t_opt *opt);
 ** lst.c
 */
 t_file					*new_file(int id, char *name, t_folder *parent);
-t_infos					*get_infos(t_file *file);
-t_infosize				*get_sizes(t_infos *info, struct stat pstat);
+t_infos					*get_infos(t_file *file, t_folder *parent);
+t_infosize				*get_sizes(t_infos *info, struct stat pstat, \
+						t_infosize *parent);
+t_infosize				*new_size(void);
 t_folder				*new_folder(t_file *file);
 
 /*
@@ -172,6 +178,7 @@ void					put_str(char *str, int tab, int spaces, int max);
 int						print_file(t_opt *opt, t_file *file);
 void					print_folder(t_opt *opt, t_folder *folder, int name);
 int						print_details(t_opt *opt, t_file *file);
+int						print_lnk(t_opt *opt, t_file *file);
 
 /*
 ** reader.c
@@ -181,6 +188,12 @@ void					update_read_folder(t_folder *folder, \
 						t_file *tmp, int index);
 void					ls_folder(t_opt *opt, t_file *file);
 void					ls(t_opt *opt, t_file *file);
+
+/*
+** recurs.c
+*/
+void					recurs(t_opt *opt, t_folder *folder);
+char					*get_clean_path(t_file *file1, t_file *file2);
 
 /*
 ** sort.c
@@ -194,10 +207,10 @@ int						compare(int t, t_file *f1, t_file *f2, int i);
 ** stat_ftls.c
 */
 int						is_regular_file(const char *path);
+int						is_lnk(const char *path);
 int						is_folder(const char *path);
 int						exist(t_file *file);
 char					*lsgetlink(char *path);
-t_file					*get_file(t_file *first, int id);
 
 /*
 ** swap.c

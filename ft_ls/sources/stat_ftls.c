@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:53:47 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 14:52:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 13:11:49 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,14 @@ int		is_regular_file(const char *path)
 	return (S_ISREG(path_stat.st_mode));
 }
 
+int		is_lnk(const char *path)
+{
+	struct stat path_stat;
+
+	lstat(path, &path_stat);
+	return (S_ISLNK(path_stat.st_mode));
+}
+
 int		is_folder(const char *path)
 {
 	struct stat path_stat;
@@ -30,7 +38,8 @@ int		is_folder(const char *path)
 
 int		exist(t_file *file)
 {
-	return (is_regular_file(file->path) || is_folder(file->path));
+	return (is_lnk(file->path) || \
+		is_regular_file(file->path) || is_folder(file->path));
 }
 
 char	*lsgetlink(char *path)
@@ -43,13 +52,4 @@ char	*lsgetlink(char *path)
 	if ((link_len = readlink(path, buf, 1024)))
 		return (buf);
 	return (NULL);
-}
-
-t_file	*get_file(t_file *first, int id)
-{
-	if (!first || id < 0)
-		return (NULL);
-	if (first->id == id)
-		return (first);
-	return (get_file(first->next, id));
 }

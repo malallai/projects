@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 18:12:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:26:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,25 @@ t_file		*new_file(int id, char *name, t_folder *parent)
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = ft_strdup(name);
-	if (to_folder(name, parent))
+	if (to_folder(name, parent->folder ? parent->folder->path : ""))
 		tmp = ft_strjoin(name, "/");
 	else
 		tmp = ft_strdup(name);
-	if (parent)
-		file->path = ft_strjoin(parent, tmp);
+	if (parent->folder)
+		file->path = ft_strjoin(parent->folder->path, tmp);
 	else
 		file->path = ft_strjoin(name[0] == '/' ? "" : "./", tmp);
 	free(tmp);
-	file->infos = get_infos(file);
+	if (parent->folder)
+		file->clean_path = get_clean_path(parent->folder, file);
+	else
+		file->clean_path = ft_strdup(file->name);
 	file->exist = exist(file);
+	file->infos = file->exist ? get_infos(file, parent) : NULL;
 	return (file);
 }
 
-t_infos		*get_infos(t_file *file)
+t_infos		*get_infos(t_file *file, t_folder *parent)
 {
 	t_infos			*infos;
 	struct stat		filestat;
@@ -55,16 +59,18 @@ t_infos		*get_infos(t_file *file)
 	infos->gid = gid;
 	infos->millis = infos->file_stat.st_mtime;
 	infos->date = get_date(infos->millis);
-	infos->sizes = get_sizes(infos, infos->file_stat);
+	infos->sizes = get_sizes(infos, infos->file_stat, parent->sizes);
+	if (!parent->sizes)
+		parent->sizes = infos->sizes;
 	return (infos);
 }
 
-t_infosize	*get_sizes(t_infos *info, struct stat pstat)
+t_infosize	*get_sizes(t_infos *info, struct stat pstat, t_infosize *parent)
 {
 	t_infosize	*isize;
 	int			len;
 
-	isize = malloc(sizeof(t_infosize *) * 6);
+	isize = parent ? parent : new_size();
 	len = ft_len((int)pstat.st_blocks);
 	isize->blocks = len > isize->blocks ? len : isize->blocks;
 	len = ft_len((int)pstat.st_nlink);
@@ -78,6 +84,20 @@ t_infosize	*get_sizes(t_infos *info, struct stat pstat)
 	len = (int)ft_strlen(info->date);
 	isize->date = len > isize->date ? len : isize->date;
 	return (isize);
+}
+
+t_infosize	*new_size(void)
+{
+	t_infosize	*size;
+
+	size = malloc(sizeof(t_infosize *) * 6);
+	size->blocks = 0;
+	size->links = 0;
+	size->uid = 0;
+	size->gid = 0;
+	size->size = 0;
+	size->date = 0;
+	return (size);
 }
 
 t_folder	*new_folder(t_file *file)
