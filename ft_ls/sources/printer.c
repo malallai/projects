@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 17:55:24 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:15:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ int		print_file(t_opt *opt, t_file *file)
 		return (print_details(opt, file));
 	else
 	{
-		
+		if (has_flag(opt, F_BLOCKS))
+		{
+			ft_putnbr(file->infos->file_stat.st_blocks);
+			ft_putchar(' ');
+		}
 		ft_putstr(get_color(file->infos->file_stat.st_mode));
 		ft_putstr(file->name);
 		ft_putstr(WHITE);
@@ -41,7 +45,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 		opt->print = 1;
 	if (name)
 	{
-		ft_putstr(folder->folder->name);
+		ft_putstr(folder->folder->clean_path);
 		ft_putendl(":");
 	}
 	if (has_flag(opt, F_DETAIL))
@@ -80,7 +84,29 @@ int		print_details(t_opt *opt, t_file *file)
 	put_str(file->name, 0, 0, 0);
 	ft_putstr(WHITE);
 	put_lnk(file);
-	DEBUG("\nblocks %d links %d uid %d gid %d size %d date %d\n", infos->sizes->blocks, infos->sizes->links, 
-	infos->sizes->uid, infos->sizes->gid, infos->sizes->size, infos->sizes->date);
+	//DEBUG("\nblocks %d links %d uid %d gid %d size %d date %d\n", infos->sizes->blocks, infos->sizes->links, 
+	//infos->sizes->uid, infos->sizes->gid, infos->sizes->size, infos->sizes->date);
 	return (1);
+}
+
+int		print_lnk(t_opt *opt, t_file *file)
+{
+	char	*tmp;
+	char	*tmp2;
+
+	tmp = file->path;
+	if (has_flag(opt, F_DETAIL))
+		return (0);
+	tmp2 = ft_strjoin(tmp, "/");
+	if (is_folder(tmp2))
+	{
+		file->path = tmp2;
+		free(tmp);
+	}
+	else
+	{
+		free(tmp2);
+		return (0);
+	}
+	return (0);
 }

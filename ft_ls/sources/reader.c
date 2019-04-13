@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 17:25:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:32:55 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,15 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 	{
 		while ((sd = readdir(dir)))
 		{
-			tmp = new_file(index, sd->d_name, folder->folder->path);
+			tmp = new_file(index, sd->d_name, folder);
 			update_read_folder(folder, tmp, index++);
 		}
 		closedir(dir);
 		folder->count = index;
 		sort(opt, folder, 0, folder->count);
 		print_folder(opt, folder, name);
+		recurs(opt, folder);
+		free_folder(folder);
 	}
 }
 
@@ -51,13 +53,10 @@ void	update_read_folder(t_folder *folder, t_file *tmp, int index)
 
 void	ls_folder(t_opt *opt, t_file *file)
 {
-	t_file	*prev;
-
 	while (file)
 	{
 		if (file->exist && is_folder(file->path))
 			read_folder(opt, new_folder(file), file->prev || file->next);
-		prev = file;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
 	}
 }
@@ -73,19 +72,17 @@ void	ls(t_opt *opt, t_file *file)
 	{
 		ret = 0;
 		f = f ? f : is_folder(file->path);
-		if (file->exist && !is_folder(file->path))
+		if (file->exist && is_lnk(file->path))
+			ret = print_lnk(opt, file);
+		if (ret <= 1 && file->exist && !is_folder(file->path))
 			ret = print_file(opt, file);
 		else if (!file->exist)
 			print_nexist(opt, file);
 		fi = ret && !fi ? 1 : fi;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
-		if (ret && file && !is_folder(file->path) && can_print(opt, file->name))
+		if (ret == 1)
 			ft_putchar('\n');
 	}
-	if (ret)
-		ft_putchar('\n');
-	if (f && fi)
-		ft_putchar('\n');
 	if (f)
 		ls_folder(opt, has_flag(opt, F_REVERSE) \
 			? opt->main->file : opt->main->first);

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 17:56:02 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 17:45:29 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:05:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 void	put_lnk(t_file *file)
 {
+	char	*tmp;
+
 	if (!S_ISLNK(file->infos->file_stat.st_mode))
 		return ;
+	tmp = lsgetlink(file->path);
 	ft_putstr(" -> ");
-	ft_putstr(lsgetlink(file->path));
+	ft_putstr(tmp);
+	free(tmp);
 }
 
 void	put_nbr(int nbr, int tab, int spaces, int max)
