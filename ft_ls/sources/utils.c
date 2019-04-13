@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/21 15:44:43 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 16:55:35 by malallai         ###   ########.fr       */
+/*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
+/*   Updated: 2019/04/01 14:29:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-char	get_dtype(int mode)
+char	get_type(int mode)
 {
 	if (S_ISBLK(mode))
 		return ('p');
@@ -42,12 +42,12 @@ char	*get_color(int mode)
 	return (WHITE);
 }
 
-char	*get_mode(int mode)
+char	*get_perms(int mode)
 {
 	char *perm;
 
 	perm = (char *)malloc(sizeof(char *) * 11);
-	perm[0] = get_dtype(mode);
+	perm[0] = get_type(mode);
 	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
 	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
 	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';

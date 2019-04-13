@@ -5,106 +5,112 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/16 14:23:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 18:54:03 by malallai         ###   ########.fr       */
+/*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
+/*   Updated: 2019/04/13 15:26:36 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-t_file		*new_file(char *entry_name, char *name, struct dirent *dir)
+t_file		*new_file(int id, char *name, t_folder *parent)
 {
-	t_file	*file;
-	char	*tmp;
-	struct stat	pstat;
+	t_file		*file;
+	char		*tmp;
 
-	file = (t_file *)malloc(sizeof(t_file *) * (sizeof(struct stat) + 11));
+	file = malloc(sizeof(t_file *) * 8);
+	file->id = id;
 	file->next = NULL;
 	file->prev = NULL;
-	file->name = name;
-
-	if (to_folder(name, entry_name))
+	file->name = ft_strdup(name);
+	if (to_folder(name, parent->folder ? parent->folder->path : ""))
 		tmp = ft_strjoin(name, "/");
 	else
 		tmp = ft_strdup(name);
-	file->path = ft_strjoin(entry_name ? \
-		entry_name : "", (tmp = ft_strdup(tmp)));
-	file->dirent = dir;
-	lstat(file->path, &pstat);
-	file->stat = pstat;
-	file->millis = file->stat.st_mtime;
-	file->date = get_date(file->millis);
-	file->name_size = (int)ft_strlen(name);
+	if (parent->folder)
+		file->path = ft_strjoin(parent->folder->path, tmp);
+	else
+		file->path = ft_strjoin(name[0] == '/' ? "" : "./", tmp);
 	free(tmp);
+	if (parent->folder)
+		file->clean_path = get_clean_path(parent->folder, file);
+	else
+		file->clean_path = ft_strdup(file->name);
+	file->exist = exist(file);
+	file->infos = file->exist ? get_infos(file, parent) : NULL;
 	return (file);
 }
 
-void		add_file(t_entry *entry, char *name, struct dirent *dir)
+t_infos		*get_infos(t_file *file, t_folder *parent)
 {
-	t_file		*new;
+	t_infos			*infos;
+	struct stat		filestat;
+	struct passwd	*uid;
+	struct group	*gid;
 
-	new = new_file(entry->name, name, dir);
-	new->id = entry->count;
-	if (!entry->init++)
-		entry->file = (entry->first = new);
-	else
-	{
-		new->prev = entry->file;
-		entry->file->next = new;
-		entry->file = new;
-	}
-	entry->count = entry->count + 1;
-	if (entry->max < new->name_size)
-		entry->max = new->name_size;
-	entry->totalall = entry->totalall + new->stat.st_blocks;
-	entry->total = entry->total + (name[0] == '.' ? 0 : new->stat.st_blocks);
-	update_entry_sizes(new, entry->size, new->stat);
+	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 9));
+	infos->display_name = ft_strdup(file->name);
+	infos->path = ft_strdup(file->path);
+	lstat(infos->path, &filestat);
+	infos->file_stat = filestat;
+	infos->perms = get_perms(infos->file_stat.st_mode);
+	uid = getpwuid(infos->file_stat.st_uid);
+	gid = getgrgid(infos->file_stat.st_gid);
+	infos->uid = uid;
+	infos->gid = gid;
+	infos->millis = infos->file_stat.st_mtime;
+	infos->date = get_date(infos->millis);
+	infos->sizes = get_sizes(infos, infos->file_stat, parent->sizes);
+	if (!parent->sizes)
+		parent->sizes = infos->sizes;
+	return (infos);
 }
 
-t_entry		*new_entry(void)
+t_infosize	*get_sizes(t_infos *info, struct stat pstat, t_infosize *parent)
 {
-	t_entry	*entry;
+	t_infosize	*isize;
+	int			len;
 
-	entry = (t_entry *)malloc(sizeof(t_entry *) * 11);
-	entry->init = 0;
-	entry->max = 0;
-	entry->first = NULL;
-	entry->count = 0;
-	entry->total = 0;
-	entry->totalall = 0;
-	entry->name = NULL;
-	entry->tmp_dir = NULL;
-	entry->recurs = 0;
-	entry->size = new_size();
-	return (entry);
-}
-
-t_opt		*new_opt(void)
-{
-	t_opt	*opt;
-	int		index;
-
-	index = 0;
-	opt = (t_opt *)malloc(sizeof(t_opt *) * 6);
-	opt->flag = 0;
-	opt->entries = new_entry();
-	opt->files = new_entry();
-	opt->folders = new_entry();
-	opt->error = 0;
-	opt->flags = ft_strdup("lRarts");
-	return (opt);
+	isize = parent ? parent : new_size();
+	len = ft_len((int)pstat.st_blocks);
+	isize->blocks = len > isize->blocks ? len : isize->blocks;
+	len = ft_len((int)pstat.st_nlink);
+	isize->links = len > isize->links ? len : isize->links;
+	len = (int)ft_strlen(info->uid->pw_name);
+	isize->uid = len > isize->uid ? len : isize->uid;
+	len = (int)ft_strlen(info->gid->gr_name);
+	isize->gid = len > isize->gid ? len : isize->gid;
+	len = ft_len((int)pstat.st_size);
+	isize->size = len > isize->size ? len : isize->size;
+	len = (int)ft_strlen(info->date);
+	isize->date = len > isize->date ? len : isize->date;
+	return (isize);
 }
 
 t_infosize	*new_size(void)
 {
 	t_infosize	*size;
 
-	size = (t_infosize *)malloc(sizeof(t_infosize *) * 6);
+	size = malloc(sizeof(t_infosize *) * 6);
 	size->blocks = 0;
-	size->gid = 0;
 	size->links = 0;
-	size->size = 0;
-	size->t = 0;
 	size->uid = 0;
+	size->gid = 0;
+	size->size = 0;
+	size->date = 0;
 	return (size);
+}
+
+t_folder	*new_folder(t_file *file)
+{
+	t_folder	*folder;
+
+	folder = malloc(sizeof(t_folder *) * 6);
+	folder->folder = file;
+	folder->file = NULL;
+	folder->first = NULL;
+	folder->size = 0;
+	folder->size_all = 0;
+	folder->count = 0;
+	folder->sizes = NULL;
+	return (folder);
 }

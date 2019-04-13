@@ -8,6 +8,7 @@ FOLDER=./
 FILE=0
 MESSAGE=0
 PULL=0
+BRANCH="master"
 
 while getopts "f:F:m:e:i:vhup" flag
 do
@@ -61,6 +62,7 @@ do
 done
 
 function check_branch {
+	BRANCH=`git branch | grep "*" | cut -c3-`
 	git fetch >> /dev/null
 	PULL_STATUS=`git status -uno | grep 'git pull'`
 	PUSH_STATUS=`git status -u | grep 'nothing to commit, working tree clean'`
@@ -108,14 +110,13 @@ function add_files {
 function commit_files {
 	if [ "$MESSAGE" == "0" ]
 	then
-		MESSAGE=`git diff --stat --cached origin/master | tail -1`
+		MESSAGE=`git diff --stat --cached origin/${BRANCH} | tail -1`
 	fi
 	git commit -m "$MESSAGE" >> /dev/null
 }
 
 function push_files {
-	BRANCH=`git branch | cut -c3-`
-	DIFF=`git diff --stat --cached origin/master | tail -1 | cut -d ' ' -f2`
+	DIFF=`git diff --stat --cached origin/${BRANCH} | tail -1 | cut -d ' ' -f2`
 	git push -q
 	echo -e "${YELLOW}Pushed ${GREEN}$DIFF ${YELLOW}modifications, for branch ${GREEN}$BRANCH"
 }
