@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:18:47 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 12:12:31 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,7 +182,7 @@ void					put_str(char *str, int tab, int spaces, int max);
 int						print_file(t_opt *opt, t_file *file);
 void					print_folder(t_opt *opt, t_folder *folder, int name);
 int						print_details(t_opt *opt, t_file *file);
-int						print_lnk(t_opt *opt, t_file *file);
+void					print_lnk(t_opt *opt, t_file *file);
 
 /*
 ** reader.c
