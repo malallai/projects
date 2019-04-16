@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:04:32 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:38:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ int		print_details(t_opt *opt, t_file *file)
 	else
 		put_str(infos->perms, 0, 0, 0);
 	put_nbr(infos->file_stat.st_nlink, 1, 2, infos->sizes->links);
-	put_str(infos->uid->pw_name, 1, 1, infos->sizes->uid);
-	put_str(infos->gid->gr_name, 1, 2, infos->sizes->gid);
+	put_guid(infos, infos->sizes);
 	print_size(infos, infos->sizes);
 	put_str(infos->date, 1, 1, infos->sizes->date);
 	ft_putstr(get_color(infos->file_stat.st_mode));
