@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:26:10 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:10:18 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 15:06:04 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_clean_path(t_file *file1, t_file *file2)
 	char	*tmp;
 	char	*tmp2;
 
-	tmp = ft_strjoin(file1->clean_path, "/");
+	tmp = ft_strjoin(file1->path, "/");
 	tmp2 = ft_strjoin(tmp, file2->name);
 	free(tmp);
 	return (tmp2);
