@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 13:28:16 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 13:39:13 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@
 
 # define F_DIR (char)'d'
 # define F_LINK (char)'l'
-
-# define DEBUG printf
 
 /*
 ** Contain the hightest strlen of params (-l)
