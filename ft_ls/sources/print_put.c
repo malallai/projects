@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 17:56:02 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 14:05:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:46:31 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,16 @@ void	put_str(char *str, int tab, int spaces, int max)
 	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
 		ft_putchar(' ');
 	ft_putstr(str);
+}
+
+void	put_guid(t_infos *infos, t_infosize *sizes)
+{
+	if (getpwuid(infos->file_stat.st_uid))
+		put_str(getpwuid(infos->file_stat.st_uid)->pw_name, 1, 1, sizes->uid);
+	else
+		put_nbr(infos->file_stat.st_uid, 1, 1, sizes->uid);
+	if (getgrgid(infos->file_stat.st_gid))
+		put_str(getgrgid(infos->file_stat.st_gid)->gr_name, 1, 2, sizes->gid);
+	else
+		put_nbr(infos->file_stat.st_gid, 1, 2, sizes->gid);
 }

@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:06:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:31:51 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 	infos->perms = get_perms(infos->file_stat.st_mode);
 	uid = getpwuid(infos->file_stat.st_uid);
 	gid = getgrgid(infos->file_stat.st_gid);
-	infos->uid = uid;
-	infos->gid = gid;
+	infos->uid = uid ? uid : NULL;
+	infos->gid = gid ? gid : NULL;
 	infos->millis = infos->file_stat.st_mtime;
 	infos->date = get_date(infos->millis);
 	infos->size = infos->file_stat.st_size;
@@ -72,9 +72,11 @@ t_infosize	*get_sizes(t_infos *info, struct stat pstat, t_infosize *parent)
 	isize->blocks = len > isize->blocks ? len : isize->blocks;
 	len = ft_len((int)pstat.st_nlink);
 	isize->links = len > isize->links ? len : isize->links;
-	len = (int)ft_strlen(info->uid->pw_name);
+	len = !info->uid ? ft_len(info->file_stat.st_uid) : \
+		(int)ft_strlen(info->uid->pw_name);
 	isize->uid = len > isize->uid ? len : isize->uid;
-	len = (int)ft_strlen(info->gid->gr_name);
+	len = !info->gid ? ft_len(info->file_stat.st_gid) : \
+		(int)ft_strlen(info->gid->gr_name);
 	isize->gid = len > isize->gid ? len : isize->gid;
 	len = ft_len(info->size);
 	isize->size = len > isize->size ? len : isize->size;

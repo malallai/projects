@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:06:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:14:50 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,6 +216,7 @@ void					set_main_files(t_opt *opt, int argc, \
 void					put_lnk(t_file *file);
 void					put_nbr(int nbr, int tab, int spaces, int max);
 void					put_str(char *str, int tab, int spaces, int max);
+void					put_guid(t_infos *infos, t_infosize *sizes);
 
 /*
 ** printer.c
