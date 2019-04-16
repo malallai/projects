@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:22:10 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 11:39:19 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,14 +89,14 @@ int		print_details(t_opt *opt, t_file *file)
 	return (1);
 }
 
-int		print_lnk(t_opt *opt, t_file *file)
+void	print_lnk(t_opt *opt, t_file *file)
 {
 	char	*tmp;
 	char	*tmp2;
 
 	tmp = file->path;
 	if (has_flag(opt, F_DETAIL))
-		return (0);
+		return ;
 	tmp2 = ft_strjoin(tmp, "/");
 	if (is_folder(tmp2))
 	{
@@ -104,9 +104,5 @@ int		print_lnk(t_opt *opt, t_file *file)
 		free(tmp);
 	}
 	else
-	{
 		free(tmp2);
-		return (0);
-	}
-	return (0);
 }
