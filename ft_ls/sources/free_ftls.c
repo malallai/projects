@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:29:06 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:27:08 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 12:42:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	free_infos(t_infos *infos)
 	if (!infos)
 		return ;
 	free(infos->path);
-	free(infos->display_name);
 	free(infos->perms);
 	free(infos->date);
 	free(infos);
