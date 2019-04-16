@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:26:36 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 12:42:58 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 	struct passwd	*uid;
 	struct group	*gid;
 
-	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 9));
-	infos->display_name = ft_strdup(file->name);
+	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 8));
 	infos->path = ft_strdup(file->path);
 	lstat(infos->path, &filestat);
 	infos->file_stat = filestat;
