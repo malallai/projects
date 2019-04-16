@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:18:57 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 11:39:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ void	ls(t_opt *opt, t_file *file)
 		ret = 0;
 		f = f ? f : is_folder(file->path);
 		if (file->exist && is_lnk(file->path))
-			ret = print_lnk(opt, file);
-		if (ret <= 1 && file->exist && !is_folder(file->path))
+			print_lnk(opt, file);
+		if (file->exist && !is_folder(file->path))
 			ret = print_file(opt, file);
 		else if (!file->exist)
 			print_nexist(opt, file);
