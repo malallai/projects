@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 15:24:49 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 13:58:43 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int			parse(char **argv, t_opt *opt)
 	{
 		if (argv[i][0] != '-')
 			return (i);
+		if (ft_strequ(argv[i], "--"))
+			return (i + 1);
 		if (!argv[i][1])
 			return (i);
 		b = 0;

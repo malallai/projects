@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 13:39:13 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 15:06:41 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ typedef struct			s_infosize
 	int					gid;
 	int					size;
 	int					date;
+	int					maj;
+	int					min;
 }						t_infosize;
 
 /*
@@ -75,6 +77,9 @@ typedef struct			s_infos
 	struct group		*gid;
 	char				*date;
 	int					millis;
+	int					size;
+	int					maj;
+	int					min;
 	t_infosize			*sizes;
 }						t_infos;
 
@@ -84,7 +89,6 @@ typedef struct			s_infos
 ** struct s_file	*next: 			Next link
 ** struct s_file	*prev: 			Previous link
 ** char				*path: 			Full path of file
-** char				*clean_path:	Clean path of file (for -R option)
 ** t_infs			*infos: 		See struct s_infos
 ** int				exist: 			0|1 if file exist
 */
@@ -95,7 +99,6 @@ typedef struct			s_file
 	struct s_file		*prev;
 	char				*name;
 	char				*path;
-	char				*clean_path;
 	t_infos				*infos;
 	int					exist;
 }						t_file;
@@ -225,6 +228,7 @@ int						print_file(t_opt *opt, t_file *file);
 void					print_folder(t_opt *opt, t_folder *folder, int name);
 int						print_details(t_opt *opt, t_file *file);
 void					print_lnk(t_opt *opt, t_file *file);
+void					print_size(t_infos *infos, t_infosize *sizes);
 
 /*
 ** reader.c

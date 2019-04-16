@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:22:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:18:36 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 13:57:09 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int		bad_option(t_opt *opt, char option)
 {
 	ft_putstr("ft_ls: illegal option -- ");
-	ft_putendl(&option);
+	ft_putchar(option);
+	ft_putchar('\n');
 	ft_putstr("usage: ft_ls [-");
 	ft_putstr(opt->flags);
 	ft_putendl("] [file ...]");
