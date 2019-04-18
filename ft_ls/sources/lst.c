@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 16:31:51 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/18 11:53:00 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,12 @@
 t_file		*new_file(int id, char *name, t_folder *parent)
 {
 	t_file		*file;
-	char		*tmp;
 
 	file = malloc(sizeof(t_file *) * 8);
 	file->id = id;
 	file->next = NULL;
 	file->prev = NULL;
 	file->name = ft_strdup(name);
-	if (to_folder(name, parent->folder ? parent->folder->path : ""))
-		tmp = ft_strjoin(name, "/");
-	else
-		tmp = ft_strdup(name);
 	if (parent->folder)
 		file->path = get_clean_path(parent->folder, file);
 	else
