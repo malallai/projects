@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/01 14:29:34 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 15:08:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	get_type(int mode)
 {
 	if (S_ISBLK(mode))
-		return ('p');
+		return ('b');
 	else if (S_ISCHR(mode))
 		return ('c');
 	else if (S_ISDIR(mode))
@@ -48,7 +48,7 @@ char	*get_perms(int mode)
 
 	perm = (char *)malloc(sizeof(char *) * 11);
 	perm[0] = get_type(mode);
-	perm[1] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'r' : '-';
+	perm[1] = (mode & S_IRUSR) && (mode & S_IREAD) ? 'r' : '-';
 	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
 	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
 	perm[4] = (mode & S_IRGRP) && (mode & S_IREAD) ? 'r' : '-';
