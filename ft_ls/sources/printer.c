@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 11:39:19 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:38:21 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	opt->print = 1;
 	if (name)
 	{
-		ft_putstr(folder->folder->clean_path);
+		ft_putstr(folder->folder->path);
 		ft_putendl(":");
 	}
 	if (!file)
@@ -77,9 +77,8 @@ int		print_details(t_opt *opt, t_file *file)
 	else
 		put_str(infos->perms, 0, 0, 0);
 	put_nbr(infos->file_stat.st_nlink, 1, 2, infos->sizes->links);
-	put_str(infos->uid->pw_name, 1, 1, infos->sizes->uid);
-	put_str(infos->gid->gr_name, 1, 2, infos->sizes->gid);
-	put_nbr(infos->file_stat.st_size, 1, 2, infos->sizes->size);
+	put_guid(infos, infos->sizes);
+	print_size(infos, infos->sizes);
 	put_str(infos->date, 1, 1, infos->sizes->date);
 	ft_putstr(get_color(infos->file_stat.st_mode));
 	ft_putchar(' ');
@@ -87,6 +86,20 @@ int		print_details(t_opt *opt, t_file *file)
 	ft_putstr(WHITE);
 	put_lnk(file);
 	return (1);
+}
+
+void	print_size(t_infos *infos, t_infosize *sizes)
+{
+	if (S_ISBLK(infos->file_stat.st_mode) || S_ISCHR(infos->file_stat.st_mode))
+	{
+		put_nbr(infos->maj, 1, 4, sizes->maj);
+		ft_putstr(",");
+		put_nbr(infos->min, 1, 2, sizes->min);
+	}
+	else
+	{
+		put_nbr(infos->size, 1, 2, sizes->size);
+	}
 }
 
 void	print_lnk(t_opt *opt, t_file *file)
