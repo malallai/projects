@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:59:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/18 13:18:07 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 		while ((sd = readdir(dir)))
 		{
 			tmp = new_file(index, sd->d_name, folder);
-			update_read_folder(folder, tmp, index++);
+			if (tmp)
+				update_read_folder(folder, tmp, index++);
 		}
 		closedir(dir);
 		folder->count = index;

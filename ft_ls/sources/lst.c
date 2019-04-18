@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/18 11:53:00 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/18 13:28:00 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,17 @@ t_file		*new_file(int id, char *name, t_folder *parent)
 	else
 		file->path = ft_strdup(file->name);
 	file->exist = exist(file);
-	file->infos = file->exist ? get_infos(file, parent) : NULL;
+	file->infos = get_infos(file, parent);
+	if (!file->infos)
+	{
+		free_file(file);
+		file = NULL;
+	}
+	else
+	{
+		if (!parent->sizes)
+			parent->sizes = file->infos->sizes;
+	}
 	return (file);
 }
 
@@ -39,7 +49,11 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 
 	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 11));
 	infos->path = ft_strdup(file->path);
-	lstat(infos->path, &filestat);
+	if ((lstat(infos->path, &filestat)) < 0)
+	{
+		free(infos->path);
+		return (NULL);
+	}
 	infos->file_stat = filestat;
 	infos->perms = get_perms(infos->file_stat.st_mode);
 	uid = getpwuid(infos->file_stat.st_uid);
@@ -52,8 +66,6 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 	infos->maj = major(infos->file_stat.st_rdev);
 	infos->min = minor(infos->file_stat.st_rdev);
 	infos->sizes = get_sizes(infos, infos->file_stat, parent->sizes);
-	if (!parent->sizes)
-		parent->sizes = infos->sizes;
 	return (infos);
 }
 
