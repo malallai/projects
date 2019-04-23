@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:10:33 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 18:16:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 static char		*get_finaldate(time_t date, char *file_time, \
 		char *base_time)

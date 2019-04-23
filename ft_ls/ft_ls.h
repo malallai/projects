@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 13:12:42 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:55:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ typedef struct			s_opt
 	int					flag;
 	int					error;
 	int					print;
+	int					forcedetail;
 	char				*flags;
 	t_folder			*main;
 }						t_opt;
@@ -186,7 +187,8 @@ int						exit_ftls(t_opt *opt);
 ** new_size:			init new t_infosize
 ** new_folder:			init new t_folder from t_file
 */
-t_file					*new_file(int id, char *name, t_folder *parent);
+t_file					*new_file(t_opt *opt, int id, \
+						char *name, t_folder *parent);
 t_infos					*get_infos(t_file *file, t_folder *parent);
 t_infosize				*get_sizes(t_infos *info, struct stat pstat, \
 						t_infosize *parent);

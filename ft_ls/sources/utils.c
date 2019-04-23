@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 12:55:57 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 char	get_type(int mode)
 {

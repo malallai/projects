@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:26:10 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:06:04 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 void	recurs(t_opt *opt, t_folder *folder)
 {

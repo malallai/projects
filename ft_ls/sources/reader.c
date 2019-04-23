@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/20 12:22:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 void	read_folder(t_opt *opt, t_folder *folder, int name)
 {
@@ -26,7 +26,7 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 	{
 		while ((sd = readdir(dir)))
 		{
-			tmp = new_file(index, sd->d_name, folder);
+			tmp = new_file(opt, index, sd->d_name, folder);
 			if (tmp)
 				update_read_folder(folder, tmp, index++);
 		}
@@ -82,8 +82,6 @@ void	ls(t_opt *opt, t_file *file)
 			print_lnk(opt, file);
 		if (file->exist && !is_folder(file->path))
 			ret = print_file(opt, file);
-		else if (!file->exist)
-			print_nexist(opt, file);
 		fi = ret && !fi ? 1 : fi;
 		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
 		if (ret == 1)

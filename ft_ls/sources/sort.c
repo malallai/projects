@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:06:12 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 13:21:13 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 void		sort(t_opt *opt, t_folder *folder, int low, int high)
 {
