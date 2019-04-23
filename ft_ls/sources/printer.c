@@ -6,15 +6,15 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 16:38:21 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:11:43 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 int		print_file(t_opt *opt, t_file *file)
 {
-	if (!has_flag(opt, F_ALL) && is_hidden_file(file->name))
+	if (!can_print(opt, file->name))
 		return (0);
 	opt->print = 1;
 	if (!file->infos)
@@ -28,9 +28,9 @@ int		print_file(t_opt *opt, t_file *file)
 			ft_putnbr(file->infos->file_stat.st_blocks);
 			ft_putchar(' ');
 		}
-		ft_putstr(get_color(file->infos->file_stat.st_mode));
+		ft_putstr(get_color(opt, file->infos->file_stat.st_mode));
 		ft_putstr(file->name);
-		ft_putstr(WHITE);
+		ft_putstr(get_color(opt, 0));
 	}
 	return (1);
 }
@@ -40,17 +40,17 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	t_file	*file;
 	int		ret;
 
-	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
+	file = reverse(opt) ? folder->file : folder->first;
 	ft_putstr(opt->print ? "\n" : "");
 	opt->print = 1;
-	if (name)
+	if (name || opt->forcedetail)
 	{
 		ft_putstr(folder->folder->path);
 		ft_putendl(":");
 	}
 	if (!file)
 		return ;
-	if (has_flag(opt, F_DETAIL))
+	if (can_print_total_folder(opt, folder))
 	{
 		ft_putstr("total ");
 		ft_putnbrln(has_flag(opt, F_ALL) ? folder->size_all : folder->size);
@@ -58,7 +58,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	while (file)
 	{
 		ret = print_file(opt, file);
-		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
+		file = reverse(opt) ? file->prev : file->next;
 		if (ret)
 			ft_putchar('\n');
 	}
@@ -80,10 +80,10 @@ int		print_details(t_opt *opt, t_file *file)
 	put_guid(infos, infos->sizes);
 	print_size(infos, infos->sizes);
 	put_str(infos->date, 1, 1, infos->sizes->date);
-	ft_putstr(get_color(infos->file_stat.st_mode));
 	ft_putchar(' ');
+	ft_putstr(get_color(opt, infos->file_stat.st_mode));
 	put_str(file->name, 0, 0, 0);
-	ft_putstr(WHITE);
+	ft_putstr(get_color(opt, 0));
 	put_lnk(file);
 	return (1);
 }

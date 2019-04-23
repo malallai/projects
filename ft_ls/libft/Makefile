@@ -119,5 +119,6 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm -rf $(OBJECTS_FOLDER)
 
 re: fclean all
