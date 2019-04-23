@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:21:44 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/13 16:52:43 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:22:55 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int		main(int argc, char **argv)
 		if (has_flag(opt, F_UNSORT))
 			set_flag('a', opt);
 		set_main_files(opt, argc, argv, i);
+		ft_putnbrln(i);
+		ft_putnbrln(argc);
 		if (i != argc)
 			sort(opt, opt->main, 0, opt->main->count);
 	}
