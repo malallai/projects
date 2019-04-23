@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:08:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:30:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 char	get_type(int mode)
 {
@@ -21,7 +21,7 @@ char	get_type(int mode)
 	else if (S_ISDIR(mode))
 		return ('d');
 	else if (S_ISFIFO(mode))
-		return ('t');
+		return ('p');
 	else if (S_ISLNK(mode))
 		return ('l');
 	else if (S_ISREG(mode))
@@ -31,14 +31,22 @@ char	get_type(int mode)
 	return ('-');
 }
 
-char	*get_color(int mode)
+char	*get_color(t_opt *opt, int mode)
 {
+	if (!has_flag(opt, F_COLOR))
+		return ("");
 	if (S_ISLNK(mode))
 		return (PURPLE);
 	else if (S_ISDIR(mode))
 		return (CYAN);
 	else if (mode & S_IXUSR)
 		return (RED);
+	else if (S_ISCHR(mode))
+		return (CHR);
+	else if (S_ISBLK(mode))
+		return (BLK);
+	else if (S_ISFIFO(mode))
+		return (FIFO);
 	return (WHITE);
 }
 
@@ -64,4 +72,9 @@ char	*get_perms(int mode)
 int		has_flag(t_opt *opt, int flag)
 {
 	return ((opt->flag & flag) > 0);
+}
+
+int		reverse(t_opt *opt)
+{
+	return (has_flag(opt, F_REVERSE) && !has_flag(opt, F_UNSORT));
 }

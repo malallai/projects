@@ -12,6 +12,7 @@ OBJECTS_FOLDER = ./objects/
 LIBS = libft
 
 SOURCES = \
+	files_utils.c \
 	files.c \
 	free_ftls.c \
 	ft_ls.c \
@@ -79,6 +80,7 @@ clean:
 fclean: clean
 	@make -C $(LIBS) fclean
 	@rm -f $(NAME)
+	@rm -rf $(OBJECTS_FOLDER)
 	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed $(INFO_COLOR)$(NAME)$(NO_COLOR).\n"
 
 doclean: all clean

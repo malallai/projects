@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 16:14:50 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:11:34 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,17 @@
 # define F_TIME 16
 # define F_BLOCKS 32
 # define F_UNSORT 64
+# define F_COLOR 128
+# define F_ONEBYLINE 256
+# define F_ALLEXCEPTPT 512
 
-# define WHITE (char *)"\033[0m"
-# define CYAN (char *)"\033[1;36m"
-# define RED (char *)"\033[0;31m"
-# define PURPLE (char *)"\033[0;35m"
-
-# define GREEN (char *)"\033[38;5;118m"
-# define YELLOW (char *)"\033[38;5;226m"
+# define WHITE (char *)"\e[0m"
+# define CYAN (char *)"\e[1;36m"
+# define RED (char *)"\e[0;31m"
+# define PURPLE (char *)"\e[0;35m"
+# define CHR (char *)"\e[34;48;5;3m"
+# define BLK (char *)"\e[34;48;5;6m"
+# define FIFO (char *)"\e[38;5;226m"
 
 # define F_DIR (char)'d'
 # define F_LINK (char)'l'
@@ -135,21 +138,28 @@ typedef struct			s_opt
 	int					flag;
 	int					error;
 	int					print;
+	int					forcedetail;
 	char				*flags;
 	t_folder			*main;
 }						t_opt;
 
 /*
-** files.c
+** files_utils.c
 ** is_hidden_file:		return if file start with '.'
 ** is_parent:			return if file is . | ..
 ** can_print:			return if can print next file
-** to_folder:			return if need to strjoin '/'
-** get_file:			get indexed file in t_file
+** can_print_folder:	return if can print folder
 */
 int						is_hidden_file(char *str);
 int						is_parent(char *str);
 int						can_print(t_opt *opt, char *str);
+int						can_print_total_folder(t_opt *opt, t_folder *folder);
+
+/*
+** files.c
+** to_folder:			return if need to strjoin '/'
+** get_file:			get indexed file in t_file
+*/
 int						to_folder(char *name, char *entry_name);
 t_file					*get_file(t_file *first, int id);
 
@@ -183,7 +193,8 @@ int						exit_ftls(t_opt *opt);
 ** new_size:			init new t_infosize
 ** new_folder:			init new t_folder from t_file
 */
-t_file					*new_file(int id, char *name, t_folder *parent);
+t_file					*new_file(t_opt *opt, int id, \
+						char *name, t_folder *parent);
 t_infos					*get_infos(t_file *file, t_folder *parent);
 t_infosize				*get_sizes(t_infos *info, struct stat pstat, \
 						t_infosize *parent);
@@ -295,10 +306,12 @@ char					*get_date(time_t date);
 ** get_color:			get color for typed file
 ** get_perms:			return perms for ls -l (-rwxr-xr-x)
 ** has_flag:			return if flag is in opt->flag (-lRar..)
+** reverse:				return if flag reverse is set and not unsort
 */
 char					get_type(int mode);
-char					*get_color(int mode);
+char					*get_color(t_opt *opt, int mode);
 char					*get_perms(int mode);
 int						has_flag(t_opt *opt, int flag);
+int						reverse(t_opt *opt);
 
 #endif

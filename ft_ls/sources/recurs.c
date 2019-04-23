@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:26:10 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:06:04 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:28:45 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 void	recurs(t_opt *opt, t_folder *folder)
 {
@@ -18,12 +18,12 @@ void	recurs(t_opt *opt, t_folder *folder)
 
 	if (!has_flag(opt, F_RECURS))
 		return ;
-	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
+	file = reverse(opt) ? folder->file : folder->first;
 	while (file)
 	{
 		if (file->exist && is_folder(file->path) && !is_parent(file->name))
 			read_folder(opt, new_folder(file), file->prev || file->next);
-		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
+		file = reverse(opt) ? file->prev : file->next;
 	}
 }
 
