@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:51:46 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:11:43 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	}
 	if (!file)
 		return ;
-	if (can_print_folder(opt, folder))
+	if (can_print_total_folder(opt, folder))
 	{
 		ft_putstr("total ");
 		ft_putnbrln(has_flag(opt, F_ALL) ? folder->size_all : folder->size);
