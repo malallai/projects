@@ -6,28 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:52:52 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:04:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:50:11 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_ls.h"
-
-int		is_hidden_file(char *str)
-{
-	return ((str[0] == '.' && str[1] != '/') \
-		|| (str[0] == '.' && str[1] == '.'));
-}
-
-int		is_parent(char *str)
-{
-	return (ft_strequ(str, ".") || ft_strequ(str, ".."));
-}
-
-int		can_print(t_opt *opt, char *str)
-{
-	return (has_flag(opt, F_ALL) || (!has_flag(opt, F_ALL) \
-		&& !is_hidden_file(str)));
-}
 
 int		to_folder(char *name, char *entry_name)
 {

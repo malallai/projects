@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:51:46 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		print_file(t_opt *opt, t_file *file)
 {
-	if (!has_flag(opt, F_ALL) && is_hidden_file(file->name))
+	if (!can_print(opt, file->name))
 		return (0);
 	opt->print = 1;
 	if (!file->infos)
@@ -40,7 +40,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	t_file	*file;
 	int		ret;
 
-	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
+	file = reverse(opt) ? folder->file : folder->first;
 	ft_putstr(opt->print ? "\n" : "");
 	opt->print = 1;
 	if (name || opt->forcedetail)
@@ -50,7 +50,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	}
 	if (!file)
 		return ;
-	if (has_flag(opt, F_DETAIL) && (folder->count > 2 || has_flag(opt, F_ALL)))
+	if (can_print_folder(opt, folder))
 	{
 		ft_putstr("total ");
 		ft_putnbrln(has_flag(opt, F_ALL) ? folder->size_all : folder->size);
@@ -58,7 +58,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	while (file)
 	{
 		ret = print_file(opt, file);
-		file = has_flag(opt, F_REVERSE) ? file->prev : file->next;
+		file = reverse(opt) ? file->prev : file->next;
 		if (ret)
 			ft_putchar('\n');
 	}

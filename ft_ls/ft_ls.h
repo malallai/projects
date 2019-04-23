@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 13:55:46 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:51:16 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,16 +144,22 @@ typedef struct			s_opt
 }						t_opt;
 
 /*
-** files.c
+** files_utils.c
 ** is_hidden_file:		return if file start with '.'
 ** is_parent:			return if file is . | ..
 ** can_print:			return if can print next file
-** to_folder:			return if need to strjoin '/'
-** get_file:			get indexed file in t_file
+** can_print_folder:	return if can print folder
 */
 int						is_hidden_file(char *str);
 int						is_parent(char *str);
 int						can_print(t_opt *opt, char *str);
+int						can_print_folder(t_opt *opt, t_folder *folder);
+
+/*
+** files.c
+** to_folder:			return if need to strjoin '/'
+** get_file:			get indexed file in t_file
+*/
 int						to_folder(char *name, char *entry_name);
 t_file					*get_file(t_file *first, int id);
 
@@ -300,10 +306,12 @@ char					*get_date(time_t date);
 ** get_color:			get color for typed file
 ** get_perms:			return perms for ls -l (-rwxr-xr-x)
 ** has_flag:			return if flag is in opt->flag (-lRar..)
+** reverse:				return if flag reverse is set and not unsort
 */
 char					get_type(int mode);
 char					*get_color(t_opt *opt, int mode);
 char					*get_perms(int mode);
 int						has_flag(t_opt *opt, int flag);
+int						reverse(t_opt *opt);
 
 #endif

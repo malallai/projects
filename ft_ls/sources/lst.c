@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:26:20 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,11 @@ t_infosize	*get_sizes(t_infos *info, struct stat pstat, t_infosize *parent)
 	isize->blocks = len > isize->blocks ? len : isize->blocks;
 	len = ft_len((int)pstat.st_nlink);
 	isize->links = len > isize->links ? len : isize->links;
-	len = !info->uid ? ft_len(info->file_stat.st_uid) : \
-		(int)ft_strlen(info->uid->pw_name);
+	len = !info->uid ? ft_len(info->file_stat.st_uid) \
+		: (int)ft_strlen(info->uid->pw_name);
 	isize->uid = len > isize->uid ? len : isize->uid;
-	len = !info->gid ? ft_len(info->file_stat.st_gid) : \
-		(int)ft_strlen(info->gid->gr_name);
+	len = !info->gid ? ft_len(info->file_stat.st_gid) \
+		: (int)ft_strlen(info->gid->gr_name);
 	isize->gid = len > isize->gid ? len : isize->gid;
 	len = ft_len(info->size);
 	isize->size = len > isize->size ? len : isize->size;
