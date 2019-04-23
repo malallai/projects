@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:30:28 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,9 @@ char	*get_perms(int mode)
 int		has_flag(t_opt *opt, int flag)
 {
 	return ((opt->flag & flag) > 0);
+}
+
+int		reverse(t_opt *opt)
+{
+	return (has_flag(opt, F_REVERSE) && !has_flag(opt, F_UNSORT));
 }
