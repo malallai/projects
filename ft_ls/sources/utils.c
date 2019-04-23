@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 15:08:06 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:23:33 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ char	get_type(int mode)
 	return ('-');
 }
 
-char	*get_color(int mode)
+char	*get_color(t_opt *opt, int mode)
 {
+	if (!has_flag(opt, F_COLOR))
+		return ("");
 	if (S_ISLNK(mode))
 		return (PURPLE);
 	else if (S_ISDIR(mode))

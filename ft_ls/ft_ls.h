@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 16:14:50 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:30:03 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,13 @@
 # define F_TIME 16
 # define F_BLOCKS 32
 # define F_UNSORT 64
+# define F_COLOR 128
+# define F_ONEBYLINE 256
 
 # define WHITE (char *)"\033[0m"
 # define CYAN (char *)"\033[1;36m"
 # define RED (char *)"\033[0;31m"
 # define PURPLE (char *)"\033[0;35m"
-
-# define GREEN (char *)"\033[38;5;118m"
-# define YELLOW (char *)"\033[38;5;226m"
 
 # define F_DIR (char)'d'
 # define F_LINK (char)'l'
@@ -297,7 +296,7 @@ char					*get_date(time_t date);
 ** has_flag:			return if flag is in opt->flag (-lRar..)
 */
 char					get_type(int mode);
-char					*get_color(int mode);
+char					*get_color(t_opt *opt, int mode);
 char					*get_perms(int mode);
 int						has_flag(t_opt *opt, int flag);
 

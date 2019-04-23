@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/18 12:28:58 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:23:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int		print_file(t_opt *opt, t_file *file)
 			ft_putnbr(file->infos->file_stat.st_blocks);
 			ft_putchar(' ');
 		}
-		ft_putstr(get_color(file->infos->file_stat.st_mode));
+		ft_putstr(get_color(opt, file->infos->file_stat.st_mode));
 		ft_putstr(file->name);
-		ft_putstr(WHITE);
+		ft_putstr(get_color(opt, 0));
 	}
 	return (1);
 }
@@ -80,10 +80,10 @@ int		print_details(t_opt *opt, t_file *file)
 	put_guid(infos, infos->sizes);
 	print_size(infos, infos->sizes);
 	put_str(infos->date, 1, 1, infos->sizes->date);
-	ft_putstr(get_color(infos->file_stat.st_mode));
+	ft_putstr(get_color(opt, infos->file_stat.st_mode));
 	ft_putchar(' ');
 	put_str(file->name, 0, 0, 0);
-	ft_putstr(WHITE);
+	ft_putstr(get_color(opt, 0));
 	put_lnk(file);
 	return (1);
 }
