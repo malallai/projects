@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:11:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 12:23:33 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:55:57 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	get_type(int mode)
 	else if (S_ISDIR(mode))
 		return ('d');
 	else if (S_ISFIFO(mode))
-		return ('t');
+		return ('p');
 	else if (S_ISLNK(mode))
 		return ('l');
 	else if (S_ISREG(mode))
@@ -41,6 +41,12 @@ char	*get_color(t_opt *opt, int mode)
 		return (CYAN);
 	else if (mode & S_IXUSR)
 		return (RED);
+	else if (S_ISCHR(mode))
+		return (CHR);
+	else if (S_ISBLK(mode))
+		return (BLK);
+	else if (S_ISFIFO(mode))
+		return (FIFO);
 	return (WHITE);
 }
 

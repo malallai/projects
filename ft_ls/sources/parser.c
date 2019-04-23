@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 13:58:43 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:00:15 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int			set_flag(char c_flag, t_opt *opt)
 		opt->flag |= 1 << bi;
 		return (1);
 	}
-	else
-		return (bad_option(opt, c_flag));
+	return (bad_option(opt, c_flag));
 }
 
 int			parse(char **argv, t_opt *opt)
