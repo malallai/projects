@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/20 12:20:52 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
-t_file		*new_file(int id, char *name, t_folder *parent)
+t_file		*new_file(t_opt *opt, int id, char *name, t_folder *parent)
 {
 	t_file		*file;
 
@@ -27,16 +27,17 @@ t_file		*new_file(int id, char *name, t_folder *parent)
 		file->path = ft_strdup(file->name);
 	file->exist = exist(file);
 	file->infos = get_infos(file, parent);
-	if (!file->infos)
+	if (!file->exist || !file->infos)
 	{
-		free_file(file);
-		file = NULL;
+		opt->forcedetail = 1;
+		if (!file->exist)
+			print_nexist(opt, file);
+		else
+			free_file(file);
+		return ((file = NULL));
 	}
-	else
-	{
-		if (!parent->sizes)
-			parent->sizes = file->infos->sizes;
-	}
+	if (!parent->sizes)
+		parent->sizes = file->infos->sizes;
 	return (file);
 }
 

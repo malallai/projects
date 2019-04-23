@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:25 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 12:42:15 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 int		print_file(t_opt *opt, t_file *file)
 {
@@ -43,7 +43,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	file = has_flag(opt, F_REVERSE) ? folder->file : folder->first;
 	ft_putstr(opt->print ? "\n" : "");
 	opt->print = 1;
-	if (name)
+	if (name || opt->forcedetail)
 	{
 		ft_putstr(folder->folder->path);
 		ft_putendl(":");
