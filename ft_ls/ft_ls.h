@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 15:11:34 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/24 20:27:31 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,7 +148,7 @@ typedef struct			s_opt
 ** is_hidden_file:		return if file start with '.'
 ** is_parent:			return if file is . | ..
 ** can_print:			return if can print next file
-** can_print_folder:	return if can print folder
+** can_print_total_folder:	return if can print folder
 */
 int						is_hidden_file(char *str);
 int						is_parent(char *str);
