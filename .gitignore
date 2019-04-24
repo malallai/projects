@@ -1,4 +1,3 @@
 *.git
 *.o
-ft_ls
 libft.a
