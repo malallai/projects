@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:26:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/24 21:57:16 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ t_file		*new_file(t_opt *opt, int id, char *name, t_folder *parent)
 		opt->forcedetail = 1;
 		if (!file->exist)
 			print_nexist(opt, file);
-		else
-			free_file(file);
+		free_file(file);
 		return ((file = NULL));
 	}
 	if (!parent->sizes)
@@ -52,7 +51,7 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 	infos->path = ft_strdup(file->path);
 	if ((lstat(infos->path, &filestat)) < 0)
 	{
-		free(infos->path);
+		free_infos(infos);
 		return (NULL);
 	}
 	infos->file_stat = filestat;
