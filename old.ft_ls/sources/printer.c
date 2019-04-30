@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:46:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/03/23 17:28:32 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:20:47 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		print(t_opt *opt, t_entry *entry, t_file *file, t_infos *infos)
 	}
 	if (!has_flag(opt, F_ALL) && infos->name[0] == '.')
 		return (0);
-	ft_putstr(get_color(infos->stat.st_mode));
+	ft_putstr(get_color(opt, infos->stat.st_mode));
 	ft_putstr(infos->name);
 	ft_putstr(WHITE);
 	return (1);
@@ -48,7 +48,7 @@ void	print_details(t_opt *opt, t_entry *entry, t_file *file, \
 	put(infos->gid->gr_name, 1, 2, entry->size->gid);
 	put_nbr(infos->stat.st_size, 1, 2, entry->size->size);
 	put(file->date, 1, 1, entry->size->t);
-	ft_putstr(get_color(infos->stat.st_mode));
+	ft_putstr(get_color(opt, infos->stat.st_mode));
 	ft_putchar(' ');
 	put(infos->name, 0, 0, 0);
 	ft_putstr(WHITE);

@@ -6,17 +6,17 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:29:06 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/02 17:29:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 16:40:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 void	free_infos(t_infos *infos)
 {
-	free(infos->sizes);
+	if (!infos)
+		return ;
 	free(infos->path);
-	free(infos->display_name);
 	free(infos->perms);
 	free(infos->date);
 	free(infos);
@@ -35,7 +35,10 @@ void	free_file(t_file *file)
 
 void	free_folder(t_folder *folder)
 {
+	if (!folder)
+		return ;
 	free_file(folder->first);
+	free(folder->sizes);
 	free(folder);
 }
 
