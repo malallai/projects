@@ -6,11 +6,11 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:35:59 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/06 18:14:08 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ls.h>
+#include "../ft_ls.h"
 
 int			set_flag(char c_flag, t_opt *opt)
 {
@@ -22,8 +22,7 @@ int			set_flag(char c_flag, t_opt *opt)
 		opt->flag |= 1 << bi;
 		return (1);
 	}
-	else
-		return (bad_option(opt, c_flag));
+	return (bad_option(opt, c_flag));
 }
 
 int			parse(char **argv, t_opt *opt)
@@ -38,6 +37,8 @@ int			parse(char **argv, t_opt *opt)
 	{
 		if (argv[i][0] != '-')
 			return (i);
+		if (ft_strequ(argv[i], "--"))
+			return (i + 1);
 		if (!argv[i][1])
 			return (i);
 		b = 0;
@@ -56,14 +57,15 @@ void		set_main_files(t_opt *opt, int argc, char **argv, int a_index)
 	index = 0;
 	if (a_index == argc)
 	{
-		opt->main->first = new_file(0, ".", opt->main);
+		opt->main->first = new_file(opt, 0, ".", opt->main);
 		opt->main->file = opt->main->first;
 		opt->main->count = 1;
 		index++;
 	}
 	while (a_index < argc)
 	{
-		file = new_file(index, argv[a_index++], opt->main);
+		if (!(file = new_file(opt, index, argv[a_index++], opt->main)))
+			continue ;
 		if (index++)
 		{
 			file->prev = opt->main->file;

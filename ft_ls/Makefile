@@ -12,6 +12,7 @@ OBJECTS_FOLDER = ./objects/
 LIBS = libft
 
 SOURCES = \
+	files_utils.c \
 	files.c \
 	free_ftls.c \
 	ft_ls.c \
@@ -22,6 +23,7 @@ SOURCES = \
 	print_put.c \
 	printer.c \
 	reader.c \
+	recurs.c \
 	sort.c \
 	stat_ftls.c \
 	swap.c \
@@ -34,8 +36,8 @@ OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
 SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FSANITIZE = -fsanitize=address
-FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
-#FLAGS = -Wall -Wextra -Werror
+#FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
+FLAGS = -Wall -Wextra -Werror
 CC = clang
 
 NO_COLOR =		\033[38;5;15m
@@ -78,6 +80,7 @@ clean:
 fclean: clean
 	@make -C $(LIBS) fclean
 	@rm -f $(NAME)
+	@rm -rf $(OBJECTS_FOLDER)
 	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed $(INFO_COLOR)$(NAME)$(NO_COLOR).\n"
 
 doclean: all clean
