@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:26:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/24 22:08:17 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ t_file		*new_file(t_opt *opt, int id, char *name, t_folder *parent)
 		opt->forcedetail = 1;
 		if (!file->exist)
 			print_nexist(opt, file);
-		else
-			free_file(file);
+		free_file(file);
 		return ((file = NULL));
 	}
 	if (!parent->sizes)
@@ -45,22 +44,21 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 {
 	t_infos			*infos;
 	struct stat		filestat;
-	struct passwd	*uid;
-	struct group	*gid;
 
 	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 11));
 	infos->path = ft_strdup(file->path);
 	if ((lstat(infos->path, &filestat)) < 0)
 	{
 		free(infos->path);
+		free(infos);
 		return (NULL);
 	}
 	infos->file_stat = filestat;
 	infos->perms = get_perms(infos->file_stat.st_mode);
-	uid = getpwuid(infos->file_stat.st_uid);
-	gid = getgrgid(infos->file_stat.st_gid);
-	infos->uid = uid ? uid : NULL;
-	infos->gid = gid ? gid : NULL;
+	infos->uid = getpwuid(infos->file_stat.st_uid) \
+		? getpwuid(infos->file_stat.st_uid) : NULL;
+	infos->gid = getgrgid(infos->file_stat.st_gid) \
+		? getgrgid(infos->file_stat.st_gid) : NULL;
 	infos->millis = infos->file_stat.st_mtime;
 	infos->date = get_date(infos->millis);
 	infos->size = infos->file_stat.st_size;

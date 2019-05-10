@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/24 20:33:06 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/24 20:37:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/04/24 21:04:09 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,16 @@ int		is_parent(char *str)
 
 int		can_print(t_opt *opt, char *str)
 {
-	return (has_flag(opt, F_ALL) || (!has_flag(opt, F_ALL) \
-		&& !is_hidden_file(str)));
+	return (has_flag(opt, F_ALL) \
+		|| (has_flag(opt, F_ALLEXCEPTPT) && !is_parent(str)) \
+		|| (!has_flag(opt, F_ALL) && !is_hidden_file(str)));
 }
 
 int		can_print_total_folder(t_opt *opt, t_folder *folder)
 {
 	t_file *file;
 
-	if (has_flag(opt, F_ALL))
+	if (!has_flag(opt, F_DETAIL))
 		return (0);
 	file = folder->first;
 	while (file)
