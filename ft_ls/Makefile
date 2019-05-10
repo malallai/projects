@@ -18,6 +18,7 @@ SOURCES = \
 	ft_ls.c \
 	ft_ls_exit.c \
 	lst.c \
+	no_file.c \
 	opt.c \
 	parser.c \
 	print_put.c \
