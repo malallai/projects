@@ -6,13 +6,13 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:28:26 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 16:41:04 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/10 15:28:56 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_ls.h"
 
-void	read_folder(t_opt *opt, t_folder *folder, int name)
+void	read_folder(t_opt *opt, t_folder *folder, int name, int r)
 {
 	int				index;
 	DIR				*dir;
@@ -33,7 +33,8 @@ void	read_folder(t_opt *opt, t_folder *folder, int name)
 		closedir(dir);
 		folder->count = index;
 		sort(opt, folder, 0, folder->count);
-		print_folder(opt, folder, name);
+		if (!(r && !can_print(opt, folder->folder->name)))
+			print_folder(opt, folder, name);
 		recurs(opt, folder);
 	}
 	free_folder(folder);
@@ -62,7 +63,7 @@ void	ls_folder(t_opt *opt, t_file *file)
 	while (file)
 	{
 		if (file->exist && is_folder(file->path))
-			read_folder(opt, new_folder(file), file->prev || file->next);
+			read_folder(opt, new_folder(file), file->prev || file->next, 0);
 		file = reverse(opt) ? file->prev : file->next;
 	}
 }
