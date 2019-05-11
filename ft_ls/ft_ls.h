@@ -125,7 +125,6 @@ typedef struct			s_folder
 	t_file				*file;
 	t_infosize			*sizes;
 	int					size;
-	int					size_all;
 	int					count;
 }						t_folder;
 
