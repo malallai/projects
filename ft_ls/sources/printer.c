@@ -53,7 +53,7 @@ void	print_folder(t_opt *opt, t_folder *folder, int name)
 	if (can_print_total_folder(opt, folder))
 	{
 		ft_putstr("total ");
-		ft_putnbrln(has_flag(opt, F_ALL) ? folder->size_all : folder->size);
+		ft_putnbrln(folder->size);
 	}
 	while (file)
 	{
