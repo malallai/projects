@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:26:10 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:28:45 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/10 14:41:06 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	recurs(t_opt *opt, t_folder *folder)
 	while (file)
 	{
 		if (file->exist && is_folder(file->path) && !is_parent(file->name))
-			read_folder(opt, new_folder(file), file->prev || file->next);
+			read_folder(opt, new_folder(file), file->prev || file->next, 1);
 		file = reverse(opt) ? file->prev : file->next;
 	}
 }

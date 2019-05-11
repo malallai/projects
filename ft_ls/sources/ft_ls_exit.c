@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 12:22:40 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/10 16:09:26 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int		bad_option(t_opt *opt, char option)
 	return (exit_ftls(opt));
 }
 
-void	print_nexist(t_opt *opt, t_file *file)
+void	print_nexist(t_opt *opt, char *name)
 {
 	ft_putstr("ft_ls: ");
-	ft_putstr(file->name);
+	ft_putstr(name);
 	ft_putendl(": No such file or directory");
 	opt->error = 1;
 }
