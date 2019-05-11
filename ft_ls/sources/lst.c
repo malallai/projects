@@ -119,12 +119,11 @@ t_folder	*new_folder(t_file *file)
 {
 	t_folder	*folder;
 
-	folder = malloc(sizeof(t_folder *) * 6);
+	folder = malloc(sizeof(t_folder *) * 5);
 	folder->folder = file;
 	folder->file = NULL;
 	folder->first = NULL;
 	folder->size = 0;
-	folder->size_all = 0;
 	folder->count = 0;
 	folder->sizes = NULL;
 	return (folder);
