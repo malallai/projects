@@ -268,7 +268,7 @@ void					print_size(t_infos *infos, t_infosize *sizes);
 */
 void					read_folder(t_opt *opt, t_folder *folder, int name, \
 						int recurs);
-void					update_read_folder(t_folder *folder, \
+void					update_read_folder(t_opt *opt, t_folder *folder, \
 						t_file *tmp, int index);
 void					ls_folder(t_opt *opt, t_file *file);
 void					ls(t_opt *opt, t_file *file);
