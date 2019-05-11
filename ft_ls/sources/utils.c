@@ -58,13 +58,22 @@ char	*get_perms(int mode)
 	perm[0] = get_type(mode);
 	perm[1] = (mode & S_IRUSR) && (mode & S_IREAD) ? 'r' : '-';
 	perm[2] = (mode & S_IWUSR) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
+	if (mode & S_ISUID)
+		perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 's' : 'S';
+	else
+		perm[3] = (mode & S_IXUSR) && (mode & S_IEXEC) ? 'x' : '-';
 	perm[4] = (mode & S_IRGRP) && (mode & S_IREAD) ? 'r' : '-';
 	perm[5] = (mode & S_IWGRP) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 'x' : '-';
+	if (mode & S_ISGID)
+		perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 's' : 'S';
+	else
+		perm[6] = (mode & S_IXGRP) && (mode & S_IEXEC) ? 'x' : '-';
 	perm[7] = (mode & S_IROTH) && (mode & S_IREAD) ? 'r' : '-';
 	perm[8] = (mode & S_IWOTH) && (mode & S_IWRITE) ? 'w' : '-';
-	perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 'x' : '-';
+	if (mode & S_ISVTX)
+		perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 't' : 'T';
+	else
+		perm[9] = (mode & S_IXOTH) && (mode & S_IEXEC) ? 'x' : '-';
 	perm[10] = 0;
 	return (perm);
 }

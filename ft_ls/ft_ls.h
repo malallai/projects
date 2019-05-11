@@ -115,7 +115,6 @@ typedef struct			s_file
 ** t_file		*file: 		Last file of folder
 ** t_infosize	*sizes: 	See s_infosize
 ** int			size: 		Total off file system blocks (exclude . | ..)
-** int			size_all: 	Total of file system blocks (include . | ..)
 ** int			count: 		Number of file in folder
 */
 typedef struct			s_folder
@@ -125,7 +124,6 @@ typedef struct			s_folder
 	t_file				*file;
 	t_infosize			*sizes;
 	int					size;
-	int					size_all;
 	int					count;
 }						t_folder;
 
@@ -270,7 +268,7 @@ void					print_size(t_infos *infos, t_infosize *sizes);
 */
 void					read_folder(t_opt *opt, t_folder *folder, int name, \
 						int recurs);
-void					update_read_folder(t_folder *folder, \
+void					update_read_folder(t_opt *opt, t_folder *folder, \
 						t_file *tmp, int index);
 void					ls_folder(t_opt *opt, t_file *file);
 void					ls(t_opt *opt, t_file *file);
