@@ -115,7 +115,6 @@ typedef struct			s_file
 ** t_file		*file: 		Last file of folder
 ** t_infosize	*sizes: 	See s_infosize
 ** int			size: 		Total off file system blocks (exclude . | ..)
-** int			size_all: 	Total of file system blocks (include . | ..)
 ** int			count: 		Number of file in folder
 */
 typedef struct			s_folder
