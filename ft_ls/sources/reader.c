@@ -28,7 +28,7 @@ void	read_folder(t_opt *opt, t_folder *folder, int name, int r)
 		{
 			tmp = new_file(opt, index, sd->d_name, folder);
 			if (tmp)
-				update_read_folder(folder, tmp, index++);
+				update_read_folder(opt, folder, tmp, index++);
 		}
 		closedir(dir);
 		folder->count = index;
@@ -40,7 +40,7 @@ void	read_folder(t_opt *opt, t_folder *folder, int name, int r)
 	free_folder(folder);
 }
 
-void	update_read_folder(t_folder *folder, t_file *tmp, int index)
+void	update_read_folder(t_opt *opt, t_folder *folder, t_file *tmp, int index)
 {
 	if (index)
 	{
@@ -51,11 +51,8 @@ void	update_read_folder(t_folder *folder, t_file *tmp, int index)
 		folder->first = tmp;
 	folder->file = tmp;
 	if (folder->file->infos)
-	{
-		folder->size_all += folder->file->infos->file_stat.st_blocks;
-		folder->size += (folder->file->name[0] == '.' ? 0 \
-			: folder->file->infos->file_stat.st_blocks);
-	}
+		folder->size += can_print(opt, folder->file->name) \
+			? folder->file->infos->file_stat.st_blocks : 0;
 }
 
 void	ls_folder(t_opt *opt, t_file *file)
