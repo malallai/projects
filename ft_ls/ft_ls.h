@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/24 20:27:31 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/11 19:09:45 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ typedef struct			s_infos
 	struct passwd		*uid;
 	struct group		*gid;
 	char				*date;
-	int					millis;
+	time_t				millis;
 	int					size;
 	int					maj;
 	int					min;
