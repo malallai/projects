@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:42:27 by malallai          #+#    #+#             */
-/*   Updated: 2019/05/11 19:09:30 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/10 17:28:23 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ t_file		*new_file(t_opt *opt, int id, char *name, t_folder *parent)
 	else
 		file->path = ft_strdup(file->name);
 	file->exist = exist(file);
-	file->infos = get_infos(file, parent);
+	file->infos = get_infos(opt, file, parent);
 	if (!file->exist || !file->infos)
 	{
 		opt->forcedetail = 1;
 		if (!file->exist)
-			print_nexist(opt, file);
+			no_file(opt, file);
 		free_file(file);
 		return ((file = NULL));
 	}
@@ -40,12 +40,12 @@ t_file		*new_file(t_opt *opt, int id, char *name, t_folder *parent)
 	return (file);
 }
 
-t_infos		*get_infos(t_file *file, t_folder *parent)
+t_infos		*get_infos(t_opt *opt, t_file *file, t_folder *parent)
 {
 	t_infos			*infos;
 	struct stat		filestat;
 
-	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 11));
+	infos = malloc(sizeof(t_infos *) * (sizeof(struct stat) + 12));
 	infos->path = ft_strdup(file->path);
 	if ((lstat(infos->path, &filestat)) < 0)
 	{
@@ -53,6 +53,7 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 		free(infos);
 		return (NULL);
 	}
+	infos->name = ft_strdup(file->name);
 	infos->file_stat = filestat;
 	infos->perms = get_perms(infos->file_stat.st_mode);
 	infos->uid = getpwuid(infos->file_stat.st_uid) \
@@ -64,16 +65,19 @@ t_infos		*get_infos(t_file *file, t_folder *parent)
 	infos->size = infos->file_stat.st_size;
 	infos->maj = major(infos->file_stat.st_rdev);
 	infos->min = minor(infos->file_stat.st_rdev);
-	infos->sizes = get_sizes(infos, infos->file_stat, parent->sizes);
+	infos->sizes = get_sizes(opt, infos, infos->file_stat, parent->sizes);
 	return (infos);
 }
 
-t_infosize	*get_sizes(t_infos *info, struct stat pstat, t_infosize *parent)
+t_infosize	*get_sizes(t_opt *opt, t_infos *info, struct stat pstat, \
+	t_infosize *parent)
 {
 	t_infosize	*isize;
 	int			len;
 
 	isize = parent ? parent : new_size();
+	if (!can_print(opt, info->name))
+		return (isize);
 	len = ft_len((int)pstat.st_blocks);
 	isize->blocks = len > isize->blocks ? len : isize->blocks;
 	len = ft_len((int)pstat.st_nlink);
@@ -100,11 +104,11 @@ t_infosize	*new_size(void)
 	t_infosize	*size;
 
 	size = malloc(sizeof(t_infosize *) * 6);
-	size->blocks = 0;
-	size->links = 0;
+	size->blocks = 1;
+	size->links = 1;
 	size->uid = 0;
 	size->gid = 0;
-	size->size = 0;
+	size->size = 1;
 	size->date = 0;
 	size->maj = 0;
 	size->min = 0;

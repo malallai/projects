@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/05/11 19:09:45 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/10 17:03:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ typedef struct			s_infosize
 /*
 ** Contains informations about specific file
 ** char				*path: 		The path to file
+** char				*name: 		File name
 ** struct stat		file_stat:	Contain file stat (perm, mode etc..)
 ** struct passwd	uid: 		Owner (root)
 ** struct group		gid: 		Group (wheel)
@@ -74,6 +75,7 @@ typedef struct			s_infosize
 typedef struct			s_infos
 {
 	char				*path;
+	char				*name;
 	struct stat			file_stat;
 	char				*perms;
 	struct passwd		*uid;
@@ -127,6 +129,11 @@ typedef struct			s_folder
 	int					count;
 }						t_folder;
 
+typedef struct			s_nofile {
+	char				*name;
+	struct s_nofile		*next;
+}						t_nofile;
+
 /*
 ** int	flag:			flag sent by user
 ** int	error:			0|1 -> if error during execution
@@ -140,6 +147,8 @@ typedef struct			s_opt
 	int					print;
 	int					forcedetail;
 	char				*flags;
+	t_nofile			*nofile;
+	t_nofile			*lastnofile;
 	t_folder			*main;
 }						t_opt;
 
@@ -169,6 +178,7 @@ t_file					*get_file(t_file *first, int id);
 void					free_infos(t_infos *infos);
 void					free_file(t_file *file);
 void					free_folder(t_folder *folder);
+void					free_nofile(t_nofile *nofile);
 void					free_opt(t_opt *opt);
 
 /*
@@ -179,7 +189,7 @@ void					free_opt(t_opt *opt);
 ** exit_ftls:			exit ls with return statement and free
 */
 int						bad_option(t_opt *opt, char option);
-void					print_nexist(t_opt *opt, t_file *file);
+void					print_nexist(t_opt *opt, char *name);
 void					error_dir(t_opt *opt, t_folder *folder, \
 						int name);
 void					print_error(t_opt *opt, t_file *file);
@@ -195,11 +205,20 @@ int						exit_ftls(t_opt *opt);
 */
 t_file					*new_file(t_opt *opt, int id, \
 						char *name, t_folder *parent);
-t_infos					*get_infos(t_file *file, t_folder *parent);
-t_infosize				*get_sizes(t_infos *info, struct stat pstat, \
-						t_infosize *parent);
+t_infos					*get_infos(t_opt *opt, t_file *file, \
+						t_folder *parent);
+t_infosize				*get_sizes(t_opt *opt, t_infos *info, \
+						struct stat pstat, t_infosize *parent);
 t_infosize				*new_size(void);
 t_folder				*new_folder(t_file *file);
+
+/*
+** no_file.c
+**
+*/
+void					no_file(t_opt *opt, t_file *file);
+void					print_nofile(t_opt *opt);
+void					sort_nofile(t_opt *opt);
 
 /*
 ** opt.c
@@ -249,7 +268,8 @@ void					print_size(t_infos *infos, t_infosize *sizes);
 ** ls_folder:			ls for folder
 ** ls:					ls
 */
-void					read_folder(t_opt *opt, t_folder *folder, int name);
+void					read_folder(t_opt *opt, t_folder *folder, int name, \
+						int recurs);
 void					update_read_folder(t_folder *folder, \
 						t_file *tmp, int index);
 void					ls_folder(t_opt *opt, t_file *file);
