@@ -55,6 +55,7 @@ t_infos		*get_infos(t_opt *opt, t_file *file, t_folder *parent)
 	}
 	infos->name = ft_strdup(file->name);
 	infos->file_stat = filestat;
+	printf("get perms for : %s\n", file->name);
 	infos->perms = get_perms(infos->file_stat.st_mode);
 	infos->uid = getpwuid(infos->file_stat.st_uid) \
 		? getpwuid(infos->file_stat.st_uid) : NULL;
