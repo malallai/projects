@@ -54,6 +54,9 @@ char	*get_perms(int mode)
 {
 	char *perm;
 
+	printf("S_ISUID : %d\n", (mode & S_ISUID));
+	printf("S_ISGID : %d\n", (mode & S_ISGID));
+	printf("S_ISVTX : %d\n", (mode & S_ISVTX));
 	perm = (char *)malloc(sizeof(char *) * 11);
 	perm[0] = get_type(mode);
 	perm[1] = (mode & S_IRUSR) && (mode & S_IREAD) ? 'r' : '-';
