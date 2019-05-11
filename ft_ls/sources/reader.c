@@ -51,7 +51,8 @@ void	update_read_folder(t_opt *opt, t_folder *folder, t_file *tmp, int index)
 		folder->first = tmp;
 	folder->file = tmp;
 	if (folder->file->infos)
-		folder->size += can_print(opt, folder->file->name) ? 1 : 0;
+		folder->size += can_print(opt, folder->file->name) \
+			? folder->file->infos->file_stat.st_blocks : 0;
 }
 
 void	ls_folder(t_opt *opt, t_file *file)
