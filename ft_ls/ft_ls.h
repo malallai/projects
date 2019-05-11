@@ -81,7 +81,7 @@ typedef struct			s_infos
 	struct passwd		*uid;
 	struct group		*gid;
 	char				*date;
-	int					millis;
+	time_t				millis;
 	int					size;
 	int					maj;
 	int					min;
