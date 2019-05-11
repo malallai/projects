@@ -76,7 +76,7 @@ int		print_details(t_opt *opt, t_file *file)
 	}
 	else
 		put_str(infos->perms, 0, 0, 0);
-	put_nbr(infos->file_stat.st_nlink, 1, 2, infos->sizes->links);
+	put_nbr(infos->file_stat.st_nlink, 1, 1, infos->sizes->links);
 	put_guid(infos, infos->sizes);
 	print_size(infos, infos->sizes);
 	put_str(infos->date, 1, 1, infos->sizes->date);
