@@ -98,7 +98,7 @@ void	print_size(t_infos *infos, t_infosize *sizes)
 	}
 	else
 	{
-		put_nbr(infos->size, 1, 2, sizes->size);
+		put_nbr(infos->size, 1, 1, sizes->size);
 	}
 }
 
