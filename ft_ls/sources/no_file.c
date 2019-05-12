@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 15:55:51 by malallai          #+#    #+#             */
-/*   Updated: 2019/05/10 17:13:41 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/12 15:29:42 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,5 @@ void		sort_nofile(t_opt *opt)
 			tmp = tmp->next;
 		}
 		nofile = nofile->next;
-	}	
+	}
 }
