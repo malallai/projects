@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 14:02:37 by malallai          #+#    #+#             */
-/*   Updated: 2019/05/10 17:03:25 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/12 15:29:59 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,7 +212,6 @@ t_folder				*new_folder(t_file *file);
 
 /*
 ** no_file.c
-**
 */
 void					no_file(t_opt *opt, t_file *file);
 void					print_nofile(t_opt *opt);
@@ -242,9 +241,10 @@ void					set_main_files(t_opt *opt, int argc, \
 ** put_str:				print str using padding (ls -l)
 */
 void					put_lnk(t_file *file);
-void					put_nbr(int nbr, int tab, int spaces, int max);
-void					put_str(char *str, int tab, int spaces, int max);
+void					put_nbr(int nbr, int position, int spaces, int max);
+void					put_str(char *str, int position, int spaces, int max);
 void					put_guid(t_infos *infos, t_infosize *sizes);
+void					tab(int spaces, int max, int size);
 
 /*
 ** printer.c
@@ -306,8 +306,8 @@ char					*lsgetlink(char *path);
 
 /*
 ** swap.c
-** void	swap:			swap two file (@see struct s_file)
-** void swap_item:		swap two item of file (@see struct s_file)
+** void	swap:			swap two file (see struct s_file)
+** void swap_item:		swap two item of file (see struct s_file)
 */
 void					swap(t_file *a, t_file *b);
 void					swap_item(t_file **a, t_file *cpy);
