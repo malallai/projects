@@ -6,7 +6,7 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 17:56:02 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/23 14:01:59 by malallai         ###   ########.fr       */
+/*   Updated: 2019/05/12 15:19:25 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,37 +24,42 @@ void	put_lnk(t_file *file)
 	free(tmp);
 }
 
-void	put_nbr(int nbr, int tab, int spaces, int max)
+void	put_nbr(int nbr, int position, int spaces, int max)
 {
-	int		index;
 	char	*str;
 
-	index = 0;
 	str = ft_itoa(nbr);
-	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
-		ft_putchar(' ');
-	ft_putstr(str);
+	put_str(str, position, spaces, max);
 	free(str);
 }
 
-void	put_str(char *str, int tab, int spaces, int max)
+void	put_str(char *str, int position, int spaces, int max)
 {
-	int index;
-
-	index = 0;
-	while (tab && index++ < spaces + (max - (int)ft_strlen(str)))
-		ft_putchar(' ');
+	if (position == 1)
+		tab(spaces, max, (int)ft_strlen(str));
 	ft_putstr(str);
+	if (position == 2)
+		tab(spaces, max, (int)ft_strlen(str));
 }
 
 void	put_guid(t_infos *infos, t_infosize *sizes)
 {
+	ft_putchar(' ');
 	if (getpwuid(infos->file_stat.st_uid))
-		put_str(getpwuid(infos->file_stat.st_uid)->pw_name, 1, 1, sizes->uid);
+		put_str(getpwuid(infos->file_stat.st_uid)->pw_name, 2, 2, sizes->uid);
 	else
-		put_nbr(infos->file_stat.st_uid, 1, 1, sizes->uid);
+		put_nbr(infos->file_stat.st_uid, 2, 2, sizes->uid);
 	if (getgrgid(infos->file_stat.st_gid))
-		put_str(getgrgid(infos->file_stat.st_gid)->gr_name, 1, 2, sizes->gid);
+		put_str(getgrgid(infos->file_stat.st_gid)->gr_name, 2, 0, sizes->gid);
 	else
-		put_nbr(infos->file_stat.st_gid, 1, 2, sizes->gid);
+		put_nbr(infos->file_stat.st_gid, 2, 0, sizes->gid);
+}
+
+void	tab(int spaces, int max, int size)
+{
+	int index;
+
+	index = 0;
+	while (index++ < spaces + (max - size))
+		ft_putchar(' ');
 }
