@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day00/ex04/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/day00/ex04/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex00/hw.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex00/hw.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex01/mlx.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex01/mlx.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex02/oddeven.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex02/oddeven.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex03/ft_split.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex03/ft_split.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex04/aff_param.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex04/aff_param.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex05/epur_str.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex05/epur_str.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex06/ssap.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex06/ssap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex07/rostring.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex07/rostring.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/ex08/ft_is_sort.php" beforeDir="false" afterPath="$PROJECT_DIR$/day01/ex08/ft_is_sort.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,28 +25,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day00/ex04/menu.html">
+        <entry file="file://$PROJECT_DIR$/day01/ex09/ssap2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day00/ex04/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day00/ex04/test/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="53" selection-start-line="53" selection-end-line="54" />
+            <state relative-caret-position="15">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,8 +48,8 @@
       <find>flex</find>
       <find>relative</find>
       <find>&lt;i class=&quot;keyboard_arrow_right&quot;&gt;&lt;/i&gt;</find>
-      <find>font-size</find>
       <find>&lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_right&lt;/i&gt;</find>
+      <find>font-size</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,6 +72,13 @@
         <option value="$PROJECT_DIR$/day00/ex04/test/menu.html" />
         <option value="$PROJECT_DIR$/day00/ex04/menu.css" />
         <option value="$PROJECT_DIR$/day00/ex04/menu.html" />
+        <option value="$PROJECT_DIR$/day01/ex00/hw.php" />
+        <option value="$PROJECT_DIR$/day01/ex01/mlx.php" />
+        <option value="$PROJECT_DIR$/day01/ex02/oddeven.php" />
+        <option value="$PROJECT_DIR$/day01/ex06/ssap.php" />
+        <option value="$PROJECT_DIR$/old/ex07/rostring.php" />
+        <option value="$PROJECT_DIR$/day01/ex08/ft_is_sort.php" />
+        <option value="$PROJECT_DIR$/day01/ex09/ssap2.php" />
       </list>
     </option>
   </component>
@@ -115,21 +113,31 @@
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day00" type="462c0819:PsiDirectoryNode" />
+              <item name="day01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="ex00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="ex01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day01" type="462c0819:PsiDirectoryNode" />
               <item name="ex02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day00" type="462c0819:PsiDirectoryNode" />
-              <item name="ex04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day00" type="462c0819:PsiDirectoryNode" />
-              <item name="ex04" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="ex09" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,12 +186,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558341338143</updated>
-      <workItem from="1558341342314" duration="14841000" />
+      <workItem from="1558341342314" duration="16833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14841000" />
+    <option name="totallyTimeSpent" value="16833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -195,11 +203,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1487" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5007299" side_tool="true" weight="0.12271644" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49927008" visible="true" weight="0.12271644" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49927008" visible="true" weight="0.21384083" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -349,17 +357,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day00/ex04/test/menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="53" selection-start-line="53" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day00/ex02/doft.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="51" selection-start-line="51" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day00/ex04/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -370,10 +378,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day00/ex04/menu.html">
+    <entry file="file://$PROJECT_DIR$/day00/ex04/test/menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="593">
+          <caret line="53" selection-start-line="53" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex00/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex00/hw.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex02/oddeven.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex03/ft_split.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex04/aff_param.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex05/epur_str.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex06/ssap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex01/mlx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex02/oddeven.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex06/ssap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex07/rostring.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex07/rostring.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex08/ft_is_sort.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/ex08/ft_is_sort.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day01/ex09/ssap2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
