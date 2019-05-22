@@ -10,6 +10,8 @@
 	unset($array[0]);
 
 	$final = "";
-	foreach ($array as $value)
-		$final .= $value." ";
-	echo trim($final)."\n";
+	if ($array) {
+    	foreach ($array as $value)
+    		$final .= $value." ";
+	    echo trim($final)."\n";
+    }

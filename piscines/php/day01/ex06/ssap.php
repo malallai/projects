@@ -5,11 +5,12 @@
 		return ($array);
 	}
 
-	unset($argv[0]);
 	$array = array();
-	foreach ($argv as $arg)
-		foreach (ft_split($arg) as $v)
-			array_push($array, $v);
+	$i = 1;
+	while ($i < $argc) {
+	    $array = array_merge($array, ft_split($argv[$i]));
+        $i++;
+	}
 	sort($array);
 	foreach ($array as $value)
-		echo $value."\n";
+		print $value."\n";
