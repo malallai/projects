@@ -7,6 +7,8 @@
 
 	$array = ft_split($argv[1]);
 	$final = "";
-	foreach ($array as $str)
-		$final .= $str." ";
-	echo trim($final)."\n";
+    if ($array) {
+	    foreach ($array as $str)
+	    	$final .= $str." ";
+	    echo trim($final)."\n";
+    }
