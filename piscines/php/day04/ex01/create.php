@@ -11,8 +11,6 @@
         $users = unserialize(file_get_contents("../private/passwd"));
         $exist = 0;
 
-        print_r($users);
-
         if ($users) {
             foreach ($users as $user) {
                 if ($user['login'] === $login)
@@ -25,6 +23,7 @@
         if (!$exist) {
             $users[] = array("login" => $login, "passwd" => $passwd);
             file_put_contents("../private/passwd", serialize($users));
+            print_r($users);
             echo "OK\n";
         } else {
             echo "ERROR\n";
