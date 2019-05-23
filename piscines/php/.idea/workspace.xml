@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day04/ex01/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex01/create.php" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,12 +220,12 @@
       <workItem from="1558612310249" duration="200000" />
       <workItem from="1558612724325" duration="124000" />
       <workItem from="1558612862714" duration="5226000" />
-      <workItem from="1558628387244" duration="1318000" />
+      <workItem from="1558628387244" duration="1459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39055000" />
+    <option name="totallyTimeSpent" value="39196000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
