@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex01/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex01/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex02/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex02/modif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex03/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex03/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex03/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex03/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex03/whoami.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex03/whoami.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,19 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day04/ex03/login.php">
+        <entry file="file://$PROJECT_DIR$/day04/ex02/modif.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day04/ex01/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -56,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day00/ex00/test.html" />
         <option value="$PROJECT_DIR$/day00/ex01/test.html" />
         <option value="$PROJECT_DIR$/day00/ex03/test/responsive.html" />
         <option value="$PROJECT_DIR$/day00/ex03/test/responsive.css" />
@@ -98,14 +95,16 @@
         <option value="$PROJECT_DIR$/day02/ex02/loupe.php" />
         <option value="$PROJECT_DIR$/day04/ex00/index.php" />
         <option value="$PROJECT_DIR$/day04/ex01/index.html" />
-        <option value="$PROJECT_DIR$/day04/ex01/create.php" />
         <option value="$PROJECT_DIR$/day04/ex02/index.html" />
-        <option value="$PROJECT_DIR$/day04/ex02/modif.php" />
         <option value="$PROJECT_DIR$/day04/ex04/create.html" />
         <option value="$PROJECT_DIR$/day04/ex04/modif.html" />
         <option value="$PROJECT_DIR$/day04/ex04/index.html" />
-        <option value="$PROJECT_DIR$/day04/ex03/auth.php" />
         <option value="$PROJECT_DIR$/day04/ex03/login.php" />
+        <option value="$PROJECT_DIR$/day04/ex03/logout.php" />
+        <option value="$PROJECT_DIR$/day04/ex03/whoami.php" />
+        <option value="$PROJECT_DIR$/day04/ex03/auth.php" />
+        <option value="$PROJECT_DIR$/day04/ex01/create.php" />
+        <option value="$PROJECT_DIR$/day04/ex02/modif.php" />
       </list>
     </option>
   </component>
@@ -171,7 +170,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day02/ex04" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day04" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -181,15 +180,15 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day01/ex09" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day04" />
       <recent name="$PROJECT_DIR$/day02/ex04" />
       <recent name="$PROJECT_DIR$/day02/ex03" />
       <recent name="$PROJECT_DIR$/day00/ex04/test" />
       <recent name="$PROJECT_DIR$/day00/ex02/test" />
-      <recent name="$PROJECT_DIR$/day00/ex03/test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day01/ex09" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,12 +218,12 @@
       <workItem from="1558612310249" duration="200000" />
       <workItem from="1558612724325" duration="124000" />
       <workItem from="1558612862714" duration="5226000" />
-      <workItem from="1558628387244" duration="273000" />
+      <workItem from="1558628387244" duration="1152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38010000" />
+    <option name="totallyTimeSpent" value="38889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -264,24 +263,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/old/ex05/epur_str.php" />
-    <entry file="file://$PROJECT_DIR$/old/ex06/ssap.php" />
-    <entry file="file://$PROJECT_DIR$/day01/ex01/mlx.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/ex07/rostring.php" />
-    <entry file="file://$PROJECT_DIR$/day01/ex08/ft_is_sort.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/ex08/ft_is_sort.php" />
     <entry file="file://$PROJECT_DIR$/day01/ex02/oddeven.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -388,16 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day03/ex06/members_only.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="100" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="100" />
-          <folding>
-            <element signature="n#src#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day02/ex03/who.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -418,25 +389,12 @@
     <entry file="file://$PROJECT_DIR$/Mendeleïev.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex00/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex02/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="60" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="60" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex03/logout.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex03/whoami.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex04/auth.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -480,19 +438,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex03/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex02/modif.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/day04/update">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex01/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -501,17 +448,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex03/login.php">
+    <entry file="file://$PROJECT_DIR$/day04/ex00/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="330">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex01/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        <state relative-caret-position="345">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex02/print_get.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex01/phpinfo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex03/cookie_crisp.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex04/raw_text.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex05/read_img.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/ex06/members_only.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="100" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex03/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" selection-start-line="2" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex03/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex03/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex03/whoami.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex02/modif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
         </state>
       </provider>
     </entry>
