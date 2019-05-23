@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /Users/malallai/42/projects && 
+ssh -p 2201 updater@malallai.fr 'sudo -u mentor /home/mentor/update_42'
