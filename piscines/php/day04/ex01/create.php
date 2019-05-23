@@ -18,6 +18,8 @@
             }
         }
 
+        echo $exist;
+
         if (!$exist) {
             $users[] = array("login" => $login, "passwd" => $passwd);
             file_put_contents("../private/passwd", serialize($users));
