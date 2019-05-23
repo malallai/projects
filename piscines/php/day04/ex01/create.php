@@ -11,6 +11,8 @@
         $users = unserialize(file_get_contents("../private/passwd"));
         $exist = 0;
 
+        print_r($users);
+
         if ($users) {
             foreach ($users as $user) {
                 if ($user['login'] === $login)
