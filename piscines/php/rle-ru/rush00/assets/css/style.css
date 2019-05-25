@@ -12,6 +12,14 @@ html, body {
     justify-content: space-between;
 }
 
-.header .flex-compononent {
+.header .flex-compononent:nth-child(1) {
+    flex-basis: 10%;
+}
+
+.header .flex-compononent:nth-child(3) {
+    flex-basis: 50%;
+}
+
+.header .flex-compononent:nth-child(3) {
     flex-basis: 30%;
 }
