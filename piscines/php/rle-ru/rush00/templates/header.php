@@ -46,7 +46,7 @@ session_start();
             ?>
             <div class="flex-icon">
                 <div class="icon">
-                    <a href="cart.php"><i class='fas fa-shopping-cart'></i> 0</a>
+                    <a href="cart.php"><i class='fas fa-shopping-cart'></i> <?= isset($_SESSION['items_count']) ? $_SESSION['items_count'] : 0 ?></a>
                 </div>
             </div>
             <div class="flex-icon">
