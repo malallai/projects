@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,14 +34,24 @@
     </div>
     <div class="flex-compononent">
         <div class="icons">
+            <?php
+                if (isset($_SESSION['logged_as']) && $_SESSION['grade'] === 'admin') {
+                    ?>
+                    <div class="flex-icon">
+                        <a href="/admin" class="icon">
+                            <img src="assets/images/padlock.svg">
+                        </a>
+                    </div>
+                    <?php
+                }
+            ?>
             <div class="flex-icon">
-                <div class="icon"><img src="assets/images/padlock.svg"></div>
+                <a href="/cart.php" class="icon">
+                    <img src="assets/images/market.svg">
+                </a>
             </div>
             <div class="flex-icon">
-                <div class="icon"><img src="assets/images/market.svg"></div>
-            </div>
-            <div class="flex-icon">
-                <div class="icon"><img src="assets/images/user.svg"></div>
+                <a href="/user.php" class="icon"><img src="assets/images/user.svg"></a>
             </div>
         </div>
     </div>
