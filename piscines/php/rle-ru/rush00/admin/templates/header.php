@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="flex-compononent">
-        <form action="search.php" method="post" class="searchbar">
+        <form action="modif.php" method="post" class="searchbar">
             <div class="bar">
                 <input name="search" placeholder="Search" type="text">
             </div>
