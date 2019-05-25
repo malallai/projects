@@ -5,6 +5,7 @@ include('templates/header.php');
         <?php
         $file = unserialize(file_get_contents("../private/products"));
         print_r($file);
+        print_r($_SESSION['items']);
         if ($file && isset($_SESSION['items'])) {
             foreach ($_SESSION['items'] as $key => $value) {
                 echo $key." : ".$value." => ";
