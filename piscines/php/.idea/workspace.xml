@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day04/ex04/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day04/ex04/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/modif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex04/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/login.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day04/ex04/modif.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day04/ex04/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -69,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day00/ex03/test/responsive.css" />
         <option value="$PROJECT_DIR$/day00/ex03/responsive.html" />
         <option value="$PROJECT_DIR$/day00/ex01/mendeleiev.html" />
         <option value="$PROJECT_DIR$/day00/ex03/responsive.css" />
@@ -120,6 +127,7 @@
         <option value="$PROJECT_DIR$/day04/ex01/create.php" />
         <option value="$PROJECT_DIR$/day04/ex04/create.php" />
         <option value="$PROJECT_DIR$/day04/ex04/modif.php" />
+        <option value="$PROJECT_DIR$/day04/ex04/login.php" />
       </list>
     </option>
   </component>
@@ -222,12 +230,12 @@
       <workItem from="1558612724325" duration="124000" />
       <workItem from="1558612862714" duration="5226000" />
       <workItem from="1558628387244" duration="2042000" />
-      <workItem from="1558773711321" duration="264000" />
+      <workItem from="1558773711321" duration="416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40043000" />
+    <option name="totallyTimeSpent" value="40195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,9 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex04/login.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex04/logout.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -528,6 +533,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex04/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
