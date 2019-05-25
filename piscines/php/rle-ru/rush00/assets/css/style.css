@@ -4,7 +4,11 @@ html, body {
     padding: 0;
 }
 
-
 .header {
     display: flex;
+    width: 75%;
+}
+
+.header .flex-compononent {
+    flex: 1;
 }
