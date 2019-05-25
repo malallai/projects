@@ -2,18 +2,15 @@
     include 'auth.php';
     session_start();
 
-    if ($_GET['login'] && $_GET['passwd']) {
-        if (auth($_GET['login'], $_GET['passwd'])) {
-            $_SESSION['loggued_on_user'] = $_GET['login'];
-            echo "OK\n";
+    if (isset($_POST) && isset($_POST['login']) && isset($_POST['passwd'])) {
+        if (auth($_POST['login'], $_POST['passwd'])) {
+            $_SESSION['loggued_on_user'] = $_POST['login'];
         } else {
             $_SESSION['loggued_on_user'] = "";
-            //header("Location:./index.html");
-            echo "Error 1\n";
+            header("Location:./index.html");
         }
     } else {
-        //header("Location:./index.html");
-        echo "Error 2\n";
+        header("Location:./index.html");
     }
 ?>
 
