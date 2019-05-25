@@ -112,7 +112,7 @@ html, body {
     position: relative;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     top: 50%;
     transform: translateY(-50%);
 }
