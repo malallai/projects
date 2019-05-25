@@ -12,6 +12,10 @@ html, body {
     justify-content: space-between;
 }
 
+.header .searchbar {
+    width: 100%;
+}
+
 .header .flex-compononent:nth-child(1) {
     flex-basis: 10%;
 }
