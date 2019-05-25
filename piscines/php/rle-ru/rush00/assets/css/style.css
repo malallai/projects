@@ -16,7 +16,7 @@ html, body {
     flex-basis: 10%;
 }
 
-.header .flex-compononent:nth-child(3) {
+.header .flex-compononent:nth-child(2) {
     flex-basis: 50%;
 }
 
