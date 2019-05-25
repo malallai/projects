@@ -100,12 +100,9 @@ html, body {
 }
 
 .header .flex-compononent:nth-child(3) a {
-    width: 100%;
+    width: 50%;
     text-decoration: none;
-}
-
-.header .flex-compononent:nth-child(3) img {
-    width: 40%;
+    color: #fff;
 }
 
 .header .flex-compononent:nth-child(3) .icons {

@@ -48,13 +48,11 @@ session_start();
             ?>
             <div class="flex-icon">
                 <div class="icon">
-                    <img src="assets/images/market.svg">
                     <a href="cart.php"><i class='fas fa-shopping-cart'></i> 0</a>
                 </div>
             </div>
             <div class="flex-icon">
                 <div class="icon">
-                    <img src="assets/images/user.svg">
                     <a href="user.php"><i class='fas fa-user'></i></a>
                 </div>
             </div>
