@@ -19,9 +19,11 @@
         <input name="search" placeholder="Search" type="text" class="searchbar">
     </div>
     <div class="flex-compononent">
-        <div class="flex-icon"><img src="assets/images/42.svg"></div>
-        <div class="flex-icon"><img src="assets/images/42.svg"></div>
-        <div class="flex-icon"><img src="assets/images/42.svg"></div>
+        <div class="icons">
+            <div class="flex-icon"><img src="assets/images/42.svg"></div>
+            <div class="flex-icon"><img src="assets/images/42.svg"></div>
+            <div class="flex-icon"><img src="assets/images/42.svg"></div>
+        </div>
     </div>
 </div>
 <div class="navbar">
