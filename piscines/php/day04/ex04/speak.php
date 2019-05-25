@@ -21,7 +21,7 @@
                 "time" => time(),
                 "msg" => $message
             );
-            file_put_contents('../private/chat', $messages);
+            file_put_contents('../private/chat', serialize($messages));
             fclose($file);
         }
     }
