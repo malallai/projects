@@ -5,6 +5,7 @@ session_start();
 <html>
 <head>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>ft_minishop</title>
 </head>
@@ -39,8 +40,7 @@ session_start();
                     ?>
                     <div class="flex-icon">
                         <div class="icon">
-                            <img src="assets/images/padlock.svg">
-                            <a href="admin">Admin</a>
+                            <a href="admin"><i class='fas fa-lock'></i></a>
                         </div>
                     </div>
                     <?php
@@ -49,13 +49,13 @@ session_start();
             <div class="flex-icon">
                 <div class="icon">
                     <img src="assets/images/market.svg">
-                    <a href="cart.php">Panier : 0</a>
+                    <a href="cart.php"><i class='fas fa-shopping-cart'></i> 0</a>
                 </div>
             </div>
             <div class="flex-icon">
                 <div class="icon">
                     <img src="assets/images/user.svg">
-                    <a href="user.php">Compte</a>
+                    <a href="user.php"><i class='fas fa-user'></i></a>
                 </div>
             </div>
         </div>
