@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    print_r($_POST);
+
     if (isset($_POST['submit']) && isset($_POST['id'])) {
         $items = array();
         if (isset($_SESSION['items'])) {
@@ -14,4 +16,4 @@
         $_SESSION['items_count'] =  isset($_SESSION['items_count']) ? $_SESSION['items_count'] + 1 : 1;
     }
 
-    header("Location: index.php");
+   // header("Location: index.php");
