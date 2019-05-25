@@ -16,6 +16,14 @@ html, body {
     width: 100%;
 }
 
+.header .flex-compononent:nth-child(1) img {
+    width: 100%;
+}
+
+.header .flex-compononent:nth-child(3) .flex-icon {
+    width: 10%;
+}
+
 .header .flex-compononent:nth-child(1) {
     flex-basis: 10%;
 }
