@@ -38,20 +38,25 @@ session_start();
                 if (isset($_SESSION['logged_as']) && $_SESSION['grade'] === 'admin') {
                     ?>
                     <div class="flex-icon">
-                        <a href="/admin" class="icon">
+                        <div class="icon">
                             <img src="assets/images/padlock.svg">
-                        </a>
+                            <a href="admin">Admin</a>
+                        </div>
                     </div>
                     <?php
                 }
             ?>
             <div class="flex-icon">
-                <a href="/cart.php" class="icon">
+                <div class="icon">
                     <img src="assets/images/market.svg">
-                </a>
+                    <a href="cart.php">Panier : 0</a>
+                </div>
             </div>
             <div class="flex-icon">
-                <a href="/user.php" class="icon"><img src="assets/images/user.svg"></a>
+                <div class="icon">
+                    <img src="assets/images/user.svg">
+                    <a href="user.php">Compte</a>
+                </div>
             </div>
         </div>
     </div>
