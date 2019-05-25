@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/dev/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>ft_minishop</title>
 </head>
