@@ -6,6 +6,7 @@
     }
     if (file_exists("../private/chat")) {
         $messages = unserialize(file_get_contents("../private/chat"));
+        print_r ($messages);
         if (!$messages) {
             foreach ($messages as $msg) {
                 echo "[" . date("H:i", $msg['time']) . "] ";
