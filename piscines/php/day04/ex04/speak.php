@@ -10,11 +10,14 @@
             }
             if (!file_exists('../private/chat')) {
                 file_put_contents('../private/chat', "");
+                $messages = array();
+                $file = fopen("../private/chat", "rw");
+                flock($file, LOCK_EX);
+            } else {
+                $messages = unserialize(file_get_contents("../private/chat"));
+                $file = fopen("../private/chat", "rw");
+                flock($file, LOCK_EX);
             }
-
-            $messages = unserialize(file_get_contents("../private/chat"));
-            $file = fopen("../private/chat", "rw");
-            flock($file, LOCK_EX);
 
             $messages[] = array(
                 "login" => $_SESSION['loggued_on_user'],
