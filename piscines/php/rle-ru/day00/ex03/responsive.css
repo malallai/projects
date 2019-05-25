@@ -1,0 +1,79 @@
+TABLE
+{
+	height: auto;
+	width: 100%;
+	border-style: none;
+}
+.numero
+{
+	display:block;
+	text-align:left;
+	font-size:0.8vw;
+}
+.masse
+{
+	display:block;
+	text-align:right;
+	font-size:0.6vw;
+}
+.name
+{
+	display: block;
+	text-align: center;
+	font-size: 1.5vw;
+}
+.text
+{
+	display: block;
+	text-align: center;
+	font-size: 1vw;
+}
+TD
+{
+	height: 5.55vw;
+	width: 5.55vw;
+}
+.nonmetal
+{
+	background-color: #abc0ed;
+}
+.alcalint
+{
+	background-color: #f7db94;
+}
+.alcalinm
+{
+	background-color: #f7bd99;
+}
+.gazrare
+{
+	background-color: #d8afdb;
+}
+.metalloides
+{
+	background-color: #b8f2fc;
+}
+.halogene
+{
+	background-color: #baa9d9;
+}
+.empty
+{
+	border: none;
+}
+.metauxpauvres
+{
+	background-color: #b2e6a3;
+}
+.transition
+{
+	background-color: #ffff9e;
+}
+.lantha
+{
+	background-color: #ffbfff;
+}
+.actinides
+{
+	background-color: #ff99cc;
+}
