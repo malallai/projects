@@ -18,8 +18,10 @@
             }
             if (!$exist)
                 echo "ERROR\n";
-            else
+            else {
                 echo "OK\n";
+                header("Location:./index.html");
+            }
         } else {
             echo "ERROR\n";
         }

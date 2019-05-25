@@ -22,6 +22,7 @@
             $users[] = array("login" => $login, "passwd" => $passwd);
             file_put_contents("../private/passwd", serialize($users));
             echo "OK\n";
+            header("Location:./index.html");
         } else {
             echo "ERROR\n";
         }
