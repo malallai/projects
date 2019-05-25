@@ -9,7 +9,7 @@
                 mkdir("../private");
             }
             if (!file_exists('../private/chat')) {
-                file_put_contents('../private/chat', null);
+                file_put_contents('../private/chat', "");
             }
 
             $messages = unserialize(file_get_contents("../private/chat"));
