@@ -22,6 +22,12 @@ html, body {
 
 .header .flex-compononent:nth-child(3) .flex-icon {
     width: 10%;
+    box-sizing: border-box;
+}
+
+.header .flex-compononent:nth-child(3) .icons {
+    display: flex;
+    width: 100%;
 }
 
 .header .flex-compononent:nth-child(1) {
