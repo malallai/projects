@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../dev/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>ft_minishop</title>
 </head>
@@ -9,7 +9,7 @@
 <div class="header">
     <div class="flex-compononent">
         <div class="icon">
-            <img src="../dev/assets/images/42.svg">
+            <img src="../assets/images/42.svg">
         </div>
     </div>
     <div class="flex-compononent">
@@ -32,13 +32,13 @@
     <div class="flex-compononent">
         <div class="icons">
             <div class="flex-icon">
-                <div class="icon"><img src="../dev/assets/images/padlock.svg"></div>
+                <div class="icon"><img src="../assets/images/padlock.svg"></div>
             </div>
             <div class="flex-icon">
-                <div class="icon"><img src="../dev/assets/images/market.svg"></div>
+                <div class="icon"><img src="../assets/images/market.svg"></div>
             </div>
             <div class="flex-icon">
-                <div class="icon"><img src="../dev/assets/images/user.svg"></div>
+                <div class="icon"><img src="../assets/images/user.svg"></div>
             </div>
         </div>
     </div>
