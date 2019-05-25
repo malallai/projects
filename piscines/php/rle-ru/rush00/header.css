@@ -1,0 +1,108 @@
+body
+{
+	margin: 0;
+}
+
+header
+{
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color:blue;
+	color: white;
+	z-index: 100;
+}
+
+a
+{
+	text-decoration: none;
+	color : white;
+}
+
+header div
+{
+	display: inline-block;
+}
+
+#user
+{
+	position: absolute;
+	height: 50px;
+	width: 300px;
+	right: 0;
+	background-color: white;
+}
+
+form
+{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100px;
+}
+
+input.field
+{
+	width: 150px;
+	height: 25px;
+}
+
+input.ok
+{
+	top: 15;
+	right: -100;
+	position: absolute;
+	height: 50px;
+}
+
+header span
+{
+	display: inline-block;
+	text-align: center;
+	font-size: 2em;
+	height: 100%;
+	width: 150px;
+	padding: 5;
+	border-right: 1px solid white;
+}
+
+header span:hover
+{
+	font-style: italic;
+}
+
+#create
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: black;
+}
+
+
+#hello
+{
+	position: absolute;
+	right:0;
+	color: red;
+}
+
+header .dropdown
+{
+	background-color: blue;
+	width:100%;
+	left: 0;
+	top:50;
+	text-align: left;
+	display: none;
+	position: absolute;
+	z-index: 200;
+}
+
+header span:hover :first-child
+{
+	display:block;
+}
