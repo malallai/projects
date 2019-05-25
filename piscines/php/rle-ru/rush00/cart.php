@@ -17,7 +17,7 @@ include('templates/header.php');
                                 <div class="name">
                                     <p><?= $item['name'] ?></p>
                                 </div>
-                                <div class="price">Prix : <?= $item['price'] ?>E (<?= ($value * $item['price']) ?>)E</div>
+                                <div class="price">Prix : <?= $item['price'] ?>E (<?= ($value * $item['price']) ?>E)</div>
                                 <div class="quantity">Quantité : <?= $value ?></div>
                                 <form action="removeitem.php" method="post">
                                     <input class="id" name="id" type="text" value="<?= $item['uid'] ?>">
