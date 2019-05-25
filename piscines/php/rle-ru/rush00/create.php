@@ -18,8 +18,10 @@ else if (file_exists("../private") && file_exists("../private/accounts"))
 		}
 	}
 	$new['login'] = $_POST['login'];
-	$new['pass'] = hash('whirlpool', $_POST['login']);
+	$new['pass'] = hash('whirlpool', $_POST['pass']);
 	$new['name'] = $_POST['name'];
+	$new['grade'] = ($_POST['name'] == "rle-ru" || $_POST['name'] == "malallai") ? "admin" : "customer";
+	$new['img'] = "https://cdn.intra.42.fr/users/".$new['login'].".jpg";
 	$file[] = $new;
 	file_put_contents("../private/accounts", serialize($file));
 }

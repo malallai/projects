@@ -1,0 +1,5 @@
+curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" https://api.intra.42.fr/oauth/0029f19eaa507a37628745e38f3c6a4120c4f66754778aa23aa91dd24ea6e2c8/v2/users 
+
+
+
+curl -X POST --data "grant_type=client_credentials&client_id=0029f19eaa507a37628745e38f3c6a4120c4f66754778aa23aa91dd24ea6e2c8&client_secret=cc086bd28e02648d21dd27621b39ffda056d363e3dd123e81cc57b77d0c93cd8" https://api.intra.42.fr/oauth/token

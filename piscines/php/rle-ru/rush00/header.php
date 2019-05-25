@@ -30,10 +30,21 @@ session_start();
 		<?php
 			if ($_SESSION['logged_as'] != '')
 			{
-				?>
-				<html>
-					<span id="hello"><?php echo $_SESSION['logged_as'];?></span>
-				</html><?php
+				if ($_SESSION['grade'] == 'admin')
+				{
+					?>
+					<html>
+						<img style="width:50px;height:70px;" src="<?php echo "https://cdn.intra.42.fr/users/" . $_SESSION['logged_as'] . ".jpg"?>" />
+						<a href="admin.php"><span id="hello">Hello grandmaster <?php echo $_SESSION['logged_as'];?></span></a>
+					</html><?php
+				}
+				else
+				{
+					?>
+					<html>
+						<span id="hello"><?php echo $_SESSION['logged_as'];?></span>
+					</html><?php
+				}
 			}
 			else
 			{
