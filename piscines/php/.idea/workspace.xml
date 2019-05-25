@@ -46,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/templates/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+                <state relative-caret-position="600">
+                  <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -290,12 +290,12 @@
       <workItem from="1558628387244" duration="2042000" />
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
-      <workItem from="1558790386664" duration="9837000" />
+      <workItem from="1558790386664" duration="9868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54127000" />
+    <option name="totallyTimeSpent" value="54158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -614,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rush00/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="600">
+          <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
         </state>
       </provider>
     </entry>
