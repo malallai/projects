@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/logout.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +41,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/logout.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+                <state relative-caret-position="45">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
                 </state>
               </provider>
             </entry>
@@ -331,12 +330,12 @@
       <workItem from="1558628387244" duration="2042000" />
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
-      <workItem from="1558790386664" duration="13548000" />
+      <workItem from="1558790386664" duration="13603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57838000" />
+    <option name="totallyTimeSpent" value="57893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rush00/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
