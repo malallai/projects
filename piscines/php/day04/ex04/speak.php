@@ -4,10 +4,7 @@
     if (isset($_POST) && isset($_POST['msg']) && isset($_POST['submit']) && isset($_SESSION['loggued_on_user'])) {
         if ($_POST['submit'] === "OK" && $_POST['msg'] !== null) {
             $message = $_POST['msg'];
-
-            if (!file_exists('../private')) {
-                mkdir("../private");
-            }
+            $user = $_SESSION['loggued_on_user'];
             if (!file_exists('../private/chat')) {
                 file_put_contents('../private/chat', "");
                 $messages = array();
@@ -20,7 +17,7 @@
             }
 
             $messages[] = array(
-                "login" => $_SESSION['loggued_on_user'],
+                "login" => $user,
                 "time" => time(),
                 "msg" => $message
             );
