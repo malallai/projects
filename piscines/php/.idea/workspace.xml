@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day04/ex01/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex01/create.php" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,12 +220,12 @@
       <workItem from="1558612310249" duration="200000" />
       <workItem from="1558612724325" duration="124000" />
       <workItem from="1558612862714" duration="5226000" />
-      <workItem from="1558628387244" duration="1630000" />
+      <workItem from="1558628387244" duration="2042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39367000" />
+    <option name="totallyTimeSpent" value="39779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,7 +238,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.15965052" />
