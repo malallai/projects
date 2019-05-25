@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day04/ex04/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day04/ex04/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day04/ex04/speak.php" beforeDir="false" afterPath="$PROJECT_DIR$/day04/ex04/speak.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day04/ex04/whoami.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day04/ex04/speak.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="345">
+              <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -35,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/day04/ex04/chat.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -236,12 +232,12 @@
       <workItem from="1558612724325" duration="124000" />
       <workItem from="1558612862714" duration="5226000" />
       <workItem from="1558628387244" duration="2042000" />
-      <workItem from="1558773711321" duration="1784000" />
+      <workItem from="1558773711321" duration="1902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41563000" />
+    <option name="totallyTimeSpent" value="41681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day04/ex04/chat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex04/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -546,10 +535,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/day04/ex04/chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day04/ex04/speak.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        <state relative-caret-position="345">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
