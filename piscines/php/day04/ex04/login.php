@@ -8,10 +8,12 @@
             echo "OK\n";
         } else {
             $_SESSION['loggued_on_user'] = "";
-            header("Location:./index.html");
+            //header("Location:./index.html");
+            echo "Error 1\n";
         }
     } else {
-        header("Location:./index.html");
+        //header("Location:./index.html");
+        echo "Error 2\n";
     }
 ?>
 
