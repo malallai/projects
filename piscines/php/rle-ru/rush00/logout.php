@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['logged_as'] = '';
-$_SESSION['grade'] = '';
+$_SESSION = null;
+session_unset();
 header("location: index.php");
 ?>
