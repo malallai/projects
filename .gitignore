@@ -2,4 +2,4 @@
 *.o
 libft.a
 .vscode
-
+piscines/rush/*
