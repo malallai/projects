@@ -1,9 +1,12 @@
 <?php
 
     $private_folder = "../private";
+    $users_file = $private_folder."/accounts";
+    $products_file = $private_folder."/products";
+    $orders_file = $private_folder."/orders";
 
     function get_users() {
-
+        return (unserialize($users_file));
     }
 
     function get_products() {
