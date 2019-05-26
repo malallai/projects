@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-include('install.php');
-install();
 ?>
 <!DOCTYPE html>
 <html>
