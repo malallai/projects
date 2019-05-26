@@ -15,6 +15,11 @@
             $file = init_products();
             file_put_contents("private/products", serialize($file));
         }
+        if (!file_exists("private/categoriess"))
+        {
+            $file = init_products();
+            file_put_contents("private/categoriess", serialize($file));
+        }
         if (!file_exists("private/orders"))
             file_put_contents("private/orders", NULL);
         header('location: index.php');
@@ -32,16 +37,24 @@
     function	init_products()
     {
         $file = array();
-        $file[] = array("name"=>"llelievr", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"0.01");
-        $file[] = array("name"=>"sadahan", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"4.68");
-        $file[] = array("name"=>"dde-jesu", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"8.83");
-        $file[] = array("name"=>"fcazier", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"5.33");
-        $file[] = array("name"=>"ephe", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"5");
-        $file[] = array("name"=>"bwaterlo", "uid"=>rand(0, 100000), "year"=>"2018", "price"=>"6.36");
-        $file[] = array("name"=>"yhemme", "uid"=>rand(0, 100000), "year"=>"2017", "price"=>"11.82");
-        $file[] = array("name"=>"mimhoff", "uid"=>rand(0, 100000), "year"=>"2017", "price"=>"10.48");
-        $file[] = array("name"=>"dgalanop", "uid"=>rand(0, 100000), "year"=>"2019", "price"=>"0.22");
+        $file[] = array("name"=>"llelievr", "uid"=>rand(0, 100000), "categories"=>array("campus"=>"paris", "year"=>"2018"), "price"=>"0.01");
+        $file[] = array("name"=>"sadahan", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2018"), "price"=>"4.68");
+        $file[] = array("name"=>"dde-jesu", "uid"=>rand(0, 100000), "categories"=>array("campus"=>"paris",  "year"=>"2018"), "price"=>"8.83");
+        $file[] = array("name"=>"fcazier", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2018"), "price"=>"5.33");
+        $file[] = array("name"=>"ephe", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2018"), "price"=>"5");
+        $file[] = array("name"=>"bwaterlo", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2018"), "price"=>"6.36");
+        $file[] = array("name"=>"yhemme", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2017"), "price"=>"11.82");
+        $file[] = array("name"=>"mimhoff", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2017"), "price"=>"10.48");
+        $file[] = array("name"=>"dgalanop", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"paris", "year"=>"2019"), "price"=>"0.22");
+        $file[] = array("name"=>"cwu", "uid"=>rand(0, 100000),  "categories"=>array("campus"=>"fremont", "year"=>"2018"), "price"=>"0.42");
         return ($file);
+    }
+    
+    function    init_categorie() {
+        $file = array();
+        $file["years"][] = array(2015, 2016, 2017, 2018, 2019);
+        $file["campus"][] = array("paris", "fremont");
+        return $file;
     }
 
 ?>
