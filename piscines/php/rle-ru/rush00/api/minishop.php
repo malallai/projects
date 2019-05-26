@@ -1,7 +1,8 @@
 <?php
 
     function get_users() {
-        return (unserialize("../private/accounts"));
+        $users = unserialize(file_get_contents("../private/accounts"));
+        return ($users);
     }
 
     function get_products() {
