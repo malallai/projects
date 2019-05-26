@@ -18,7 +18,7 @@ foreach ($file as $k=>$f)
 			break ;
 		}
 		else
-			header("location: user.php?msg=wrondpw");
+			header("location: user.php?msg=wrongpw");
 	}
 }
 header("location: user.php?msg=passchangesuccess");
