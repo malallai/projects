@@ -1,24 +1,26 @@
 <?php
 
-    $private_folder = "../private";
-    $users_file = $private_folder."/accounts";
-    $products_file = $private_folder."/products";
-    $orders_file = $private_folder."/orders";
-
     function get_users() {
-        return (unserialize($users_file));
+        return (unserialize("../private/accounts"));
     }
 
     function get_products() {
+        return (unserialize("../private/products"));
+    }
+
+    function get_history($user_id) {
+        $orders = get_all_history();
+        $user_orders = array();
+        $user = get_user($user_id);
 
     }
 
-    function get_history($user) {
-
+    function get_user($user_id) {
+        
     }
 
     function get_all_history() {
-
+        return (unserialize(file_get_contents("../private/orders")));
     }
 
     function auth($login, $password) {
