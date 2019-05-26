@@ -69,10 +69,10 @@ html, body {
 
 .header .flex-compononent:nth-child(2) .searchbar .search .icon {
     position: relative;
-    margin: 0 auto;
-    width: 45%;
     top: 50%;
     transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header .flex-compononent:nth-child(2) .searchbar .search {
