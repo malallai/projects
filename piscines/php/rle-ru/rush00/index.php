@@ -11,27 +11,29 @@ if (is_installed() !== true) {
 }
 ?>
     <div class="flex-categories">
-        <script src="assets/js/minishop.js"></script>
-        <?php
-        $categories = get_categories();
-        foreach ($categories as $key => $value) {
-            ?>
-            <div class="category">
-                <select id="select-box" name="<?= $value ?>" onchange="update_selected_categories(this, '<?=$key?>');">
-                    <option value="-1" hidden=""><?= $key ?></option>
-                    <?php
-                    foreach ($value as $key1 => $value1) {
-                        ?>
-                            <option value="<?= $value1 ?>"><?= $value1 ?></option>
-                        <?php
-                    }
-                    ?>
-                </select>
-            </div>
+        <div class="categories">
+            <script src="assets/js/minishop.js"></script>
             <?php
-        }
+            $categories = get_categories();
+            foreach ($categories as $key => $value) {
+                ?>
+                <div class="category">
+                    <select id="select-box" name="<?= $value ?>" onchange="update_selected_categories(this, '<?=$key?>');">
+                        <option value="-1" hidden=""><?= $key ?></option>
+                        <?php
+                        foreach ($value as $key1 => $value1) {
+                            ?>
+                                <option value="<?= $value1 ?>"><?= $value1 ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <?php
+            }
 
-    ?>
+        ?>
+        </div>
     </div>
     <div class="flex-items">
 

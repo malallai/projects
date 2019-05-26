@@ -175,12 +175,15 @@ body {
 
 .flex-categories {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around;
     top: 50%;
     transform: translateY(-50%);
     align-items: center;
+}
+
+.flex-categories .categories {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flex-categories .category {
