@@ -17,6 +17,7 @@ if (is_installed() !== true) {
             ?>
             <div class="category">
                 <select name="<?= $value ?>">
+                    <option value="-1" hidden=""><?= $key ?></option>
                     <?php
                     foreach ($value as $key1 => $value1) {
                         ?>
