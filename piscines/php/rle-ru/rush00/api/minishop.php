@@ -166,8 +166,6 @@
     function search_item_by_categories($products, $args) {
         $searched = $products;
         foreach($args as $key => $value) {
-            print_r($key);
-            print_r($value);
             $searched = search_item_by_category($searched, $key, $value);
         }
         return $searched;
