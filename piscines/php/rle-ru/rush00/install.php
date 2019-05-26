@@ -1,6 +1,6 @@
 <?php
-
-    include ('assets/templates/header.php');
+session_start();
+include ('api/minishop.php')
 
     if (isset($_POST['create'])) {
         if (!file_exists("private"))
@@ -58,6 +58,16 @@
     }
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>MiniShop</title>
+</head>
+<body>
 <link rel="stylesheet" href="assets/css/install.css">
 <div class="container">
     <div class="install-row">
