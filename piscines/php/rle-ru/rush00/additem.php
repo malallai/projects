@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if (isset($_POST['submit']) && isset($_POST['id'])) {
         $items = array();
         if (isset($_SESSION['items'])) {

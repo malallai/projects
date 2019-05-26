@@ -1,7 +1,5 @@
 <?php
 session_start();
-include('install.php');
-install();
 if ($_POST['name'])
 	$todel = $_POST['name'];
 else
