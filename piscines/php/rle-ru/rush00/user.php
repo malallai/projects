@@ -1,5 +1,10 @@
 <?php
 include('assets/templates/header.php');
+
+if (!isset($_SESSION) || $_SESSION['logged_as'] == '')
+{
+    header('location: login.php');
+}
 if ($_SESSION['logged_as'])
 {
 	echo "<a href='logout.php'>Log out</a><br />";
