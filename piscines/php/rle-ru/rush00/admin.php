@@ -23,12 +23,21 @@ else
             $new['name'] = $_POST['name'];
             $new['price'] = $_POST['price'];
             $new['uid'] = rand(0, 100000);
-            $new['year'] = $_POST['year'];
+            $new['categories']['year'] = $_POST['year'];
+            $new['categories']['campus'] = $_POST['campus'];
             create_product($new);
         } else if ($_POST['submit'] === "Del Product") {
             delete_product(get_product($_POST['name']));
         } else if ($_POST['submit'] === "Del User") {
             delete_user($_POST['name']);
+        } else if ($_POST['submit'] === "Add Category") {
+            create_category(get_product($_POST['name']));
+        } else if ($_POST['submit'] === "Del Category") {
+            delete_category($_POST['name']);
+        } else if ($_POST['submit'] === "Add Item") {
+            add_item_category($_POST['name'], $_POST['item']);
+        } else if ($_POST['submit'] === "Del Item") {
+            delete_item_category($_POST['name'], $_POST['item']);
         }
         header("Location: admin.php");
     }
@@ -41,7 +50,33 @@ else
         <input type="text" name="price">
         <span>Year: </span>
         <input type="text" name="year">
+        <span>campus: </span>
+        <input type="text" name="campus">
         <input type="submit" name="submit" value="Add Product">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Add new Category: </span>
+        <input type="text" name="name">
+        <input type="submit" name="submit" value="Add Category">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Delete Category: </span>
+        <input type="text" name="name">
+        <input type="submit" name="submit" value="Del Category">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Add item to Category: </span>
+        <input type="text" name="name">
+        <span>Item: </span>
+        <input type="text" name="item">
+        <input type="submit" name="submit" value="Add Item">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Del item from Category: </span>
+        <input type="text" name="name">
+        <span>Item: </span>
+        <input type="text" name="item">
+        <input type="submit" name="submit" value="Del Item">
     </form>
     <form method="POST" action="admin.php">
         <span>Delete a product: </span>
