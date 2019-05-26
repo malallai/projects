@@ -17,7 +17,7 @@
         }
         if (!file_exists("private/categories"))
         {
-            $file = init_products();
+            $file = init_categories();
             file_put_contents("private/categories", serialize($file));
         }
         if (!file_exists("private/orders"))
@@ -50,7 +50,7 @@
         return ($file);
     }
     
-    function    init_categorie() {
+    function    init_categories() {
         $file = array();
         $file["years"][] = array(2015, 2016, 2017, 2018, 2019);
         $file["campus"][] = array("paris", "fremont");
