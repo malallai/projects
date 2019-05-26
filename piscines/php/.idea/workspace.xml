@@ -33,7 +33,6 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/footer.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/assets/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +60,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rush00/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+                <state relative-caret-position="465">
+                  <caret line="31" selection-start-line="31" selection-end-line="31" />
                 </state>
               </provider>
             </entry>
@@ -79,11 +78,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="855">
-                  <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -189,12 +188,12 @@
         <option value="$PROJECT_DIR$/rush00/admin/index.php" />
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/install.php" />
-        <option value="$PROJECT_DIR$/rush00/assets/css/install.css" />
         <option value="$PROJECT_DIR$/rush00/admin/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/rush00/index.php" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/footer.php" />
         <option value="$PROJECT_DIR$/rush00/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/rush00/assets/css/install.css" />
       </list>
     </option>
   </component>
@@ -339,12 +338,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="5685000" />
+      <workItem from="1558865111511" duration="5706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63747000" />
+    <option name="totallyTimeSpent" value="63768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,17 +657,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
+    <entry file="file://$PROJECT_DIR$/rush00/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
