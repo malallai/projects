@@ -28,7 +28,9 @@
 
     function auth($login, $password) {
         $user = get_user($login);
+        print_r($user);
         if ($user) {
+            print("test\n");
             if (hash('whirlpool', $password) === $user['pass'])
                 return true;
         }
