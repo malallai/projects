@@ -152,11 +152,13 @@
         return $searched;
     }
 
-    function search_item_by_category($products, $search, $category) {
+    function search_item_by_category($products, $category, $search) {
         $searched = array();
         foreach ($products as $value) {
-            if ($value['categories'][$category] === $search)
-                $searched[] = $value;
+            foreach ($search as $val) {
+                if ($value['categories'][$category] === $val)
+                    $searched[] = $value;
+            }
         }
         return $searched;
     }
@@ -166,7 +168,7 @@
         foreach($args as $key => $value) {
             print_r($key);
             print_r($value);
-            $searched = search_item_by_category($searched, $value, $key);
+            $searched = search_item_by_category($searched, $key, $value);
         }
         return $searched;
     }
