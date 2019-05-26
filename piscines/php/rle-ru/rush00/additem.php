@@ -11,6 +11,7 @@
         }
         $_SESSION['items'] = $items;
         $_SESSION['items_count'] =  isset($_SESSION['items_count']) ? $_SESSION['items_count'] + 1 : 1;
+        print_r($items);
     }
 
-   header("Location: index.php");
+  // header("Location: index.php");
