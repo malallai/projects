@@ -167,7 +167,10 @@
     function delete_item_category($name, $item) {
         $categories = get_categories();
         print_r($categories);
-        unset($categories[$name][$item]);
+        foreach ($categories[$name] as $key => $value) {
+            if ($value === $item)
+                unset($categories[$name][$key]);
+        }
         print_r($categories);
         file_put_contents("private/categories", serialize($categories));
     }
