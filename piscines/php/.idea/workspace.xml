@@ -18,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/assets/css/login.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rush00/assets/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="555">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -348,12 +349,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="25704000" />
+      <workItem from="1558865111511" duration="25748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83766000" />
+    <option name="totallyTimeSpent" value="83810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rush00/assets/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="555">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
         </state>
       </provider>
     </entry>

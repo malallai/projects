@@ -35,6 +35,19 @@ body {
     max-width: 30rem;
 }
 
+.log-top {
+    width: 25vw;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.2s ease;
+    transition-delay: 0.05s;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
 input {
     text-align: center;
     font-size: inherit;
