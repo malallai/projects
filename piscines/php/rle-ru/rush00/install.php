@@ -3,7 +3,7 @@
     include ('assets/templates/header.php');
     include ('api/minishop.php');
 
-    if (isset($_POST['action']) && $_POST['action'] === "install") {
+    if (isset($_POST['create'])) {
         if (!file_exists("../private"))
             mkdir("../private");
         if (!file_exists("../private/accounts"))
