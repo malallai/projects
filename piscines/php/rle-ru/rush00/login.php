@@ -21,9 +21,12 @@
 <link rel="stylesheet" href="assets/css/login.css">
 <div class="container">
     <div class="log-top">
-        <a class="active login" href="login.php">Connexion</a>
-        <a class="register"href="register.php">Inscription</a>
+        <div class="log-top-content">
+            <a class="active login" href="login.php">Connexion</a>
+            <a class="register"href="register.php">Inscription</a>
+        </div>
     </div>
+
     <div class="login-row">
 		<div class="login-content">
 			<p>Connexion</p>
