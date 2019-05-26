@@ -17,12 +17,14 @@ session_start();
         </div>
     </div>
     <div class="flex-compononent">
-        <div class="bar">
-            <input id="searchinput" name="search" placeholder="Search" type="text">
-        </div>
-        <div  class="search">
-            <div class="icon">
-                <a href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
+        <div class="searchbar">
+            <div class="bar">
+                <input id="searchinput" name="search" placeholder="Search" type="text">
+            </div>
+            <div  class="search">
+                <div class="icon">
+                    <a href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
+                </div>
             </div>
         </div>
     </div>
