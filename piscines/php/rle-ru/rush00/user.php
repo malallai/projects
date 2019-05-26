@@ -9,6 +9,7 @@ if ($_SESSION['logged_as'])
 {
 	echo "<a href='logout.php'>Log out</a><br />";
 	?>
+    <a><?= $_SESSION['logged_as'] ?></a>
 	Change password:
 	<form method="POST" action="change.php">
 		Old password: <input type="password" name="oldpw" />
