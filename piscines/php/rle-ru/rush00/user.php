@@ -1,7 +1,11 @@
 <?php
 include('assets/templates/header.php');
+
+
+
 if ($_SESSION['logged_as'] == '')
 {
+    header('location: login.php');
 	?>
 	<div>
 	<form method="POST" action="login.php">

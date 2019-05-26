@@ -8,7 +8,7 @@
             mkdir("../private");
         if (!file_exists("../private/accounts"))
         {
-            $file = init_accounts($_POST['uername'], $_POST['password']);
+            $file = init_accounts($_POST['username'], $_POST['password']);
             file_put_contents("../private/accounts", serialize($file));
         }
         if (!file_exists("../private/products"))

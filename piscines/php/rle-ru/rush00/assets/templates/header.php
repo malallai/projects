@@ -1,5 +1,6 @@
 <?php
 session_start();
+include ('api/minishop.php')
 ?>
 <!DOCTYPE html>
 <html>
