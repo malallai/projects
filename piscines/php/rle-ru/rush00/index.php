@@ -23,8 +23,7 @@ if (is_installed() !== true) {
 
     foreach ($_GET as $key => $val) {
         if (get_categories()[$key]) {
-            $args = $_GET[$key];
-            $products = search_item_by_categories($products, $args);
+            $products = search_item_by_categories($products, $val);
         }
     }
 	$page = isset($_GET['page']) && $_GET['page'] != NULL ? $_GET['page'] : 0;
