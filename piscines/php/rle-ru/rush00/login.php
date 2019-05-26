@@ -1,7 +1,7 @@
 <?php
 	include('assets/templates/header.php');
 
-	if ($_SESSION['logged_as'] !== ''|| $_SESSION['logged_as'] !== null)
+	if (!isset($_SESSION['logged_as']) || $_SESSION['logged_as'] !== ''|| $_SESSION['logged_as'] !== null)
 		header("location: user.php");
 
 	if (isset($_POST['login']))
