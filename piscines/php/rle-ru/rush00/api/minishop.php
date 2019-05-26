@@ -16,7 +16,7 @@
     }
 
     function get_user($user_id) {
-        
+
     }
 
     function get_all_history() {
