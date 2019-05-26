@@ -68,13 +68,15 @@ if (is_installed() !== true) {
         }
         if (count($products) > $i + 5) {
             $request = "?page".($page + 1);
-            if (is_array($value)) {
-                print_r($value);
-                foreach ($value as $key1 => $value1) {
-                    $request .= "&" . $key . "[]=" . $value1;
+            foreach ($_GET as $key => $value) {
+                if (is_array($value)) {
+                    print_r($value);
+                    foreach ($value as $key1 => $value1) {
+                        $request .= "&" . $key . "[]=" . $value1;
+                    }
+                } else {
+                    $request .= "&" . $key . "=" . $value;
                 }
-            } else {
-                $request .= "&" . $key . "=" . $value;
             }
             echo "<a href=\"index.php".$request."\">Page suivante</a>";
         }
