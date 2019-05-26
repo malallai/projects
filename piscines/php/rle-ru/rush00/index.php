@@ -54,7 +54,7 @@ if (is_installed() !== true) {
         }
         if ($page > 0) {
             $request = "?page=".($page - 1);
-            unset($_GET['page']);
+            if (isset($_GET['page'])) unset($_GET['page']);
             foreach ($_GET as $key => $value) {
                 if (is_array($value)) {
                     foreach ($value as $key1 => $value1) {
@@ -68,7 +68,7 @@ if (is_installed() !== true) {
         }
         if (count($products) > $i + 5) {
             $request = "?page=".($page + 1);
-            unset($_GET['page']);
+            if (isset($_GET['page'])) unset($_GET['page']);
             foreach ($_GET as $key => $value) {
                 if (is_array($value)) {
                     foreach ($value as $key1 => $value1) {
