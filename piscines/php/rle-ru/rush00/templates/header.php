@@ -22,9 +22,7 @@ session_start();
                 <input id="searchinput" name="search" placeholder="Search" type="text">
             </div>
             <div  class="search">
-                <div class="icon">
-                    <a href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
-                </div>
+                <a class="icon" href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
             </div>
         </div>
     </div>
