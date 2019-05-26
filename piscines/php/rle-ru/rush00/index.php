@@ -17,7 +17,7 @@ if (is_installed() !== true) {
         foreach ($categories as $key => $value) {
             ?>
             <div class="category">
-                <select id="select-box" name="<?= $value ?>" onchange="update_selected_categories('<?=$key?>');">
+                <select id="select-box" name="<?= $value ?>" onchange="update_selected_categories(this, '<?=$key?>');">
                     <option value="-1" hidden=""><?= $key ?></option>
                     <?php
                     foreach ($value as $key1 => $value1) {
