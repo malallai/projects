@@ -20,7 +20,7 @@ if ($_GET['order'])
 							<p><?= $item['name'] ?></p>
 						</div>
 						<div class="price">Prix : <?= $item['price'] ?>E (<?= ($value * $item['price']) ?>E)</div>
-						<div class="quantity">Quantité : <?= $value ?></div>
+						<div class="campus">Quantité : <?= $value ?></div>
 					</div>
 				</div>
 				<?php

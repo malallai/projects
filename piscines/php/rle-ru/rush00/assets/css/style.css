@@ -230,14 +230,8 @@ body {
     text-transform: uppercase;
 }
 
-.flex-items .description .price {
+.flex-items .description .price, .flex-items .description .campus {
     margin-left: 1rem;
-    float: left;
-}
-
-.flex-items .description .quantity {
-    margin-left: 1rem;
-    float: left;
 }
 
 .flex-items .description .id {
