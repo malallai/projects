@@ -116,7 +116,7 @@ html, body {
 
 .header .flex-compononent:nth-child(3) .items-count {
     position: absolute;
-    color: #fff;
+    color: rgb(250, 120, 0);
     float: left;
     margin: 0;
     font-size: 20px;
