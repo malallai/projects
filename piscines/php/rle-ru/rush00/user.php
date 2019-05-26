@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
             $login = $_SESSION['logged_as'];
             logout();
             delete_user($login);
+            header("location:index.php");
         }
     }
 }
