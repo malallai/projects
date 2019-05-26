@@ -18,18 +18,23 @@ include('assets/templates/header.php');
 ?>
 <link rel="stylesheet" href="assets/css/login.css">
 <div class="container">
-    <div class="log-top">
-        <a class="login" href="login.php">Connexion</a>
-        <a class="active register"href="register.php">Inscription</a>
+    <div class="log-top-row">
+        <div class="log-top-content">
+            <div class="log-top">
+                <a class="" href="login.php">Connexion</a>
+                <a class="active" href="register.php">Inscription</a>
+            </div>
+        </div>
     </div>
+
     <div class="login-row">
         <div class="login-content">
-            <p>Connexion</p>
+            <p>Inscription</p>
             <div class="login">
-                <form method="POST" action="login.php">
+                <form method="POST" action="register.php">
                     <input type="text" name="login" id="login" class="form-control" placeholder="Login">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
-                    <input class="btn btn-white" name="log" value="Connexion" type="submit">
+                    <input type="password" name="pass" id="password" class="form-control" placeholder="Mot de passe">
+                    <input class="btn btn-white" name="create" value="Inscription" type="submit">
                 </form>
             </div>
         </div>
