@@ -15,10 +15,10 @@
             $file = init_products();
             file_put_contents("private/products", serialize($file));
         }
-        if (!file_exists("private/categoriess"))
+        if (!file_exists("private/categories"))
         {
             $file = init_products();
-            file_put_contents("private/categoriess", serialize($file));
+            file_put_contents("private/categories", serialize($file));
         }
         if (!file_exists("private/orders"))
             file_put_contents("private/orders", NULL);
