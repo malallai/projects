@@ -27,7 +27,7 @@ else
             $new['categories']['campus'] = $_POST['campus'];
             create_product($new);
         } else if ($_POST['submit'] === "Del Product") {
-            delete_product(get_product($_POST['name']));
+            delete_product(get_product_uid($_POST['name']));
         } else if ($_POST['submit'] === "Del User") {
             delete_user($_POST['name']);
         } else if ($_POST['submit'] === "Add Category") {

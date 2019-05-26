@@ -135,12 +135,23 @@
         return false;
     }
 
-    function get_product($name) {
+    function get_product_uid($name) {
         $products = get_products();
         foreach($products as $k => $f)
         {
             if ($f['name'] == $name) {
                 return ($f['uid']);
+            }
+        }
+        return false;
+    }
+
+    function get_product($name) {
+        $products = get_products();
+        foreach($products as $k => $f)
+        {
+            if ($f['name'] == $name) {
+                return ($f);
             }
         }
         return false;
@@ -189,11 +200,11 @@
 
     function add_cat_to_product($id, $category, $item) {
         $product = get_product($id);
-        print_r($product);
         $categories = $product['categories'];
+        print_r($categories);
         $categories[$category] = $item;
         $product['categories'] = $categories;
-        print_r($product);
+        print_r($categories);
         update_product($product);
     }
 
