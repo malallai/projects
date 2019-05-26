@@ -142,25 +142,33 @@
 
     function create_category($name) {
         $categories = get_categories();
+        print_r($categories);
         $categories[$name] = array();
+        print_r($categories);
         file_put_contents("private/categories", serialize($categories));
     }
 
     function delete_category($name) {
         $categories = get_categories();
+        print_r($categories);
         unset($categories[$name]);
+        print_r($categories);
         file_put_contents("private/categories", serialize($categories));
     }
 
     function add_item_category($name, $item) {
         $categories = get_categories();
-        $categories = array_push($categories[$name], $item);
+        print_r($categories);
+        array_push($categories[$name], $item);
+        print_r($categories);
         file_put_contents("private/categories", serialize($categories));
     }
 
     function delete_item_category($name, $item) {
         $categories = get_categories();
+        print_r($categories);
         unset($categories[$name][$item]);
+        print_r($categories);
         file_put_contents("private/categories", serialize($categories));
     }
 
