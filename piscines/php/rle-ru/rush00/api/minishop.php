@@ -68,6 +68,18 @@
         return true;
     }
 
+    function update_user($user) {
+        $users = get_users();
+        foreach ($users as $key => $value) {
+            if ($value['login'] === $user['login']) {
+                $users[$key] = $user;
+                file_put_contents("private/accounts", serialize($users));
+                return true;
+            }
+        }
+        return false;
+    }
+
     function confirm_order($login) {
         $orders = get_orders();
         $n = rand(0, 100000);
@@ -75,13 +87,9 @@
         file_put_contents("private/orders", serialize($orders));
         unset($_SESSION['items']);
         $_SESSION['items_count'] = 0;
-        $users = get_users();
         $user = get_user($login);
         $user['orders'][] = $n;
-        $users[get_user($login)] = $user;
-        print_r($users);
-        print_r($user);
-        file_put_contents("private/accounts", serialize($users));
+        update_user($user);
         return true;
     }
 
