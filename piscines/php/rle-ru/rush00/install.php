@@ -1,7 +1,6 @@
 <?php
 
     include ('assets/templates/header.php');
-    include ('api/minishop.php');
 
     if (isset($_POST['create'])) {
         if (!file_exists("../private"))
