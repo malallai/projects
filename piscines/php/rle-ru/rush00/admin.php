@@ -34,7 +34,7 @@ else
     }
 
     ?>
-    <form method="POST" action="add_product.php">
+    <form method="POST" action="admin.php">
         <span>Add new product: </span>
         <input type="text" name="name">
         <span>Price: </span>
@@ -43,12 +43,12 @@ else
         <input type="text" name="year">
         <input type="submit" name="submit" value="Add Product">
     </form>
-    <form method="POST" action="del_product.php">
+    <form method="POST" action="admin.php">
         <span>Delete a product: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Del Product">
     </form>
-    <form method="POST" action="delete.php">
+    <form method="POST" action="admin.php">
         <span>Delete user: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Del User">
