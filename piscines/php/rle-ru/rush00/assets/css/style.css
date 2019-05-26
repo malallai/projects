@@ -181,14 +181,15 @@ body {
 }
 
 .flex-categories .categories {
-    width: 100%;
+    width: 75vw;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 .flex-categories .category {
-    box-sizing: border-box;
     padding: 0 1rem;
+    float: left;
 }
 
 .flex-items {
