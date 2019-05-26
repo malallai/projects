@@ -23,7 +23,7 @@ include ('api/minishop.php')
                 <div class="bar">
                     <input id="searchinput" name="search" placeholder="Search" type="text">
                 </div>
-                    <a class="search" href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value">
+                    <a class="search" href="" onclick="this.href='index.php?search='+document.getElementById('searchinput').value">
                         <div class="icon">
                             <i class='fas fa-search'></i>
                         </div>

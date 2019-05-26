@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/api/minishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/api/minishop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/install.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
@@ -26,8 +27,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1065">
-                  <caret line="71" selection-start-line="71" selection-end-line="71" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
                 </state>
               </provider>
             </entry>
@@ -55,6 +56,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
                   <caret line="6" selection-start-line="6" selection-end-line="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/rush00/assets/templates/header.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
                 </state>
               </provider>
             </entry>
@@ -189,7 +199,6 @@
         <option value="$PROJECT_DIR$/rush00/delete.php" />
         <option value="$PROJECT_DIR$/rush00/additem.php" />
         <option value="$PROJECT_DIR$/rush00/validate.php" />
-        <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/rush00/history.php" />
         <option value="$PROJECT_DIR$/rush00/admin/index.php" />
         <option value="$PROJECT_DIR$/rush00/admin.php" />
@@ -204,6 +213,7 @@
         <option value="$PROJECT_DIR$/rush00/cart.php" />
         <option value="$PROJECT_DIR$/rush00/install.php" />
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
+        <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/rush00/index.php" />
       </list>
     </option>
@@ -240,6 +250,19 @@
               <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="rush00" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="rush00" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="rush00" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,12 +331,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="19246000" />
+      <workItem from="1558865111511" duration="19655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77308000" />
+    <option name="totallyTimeSpent" value="77717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/assets/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -632,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -660,10 +669,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/assets/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="330">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
         </state>
       </provider>
     </entry>
