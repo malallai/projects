@@ -136,13 +136,31 @@
         file_put_contents("private/products", serialize($orders));
     }
 
-    function search_item($search) {
+    function search_item_by_name($search) {
         $products = get_products();
         $searched = array();
         foreach ($products as $value) {
-            if ($value['name'] == $search || $value['year'] === $search || (is_numeric($search) && $value['year'] == intval($search))) {
-                $searched[] = $value;
+            if ($value['name'] == $search) {
+                if (!in_array($searched, $value))
+                    $searched[] = $value;
             }
+        }
+        return $searched;
+    }
+
+    function search_item_by_category($products, $search, $category) {
+        $searched = array();
+        foreach ($products as $value) {
+            if ($value['categories'][$category] === $search)
+                $searched[] = $value;
+        }
+        return $searched;
+    }
+
+    function search_item_by_categories($products, $args) {
+        $searched = $products;
+        foreach($args as $key => $value) {
+            $searched = search_item_by_category($searched, $value, $key);
         }
         return $searched;
     }

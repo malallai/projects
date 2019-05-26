@@ -9,12 +9,20 @@ if (isset($_POST['submit'])) {
 if (is_installed() !== true) {
     header("location: install.php");
 }
-
 ?>
 <div class="flex-items">
 
     <?php
     $products = get_products();
+
+    if ($_GET['search'])
+    {
+        $products = search_item_by_name($_GET['search']);
+    }
+    if ($_GET['categories']) {
+        $args = $_GET['categories'];
+        $products = search_item_by_categories($products, $args);
+    }
 	$page = isset($_GET['page']) && $_GET['page'] != NULL ? $_GET['page'] : 0;
 
     if ($products)
