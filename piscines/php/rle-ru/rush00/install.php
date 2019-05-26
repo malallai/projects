@@ -23,7 +23,7 @@
                     <input type="email" name="email" id="mail" class="form-control" placeholder="Adresse Email">
                     <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
                     <input type="password" name="repeat" id="repeatPass" class="form-control" placeholder="Répéter le mot de passe">
-                    <input class="btn btn-green" name="create" value="Créer" type="submit">
+                    <input class="btn btn-white" name="create" value="Créer" type="submit">
                 </form>
             </div>
         </div>

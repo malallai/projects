@@ -49,6 +49,35 @@ input {
     border-radius: .25rem;
 }
 
+.btn {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: center;
+    color: inherit;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0rem solid transparent;
+    border-bottom: .2rem solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-blue:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(95, 172, 255, .25);
+    background-color: rgba(95, 172, 255, 0.25);
+}
+
+.btn-white:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-green:not(.disabled):hover {
+    border-bottom: 0.2rem solid rgba(76, 172, 80, .25);
+    background-color: rgba(76, 172, 80, 0.25);
+}
 
 @media only screen and (max-width:900px) {
     .install-row {
