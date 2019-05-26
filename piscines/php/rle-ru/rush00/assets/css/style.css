@@ -185,7 +185,6 @@ body {
 .flex-categories .category {
     box-sizing: border-box;
     padding: 0 1rem;
-    flex-basis: 25%;
 }
 
 .flex-items {
