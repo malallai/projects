@@ -181,7 +181,11 @@ body {
     transform: translateY(-50%);
     align-items: center;
     flex-direction: column;
+}
+
+.flex-categories .category {
     box-sizing: border-box;
+    flex-basis: 25%;
 }
 
 .flex-items {
