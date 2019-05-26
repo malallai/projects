@@ -66,7 +66,7 @@ if (is_installed() !== true) {
                                 <p><?= $f['name'] ?></p>
                             </div>
                             <div class="price">Prix : <?= $f['price'] ?>E</div>
-                            <div class="quantity">Annee : <?= $f['categories']['year'] ?></div>
+                            <div class="quantity">Annee : <?= $f['categories']['annee'] ?></div>
                             <div class="campus">Campus : <?= $f['categories']['campus'] ?></div>
                             <form action="index.php" method="post">
                                 <input class="id" name="id" type="text" value="<?= $f['uid'] ?>">

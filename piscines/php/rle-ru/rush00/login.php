@@ -20,7 +20,11 @@
 ?>
 <link rel="stylesheet" href="assets/css/install.css">
 <div class="container">
-	<div class="install-row">
+    <div class="log-top">
+        <a href="login.php">Connexion</a>
+        <a href="register.php">Inscription</a>
+    </div>
+    <div class="install-row">
 		<div class="install-content">
 			<p>Connexion</p>
 			<div class="install">

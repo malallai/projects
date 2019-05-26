@@ -18,29 +18,29 @@ if ($_SESSION['grade'] != 'admin')
 else
 {
     if (isset($_POST['submit'])) {
-        if ($_POST['submit'] === "Add Product") {
+        if ($_POST['submit'] === "Ajouter un produit") {
             $new = array();
             $new['name'] = $_POST['name'];
             $new['price'] = $_POST['price'];
             $new['uid'] = rand(0, 100000);
-            $new['categories']['year'] = $_POST['year'];
+            $new['categories']['annee'] = $_POST['annee'];
             $new['categories']['campus'] = $_POST['campus'];
             create_product($new);
-        } else if ($_POST['submit'] === "Del Product") {
+        } else if ($_POST['submit'] === "Supprimer un produit") {
             delete_product(get_product_uid($_POST['name']));
-        } else if ($_POST['submit'] === "Del User") {
+        } else if ($_POST['submit'] === "Supprimer un utilisateur") {
             delete_user($_POST['name']);
-        } else if ($_POST['submit'] === "Add Category") {
+        } else if ($_POST['submit'] === "Ajouter une catégorie") {
             create_category($_POST['name']);
-        } else if ($_POST['submit'] === "Del Category") {
+        } else if ($_POST['submit'] === "Supprimer une catégorie") {
             delete_category($_POST['name']);
-        } else if ($_POST['submit'] === "Add Item") {
+        } else if ($_POST['submit'] === "Ajouter un item à la catégorie") {
             add_item_category($_POST['name'], $_POST['item']);
-        } else if ($_POST['submit'] === "Del Item") {
+        } else if ($_POST['submit'] === "Supprimer un item de la catégorie") {
             delete_item_category($_POST['name'], $_POST['item']);
-        } else if ($_POST['submit'] === "Add Cat Product") {
+        } else if ($_POST['submit'] === "Ajouter une catégorie au produit") {
             add_cat_to_product($_POST['name'], $_POST['category'], $_POST['item']);
-        } else if ($_POST['submit'] === "Del Cat Product") {
+        } else if ($_POST['submit'] === "Retirer une catégorie au produit") {
             remove_cat_from_product($_POST['name'], $_POST['category']);
         }
         header("Location: admin.php");
@@ -52,59 +52,65 @@ else
         <input type="text" name="name">
         <span>Price: </span>
         <input type="text" name="price">
-        <span>Year: </span>
-        <input type="text" name="year">
+        <span>annee: </span>
+        <input type="text" name="annee">
         <span>campus: </span>
         <input type="text" name="campus">
-        <input type="submit" name="submit" value="Add Product">
+        <input type="submit" name="submit" value="Ajouter un produit">
     </form>
+    <form method="POST" action="admin.php">
+        <span>Delete a product: </span>
+        <input type="text" name="name">
+        <input type="submit" name="submit" value="Supprimer un produit">
+    </form>
+    </br>
     <form method="POST" action="admin.php">
         <span>Add new Category: </span>
         <input type="text" name="name">
-        <input type="submit" name="submit" value="Add Category">
+        <input type="submit" name="submit" value="Ajouter une catégorie">
     </form>
     <form method="POST" action="admin.php">
         <span>Delete Category: </span>
         <input type="text" name="name">
-        <input type="submit" name="submit" value="Del Category">
+        <input type="submit" name="submit" value="Supprimer une catégorie">
     </form>
+    </br>
     <form method="POST" action="admin.php">
         <span>Add item to Category: </span>
         <input type="text" name="name">
         <span>Item: </span>
         <input type="text" name="item">
-        <input type="submit" name="submit" value="Add Item">
+        <input type="submit" name="submit" value="Ajouter un item à la catégorie">
     </form>
     <form method="POST" action="admin.php">
         <span>Del item from Category: </span>
         <input type="text" name="name">
         <span>Item: </span>
         <input type="text" name="item">
-        <input type="submit" name="submit" value="Del Item">
+        <input type="submit" name="submit" value="Supprimer un item de la catégorie">
     </form>
-    <form method="POST" action="admin.php">
-        <span>Delete a product: </span>
-        <input type="text" name="name">
-        <input type="submit" name="submit" value="Del Product">
-    </form>
+    </br>
     <form method="POST" action="admin.php">
         <span>Add category to product: </span>
         <input type="text" name="name">
         <input type="text" name="category">
         <input type="text" name="item">
-        <input type="submit" name="submit" value="Add Cat Product">
+        <input type="submit" name="submit" value="Ajouter une catégorie au produit">
     </form>
     <form method="POST" action="admin.php">
         <span>Del category for product: </span>
         <input type="text" name="name">
         <input type="text" name="category">
-        <input type="submit" name="submit" value="Del Cat Product">
+        <input type="submit" name="submit" value="Retirer une catégorie au produit">
     </form>
+    </br>
     <form method="POST" action="admin.php">
         <span>Delete user: </span>
         <input type="text" name="name">
-        <input type="submit" name="submit" value="Del User">
+        <input type="submit" name="submit" value="Supprimer un utilisateur">
     </form>
+    </br>
+    <a href='admin_orders.php'>Historique des commandes</a>
     <?php
 }
 include('assets/templates/footer.php');

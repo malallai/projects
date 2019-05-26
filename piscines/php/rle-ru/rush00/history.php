@@ -20,7 +20,7 @@ if ($_GET['order'])
 							<p><?= $item['name'] ?></p>
 						</div>
 						<div class="price">Prix : <?= $item['price'] ?>E (<?= ($value * $item['price']) ?>E)</div>
-						<div class="campus">Quantité : <?= $value ?></div>
+						<div class="quantity">Quantité : <?= $value ?></div>
 					</div>
 				</div>
 				<?php
@@ -40,7 +40,7 @@ if ($users != '')
 		foreach($f['orders'] as $o)
 		{
 			?>
-			<a href="history.php?order=<?=$o?>">Order number <?=$o?></a><br />
+			<a href="history.php?order=<?=$o?>">Commande numéro <?=$o?></a><br />
 			<?php
 		}
 	}
