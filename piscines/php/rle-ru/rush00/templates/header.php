@@ -13,7 +13,7 @@ session_start();
 <div class="header">
     <div class="flex-compononent">
         <div class="icon">
-            <img src="assets/images/42.svg">
+            <a href="index.php"><img src="assets/images/42.svg"></a>
         </div>
     </div>
     <div class="flex-compononent">
@@ -24,7 +24,7 @@ session_start();
             <div  class="search">
                 <label>
                     <div class="icon">
-                        <input type="submit" name="search" value="OK">
+                        <input type="submit" name="submit" value="OK">
                         <i class='fas fa-search'></i>
                     </div>
                 </label>
@@ -38,7 +38,7 @@ session_start();
                     ?>
                     <div class="flex-icon">
                         <div class="icon">
-                            <a href="admin"><i class='fas fa-lock'></i></a>
+                            <a href="admin.php"><i class='fas fa-lock'></i></a>
                         </div>
                     </div>
                     <?php

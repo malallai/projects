@@ -1,6 +1,8 @@
 <?php
 session_start();
-include("header.php");
+include('install.php');
+install();
+include('templates/header.php');
 if ($_SESSION['grade'] != 'admin')
 {
 	?>
@@ -25,21 +27,28 @@ else
 {
 	?>
 	<html>
-	<head><link href="body.css" type="text/css" rel="stylesheet" /></head>
 	<body>
-	<div id="main">
 		<form method="POST" action="add_product.php">
-		<span class="fields">Add new product: </span>
+		<span>Add new product: </span>
 		<input type="text" name="name">
-		<span class="fields">Price: </span>
+		<span>Price: </span>
 		<input type="text" name="price">
-		<span class="fields">Year: </span>
+		<span>Year: </span>
 		<input type="text" name="year">
 		<input type="submit" name="submit" value="submit">
 		</form>
-	</div>
+		<form method="POST" action="del_product.php">
+		<span>Delete a product: </span>
+		<input type="text" name="name">
+		<input type="submit" name="submit" value="submit">
+		</form>
+		<form method="POST" action="delete.php">
+		<span>Delete user: </span>
+		<input type="text" name="name">
+		</form>
 	<body>
 	</html>
 	<?php
 }
+include('templates/footer.php');
 ?>
