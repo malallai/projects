@@ -22,6 +22,7 @@ if (is_installed() !== true) {
 
     foreach ($_GET as $key => $val) {
         if (get_categories()[$key]) {
+            print_r($key);
             $products = search_item_by_categories($products, $key);
         }
     }
