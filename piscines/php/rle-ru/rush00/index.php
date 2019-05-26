@@ -19,9 +19,11 @@ if (is_installed() !== true) {
     {
         $products = search_item_by_name($_GET['search']);
     }
-    if ($_GET['categories']) {
-        $args = $_GET['categories'];
-        $products = search_item_by_categories($products, $args);
+    foreach ($_GET as $key => $val) {
+        if (get_categories()[$key]) {
+            $args = $_GET[$key];
+            $products = search_item_by_categories($products, $args);
+        }
     }
 	$page = isset($_GET['page']) && $_GET['page'] != NULL ? $_GET['page'] : 0;
 

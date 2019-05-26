@@ -32,6 +32,10 @@
                 return ($value);
         }
     }
+    
+    function get_categories() {
+        return (unserialize(file_get_contents("private/categories")));
+    }
 
     function get_orders() {
         return (unserialize(file_get_contents("private/orders")));
