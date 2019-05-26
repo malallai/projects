@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('api/minishop.php')
+include ('api/minishop.php');
 
     if (isset($_POST['create'])) {
         if (!file_exists("private"))
