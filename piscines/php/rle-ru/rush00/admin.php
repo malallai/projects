@@ -38,6 +38,10 @@ else
             add_item_category($_POST['name'], $_POST['item']);
         } else if ($_POST['submit'] === "Del Item") {
             delete_item_category($_POST['name'], $_POST['item']);
+        } else if ($_POST['submit'] === "Add Cat Product") {
+            add_cat_to_product($_POST['name'], $_POST['category'], $_POST['item']);
+        } else if ($_POST['submit'] === "Del Cat Product") {
+            remove_cat_from_product($_POST['name'], $_POST['category']);
         }
         //header("Location: admin.php");
     }
@@ -82,6 +86,19 @@ else
         <span>Delete a product: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Del Product">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Add category to product: </span>
+        <input type="text" name="name">
+        <input type="text" name="category">
+        <input type="text" name="item">
+        <input type="submit" name="submit" value="Add Cat Product">
+    </form>
+    <form method="POST" action="admin.php">
+        <span>Del category for product: </span>
+        <input type="text" name="name">
+        <input type="text" name="category">
+        <input type="submit" name="submit" value="Del Cat Product">
     </form>
     <form method="POST" action="admin.php">
         <span>Delete user: </span>

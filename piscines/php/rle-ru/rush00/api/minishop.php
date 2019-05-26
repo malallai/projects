@@ -97,6 +97,18 @@
         return false;
     }
 
+    function update_product($product) {
+        $products = get_products();
+        foreach ($products as $key => $value) {
+            if ($value['name'] === $product['name']) {
+                $products[$key] = $product;
+                file_put_contents("private/products", serialize($products));
+                return true;
+            }
+        }
+        return false;
+    }
+
     function confirm_order($login) {
         $orders = get_orders();
         $n = rand(0, 100000);
@@ -173,6 +185,22 @@
         }
         print_r($categories);
         file_put_contents("private/categories", serialize($categories));
+    }
+
+    function add_cat_to_product($id, $category, $item) {
+        $product = get_product($id);
+        $categories = $product['categories'];
+        $categories[$category] = $item;
+        $product['categories'] = $categories;
+        update_product($product);
+    }
+
+    function remove_cat_from_product($id, $category) {
+        $product = get_product($id);
+        $categories = $product['categories'];
+        unset($categories[$category]);
+        $product['categories'] = $categories;
+        update_product($product);
     }
 
     function search_item_by_name($search) {
