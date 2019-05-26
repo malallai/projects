@@ -33,9 +33,9 @@ if ($_GET['value'])
 		}
 	}
 	if ($page > 0)
-	    echo "<a href=\"index.php?value=".$_GET['value']."&page=", $page - 1 , "\">Page precedente</a>";
+	    echo "<a href=\"search.php?value=".$_GET['value']."&page=", $page - 1 , "\">Page precedente</a>";
 	if (count($res) > $i + 5)
-	    echo "<a href=\"index.php?value=".$_GET['value']."&page=", $page + 1 , "\">Page suivante</a>";
+	    echo "<a href=\"search.php?value=".$_GET['value']."&page=", $page + 1 , "\">Page suivante</a>";
 }
 ?>
 </div>
