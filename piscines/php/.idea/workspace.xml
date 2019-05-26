@@ -33,7 +33,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/footer.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/api/minishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/api/minishop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                  <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -275,8 +275,8 @@
         <option value="$PROJECT_DIR$/rush00/change.php" />
         <option value="$PROJECT_DIR$/rush00/delete.php" />
         <option value="$PROJECT_DIR$/rush00/additem.php" />
-        <option value="$PROJECT_DIR$/rush00/index.php" />
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
+        <option value="$PROJECT_DIR$/rush00/index.php" />
       </list>
     </option>
   </component>
@@ -421,12 +421,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="7321000" />
+      <workItem from="1558865111511" duration="7355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65383000" />
+    <option name="totallyTimeSpent" value="65417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,17 +740,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
