@@ -189,17 +189,21 @@
 
     function add_cat_to_product($id, $category, $item) {
         $product = get_product($id);
+        print_r($product);
         $categories = $product['categories'];
         $categories[$category] = $item;
         $product['categories'] = $categories;
+        print_r($product);
         update_product($product);
     }
 
     function remove_cat_from_product($id, $category) {
         $product = get_product($id);
+        print_r($product);
         $categories = $product['categories'];
         unset($categories[$category]);
         $product['categories'] = $categories;
+        print_r($product);
         update_product($product);
     }
 
