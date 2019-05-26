@@ -39,13 +39,17 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    flex-direction: column !important;
 }
 
 .log-top a {
     text-decoration: none;
     color: #fff;
     flex-basis: 50%;
+    padding: 15px 30px;
+}
+
+.log-top-content {
+    padding: 0 !important;
 }
 
 input {
