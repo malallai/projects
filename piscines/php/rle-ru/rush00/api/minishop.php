@@ -138,10 +138,10 @@
 
     function logout()
     {
-        if (isset($_SESSION)) {
+        if (!isset($_SESSION)) {
+            session_start();}
             $_SESSION = array();
             session_destroy();
-        }
         return true;
     }
 
