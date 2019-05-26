@@ -97,7 +97,7 @@
         $products = get_products();
         foreach($products as $k => $f)
         {
-            if ($f['id'] == $id) {
+            if ($f['uid'] == $id) {
                 unset($products[$k]);
                 file_put_contents("private/products", serialize($products));
                 return true;
