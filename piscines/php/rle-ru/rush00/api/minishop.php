@@ -4,6 +4,13 @@
         session_start();
     }
 
+    function is_installed() {
+        if (!file_exists("private") || !file_exists("private/accounts") || !file_exists("private/products")
+            || !file_exists("private/orders"))
+            return false;
+        return true;
+    }
+
     function get_users() {
         $users = unserialize(file_get_contents("private/accounts"));
         return ($users);

@@ -6,6 +6,10 @@ if (isset($_POST['submit'])) {
     header("location: index.php");
 }
 
+if (is_installed() !== true) {
+    header("location: install.php");
+}
+
 ?>
 <div class="flex-items">
 
