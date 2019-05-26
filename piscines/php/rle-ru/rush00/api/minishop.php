@@ -136,6 +136,14 @@
         return $searched;
     }
 
+    function logout()
+    {
+        if (isset($_SESSION)) {
+            $_SESSION = array();
+            session_destroy();
+        }
+        return true;
+    }
 
 
 
