@@ -25,6 +25,10 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
+.login-content {
+    border-top: none !important;
+}
+
 .login {
     display: flex;
     margin-left: auto;
@@ -48,16 +52,21 @@ body {
     padding: 15px 30px;
 }
 
-.log-top a.active {
+.log-top a {
     background-color: #2b2b2b;
 }
 
+.log-top a.active {
+    background-color: #3b3b3b;
+}
+
 .log-top a:hover {
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .15);
 }
 
 .log-top-content {
     padding: 0 !important;
+    border-bottom: none !important;
 }
 
 input {
