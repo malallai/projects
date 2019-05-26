@@ -6,9 +6,25 @@ html, body {
     font-family: 'Century Gothic', Verdana, Calibri, serif;
 }
 
+body {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column !important;
+    max-width: 50rem;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin-bottom: auto !important;
 }
 
 .header .flex-compononent {
@@ -142,6 +158,7 @@ html, body {
 }
 
 .flex-footer {
+    margin-top: auto !important;
     position: absolute;
     bottom: 0;
     width: 100%;
