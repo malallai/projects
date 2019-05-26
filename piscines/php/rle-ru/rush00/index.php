@@ -1,9 +1,10 @@
 <?php
 include('assets/templates/header.php');
 include('api/minishop.php');
-print_r(get_users());
 ?>
 <div class="flex-items">
+    print_r(get_users());
+
     <?php
 	$file = unserialize(file_get_contents("../private/products"));
 	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
