@@ -48,42 +48,42 @@ else
 
     ?>
     <form method="POST" action="admin.php">
-        <span>Add new product: </span>
+        <span>Ajouter un produit: </span>
         <input type="text" name="name">
-        <span>Price: </span>
+        <span>Prix: </span>
         <input type="text" name="price">
-        <span>annee: </span>
+        <span>Année: </span>
         <input type="text" name="annee">
-        <span>campus: </span>
+        <span>Campus: </span>
         <input type="text" name="campus">
         <input type="submit" name="submit" value="Ajouter un produit">
     </form>
     <form method="POST" action="admin.php">
-        <span>Delete a product: </span>
+        <span>Supprimer un produit: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Supprimer un produit">
     </form>
     </br>
     <form method="POST" action="admin.php">
-        <span>Add new Category: </span>
+        <span>Ajouter une catégorie: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Ajouter une catégorie">
     </form>
     <form method="POST" action="admin.php">
-        <span>Delete Category: </span>
+        <span>Supprimer une catégorie: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Supprimer une catégorie">
     </form>
     </br>
     <form method="POST" action="admin.php">
-        <span>Add item to Category: </span>
+        <span>Ajouter un item à la catégorie: </span>
         <input type="text" name="name">
         <span>Item: </span>
         <input type="text" name="item">
         <input type="submit" name="submit" value="Ajouter un item à la catégorie">
     </form>
     <form method="POST" action="admin.php">
-        <span>Del item from Category: </span>
+        <span>Supprimer un item de la catégorie: </span>
         <input type="text" name="name">
         <span>Item: </span>
         <input type="text" name="item">
@@ -91,21 +91,21 @@ else
     </form>
     </br>
     <form method="POST" action="admin.php">
-        <span>Add category to product: </span>
+        <span>Ajouter une catégorie au produit: </span>
         <input type="text" name="name">
         <input type="text" name="category">
         <input type="text" name="item">
         <input type="submit" name="submit" value="Ajouter une catégorie au produit">
     </form>
     <form method="POST" action="admin.php">
-        <span>Del category for product: </span>
+        <span>Retirer une catégorie au produit: </span>
         <input type="text" name="name">
         <input type="text" name="category">
         <input type="submit" name="submit" value="Retirer une catégorie au produit">
     </form>
     </br>
     <form method="POST" action="admin.php">
-        <span>Delete user: </span>
+        <span>Supprimer un utilisateur: </span>
         <input type="text" name="name">
         <input type="submit" name="submit" value="Supprimer un utilisateur">
     </form>
