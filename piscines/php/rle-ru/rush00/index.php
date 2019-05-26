@@ -55,14 +55,24 @@ if (is_installed() !== true) {
         if ($page > 0) {
             $request = "?page".($page - 1);
             foreach ($_GET as $key => $value) {
-                $request .= "&".$key."=".$value;
+                if (is_array($value)) {
+                    foreach ($value as $key1 => $value1) {
+                        $request .= "&" . $key . "[]=" . $value1;
+                    }
+                } else {
+                    $request .= "&" . $key . "=" . $value;
+                }
             }
             echo "<a href=\"index.php".$request."\">Page precedente</a>";
         }
         if (count($products) > $i + 5) {
             $request = "?page".($page + 1);
-            foreach ($_GET as $key => $value) {
-                $request .= "&".$key."=".$value;
+            if (is_array($value)) {
+                foreach ($value as $key1 => $value1) {
+                    $request .= "&" . $key . "[]=" . $value1;
+                }
+            } else {
+                $request .= "&" . $key . "=" . $value;
             }
             echo "<a href=\"index.php".$request."\">Page suivante</a>";
         }
