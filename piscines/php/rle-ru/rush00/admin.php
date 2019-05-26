@@ -31,7 +31,7 @@ else
         } else if ($_POST['submit'] === "Del User") {
             delete_user($_POST['name']);
         } else if ($_POST['submit'] === "Add Category") {
-            create_category(get_product($_POST['name']));
+            create_category($_POST['name']);
         } else if ($_POST['submit'] === "Del Category") {
             delete_category($_POST['name']);
         } else if ($_POST['submit'] === "Add Item") {
