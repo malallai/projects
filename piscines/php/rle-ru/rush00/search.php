@@ -32,10 +32,10 @@ if ($_GET['value'])
 		<?php
 		}
 	}
-		if ($page > 0)
-			echo "<a href=\"index.php?".(isset($_GET['value']) ? "value=".$_GET['value']."&" : "")."page=", $page - 1 , "\">Page precedente</a>";
-		if (count($res) > $i + 5)
-		    echo "<a href=\"index.php?".(isset($_GET['value']) ? "value=".$_GET['value']."&" : "")."page=", $page + 1 , "\">Page suivante</a>";
+	if ($page > 0)
+	    echo "<a href=\"index.php?value=".$_GET['value']."&page=", $page - 1 , "\">Page precedente</a>";
+	if (count($res) > $i + 5)
+	    echo "<a href=\"index.php?value=".$_GET['value']."&page=", $page + 1 , "\">Page suivante</a>";
 }
 ?>
 </div>
