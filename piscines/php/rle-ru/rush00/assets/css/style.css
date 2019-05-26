@@ -181,6 +181,7 @@ body {
     transform: translateY(-50%);
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .flex-items {
