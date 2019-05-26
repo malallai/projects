@@ -39,7 +39,7 @@ else
         } else if ($_POST['submit'] === "Del Item") {
             delete_item_category($_POST['name'], $_POST['item']);
         }
-        header("Location: admin.php");
+        //header("Location: admin.php");
     }
 
     ?>
