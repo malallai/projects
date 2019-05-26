@@ -1,5 +1,5 @@
 <?php
-include('templates/header.php');
+include('assets/templates/header.php');
 ?>
     <div class="flex-items">
         <?php
@@ -35,11 +35,11 @@ include('templates/header.php');
         }
         ?>
     </div>
-	<?php echo "Total price: $total_price";?>
-<form method="POST" action="<?php echo $_SESSION['logged_as'] ? "validate.php" : "user.php";?>">
-	<input type="submit" name="Valider la commande" value="Valider la commande" />
-<a href="history.php">Order history </a>
-</form>
+    <?php echo "Total price: $total_price";?>
+    <form method="POST" action="<?php echo $_SESSION['logged_as'] ? "validate.php" : "user.php";?>">
+        <input type="submit" name="Valider la commande" value="Valider la commande" />
+    <a href="history.php">Order history </a>
+    </form>
 <?php
-include('templates/footer.php');
+include('assets/templates/footer.php');
 ?>

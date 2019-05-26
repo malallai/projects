@@ -15,5 +15,4 @@ if ($_POST['name'])
 		file_put_contents("../private/products", serialize($file));
 	}
 }
-header("Location: admin.php");
-?>
+header("Location: admin");

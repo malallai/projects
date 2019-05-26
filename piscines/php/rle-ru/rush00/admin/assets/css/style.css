@@ -22,7 +22,7 @@ html, body {
 }
 
 .header .flex-compononent:nth-child(1) .icon {
-    width: 40%;
+    width: 4.2rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,7 +40,7 @@ html, body {
 }
 
 .header .flex-compononent:nth-child(2) .searchbar .bar {
-    flex-basis: 90%;
+    flex-basis: 95%;
     height: 100%;
 }
 
@@ -51,7 +51,7 @@ html, body {
 }
 
 .header .flex-compononent:nth-child(2) .searchbar .search {
-    flex-basis: 10%;
+    flex-basis: 5%;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -63,29 +63,27 @@ html, body {
     cursor: pointer;
 }
 
-.header .flex-compononent:nth-child(2) .searchbar label:hover {
+.header .flex-compononent:nth-child(2) .searchbar .search:hover {
     cursor: pointer;
 }
 
 .header .flex-compononent:nth-child(2) .searchbar .search .icon {
     position: relative;
-    margin: 0 auto;
-    width: 45%;
     top: 50%;
     transform: translateY(-50%);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.header .flex-compononent:nth-child(2) .searchbar .search label {
+.header .flex-compononent:nth-child(2) .searchbar .search {
     margin: 0;
     width: 100%;
 }
 
-.header .flex-compononent:nth-child(2) .searchbar .search input {
-    display: none;
-}
-
-.header .flex-compononent:nth-child(2) .searchbar .search svg {
-    width: 100%;
+.header .flex-compononent:nth-child(2) .searchbar .search i {
+    font-size: 20px;
+    color: #fff;
 }
 
 .header .flex-compononent:nth-child(3) .flex-icon {
@@ -96,11 +94,15 @@ html, body {
 .header .flex-compononent:nth-child(3) .icon {
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 100%;
 }
 
-.header .flex-compononent:nth-child(3) img {
-    width: 100%;
+.header .flex-compononent:nth-child(3) a {
+    width: 50%;
+    text-decoration: none;
+    font-size: 50px;
+    color: #000;
+    text-align: center;
 }
 
 .header .flex-compononent:nth-child(3) .icons {
@@ -110,6 +112,21 @@ html, body {
     justify-content: flex-end;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.header .flex-compononent:nth-child(3) .items-count {
+    position: absolute;
+    color: rgb(250, 120, 0);
+    float: left;
+    margin: 0;
+    font-size: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 4.2rem;
+}
+
+.header .flex-compononent:nth-child(3) .items-count p {
+    font-size: 20px;
 }
 
 .header .flex-compononent:nth-child(1) {

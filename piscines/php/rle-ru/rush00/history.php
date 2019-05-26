@@ -1,8 +1,5 @@
 <?php
-session_start();
-include("templates/header.php");
-include("install.php");
-install();
+include("assets/templates/header.php");
 if ($_GET['order'])
 {
 	$items = unserialize(file_get_contents("../private/products"));
@@ -48,5 +45,5 @@ if ($file != '')
 		}
 	}
 }
-include("templates/footer.php");
+include("assets/templates/footer.php");
 ?>

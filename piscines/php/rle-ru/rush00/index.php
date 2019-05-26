@@ -1,7 +1,5 @@
 <?php
-include('templates/header.php');
-include('install.php');
-install();
+include('assets/templates/header.php');
 ?>
 <div class="flex-items">
     <?php
@@ -43,5 +41,5 @@ install();
     ?>
 </div>
 <?php
-include('templates/footer.php');
+include('assets/templates/footer.php');
 ?>

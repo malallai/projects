@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include('install.php');
+install();
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/icons.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>ft_minishop</title>
+    <title>MiniShop</title>
 </head>
 <body>
 <div class="header">

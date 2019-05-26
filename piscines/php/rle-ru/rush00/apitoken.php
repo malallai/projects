@@ -28,5 +28,3 @@ $rest = json_decode(curl_exec($crl), true);
 curl_close($crl);
 // var_dump($rest);
 print_r($rest);
-
-?>
