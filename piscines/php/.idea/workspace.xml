@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/change.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/removeitem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -302,12 +301,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="15819000" />
+      <workItem from="1558865111511" duration="15965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73881000" />
+    <option name="totallyTimeSpent" value="74027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
