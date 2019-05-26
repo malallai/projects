@@ -21,9 +21,9 @@ session_start();
             <div class="bar">
                 <input id="searchinput" name="search" placeholder="Search" type="text">
             </div>
-            <div  class="search">
-                <a class="icon" href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
-            </div>
+                <a class="search" href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value">
+                    <i class='icon fas fa-search'></i>
+                </a>
         </div>
     </div>
     <div class="flex-compononent">
