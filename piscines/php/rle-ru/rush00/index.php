@@ -1,5 +1,7 @@
 <?php
 include('assets/templates/header.php');
+include('api/minishop.php');
+print_r(get_users());
 ?>
 <div class="flex-items">
     <?php
