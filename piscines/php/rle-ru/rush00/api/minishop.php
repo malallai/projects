@@ -140,6 +140,30 @@
         file_put_contents("private/products", serialize($orders));
     }
 
+    function create_category($name) {
+        $categories = get_categories();
+        $categories[$name] = array();
+        file_put_contents("private/categories", serialize($categories));
+    }
+
+    function delete_category($name) {
+        $categories = get_categories();
+        unset($categories[$name]);
+        file_put_contents("private/categories", serialize($categories));
+    }
+
+    function add_item_category($name, $item) {
+        $categories = get_categories();
+        array_push($categories[$name], $item);
+        file_put_contents("private/categories", serialize($categories));
+    }
+
+    function delete_item_category($name, $item) {
+        $categories = get_categories();
+        array_pop($categories[$name], $item);
+        file_put_contents("private/categories", serialize($categories));
+    }
+
     function search_item_by_name($search) {
         $products = get_products();
         $searched = array();
