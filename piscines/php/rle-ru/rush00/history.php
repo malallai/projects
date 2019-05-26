@@ -33,7 +33,7 @@ $users = get_users();
 if ($users != '')
 {
 	foreach ($users as $k=>$f)
-		if ($f['name'] == $_SESSION['logged_as'])
+		if ($f['login'] == $_SESSION['logged_as'])
 			break;
 	if ($f['orders'])
 	{
