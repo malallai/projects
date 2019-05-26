@@ -30,7 +30,7 @@ else
         } else if ($_POST['submit'] === "Del User") {
             delete_user($_POST['name']);
         }
-        header("Location: admin.php");
+        //header("Location: admin.php");
     }
 
     ?>
