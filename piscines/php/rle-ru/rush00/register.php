@@ -11,6 +11,8 @@ include('assets/templates/header.php');
             ?>
             <p>User already exists</p>
             <?php
+        } else {
+            header("location: login.php");
         }
     }
 
@@ -23,7 +25,7 @@ include('assets/templates/header.php');
             <div class="install">
                 <form method="POST" action="register.php">
                     <input type="text" name="login" id="login" class="form-control" placeholder="Nom d'utilisateur">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Mot de passe">
                     <input class="btn btn-white" name="create" value="Créer" type="submit">
                 </form>
             </div>
