@@ -1,6 +1,9 @@
 <?php
 session_start();
-include ('api/minishop.php')
+include ('api/minishop.php');
+if (is_installed() !== true) {
+    header("location: install.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
