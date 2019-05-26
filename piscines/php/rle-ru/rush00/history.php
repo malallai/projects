@@ -2,8 +2,8 @@
 include("assets/templates/header.php");
 if ($_GET['order'])
 {
-	$items = unserialize(file_get_contents("../private/products"));
-	$orders = unserialize(file_get_contents("../private/orders"));
+    $items = get_products();
+    $orders = get_orders();
 	$o = $orders[$_GET['order']];
 	if ($o){
 		echo"<div class=\"flex-items\">";
@@ -29,10 +29,10 @@ if ($_GET['order'])
 		}}echo "</div>";
 	}
 }
-$file = unserialize(file_get_contents("../private/accounts"));
-if ($file != '')
+$users = get_users();
+if ($users != '')
 {
-	foreach ($file as $k=>$f)
+	foreach ($users as $k=>$f)
 		if ($f['name'] == $_SESSION['logged_as'])
 			break;
 	if ($f['orders'])
