@@ -129,7 +129,6 @@
         $products = get_products();
         $searched = array();
         foreach ($products as $value) {
-            print_r($value);
             if ($value['name'] == $search || $value['year'] === $search || (is_numeric($search) && $value['year'] == intval($search))) {
                 $searched[] = $value;
             }
