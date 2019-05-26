@@ -1,0 +1,22 @@
+.install-row {
+    width: 75vw;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.2s ease;
+    transition-delay: 0.05s;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.install {
+    padding: 15px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #3b3b3b;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}

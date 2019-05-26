@@ -1,8 +1,5 @@
 <?php
-include('templates/header.php');
-include('install.php');
-install();
-session_start();
+include('assets/templates/header.php');
 if ($_SESSION['logged_as'] == '')
 {
 	?>
@@ -49,7 +46,7 @@ if ($_POST['login'] === '' && $_POST['pass'] === '')
 	echo "Incomplete fields\n";
 if ($_SESSION['logged_as'])
 {
-	echo "<a href=\"logout.php\">Log out</a><br />";
+	echo ">Log out</a><br />";
 	?>
 	Change password:
 	<form method="POST" action="change.php">
@@ -64,5 +61,5 @@ if ($_SESSION['logged_as'])
 	</form>
 	<?php
 }
-include('templates/footer.php');
+include('assets/templates/footer.php');
 ?>

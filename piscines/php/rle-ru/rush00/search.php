@@ -1,17 +1,15 @@
 <?php
-include('templates/header.php');
-include("install.php");
-install();
+include('assets/templates/header.php');
 ?>
 <div class="flex-items">
 <?php
-if ($_POST['search'])
+if ($_GET['value'])
 {
 	$res = array();
 	$file = unserialize(file_get_contents("../private/products"));
 	foreach ($file as $f)
 	{
-		if ($f['name'] == $_POST['search'] || $f['year'] == $_POST['search'])
+		if ($f['name'] == $_GET['value'] || $f['year'] == $_GET['value'])
 			$res[] = $f;
 	}
 	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
@@ -41,11 +39,12 @@ if ($_POST['search'])
 		}
 	}
 		if ($page > 0)
-			echo "<a href=\"index.php?page=", $page - 1 , "\">Page precedente</a>";
+			echo "<a href=\"index.php?".(isset($_GET['value']) ? "value=".$_GET['value']."&" : "")."page=", $page - 1 , "\">Page precedente</a>";
 		if (count($res) > $i + 5)
-		echo "<a href=\"index.php?page=", $page + 1 , "\">Page suivante</a>";
+		    echo "<a href=\"index.php?".(isset($_GET['value']) ? "value=".$_GET['value']."&" : "")."page=", $page + 1 , "\">Page suivante</a>";
 }
-?></div>
+?>
+</div>
 <?php
-include('templates/footer.php');
+include('assets/templates/footer.php');
 ?>

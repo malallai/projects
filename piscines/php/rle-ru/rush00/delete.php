@@ -26,4 +26,3 @@ foreach ($file as $k=>$f)
 	}
 }
 header("location: user.php?msg=accountdeleted");
-?>

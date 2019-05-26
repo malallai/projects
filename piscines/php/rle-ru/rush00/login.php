@@ -5,7 +5,7 @@ if (file_exists("../private") && file_exists("../private/accounts"))
 	$file = unserialize(file_get_contents("../private/accounts"));
 	if (!$file)
 	{
-		header("location: index.php");
+		header("location: ../index.php");
 		return ;
 	}
 	foreach($file as $f)
@@ -16,7 +16,7 @@ if (file_exists("../private") && file_exists("../private/accounts"))
 			{
 				$_SESSION['logged_as'] = $_POST['login'];
 				$_SESSION['grade'] = $f['grade'];
-				header("location: index.php");
+				header("location: ../index.php");
 				return ;
 			}
 			else
