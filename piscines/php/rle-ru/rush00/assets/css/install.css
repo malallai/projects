@@ -31,6 +31,20 @@
     max-width: 30rem;
 }
 
+input {
+    text-align: center;
+    font-size: inherit;
+    padding: .5rem 0;
+    margin-bottom: 10px;
+    width: 100%;
+    color: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .25rem;
+}
+
 
 @media only screen and (max-width:900px) {
     .install-row {
