@@ -6,6 +6,7 @@
 
 	if (isset($_POST['login']))
 	{
+		print_r($_POST);
 		if (auth($_POST['login'], $_POST['password'])) {
 			$user = get_user($_POST['login']);
 			$_SESSION['logged_as'] = $_POST['login'];
