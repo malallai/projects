@@ -14,7 +14,7 @@ foreach ($file as $k=>$f)
 		{
 			$f['pass'] = hash('whirlpool', $_POST['newpw']);
 			$file[$k] = $f;
-			file_put_contents("../private/accounts", $file);
+			file_put_contents("private/accounts", $file);
 			break ;
 		}
 		else
