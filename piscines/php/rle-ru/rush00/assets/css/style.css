@@ -180,6 +180,21 @@ body {
     align-items: center;
 }
 
+select {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: .5rem 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .25rem;
+    color: inherit;
+    text-align: center;
+}
+
 .flex-categories .categories {
     width: 75vw;
     margin-left: auto;
