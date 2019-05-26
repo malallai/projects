@@ -19,11 +19,10 @@ if (is_installed() !== true) {
     {
         $products = search_item_by_name($_GET['search']);
     }
-    print_r(get_categories()['year']);
 
     foreach ($_GET as $key => $val) {
-        print_r(get_categories()[$key]);
         if (get_categories()[$key]) {
+            print_r($val);
             $products = search_item_by_categories($products, $val);
         }
     }
