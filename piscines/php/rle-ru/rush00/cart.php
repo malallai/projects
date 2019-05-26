@@ -45,9 +45,9 @@ include('assets/templates/header.php');
         echo "Total price: $total_price";?>
         <form method="POST" action="<?php echo $_SESSION['logged_as'] ? "cart.php" : "user.php";?>">
             <input type="submit" name="confirm" value="Valider la commande" />
-        <a href="history.php">Order history </a>
         </form>
+        <?php } ?>
+        <a href="history.php">Order history </a>
     <?php
-    }
-include('assets/templates/footer.php');
+    include('assets/templates/footer.php');
 ?>
