@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/assets/js/minishop.js" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/assets/js/minishop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,16 +24,16 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="19" column="101" lean-forward="true" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
+                  <caret line="19" column="109" selection-start-line="19" selection-start-column="109" selection-end-line="19" selection-end-column="109" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rush00/assets/js/minishop.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
@@ -223,8 +223,8 @@
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/rush00/assets/minishop.js" />
-        <option value="$PROJECT_DIR$/rush00/index.php" />
         <option value="$PROJECT_DIR$/rush00/assets/js/minishop.js" />
+        <option value="$PROJECT_DIR$/rush00/index.php" />
       </list>
     </option>
   </component>
@@ -341,12 +341,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="20356000" />
+      <workItem from="1558865111511" duration="20411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78418000" />
+    <option name="totallyTimeSpent" value="78473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,17 +669,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="101" lean-forward="true" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/assets/js/minishop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="109" selection-start-line="19" selection-start-column="109" selection-end-line="19" selection-end-column="109" />
         </state>
       </provider>
     </entry>
