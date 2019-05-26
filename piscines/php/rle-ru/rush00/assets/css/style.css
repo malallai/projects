@@ -116,8 +116,12 @@ html, body {
 
 .header .flex-compononent:nth-child(3) p {
     position: absolute;
-    left: 15rem;
-    color: red;
+    color: #fff;
+    float: left;
+    margin: 0;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header .flex-compononent:nth-child(1) {
