@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 <div class="container">
-    <div class="header">
+    <header class="header">
         <div class="flex-compononent">
             <div class="icon">
                 <a href="index.php"><img src="assets/images/42.svg"></a>
@@ -59,5 +59,5 @@ session_start();
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <main class="inner">
