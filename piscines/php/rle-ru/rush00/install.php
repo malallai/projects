@@ -52,8 +52,8 @@
     
     function    init_categories() {
         $file = array();
-        $file["year"][] = array(2015, 2016, 2017, 2018, 2019);
-        $file["campus"][] = array("paris", "fremont");
+        $file["year"] = array(2015, 2016, 2017, 2018, 2019);
+        $file["campus"] = array("paris", "fremont");
         return $file;
     }
 
