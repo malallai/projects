@@ -189,7 +189,7 @@ select {
     box-sizing: border-box;
     margin-bottom: 10px;
     margin-top: 5px;
-    border: 1px solid #2b2b2b
+    border: 1px solid #2b2b2b;
     border-radius: .25rem;
     color: inherit;
     text-align: center;
