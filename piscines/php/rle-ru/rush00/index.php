@@ -5,7 +5,7 @@ include('assets/templates/header.php');
 
     <?php
     $products = get_products();
-	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
+	$page = isset($_GET['page']) && $_GET['page'] != NULL ? $_GET['page'] : 0;
 
     if ($products)
     {
