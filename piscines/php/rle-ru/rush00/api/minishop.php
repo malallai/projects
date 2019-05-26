@@ -29,7 +29,7 @@
     function auth($login, $password) {
         $user = get_user($login);
         if ($user) {
-            if (hash('whirlpool', $password) === $user['password'])
+            if (hash('whirlpool', $password) === $user['pass'])
                 return true;
         }
         return false;
@@ -39,7 +39,7 @@
         if (auth($login, $old_password)) {
             $users = get_users();
             $user = get_user($login);
-            $user['password'] = hash('whirlpool', $new_password);
+            $user['pass'] = hash('whirlpool', $new_password);
             $users[get_user($login)] = $user;
             file_put_contents("private/accounts", serialize($users));
             return true;
