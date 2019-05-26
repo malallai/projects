@@ -154,13 +154,13 @@
 
     function add_item_category($name, $item) {
         $categories = get_categories();
-        array_push($categories[$name], $item);
+        $categories = array_push($categories[$name], $item);
         file_put_contents("private/categories", serialize($categories));
     }
 
     function delete_item_category($name, $item) {
         $categories = get_categories();
-        array_pop($categories[$name], $item);
+        unset($categories[$name][$item]);
         file_put_contents("private/categories", serialize($categories));
     }
 
