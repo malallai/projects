@@ -43,7 +43,7 @@ else
         } else if ($_POST['submit'] === "Del Cat Product") {
             remove_cat_from_product($_POST['name'], $_POST['category']);
         }
-        //header("Location: admin.php");
+        header("Location: admin.php");
     }
 
     ?>

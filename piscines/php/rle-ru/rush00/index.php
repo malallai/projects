@@ -67,7 +67,7 @@ if (is_installed() !== true) {
                             </div>
                             <div class="price">Prix : <?= $f['price'] ?>E</div>
                             <div class="quantity">Annee : <?= $f['categories']['year'] ?></div>
-                            <div class="quantity">Campus : <?= $f['categories']['campus'] ?></div>
+                            <div class="campus">Campus : <?= $f['categories']['campus'] ?></div>
                             <form action="index.php" method="post">
                                 <input class="id" name="id" type="text" value="<?= $f['uid'] ?>">
                                 <input class="submit" name="submit" type="submit" value="Ajouter au panier">
