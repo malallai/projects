@@ -3,7 +3,7 @@ include('assets/templates/header.php');
 
 
 
-if ($_SESSION['logged_as'] == '')
+if (!isset($_SESSION) || $_SESSION['logged_as'] == '')
 {
     header('location: login.php');
 	?>
