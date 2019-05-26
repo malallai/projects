@@ -45,8 +45,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="71" selection-start-line="71" selection-end-line="71" />
+                <state relative-caret-position="891">
+                  <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -277,12 +277,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="948000" />
+      <workItem from="1558865111511" duration="1006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59010000" />
+    <option name="totallyTimeSpent" value="59068000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -599,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rush00/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="891">
+          <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
         </state>
       </provider>
     </entry>
