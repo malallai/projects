@@ -6,7 +6,7 @@
     }
 
     function get_products() {
-        return (unserialize(file_get_contents("../private/products"));
+        return unserialize(file_get_contents("../private/products"));
     }
 
     function get_orders_user($user_id) {

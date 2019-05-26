@@ -34,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/validate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/api/minishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/api/minishop.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +52,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -164,7 +165,7 @@
             <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
-                  <caret line="8" column="68" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="68" />
+                  <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -265,8 +266,8 @@
         <option value="$PROJECT_DIR$/rush00/register.php" />
         <option value="$PROJECT_DIR$/rush00/login.php" />
         <option value="$PROJECT_DIR$/rush00/install.php" />
-        <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/index.php" />
+        <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
       </list>
     </option>
   </component>
@@ -411,12 +412,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="9820000" />
+      <workItem from="1558865111511" duration="9862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67882000" />
+    <option name="totallyTimeSpent" value="67924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,17 +732,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
+    <entry file="file://$PROJECT_DIR$/rush00/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="68" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="68" />
+        <state relative-caret-position="75">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/index.php">
+    <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
