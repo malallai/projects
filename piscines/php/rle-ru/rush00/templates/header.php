@@ -17,19 +17,14 @@ session_start();
         </div>
     </div>
     <div class="flex-compononent">
-        <form action="search.php" method="post" class="searchbar">
-            <div class="bar">
-                <input name="search" placeholder="Search" type="text">
+        <div class="bar">
+            <input id="searchinput" name="search" placeholder="Search" type="text">
+        </div>
+        <div  class="search">
+            <div class="icon">
+                <a href="" onclick="this.href='search.php?value='+document.getElementById('searchinput').value"><i class='fas fa-search'></i></a>
             </div>
-            <div  class="search">
-                <label>
-                    <div class="icon">
-                        <input type="submit" name="submit" value="OK">
-                        <i class='fas fa-search'></i>
-                    </div>
-                </label>
-            </div>
-        </form>
+        </div>
     </div>
     <div class="flex-compononent">
         <div class="icons">
