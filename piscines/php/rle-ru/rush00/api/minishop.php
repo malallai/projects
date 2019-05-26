@@ -106,6 +106,17 @@
         return false;
     }
 
+    function get_product($name) {
+        $products = get_products();
+        foreach($products as $k => $f)
+        {
+            if ($f['name'] == $name) {
+                return ($f['id']);
+            }
+        }
+        return false;
+    }
+
     function create_product($infos) {
         $orders = get_products();
         $orders[] =  $infos;
