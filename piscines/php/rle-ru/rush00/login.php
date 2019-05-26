@@ -4,7 +4,7 @@
 	if (isset($_SESSION['logged_as']) && ($_SESSION['logged_as'] !== ''|| $_SESSION['logged_as'] !== null))
 		header("location: user.php");
 
-	if (isset($_POST['login']))
+	if (isset($_POST['log']))
 	{
 		print_r($_POST);
 		if (auth($_POST['login'], $_POST['password'])) {
@@ -28,7 +28,7 @@
 				<form method="POST" action="login.php">
 					<input type="text" name="login" id="login" class="form-control" placeholder="Login">
 					<input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
-					<input class="btn btn-white" name="login" value="Connexion" type="submit">
+					<input class="btn btn-white" name="log" value="Connexion" type="submit">
 				</form>
 			</div>
 		</div>
