@@ -23,8 +23,8 @@
     <div class="log-top-row">
         <div class="log-top-content">
             <div class="log-top">
-                <a class="active login" href="login.php">Connexion</a>
-                <a class="register"href="register.php">Inscription</a>
+                <a class="active" href="login.php">Connexion</a>
+                <a class="" href="register.php">Inscription</a>
             </div>
         </div>
     </div>
