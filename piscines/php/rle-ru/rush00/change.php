@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if (!($file = unserialize(file_get_contents("../private/accounts"))))
-{
-	header("location: user.php");
-	return ;
-}
 foreach ($file as $k=>$f)
 {
 	if ($f['login'] == $_SESSION['logged_as'])
