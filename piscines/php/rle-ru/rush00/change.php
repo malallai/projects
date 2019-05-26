@@ -1,7 +1,6 @@
 <?php
 session_start();
-include('install.php');
-install();
+
 if (!($file = unserialize(file_get_contents("../private/accounts"))))
 {
 	header("location: user.php");
