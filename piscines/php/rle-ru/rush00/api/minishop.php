@@ -111,7 +111,7 @@
         foreach($products as $k => $f)
         {
             if ($f['name'] == $name) {
-                return ($f['id']);
+                return ($f['uid']);
             }
         }
         return false;
