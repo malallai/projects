@@ -36,7 +36,7 @@ include('assets/templates/header.php');
 		if ($page > 0)
 			echo "<a href=\"index.php?page=", $page - 1 , "\">Page precedente</a>";
 		if (count($file) > $i + 5)
-		echo "<a href=\"index.php?page=", $page + 1 , "\">Page suivante</a>";
+		    echo "<a href=\"index.php?page=", $page + 1 , "\">Page suivante</a>";
     }
     ?>
 </div>
