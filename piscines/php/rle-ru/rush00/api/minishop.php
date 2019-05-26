@@ -108,8 +108,11 @@
 
     function get_product($name) {
         $products = get_products();
+        print_r($products);
         foreach($products as $k => $f)
         {
+            print_r($f);
+            print_r($k);
             if ($f['name'] == $name) {
                 return ($f['uid']);
             }
