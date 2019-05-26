@@ -6,7 +6,6 @@ include('assets/templates/header.php');
         $new['login'] = $_POST['login'];
         $new['pass'] = hash('whirlpool', $_POST['pass']);
         $new['grade'] = ($_POST['login'] == "rle-ru" || $_POST['login'] == "malallai") ? "admin" : "customer";
-        $new['img'] = "https://cdn.intra.42.fr/users/".$new['login'].".jpg";
         if (create_user($new) !== true) {
             ?>
             <p>User already exists</p>
