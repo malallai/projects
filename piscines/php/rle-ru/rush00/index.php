@@ -19,6 +19,8 @@ if (is_installed() !== true) {
     {
         $products = search_item_by_name($_GET['search']);
     }
+    print_r($_GET);
+
     foreach ($_GET as $key => $val) {
         if (get_categories()[$key]) {
             $args = $_GET[$key];
