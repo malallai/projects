@@ -8,7 +8,7 @@ if (!isset($_SESSION) || $_SESSION['logged_as'] == '')
 if (isset($_POST['submit'])) {
     if ($_POST['submit'] === "Change password") {
         change_password($_SESSION['logged_as'], $_POST['oldpw'], $_POST['newpw']);
-    } else if ($_POST['submit'] === "Del User") {
+    } else if ($_POST['submit'] === "Del User") {print_r($_POST);
         if (auth($_SESSION['logged_as'], $_POST['pass'])) {
             $login = $_SESSION['logged_as'];
             logout();
