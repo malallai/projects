@@ -18,16 +18,16 @@
 		}
 	}
 ?>
-<link rel="stylesheet" href="assets/css/install.css">
+<link rel="stylesheet" href="assets/css/login.css">
 <div class="container">
     <div class="log-top">
-        <a href="login.php">Connexion</a>
-        <a href="register.php">Inscription</a>
+        <a class="active login" href="login.php">Connexion</a>
+        <a class="register"href="register.php">Inscription</a>
     </div>
-    <div class="install-row">
-		<div class="install-content">
+    <div class="login-row">
+		<div class="login-content">
 			<p>Connexion</p>
-			<div class="install">
+			<div class="login">
 				<form method="POST" action="login.php">
 					<input type="text" name="login" id="login" class="form-control" placeholder="Login">
 					<input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">

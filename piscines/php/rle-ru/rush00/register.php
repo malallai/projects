@@ -16,20 +16,20 @@ include('assets/templates/header.php');
     }
 
 ?>
-<link rel="stylesheet" href="assets/css/install.css">
+<link rel="stylesheet" href="assets/css/login.css">
 <div class="container">
-    <div class="install-row">
-        <div class="log-top">
-            <a href="login.php">Connexion</a>
-            <a href="register.php">Inscription</a>
-        </div>
-        <div class="install-content">
-            <p>Création d'un compte</p>
-            <div class="install">
-                <form method="POST" action="register.php">
-                    <input type="text" name="login" id="login" class="form-control" placeholder="Nom d'utilisateur">
-                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Mot de passe">
-                    <input class="btn btn-white" name="create" value="Créer" type="submit">
+    <div class="log-top">
+        <a class="login" href="login.php">Connexion</a>
+        <a class="active register"href="register.php">Inscription</a>
+    </div>
+    <div class="login-row">
+        <div class="login-content">
+            <p>Connexion</p>
+            <div class="login">
+                <form method="POST" action="login.php">
+                    <input type="text" name="login" id="login" class="form-control" placeholder="Login">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
+                    <input class="btn btn-white" name="log" value="Connexion" type="submit">
                 </form>
             </div>
         </div>
