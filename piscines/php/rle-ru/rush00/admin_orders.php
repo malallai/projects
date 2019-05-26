@@ -22,8 +22,8 @@ if ($_SESSION['grade'] != 'admin')
 }
 else
 {
-	$orders = unserialize(file_get_contents("../private/orders"));
-	$items = unserialize(file_get_contents("../private/products"));
+	$orders = unserialize(file_get_contents("private/orders"));
+	$items = unserialize(file_get_contents("private/products"));
 	if ($_GET['order'])
 	{
 		$o = $orders[$_GET['order']];
