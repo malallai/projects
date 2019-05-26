@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/assets/templates/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +26,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/rush00/assets/js/minishop.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="1" selection-start-line="4" selection-end-line="4" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -73,7 +81,7 @@
             <entry file="file://$PROJECT_DIR$/rush00/history.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="735">
-                  <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+                  <caret line="49" selection-start-line="49" selection-end-line="49" />
                 </state>
               </provider>
             </entry>
@@ -136,6 +144,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -164,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day04/ex04/modif.html" />
         <option value="$PROJECT_DIR$/day04/ex04/index.html" />
         <option value="$PROJECT_DIR$/day04/ex03/login.php" />
         <option value="$PROJECT_DIR$/day04/ex03/logout.php" />
@@ -214,6 +222,7 @@
         <option value="$PROJECT_DIR$/rush00/install.php" />
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
+        <option value="$PROJECT_DIR$/rush00/assets/minishop.js" />
         <option value="$PROJECT_DIR$/rush00/index.php" />
       </list>
     </option>
@@ -286,11 +295,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rush00/assets/js" />
       <recent name="$PROJECT_DIR$/rush00" />
       <recent name="$PROJECT_DIR$/rush00/assets" />
       <recent name="$PROJECT_DIR$/rush00/user" />
       <recent name="$PROJECT_DIR$/rush00/admin" />
-      <recent name="$PROJECT_DIR$/day01/ex09" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rush00/admin" />
@@ -331,12 +340,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="19726000" />
+      <workItem from="1558865111511" duration="19892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77788000" />
+    <option name="totallyTimeSpent" value="77954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,7 +361,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.16441621" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.16441621" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -371,35 +380,11 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.16441621" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.329927" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rush00/push">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/dev/assets/css/test.css" />
     <entry file="file://$PROJECT_DIR$/day00/ex00/baba.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -616,7 +601,7 @@
     <entry file="file://$PROJECT_DIR$/rush00/history.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
@@ -683,10 +668,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/assets/js/minishop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        <state relative-caret-position="180">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
