@@ -26,7 +26,7 @@ else
             $new['year'] = $_POST['year'];
             create_product($new);
         } else if ($_POST['submit'] === "Dev Product") {
-            delete_product(get_products($_POST['name']));
+            delete_product(get_product($_POST['name']));
         } else if ($_POST['submit'] === "Del User") {
             delete_user($_POST['name']);
         }
