@@ -60,3 +60,4 @@ session_start();
             </div>
         </div>
     </div>
+    <main class="inner">
