@@ -1,5 +1,10 @@
 <?php
 include('assets/templates/header.php');
+
+if (isset($_POST['submit'])) {
+    add_item_to_cart($_POST['id']);
+}
+
 ?>
 <div class="flex-items">
 
@@ -25,7 +30,7 @@ include('assets/templates/header.php');
                     </div>
                     <div class="price">Prix : <?= $f['price'] ?>E</div>
                     <div class="quantity">Annee : <?= $f['year'] ?></div>
-                    <form action="additem.php" method="post">
+                    <form action="index.php" method="post">
                         <input class="id" name="id" type="text" value="<?= $f['uid'] ?>">
                         <input class="submit" name="submit" type="submit" value="Ajouter au panier">
                     </form>

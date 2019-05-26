@@ -1,5 +1,9 @@
 <?php
 
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
     function get_users() {
         $users = unserialize(file_get_contents("private/accounts"));
         return ($users);
@@ -138,11 +142,37 @@
 
     function logout()
     {
-        if (!isset($_SESSION)) {
-            session_start();}
-            $_SESSION = array();
-            session_destroy();
+        $_SESSION = array();
+        session_destroy();
         return true;
+    }
+
+    function add_item_to_cart($item) {
+        $items = array();
+        if (isset($_SESSION['items'])) {
+            $items = $_SESSION['items'];
+        }
+        if (isset($items[$item])) {
+            $items[$item] = $items[$item] + 1;
+        } else {
+            $items[$item] = 1;
+        }
+        $_SESSION['items'] = $items;
+        $_SESSION['items_count'] =  isset($_SESSION['items_count']) ? $_SESSION['items_count'] + 1 : 1;
+    }
+
+    function remove_item_from_cart($item) {
+        $items = array();
+        if (isset($_SESSION['items'])) {
+            $items = $_SESSION['items'];
+        }
+        if (isset($items[$item]) && $items[$item] > 1) {
+            $items[$item] = $items[$item] - 1;
+        } else {
+            unset($items[$item]);
+        }
+        $_SESSION['items'] = $items;
+        $_SESSION['items_count'] -= 1;
     }
 
 

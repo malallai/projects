@@ -4,6 +4,9 @@ include('assets/templates/header.php');
     if (isset($_POST['confirm'])) {
         confirm_order($_SESSION['logged_as']);
     }
+    if (isset($_POST['submit'])) {
+        remove_item_from_cart($_POST['id']);
+    }
 
 ?>
     <div class="flex-items">
@@ -26,7 +29,7 @@ include('assets/templates/header.php');
                                 </div>
                                 <div class="price">Prix : <?= $item['price'] ?>E (<?= ($value * $item['price']) ?>E)</div>
                                 <div class="quantity">Quantité : <?= $value ?></div>
-                                <form action="removeitem.php" method="post">
+                                <form action="cart.php" method="post">
                                     <input class="id" name="id" type="text" value="<?= $item['uid'] ?>">
                                     <input class="submit" name="submit" type="submit" value="Supprimer">
                                 </form>
