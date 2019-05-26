@@ -3,20 +3,20 @@
     include ('assets/templates/header.php');
 
     if (isset($_POST['create'])) {
-        if (!file_exists("../private"))
-            mkdir("../private");
-        if (!file_exists("../private/accounts"))
+        if (!file_exists("private"))
+            mkdir("private");
+        if (!file_exists("private/accounts"))
         {
             $file = init_accounts($_POST['username'], $_POST['password']);
-            file_put_contents("../private/accounts", serialize($file));
+            file_put_contents("private/accounts", serialize($file));
         }
-        if (!file_exists("../private/products"))
+        if (!file_exists("private/products"))
         {
             $file = init_products();
-            file_put_contents("../private/products", serialize($file));
+            file_put_contents("private/products", serialize($file));
         }
-        if (!file_exists("../private/orders"))
-            file_put_contents("../private/orders", NULL);
+        if (!file_exists("private/orders"))
+            file_put_contents("private/orders", NULL);
         header('location: index.php');
     }
 
