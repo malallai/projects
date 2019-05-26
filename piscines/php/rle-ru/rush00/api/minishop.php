@@ -50,10 +50,13 @@
     }
 
     function delete_user($login) {
-        $user = get_user($login);
-        if ($user) {
-            $user = null;
-            update_user($user);
+        $users = get_users();
+        foreach ($users as $key => $value) {
+            if ($value['login'] === $login) {
+                unset($users[$key]);
+                file_put_contents("private/accounts", serialize($users));
+                return true;
+            }
         }
         return false;
     }
