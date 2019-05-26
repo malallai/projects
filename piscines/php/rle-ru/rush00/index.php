@@ -1,18 +1,16 @@
 <?php
 include('assets/templates/header.php');
-include('api/minishop.php');
 ?>
 <div class="flex-items">
 
     <?php
-    print_r(get_users());
-	$file = unserialize(file_get_contents("../private/products"));
+    $products = get_products();
 	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
 
-    if ($file)
+    if ($products)
     {
 		$i = $page * 5;
-        foreach($file as $k=>$f)
+        foreach($products as $k=>$f)
         {
 			if ($k >= $i && $k < $i + 5)
 			{
@@ -38,7 +36,7 @@ include('api/minishop.php');
 		}
 		if ($page > 0)
 			echo "<a href=\"index.php?page=", $page - 1 , "\">Page precedente</a>";
-		if (count($file) > $i + 5)
+		if (count($products) > $i + 5)
 		    echo "<a href=\"index.php?page=", $page + 1 , "\">Page suivante</a>";
     }
     ?>
