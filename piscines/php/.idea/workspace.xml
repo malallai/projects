@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/api/minishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/api/minishop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +25,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1185">
-                  <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+                <state relative-caret-position="870">
+                  <caret line="58" selection-start-line="58" selection-end-line="58" />
                 </state>
               </provider>
             </entry>
@@ -308,12 +307,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="19107000" />
+      <workItem from="1558865111511" duration="19187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77169000" />
+    <option name="totallyTimeSpent" value="77249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rush00/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+        <state relative-caret-position="870">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
