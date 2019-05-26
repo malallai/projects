@@ -5,13 +5,7 @@ include('assets/templates/header.php');
 <?php
 if ($_GET['value'])
 {
-	$res = array();
-	$file = unserialize(file_get_contents("../private/products"));
-	foreach ($file as $f)
-	{
-		if ($f['name'] == $_GET['value'] || $f['year'] == $_GET['value'])
-			$res[] = $f;
-	}
+	$res = search_item($_GET['value']);
 	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
 	$i = $page * 5;
 	foreach($res as $k=>$f)
