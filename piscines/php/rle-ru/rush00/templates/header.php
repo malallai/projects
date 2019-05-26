@@ -45,7 +45,9 @@ session_start();
                 <div class="icon">
                     <a href="cart.php">
                         <i class='fas fa-shopping-cart'></i>
-                        <p><?= isset($_SESSION['items_count']) ? $_SESSION['items_count'] : 0 ?></p>
+                        <div class="items-count">
+                            <p><?= isset($_SESSION['items_count']) ? $_SESSION['items_count'] : 0 ?></p>
+                        </div>
                     </a>
                 </div>
             </div>
