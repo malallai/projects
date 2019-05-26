@@ -63,7 +63,7 @@ html, body {
     cursor: pointer;
 }
 
-.header .flex-compononent:nth-child(2) .searchbar label:hover {
+.header .flex-compononent:nth-child(2) .searchbar .search:hover {
     cursor: pointer;
 }
 
@@ -75,13 +75,9 @@ html, body {
     transform: translateY(-50%);
 }
 
-.header .flex-compononent:nth-child(2) .searchbar .search label {
+.header .flex-compononent:nth-child(2) .searchbar .search {
     margin: 0;
     width: 100%;
-}
-
-.header .flex-compononent:nth-child(2) .searchbar .search input {
-    display: none;
 }
 
 .header .flex-compononent:nth-child(2) .searchbar .search i {
