@@ -19,14 +19,8 @@ body {
     padding: 15px 30px;
     text-align: center;
     background-color: #3b3b3b;
-    border-radius: 4px;
-    border: none;
     transition: 0.15s ease-in-out;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
-}
-
-.login-content {
-    border-top: none !important;
 }
 
 .login {
@@ -60,13 +54,12 @@ body {
     background-color: #3b3b3b;
 }
 
-.log-top a:hover {
+.log-top a:hover(:not.active) {
     background-color: rgba(255, 255, 255, .15);
 }
 
 .log-top-content {
     padding: 0 !important;
-    border-bottom: none !important;
 }
 
 input {
