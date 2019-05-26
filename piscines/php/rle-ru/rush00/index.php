@@ -3,6 +3,7 @@ include('assets/templates/header.php');
 
 if (isset($_POST['submit'])) {
     add_item_to_cart($_POST['id']);
+    header("location: index.php");
 }
 
 ?>

@@ -3,9 +3,11 @@ include('assets/templates/header.php');
 
     if (isset($_POST['confirm'])) {
         confirm_order($_SESSION['logged_as']);
+        header("location: cart.php");
     }
     if (isset($_POST['submit'])) {
         remove_item_from_cart($_POST['id']);
+        header("location: cart.php");
     }
 
 ?>
