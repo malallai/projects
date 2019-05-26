@@ -70,19 +70,26 @@ include ('api/minishop.php');
 <body>
 <link rel="stylesheet" href="assets/css/install.css">
 <div class="container">
-    <div class="install-row">
-        <div class="install-content">
-            <p>Création du profile administrateur</p>
-            <div class="install">
-                <form method="POST" action="install.php">
-                    <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
-                    <input class="btn btn-white" name="create" value="Créer" type="submit">
-                </form>
+    <header class="header">
+        <div class="flex-compononent">
+            <div class="icon">
+                <a href="index.php"><img src="assets/images/42.svg"></a>
             </div>
         </div>
-    </div>
-</div>
+    </header>
+    <main class="inner">
+        <div class="install-row">
+            <div class="install-content">
+                <p>Création du profile administrateur</p>
+                <div class="install">
+                    <form method="POST" action="install.php">
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
+                        <input class="btn btn-white" name="create" value="Créer" type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
 
 <?php
 include ('assets/templates/footer.php');
