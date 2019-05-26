@@ -32,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/footer.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/assets/css/install.css" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/assets/css/install.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,20 +106,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/rush00/assets/templates/header.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+                <state relative-caret-position="15">
+                  <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -207,8 +199,8 @@
         <option value="$PROJECT_DIR$/rush00/admin/index.php" />
         <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/install.php" />
-        <option value="$PROJECT_DIR$/rush00/assets/css/install.css" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
+        <option value="$PROJECT_DIR$/rush00/assets/css/install.css" />
       </list>
     </option>
   </component>
@@ -353,12 +345,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="4287000" />
+      <workItem from="1558865111511" duration="4315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62349000" />
+    <option name="totallyTimeSpent" value="62377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,17 +665,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rush00/assets/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/assets/css/install.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
