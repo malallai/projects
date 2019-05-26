@@ -35,7 +35,7 @@
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/templates/header.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rle-ru/rush00/validate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rush00/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rush00/api/minishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/rush00/api/minishop.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,20 +113,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="887">
-                  <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+                <state relative-caret-position="902">
+                  <caret line="132" column="72" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rush00/test.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+                <state relative-caret-position="30">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
                 </state>
               </provider>
             </entry>
@@ -225,8 +225,8 @@
         <option value="$PROJECT_DIR$/rush00/cart.php" />
         <option value="$PROJECT_DIR$/rush00/user.php" />
         <option value="$PROJECT_DIR$/rush00/search.php" />
-        <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
         <option value="$PROJECT_DIR$/rush00/test.php" />
+        <option value="$PROJECT_DIR$/rush00/api/minishop.php" />
       </list>
     </option>
   </component>
@@ -344,12 +344,12 @@
       <workItem from="1558773711321" duration="3435000" />
       <workItem from="1558785042601" duration="1076000" />
       <workItem from="1558790386664" duration="13772000" />
-      <workItem from="1558865111511" duration="13166000" />
+      <workItem from="1558865111511" duration="13254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71228000" />
+    <option name="totallyTimeSpent" value="71316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,17 +664,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
+    <entry file="file://$PROJECT_DIR$/rush00/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rush00/test.php">
+    <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="902">
+          <caret line="132" column="72" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
         </state>
       </provider>
     </entry>
