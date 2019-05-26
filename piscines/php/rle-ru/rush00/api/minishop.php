@@ -53,7 +53,7 @@
         $user = get_user($login);
         if ($user) {
             $users = get_users();
-            unset($users, $user);
+            unset($users[$user]);
             file_put_contents("private/accounts", serialize($users));
         }
         return false;
