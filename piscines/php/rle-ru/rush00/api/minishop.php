@@ -79,6 +79,8 @@
         $user = get_user($login);
         $user['orders'][] = $n;
         $users[get_user($login)] = $user;
+        print_r($users);
+        print_r($user);
         file_put_contents("private/accounts", serialize($users));
         return true;
     }
