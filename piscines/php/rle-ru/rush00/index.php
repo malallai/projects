@@ -2,6 +2,22 @@
 include('assets/templates/header.php');
 ?>
 <div class="flex-items">
+    <div class="item">
+        <div class="image">
+            <img src="https://cdn.intra.42.fr/users/bclerc.jpg">
+        </div>
+        <div class="description">
+            <div class="name">
+                <p>bclerc</p>
+            </div>
+            <div class="price">Prix : 10E</div>
+            <div class="quantity">Annee : 2018</div>
+            <form action="additem.php" method="post">
+                <input class="id" name="id" type="text" value="0">
+                <input class="submit" name="submit" type="submit" value="Ajouter au panier">
+            </form>
+        </div>
+    </div>
     <?php
 	$file = unserialize(file_get_contents("../private/products"));
 	$page = $_GET['page'] != NULL ? $_GET['page'] : 0;
