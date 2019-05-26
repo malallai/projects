@@ -19,9 +19,9 @@ if (isset($_POST['submit'])) {
 }
 if ($_SESSION['logged_as'])
 {
-	echo "<a href='logout.php'>Log out</a><br />";
 	?>
-    <a><?= $_SESSION['logged_as'] ?></a>
+    Connecté en tant que : <a><?= $_SESSION['logged_as'] ?></a>
+    </br>
 	Change password:
 	<form method="POST" action="user.php">
 		Old password: <input type="password" name="oldpw" />
@@ -33,6 +33,8 @@ if ($_SESSION['logged_as'])
 		Password: <input type="password" name="pass" />
 		<input type="submit" name="submit" value="Del User" />
 	</form>
+    </br>
+    <a href='logout.php'>Log out</a>
 	<?php
 }
 include('assets/templates/footer.php');

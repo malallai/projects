@@ -19,6 +19,10 @@ include('assets/templates/header.php');
 <link rel="stylesheet" href="assets/css/install.css">
 <div class="container">
     <div class="install-row">
+        <div class="log-top">
+            <a href="login.php">Connexion</a>
+            <a href="register.php">Inscription</a>
+        </div>
         <div class="install-content">
             <p>Création d'un compte</p>
             <div class="install">

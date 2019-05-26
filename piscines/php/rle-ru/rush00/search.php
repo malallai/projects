@@ -22,7 +22,7 @@ if ($_GET['value'])
                        <p><?= $f['name'] ?></p>
                    </div>
                    <div class="price">Prix : <?= $f['price'] ?>E</div>
-                   <div class="quantity">Annee : <?= $f['year'] ?></div>
+                   <div class="quantity">Annee : <?= $f['annee'] ?></div>
                    <form action="additem.php" method="post">
                        <input class="id" name="id" type="text" value="<?= $f['uid'] ?>">
                        <input class="submit" name="submit" type="submit" value="Ajouter au panier">

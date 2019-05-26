@@ -52,7 +52,7 @@ include('assets/templates/header.php');
             <input type="submit" name="confirm" value="Valider la commande" />
         </form>
         <?php } ?>
-        <a href="history.php">Order history </a>
+        <a href="history.php">Historique des commandes</a>
     <?php
     include('assets/templates/footer.php');
 ?>
