@@ -22,7 +22,7 @@ html, body {
 }
 
 .header .flex-compononent:nth-child(1) .icon {
-    width: 40%;
+    width: 10rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -112,6 +112,12 @@ html, body {
     justify-content: flex-end;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.header .flex-compononent:nth-child(3) p {
+    position: absolute;
+    left: 15rem;
+    color: red;
 }
 
 .header .flex-compononent:nth-child(1) {
