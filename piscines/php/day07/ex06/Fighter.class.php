@@ -1,0 +1,7 @@
+c<?php
+
+
+class Fighter
+{
+
+}
