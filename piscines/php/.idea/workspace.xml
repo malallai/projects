@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/day09/ex00/balloon.html" beforeDir="false" afterPath="$PROJECT_DIR$/day09/ex00/balloon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day09/ex01/calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/day09/ex01/calc.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,20 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day09/ex00/balloon.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day09/ex01/calc.html">
+        <entry file="file://$PROJECT_DIR$/day09/ex02bis/todo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="795">
+              <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -83,10 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rush00/admin.php" />
-        <option value="$PROJECT_DIR$/rush00/login.php" />
-        <option value="$PROJECT_DIR$/rush00/assets/css/login.css" />
-        <option value="$PROJECT_DIR$/rush00/register.php" />
         <option value="$PROJECT_DIR$/rush00/index.php" />
         <option value="$PROJECT_DIR$/rush00/assets/templates/header.php" />
         <option value="$PROJECT_DIR$/day06/ex00/main_00.php" />
@@ -133,7 +121,11 @@
         <option value="$PROJECT_DIR$/day09/ex02/todo.js" />
         <option value="$PROJECT_DIR$/day09/ex02/index.html" />
         <option value="$PROJECT_DIR$/day09/ex00/balloon.html" />
+        <option value="$PROJECT_DIR$/day09/ex00bis/balloon.html" />
         <option value="$PROJECT_DIR$/day09/ex01/calc.html" />
+        <option value="$PROJECT_DIR$/day09/ex01bis/calc.html" />
+        <option value="$PROJECT_DIR$/day09/ex02bis/index.html" />
+        <option value="$PROJECT_DIR$/day09/ex02bis/todo.js" />
       </list>
     </option>
   </component>
@@ -174,13 +166,31 @@
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="day09" type="462c0819:PsiDirectoryNode" />
+              <item name="ex00bis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day09" type="462c0819:PsiDirectoryNode" />
               <item name="ex01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="day09" type="462c0819:PsiDirectoryNode" />
+              <item name="ex01bis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day09" type="462c0819:PsiDirectoryNode" />
               <item name="ex02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day09" type="462c0819:PsiDirectoryNode" />
+              <item name="ex02bis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,7 +203,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day06/ex04" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day09/ex03" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -212,11 +222,11 @@
       <recent name="$PROJECT_DIR$/rush00/admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day09/ex01bis" />
+      <recent name="$PROJECT_DIR$/day09/ex02bis" />
+      <recent name="$PROJECT_DIR$/day09/ex00bis" />
       <recent name="$PROJECT_DIR$/day06/ex04" />
       <recent name="$PROJECT_DIR$/day06/ex03" />
-      <recent name="$PROJECT_DIR$/day07/ex06" />
-      <recent name="$PROJECT_DIR$/day06/ex02" />
-      <recent name="$PROJECT_DIR$/day06/ex01" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -252,12 +262,12 @@
       <workItem from="1558790386664" duration="13772000" />
       <workItem from="1558865111511" duration="27090000" />
       <workItem from="1559066900240" duration="11066000" />
-      <workItem from="1559129302664" duration="14569000" />
+      <workItem from="1559129302664" duration="14960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110787000" />
+    <option name="totallyTimeSpent" value="111178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -297,22 +307,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day07/ex03/test2.php" />
-    <entry file="file://$PROJECT_DIR$/day07/ex03/House.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day07/ex03/test.php" />
-    <entry file="file://$PROJECT_DIR$/day07/ex04/Lannister.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day07/ex04/test.php" />
     <entry file="file://$PROJECT_DIR$/day07/ex04/Jaime.class.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -563,6 +557,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/day09/ex00/balloon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day09/ex02/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -570,17 +571,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day09/ex00/balloon.html">
+    <entry file="file://$PROJECT_DIR$/day09/ex00bis/balloon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="480">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day09/ex01/calc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day09/ex01bis/calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="5" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day09/ex02bis/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day09/ex02bis/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
         </state>
       </provider>
     </entry>
