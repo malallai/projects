@@ -6,7 +6,7 @@
 </head>
 <body>
 <form id="calc" name="calc">
-    <input type="number" id="nbr1" required>
+    <input type="text" id="nbr1" required>
     <select id="op">
         <option>+</option>
         <option>-</option>
@@ -14,7 +14,7 @@
         <option>/</option>
         <option>%</option>
     </select>
-    <input type="number" id="nbr2" required>
+    <input type="text" id="nbr2" required>
     <input type="submit" value="Try me!">
 </form>
 
@@ -27,6 +27,10 @@
         var form = document.getElementById("calc");
         form.addEventListener("submit", function (event) {
             event.preventDefault();
+            if (!isNumeric(form['nbr1'].value) || !isNumeric(form['nbr2'].value)) {
+                alert("Error :(");
+                return false;
+            }
             var nbr1 = parseInt(form['nbr1'].value);
             var nbr2 = parseInt(form['nbr2'].value);
             var op = form['op'].value;
@@ -46,6 +50,10 @@
             alert(result);
             return false;
         });
+    }
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
     }
 </script>
 </body>
