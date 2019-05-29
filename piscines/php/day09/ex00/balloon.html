@@ -20,23 +20,23 @@
 <div class="balloon" id="balloon"></div>
 <script>
     balloon = document.getElementById('balloon');
-    balloon.onclick = balloonClick;
-    balloon.onmouseleave = balloonLeave;
-    function balloonLeave() {
+    balloon.onclick = onClick;
+    balloon.onmouseleave = onLeave;
+    function onLeave() {
         var width = parseInt(balloon.clientWidth, 10) - 5;
         var height = parseInt(balloon.clientHeight, 10) - 5;
-        if (balloon.style.backgroundColor == '' || balloon.style.backgroundColor == 'red')
-            balloon.style.backgroundColor = 'blue';
+        if (balloon.style.backgroundColor == 'blue')
+            balloon.style.backgroundColor = 'green';
         else if (balloon.style.backgroundColor == 'green')
             balloon.style.backgroundColor = 'red';
-        else if (balloon.style.backgroundColor == 'blue')
-            balloon.style.backgroundColor = 'green';
-        if (width >= 200){
+        else if (balloon.style.backgroundColor == '' || balloon.style.backgroundColor == 'red')
+            balloon.style.backgroundColor = 'blue';
+        if (width >= 200) {
             balloon.style.width = width + 'px';
             balloon.style.height = height + 'px';
         }
     }
-    function balloonClick() {
+    function onClick() {
         var width = parseInt(balloon.clientWidth, 10) + 10;
         var height = parseInt(balloon.clientHeight, 10) + 10;
         if (balloon.style.backgroundColor == '' || balloon.style.backgroundColor == 'red')
