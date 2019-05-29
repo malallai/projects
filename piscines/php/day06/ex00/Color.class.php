@@ -36,18 +36,18 @@ class Color
             $this->red = $arr['rgb'] % 256;
         }
         if (self::$verbose) {
-            echo $this . " constructed.\n";
+            echo $this . " constructed.".PHP_EOL;
         }
     }
 
     function __destruct() {
         if (self::$verbose) {
-            echo $this . " destructed.\n";
+            echo $this . " destructed.".PHP_EOL;
         }
     }
 
     function __toString() {
-        return 'Color( red: ' . $this->pad($this->red) . ', green: ' . $this->pad($this->green) . ', blue: ' . $this->pad($this->blue) . ' )';
+        return sprintf('Color( red:%4d, green:%4d, blue:%4d )', $this->red, $this->green, $this->blue);
     }
 
     function add(Color $color) {
