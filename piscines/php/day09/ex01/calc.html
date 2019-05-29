@@ -5,56 +5,44 @@
     </style>
 </head>
 <body>
-<input type="text" id="nb1"/>
-<select id="op">
-    <option>+</option>
-    <option>-</option>
-    <option>*</option>
-    <option>/</option>
-    <option>%</option>
-</select>
-<input type="text" id="nb2"/>
-<input type="submit" value="Try me!" onclick="result()"/>
+<form>
+    <input type="text" id="nbr1" required>
+    <select id="op">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+    </select>
+    <input type="text" id="nbr2" required>
+    <input type="submit" value="Try me!">
+</form>
+
 <script>
     setInterval(useME, 30000);
     function useME() {
         alert("Please, use me...");
     }
-    function result() {
-        var nb1 = document.getElementById("nb1").value;
-        var op = document.getElementById("op").options[document.getElementById("op").selectedIndex].value;
-        var nb2 = document.getElementById("nb2").value;
-        var result;
+    window.onload = function() {
+        var form = document.getElementById("calc");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var nbr1 = parseInt(form['nbr1'].value);
+            var nbr2 = parseInt(form['nbr2'].value);
+            var op = form['op'].value;
+            var result = "";
 
-        if (!nb1 || !nb2 || nb1.match(/^[0-9]+$/) == null || nb2.match(/^[0-9]+$/) == null) {
-            alert("Error :(");
-        } else {
-            nb1 = parseInt(nb1, 10);
-            nb2 = parseInt(nb2, 10);
-            if (nb1 < 0 || nb2 < 0) {
-                alert("Error :(");
-            } else {
-                if (op === "+")
-                    result = nb1 + nb2;
-                else if (op === "-")
-                    result = nb1 - nb2;
-                else if (op === "*")
-                    result = nb1 * nb2;
-                else if (op === "/") {
-                    if (nb2 === 0)
-                        result = "It's over 9000 !";
-                    else
-                        result = nb1 / nb2;
-                } else if (op === "%") {
-                    if (nb2 === 0)
-                        result = "It's over 9000 !";
-                    else
-                        result = nb1 % nb2;
-                }
-                console.log(result);
-                alert(result);
-            }
-        }
+            if (nbr1 < 0 || nbr2 < 0) alert("Error :(");
+            else if ((op == "%" || op == "/") && nbr2 == 0) result = "It's over 9000!";
+            else if (op == "/") result = nbr1 / nbr2;
+            else if (op == "%") result = nbr1 % nbr2;
+            else if (op == "*") result = nbr1 * nbr2;
+            else if (op == "+") result = nbr1 + nbr2;
+            else if (op == "-") result = nbr1 - nbr2;
+            console.log(result);
+            alert(result);
+            return false;
+        });
     }
 </script>
 </body>
