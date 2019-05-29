@@ -32,7 +32,7 @@
             var op = form['op'].value;
             var result = "";
 
-            if (nbr1 < 0 || nbr2 < 0 || !nbr1 || !nbr2) {
+            if (nbr1 < 0 || nbr2 < 0 || nbr1 == NaN || nbr2 == NaN) {
                 alert("Error :(");
                 return false;
             }
