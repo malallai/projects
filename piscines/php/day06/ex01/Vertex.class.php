@@ -30,21 +30,21 @@ class Vertex {
             $this->_color = new Color(array('red' => 255, 'green' => 255, 'blue' => 255));
         }
         if (self::$verbose) {
-            echo $this . " constructed\n";
+            echo $this . " constructed".PHP_EOL;
         }
     }
 
     function __destruct() {
         if (self::$verbose) {
-            echo $this . " destructed\n";
+            echo $this . " destructed".PHP_EOL;
         }
     }
 
     function __toString() {
         if (self::$verbose) {
-            return 'Vertex( x: ' . sprintf("%.2f", $this->getX()) . ', y: ' . sprintf("%.2f", $this->getY()) . ', z:' . sprintf("%.2f", $this->getZ()) . ', w:' . sprintf("%.2f", $this->getW()) . ', ' . $this->_color .' )';
+            return sprintf('Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, %s )', $this->getX(), $this->getY(), $this->getZ(), $this->getW(), $this->_color);
         } else {
-            return 'Vertex( x: ' . sprintf("%.2f", $this->getX()) . ', y: ' . sprintf("%.2f", $this->getY()) . ', z:' . sprintf("%.2f", $this->getZ()) . ', w:' . sprintf("%.2f", $this->getW()) .' )';
+            return sprintf('Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f )', $this->getX(), $this->getY(), $this->getZ(), $this->getW());
         }
     }
 
