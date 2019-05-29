@@ -32,10 +32,7 @@
             var op = form['op'].value;
             var result = "";
 
-            console.log(nbr1);
-            console.log(nbr2);
-
-            if (nbr1 < 0 || nbr2 < 0) {
+            if (nbr1 < 0 || nbr2 < 0 || !nbr1 || !nbr2) {
                 alert("Error :(");
                 return false;
             }
