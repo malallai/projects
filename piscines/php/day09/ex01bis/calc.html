@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculatrice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 <body>
 <form id="calc" name="calc">
@@ -23,17 +24,17 @@
     function useME() {
         alert("Please, use me...");
     }
-    window.onload = function() {
-        var form = document.getElementById("calc");
-        form.addEventListener("submit", function (event) {
+    $(function() {
+        var form = $("#calc");
+        form.submit(function (event) {
             event.preventDefault();
-            if (!isNumeric(form['nbr1'].value) || !isNumeric(form['nbr2'].value)) {
+            if (!isNumeric($(this).find("input[name=nbr1]").val()) || !isNumeric($(this).find("input[name=nbr2]").val())) {
                 alert("Error :(");
                 return false;
             }
-            var nbr1 = parseInt(form['nbr1'].value);
-            var nbr2 = parseInt(form['nbr2'].value);
-            var op = form['op'].value;
+            var nbr1 = parseInt($(this).find("input[name=nbr1]").val());
+            var nbr2 = parseInt($(this).find("input[name=nbr2]").val());
+            var op = $(this).find("select[name=op]").val();
             var result = "";
 
             if (nbr1 < 0 || nbr2 < 0) {
@@ -50,11 +51,7 @@
             alert(result);
             return false;
         });
-    }
-
-    function isNumeric(n) {
-        return !isNaN(parseInt(n)) && isFinite(n);
-    }
+    });
 </script>
 </body>
 </html>
