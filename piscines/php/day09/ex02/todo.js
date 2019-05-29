@@ -1,64 +1,58 @@
-var button = document.getElementById("new");
-button.onclick = todo;
-window.onload = getCookies;
-var g_index = 0;
-
-function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
-
-function eraseCookie(name) {
-    document.cookie = name + '=; Max-Age=-999;';
-}
-
-function getCookies() {
-    var cookies = document.cookie;
-    if (cookies) {
-        var tab = cookies.split(";");
-        for (elem in tab) {
-            var name = tab[elem].split("=")[0];
-            var text = decodeURIComponent(tab[elem].split("=")[1]);
-            var list = document.getElementById('ft_list');
-            var input = document.createTextNode(text);
-            var attribute = document.createElement("div");
-            attribute.setAttribute("id", "ft_list");
-            attribute.setAttribute("index", g_index);
-            attribute.setAttribute("onclick", "del(this)");
-            attribute.appendChild(input);
-            list.insertBefore(attribute, list.firstChild);
-            eraseCookie(name);
-            setCookie('todo' + g_index, encodeURIComponent(text), 1);
-            g_index++;
+window.onload = function () {
+    var button = document.getElementById("new");
+    var list = document.getElementById("ft_list");
+    var str = decodeURIComponent(getCookie());
+    if (str && str != "" && str != null && str != "null") {
+        list.innerHTML = str;
+        var childs = list.childNodes;
+        for (var i = 0; i < childs.length; i++) {
+            childs[i].addEventListener("click", function () {
+                var r = confirm("Supprimer cet élément ?");
+                if (r) {
+                    this.remove();
+                    setCookie();
+                }
+            });
         }
     }
-}
 
-function todo() {
-    var text = prompt("Todo:");
-    if (text.length > 0) {
-        var list = document.getElementById('ft_list');
-        var input = document.createTextNode(text);
-        var attribute = document.createElement("div");
-        attribute.setAttribute("id", "ft_list");
-        attribute.setAttribute("index", g_index);
-        attribute.setAttribute("onclick", "del(this)");
-        attribute.appendChild(input);
-        list.insertBefore(attribute, list.firstChild);
-        setCookie('todo' + g_index, encodeURIComponent(text), 1);
-        g_index++;
+    button.addEventListener("click", function () {
+        var ret = prompt("Élément à ajouter à la liste ?", "Nouvel élément");
+        if (ret != null && ret != "") {
+            addElemTop(ret);
+        }
+    });
+
+    function setCookie() {
+        var date = new Date();
+        date.setTime(date.getTime() + 99999999999);
+        document.cookie = "ftlist=" + encodeURIComponent(list.innerHTML) + "; expires= " + date.toGMTString () + "; path=/";
     }
-}
 
-function del(elem) {
-    if (confirm("Delete ?") === true) {
-        index = elem.getAttribute("index");
-        document.getElementById('ft_list').removeChild(elem);
-        eraseCookie('todo' + index);
+    function getCookie() {
+        var decoded = decodeURIComponent(document.cookie);
+        var ca = decoded.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf("ftlist=") == 0) {
+                return c.substring(7, c.length);
+            }
+        }
+        return null;
+    }
+
+    function addElemTop(text) {
+        var div = document.createElement("div");
+        div.innerHTML = text;
+        list.prepend(div);
+        setCookie();
+        div.addEventListener("click", function () {
+            var r = confirm("Supprimer cet élément ?");
+            if (r) {
+                this.remove();
+                setCookie();
+            }
+        });
     }
 }
