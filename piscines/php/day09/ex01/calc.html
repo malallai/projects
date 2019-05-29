@@ -32,7 +32,10 @@
             var op = form['op'].value;
             var result = "";
 
-            if (nbr1 < 0 || nbr2 < 0) alert("Error :(");
+            if (nbr1 < 0 || nbr2 < 0) {
+                alert("Error :(");
+                return false;
+            }
             else if ((op == "%" || op == "/") && nbr2 == 0) result = "It's over 9000!";
             else if (op == "/") result = nbr1 / nbr2;
             else if (op == "%") result = nbr1 % nbr2;
