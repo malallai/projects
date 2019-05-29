@@ -4,21 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/rush00/cart.php" description="        remove_item_from_cart($_POST['id']);&#10;    }" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/Vector.doc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/day06/ex02/Vector.doc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/Vertex.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/main_02.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex03/Matrix.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day06/ex03/Matrix.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex03/Matrix.doc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/day06/ex03/Matrix.doc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day07/ex06/Fighter.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day07/ex06/Fighter.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day07/ex06/UnholyFactory.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day07/ex06/UnholyFactory.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day07/ex06/test1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day07/ex06/test2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rle-ru/rush00/private/accounts" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/private/accounts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rle-ru/rush00/private/orders" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/private/orders" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rle-ru/rush00/private/products" beforeDir="false" afterPath="$PROJECT_DIR$/rle-ru/rush00/private/products" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +15,24 @@
     <favorites_list name="php" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day09/ex00/balloon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -76,7 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rush00/cart.php" />
         <option value="$PROJECT_DIR$/rush00/history.php" />
         <option value="$PROJECT_DIR$/rush00/assets/css/style.css" />
         <option value="$PROJECT_DIR$/rush00/install.php" />
@@ -127,6 +122,7 @@
         <option value="$PROJECT_DIR$/day06/ex03/Matrix.doc.txt" />
         <option value="$PROJECT_DIR$/day06/ex04/Camera.txt" />
         <option value="$PROJECT_DIR$/day06/ex04/Camera.class.php" />
+        <option value="$PROJECT_DIR$/day09/ex00/balloon.html" />
       </list>
     </option>
   </component>
@@ -155,13 +151,13 @@
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day07" type="462c0819:PsiDirectoryNode" />
+              <item name="day09" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day07" type="462c0819:PsiDirectoryNode" />
-              <item name="ex06" type="462c0819:PsiDirectoryNode" />
+              <item name="day09" type="462c0819:PsiDirectoryNode" />
+              <item name="ex00" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,12 +229,12 @@
       <workItem from="1558790386664" duration="13772000" />
       <workItem from="1558865111511" duration="27090000" />
       <workItem from="1559066900240" duration="11066000" />
-      <workItem from="1559129302664" duration="11395000" />
+      <workItem from="1559129302664" duration="11710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107613000" />
+    <option name="totallyTimeSpent" value="107928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -251,6 +247,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.21601942" />
@@ -277,7 +274,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day07/ex01/test2.php" />
     <entry file="file://$PROJECT_DIR$/day07/ex01/Greyjoy.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -549,6 +545,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day09/ex00/balloon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
         </state>
       </provider>
     </entry>
