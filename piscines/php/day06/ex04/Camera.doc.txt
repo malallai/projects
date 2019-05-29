@@ -1,0 +1,20 @@
+
+<- Camera ----------------------------------------------------------------------
+The Camera class handles a Camera.
+
+She wait a array with the key:
+	=> 'origin' : Vertex represent the camera position in the world
+	=> 'orientation' : Rotating matrix orienting the camera in the world landmark
+	=> 'width' : Width of the image in pixel. Incompatibility with 'ratio'
+	=> 'height' : Height of the image in pixel. Incompatibility with 'ratio'
+	=> 'ratio' : Ratio of the image. Incompatibility with 'width' and 'height'
+    => 'fov': Field of view in degrees
+    => 'near': clipping plane close to the projection
+    => 'far': clipping plane far from the projection
+
+The class provides the following methods :
+
+Vertex watchVertex( Vertex $worldVertex );
+Transform a vertex into "world" coordinates into a vertex in "screen" coordinates
+
+---------------------------------------------------------------------- Camera ->
