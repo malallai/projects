@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Calculatrice</title>
+    <style>
+    </style>
+</head>
+<body>
+<input type="text" id="nb1"/>
+<select id="op">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+    <option>%</option>
+</select>
+<input type="text" id="nb2"/>
+<input type="submit" value="Try me!" onclick="result()"/>
+<script>
+    setInterval(useME, 30000);
+    function useME() {
+        alert("Please, use me...");
+    }
+    function result() {
+        var nb1 = document.getElementById("nb1").value;
+        var op = document.getElementById("op").options[document.getElementById("op").selectedIndex].value;
+        var nb2 = document.getElementById("nb2").value;
+        var result;
+
+        if (!nb1 || !nb2 || nb1.match(/^[0-9]+$/) == null || nb2.match(/^[0-9]+$/) == null) {
+            alert("Error :(");
+        } else {
+            nb1 = parseInt(nb1, 10);
+            nb2 = parseInt(nb2, 10);
+            if (nb1 < 0 || nb2 < 0) {
+                alert("Error :(");
+            } else {
+                if (op === "+")
+                    result = nb1 + nb2;
+                else if (op === "-")
+                    result = nb1 - nb2;
+                else if (op === "*")
+                    result = nb1 * nb2;
+                else if (op === "/") {
+                    if (nb2 === 0)
+                        result = "It's over 9000 !";
+                    else
+                        result = nb1 / nb2;
+                } else if (op === "%") {
+                    if (nb2 === 0)
+                        result = "It's over 9000 !";
+                    else
+                        result = nb1 % nb2;
+                }
+                console.log(result);
+                alert(result);
+            }
+        }
+    }
+</script>
+</body>
+</html>
