@@ -19,7 +19,11 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
-        console.log(event);
+        var values = {};
+        $.each($('#play-form').serializeArray(), function(i, field) {
+            values[field.name] = field.value;
+        });
+        console.log(values);
         /*
         var p1 = $("#player1").val();
         var p2 = $("#player2").val();
