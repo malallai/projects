@@ -22,6 +22,8 @@ $(function () {
         $('.container').html(null);
         var p1 = $("#player1").val();
         var p2 = $("#player2").val();
+        console.log(p1);
+        console.log(p2);
         console.log("test 1");
         $.ajax({
             url: './init_game.php',
