@@ -147,6 +147,10 @@ input {
     max-width: 30rem;
 }
 
+.scores .score {
+    float: left;
+}
+
 .visible {
     display: block;
 }
