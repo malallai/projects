@@ -37,7 +37,7 @@
         </div>
         <div id="scores-row" class="scores-row hidden">
             <div class="scores-content">
-                <p>New Game</p>
+                <p>Scores</p>
                 <div class="scores">
                 </div>
             </div>

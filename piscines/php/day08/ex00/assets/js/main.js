@@ -19,5 +19,6 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
+        $('.container').html(null);
     });
 })
