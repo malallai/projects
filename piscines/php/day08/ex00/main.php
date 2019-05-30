@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div id="new-game-form" class="new-game-row hidden">
+        <div id="new-game-form" class="new-game-row">
             <div class="new-game-content">
                 <p>New Game</p>
                 <div class="new-game">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div id="scores-row" class="scores-row">
+        <div id="scores-row" class="scores-row hidden">
             <div class="scores-content">
                 <p>New Game</p>
                 <div class="scores">
