@@ -148,7 +148,12 @@ input {
 }
 
 .scores .score p {
+    text-align: left;
     float: left;
+}
+
+.scores .score .player-score {
+    text-align: right !important;
 }
 
 .visible {
