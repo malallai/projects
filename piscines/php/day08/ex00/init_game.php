@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once 'classes/Game.class.php';
 
 $game = new Game();
