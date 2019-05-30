@@ -12,8 +12,8 @@
         <p>New Game</p>
         <div class="new-game">
             <form id="play-form">
-                <input type="text" id="player1" class="form-control" placeholder="Player 1">
-                <input type="text" id="player2" class="form-control" placeholder="Player 2">
+                <input type="text" name="player1" class="form-control" placeholder="Player 1">
+                <input type="text" name="player2" class="form-control" placeholder="Player 2">
                 <input class="btn btn-white" name="play" value="Play" type="submit">
             </form>
         </div>
