@@ -20,7 +20,7 @@ $(function () {
     form.submit(function (event) {
         event.preventDefault();
         var values = {};
-        $.each($('#play-form').serializeArray(), function(i, field) {
+        $.each(form.serializeArray(), function(i, field) {
             values[field.name] = field.value;
         });
         console.log(values);
