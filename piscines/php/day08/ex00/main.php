@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="new-game-row">
+        <div class="new-game-row visible">
             <div class="new-game-content">
                 <p>New Game</p>
                 <div class="new-game">
@@ -30,6 +30,14 @@
                         <input type="text" id="player2" class="form-control" placeholder="Player 2">
                         <input class="btn btn-white" name="play" value="Play" type="submit">
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="scores-row hidden">
+            <div class="scores-content">
+                <p>New Game</p>
+                <div class="scores">
+                    <p>Test score 1</p>
                 </div>
             </div>
         </div>

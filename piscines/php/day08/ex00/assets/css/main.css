@@ -17,8 +17,6 @@ html, body {
     transform: scale(1.025);
     position: absolute;
     z-index: -99;
-    transition: 0.15s ease-in-out;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
 main {
@@ -26,41 +24,10 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    transition: 0.15s ease-in-out;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
 .container {
     margin: auto;
-}
-
-.new-game-row, .top-nav-row {
-    width: 20rem;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.2s ease;
-    transition-delay: 0.05s;
-    padding-right: 15px;
-    padding-left: 15px;
-    box-sizing: border-box;
-    color: #fff;
-}
-
-.new-game-content, .log-top-content{
-    padding: 15px 30px;
-    text-align: center;
-    background-color: #3b3b3b;
-}
-
-.new-game {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    flex-direction: column !important;
-    max-width: 30rem;
 }
 
 .top-nav {
@@ -136,4 +103,54 @@ input {
 .btn-green:not(.disabled):hover {
     border-bottom: 0.2rem solid rgba(76, 172, 80, .25);
     background-color: rgba(76, 172, 80, 0.25);
+}
+
+
+.new-game-row, .top-nav-row, .scores-row {
+    width: 20rem;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.2s ease;
+    transition-delay: 0.05s;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.new-game-content, .top-nav-content, .scores-content {
+    padding: 15px 30px;
+    text-align: center;
+    background-color: #3b3b3b;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.new-game {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column !important;
+    max-width: 30rem;
+}
+
+.scores {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column !important;
+    max-width: 30rem;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
