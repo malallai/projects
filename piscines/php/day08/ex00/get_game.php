@@ -6,7 +6,7 @@ if ($_SESSION['game'] && $_POST['val'] === "get") {
     $game = unserialize($_SESSION['game']);
     $array = array();
 
-    $array['name'] = $game->getName();
+    $array['players'] = $game->getPlayers();
 
     echo json_encode($array);
 }

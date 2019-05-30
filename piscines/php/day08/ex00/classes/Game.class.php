@@ -3,28 +3,26 @@
 
 class Game {
 
-    private $_name;
+    private $_players;
 
     public function __construct()
     {
     }
 
     /**
-     * @return mixed
+     * @param mixed $players
      */
-    public function getName()
+    public function setPlayers($players)
     {
-        return $this->_name;
+        $this->_players = $players;
     }
 
     /**
-     * @param mixed $name
+     * @return mixed
      */
-    public function setName($name)
+    public function getPlayers()
     {
-        $this->_name = $name;
+        return $this->_players;
     }
-
-
 
 }
