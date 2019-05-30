@@ -19,9 +19,8 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
-        console.log(values);
-        var p1 = $(this).find("input[name=player1]").val()
-        var p2 = $(this).find("input[name=player2]").val()
+        var p1 = $(this).find("input[name=player1]").val();
+        var p2 = $(this).find("input[name=player2]").val();
         $('.container').html(null);
         console.log(p1);
         console.log(p2);
