@@ -19,9 +19,9 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
-        $('.container').html(null);
         var p1 = $("#player1").val();
         var p2 = $("#player2").val();
+        $('.container').html(null);
         console.log(p1);
         console.log(p2);
         console.log("test 1");
