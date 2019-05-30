@@ -147,7 +147,7 @@ input {
     max-width: 30rem;
 }
 
-.scores .score {
+.scores .score p {
     float: left;
 }
 

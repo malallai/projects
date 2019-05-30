@@ -38,17 +38,17 @@
                 <p>New Game</p>
                 <div class="scores">
                     <div class="score">
-                        <p class="place"></p>
+                        <p class="place">1</p>
                         <p class="player-name">TestPlayer</p>
                         <p class="player-score">10</p>
                     </div>
                     <div class="score">
-                        <p class="place"></p>
+                        <p class="place">2</p>
                         <p class="player-name">TestPlayer</p>
                         <p class="player-score">10</p>
                     </div>
                     <div class="score">
-                        <p class="place"></p>
+                        <p class="place">3</p>
                         <p class="player-name">TestPlayer</p>
                         <p class="player-score">10</p>
                     </div>
