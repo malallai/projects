@@ -4,7 +4,7 @@ session_start();
 
 require_once 'classes/Game.class.php';
 
-if ($_SESSION['game'] && $_POST['val'] === "get") {
+if ($_SESSION['game']) {
     $game = unserialize($_SESSION['game']);
     $array = array();
 
