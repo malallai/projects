@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/rush00/cart.php" description="        remove_item_from_cart($_POST['id']);&#10;    }" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/main.php" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +21,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day08/ex00/main.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+                <state relative-caret-position="600">
+                  <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -348,12 +345,12 @@
       <workItem from="1559066900240" duration="11066000" />
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
-      <workItem from="1559232911640" duration="4158000" />
+      <workItem from="1559232911640" duration="4175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120647000" />
+    <option name="totallyTimeSpent" value="120664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -692,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="600">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
         </state>
       </provider>
     </entry>

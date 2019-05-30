@@ -39,18 +39,6 @@
             <div class="scores-content">
                 <p>New Game</p>
                 <div class="scores">
-                    <div class="score">
-                        <p class="player-name">TestPlayer</p>
-                        <p class="player-score">10</p>
-                    </div>
-                    <div class="score">
-                        <p class="player-name">TestPlayer</p>
-                        <p class="player-score">10</p>
-                    </div>
-                    <div class="score">
-                        <p class="player-name">TestPlayer</p>
-                        <p class="player-score">10</p>
-                    </div>
                 </div>
             </div>
         </div>
