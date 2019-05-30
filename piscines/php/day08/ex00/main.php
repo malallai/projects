@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="new-game-row visible">
+        <div class="new-game-row hidden">
             <div class="new-game-content">
                 <p>New Game</p>
                 <div class="new-game">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="scores-row hidden">
+        <div class="scores-row visible">
             <div class="scores-content">
                 <p>New Game</p>
                 <div class="scores">
