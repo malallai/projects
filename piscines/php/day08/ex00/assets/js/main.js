@@ -37,6 +37,7 @@ $(function () {
     });
 
     function refresh_game() {
+        console.log("test 3");
         $.ajax({
             url: './get_game.php',
             type: 'POST',

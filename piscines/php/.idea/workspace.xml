@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/get_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/get_game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/init_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/init_game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/day08/ex00/init_game.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="30">
@@ -92,7 +91,16 @@
             <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="600">
-                  <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/day08/ex00/destroy.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -146,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day07/ex04/Jaime.class.php" />
         <option value="$PROJECT_DIR$/day07/ex05/test1.php" />
         <option value="$PROJECT_DIR$/day07/ex05/test2.php" />
         <option value="$PROJECT_DIR$/day07/ex06/Fighter..php" />
@@ -194,9 +201,10 @@
         <option value="$PROJECT_DIR$/day08/ex00/main.php" />
         <option value="$PROJECT_DIR$/day08/ex00/index.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/assets/js/main.js" />
         <option value="$PROJECT_DIR$/day08/ex00/get_game.php" />
         <option value="$PROJECT_DIR$/day08/ex00/init_game.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/day08/ex00/destroy.php" />
       </list>
     </option>
   </component>
@@ -335,6 +343,17 @@
               <item name="day09" type="462c0819:PsiDirectoryNode" />
               <item name="ex03" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="rush00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="rush00" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -406,12 +425,12 @@
       <workItem from="1559066900240" duration="11066000" />
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
-      <workItem from="1559232911640" duration="6194000" />
+      <workItem from="1559232911640" duration="6266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122683000" />
+    <option name="totallyTimeSpent" value="122755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,20 +470,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day07/ex02/Targaryen.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day07/ex03/House.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day07/ex04/Lannister.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -750,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/get_game.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -768,6 +766,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rush00/api/minishop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="252" column="5" lean-forward="true" selection-start-line="252" selection-start-column="5" selection-end-line="254" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/destroy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
