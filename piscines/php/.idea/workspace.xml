@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/css/newgame.css" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/css/newgame.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/newgame.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/newgame.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +32,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day08/ex00/newgame.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
                 </state>
               </provider>
             </entry>
@@ -158,8 +158,8 @@
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/start_game.php" />
         <option value="$PROJECT_DIR$/day08/ex00/index.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/newgame.php" />
         <option value="$PROJECT_DIR$/day08/ex00/assets/css/newgame.css" />
+        <option value="$PROJECT_DIR$/day08/ex00/newgame.php" />
       </list>
     </option>
   </component>
@@ -189,6 +189,29 @@
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day00" type="462c0819:PsiDirectoryNode" />
+              <item name="ex00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day00" type="462c0819:PsiDirectoryNode" />
+              <item name="ex01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="day00" type="462c0819:PsiDirectoryNode" />
+              <item name="ex03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="day08" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,23 +234,6 @@
               <item name="ex00" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day08" type="462c0819:PsiDirectoryNode" />
-              <item name="ex00" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day08" type="462c0819:PsiDirectoryNode" />
-              <item name="ex00" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="backgrounds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php" type="b2602c69:ProjectViewProjectNode" />
@@ -307,12 +313,12 @@
       <workItem from="1559066900240" duration="11066000" />
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
-      <workItem from="1559232911640" duration="1066000" />
+      <workItem from="1559232911640" duration="1108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117555000" />
+    <option name="totallyTimeSpent" value="117597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,21 +358,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day09/ex02bis/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day09/ex02bis/todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day09/ex03/index.html.php" />
     <entry file="file://$PROJECT_DIR$/day06/resources/main_00.out">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -630,17 +621,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/newgame.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/newgame.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day00/ex00/baba.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day00/ex01/mendeleiev.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day00/ex03/responsive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/newgame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
         </state>
       </provider>
     </entry>
