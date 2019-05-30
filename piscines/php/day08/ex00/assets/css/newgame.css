@@ -7,6 +7,8 @@ html, body {
 }
 
 .background {
+    -ms-filter: blur(100%);
+    filter: blur(100%);
     background-image: url(../images/background/space.png);
     width: 100%;
     height: 100%;
