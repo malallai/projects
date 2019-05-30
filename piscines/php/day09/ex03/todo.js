@@ -1,17 +1,43 @@
 $(function () {
     var button = $("#new");
     var list = $("#ft_list");
-    var str = decodeURIComponent(getCookie());
-    if (str && str != "" && str != null && str != "null") {
-        list.html(str);
+    var max_id = 0;
+    $.ajax({
+        url: './select.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            val: "get"
+        }
+    }).done(function (data) {
+        for (var n = 1; n < data.length; n++) {
+            var str = String(data[n]);
+            var i = parseInt(str);
+            while (str.charAt(0) != "," && str) {
+                str = str.substring(1);
+            }
+            str = str.substring(1);
+            if (i > max_id) {
+                max_id = i;
+            }
+            list.prepend("<div id='" + i + "'>" + str + "</div>");
+        }
         list.children().on("click", function () {
             var r = confirm("Supprimer cet élément ?");
+            var elem_id = $(this).attr('id');
             if (r) {
+                $.ajax({
+                    url: './delete.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        id: elem_id
+                    }
+                });
                 $(this).remove();
-                setCookie();
             }
         });
-    }
+    });
 
     button.on("click", function () {
         var ret = prompt("Élément à ajouter à la liste ?", "Nouvel élément");
@@ -20,34 +46,32 @@ $(function () {
         }
     });
 
-    function setCookie() {
-        var date = new Date();
-        date.setTime(date.getTime() + 99999999999);
-        document.cookie = "ftlist=" + encodeURIComponent(list.html()) + "; expires= " + date.toGMTString () + "; path=/";
-    }
-
-    function getCookie() {
-        var decoded = decodeURIComponent(document.cookie);
-        var ca = decoded.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1);
-            if (c.indexOf("ftlist=") == 0) {
-                return c.substring(7, c.length);
-            }
-        }
-        return null;
-    }
-
     function addElemTop(text) {
-        var elem = $("<div>" + text + "</div>");
+        var elem_id = ++max_id;
+        var elem = $("<div id='" + elem_id + "'>" + text + "</div>");
         list.prepend(elem);
-        setCookie();
+        $.ajax({
+            url: './insert.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                id: elem_id,
+                text: text
+            }
+        });
         elem.on("click", function () {
             var r = confirm("Supprimer cet élément ?");
+            var elem_id = $(this).attr('id');
             if (r) {
+                $.ajax({
+                    url: './delete.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        id: elem_id
+                    }
+                });
                 $(this).remove();
-                setCookie();
             }
         });
     }
