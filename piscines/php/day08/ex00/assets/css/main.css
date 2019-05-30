@@ -153,6 +153,7 @@ input {
 }
 
 .scores .score .player-score {
+    float: right;
     text-align: right !important;
 }
 
