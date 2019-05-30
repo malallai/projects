@@ -19,14 +19,9 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
-        var values = {};
-        $.each(form.serializeArray(), function(i, field) {
-            values[field.name] = field.value;
-        });
         console.log(values);
-        /*
-        var p1 = $("#player1").val();
-        var p2 = $("#player2").val();
+        var p1 = $(this).find("input[name=player1]").val()
+        var p2 = $(this).find("input[name=player2]").val()
         $('.container').html(null);
         console.log(p1);
         console.log(p2);
@@ -41,7 +36,7 @@ $(function () {
         }).done(function (data) {
             console.log("test 2");
             refresh_game();
-        });*/
+        });
     });
 
     function refresh_game() {
