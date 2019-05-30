@@ -137,9 +137,3 @@ input {
     border-bottom: 0.2rem solid rgba(76, 172, 80, .25);
     background-color: rgba(76, 172, 80, 0.25);
 }
-
-@media only screen and (max-width:900px) {
-    .new-game-row {
-        width: 50vw;
-    }
-}
