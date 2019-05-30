@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <title>New Game | D08</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
 <div class="background"></div>
@@ -15,13 +17,13 @@
         <div class="top-nav-row">
             <div class="top-nav-content">
                 <div class="top-nav">
-                    <a class="active">New Game</a>
-                    <a class="">Scores</a>
+                    <a id="new-game" class="active">New Game</a>
+                    <a id="scores" class="">Scores</a>
                 </div>
             </div>
         </div>
 
-        <div class="new-game-row hidden">
+        <div id="new-game-form" class="new-game-row hidden">
             <div class="new-game-content">
                 <p>New Game</p>
                 <div class="new-game">
@@ -33,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="scores-row visible">
+        <div id="scores-row" class="scores-row">
             <div class="scores-content">
                 <p>New Game</p>
                 <div class="scores">

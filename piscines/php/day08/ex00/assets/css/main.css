@@ -107,6 +107,7 @@ input {
 
 
 .new-game-row, .top-nav-row, .scores-row {
+    display: block;
     width: 25rem;
     float: none;
     margin-left: auto;
@@ -146,10 +147,6 @@ input {
 .scores .score .player-score {
     float: right;
     text-align: right !important;
-}
-
-.visible {
-    display: block;
 }
 
 .hidden {
