@@ -31,7 +31,7 @@ main {
 }
 
 .new-game-row, .top-nav-row {
-    width: 25vw;
+    width: 20rem;
     float: none;
     margin-left: auto;
     margin-right: auto;
@@ -72,6 +72,7 @@ main {
     color: #fff;
     flex-basis: 50%;
     padding: 15px 30px;
+    text-align: center;
 }
 
 .top-nav a {
