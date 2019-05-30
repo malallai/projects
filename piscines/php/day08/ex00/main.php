@@ -37,7 +37,21 @@
             <div class="scores-content">
                 <p>New Game</p>
                 <div class="scores">
-                    <p>Test score 1</p>
+                    <div class="score">
+                        <p class="place"></p>
+                        <p class="player-name">TestPlayer</p>
+                        <p class="player-score">10</p>
+                    </div>
+                    <div class="score">
+                        <p class="place"></p>
+                        <p class="player-name">TestPlayer</p>
+                        <p class="player-score">10</p>
+                    </div>
+                    <div class="score">
+                        <p class="place"></p>
+                        <p class="player-name">TestPlayer</p>
+                        <p class="player-score">10</p>
+                    </div>
                 </div>
             </div>
         </div>
