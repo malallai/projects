@@ -1,13 +1,13 @@
 <?php
 
 
-class House {
+abstract class House {
 
-    public function introduce() {
-        $name = $this->getHouseName();
-        $seat = $this->getHouseSeat();
-        $motto = $this->getHouseMotto();
-        print ("House " . $name . " of " . $seat . " : \"" . $motto . "\"" . PHP_EOL);
+    abstract public function getHouseName();
+    abstract public function getHouseMotto();
+    abstract public function getHouseSeat();
+
+    function introduce() {
+        echo 'House ' . static::getHouseName() . ' of ' . static::getHouseSeat() . ' : "' . static::getHouseMotto() . '"' . PHP_EOL;
     }
-
 }

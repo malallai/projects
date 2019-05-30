@@ -3,14 +3,14 @@
 
 class NightsWatch {
 
-    private $motnw;
+    private $_motnw;
 
     public function recruit($who) {
-        $this->motnw[] = $who;
+        $this->_motnw[] = $who;
     }
 
     public function fight() {
-        foreach ($this->motnw as $fighter) {
+        foreach ($this->_motnw as $fighter) {
             if ($fighter instanceof IFighter) {
                 $fighter->fight();
             }
