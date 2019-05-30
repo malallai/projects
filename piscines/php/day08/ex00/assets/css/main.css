@@ -107,7 +107,7 @@ input {
 
 
 .new-game-row, .top-nav-row, .scores-row {
-    width: 20rem;
+    width: 25rem;
     float: none;
     margin-left: auto;
     margin-right: auto;
@@ -127,17 +127,7 @@ input {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
-.new-game {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    flex-direction: column !important;
-    max-width: 30rem;
-}
-
-.scores {
+.new-game, .scores {
     display: flex;
     margin-left: auto;
     margin-right: auto;
