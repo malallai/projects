@@ -23,11 +23,11 @@
             </div>
         </div>
 
-        <div id="new-game-form" class="new-game-row">
+        <div id="new-game-row" class="new-game-row">
             <div class="new-game-content">
                 <p>New Game</p>
                 <div class="new-game">
-                    <form>
+                    <form id="play-form">
                         <input type="text" id="player1" class="form-control" placeholder="Player 1">
                         <input type="text" id="player2" class="form-control" placeholder="Player 2">
                         <input class="btn btn-white" name="play" value="Play" type="submit">
