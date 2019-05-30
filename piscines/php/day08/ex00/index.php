@@ -8,5 +8,5 @@ if (isset($_SESSION['game'])) {
     $game = unserialize($_SESSION['game']);
 } else {
     $game = new Game();
-    require_once 'newgame.php';
+    require_once 'main.php';
 }
