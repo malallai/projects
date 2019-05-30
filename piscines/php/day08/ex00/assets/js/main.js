@@ -22,6 +22,7 @@ $(function () {
         $('.container').html(null);
         var p1 = $("#player1").val();
         var p2 = $("#player2").val();
+        console.log("test1");
         $.ajax({
             url: './init_game.php',
             type: 'POST',
@@ -30,6 +31,7 @@ $(function () {
                 player2: p2
             }
         }).done(function (data) {
+            console.log("test 2");
             refresh_game();
         });
     });
