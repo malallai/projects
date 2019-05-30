@@ -20,5 +20,17 @@ $(function () {
     form.submit(function (event) {
         event.preventDefault();
         $('.container').html(null);
+        var p1 = $("#player1").val();
+        var p2 = $("#player2").val();
+        $.ajax({
+            url: './init_game.php',
+            type: 'POST',
+            data: {
+                player1: p1,
+                player2: p2
+            }
+        }).done(function (data) {
+            location.reload();
+        });
     });
 })
