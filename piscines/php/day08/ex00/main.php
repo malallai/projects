@@ -20,8 +20,8 @@
         </div>
     </div>
 
-    <div class="login-row">
-        <div class="login-content">
+    <div class="new-game-row">
+        <div class="new-game-content">
             <p>New Game</p>
             <div class="new-game">
                 <form>

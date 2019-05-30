@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/css/newgame.css" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/newgame.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/main.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +18,14 @@
     <favorites_list name="php" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7962806">
+    <splitter split-orientation="horizontal" split-proportion="0.45139477">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day08/ex00/main.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -39,8 +37,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="1174">
+                  <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -94,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day07/ex01/Greyjoy.class.php" />
         <option value="$PROJECT_DIR$/day07/ex02/test.php" />
         <option value="$PROJECT_DIR$/day07/ex03/test2.php" />
         <option value="$PROJECT_DIR$/day07/ex03/test.php" />
@@ -145,6 +142,7 @@
         <option value="$PROJECT_DIR$/day08/ex00/newgame.php" />
         <option value="$PROJECT_DIR$/day08/ex00/index.php" />
         <option value="$PROJECT_DIR$/day08/ex00/main.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/assets/css/main.css" />
       </list>
     </option>
   </component>
@@ -244,17 +242,6 @@
               <item name="ex00" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day09" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="day09" type="462c0819:PsiDirectoryNode" />
-              <item name="ex03" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -326,12 +313,12 @@
       <workItem from="1559066900240" duration="11066000" />
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
-      <workItem from="1559232911640" duration="2096000" />
+      <workItem from="1559232911640" duration="2201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118585000" />
+    <option name="totallyTimeSpent" value="118690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +358,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day06/ex00/main_00.php" />
     <entry file="file://$PROJECT_DIR$/day06/ex00/Color.doc.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -655,17 +641,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/main.css">
+    <entry file="file://$PROJECT_DIR$/rush00/assets/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="647">
+          <caret line="70" column="21" selection-end-line="116" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="345">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
         </state>
       </provider>
     </entry>
