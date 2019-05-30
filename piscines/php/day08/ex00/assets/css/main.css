@@ -84,11 +84,11 @@ main {
 }
 
 .top-nav a:hover {
-    background-color: rgba(40, 40, 40, .5);
+    background-color: rgba(40, 40, 40);
 }
 
 .top-nav a.active:hover {
-    background-color: rgba(55, 55, 55, .5);
+    background-color: rgba(55, 55, 55);
 }
 
 .top-nav-content {
