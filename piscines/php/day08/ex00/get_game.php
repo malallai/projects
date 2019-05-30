@@ -12,3 +12,4 @@ if ($_SESSION['game'] && $_POST['val'] === "get") {
 
     echo json_encode($array);
 }
+echo json_encode(array("nop"));
