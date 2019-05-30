@@ -11,5 +11,6 @@ if ($_SESSION['game']) {
     $array['players'] = $game->getPlayers();
 
     echo json_encode($array);
+    return;
 }
 echo json_encode(array("nop"));
