@@ -28,6 +28,10 @@ main {
 
 .container {
     margin: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0 solid transparent;
 }
 
 .new-game-row, .top-nav-row {
