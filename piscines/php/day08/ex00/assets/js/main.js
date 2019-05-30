@@ -19,6 +19,8 @@ $(function () {
 
     form.submit(function (event) {
         event.preventDefault();
+        console.log(event);
+        /*
         var p1 = $("#player1").val();
         var p2 = $("#player2").val();
         $('.container').html(null);
@@ -35,7 +37,7 @@ $(function () {
         }).done(function (data) {
             console.log("test 2");
             refresh_game();
-        });
+        });*/
     });
 
     function refresh_game() {
