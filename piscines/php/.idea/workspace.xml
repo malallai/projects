@@ -36,8 +36,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="795">
+                  <caret line="53" selection-start-line="53" selection-end-line="53" />
                 </state>
               </provider>
             </entry>
@@ -312,12 +312,12 @@
       <workItem from="1559066900240" duration="11066000" />
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
-      <workItem from="1559232911640" duration="2854000" />
+      <workItem from="1559232911640" duration="3013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119343000" />
+    <option name="totallyTimeSpent" value="119502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,11 +329,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1530" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1698" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.13440861" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.12077295" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -656,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="795">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
