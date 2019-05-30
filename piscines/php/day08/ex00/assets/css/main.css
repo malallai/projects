@@ -19,6 +19,14 @@ html, body {
     z-index: -99;
 }
 
+.main {
+    display: flex;
+}
+
+.container {
+    margin: auto;
+}
+
 .new-game-row, .top-nav-row {
     width: 25vw;
     float: none;
