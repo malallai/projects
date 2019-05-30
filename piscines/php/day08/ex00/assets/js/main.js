@@ -30,7 +30,20 @@ $(function () {
                 player2: p2
             }
         }).done(function (data) {
-            location.reload();
+            refresh_game();
         });
     });
+
+    function refresh_game() {
+        $.ajax({
+            url: './get_game.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                val: "get"
+            }
+        }).done(function (data) {
+            console.log(data);
+        });
+    }
 })
