@@ -85,6 +85,7 @@ main {
 
 .top-nav a:not(.active):hover {
     background-color: rgba(55, 55, 55);
+    cursor: pointer;
 }
 
 .top-nav-content {
