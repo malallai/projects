@@ -83,12 +83,8 @@ main {
     background-color: #3b3b3b;
 }
 
-.top-nav a.active:hover {
-    background-color: transparent !important;
-}
-
 .top-nav a:hover {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .top-nav-content {
