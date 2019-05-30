@@ -2,7 +2,6 @@
 
 session_start();
 
-require_once 'classes/Game.class.php';
 include_once 'assets/templates/header.php';
 
 if (isset($_SESSION['game'])) {
