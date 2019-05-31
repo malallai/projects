@@ -45,18 +45,15 @@ $(function () {
                 url: './shoot.php',
                 dataType: 'json',
                 type: 'POST'
-            }).done(function (data) {
-                updatePlayer();
-            });
+            }).done(function (data) {});
         } else if ($(this).hasClass('skip')) {
             $.ajax({
                 url: './skip.php',
                 dataType: 'json',
                 type: 'POST'
-            }).done(function (data) {
-                updatePlayer();
-            });
+            }).done(function (data) {});
         }
+        updatePlayer();
     });
 
     function clear() {
@@ -129,7 +126,10 @@ $(function () {
                 val: "get"
             }
         }).done(function (data) {
-            console.log(data);
+            $('.player-name').val(data[0]['player']['name']);
+            $('.health').val("Health : " + data[0]['player']['health']);
+            $('.shield').val("Shield : " + data[0]['player']['shield']);
+            $('.move-point').val("MP : " + data[0]['player']['mp']);
         });
     }
 
