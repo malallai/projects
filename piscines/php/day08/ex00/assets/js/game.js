@@ -9,6 +9,7 @@ $(function () {
     }).done(function (data) {
         for (var n = 0; n < data.length; n++) {
             draw_ship(data[n]['ship']);
+            console.log(data);
         }
     });
 

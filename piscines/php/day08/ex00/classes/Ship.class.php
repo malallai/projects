@@ -3,12 +3,14 @@
 require_once 'SpaceEntity.class.php';
 require_once 'Map.class.php';
 require_once 'Player.class.php';
+require_once 'Color.class.php';
 class Ship extends SpaceEntity {
 
     public $owner;
     public $shape;
     public $sizeX = 2;
     public $sizeY = 2;
+    public $color;
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
@@ -17,6 +19,22 @@ class Ship extends SpaceEntity {
                 $this->shape[] = array("x" => $shapeX + $x, "y" => $shapeY + $y);
             }
         }
+    }
+
+    /**
+     * @return Color
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * @param Color $color
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
     }
 
     /**
