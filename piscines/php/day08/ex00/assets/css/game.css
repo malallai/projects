@@ -37,6 +37,7 @@
 
 .movements i:hover {
     cursor: pointer;
+    color: lawngreen;
 }
 
 .move-point {
