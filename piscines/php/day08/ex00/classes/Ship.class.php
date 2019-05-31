@@ -22,6 +22,7 @@ class Ship extends SpaceEntity {
         for ($shapeX = 0; $shapeX < $this->sizeX; $shapeX++) {
             for ($shapeY = 0; $shapeY < $this->sizeY; $shapeY++) {
                 $this->shape[] = array("x" => $shapeX + $this->getX(), "y" => $shapeY + $this->getY());
+                $this->getMap()->grid[$shapeY + $this->getY()][$shapeX + $this->getX()] = $this;
             }
         }
     }
