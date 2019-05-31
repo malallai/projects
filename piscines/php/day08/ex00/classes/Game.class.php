@@ -33,6 +33,14 @@ class Game {
         $this->_players = array($p1, $p2);
     }
 
+    public function getNextPlayer() {
+        foreach ($this->getPlayers() as $player) {
+            if ($this->getCurrentPlayer() !== $player)
+                return $player;
+        }
+        return $this->getCurrentPlayer();
+    }
+
     /**
      * @return array(Player)
      */

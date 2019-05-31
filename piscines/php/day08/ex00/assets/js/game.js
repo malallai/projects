@@ -48,6 +48,14 @@ $(function () {
             }).done(function (data) {
                 updatePlayer();
             });
+        } else if ($(this).hasClass('skip')) {
+            $.ajax({
+                url: './skip.php',
+                dataType: 'json',
+                type: 'POST'
+            }).done(function (data) {
+                updatePlayer();
+            });
         }
     });
 
@@ -114,7 +122,7 @@ $(function () {
 
     function updatePlayer() {
         $.ajax({
-            url: './get_players.php',
+            url: './update_player.php',
             dataType: 'json',
             type: 'POST',
             data: {
