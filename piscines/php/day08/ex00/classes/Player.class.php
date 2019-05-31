@@ -70,4 +70,8 @@ class Player extends SpaceEntity {
         $this->setMp($this->getMp() + $count);
     }
 
+    public function getInfos() {
+        return array("name"=>$this->getName(), "health"=>$this->getShip()->getHealth(), "shield"=>$this->getShip()->getShield(), "mp"=>$this->getMp());
+    }
+
 }
