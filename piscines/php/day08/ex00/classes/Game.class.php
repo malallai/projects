@@ -21,10 +21,10 @@ class Game {
         $p2 =  new Player($this->_map, 0, 0);
         $this->_map->addPlayer($p1);
         $p1->setName($players[0]);
-        $p1->setShip(new Ship($this->_map, 10, 10));
+        $p1->setShip(new Ship($this->_map, 5, 2));
         $this->_map->addPlayer($p2);
         $p2->setName($players[1]);
-        $p2->setShip(new Ship($this->_map, 15, 15));
+        $p2->setShip(new Ship($this->_map, 5, 38));
         $this->_players = array($p1, $p2);
     }
 
