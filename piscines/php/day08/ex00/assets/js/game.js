@@ -42,7 +42,7 @@ $(function () {
             });
         } else if ($(this).hasClass('shoot')) {
             $.ajax({
-                url: './move.php',
+                url: './shoot.php',
                 dataType: 'json',
                 type: 'POST'
             }).done(function (data) {
