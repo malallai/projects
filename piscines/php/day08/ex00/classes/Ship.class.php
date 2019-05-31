@@ -3,7 +3,6 @@
 require_once 'SpaceEntity.class.php';
 require_once 'Map.class.php';
 require_once 'Player.class.php';
-require_once 'Color.class.php';
 class Ship extends SpaceEntity {
 
     public $owner;
@@ -22,7 +21,7 @@ class Ship extends SpaceEntity {
     }
 
     /**
-     * @return Color
+     * @return mixed
      */
     public function getColor()
     {
@@ -30,7 +29,7 @@ class Ship extends SpaceEntity {
     }
 
     /**
-     * @param Color $color
+     * @param mixed $color
      */
     public function setColor($color)
     {
