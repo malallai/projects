@@ -1,0 +1,31 @@
+
+<- Map ----------------------------------------------------------------------
+Game class containing all infos
+
+args:
+    => sizeX : x size of the map
+    => sizeY : y size of the map
+
+Methods:
+
+init_grid:
+init the grid, and place asteroid randomly
+
+addShip:
+add ship to the grid
+
+draw:
+draw the map into the webpage
+
+updateLocation:
+check collision for ship, and update his location if no collision detected
+
+checkCollision:
+check if ship is colliding another ship, or asteroid
+
+getGrid:
+return grid
+
+getAsteroids:
+return asteroids
+---------------------------------------------------------------------- Map ->

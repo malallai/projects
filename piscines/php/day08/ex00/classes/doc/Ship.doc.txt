@@ -1,0 +1,44 @@
+
+<- Ship ----------------------------------------------------------------------
+Ship entity
+
+Args :
+    => Map $map : The map of the game
+    => $x : $x position of the asteroid
+    => $y : $y position of the asteroid
+
+Methods:
+
+getColor:
+return color of the ship
+
+setColor:
+define the color of the ship
+
+getPlayer:
+return the owner of the ship
+
+setPLayer:
+define the owner of the ship
+
+getShape:
+get a table containing position of the asteroid, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}
+
+getHealth:
+return the health of the ship
+
+setHealth:
+set health
+
+getShield:
+return the shield of the ship
+
+setShield:
+set shield
+
+shoot:
+try shooting and remove MP
+
+move:
+try move the ship
+---------------------------------------------------------------------- Ship ->

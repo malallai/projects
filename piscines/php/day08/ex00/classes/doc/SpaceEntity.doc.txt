@@ -1,0 +1,27 @@
+
+<- SpaceEntity ----------------------------------------------------------------------
+SpaceEntity entity
+
+Args :
+    => Map $map : The map of the game
+    => $x : $x position of the asteroid
+    => $y : $y position of the asteroid
+
+Methods:
+
+getMap:
+getMap of the game
+
+getX:
+return x pos on the map
+
+getY:
+return y pos on the map
+
+setX:
+set x pos
+
+setY:
+set y pos
+
+---------------------------------------------------------------------- SpaceEntity ->
