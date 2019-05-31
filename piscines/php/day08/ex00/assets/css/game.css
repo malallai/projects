@@ -25,13 +25,13 @@
 
 .movements {
     display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    flex: 1;
 }
 
 .move-point {
     color: lawngreen;
     font-size: 1.5rem;
-}
-
-.move-up {
-
 }
