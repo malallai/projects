@@ -63,3 +63,15 @@ table td {
     width: 20px;
     height: 20px;
 }
+
+.blue {
+    color: dodgerblue;
+}
+
+.red {
+    color: red;
+}
+
+.asteroid {
+    color: rgb(255, 100, 0);
+}

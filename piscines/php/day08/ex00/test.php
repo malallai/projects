@@ -26,6 +26,20 @@ include_once 'assets/templates/header.php';
     <div class="map">
         <table>
             <tr>
+                <td class="ship blue"></td>
+                <td class="ship blue"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="ship blue"></td>
+                <td class="ship blue"></td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -36,8 +50,6 @@ include_once 'assets/templates/header.php';
                 <td></td>
                 <td></td>
                 <td></td>
-            </tr>
-            <tr>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -48,6 +60,50 @@ include_once 'assets/templates/header.php';
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="ship red"></td>
+                <td class="ship red"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="ship red"></td>
+                <td class="ship red"></td>
             </tr>
         </table>
     </div>
