@@ -2,6 +2,7 @@
 session_start();
 
 require_once 'classes/Game.class.php';
+require_once 'classes/Map.class.php';
 
 $data = array();
 
