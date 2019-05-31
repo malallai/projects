@@ -7,8 +7,8 @@ class Ship extends SpaceEntity {
 
     public $owner;
     public $shape;
-    public $sizeX = 4;
-    public $sizeY = 4;
+    public $sizeX = 2;
+    public $sizeY = 2;
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
