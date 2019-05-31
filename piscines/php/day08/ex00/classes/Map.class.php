@@ -10,7 +10,6 @@ class Map {
     private $_asteroid_count = 4;
     private $_asteroids;
 
-
     public function __construct($sizeX, $sizeY) {
         $this->_sizeX = $sizeX;
         $this->_sizeY = $sizeY;
@@ -56,14 +55,14 @@ class Map {
         return true;
     }
 
-    public function checkCollision($x, $y) {
-        if ($this->grid[$y][$x] instanceof Asteroid || $this->grid[$y][$x] instanceof Ship)
+    public function checkCollision(Ship $ship, $x, $y) {
+        if ($this->grid[$y][$x] instanceof Asteroid || ($this->grid[$y][$x] instanceof Ship && $this->grid[$y][$x] !== $ship))
             return false;
-        if ($this->grid[$y][$x + 1] instanceof Asteroid || $this->grid[$y][$x + 1] instanceof Ship)
+        if ($this->grid[$y][$x + 1] instanceof Asteroid || ($this->grid[$y][$x + 1] instanceof Ship && $this->grid[$y][$x + 1] !== $ship))
             return false;
-        if ($this->grid[$y + 1][$x] instanceof Asteroid || $this->grid[$y + 1][$x] instanceof Ship)
+        if ($this->grid[$y + 1][$x] instanceof Asteroid || ($this->grid[$y + 1][$x] instanceof Ship && $this->grid[$y + 1][$x] !== $ship))
             return false;
-        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid || $this->grid[$y + 1][$x + 1] instanceof Ship)
+        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid || ($this->grid[$y + 1][$x + 1] instanceof Ship && $this->grid[$y + 1][$x + 1] !== $ship))
             return false;
         if ($x < 0 || $x + 1 > $this->_sizeX)
             return false;
