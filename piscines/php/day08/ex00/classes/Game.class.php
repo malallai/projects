@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Map.class.php';
+require_once 'Player.class.php';
 class Game {
 
     private $_players;
