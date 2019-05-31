@@ -17,9 +17,9 @@ $(function () {
                 }
             }).done(function (data) {
                 console.log(data);
-                    clear();
-                    getPlayers();
-                    getAsteroids();
+                clear();
+                getPlayers();
+                getAsteroids();
             });
         }
     });
