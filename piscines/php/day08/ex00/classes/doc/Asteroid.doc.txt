@@ -1,0 +1,14 @@
+
+<- Asteroid ----------------------------------------------------------------------
+Asteroid entity
+
+Args :
+    => Map $map : The map of the game
+    => $x : $x position of the asteroid
+    => $y : $y position of the asteroid
+
+Methods:
+
+getShape() :
+get a table containing position of the asteroid, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}
+---------------------------------------------------------------------- Asteroid ->

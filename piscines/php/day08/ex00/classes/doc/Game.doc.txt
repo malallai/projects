@@ -1,0 +1,24 @@
+
+<- Game ----------------------------------------------------------------------
+Game class containing all infos
+
+Methods:
+
+setPlayers:
+define players object
+
+getNextPlayer:
+getNextPlayer instance
+
+getPlayers:
+get all players
+
+getMap:
+get map for the game
+
+getCurrentPlayer:
+return player currently playing
+
+setCurrentPlayer:
+change current player
+---------------------------------------------------------------------- Game ->

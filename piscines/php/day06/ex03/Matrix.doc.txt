@@ -1,0 +1,28 @@
+
+<- Matrix ----------------------------------------------------------------------
+The Matrix class handles a Matrix.
+
+She wait a array with the key:
+	=> 'preset' : IDENTITY, SCALE, RX, RY, RZ, TRANSLATION or PROJECTION
+If 'preset' is:
+    => SCALE:
+        => 'scale': scale factor
+    => RX, RY or RZ:
+        => 'angle': rotation angle in radian
+    => TRANSLATION:
+        => 'vtc': translation vector
+    => PROJECTION:
+        => 'fov': Field of view in degrees
+        => 'ratio': ratio of the projected image
+        => 'near': clipping plane close to the projection
+        => 'far': clipping plane far from the projection
+
+The class provides the following methods :
+
+Matrix mult( Matrix $rhs );
+return a new matrix, result of the product of two matrix
+
+Vertex transformVertex( Vertex $vtx );
+return a new vertex result of the transformation of the vertex by the matrix
+
+---------------------------------------------------------------------- Matrix ->

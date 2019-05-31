@@ -1,0 +1,40 @@
+
+<- Vector ----------------------------------------------------------------------
+The Vector class handles a Vector.
+
+She wait a array with the key:
+	=> 'x' : X coordinates, obligatory.
+	=> 'y' : Y coordinates, obligatory
+	=> 'z' : X coordinates, obligatory
+	=> ’w’ :  optional, take 0.0 by default.
+
+The class provides the following methods :
+
+float   magnitude();
+Return the length (or norm) of the Vector
+
+Vector  normalize();
+Return the normalized Vector
+
+Vector  add( Vector $rhs );
+Return the sum of two Vector
+
+Vector  sub( Vector $rhs );
+Return the sub of two Vector
+
+Vector  opposite();
+Returnt the opposite Vector
+
+Vector scalarProduct( $k );
+Return the product of the Vector using a scalar
+
+float  dotProduct( Vector $rhs );
+Return the scalar product of two Vector
+
+float  cos( Vector $rhs );
+Return the cosine of the angle between two vectors
+
+Vector crossProduct( Vector $rhs );
+Return the cross product of two Vector (landmark right hand)
+
+---------------------------------------------------------------------- Vector ->

@@ -1,0 +1,10 @@
+
+<- Entity ----------------------------------------------------------------------
+Entity interface
+
+Args :
+    => Map $map : The map of the game
+    => $x : $x position of the asteroid
+    => $y : $y position of the asteroid
+
+---------------------------------------------------------------------- Entity ->
