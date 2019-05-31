@@ -88,6 +88,7 @@ $(function () {
         for (var n = 0; n < data.length; n++) {
             var x = data[n]['x'];
             var y = data[n]['y'];
+            ship[n] = {};
             ships[n]['x'] = x;
             ships[n]['y'] = y;
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
