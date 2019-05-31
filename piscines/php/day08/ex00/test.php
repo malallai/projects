@@ -19,6 +19,7 @@ include_once 'assets/templates/header.php';
             </div>
         </div>
     </div>
+    <hr>
 
 <?php
 include_once 'assets/templates/footer.php';

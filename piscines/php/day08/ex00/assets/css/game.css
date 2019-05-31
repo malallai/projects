@@ -44,3 +44,7 @@
     color: lawngreen;
     font-size: 1.5rem;
 }
+
+hr {
+    width: 100%;
+}
