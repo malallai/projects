@@ -15,7 +15,7 @@ $(function () {
     function draw_ship(data) {
         for (var n = 0; n < data.length; n++) {
             var test = $('td#y' + data[n]['y'] + ' tr#x' + data[n]['x']);
-            console.log(test);
+            test.addClass('blue');
         }
     }
 
