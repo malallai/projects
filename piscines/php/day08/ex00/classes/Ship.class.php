@@ -13,6 +13,7 @@ class Ship extends SpaceEntity {
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
+        $this->updateShape();
     }
 
     public function updateShape() {
