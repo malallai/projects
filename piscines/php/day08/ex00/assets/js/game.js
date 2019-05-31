@@ -27,7 +27,6 @@ $(function () {
         console.log("click " + $(this));
         if ($(this).hasClass('move')) {
             var direction = $(this).attr('id');
-            console.log(direction);
             $.ajax({
                 url: './move.php',
                 dataType: 'json',
