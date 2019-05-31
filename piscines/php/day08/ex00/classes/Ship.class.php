@@ -11,6 +11,8 @@ class Ship extends SpaceEntity {
     public $sizeX = 2;
     public $sizeY = 2;
     public $color;
+    public $health = 10;
+    public $shield = 10;
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
@@ -67,6 +69,54 @@ class Ship extends SpaceEntity {
         return $this->shape;
     }
 
+    /**
+     * @return int
+     */
+    public function getHealth()
+    {
+        return $this->health;
+    }
+
+    /**
+     * @param int $health
+     */
+    public function setHealth($health)
+    {
+        $this->health = $health;
+    }
+
+    /**
+     * @return int
+     */
+    public function getShield()
+    {
+        return $this->shield;
+    }
+
+    /**
+     * @param int $shield
+     */
+    public function setShield($shield)
+    {
+        $this->shield = $shield;
+    }
+
+    public function shoot() {
+        $this->getPlayer()->removeMP(5);
+        for ($i = 2; $i < 10; $i++) {
+            if ($this->getMap()->getGrid()[$this->getY()][$this->getX() + $i] instanceof Ship) {
+                $ship = $this->getMap()->getGrid()[$this->getY()][$this->getX() + $i];
+                if ($ship->getShield() != 0) {
+                    $ship->setShield($ship->getShield() - 5);
+                } else {
+                    $ship->setHealth($ship->getHealth() - 5);
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function move($direction) {
         $old_x = $this->getX();
         $old_y = $this->getY();
@@ -95,6 +145,7 @@ class Ship extends SpaceEntity {
             $this->setX($x);
             $this->setY($y);
             $this->updateShape();
+            $this->getPlayer()->removeMP(1);
             return true;
         }
         return false;
