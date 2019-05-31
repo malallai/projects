@@ -26,10 +26,12 @@ class Game {
         $p1->setName($players[0]);
         $p1->setShip(new Ship($this->_map, 2, 5));
         $p1->getShip()->setColor('red');
+        $this->getMap()->addShip($p1->getShip());
 
         $p2->setName($players[1]);
         $p2->setShip(new Ship($this->_map, 36, 5));
         $p2->getShip()->setColor('blue');
+        $this->getMap()->addShip($p2->getShip());
         $this->_players = array($p1, $p2);
     }
 
