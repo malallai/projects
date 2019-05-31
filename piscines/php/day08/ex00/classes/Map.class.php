@@ -6,6 +6,9 @@ class Map {
     private $_sizeX = 40;
     private $_sizeY = 20;
     private $_grid;
+    private $_asteroid_count = 2;
+    private $_asteroids;
+
 
     public function __construct($sizeX, $sizeY) {
         $this->_sizeX = $sizeX;
@@ -17,6 +20,12 @@ class Map {
             for ($x = 0; $x < $this->_sizeX; $x++) {
                 $this->_grid[$y][$x] = new Void($this, $x, $y);
             }
+        }
+        for ($i = 0; $i < $this->_asteroid_count; $i++) {
+            $x = rand(0, $this->_sizeX);
+            $y = rand(0, $this->_sizeY);
+            $this->_grid[$y][$x] = $tmp = new Asteroid($this, $x, $y);
+            $this->_asteroids[] = $tmp;
         }
     }
 
@@ -38,6 +47,14 @@ class Map {
             echo "</tr>";
         }
         echo "</table>";
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAsteroids()
+    {
+        return $this->_asteroids;
     }
 
 }
