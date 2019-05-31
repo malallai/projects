@@ -11,11 +11,11 @@ if (isset($_POST['direction'])) {
         $game = unserialize($_SESSION['data']);
 
         $player = $game->getCurrentPlayer();
-        $return = $player->getShip()->move($_POST['direction']);
-
-        $_SESSION['data'] = serialize($game);
-
-        echo json_encode($return);
+        if ($player->getMP() - 1 >= 0) {
+            $return = $player->getShip()->move($_POST['direction']);
+            $_SESSION['data'] = serialize($game);
+            echo json_encode($return);
+        } else echo json_encode(false);
         return;
     }
 }
