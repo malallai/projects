@@ -10,10 +10,13 @@ require_once 'classes/Ship.class.php';
         $game = unserialize($_SESSION['data']);
 
         $player = $game->getCurrentPlayer();
-        $return = $player->getShip()->shoot();
 
-        $_SESSION['data'] = serialize($game);
+        if ($player->getMP() - 5 >= 0) {
+            $return = $player->getShip()->shoot();
 
-        echo json_encode($return);
+            $_SESSION['data'] = serialize($game);
+
+            echo json_encode($return);
+        } echo json_encode(false);
         return;
     }
