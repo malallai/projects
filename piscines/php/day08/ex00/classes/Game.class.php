@@ -21,6 +21,8 @@ class Game {
         $p1 =  new Player($this->_map, 0, 0);
         $p2 =  new Player($this->_map, 0, 0);
 
+        $this->setCurrentPlayer($p1);
+
         $p1->setName($players[0]);
         $p1->setShip(new Ship($this->_map, 2, 5));
         $p1->getShip()->setColor('red');
