@@ -15,7 +15,7 @@ class Asteroid extends SpaceEntity {
         for ($shapeX = 0; $shapeX < $this->sizeX; $shapeX++) {
             for ($shapeY = 0; $shapeY < $this->sizeY; $shapeY++) {
                 $this->shape[] = array("x" => $shapeX + $x, "y" => $shapeY + $y);
-                $this->getMap()->getGrid()[$shapeY + $y][$shapeX + $x] = $this;
+                $this->getMap()->grid[$shapeY + $y][$shapeX + $x] = $this;
             }
         }
     }
