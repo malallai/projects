@@ -46,8 +46,8 @@ class Map {
         echo "</table>";
     }
 
-    public function updateLocation($old_x, $old_y, $x, $y) {
-        if (!$this->checkCollision($x, $y)) {
+    public function updateLocation(Ship $ship, $old_x, $old_y, $x, $y) {
+        if (!$this->checkCollision($ship, $x, $y)) {
             return false;
         }
         $this->grid[$old_y][$old_x] = new Void($this, $old_x, $old_y);
@@ -55,14 +55,14 @@ class Map {
         return true;
     }
 
-    public function checkCollision($x, $y) {
-        if ($this->grid[$y][$x] instanceof Asteroid)
+    public function checkCollision(Ship $ship, $x, $y) {
+        if ($this->grid[$y][$x] instanceof Asteroid || ($this->grid[$y][$x] instanceof Ship && $this->grid[$y][$x] !== $ship))
             return false;
-        if ($this->grid[$y][$x + 1] instanceof Asteroid)
+        if ($this->grid[$y][$x + 1] instanceof Asteroid || ($this->grid[$y][$x + 1] instanceof Ship && $this->grid[$y][$x + 1] !== $ship))
             return false;
-        if ($this->grid[$y + 1][$x] instanceof Asteroid)
+        if ($this->grid[$y + 1][$x] instanceof Asteroid || ($this->grid[$y + 1][$x] instanceof Ship && $this->grid[$y + 1][$x] !== $ship))
             return false;
-        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid)
+        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid || ($this->grid[$y + 1][$x + 1] instanceof Ship && $this->grid[$y + 1][$x + 1] !== $ship))
             return false;
         if ($x < 0 || $x + 1 > $this->_sizeX)
             return false;
