@@ -3,8 +3,12 @@ session_start();
 
 require_once 'classes/Game.class.php';
 
-$game = new Game();
+$data = array();
 
+$game = new Game();
 $game->setPlayers(array($_POST['player1'], $_POST['player2']));
 
-$_SESSION['game'] = serialize($game);
+$map = new Map();
+
+$data['game'] = $game;
+$data['map'] = $map;

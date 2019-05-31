@@ -4,11 +4,10 @@ session_start();
 
 include_once 'assets/templates/header.php';
 
-if (isset($_SESSION['game'])) {
-    $game = unserialize($_SESSION['game']);
-    print ($game);
+if (isset($_SESSION['data'])) {
+    $data = unserialize($_SESSION['data']);
     include 'game.php';
-    $game->getMap()->draw();
+    $data['map']->draw();
 } else include 'main.php';
 
 include_once 'assets/templates/footer.php';
