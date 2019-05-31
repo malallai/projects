@@ -3,8 +3,8 @@ $(function () {
     getPlayers();
     getAsteroids();
 
-    $().keydown(function() {
-        alert( "Handler for .keydown() called." );
+    document.addEventListener('keydown', function(e) {
+        console.log(e);
     });
 
     var ships = [];
