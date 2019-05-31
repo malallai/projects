@@ -33,7 +33,7 @@ $(function () {
 
     function clearShips() {
         for (var n = 0; n < 2; n++) {
-            for (var m = 0; m < ships[n].length; n++) {
+            for (var m = 0; m < ships[n].length; m++) {
                 var x = ships[n][m]['x'];
                 var y = ships[n][m]['y'];
                 $('tr[id=' + y + '] td[id=' + x + ']').remove('red').remove('blue');
