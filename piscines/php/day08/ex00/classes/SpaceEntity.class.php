@@ -8,6 +8,13 @@ class SpaceEntity implements Entity {
     private $_x;
     private $_y;
 
+    public static function doc() {
+        if (file_exists("doc/SpaceEntity.doc.txt")) {
+            return file_get_contents("doc/SpaceEntity.doc.txt");
+        }
+        return "";
+    }
+
     public function __construct(Map $map, $x, $y) {
         $this->_map = $map;
         $this->_x = $x;

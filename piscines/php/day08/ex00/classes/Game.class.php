@@ -8,6 +8,13 @@ class Game {
     private $_map;
     public  $current_player;
 
+    public static function doc() {
+        if (file_exists("doc/Game.doc.txt")) {
+            return file_get_contents("doc/Game.doc.txt");
+        }
+        return "";
+    }
+
     public function __construct()
     {
         $this->_map = new Map(40, 20);

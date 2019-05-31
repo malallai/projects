@@ -14,6 +14,13 @@ class Ship extends SpaceEntity {
     public $health = 10;
     public $shield = 10;
 
+    public static function doc() {
+        if (file_exists("doc/Ship.doc.txt")) {
+            return file_get_contents("doc/Ship.doc.txt");
+        }
+        return "";
+    }
+
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
         $this->updateShape();

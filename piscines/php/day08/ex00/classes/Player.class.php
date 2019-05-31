@@ -9,6 +9,13 @@ class Player extends SpaceEntity {
     public $ship;
     public $mp = 7;
 
+    public static function doc() {
+        if (file_exists("doc/Player.doc.txt")) {
+            return file_get_contents("doc/Player.doc.txt");
+        }
+        return "";
+    }
+
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
     }
