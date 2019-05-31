@@ -35,6 +35,7 @@ $(function () {
         for (var n = 0; n < 2; n++) {
             var x = ships[n]['x'];
             var y = ships[n]['y'];
+            console.log(ships[n]);
             $('tr[id=' + y + '] td[id=' + x + ']').remove('red').remove('blue');
         }
     }
