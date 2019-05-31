@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -359,12 +359,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="3767000" />
+      <workItem from="1559298616109" duration="3806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127611000" />
+    <option name="totallyTimeSpent" value="127650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -738,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
