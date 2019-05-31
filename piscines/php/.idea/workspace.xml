@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/day08/ex00/assets/css/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/css/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="315">
+              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -30,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="720">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -332,12 +333,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="519000" />
+      <workItem from="1559298616109" duration="567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124363000" />
+    <option name="totallyTimeSpent" value="124411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -694,15 +695,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="315">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="720">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
         </state>
       </provider>
     </entry>
