@@ -90,15 +90,11 @@ class Ship extends SpaceEntity {
                 break;
             default : break;
         }
-
-        if ($this->getMap()->updateLocation($this, $old_x, $old_y, $x, $y)) {
-            $this->setX($x);
-            $this->setY($y);
-            $this->updateShape();
-            return true;
-        } else {
-            return false;
-        }
+        $this->setX($x);
+        $this->setY($y);
+        $this->updateShape();
+        $this->getMap()->updateLocation($this, $old_x, $old_y, $x, $y);
+        return $this->getMap()->checkCollision($this);
     }
 
 }
