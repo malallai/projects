@@ -13,6 +13,7 @@ class Map {
     public function __construct($sizeX, $sizeY) {
         $this->_sizeX = $sizeX;
         $this->_sizeY = $sizeY;
+        $this->init_grid();
     }
 
     public function init_grid() {
