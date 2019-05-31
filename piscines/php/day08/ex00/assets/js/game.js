@@ -8,17 +8,15 @@ $(function () {
         }
     }).done(function (data) {
         for (var n = 0; n < data.length; n++) {
-            draw_ship(data[n]['ship']);
-            console.log(data);
+            draw_ship(data[n]['ship'], data[n]['color']);
         }
     });
 
-    function draw_ship(data) {
+    function draw_ship(data, color) {
         for (var n = 0; n < data.length; n++) {
-            console.log(data[n]);
             var x = data[n]['x'];
             var y = data[n]['y'];
-            $('tr[id=' + y + '] td[id=' + x + ']').addClass('blue');
+            $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
     }
 
