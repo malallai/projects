@@ -2,20 +2,6 @@ $(function () {
     var moves = $(".move-key");
     getPlayers();
     getAsteroids();
-    start();
-    
-    function start() {
-        $.ajax({
-            url: './get_grid.php',
-            dataType: 'json',
-            type: 'POST',
-            data: {
-                val: "get"
-            }
-        }).done(function (data) {
-            console.log(data);
-        });
-    }
 
     moves.children().on("click", function () {
         console.log("click " + $(this));
@@ -38,6 +24,16 @@ $(function () {
                 }
             });
         }
+        $.ajax({
+            url: './get_grid.php',
+            dataType: 'json',
+            type: 'POST',
+            data: {
+                val: "get"
+            }
+        }).done(function (data) {
+            console.log(data);
+        });
     });
 
     function clear() {
