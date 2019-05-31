@@ -5,6 +5,7 @@ $(function () {
     updatePlayer();
 
     document.addEventListener('keydown', function(e) {
+        console.log(e);
         switch (e.keyCode) {
             case 38:
                 $('i[id=0]').click();
