@@ -54,10 +54,10 @@ class Map {
     }
 
     public function checkCollision(Ship $ship) {
-        echo $this->_grid[$ship->getY()][$ship->getX()].PHP_EOL;
-        echo $this->_grid[$ship->getY()][$ship->getX() + 1].PHP_EOL;
-        echo $this->_grid[$ship->getY() + 1][$ship->getX()].PHP_EOL;
-        echo $this->_grid[$ship->getY() + 1][$ship->getX() + 1].PHP_EOL;
+        echo $this->_grid[$ship->getY()][$ship->getX()] instanceof Void.PHP_EOL;
+        echo $this->_grid[$ship->getY()][$ship->getX() + 1] instanceof Void.PHP_EOL;
+        echo $this->_grid[$ship->getY() + 1][$ship->getX()] instanceof Void.PHP_EOL;
+        echo $this->_grid[$ship->getY() + 1][$ship->getX() + 1] instanceof Void.PHP_EOL;
         if (!($this->_grid[$ship->getY()][$ship->getX()] instanceof Void))
             return false;
         if (!($this->_grid[$ship->getY()][$ship->getX() + 1] instanceof Void))
