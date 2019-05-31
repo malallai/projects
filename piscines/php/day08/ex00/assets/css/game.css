@@ -51,3 +51,15 @@ hr {
     height: 2px;
     background-color: #fff;
 }
+
+table {
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+table td {
+    overflow: hidden;
+    border: 1px solid grey;
+    width: 20px;
+    height: 20px;
+}
