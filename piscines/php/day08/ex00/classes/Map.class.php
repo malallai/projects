@@ -7,7 +7,7 @@ class Map {
     private $_sizeX = 40;
     private $_sizeY = 20;
     private $_grid;
-    private $_asteroid_count = 2;
+    private $_asteroid_count = 4;
     private $_asteroids;
 
 
