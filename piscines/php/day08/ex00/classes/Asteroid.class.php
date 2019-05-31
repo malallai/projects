@@ -7,6 +7,14 @@ class Asteroid extends SpaceEntity {
     public $sizeX;
     public $sizeY;
 
+    public static function doc() {
+        if (file_exists("doc/Asteroid.doc.txt")) {
+            return file_get_contents("doc/Asteroid.doc.txt");
+        }
+        return "";
+    }
+
+
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
         $size = rand(0, 10);

@@ -10,6 +10,13 @@ class Map {
     private $_asteroid_count = 4;
     private $_asteroids;
 
+    public static function doc() {
+        if (file_exists("doc/Map.doc.txt")) {
+            return file_get_contents("doc/Map.doc.txt");
+        }
+        return "";
+    }
+
     public function __construct($sizeX, $sizeY) {
         $this->_sizeX = $sizeX;
         $this->_sizeY = $sizeY;
