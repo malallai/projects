@@ -4,15 +4,15 @@ $(function () {
     var form = $("#play-form");
 
     new_game.on("click", function () {
-        $('#new-game-row').removeClass('hidden');
-        $('#scores-row').addClass('hidden');
+        $('.new-game-content').removeClass('hidden');
+        $('.scores-content').addClass('hidden');
         new_game.addClass('active');
         scores.removeClass('active');
     });
 
     scores.on("click", function () {
-        $('#new-game-row').addClass('hidden');
-        $('#scores-row').removeClass('hidden');
+        $('.new-game-content').addClass('hidden');
+        $('.scores-content').removeClass('hidden');
         new_game.removeClass('active');
         scores.addClass('active');
     });
@@ -22,9 +22,6 @@ $(function () {
         var p1 = $(this).find("input[name=player1]").val();
         var p2 = $(this).find("input[name=player2]").val();
         $('.container').html(null);
-        console.log(p1);
-        console.log(p2);
-        console.log("test 1");
         $.ajax({
             url: './init_game.php',
             type: 'POST',
@@ -33,13 +30,11 @@ $(function () {
                 player2: p2
             }
         }).done(function (data) {
-            console.log("test 2");
-            refresh_game();
+            init_game();
         });
     });
 
-    function refresh_game() {
-        console.log("test 3");
+    function init_game() {
         $.ajax({
             url: './get_game.php',
             type: 'POST',
@@ -48,8 +43,9 @@ $(function () {
                 val: "get"
             }
         }).done(function (data) {
-            console.log("test 4");
-            console.log(data);
+            var player1 = data['players'][0];
+            var player2 = data['players'][1];
+
         });
     }
 })

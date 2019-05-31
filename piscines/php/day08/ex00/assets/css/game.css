@@ -1,0 +1,37 @@
+.header {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-infos h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.player-infos .health {
+    color: red;
+}
+
+.player-infos .shield {
+    color: dodgerblue;
+}
+
+.movements {
+    display: flex;
+}
+
+.move-point {
+    color: lawngreen;
+    font-size: 1.5rem;
+}
+
+.move-up {
+
+}
