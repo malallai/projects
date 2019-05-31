@@ -3,6 +3,7 @@
 require_once 'SpaceEntity.class.php';
 require_once 'Map.class.php';
 require_once 'Player.class.php';
+require_once 'Direction.class.php';
 class Ship extends SpaceEntity {
 
     public $owner;

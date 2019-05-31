@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/move.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/move.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/move.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Ship.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1255">
-              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+            <state relative-caret-position="75">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -193,10 +193,10 @@
         <option value="$PROJECT_DIR$/day08/ex00/classes/Direction.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/game.php" />
         <option value="$PROJECT_DIR$/day09/ex03/todo.js" />
-        <option value="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/assets/js/game.js" />
         <option value="$PROJECT_DIR$/day08/ex00/move.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" />
       </list>
     </option>
   </component>
@@ -369,12 +369,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="12785000" />
+      <workItem from="1559298616109" duration="12822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136629000" />
+    <option name="totallyTimeSpent" value="136666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -732,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Ship.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1255">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
@@ -778,6 +771,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Ship.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
