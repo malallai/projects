@@ -2,7 +2,6 @@ $(function () {
     var moves = $(".move-key");
     getPlayers();
     getAsteroids();
-    getGrid();
 
     var ships = {};
 
@@ -56,20 +55,6 @@ $(function () {
         });
     }
 
-    function getGrid() {
-        console.log("getgrid");
-        $.ajax({
-            url: './get_grid.php',
-            dataType: 'json',
-            type: 'POST',
-            data: {
-                val: "get"
-            }
-        }).done(function (data) {
-            console.log(data);
-        });
-    }
-
     function getAsteroids() {
         $.ajax({
             url: './get_asteroids.php',
@@ -89,9 +74,10 @@ $(function () {
         for (var n = 0; n < data.length; n++) {
             var x = data[n]['x'];
             var y = data[n]['y'];
-            ships[n] = {};
-            ships[n]['x'] = x;
-            ships[n]['y'] = y;
+            ships[n] = {
+                x: x,
+                y: y
+            };
             console.log(ships);
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
