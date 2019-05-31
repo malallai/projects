@@ -74,6 +74,7 @@ $(function () {
                 val: "get"
             }
         }).done(function (data) {
+            console.log(data);
             for (var n = 0; n < data.length; n++) {
                 ships[n] = data[n]['ship'];
                 draw_ship(data[n]['ship'], data[n]['color']);
