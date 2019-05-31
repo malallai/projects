@@ -30,7 +30,7 @@ $(function () {
                 player2: p2
             }
         }).done(function (data) {
-            init_game();
+            window.location = "test.php";
         });
     });
 
