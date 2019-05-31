@@ -13,9 +13,13 @@ class Ship extends SpaceEntity {
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
+    }
+
+    public function updateShape() {
+        $this->shape = array();
         for ($shapeX = 0; $shapeX < $this->sizeX; $shapeX++) {
             for ($shapeY = 0; $shapeY < $this->sizeY; $shapeY++) {
-                $this->shape[] = array("x" => $shapeX + $x, "y" => $shapeY + $y);
+                $this->shape[] = array("x" => $shapeX + $this->getX(), "y" => $shapeY + $this->getY());
             }
         }
     }
@@ -58,6 +62,39 @@ class Ship extends SpaceEntity {
     public function getShape()
     {
         return $this->shape;
+    }
+
+    public function move($direction) {
+        $old_x = $this->getX();
+        $old_y = $this->getY();
+        $x = $old_x;
+        $y = $old_y;
+        switch ($direction) {
+            case Direction::up:
+                $x = $old_x;
+                $y = $old_y - 1;
+                break;
+            case Direction::down:
+                $x = $old_x;
+                $y = $old_y + 1;
+                break;
+            case Direction::left:
+                $x = $old_x - 1;
+                $y = $old_y;
+                break;
+            case Direction::right:
+                $x = $old_x + 1;
+                $y = $old_y;
+                break;
+            default : break;
+        }
+        if ($this->getMap()->updateLocation($this, $old_x, $old_y, $x, $y)) {
+            $this->setX($x);
+            $this->setY($y);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

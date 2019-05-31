@@ -6,6 +6,7 @@ class Game {
 
     private $_players;
     private $_map;
+    public  $current_player;
 
     public function __construct()
     {
@@ -20,12 +21,10 @@ class Game {
         $p1 =  new Player($this->_map, 0, 0);
         $p2 =  new Player($this->_map, 0, 0);
 
-        $this->_map->addPlayer($p1);
         $p1->setName($players[0]);
         $p1->setShip(new Ship($this->_map, 2, 5));
         $p1->getShip()->setColor('red');
 
-        $this->_map->addPlayer($p2);
         $p2->setName($players[1]);
         $p2->setShip(new Ship($this->_map, 36, 5));
         $p2->getShip()->setColor('blue');
@@ -47,5 +46,23 @@ class Game {
     {
         return $this->_map;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrentPlayer()
+    {
+        return $this->current_player;
+    }
+
+    /**
+     * @param mixed $current_player
+     */
+    public function setCurrentPlayer($current_player)
+    {
+        $this->current_player = $current_player;
+    }
+
+
 
 }

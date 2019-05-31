@@ -31,12 +31,8 @@ class Map {
         }
     }
 
-    public function addPlayer(Player $player) {
-        $this->_grid[$player->getX()][$player->getY()] = $player;
-    }
-
     public function addShip(Ship $ship) {
-        $this->_grid[$ship->getX()][$ship->getY()] = $ship;
+        $this->_grid[$ship->getY()][$ship->getX()] = $ship;
     }
 
     public function draw() {
@@ -49,6 +45,28 @@ class Map {
             echo "</tr>";
         }
         echo "</table>";
+    }
+
+    public function updateLocation(Ship $ship, $old_x, $old_y, $x, $y) {
+        $this->_grid[$old_y][$old_x] = new Void($this, $old_x, $old_y);
+        $this->_grid[$y][$x] = new Void($this, $old_x, $old_y);
+        return (!$this->checkCollision($ship));
+    }
+
+    public function checkCollision(Ship $ship) {
+        if (!($this->_grid[$ship->getY()][$ship->getX()] instanceof Void))
+            return true;
+        if (!($this->_grid[$ship->getY()][$ship->getX() + 1] instanceof Void))
+            return true;
+        if (!($this->_grid[$ship->getY() + 1][$ship->getX()] instanceof Void))
+            return true;
+        if (!($this->_grid[$ship->getY() + 1][$ship->getX() + 1] instanceof Void))
+            return true;
+        if ($ship->getX() < 0 || $ship->getX() + 1 > !$this->_sizeX)
+            return true;
+        if ($ship->getY() < 0 || $ship->getY() + 1 > !$this->_sizeY)
+            return true;
+        return false;
     }
 
     /**

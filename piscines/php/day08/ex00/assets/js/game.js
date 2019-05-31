@@ -1,4 +1,23 @@
 $(function () {
+    var moves = $(".move-key");
+
+    moves.children().on("click", function () {
+        console.log("click " + $(this));
+        if ($(this).hasClass('move')) {
+            var direction = $(this).attr('id');
+            console.log(direction);
+            $.ajax({
+                url: './move.php',
+                type: 'POST',
+                data: {
+                    direction: direction
+                }
+            }).done(function (data) {
+                console.log(data);
+            });
+        }
+    });
+
     $.ajax({
         url: './get_players.php',
         dataType: 'json',
@@ -20,7 +39,6 @@ $(function () {
             val: "get"
         }
     }).done(function (data) {
-        console.log(data);
         for (var n = 0; n < data.length; n++) {
             draw_asteroid(data[n]['asteroid']);
         }

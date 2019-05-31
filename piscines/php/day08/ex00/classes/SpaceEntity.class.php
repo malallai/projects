@@ -38,6 +38,23 @@ class SpaceEntity implements Entity {
         return $this->_y;
     }
 
+    /**
+     * @param mixed $x
+     */
+    public function setX($x)
+    {
+        $this->_x = $x;
+    }
+
+    /**
+     * @param mixed $y
+     */
+    public function setY($y)
+    {
+        $this->_y = $y;
+    }
+
+
 
 
 }
