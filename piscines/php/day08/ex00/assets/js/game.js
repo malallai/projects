@@ -4,7 +4,7 @@ $(function () {
     getAsteroids();
     getGrid();
 
-    var ships;
+    var ships = {};
 
     moves.children().on("click", function () {
         console.log("click " + $(this));
