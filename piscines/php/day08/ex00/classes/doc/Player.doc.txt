@@ -1,0 +1,38 @@
+
+<- Player ----------------------------------------------------------------------
+Player entity
+
+Args :
+    => Map $map : The map of the game
+    => $x : $x position of the asteroid
+    => $y : $y position of the asteroid
+
+Methods:
+
+getName:
+return player name
+
+setName:
+define the player name
+
+getShip:
+return the ship instance of the player
+
+setShip:
+define the ship o the player
+
+getMp:
+return movements points
+
+setMp:
+set movements points
+
+removeMP:
+remove $count mp
+
+addMP:
+add $count mp
+
+getInfos:
+return information about the player and his ship
+---------------------------------------------------------------------- Player ->
