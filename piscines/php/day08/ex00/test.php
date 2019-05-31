@@ -26,9 +26,13 @@ include_once 'assets/templates/header.php';
     <div class="map">
         <table>
             <tr>
-                <td class="reactive-nonmetal"><p class="mass">1.008</p><h2>H</h2><p class="atom">1</p></td>
-                <td colspan="17"></td>
-                <td class="noble-gas"><p class="mass">4.0026</p><h2>He</h2><p class="atom">2</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
     </div>
