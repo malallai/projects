@@ -59,8 +59,8 @@ include_once 'assets/templates/header.php';
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td class="asteroid"></td>
+                <td class="asteroid"></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -69,8 +69,8 @@ include_once 'assets/templates/header.php';
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td class="asteroid"></td>
+                <td class="asteroid"></td>
                 <td></td>
                 <td></td>
                 <td></td>

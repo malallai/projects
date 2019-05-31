@@ -65,13 +65,13 @@ table td {
 }
 
 .blue {
-    color: dodgerblue;
+    background-color: dodgerblue;
 }
 
 .red {
-    color: red;
+    background-color: red;
 }
 
 .asteroid {
-    color: rgb(255, 100, 0);
+    background-color: rgb(255, 100, 0);
 }
