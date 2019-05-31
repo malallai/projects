@@ -31,9 +31,9 @@ class Map {
     public function draw() {
         echo "<table>";
         for ($y = 0; $y < $this->_sizeY; $y++) {
-            echo "<tr id='y$y'>";
+            echo "<tr id='$y'>";
             for ($x = 0; $x < $this->_sizeX; $x++) {
-                echo "<td id='x$x'></td>";
+                echo "<td id='$x'></td>";
             }
             echo "</tr>";
         }
