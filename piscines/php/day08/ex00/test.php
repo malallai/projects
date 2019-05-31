@@ -16,6 +16,8 @@ include_once 'assets/templates/header.php';
                 <i class="material-icons">keyboard_arrow_up</i>
                 <i class="material-icons">keyboard_arrow_down</i>
                 <i class="material-icons">keyboard_arrow_right</i>
+                <i class="material-icons">skip_next</i>
+                <i class="fas fa-fire-alt"></i>
             </div>
         </div>
     </div>
