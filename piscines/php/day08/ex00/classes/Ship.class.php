@@ -90,7 +90,8 @@ class Ship extends SpaceEntity {
                 break;
             default : break;
         }
-        if ($this->getMap()->updateLocation($this, $old_x, $old_y, $x, $y)) {
+
+        if (!$this->getMap()->updateLocation($this, $old_x, $old_y, $x, $y)) {
             $this->setX($x);
             $this->setY($y);
             $this->updateShape();
