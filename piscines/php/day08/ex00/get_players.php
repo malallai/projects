@@ -12,7 +12,7 @@ if ($_POST['val'] === "get") {
         $array = array();
 
         foreach ($game->getPlayers() as $player) {
-            $array[] = array("player_name" => $player->getName(), "ship" => $player->getShip()->getShape());
+            $array[] = array("player_name" => $player->getName(), "ship" => $player->getShip()->getShape(), "color" => $player->getShip()->getColor());
         }
 
         echo json_encode($array);
