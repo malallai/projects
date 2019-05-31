@@ -9,11 +9,6 @@ class Game {
     {
     }
 
-    public function __toString()
-    {
-        return (sprintf("Game ( %s )", $this->getMap()));
-    }
-
     /**
      * @param mixed $players
      */

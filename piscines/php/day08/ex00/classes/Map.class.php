@@ -18,9 +18,4 @@ class Map {
         echo "</table>";
     }
 
-    public function __toString()
-    {
-        return (sprintf("Map ( x: %d, y: %d )", $this->_sizeX, $this->_sizeY));
-    }
-
 }
