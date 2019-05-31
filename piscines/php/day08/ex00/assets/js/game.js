@@ -20,6 +20,7 @@ $(function () {
             val: "get"
         }
     }).done(function (data) {
+        console.log(data);
         for (var n = 0; n < data.length; n++) {
             draw_asteroid(data[n]['asteroid']);
         }
