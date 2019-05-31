@@ -55,7 +55,7 @@ class Map {
         return true;
     }
 
-    public function checkCollision(Ship $ship, $x, $y) {
+    public function checkCollision($x, $y) {
         if ($this->grid[$y][$x] instanceof Asteroid)
             return false;
         if ($this->grid[$y][$x + 1] instanceof Asteroid)
