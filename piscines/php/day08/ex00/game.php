@@ -9,12 +9,12 @@
     <div class="movements">
         <a class="move-point">X MP</a>
         <div class="move-key">
-            <i class="material-icons">keyboard_arrow_left</i>
-            <i class="material-icons">keyboard_arrow_up</i>
-            <i class="material-icons">keyboard_arrow_down</i>
-            <i class="material-icons">keyboard_arrow_right</i>
-            <i class="material-icons">filter_center_focus</i>
-            <i class="material-icons">skip_next</i>
+            <i id="2" class="move material-icons">keyboard_arrow_left</i>
+            <i id="0" class="move material-icons">keyboard_arrow_up</i>
+            <i id="1" class="move material-icons">keyboard_arrow_down</i>
+            <i id="3" class="move material-icons">keyboard_arrow_right</i>
+            <i class="shoot material-icons">filter_center_focus</i>
+            <i class="skip material-icons">skip_next</i>
         </div>
     </div>
 </div>
