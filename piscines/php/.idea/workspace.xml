@@ -4,18 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/rush00/cart.php" description="        remove_item_from_cart($_POST['id']);&#10;    }" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Direction.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Direction.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Player.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Player.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/SpaceEntity.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/SpaceEntity.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Void.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Void.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/doc/Map.doc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/doc/Map.doc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/get_grid.php" beforeDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Void.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -388,12 +377,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="20861000" />
+      <workItem from="1559298616109" duration="20917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144705000" />
+    <option name="totallyTimeSpent" value="144761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,7 +395,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.22653721" />
@@ -806,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Void.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
