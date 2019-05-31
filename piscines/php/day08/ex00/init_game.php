@@ -4,7 +4,7 @@ session_start();
 require_once 'classes/Game.class.php';
 require_once 'classes/Map.class.php';
 
-$data = array();
+global $data;
 
 $game = new Game();
 $game->setPlayers(array($_POST['player1'], $_POST['player2']));
