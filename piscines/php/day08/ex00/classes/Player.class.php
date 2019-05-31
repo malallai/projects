@@ -10,6 +10,7 @@ class Player extends SpaceEntity {
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
+
     }
 
     /**
