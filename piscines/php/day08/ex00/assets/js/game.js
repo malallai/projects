@@ -2,6 +2,7 @@ $(function () {
     var moves = $(".move-key");
     getPlayers();
     getAsteroids();
+    getGrid();
 
     moves.children().on("click", function () {
         console.log("click " + $(this));
@@ -24,16 +25,6 @@ $(function () {
                 }
             });
         }
-        $.ajax({
-            url: './get_grid.php',
-            dataType: 'json',
-            type: 'POST',
-            data: {
-                val: "get"
-            }
-        }).done(function (data) {
-            console.log(data);
-        });
     });
 
     function clear() {
@@ -52,6 +43,20 @@ $(function () {
             for (var n = 0; n < data.length; n++) {
                 draw_ship(data[n]['ship'], data[n]['color']);
             }
+        });
+    }
+
+    function getGrid() {
+        console.log("getgrid");
+        $.ajax({
+            url: './get_grid.php',
+            dataType: 'json',
+            type: 'POST',
+            data: {
+                val: "get"
+            }
+        }).done(function (data) {
+            console.log(data);
         });
     }
 
