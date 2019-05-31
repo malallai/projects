@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="assets/css/game.css">
+<script src="assets/js/game.js"></script>
 <div class="header">
     <div class="player-infos">
         <h1 class="player-name">Player 1</h1>
