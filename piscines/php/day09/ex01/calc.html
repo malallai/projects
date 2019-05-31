@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+</head>
+<body>
+<form id="calc" name="calc">
+    <input type="text" id="nbr1" required>
+    <select id="op">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+    </select>
+    <input type="text" id="nbr2" required>
+    <input type="submit" value="Try me!">
+</form>
+
+<script>
+    setInterval(useME, 30000);
+    function useME() {
+        alert("Please, use me...");
+    }
+    window.onload = function() {
+        var form = document.getElementById("calc");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (!isNumeric(form['nbr1'].value) || !isNumeric(form['nbr2'].value)) {
+                alert("Error :(");
+                return false;
+            }
+            var nbr1 = parseInt(form['nbr1'].value);
+            var nbr2 = parseInt(form['nbr2'].value);
+            var op = form['op'].value;
+            var result = "";
+
+            if (nbr1 < 0 || nbr2 < 0) {
+                alert("Error :(");
+                return false;
+            }
+            else if ((op == "%" || op == "/") && nbr2 == 0) result = "It's over 9000!";
+            else if (op == "/") result = nbr1 / nbr2;
+            else if (op == "%") result = nbr1 % nbr2;
+            else if (op == "*") result = nbr1 * nbr2;
+            else if (op == "+") result = nbr1 + nbr2;
+            else if (op == "-") result = nbr1 - nbr2;
+            console.log(result);
+            alert(result);
+            return false;
+        });
+    }
+
+    function isNumeric(n) {
+        return !isNaN(parseInt(n)) && isFinite(n);
+    }
+</script>
+</body>
+</html>

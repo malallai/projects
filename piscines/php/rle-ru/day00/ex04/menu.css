@@ -1,0 +1,93 @@
+body
+{
+	font-size: 2em;
+}
+
+#classic
+{
+	display: inline-block;
+	width: 10%;
+	background-color: beige;
+}
+
+#classic:hover
+{
+	font-size:1.2em;
+	background-color: bisque;
+}
+
+#subclassic
+{
+	background-color: beige;
+	font-size: 0.8em;
+	display: none;
+}
+
+#classic:hover #subclassic
+{
+	display: block;
+}
+
+#subthon
+{
+	position: absolute;
+	font-size:0.8em;
+	background-color: beige;
+	top: 4%;
+	left: 10%;
+	display: none;
+}
+
+#thon:hover
+{
+	font-size: 1.2em;
+	background-color: bisque;
+}
+
+#thon:hover #subthon
+{
+	display: block;
+}
+
+#submagn
+{
+	display: none;
+}
+
+#poulet:hover
+{
+	font-size: 1.2em;
+	background-color: bisque;
+}
+
+#jambon:hover
+{
+	font-size: 1.2em;
+	background-color: bisque;
+}
+
+#magnifiques
+{
+	position: absolute;
+	display: inline-block;
+	background-color: magenta;
+}
+
+#subracl
+{
+	position: absolute;
+	left: 100%;
+	top: 70%;
+	background-color:gold;
+	display: none;
+}
+
+#magnifiques:hover #submagn
+{
+	display: block;
+}
+
+#steakracl:hover #subracl
+{
+	display: block;
+}

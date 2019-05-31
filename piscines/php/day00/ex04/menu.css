@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    background-color: #3b3b3b;
+    font-size: .9vw;
+}
+
+nav > ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    position: relative;
+    width: 10vw;
+    list-style-type: none;
+    padding: 0 2vw !important;
+    float: left;
+}
+
+nav ul li p {
+    padding: 1vw 0;
+}
+
+.submenu {
+    display: none;
+}
+
+.subsubmenu {
+    display: none;
+}
+
+.description {
+    display: none;
+}
+
+.submenu li p, .submenu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin: 1vw;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+}
+
+ul li:hover > .submenu, .submenu.display {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 225, .25);
+}
+
+.submenu > li:hover > .subsubmenu, .subsubmenu.display {
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    left: 14vw;
+}
+
+.subsubmenu > li:hover > .description, .description.display {
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    left: 14vw;
+}
+
+.blue {
+    background-color: #0ea5eb;
+}
+
+.green {
+    background-color: #0da432;
+}
+
+.red {
+    background-color: #d51717;
+}

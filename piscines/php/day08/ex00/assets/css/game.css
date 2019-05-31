@@ -1,0 +1,77 @@
+.header {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-infos h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.player-infos .health {
+    color: red;
+}
+
+.player-infos .shield {
+    color: dodgerblue;
+}
+
+.movements {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    flex: 1;
+}
+
+.movements i {
+    font-size: 3rem;
+}
+
+.movements i:hover {
+    cursor: pointer;
+    color: lawngreen;
+}
+
+.move-point {
+    color: lawngreen;
+    font-size: 1.5rem;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #fff;
+}
+
+table {
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+table td {
+    overflow: hidden;
+    border: 1px solid grey;
+    width: 20px;
+    height: 20px;
+}
+
+.blue {
+    background-color: dodgerblue;
+}
+
+.red {
+    background-color: red;
+}
+
+.asteroid {
+    background-color: rgb(255, 100, 0);
+}
