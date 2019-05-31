@@ -16,10 +16,11 @@ $(function () {
                     direction: direction
                 }
             }).done(function (data) {
-                console.log(data);
-                clear();
-                getPlayers();
-                getAsteroids();
+                if (data == true) {
+                    clear();
+                    getPlayers();
+                    getAsteroids();
+                }
             });
         }
     });
