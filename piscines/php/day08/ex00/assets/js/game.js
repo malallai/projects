@@ -40,6 +40,14 @@ $(function () {
                     clearShips(tmp);
                 }
             });
+        } else if ($(this).hasClass('shoot')) {
+            $.ajax({
+                url: './move.php',
+                dataType: 'json',
+                type: 'POST'
+            }).done(function (data) {
+                updatePlayer();
+            });
         }
     });
 
@@ -102,6 +110,19 @@ $(function () {
             var y = data[n]['y'];
             $('tr[id=' + y + '] td[id=' + x + ']').addClass('asteroid');
         }
+    }
+
+    function updatePlayer() {
+        $.ajax({
+            url: './get_players.php',
+            dataType: 'json',
+            type: 'POST',
+            data: {
+                val: "get"
+            }
+        }).done(function (data) {
+            console.log(data);
+        });
     }
 
 })

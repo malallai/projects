@@ -7,10 +7,10 @@ class Player extends SpaceEntity {
 
     public $name;
     public $ship;
+    public $mp = 7;
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
-
     }
 
     /**
@@ -46,6 +46,28 @@ class Player extends SpaceEntity {
         $this->ship->setPlayer($this);
     }
 
+    /**
+     * @return int
+     */
+    public function getMp()
+    {
+        return $this->mp;
+    }
 
+    /**
+     * @param int $mp
+     */
+    public function setMp($mp)
+    {
+        $this->mp = $mp;
+    }
+
+    public function removeMP($count) {
+        $this->setMp($this->getMp() - $count);
+    }
+
+    public function addMP($count) {
+        $this->setMp($this->getMp() + $count);
+    }
 
 }
