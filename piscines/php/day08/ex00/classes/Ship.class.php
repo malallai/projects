@@ -103,7 +103,7 @@ class Ship extends SpaceEntity {
 
     public function shoot() {
         $this->getPlayer()->removeMP(5);
-        for ($i = 2; $i < 10; $i++) {
+        for ($i = 3; $i < 10; $i++) {
             if ($this->getMap()->getGrid()[$this->getY()][$this->getX() + $i] instanceof Ship) {
                 $ship = $this->getMap()->getGrid()[$this->getY()][$this->getX() + $i];
                 if ($ship->getShield() != 0) {
