@@ -50,6 +50,7 @@ $(function () {
             }
         }).done(function (data) {
             for (var n = 0; n < data.length; n++) {
+                ships[n] = data[n]['ship'];
                 draw_ship(data[n]['ship'], data[n]['color']);
             }
         });
@@ -74,10 +75,6 @@ $(function () {
         for (var n = 0; n < data.length; n++) {
             var x = data[n]['x'];
             var y = data[n]['y'];
-            ships[n] = {
-                x: x,
-                y: y
-            };
             console.log(ships);
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
