@@ -126,6 +126,9 @@ $(function () {
                 val: "get"
             }
         }).done(function (data) {
+            if (intval(data[0]['player']['health']) <= 0) {
+                window.location = "destroy.php";
+            }
             $('.player-name').html(data[0]['player']['name']);
             $('.health').html("Health : " + data[0]['player']['health']);
             $('.shield').html("Shield : " + data[0]['player']['shield']);
