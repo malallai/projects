@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,19 +29,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Player.class.php">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/get_game.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="5" />
+              <caret line="10" column="44" lean-forward="true" selection-end-line="15" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/main.js">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/get_asteroids.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="19" column="1" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Player.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -54,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="195">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -73,10 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day08/ex00/game.php">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/get_grid.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="28" />
+              <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -90,20 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day08/ex00/get_players.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="98" lean-forward="true" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="1170">
+              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -155,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day09/ex00/balloon.html" />
         <option value="$PROJECT_DIR$/day09/ex00bis/balloon.html" />
         <option value="$PROJECT_DIR$/day09/ex01/calc.html" />
         <option value="$PROJECT_DIR$/day09/ex01bis/calc.html" />
@@ -203,9 +203,10 @@
         <option value="$PROJECT_DIR$/day09/ex03/todo.js" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/move.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/assets/js/game.js" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/get_grid.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/assets/js/game.js" />
       </list>
     </option>
   </component>
@@ -378,12 +379,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="14212000" />
+      <workItem from="1559298616109" duration="14399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138056000" />
+    <option name="totallyTimeSpent" value="138243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,9 +445,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day03/ex04/raw_text.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/day03/ex05/read_img.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -650,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/get_game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="44" lean-forward="true" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -682,13 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/get_asteroids.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -762,10 +746,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
+    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Ship.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="1128">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -776,17 +767,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Ship.class.php">
+    <entry file="file://$PROJECT_DIR$/day08/ex00/get_game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="44" lean-forward="true" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
+    <entry file="file://$PROJECT_DIR$/day08/ex00/get_asteroids.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/get_grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
