@@ -126,10 +126,10 @@ $(function () {
                 val: "get"
             }
         }).done(function (data) {
-            $('.player-name').val(data[0]['player']['name']);
-            $('.health').val("Health : " + data[0]['player']['health']);
-            $('.shield').val("Shield : " + data[0]['player']['shield']);
-            $('.move-point').val("MP : " + data[0]['player']['mp']);
+            $('.player-name').html(data[0]['player']['name']);
+            $('.health').html("Health : " + data[0]['player']['health']);
+            $('.shield').html("Shield : " + data[0]['player']['shield']);
+            $('.move-point').html("MP : " + data[0]['player']['mp']);
         });
     }
 
