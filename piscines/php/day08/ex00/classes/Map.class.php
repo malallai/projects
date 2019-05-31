@@ -56,13 +56,13 @@ class Map {
     }
 
     public function checkCollision(Ship $ship, $x, $y) {
-        if ($this->grid[$y][$x] instanceof Asteroid || ($this->grid[$y][$x] instanceof Ship && $this->grid[$y][$x] !== $ship))
+        if ($this->grid[$y][$x] instanceof Asteroid)
             return false;
-        if ($this->grid[$y][$x + 1] instanceof Asteroid || ($this->grid[$y][$x + 1] instanceof Ship && $this->grid[$y][$x + 1] !== $ship))
+        if ($this->grid[$y][$x + 1] instanceof Asteroid)
             return false;
-        if ($this->grid[$y + 1][$x] instanceof Asteroid || ($this->grid[$y + 1][$x] instanceof Ship && $this->grid[$y + 1][$x] !== $ship))
+        if ($this->grid[$y + 1][$x] instanceof Asteroid)
             return false;
-        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid || ($this->grid[$y + 1][$x + 1] instanceof Ship && $this->grid[$y + 1][$x + 1] !== $ship))
+        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid)
             return false;
         if ($x < 0 || $x + 1 > $this->_sizeX)
             return false;
