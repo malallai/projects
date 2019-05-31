@@ -13,7 +13,7 @@ class Ship extends SpaceEntity {
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
         for ($shapeX = 0; $shapeX < $this->sizeX; $shapeX++) {
-            for ($shapeY = 0; $shapeY < $this->sizeY; $$shapeY++) {
+            for ($shapeY = 0; $shapeY < $this->sizeY; $shapeY++) {
                 $this->shape[] = array("x" => $shapeX + $x, "y" => $shapeY + $y);
             }
         }
