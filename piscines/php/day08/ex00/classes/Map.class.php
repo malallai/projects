@@ -32,7 +32,7 @@ class Map {
     }
 
     public function addShip(Ship $ship) {
-        $this->grid[$ship->getY()][$ship->getX()] = $ship;
+        $this->grid[$ship->getX()][$ship->getY()] = $ship;
     }
 
     public function draw() {
