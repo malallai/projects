@@ -38,8 +38,9 @@ $(function () {
             }).done(function (data) {
                 console.log(data);
                 if (data) {
-                    clearShips();
+                    var tmp = ships;
                     getPlayers();
+                    clearShips(tmp);
                 }
             });
         }
@@ -49,7 +50,7 @@ $(function () {
         $('td').removeClass('red').removeClass('blue').removeClass('asteroid');
     }
 
-    function clearShips() {
+    function clearShips(ships) {
         for (var n = 0; n < 2; n++) {
             for (var m = 0; m < ships[n].length; m++) {
                 var x = ships[n][m]['x'];
