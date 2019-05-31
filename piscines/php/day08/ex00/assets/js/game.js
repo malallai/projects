@@ -24,7 +24,6 @@ $(function () {
     var ships = [];
 
     moves.children().on("click", function () {
-        console.log("click " + $(this));
         if ($(this).hasClass('move')) {
             var direction = $(this).attr('id');
             $.ajax({
