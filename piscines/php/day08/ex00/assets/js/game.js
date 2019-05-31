@@ -2,17 +2,20 @@ $(function () {
     var moves = $(".move-key");
     getPlayers();
     getAsteroids();
-
-    $.ajax({
-        url: './get_grid.php',
-        dataType: 'json',
-        type: 'POST',
-        data: {
-            val: "get"
-        }
-    }).done(function (data) {
-        console.log(data);
-    });
+    start();
+    
+    function start() {
+        $.ajax({
+            url: './get_grid.php',
+            dataType: 'json',
+            type: 'POST',
+            data: {
+                val: "get"
+            }
+        }).done(function (data) {
+            console.log(data);
+        });
+    }
 
     moves.children().on("click", function () {
         console.log("click " + $(this));
