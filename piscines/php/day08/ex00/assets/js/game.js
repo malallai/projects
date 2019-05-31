@@ -2,6 +2,7 @@ $(function () {
     var moves = $(".move-key");
     getPlayers();
     getAsteroids();
+    updatePlayer();
 
     document.addEventListener('keydown', function(e) {
         switch (e.keyCode) {
