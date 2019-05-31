@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="330">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -203,11 +201,11 @@
         <option value="$PROJECT_DIR$/day08/ex00/classes/Color.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/get_players.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/assets/js/game.js" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/get_asteroids.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/assets/js/game.js" />
       </list>
     </option>
   </component>
@@ -380,12 +378,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="9934000" />
+      <workItem from="1559298616109" duration="9968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133778000" />
+    <option name="totallyTimeSpent" value="133812000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -779,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="330">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>
