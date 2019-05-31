@@ -1,6 +1,7 @@
 <?php
 
-
+require_once 'Void.class.php';
+require_once 'Asteroid.class.php';
 class Map {
 
     private $_sizeX = 40;
