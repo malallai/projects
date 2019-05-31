@@ -33,6 +33,7 @@ $(function () {
     }
 
     function clearShips() {
+        console.log(ships);
         for (var n = 0; n < ships.length; n++) {
             var x = ships[n]['x'];
             var y = ships[n]['y'];
@@ -91,6 +92,7 @@ $(function () {
             ships[n] = {};
             ships[n]['x'] = x;
             ships[n]['y'] = y;
+            console.log(ships);
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
     }
