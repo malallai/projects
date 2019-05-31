@@ -12,3 +12,5 @@ $map = new Map();
 
 $data['game'] = $game;
 $data['map'] = $map;
+
+$_SESSION['data'] = serialize($data);
