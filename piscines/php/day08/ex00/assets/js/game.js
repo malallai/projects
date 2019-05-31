@@ -36,8 +36,7 @@ $(function () {
             for (var m = 0; m < ships[n].length; m++) {
                 var x = ships[n][m]['x'];
                 var y = ships[n][m]['y'];
-                console.log(ships[n][m]);
-                $('tr[id=' + y + '] td[id=' + x + ']').remove('red').remove('blue');
+                $('tr[id=' + y + '] td[id=' + x + ']').removeClass('red').removeClass('blue');
             }
         }
     }
