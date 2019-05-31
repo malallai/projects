@@ -31,6 +31,10 @@
     flex: 1;
 }
 
+.movements i {
+    font-size: 3rem;
+}
+
 .move-point {
     color: lawngreen;
     font-size: 1.5rem;
