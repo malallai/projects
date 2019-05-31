@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/move.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/move.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+            <state relative-caret-position="885">
+              <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -380,12 +378,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="13327000" />
+      <workItem from="1559298616109" duration="13424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137171000" />
+    <option name="totallyTimeSpent" value="137268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,8 +785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        <state relative-caret-position="885">
+          <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
         </state>
       </provider>
     </entry>
