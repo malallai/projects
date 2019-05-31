@@ -3,6 +3,17 @@ $(function () {
     getPlayers();
     getAsteroids();
 
+    $.ajax({
+        url: './get_grid.php',
+        dataType: 'json',
+        type: 'POST',
+        data: {
+            val: "get"
+        }
+    }).done(function (data) {
+        console.log(data);
+    });
+
     moves.children().on("click", function () {
         console.log("click " + $(this));
         if ($(this).hasClass('move')) {

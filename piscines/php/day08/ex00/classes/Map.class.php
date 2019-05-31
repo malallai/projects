@@ -26,7 +26,7 @@ class Map {
         for ($i = 0; $i < $this->_asteroid_count; $i++) {
             $x = rand(0, $this->_sizeX);
             $y = rand(0, $this->_sizeY);
-            $this->_grid[$y][$x] = $tmp = new Asteroid($this, $x, $y);
+            $this->_grid[$y][$x] = ($tmp = new Asteroid($this, $x, $y));
             $this->_asteroids[] = $tmp;
         }
     }
@@ -70,6 +70,14 @@ class Map {
         if ($y < 0 || $y + 1 > $this->_sizeY)
             return false;
         return true;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGrid()
+    {
+        return $this->_grid;
     }
 
     /**
