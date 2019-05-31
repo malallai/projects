@@ -3,8 +3,8 @@
 
 class Map {
 
-    private $_sizeX = 100;
-    private $_sizeY = 40;
+    private $_sizeX = 40;
+    private $_sizeY = 20;
 
     public function draw() {
         echo "<table>";
