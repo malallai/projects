@@ -3,7 +3,7 @@ $(function () {
     getPlayers();
     getAsteroids();
 
-    var ships = {};
+    var ships;
 
     moves.children().on("click", function () {
         console.log("click " + $(this));
