@@ -5,7 +5,6 @@ $(function () {
     updatePlayer();
 
     document.addEventListener('keydown', function(e) {
-        console.log(e);
         switch (e.keyCode) {
             case 38:
                 $('i[id=0]').click();
@@ -18,6 +17,9 @@ $(function () {
                 break;
             case 39:
                 $('i[id=3]').click();
+                break;
+            case 32:
+                $('i[class=shoot]').click();
                 break;
             default : break;
         }
