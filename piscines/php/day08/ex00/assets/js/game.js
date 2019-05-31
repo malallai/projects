@@ -16,6 +16,7 @@ $(function () {
                     direction: direction
                 }
             }).done(function (data) {
+                console.log(data);
                 if (data == true) {
                     clear();
                     getPlayers();
