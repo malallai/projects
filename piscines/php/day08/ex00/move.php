@@ -16,7 +16,6 @@ if (isset($_POST['direction'])) {
         $_SESSION['data'] = serialize($game);
 
         echo json_encode($return);
-
         return;
     }
 }

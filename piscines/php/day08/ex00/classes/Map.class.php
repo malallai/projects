@@ -54,13 +54,13 @@ class Map {
     }
 
     public function checkCollision(Ship $ship) {
-        if (!($this->_grid[$ship->getY()][$ship->getX()] instanceof Void))
+        if (!($this->_grid[$ship->getX()][$ship->getY()] instanceof Void))
             return false;
-        if (!($this->_grid[$ship->getY()][$ship->getX() + 1] instanceof Void))
+        if (!($this->_grid[$ship->getX()][$ship->getY() + 1] instanceof Void))
             return false;
-        if (!($this->_grid[$ship->getY() + 1][$ship->getX()] instanceof Void))
+        if (!($this->_grid[$ship->getX() + 1][$ship->getY()] instanceof Void))
             return false;
-        if (!($this->_grid[$ship->getY() + 1][$ship->getX() + 1] instanceof Void))
+        if (!($this->_grid[$ship->getX() + 1][$ship->getY() + 1] instanceof Void))
             return false;
         if ($ship->getX() < 0 || $ship->getX() + 1 > !$this->_sizeX)
             return false;
