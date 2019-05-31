@@ -4,6 +4,8 @@ $(function () {
     getAsteroids();
     getGrid();
 
+    var ships;
+
     moves.children().on("click", function () {
         console.log("click " + $(this));
         if ($(this).hasClass('move')) {
@@ -19,9 +21,8 @@ $(function () {
             }).done(function (data) {
                 console.log(data);
                 if (data) {
-                    clear();
+                    clearShips();
                     getPlayers();
-                    getAsteroids();
                 }
             });
         }
@@ -29,6 +30,14 @@ $(function () {
 
     function clear() {
         $('td').removeClass('red').removeClass('blue').removeClass('asteroid');
+    }
+
+    function clearShips() {
+        for (var n = 0; n < ships.length; n++) {
+            var x = ships[n]['x'];
+            var y = ships[n]['y'];
+            $('tr[id=' + y + '] td[id=' + x + ']').remove('red').remove('blue');
+        }
     }
 
     function getPlayers() {
@@ -79,6 +88,10 @@ $(function () {
         for (var n = 0; n < data.length; n++) {
             var x = data[n]['x'];
             var y = data[n]['y'];
+            ships[n] = {
+              x: x,
+              y: y
+            };
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
     }
