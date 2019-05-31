@@ -111,10 +111,12 @@ $(function () {
     }
 
     function draw_asteroid(data) {
-        for (var n = 0; n < data.length; n++) {
-            var x = data[n]['x'];
-            var y = data[n]['y'];
-            $('tr[id=' + y + '] td[id=' + x + ']').addClass('asteroid');
+        if (data) {
+            for (var n = 0; n < data.length; n++) {
+                var x = data[n]['x'];
+                var y = data[n]['y'];
+                $('tr[id=' + y + '] td[id=' + x + ']').addClass('asteroid');
+            }
         }
     }
 
