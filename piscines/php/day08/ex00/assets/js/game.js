@@ -75,7 +75,6 @@ $(function () {
         for (var n = 0; n < data.length; n++) {
             var x = data[n]['x'];
             var y = data[n]['y'];
-            console.log(ships);
             $('tr[id=' + y + '] td[id=' + x + ']').addClass(color);
         }
     }
