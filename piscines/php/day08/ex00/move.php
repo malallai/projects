@@ -11,11 +11,11 @@ if (isset($_POST['direction'])) {
         $game = unserialize($_SESSION['data']);
 
         $player = $game->getCurrentPlayer();
-        $player->getShip()->move($_POST['direction']);
+        $return = $player->getShip()->move($_POST['direction']);
 
         $_SESSION['data'] = serialize($game);
 
-        echo json_encode("pute");
+        echo json_encode($return);
 
         return;
     }
