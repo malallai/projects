@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/css/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/css/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,16 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day00/ex01/mendeleiev.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="112" selection-start-line="112" selection-end-line="117" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="765">
@@ -132,8 +141,8 @@
         <option value="$PROJECT_DIR$/day08/ex00/assets/js/main.js" />
         <option value="$PROJECT_DIR$/day08/ex00/init_game.php" />
         <option value="$PROJECT_DIR$/day08/ex00/get_game.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/test.php" />
         <option value="$PROJECT_DIR$/day08/ex00/assets/css/game.css" />
+        <option value="$PROJECT_DIR$/day08/ex00/test.php" />
       </list>
     </option>
   </component>
@@ -332,12 +341,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="724000" />
+      <workItem from="1559298616109" duration="808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124568000" />
+    <option name="totallyTimeSpent" value="124652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,9 +521,6 @@
           <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day00/ex01/mendeleiev.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/day00/ex03/responsive.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -692,17 +698,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/assets/css/game.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day00/ex01/mendeleiev.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="112" selection-start-line="112" selection-end-line="117" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
         </state>
       </provider>
     </entry>
