@@ -4,7 +4,21 @@ $(function () {
     getAsteroids();
 
     document.addEventListener('keydown', function(e) {
-        console.log(e);
+        switch (e.keyCode) {
+            case 38:
+                $('i[id=0]').click();
+                break;
+            case 40:
+                $('i[id=1]').click();
+                break;
+            case 37:
+                $('i[id=2]').click();
+                break;
+            case 39:
+                $('i[id=3]').click();
+                break;
+            default : break;
+        }
     });
 
     var ships = [];
