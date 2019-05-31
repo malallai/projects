@@ -20,19 +20,19 @@ class Map {
     public function init_grid() {
         for ($y = 0; $y < $this->_sizeY; $y++) {
             for ($x = 0; $x < $this->_sizeX; $x++) {
-                $this->_grid[$y][$x] = new Void($this, $x, $y);
+                $this->grid[$y][$x] = new Void($this, $x, $y);
             }
         }
         for ($i = 0; $i < $this->_asteroid_count; $i++) {
             $x = rand(0, $this->_sizeX);
             $y = rand(0, $this->_sizeY);
-            $this->_grid[$y][$x] = ($tmp = new Asteroid($this, $x, $y));
+            $this->grid[$y][$x] = ($tmp = new Asteroid($this, $x, $y));
             $this->_asteroids[] = $tmp;
         }
     }
 
     public function addShip(Ship $ship) {
-        $this->_grid[$ship->getY()][$ship->getX()] = $ship;
+        $this->grid[$ship->getY()][$ship->getX()] = $ship;
     }
 
     public function draw() {
@@ -51,19 +51,19 @@ class Map {
         if (!$this->checkCollision($x, $y)) {
             return false;
         }
-        $this->_grid[$old_y][$old_x] = new Void($this, $old_x, $old_y);
-        $this->_grid[$y][$x] = new Void($this, $old_x, $old_y);
+        $this->grid[$old_y][$old_x] = new Void($this, $old_x, $old_y);
+        $this->grid[$y][$x] = new Void($this, $old_x, $old_y);
         return true;
     }
 
     public function checkCollision($x, $y) {
-        if ($this->_grid[$y][$x] instanceof Asteroid)
+        if ($this->grid[$y][$x] instanceof Asteroid)
             return false;
-        if ($this->_grid[$y][$x + 1] instanceof Asteroid)
+        if ($this->grid[$y][$x + 1] instanceof Asteroid)
             return false;
-        if ($this->_grid[$y + 1][$x] instanceof Asteroid)
+        if ($this->grid[$y + 1][$x] instanceof Asteroid)
             return false;
-        if ($this->_grid[$y + 1][$x + 1] instanceof Asteroid)
+        if ($this->grid[$y + 1][$x + 1] instanceof Asteroid)
             return false;
         if ($x < 0 || $x + 1 > $this->_sizeX)
             return false;
