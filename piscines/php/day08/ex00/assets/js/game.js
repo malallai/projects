@@ -36,7 +36,6 @@ $(function () {
                     direction: direction
                 }
             }).done(function (data) {
-                console.log(data);
                 if (data) {
                     var tmp = ships;
                     getPlayers();
