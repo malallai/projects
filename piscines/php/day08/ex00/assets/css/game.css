@@ -35,6 +35,10 @@
     font-size: 3rem;
 }
 
+.movements i:hover {
+    cursor: pointer;
+}
+
 .move-point {
     color: lawngreen;
     font-size: 1.5rem;
