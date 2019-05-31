@@ -50,7 +50,6 @@ class Map {
     public function updateLocation(Ship $ship, $old_x, $old_y, $x, $y) {
         $this->_grid[$old_y][$old_x] = new Void($this, $old_x, $old_y);
         $this->_grid[$y][$x] = new Void($this, $old_x, $old_y);
-        return ($this->checkCollision($ship));
     }
 
     public function checkCollision(Ship $ship) {
