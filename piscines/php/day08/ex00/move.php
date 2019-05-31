@@ -14,6 +14,8 @@ if (isset($_POST['direction'])) {
 
         $player->getShip()->move($_POST['direction']);
 
+        $_SESSION['data'] = serialize($game);
+
         echo "pute";
 
         return;
