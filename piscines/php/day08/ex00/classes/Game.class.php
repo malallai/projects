@@ -24,7 +24,7 @@ class Game {
         $p1->setShip(new Ship($this->_map, 2, 5));
         $this->_map->addPlayer($p2);
         $p2->setName($players[1]);
-        $p2->setShip(new Ship($this->_map, 38, 5));
+        $p2->setShip(new Ship($this->_map, 36, 5));
         $this->_players = array($p1, $p2);
     }
 
