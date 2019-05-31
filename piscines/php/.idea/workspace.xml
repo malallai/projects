@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/rush00/cart.php" description="        remove_item_from_cart($_POST['id']);&#10;    }" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/assets/js/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Player.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Player.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/destroy.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/destroy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day08/ex00/get_players.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/get_players.php" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="48">
               <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/get_players.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -337,12 +340,12 @@
       <workItem from="1559129302664" duration="17130000" />
       <workItem from="1559218729104" duration="3141000" />
       <workItem from="1559232911640" duration="7355000" />
-      <workItem from="1559298616109" duration="18303000" />
+      <workItem from="1559298616109" duration="18349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142147000" />
+    <option name="totallyTimeSpent" value="142193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,17 +746,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/get_players.php">
+    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state relative-caret-position="48">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/assets/js/game.js">
+    <entry file="file://$PROJECT_DIR$/day08/ex00/get_players.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="195">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="50" />
         </state>
       </provider>
     </entry>
