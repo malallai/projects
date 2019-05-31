@@ -3,7 +3,7 @@ $(function () {
     getPlayers();
     getAsteroids();
 
-    $.keydown(function() {
+    $().keydown(function() {
         alert( "Handler for .keydown() called." );
     });
 
