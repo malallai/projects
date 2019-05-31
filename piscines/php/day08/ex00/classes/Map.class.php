@@ -65,9 +65,9 @@ class Map {
             return false;
         if (!($this->_grid[$y + 1][$x + 1] instanceof Void))
             return false;
-        if ($x < 0 || $x + 1 > !$this->_sizeX)
+        if ($x < 0 || $x + 1 > $this->_sizeX)
             return false;
-        if ($y < 0 || $y + 1 > !$this->_sizeY)
+        if ($y < 0 || $y + 1 > $this->_sizeY)
             return false;
         return true;
     }
