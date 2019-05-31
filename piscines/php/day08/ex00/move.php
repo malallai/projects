@@ -12,6 +12,10 @@ if (isset($_POST['direction'])) {
 
         $player = $game->getCurrentPlayer();
 
-        return $player->getShip()->move($_POST['direction']);
+        if ($player->getShip()->move($_POST['direction']) === false) {
+            echo "false";
+        } else echo "true";
+
+        return;
     }
 }
