@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +21,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Game.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -117,15 +137,15 @@
         <option value="$PROJECT_DIR$/day08/ex00/classes/doc/Ship.doc.txt" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/doc/SpaceEntity.doc.txt" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/doc/Void.doc.txt" />
-        <option value="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Direction.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Entity.class.php" />
-        <option value="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Player.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Ship.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/SpaceEntity.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Void.class.php" />
         <option value="$PROJECT_DIR$/day08/ex00/classes/Game.class.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/classes/Map.class.php" />
+        <option value="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" />
       </list>
     </option>
   </component>
@@ -248,12 +268,12 @@
       <workItem from="1559232911640" duration="7355000" />
       <workItem from="1559298616109" duration="20917000" />
       <workItem from="1559391651128" duration="650000" />
-      <workItem from="1559396210021" duration="32000" />
+      <workItem from="1559396210021" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145443000" />
+    <option name="totallyTimeSpent" value="145536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,24 +532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Direction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -627,7 +633,21 @@
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Game.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Map.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
