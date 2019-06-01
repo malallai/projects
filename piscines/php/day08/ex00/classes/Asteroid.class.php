@@ -19,7 +19,7 @@ class Asteroid extends SpaceEntity {
 
     public function __construct(Map $map, $x, $y) {
         parent::__construct($map, $x, $y);
-        $size = rand(0, $this->_max_size);
+        $size = rand(3, $this->_max_size);
         $this->sizeX = $size / 2;
         $this->sizeY = $size / 2;
         for ($shapeX = 0; $shapeX < $this->sizeX; $shapeX++) {
