@@ -6,7 +6,7 @@ class Asteroid extends SpaceEntity {
     public $shape;
     public $sizeX;
     public $sizeY;
-    private $_max_size = 20;
+    private $_max_size = 10;
 
 
     public static function doc() {
