@@ -17,7 +17,7 @@ class Game {
 
     public function __construct()
     {
-        $this->_map = new Map(150, 100);
+        $this->_map = new Map(100, 75);
     }
 
     /**
