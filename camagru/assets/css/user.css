@@ -1,0 +1,141 @@
+.user-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.user-infos-row {
+    display: flex;
+    flex-direction: row;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    width: 100%;
+}
+
+.infos .u-infos {
+    margin: 2rem 0;
+    transition: margin 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.u-infos-global {
+    margin: .5rem 0;
+}
+
+.u-infos-fullname {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.u-infos-global .posts .count {
+    font-weight: bold;
+}
+
+.infos .user-infos-pp {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 3rem;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.infos .user-infos-pp img {
+    width: 100%;
+}
+
+.u-infos-username {
+    margin-right: .5rem;
+}
+
+.posts {
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+}
+
+.post {
+    flex: auto;
+    width: 10rem;
+    position: relative;
+    margin: .5vw;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 20rem;
+}
+
+.post .picture img {
+    width: 100%;
+    height: 100%;
+    transition: all ease .25s;
+}
+
+.post .details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(43, 43, 43, .6);
+    color: #fff;
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+}
+
+.details .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.details .row .content {
+    margin: auto;
+}
+
+.posts .post:hover > .picture img {
+    transform: scale(1.025);
+}
+
+.posts .post:hover .details {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.inline-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.inline-flex * {
+    flex: 1;
+}
+
+@media only screen and (max-width: 450px) {
+    .infos .user-infos-pp {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    .infos .u-infos {
+        margin: 0;
+    }
+
+    .user-row {
+        padding: 0;
+    }
+
+    .post {
+        width: 15rem;
+    }
+}

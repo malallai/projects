@@ -1,0 +1,243 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/** Body */
+
+body {
+    display: flex;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', serif;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Header */
+
+header {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    padding: 0;
+    margin-bottom: auto;
+}
+
+.fix {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-basis: 63px;
+    height: 63px;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-content {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 800px;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-component {
+    display: flex;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-component * {
+    transition: 0.4s ease;
+    transition-delay:  0.1s;
+}
+
+/** Camagru top left*/
+
+.flex-component:nth-child(1) {
+    flex: 1;
+}
+
+.flex-component:nth-child(1) .logo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-component:nth-child(1) a {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+/** Search bar center*/
+
+.flex-component:nth-child(2) {
+    flex: 1;
+}
+
+.flex-component:nth-child(2) .search-component {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-component:nth-child(2) .search-bar {
+    width: 100%;
+    height: 65%;
+    position: relative;
+    border: solid 1px #dbdbdb;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.flex-component:nth-child(2) .bar {
+    height: 100%;
+}
+
+.flex-component:nth-child(2) input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #999;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 300;
+    border-style: none;
+}
+
+/** Icons top right*/
+
+.flex-component:nth-child(3) {
+    flex: 1;
+}
+
+.flex-component:nth-child(3) .icons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.flex-component:nth-child(3) .flex-icon {
+    box-sizing: border-box;
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+}
+
+.flex-component:nth-child(3) .icon {
+    margin: auto 0;
+    width: 100%;
+}
+
+.flex-component:nth-child(3) a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1001px) {
+    .flex-component:nth-child(1) {
+        margin-left: 1rem;
+    }
+
+    .flex-component:nth-child(3) {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .flex-component:nth-child(2) {
+        display: none;
+    }
+
+    .flex-component:nth-child(3) a {
+        font-size: 20px;
+    }
+}
+
+/** Footer */
+
+footer {
+    margin-top: auto;
+    background-color: #fff;
+    border-top: 1px solid rgba(0,0,0,.0975);
+    display: block;
+    font-size: 15px;
+}
+
+footer .links {
+    margin-left: 1rem;
+}
+
+.copyright {
+    margin-right: 1rem;
+}
+
+/** Aligns */
+
+.align-left {
+    float: left !important;
+    text-align: left;
+}
+
+.align-right {
+    float: right !important;
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.align-tab-left {
+    margin-left: 1rem;
+}
+
+/** Links */
+
+.link {
+    color: black;
+    text-decoration: none;
+}
