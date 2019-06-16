@@ -262,6 +262,9 @@ footer .links {
     background-color: #2b2b2b;
     margin: 0 auto;
     padding: 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
 }
 
 #snackbar.show {
