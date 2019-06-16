@@ -55,7 +55,8 @@
     document.getElementById("test").onclick = async function() {
         if (document.getElementById("snackbar").className !== "show"
             && document.getElementById("snackbar").className !== "hide") {
-            tmp.cancel();
+            if (tmp)
+                tmp.cancel();
             document.getElementById("snackbar").className = "show";
             tmp = sleep(5000);
             await tmp;
@@ -68,7 +69,8 @@
 
     document.getElementById("snackbar").onclick = async function() {
         if (document.getElementById("snackbar").className === "show") {
-            tmp.cancel();
+            if (tmp)
+                tmp.cancel();
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
             tmp = sleep(500);
             await tmp;
