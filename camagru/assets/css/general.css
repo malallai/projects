@@ -252,6 +252,7 @@ footer .links {
     display: flex;
     width: 100%;
     bottom: 30px;
+    position: fixed;
 }
 
 .snackbar {
