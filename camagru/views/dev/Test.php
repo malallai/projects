@@ -47,7 +47,7 @@
 </style>
 
 <div id="test">Test</div>
-<div id="snackbar">Error</div>
+<div id="snackbar" class="hide">Error</div>
 
 <script>
     document.getElementById("test").onclick = async function() {
