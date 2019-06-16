@@ -1,69 +1,30 @@
 window.onload = function() {
-    var login_button = document.getElementById('login-button');
-    var register_button = document.getElementById('register-button');
-    var reset_button = document.getElementById('reset-button');
-
-    var login_small_button = document.getElementById('login-small-button');
-    var register_small_button = document.getElementById('register-small-button');
-    var reset_small_button = document.getElementById('reset-small-button');
-
-    var login_content = document.getElementById('login-content');
-    var register_content = document.getElementById('register-content');
-    var reset_content = document.getElementById('reset-content');
-
-    login_button.addEventListener("click", function() {
-        clear_active();
-        login_button.classList.add("active");
-        login_small_button.classList.add("active");
-        login_content.classList.add("active");
-    });
-    register_button.addEventListener("click", function() {
-        clear_active();
-        register_button.classList.add("active");
-        register_small_button.classList.add("active");
-        register_content.classList.add("active");
-    });
-    reset_button.addEventListener("click", function() {
-        clear_active();
-        reset_button.classList.add("active");
-        reset_small_button.classList.add("active");
-        reset_content.classList.add("active");
-    });
-
-    login_small_button.addEventListener("click", function() {
-        clear_active();
-        login_button.classList.add("active");
-        login_small_button.classList.add("active");
-        login_content.classList.add("active");
-    });
-    register_small_button.addEventListener("click", function() {
-        clear_active();
-        register_button.classList.add("active");
-        register_small_button.classList.add("active");
-        register_content.classList.add("active");
-    });
-    reset_small_button.addEventListener("click", function() {
-        clear_active();
-        reset_button.classList.add("active");
-        reset_small_button.classList.add("active");
-        reset_content.classList.add("active");
-    });
-
-    function clear_active() {
-        login_button.classList.remove("active");
-        register_button.classList.remove("active");
-        reset_button.classList.remove("active");
-        login_small_button.classList.remove("active");
-        register_small_button.classList.remove("active");
-        reset_small_button.classList.remove("active");
-        login_content.classList.remove("active");
-        register_content.classList.remove("active");
-        reset_content.classList.remove("active");
+    async function new_snackbar(message) {
+        if (document.getElementById("snackbar").className !== "show"
+            && document.getElementById("snackbar").className !== "hide") {
+            document.getElementById("inner").innerHTML = document.getElementById("inner").innerHTML + "<div id='snackbar'>" + message + "</div>";
+            document.getElementById("snackbar").className = "show";
+            await sleep(5000);
+            hideSnack();
+        }
     }
 
+    async function hideSnack() {
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
+        await sleep(500);
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+    }
 
+    document.getElementById("snackbar").onclick = async function() {
+        if (document.getElementById("snackbar").className === "show") {
+            hideSnack();
+        }
+    };
 
-
-
+    function sleep(ms) {
+        if (tmp)
+            clearTimeout(tmp);
+        return new Promise(resolve => (tmp = setTimeout(resolve, ms)));
+    }
 };
 
