@@ -261,6 +261,7 @@ footer .links {
     color: #fff;
     background-color: #2b2b2b;
     margin: 0 auto;
+    padding: 16px;
 }
 
 #snackbar.show {
