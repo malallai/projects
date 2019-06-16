@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/rush00/cart.php" description="        remove_item_from_cart($_POST['id']);&#10;    }" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php" afterDir="false" />
-    </list>
+    <list default="true" id="bbf53c71-e0dd-4997-bd0c-750378693381" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="570">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -255,12 +253,12 @@
       <workItem from="1559232911640" duration="7355000" />
       <workItem from="1559298616109" duration="20917000" />
       <workItem from="1559391651128" duration="650000" />
-      <workItem from="1559396210021" duration="171000" />
+      <workItem from="1559396210021" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145582000" />
+    <option name="totallyTimeSpent" value="145658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,7 +271,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50145984" side_tool="true" weight="0.1584591" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49854013" visible="true" weight="0.14455917" />
@@ -633,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day08/ex00/classes/Asteroid.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="570">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
         </state>
       </provider>
     </entry>
