@@ -57,19 +57,21 @@
             && document.getElementById("snackbar").className !== "hide") {
             document.getElementById("snackbar").className = "show";
             await sleep(5000);
-            document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await sleep(500);
-            document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+            hideSnack();
         }
     };
 
     document.getElementById("snackbar").onclick = async function() {
         if (document.getElementById("snackbar").className === "show") {
-            document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await sleep(500);
-            document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+            hideSnack();
         }
     };
+
+    async function hideSnack() {
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
+        await sleep(500);
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+    }
 
     function sleep(ms) {
         if (tmp)
