@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Pages\GeneralPage;
+
 class Router {
     private $_routes = [];
 
@@ -21,7 +23,7 @@ class Router {
             }
         }
         header('HTTP/1.0 404 Not Found');
-        echo "<h1 style='text-align:center;'>Casses toi pd</h1>";
+        new GeneralPage("").index();
     }
 
 }
