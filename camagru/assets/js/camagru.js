@@ -1,7 +1,7 @@
 let tmp;
 async function new_snackbar(message) {
     if (document.getElementById("snackbar") === null) {
-        document.getElementById("inner").innerHTML = document.getElementById("inner").innerHTML + "<div onclick='hideSnack();' id='snackbar'>" + message + "</div>";
+        document.getElementById("inner").innerHTML = document.getElementById("inner").innerHTML + "<div id='snackbar' class='snackbar'><div onclick='hideSnack();' id='snackbar-message'>" + message + "</div></div>";
         document.getElementById("snackbar").className = "show";
         await sleep(5000);
         hideSnack();
