@@ -23,7 +23,8 @@ class Router {
             }
         }
         header('HTTP/1.0 404 Not Found');
-        new GeneralPage("").index();
+        $general = new GeneralPage("");
+        $general->index();
     }
 
 }
