@@ -11,7 +11,7 @@ async function new_snackbar(message) {
 async function hideSnack() {
     document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
     await sleep(500);
-    document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+    document.getElementById("snackbar").remove();
 }
 
 function sleep(ms) {
