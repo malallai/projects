@@ -165,5 +165,9 @@ input:focus, .button:focus {
     .title {
         font-size: 16px;
     }
+
+    .row {
+        padding: 0 .25rem;
+    }
 }
 
