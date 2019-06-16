@@ -42,13 +42,13 @@
 </style>
 
 <div id="test">Test</div>
-<div id="flash-error">Error</div>
+<div id="snackbar">Error</div>
 
 <script>
     document.getElementById("test").onclick = async function() {
-        document.getElementById("flash-error").className = "show";
+        document.getElementById("snackbar").className = "show";
         await sleep(3000);
-        document.getElementById("flash-error").className = document.getElementById("snackbar").className.replace("show", "");
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "");
     };
 
     function sleep(ms) {
