@@ -14,4 +14,5 @@ $router = new Router();
 $router->addRoute("", "Pages\GeneralPage@index");
 $router->addRoute("user", "Pages\UserPage@index");
 $router->addRoute("user/login", "Pages\UserPage@login");
+$router->addRoute("test", "Pages\GeneralPage@test");
 $router->route($url);

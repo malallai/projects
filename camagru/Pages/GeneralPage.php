@@ -21,4 +21,9 @@ class GeneralPage extends Page {
         }
     }
 
+    public function test() {
+        $params = array('content' => 'views/dev/Test');
+        $this->render($params);
+    }
+
 }
