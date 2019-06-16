@@ -55,30 +55,25 @@
     document.getElementById("test").onclick = async function() {
         if (document.getElementById("snackbar").className !== "show"
             && document.getElementById("snackbar").className !== "hide") {
-            if (tmp)
-                tmp.cancel();
             document.getElementById("snackbar").className = "show";
-            tmp = sleep(5000);
-            await tmp;
+            await sleep(5000);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            tmp = sleep(500);
-            await tmp;
+            await sleep(500);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
 
     document.getElementById("snackbar").onclick = async function() {
         if (document.getElementById("snackbar").className === "show") {
-            if (tmp)
-                tmp.cancel();
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            tmp = sleep(500);
-            await tmp;
+            await sleep(500);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
 
     function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
+        if (tmp)
+            clearTimeout(tmp);
+        return new Promise(resolve => (tmp = setTimeout(resolve, ms)));
     }
 </script>
