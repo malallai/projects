@@ -48,7 +48,7 @@
 </style>
 
 <div id="test">Test</div>
-<div id="snackbar">Test wod w dwiad iowand waiod wioad waiod wiao</div>
+<div id="snackbar">Test wod w dwiad iowand waiod wioad waiod wiaoTest wod w dwiad iowand waiod wioad waiod wiaoTest wod w dwiad iowand waiod wioad waiod wiao</div>
 
 <script>
     let tmp;
