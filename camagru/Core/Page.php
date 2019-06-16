@@ -15,6 +15,10 @@ class Page {
         die();
     }
 
+    public function snackbar($message) {
+        echo "<script>new_snackbar($message)</script>";
+    }
+
     public function render($params) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();

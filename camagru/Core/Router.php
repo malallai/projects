@@ -25,6 +25,7 @@ class Router {
         header('HTTP/1.0 404 Not Found');
         $general = new GeneralPage("");
         $general->index();
+        $general->snackbar("Error 404 Not Found");
     }
 
 }
