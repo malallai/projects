@@ -247,7 +247,7 @@ footer .links {
 
 /** Snackbar */
 
-.snackbar {
+#snackbar {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
@@ -262,13 +262,13 @@ footer .links {
     bottom: 30px;
 }
 
-.snackbar.show {
+#snackbar.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s;
     animation: fadein 0.5s;
 }
 
-.snackbar.hide {
+#snackbar.hide {
     visibility: visible;
     -webkit-animation: fadeout 0.5s;
     animation: fadeout 0.5s;
