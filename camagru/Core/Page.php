@@ -16,7 +16,7 @@ class Page {
     }
 
     public function snackbar($message) {
-        echo "<script>new_snackbar($message)</script>";
+        echo "<script>new_snackbar('$message')</script>";
     }
 
     public function render($params) {
