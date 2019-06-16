@@ -21,6 +21,7 @@
     }
 
     #snackbar.hide {
+        visibility: visible;
         -webkit-animation: fadeout 0.5s;
         animation: fadeout 0.5s;
     }
