@@ -16,8 +16,13 @@
 
     #snackbar.show {
         visibility: visible;
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        -webkit-animation: fadein 0.5s;
+        animation: fadein 0.5s;
+    }
+
+    #snackbar.hide {
+        -webkit-animation: fadeout 0.5s;
+        animation: fadeout 0.5s;
     }
 
     @-webkit-keyframes fadein {
@@ -46,9 +51,9 @@
 
 <script>
     document.getElementById("test").onclick = async function() {
-        document.getElementById("snackbar").className = "show";
-        await sleep(3000);
-        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "");
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "show");
+        await sleep(5000);
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
     };
 
     function sleep(ms) {
