@@ -51,21 +51,24 @@
 <div id="snackbar">Error</div>
 
 <script>
+    let tmp;
     document.getElementById("test").onclick = async function() {
         if (document.getElementById("snackbar").className !== "show"
             && document.getElementById("snackbar").className !== "hide") {
+            tmp.cancel();
             document.getElementById("snackbar").className = "show";
-            await sleep(5000);
+            await tmp = sleep(5000);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await sleep(500);
+            await tmp = sleep(500);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
 
     document.getElementById("snackbar").onclick = async function() {
         if (document.getElementById("snackbar").className === "show") {
+            tmp.cancel();
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await sleep(500);
+            await tmp = sleep(500);
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
