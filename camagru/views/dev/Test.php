@@ -70,7 +70,8 @@
         if (document.getElementById("snackbar").className === "show") {
             tmp.cancel();
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await tmp = sleep(500);
+            tmp = sleep(500);
+            await tmp;
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
