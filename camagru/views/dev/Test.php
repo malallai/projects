@@ -48,13 +48,16 @@
 </style>
 
 <div id="test">Test</div>
-<div id="snackbar" class="hide">Error</div>
+<div id="snackbar">Error</div>
 
 <script>
     document.getElementById("test").onclick = async function() {
-        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "show");
+        document.getElementById("snackbar").className = "show";
         await sleep(5000);
         document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
+        await sleep(500);
+        document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
+
     };
 
     function sleep(ms) {
