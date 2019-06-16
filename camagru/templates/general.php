@@ -52,7 +52,7 @@
                 </div>
             </div>
         </header>
-        <main class="inner">
+        <main id="inner" class="inner">
             <?= $content ?>
         </main>
         <footer>
