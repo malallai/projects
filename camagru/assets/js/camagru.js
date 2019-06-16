@@ -1,3 +1,4 @@
+let tmp;
 async function new_snackbar(message) {
     if (document.getElementById("snackbar").className !== "show"
         && document.getElementById("snackbar").className !== "hide") {
