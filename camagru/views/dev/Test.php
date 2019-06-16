@@ -57,9 +57,11 @@
             && document.getElementById("snackbar").className !== "hide") {
             tmp.cancel();
             document.getElementById("snackbar").className = "show";
-            await tmp = sleep(5000);
+            tmp = sleep(5000);
+            await tmp;
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "hide");
-            await tmp = sleep(500);
+            tmp = sleep(500);
+            await tmp;
             document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("hide", "");
         }
     };
