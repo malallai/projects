@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/camagru.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            <state relative-caret-position="195">
+              <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -225,12 +225,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560689952628</updated>
       <workItem from="1560689953776" duration="1525000" />
-      <workItem from="1560697309772" duration="5854000" />
+      <workItem from="1560697309772" duration="5967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7379000" />
+    <option name="totallyTimeSpent" value="7492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1401" height="1440" extended-state="0" />
@@ -395,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/camagru.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        <state relative-caret-position="195">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
         </state>
       </provider>
     </entry>
