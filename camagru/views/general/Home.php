@@ -135,33 +135,35 @@
         </div>
     </div>
     <div id="users-row" class="row users-row">
-        <div class="row-title">
-            <p>Utilisateurs</p>
-        </div>
-        <div class="users">
-            <div class="user">
-                <div class="user-pp">
-                    <img src="/assets/pictures/users/malo.jpg">
-                </div>
-                <div class="user-infos">
-                    <div class="user-name">
-                        <a href="/user/id">Malo</a>
-                    </div>
-                    <div class="posts-count">
-                        <p>1 photo</p>
-                    </div>
-                </div>
+        <div class="content">
+            <div class="row-title">
+                <p>Utilisateurs</p>
             </div>
-            <div class="user">
-                <div class="user-pp">
-                    <img src="/assets/pictures/users/malo.jpg">
-                </div>
-                <div class="user-infos">
-                    <div class="user-name">
-                        <a href="/user/id">Malo</a>
+            <div class="users">
+                <div class="user">
+                    <a href="/user" class="user-pp">
+                        <img src="/assets/pictures/users/malo.jpg">
+                    </a>
+                    <div class="user-infos">
+                        <div class="user-name">
+                            <a href="/user/id">Malo</a>
+                        </div>
+                        <div class="posts-count">
+                            <p>1 photo</p>
+                        </div>
                     </div>
-                    <div class="posts-count">
-                        <p>0 photo</p>
+                </div>
+                <div class="user">
+                    <a href="/user" class="user-pp">
+                        <img src="/assets/pictures/users/malo.jpg">
+                    </a>
+                    <div class="user-infos">
+                        <div class="user-name">
+                            <a href="/user/id">Malo</a>
+                        </div>
+                        <div class="posts-count">
+                            <p>0 photo</p>
+                        </div>
                     </div>
                 </div>
             </div>

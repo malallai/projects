@@ -71,13 +71,13 @@
     flex-direction: column;
 }
 
-.icons {
+.infos .icons {
     display: flex;
     padding: .5rem;
     font-size: 15px;
 }
 
-.icons a {
+.infos .icons a {
     margin-right: .75rem;
 }
 
@@ -96,8 +96,11 @@
 .users-row {
     flex-basis: 35%;
     background-color: #fff;
-    border: 1px solid rgba(0,0,0,.0975);
     border-radius: 2px;
+}
+
+.users-row .content {
+    border: 1px solid rgba(0,0,0,.0975);
 }
 
 .users-row .row-title {

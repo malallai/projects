@@ -1,3 +1,11 @@
+.icons {
+    font-size: 15px;
+}
+
+.inner {
+    margin: 2rem 0;
+}
+
 .user-row {
     display: flex;
     flex-direction: column;
@@ -11,12 +19,13 @@
     flex-direction: row;
     transition: 0.2s ease;
     transition-delay:  0.05s;
+    margin-bottom: 2rem;
 }
 
 .infos {
     display: flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: 0 1rem;
     width: 100%;
 }
 
@@ -67,16 +76,18 @@
     flex: auto;
     width: 10rem;
     position: relative;
-    margin: .5vw;
+    margin: .25rem;
     overflow: hidden;
     display: inline-block;
     max-width: 20rem;
+    font-size: 0;
 }
 
 .post .picture img {
     width: 100%;
     height: 100%;
     transition: all ease .25s;
+    transform: scale(1.025);
 }
 
 .post .details {
@@ -89,6 +100,7 @@
     color: #fff;
     opacity: 0;
     transition: 0.15s ease-in-out;
+    font-size: 15px;
 }
 
 .details .row {
@@ -102,12 +114,12 @@
 }
 
 .posts .post:hover > .picture img {
-    transform: scale(1.025);
+    transform: scale(1.075);
 }
 
 .posts .post:hover .details {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .inline-flex {
@@ -137,5 +149,19 @@
 
     .post {
         width: 15rem;
+        max-width: 30rem;
+        margin: .25rem 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .u-infos {
+        display: none;
+    }
+
+    .user-infos-pp {
+        margin: 0 auto !important;
+        width: 35vw !important;
+        height: 35vw !important;
     }
 }
