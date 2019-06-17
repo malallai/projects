@@ -1,4 +1,4 @@
-<link href="/assets/css/home.css" rel="stylesheet">
+<link href="/Public/assets/css/home.css" rel="stylesheet">
 <div class="home-row">
     <div id="posts-row" class="row posts-row">
         <div class="posts">
@@ -6,7 +6,7 @@
                 <div class="author">
                     <div class="user">
                         <div class="user-pp">
-                            <img src="/assets/pictures/users/malo.jpg">
+                            <img src="/Public/assets/pictures/users/malo.jpg">
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/assets/pictures/posts/0.jpg">
+                    <img src="/Public/assets/pictures/posts/0.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
@@ -32,7 +32,7 @@
                 <div class="author">
                     <div class="user">
                         <div class="user-pp">
-                            <img src="/assets/pictures/users/malo.jpg">
+                            <img src="/Public/assets/pictures/users/malo.jpg">
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/assets/pictures/posts/1.jpg">
+                    <img src="/Public/assets/pictures/posts/1.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
@@ -58,7 +58,7 @@
                 <div class="author">
                     <div class="user">
                         <div class="user-pp">
-                            <img src="/assets/pictures/users/malo.jpg">
+                            <img src="/Public/assets/pictures/users/malo.jpg">
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/assets/pictures/posts/2.jpg">
+                    <img src="/Public/assets/pictures/posts/2.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
@@ -84,7 +84,7 @@
                 <div class="author">
                     <div class="user">
                         <div class="user-pp">
-                            <img src="/assets/pictures/users/malo.jpg">
+                            <img src="/Public/assets/pictures/users/malo.jpg">
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/assets/pictures/posts/3.jpg">
+                    <img src="/Public/assets/pictures/posts/3.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
@@ -110,7 +110,7 @@
                 <div class="author">
                     <div class="user">
                         <div class="user-pp">
-                            <img src="/assets/pictures/users/malo.jpg">
+                            <img src="/Public/assets/pictures/users/malo.jpg">
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/assets/pictures/posts/4.jpg">
+                    <img src="/Public/assets/pictures/posts/4.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
@@ -142,7 +142,7 @@
             <div class="users">
                 <div class="user">
                     <a href="/user" class="user-pp">
-                        <img src="/assets/pictures/users/malo.jpg">
+                        <img src="/Public/assets/pictures/users/malo.jpg">
                     </a>
                     <div class="user-infos">
                         <div class="user-name">
@@ -155,7 +155,7 @@
                 </div>
                 <div class="user">
                     <a href="/user" class="user-pp">
-                        <img src="/assets/pictures/users/malo.jpg">
+                        <img src="/Public/assets/pictures/users/malo.jpg">
                     </a>
                     <div class="user-infos">
                         <div class="user-name">

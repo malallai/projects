@@ -16,13 +16,13 @@ class GeneralPage extends Page {
 
     public function indexPage($page) {
         if ($page === 0) {
-            $params = array('content' => 'views/general/Home');
+            $params = array('content' => 'general/Home');
             $this->render($params);
         }
     }
 
-    public function test() {
-        $params = array('content' => 'views/dev/Test');
+    public function dev() {
+        $params = array('content' => 'dev/Test');
         $this->render($params);
     }
 

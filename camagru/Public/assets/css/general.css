@@ -247,12 +247,19 @@ footer .links {
 
 /** Snackbar */
 
-#snackbar {
+.snacks {
     visibility: hidden;
     display: flex;
     width: 100%;
-    bottom: 30px;
+    bottom: 0;
     position: fixed;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.snackflex {
+    margin: .25rem auto;
+    position: relative;
 }
 
 .snackbar {
@@ -261,22 +268,45 @@ footer .links {
     color: #fff;
     background-color: #2b2b2b;
     margin: 0 auto;
-    padding: 16px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
 
-#snackbar.show {
+.snackflex.show-anim > .snackbar {
+    -webkit-animation: pop 0.5s;
+    animation: pop 0.5s;
+}
+
+.snackflex.show {
+    visibility: visible;
+    bottom: 30px;
+}
+
+.snackflex.show > .snackbar, .snackflex.hide-anim > .snackbar {
+    padding: 16px;
+}
+
+.snackflex.show-anim {
     visibility: visible;
     -webkit-animation: fadein 0.5s;
     animation: fadein 0.5s;
 }
 
-#snackbar.hide {
+.snackflex.hide-anim {
     visibility: visible;
     -webkit-animation: fadeout 0.5s;
     animation: fadeout 0.5s;
+}
+
+@-webkit-keyframes pop {
+    from {padding:0;}
+    to {padding:16px;}
+}
+
+@keyframes pop {
+    from {padding:0;}
+    to {padding:16px;}
 }
 
 @-webkit-keyframes fadein {

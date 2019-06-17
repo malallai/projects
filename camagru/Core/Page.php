@@ -5,6 +5,7 @@ class Page {
 
     protected $_url;
     protected $_template;
+    protected $_sql;
 
     public function __construct($url = "") {
         $this->_url = $url;
@@ -15,10 +16,6 @@ class Page {
         die();
     }
 
-    public function snackbar($message) {
-        echo "<script>new_snackbar('$message')</script>";
-    }
-
     public function render($params) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -26,10 +23,13 @@ class Page {
         $token = bin2hex(random_bytes(50));
         $_SESSION['token'] = $token;
         ob_start();
-        require $params['content'] . '.php';
+        require "Public/views/" . $params['content'] . '.php';
         $content = ob_get_clean();
+        if (Snackbar::has_snack()) {
+            $content .= Snackbar::render_snacks();
+        }
         $_logged = isset($_SESSION['user']) ? true : false;
-        require $this->_template . '.php';
+        require "Public/views/" . $this->_template . '.php';
     }
 
 }

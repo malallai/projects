@@ -1,1 +1,0 @@
-<div id="test" onclick="new_snackbar('Test snackbar');">Test</div>

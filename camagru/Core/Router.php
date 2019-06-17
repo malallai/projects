@@ -3,7 +3,6 @@
 namespace Core;
 
 use Pages\GeneralPage;
-
 class Router {
     private $_routes = [];
 
@@ -23,9 +22,9 @@ class Router {
             }
         }
         header('HTTP/1.0 404 Not Found');
+        Snackbar::send_snack("Error '".$url."' not found. Please contact us. (404)");
         $general = new GeneralPage("");
         $general->index();
-        $general->snackbar("Error 404 Not Found");
     }
 
 }
