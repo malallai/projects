@@ -42,9 +42,9 @@
 
         <div  id="reset-content" class="content content-reset">
             <h2 class="title">Veuillez indiquer votre adresse</h2>
-            <form method="POST" action="/user/resetpw">
+            <form method="POST" action="/user/resetpw_ask">
                 <input type="hidden" name="token" value="<?= $token ?>">
-                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required="" autofocus="">
+                <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required="" autofocus="">
                 <input class="button black" name="reset" value="Réinitialiser" type="submit">
             </form>
         </div>

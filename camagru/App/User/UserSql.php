@@ -74,4 +74,70 @@ class UserSql extends Sql {
         return ($upper >= 1 && $lower >= 1 && $nbr >= 1 && $special >= 1 && $len >= 8);
     }
 
+    public function confirm($token) {
+        $token = htmlspecialchars(explode('/', $token)[2]);
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        try {
+            $result = self::prepare("SELECT id FROM users WHERE conf_token = ?", array($token));
+            if (!isset($result) || empty($result)) {
+                return false;
+            }
+            $uid = $result['id'];
+            $result = self::prepare("UPDATE users SET confirmed = 1, conf_token = NULL WHERE id = ?", array($uid));
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public function send_reset($mail) {
+        $mail = htmlspecialchars($mail);
+        $token = bin2hex(random_bytes(32));
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        try {
+            $result = self::prepare("SELECT id FROM users WHERE email = ?", array($mail));
+            if (!isset($result) || empty($result)) {
+                return false;
+            }
+            self::prepare("INSERT INTO pwd_reset (user_id, token) VALUES (?,?)", array($result['id'], $token));
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public function edit_pwd($password, $token) {
+        $password = hash('whirlpool', $password);
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        try {
+            $result = self::prepare("SELECT user_id FROM pwd_reset WHERE token = ?", array($token));
+            if (!isset($result) || empty($result)) {
+                return false;
+            }
+            self::prepare("UPDATE users SET password = ? WHERE id = ?", array($password, $result['user_id']));
+            self::prepare("DELETE FROM pwd_reset WHERE token LIKE ? ESCAPE '#'", array($token));
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        return true;
+    }
+
 }

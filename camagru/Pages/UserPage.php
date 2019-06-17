@@ -46,13 +46,62 @@ class UserPage extends Page {
                 } else {
                     Snackbar::send_snack("Les mots de passes ne sont pas identique.");
                 }
-            } else {
-                Snackbar::send_snack("Bad token.");
             }
-        } else {
-            Snackbar::send_snack("Bad post request.");
         }
         $this->redirect("/user");
+    }
+
+    public function confirm() {
+        if ($this->_sql->confirm($this->_url)) {
+            Snackbar::send_snack("Compte confirmé avec succes.");
+            Snackbar::send_snack("Vous pouvez désormais vous connecter.");
+        } else {
+            Snackbar::send_snack("Token de confirmation inconnue.");
+        }
+        $this->redirect("/user");
+    }
+
+    public function reset_ask() {
+        if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
+            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
+                $this->_sql->send_reset($_POST['mail']);
+                Snackbar::send_snack("L'email à été envoyé si l'adresse indiqué existe dans notre base de donnée.");
+                Snackbar::send_snack("Vérifiez vos spam.");
+                $this->redirect("/user");
+            }
+        }
+    }
+
+    public function resetpw() {
+        if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
+            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
+                if ($_POST['password'] === $_POST['password_repeat']) {
+                    if ($this->_sql->check_pwd($_POST['password'])) {
+                        if ($this->_sql->edit_pwd($_POST['password'], $_POST['reset_token'])) {
+                            Snackbar::send_snack("Votre mot de passe à été modifié.");
+                            Snackbar::send_snack("Vous pouvez vous connecter.");
+                        } else {
+                            Snackbar::send_snack("Une erreur est survenue.");
+                            $this->redirect("/user/resetpw/".$_POST['reset_token']);
+                        }
+                    } else {
+                        Snackbar::send_snack("Votre mot de passe n'est pas suffisamment sécurisé!");
+                        Snackbar::send_snack("Veuillez mettre au moins : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+                        $this->redirect("/user/resetpw/".$_POST['reset_token']);
+                    }
+                } else {
+                    Snackbar::send_snack("Les mots de passes ne sont pas identique.");
+                    $this->redirect("/user/resetpw/".$_POST['reset_token']);
+                }
+                $this->redirect("/user");
+            }
+        }
+        $this->redirect("/user");
+    }
+
+    public function resetpw_edit() {
+        $params = array('content' => 'user/PwdReset');
+        $this->render($params);
     }
 
 }
