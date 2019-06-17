@@ -1,9 +1,9 @@
-<link href="/assets/css/user.css" rel="stylesheet">
+<link href="/Public/assets/css/user.css" rel="stylesheet">
 <div class="user-row">
     <div class="row user-infos-row">
         <div class="infos">
             <div class="user-infos-pp">
-                <img src="/assets/pictures/users/malo.jpg">
+                <img src="/Public/assets/pictures/users/malo.jpg">
             </div>
             <div class="u-infos">
                 <div class="inline-flex">
@@ -27,7 +27,7 @@
         <div class="posts">
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/0.jpg">
+                    <img src="/Public/assets/pictures/posts/0.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
@@ -46,7 +46,7 @@
             </div>
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/2.jpg">
+                    <img src="/Public/assets/pictures/posts/2.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
@@ -65,7 +65,7 @@
             </div>
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/0.jpg">
+                    <img src="/Public/assets/pictures/posts/0.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
@@ -84,7 +84,7 @@
             </div>
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/2.jpg">
+                    <img src="/Public/assets/pictures/posts/2.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
@@ -103,7 +103,7 @@
             </div>
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/0.jpg">
+                    <img src="/Public/assets/pictures/posts/0.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
@@ -122,7 +122,7 @@
             </div>
             <div class="post">
                 <span class="picture">
-                    <img src="/assets/pictures/posts/2.jpg">
+                    <img src="/Public/assets/pictures/posts/2.jpg">
                 </span>
                 <div class="details">
                     <div class="row">
