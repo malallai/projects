@@ -6,6 +6,7 @@ use Core\Sql;
 use \PDO;
 use Exceptions\SqlException;
 use Core\Snackbar;
+use Core\Mail;
 class UserSql extends Sql {
 
     public function auth($username, $pwd) {
@@ -55,6 +56,16 @@ class UserSql extends Sql {
                 Snackbar::send_snack("Email or username already taken. ");
                 return false;
             }
+            $link = "https://camagru.malallai.fr/user/confirm/".$confirm_key;
+            Mail::create_mail($mail, "Confirmation d'inscription",
+                "Merci de t'être inscrit sur Camagru.".
+                "</br>".
+                "Afin de pouvoir te connecter, merci de confirmer ton inscription cliquant <a href='$link'>ici</a>.".
+                "</br></br>".
+                "Merci de ta confiance et à bientôt sur Camagru.".
+                "</br></br>".
+                "<span style='color:#999'>Si le lien ne fonctionne pas voici le lien direct: $link</span>"
+            );
             $result = self::prepare("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirm_key));
             Snackbar::send_snack("Account successfuly created.");
             Snackbar::send_snack("Please confirm your account. Don't forget to checks spams.");
@@ -110,6 +121,17 @@ class UserSql extends Sql {
             if (!isset($result) || empty($result)) {
                 return false;
             }
+            $link = "https://camagru.malallai.fr/user/resetpw/".$token;
+            Mail::create_mail($mail, "Changement de mot de passe",
+                "Tu as fais une demande pour changer ton mot de passe.".
+                "</br>".
+                "Cliques <a href='$link'>ici</a> afin de procéder.".
+                "</br></br>".
+                "Si tu n'es pas à l'origine de cette demande, ignore ce mail.".
+                "Merci de ta confiance et à bientôt sur Camagru.".
+                "</br></br>".
+                "<span style='color:#999'>Si le lien ne fonctionne pas voici le lien direct: $link</span>"
+            );
             self::prepare("INSERT INTO pwd_reset (user_id, token) VALUES (?,?)", array($result['id'], $token));
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
@@ -131,7 +153,14 @@ class UserSql extends Sql {
             if (!isset($result) || empty($result)) {
                 return false;
             }
-            self::prepare("UPDATE users SET password = ? WHERE id = ?", array($password, $result['user_id']));
+            $result = self::prepare("SELECT id, email FROM users WHERE id = ?", array($result['user_id']));
+            $link = "https://camagru.malallai.fr/user/resetpw/".$token;
+            Mail::create_mail($result['email'], "Changement de mot de passe",
+                "Ton mot de passe viens d'être modifié.".
+                "</br></br>".
+                "Merci de ta confiance et à bientôt sur Camagru."
+            );
+            self::prepare("UPDATE users SET password = ? WHERE id = ?", array($password, $result['id']));
             self::prepare("DELETE FROM pwd_reset WHERE token LIKE ? ESCAPE '#'", array($token));
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
