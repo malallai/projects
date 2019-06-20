@@ -23,5 +23,6 @@ $router->addRoute("user/confirm/(.*)", "Pages\UserPage@confirm");
 $router->addRoute("user/logout", "Pages\UserPage@logout");
 
 
-$router->addRoute("dev", "Pages\GeneralPage@dev");
+$router->addRoute("dev", "Pages\DevPage@index");
+$router->addRoute("dev/mail", "Pages\DevPage@mail");
 $router->route($url);
