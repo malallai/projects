@@ -10,6 +10,7 @@ $url = $_GET['url'];
 
 $router = new Router();
 $router->addRoute("", "Pages\GeneralPage@index");
+$router->addRoute("index", "Pages\GeneralPage@index");
 
 $router->addRoute("user", "Pages\UserPage@index");
 $router->addRoute("profile", "Pages\ProfilePage@index");
