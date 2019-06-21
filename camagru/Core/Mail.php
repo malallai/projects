@@ -30,11 +30,21 @@ class Mail {
     }
 
     public function send() {
-
+        $headers[] = "MIME-Version: 1.0";
+        $headers[] = "Content-Type: text/html; charset=UTF-8";
+        $headers[] = "From: ".$this->_from;
+        return (mail($this->_from, $this->_to, $this->_object, $this->_message, implode("\r\n", $headers)));
     }
 
-    public static function newMail() {
-
+    public static function newMail($to, $object, $mail_content) {
+        $mail_content = wordwrap($mail_content, 70, "\r\n");
+        ob_start();
+        require 'Public/views/mail/Template.php';
+        $result = ob_get_clean();
+        $mail = new Mail($to);
+        $mail->setObject($object);
+        $mail->setMessage($result);
+        return $mail->send();
     }
 
 }
