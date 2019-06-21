@@ -57,7 +57,7 @@ class UserSql extends Sql {
                 return false;
             }
             $link = "https://camagru.malallai.fr/user/confirm/".$confirm_key;
-            Mail::create_mail($mail, "Confirmation d'inscription",
+            Mail::newMail($mail, "Confirmation d'inscription",
                 "Merci de t'être inscrit sur Camagru.".
                 "</br>".
                 "Afin de pouvoir te connecter, merci de confirmer ton inscription cliquant <a href='$link'>ici</a>.".
@@ -122,7 +122,7 @@ class UserSql extends Sql {
                 return false;
             }
             $link = "https://camagru.malallai.fr/user/resetpw/".$token;
-            Mail::create_mail($mail, "Changement de mot de passe",
+            Mail::newMail($mail, "Changement de mot de passe",
                 "Tu as fais une demande pour changer ton mot de passe.".
                 "</br>".
                 "Cliques <a href='$link'>ici</a> afin de procéder.".
@@ -155,7 +155,7 @@ class UserSql extends Sql {
             }
             $result = self::prepare("SELECT id, email FROM users WHERE id = ?", array($result['user_id']));
             $link = "https://camagru.malallai.fr/user/resetpw/".$token;
-            Mail::create_mail($result['email'], "Changement de mot de passe",
+            Mail::newMail($result['email'], "Changement de mot de passe",
                 "Ton mot de passe viens d'être modifié.".
                 "</br></br>".
                 "Merci de ta confiance et à bientôt sur Camagru."

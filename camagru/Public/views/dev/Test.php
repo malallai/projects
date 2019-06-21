@@ -7,7 +7,7 @@
 use Core\Mail;
 
 $link = "https://camagru.malallai.fr/user/confirm";
-Mail::create_mail("malallai@student.42.fr", "Confirmation d'inscription",
+Mail::newMail("malallai@student.42.fr", "Confirmation d'inscription",
     "Merci de t'être inscrit sur Camagru.".
     "</br>".
     "Afin de pouvoir te connecter, merci de confirmer ton inscription cliquant <a href='$link'>ici</a>.".
