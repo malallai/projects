@@ -3,6 +3,7 @@
 namespace Pages;
 use App\User\UserController;
 use Core\Page;
+use Core\Session;
 use Core\Snackbar;
 use App\User\UserStatus;
 
@@ -111,8 +112,7 @@ class UserPage extends Page {
 
     public function logout() {
         if ($this->_controller->isLogged()) {
-            $_SESSION = array();
-            session_destroy();
+            Session::resetSession();
             Snackbar::send_snack("Vous avez été déconnécté avec succès.");
             $this->redirect("index");
         }

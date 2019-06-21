@@ -17,9 +17,7 @@ class Page {
     }
 
     public function render($params) {
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
+        Session::startSession();
         $token = bin2hex(random_bytes(50));
         $_SESSION['token'] = $token;
         ob_start();
