@@ -9,7 +9,7 @@ class Session {
     }
 
     public static function startSession() {
-        Snackbar::send_snack(self::checkSession());
+        Snackbar::send_snack(self::checkSession().session_status());
         if (!self::checkSession()) {
             session_start();
         }
