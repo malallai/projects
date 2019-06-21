@@ -16,7 +16,7 @@ class UserPage extends Page {
     }
 
     public function index() {
-        if ($this->_controller->isLogged()) {
+        if (!$this->_controller->isLogged()) {
             $params = array('content' => 'user/User');
             $this->render($params);
         } else {
