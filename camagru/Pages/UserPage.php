@@ -110,7 +110,12 @@ class UserPage extends Page {
     }
 
     public function logout() {
-
+        if ($this->_controller->isLogged()) {
+            $_SESSION = array();
+            session_destroy();
+            Snackbar::send_snack("Vous avez été déconnécté avec succès.");
+            $this->redirect("index");
+        }
     }
 
 }
