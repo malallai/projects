@@ -9,7 +9,7 @@ class DevPage extends Page {
         $this->_template = "templates/general";
     }
 
-    public function dev() {
+    public function index() {
         $params = array('content' => 'dev/Test');
         $this->render($params);
     }
