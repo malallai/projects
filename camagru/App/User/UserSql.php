@@ -3,7 +3,6 @@
 namespace App\User;
 
 use Core\Sql;
-use \PDO;
 use Exceptions\SqlException;
 use Core\Snackbar;
 use Core\Mail;
