@@ -5,7 +5,7 @@ class Page {
 
     protected $_url;
     protected $_template;
-    protected $_sql;
+    protected $_controller;
 
     public function __construct($url = "") {
         $this->_url = $url;

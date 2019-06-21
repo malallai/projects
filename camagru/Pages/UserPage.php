@@ -1,28 +1,32 @@
 <?php
 
 namespace Pages;
-use App\User\UserSql;
+use App\User\UserController;
 use Core\Page;
 use Core\Snackbar;
-use Core\UserStatus;
+use App\User\UserStatus;
 
 class UserPage extends Page {
 
     public function __construct($url) {
         parent::__construct($url);
         $this->_template = "templates/general";
-        $this->_sql = new UserSql();
+        $this->_controller = new UserController();
     }
 
     public function index() {
-        $params = array('content' => 'user/User');
-        $this->render($params);
+        if ($this->_controller->isLogged()) {
+            $params = array('content' => 'user/User');
+            $this->render($params);
+        } else {
+            $this->redirect("/profile");
+        }
     }
 
     public function login() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
-            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
-                if ($this->_sql->auth($_POST['username'], $_POST['password'])) {
+            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+                if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
                     $_SESSION['user'] = serialize(array("username" => $_POST['username'], "status" => UserStatus::connected));
                     Snackbar::send_snack("Connection successful.");
                     $this->redirect("/profile");
@@ -35,10 +39,10 @@ class UserPage extends Page {
 
     public function register() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['register']) && !empty($_POST['register'])) {
-            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_sql->check_pwd($_POST['password'])) {
-                        $this->_sql->register($_POST['username'], $_POST['mail'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+                    if ($this->_controller->getSql()->check_pwd($_POST['password'])) {
+                        $this->_controller->getSql()->register($_POST['username'], $_POST['mail'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
                         $this->redirect("/user");
                     } else {
                         Snackbar::send_snack("Votre mot de passe n'est pas suffisamment sécurisé!");
@@ -53,7 +57,7 @@ class UserPage extends Page {
     }
 
     public function confirm() {
-        if ($this->_sql->confirm($this->_url)) {
+        if ($this->_controller->getSql()->confirm($this->_url)) {
             Snackbar::send_snack("Compte confirmé avec succes.");
             Snackbar::send_snack("Vous pouvez désormais vous connecter.");
         } else {
@@ -64,8 +68,8 @@ class UserPage extends Page {
 
     public function reset_ask() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
-                $this->_sql->send_reset($_POST['mail']);
+            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+                $this->_controller->getSql()->send_reset($_POST['mail']);
                 Snackbar::send_snack("L'email à été envoyé si l'adresse indiqué existe dans notre base de donnée.");
                 Snackbar::send_snack("Vérifiez vos spam.");
                 $this->redirect("/user");
@@ -75,10 +79,10 @@ class UserPage extends Page {
 
     public function resetpw() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && $this->_sql->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_sql->check_pwd($_POST['password'])) {
-                        if ($this->_sql->edit_pwd($_POST['password'], $_POST['reset_token'])) {
+                    if ($this->_controller->getSql()->check_pwd($_POST['password'])) {
+                        if ($this->_controller->getSql()->edit_pwd($_POST['password'], $_POST['reset_token'])) {
                             Snackbar::send_snack("Votre mot de passe à été modifié.");
                             Snackbar::send_snack("Vous pouvez vous connecter.");
                         } else {
