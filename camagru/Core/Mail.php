@@ -33,7 +33,7 @@ class Mail {
         $headers[] = "MIME-Version: 1.0";
         $headers[] = "Content-Type: text/html; charset=UTF-8";
         $headers[] = "From: ".$this->_from;
-        return (mail($this->_from, $this->_to, $this->_object, $this->_message, implode("\r\n", $headers)));
+        return (mail($this->_to, $this->_object, $this->_message, implode("\r\n", $headers)));
     }
 
     public static function newMail($to, $object, $mail_content) {
