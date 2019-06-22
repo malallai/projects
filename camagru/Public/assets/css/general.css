@@ -194,6 +194,13 @@ header {
 
 /** User sub nav */
 
+.user-icon .user-nav {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+
 .user-icon .user-nav li {
     list-style-type: none;
 }
