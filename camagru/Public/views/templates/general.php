@@ -46,11 +46,9 @@
                                         <i class='fas fa-user'></i>
                                     </a>
                                 </div>
-                                <nav class="user-nav">
-                                    <ul>
-                                        <li><a>Se connecter</a></li>
-                                    </ul>
-                                </nav>
+                                <ul class="user-nav">
+                                    <li><a>Se connecter</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
