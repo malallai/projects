@@ -56,11 +56,8 @@
     padding: 0 !important;
 }
 
-.nav-content .nav-small {
+.nav-content .icon {
     display: none;
-}
-
-.nav-content .nav-small {
     font-size: 10px;
 }
 
@@ -142,12 +139,12 @@ input:focus, .button:focus {
 }
 
 @media only screen and (max-width: 450px) {
-    .nav-content .nav-big {
-        display: none;
+    .nav-content .icon {
+        display: block;
     }
 
-    .nav-content .nav-small {
-        display: block;
+    .nav-content .text {
+        display: none;
     }
 
     .inline-flex {

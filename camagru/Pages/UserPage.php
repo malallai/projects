@@ -29,7 +29,7 @@ class UserPage extends Page {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
                     $_SESSION['user'] = serialize(array("username" => $_POST['username'], "status" => UserStatus::connected));
-                    Snackbar::send_snack("Connection successful.");
+                    Snackbar::send_snack("Connexion réussi.");
                     $this->redirect("/profile");
                 }
             }
@@ -71,7 +71,7 @@ class UserPage extends Page {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 $this->_controller->getSql()->send_reset($_POST['mail']);
-                Snackbar::send_snack("L'email à été envoyé si l'adresse indiqué existe dans notre base de donnée.");
+                Snackbar::send_snack("Un email vous a été envoyé sur l'adresse indiqué est correct.");
                 Snackbar::send_snack("Vérifiez vos spam.");
                 $this->redirect("/user");
             }
