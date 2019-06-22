@@ -45,10 +45,10 @@
                                     <a href="/user">
                                         <i class='fas fa-user'></i>
                                     </a>
+                                    <ul class="user-nav">
+                                        <li><a>Se connecter</a></li>
+                                    </ul>
                                 </div>
-                                <ul class="user-nav">
-                                    <li><a>Se connecter</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
