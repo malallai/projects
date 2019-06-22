@@ -4,12 +4,18 @@
     <div class="row-content">
         <div class="nav-content">
             <div class="nav">
-                <a id="login-button" class="active nav-big">Connexion</a>
-                <a id="register-button" class="nav-big">Inscription</a>
-                <a id="reset-button" class="nav-big">Réinitialiser</a>
-                <a id="login-small-button" class="active nav-small"><i class="fas fa-unlock"></i></a>
-                <a id="register-small-button" class="nav-small"><i class="fas fa-pen"></i></a>
-                <a id="reset-small-button" class="nav-small"><i class="fas fa-lock"></i></a>
+                <a id="login-button" class="active">
+                    <span class="text active">Connexion</span>
+                    <span class="icon"><i class="fas fa-unlock"></i></span>
+                </a>
+                <a id="register-button" class="">
+                    <span class="text active">Inscription</span>
+                    <span class="icon"><i class="fas fa-pen"></i></span>
+                </a>
+                <a id="reset-button" class="">
+                    <span class="text active">Réinitialiser</span>
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                </a>
             </div>
         </div>
         <div  id="login-content" class="content content-login active">
