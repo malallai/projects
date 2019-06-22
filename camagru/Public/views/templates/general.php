@@ -44,6 +44,11 @@
                                 <div class="icon">
                                     <a href="/user">
                                         <i class='fas fa-user'></i>
+                                        <nav class="user-nav">
+                                            <ul>
+                                                <li><a>Se connecter</a></li>
+                                            </ul>
+                                        </nav>
                                     </a>
                                 </div>
                             </div>
