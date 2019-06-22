@@ -56,7 +56,7 @@
     padding: 0 !important;
 }
 
-.nav-content .icon {
+.nav .icon {
     display: none;
     font-size: 10px;
 }
@@ -139,11 +139,11 @@ input:focus, .button:focus {
 }
 
 @media only screen and (max-width: 450px) {
-    .nav-content .icon {
+    .nav .icon {
         display: block;
     }
 
-    .nav-content .text {
+    .nav .text {
         display: none;
     }
 
