@@ -41,15 +41,15 @@
                                 </div>
                             </div>
                             <div class="flex-icon">
-                                <div class="icon">
+                                <div class="icon user-icon">
                                     <a href="/user">
                                         <i class='fas fa-user'></i>
-                                        <nav class="user-nav">
-                                            <ul>
-                                                <li><a>Se connecter</a></li>
-                                            </ul>
-                                        </nav>
                                     </a>
+                                    <nav class="user-nav">
+                                        <ul>
+                                            <li><a>Se connecter</a></li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
