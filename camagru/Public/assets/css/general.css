@@ -192,6 +192,12 @@ header {
     }
 }
 
+/** User sub nav */
+
+.user-icon .user-nav li {
+    list-style-type: none;
+}
+
 /** Footer */
 
 footer {
