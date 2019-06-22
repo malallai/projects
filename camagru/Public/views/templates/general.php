@@ -40,17 +40,17 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex-icon">
-                                <div class="icon user-icon">
+                            <div class="flex-icon user-icon">
+                                <div class="icon">
                                     <a href="/user">
                                         <i class='fas fa-user'></i>
                                     </a>
-                                    <nav class="user-nav">
-                                        <ul>
-                                            <li><a>Se connecter</a></li>
-                                        </ul>
-                                    </nav>
                                 </div>
+                                <nav class="user-nav">
+                                    <ul>
+                                        <li><a>Se connecter</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
