@@ -23,6 +23,8 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
+    overflow-x: auto;
 }
 
 /** Header */
@@ -200,7 +202,6 @@ header {
     display: inline-block;
     position: fixed;
     right: 0;
-    top: 47px;
     height: 100%;
     background-color: #fff;
     border-left: 1px solid rgba(0,0,0,.0975);
@@ -209,6 +210,11 @@ header {
 
 .user-nav li {
     list-style-type: none;
+}
+
+.user-nav.active > .container {
+    opacity: 1;
+    overflow-y: hidden;
 }
 
 /** Footer */
