@@ -119,6 +119,16 @@ body .overlay {
     to {opacity:1;}
 }
 
+@-webkit-keyframes hide_overlay {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@keyframes hide_overlay {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
 @-webkit-keyframes hide_aside {
     from {width:25rem;visibility: visible;}
     to {width:0;visibility: hidden;}
