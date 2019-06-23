@@ -83,6 +83,11 @@ body[has_aside] .aside-bar {
     animation: show_aside 0.5s;
 }
 
+body .aside-bar {
+    -webkit-animation: hide_aside 0.5s;
+    animation: hide_aside 0.5s;
+}
+
 @-webkit-keyframes show_aside {
     from {width:0;}
     to {width:25rem;}
@@ -91,6 +96,16 @@ body[has_aside] .aside-bar {
 @keyframes show_aside {
     from {width:0;}
     to {width:25rem;}
+}
+
+@-webkit-keyframes hide_aside {
+    from {width:25rem;}
+    to {width:0;}
+}
+
+@keyframes hide_aside {
+    from {width:25rem;}
+    to {width:0;}
 }
 
 /** Header */
