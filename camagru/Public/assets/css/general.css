@@ -99,13 +99,13 @@ body .aside-bar {
 }
 
 @-webkit-keyframes hide_aside {
-    from {width:25rem;}
-    to {width:0;}
+    from {width:25rem;visibility: visible;}
+    to {width:0;visibility: hidden;}
 }
 
 @keyframes hide_aside {
-    from {width:25rem;}
-    to {width:0;}
+    from {width:25rem;visibility: visible;}
+    to {width:0;visibility: hidden;}
 }
 
 /** Header */
