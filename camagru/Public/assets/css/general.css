@@ -78,6 +78,21 @@ body[has_aside] .container {
     overflow-y: hidden;
 }
 
+body[has_aside] .aside-bar {
+    -webkit-animation: show_aside 0.5s;
+    animation: show_aside 0.5s;
+}
+
+@-webkit-keyframes show_aside {
+    from {padding:0;}
+    to {padding:16px;}
+}
+
+@keyframes show_aside {
+    from {padding:0;}
+    to {padding:16px;}
+}
+
 /** Header */
 
 header {
