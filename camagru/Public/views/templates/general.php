@@ -12,8 +12,10 @@
     <title>Camagru</title>
 </head>
 <body>
-    <div class="user-nav active">
-        <p>User test</p>
+    <div class="aside-bar active">
+        <div class="head">
+            <div class="title">Mon Compte</div>
+        </div>
     </div>
     <div class="overlay"></div>
     <div class="container">
