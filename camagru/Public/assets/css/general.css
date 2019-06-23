@@ -33,9 +33,9 @@ body {
     right: 0;
     top: 0;
     background: rgba(33, 47, 62, 0.7);
-    cursor: url("Salut bo gosse") default;
     display: block;
     z-index: 2;
+    visibility: hidden;
 }
 
 /** User sub nav */
@@ -70,7 +70,7 @@ body {
 }
 
 .aside-bar.active > .overlay {
-    opacity: 1;
+    visibility: visible;
 }
 
 .aside-bar.active > .container {
