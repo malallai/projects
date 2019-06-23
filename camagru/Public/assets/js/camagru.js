@@ -44,6 +44,7 @@ function overlay() {
 }
 
 function user_aside() {
+    event.preventDefault();
     var body = document.getElementsByTagName("body")[0];
     var aside_button = document.getElementsByClassName("user-aside")[0];
 
