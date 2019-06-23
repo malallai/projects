@@ -1,5 +1,4 @@
 window.onload = function() {
-    console.log("test");
     var login_button = document.getElementById('login-button');
     var register_button = document.getElementById('register-button');
     var reset_button = document.getElementById('reset-button');
