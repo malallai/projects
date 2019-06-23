@@ -38,6 +38,35 @@ body {
     z-index: 2;
 }
 
+/** User sub nav */
+
+.aside-bar {
+    z-index: 3;
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid rgba(0,0,0,.0975);
+    width: 25rem;
+}
+
+.aside-bar {
+
+}
+
+.aside-bar li {
+    list-style-type: none;
+}
+
+.aside-bar.active > .overlay {
+    opacity: 1;
+}
+
+.aside-bar.active > .container {
+    overflow-y: hidden;
+}
+
 /** Header */
 
 header {
@@ -204,31 +233,6 @@ header {
     .fix {
         height: 35px;
     }
-}
-
-/** User sub nav */
-
-.user-nav {
-    z-index: 3;
-    display: inline-block;
-    position: fixed;
-    right: 0;
-    height: 100%;
-    background-color: #fff;
-    border-left: 1px solid rgba(0,0,0,.0975);
-    width: 15rem;
-}
-
-.user-nav li {
-    list-style-type: none;
-}
-
-.user-nav.active > .overlay {
-    opacity: 1;
-}
-
-.user-nav.active > .container {
-    overflow-y: hidden;
 }
 
 /** Footer */
