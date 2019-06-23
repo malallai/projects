@@ -69,11 +69,11 @@ body {
     list-style-type: none;
 }
 
-.aside-bar.active > .overlay {
+body[has_aside] .overlay {
     visibility: visible;
 }
 
-.aside-bar.active > .container {
+body[has_aside] .container {
     overflow-y: hidden;
 }
 
