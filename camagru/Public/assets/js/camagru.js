@@ -34,15 +34,16 @@ function sleep(ms, div) {
     return new Promise(resolve => (div.id = setTimeout(resolve, ms)));
 }
 
-var body = document.getElementsByTagName("body")[0];
-var overlay = document.getElementsByClassName("overlay")[0];
-var aside_button = document.getElementsByClassName("user-aside")[0];
+document.onload = function () {
+    var body = document.getElementsByTagName("body")[0];
+    var overlay = document.getElementsByClassName("overlay")[0];
+    var aside_button = document.getElementsByClassName("user-aside")[0];
 
-overlay.addEventListener("click", function () {
-    body.removeAttribute("has_aside");
-});
+    overlay.addEventListener("click", function () {
+        body.removeAttribute("has_aside");
+    });
 
-aside_button.addEventListener("click", function () {
-    body.setAttribute("has_aside", "");
-});
-
+    aside_button.addEventListener("click", function () {
+        body.setAttribute("has_aside", "");
+    });
+}
