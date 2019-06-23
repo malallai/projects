@@ -51,8 +51,15 @@ body {
     width: 25rem;
 }
 
-.aside-bar {
+.aside-bar .head {
+    display: flex;
+    width: 100%;
+}
 
+.aside-bar .head .title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aside-bar li {
