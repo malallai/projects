@@ -48,7 +48,7 @@
                             </div>
                             <div class="flex-icon user-icon">
                                 <div class="icon">
-                                    <a href="/user">
+                                    <a class="user-aside">
                                         <i class='fas fa-user'></i>
                                     </a>
                                 </div>
