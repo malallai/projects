@@ -23,7 +23,7 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .overlay {
@@ -35,6 +35,7 @@ body {
     background: rgba(33, 47, 62, 0.7);
     display: block;
     z-index: 2;
+    visibility: hidden;
 }
 
 /** User sub nav */
@@ -68,12 +69,12 @@ body {
     list-style-type: none;
 }
 
-.overlay:not(.aside-bar.active) {
-    visibility: hidden;
+.aside-bar.active > .overlay {
+    visibility: visible;
 }
 
-.container:not(.aside-bar.active) {
-    overflow-x: auto;
+.aside-bar.active > .container {
+    overflow-y: hidden;
 }
 
 /** Header */
