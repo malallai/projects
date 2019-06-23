@@ -200,10 +200,10 @@ header {
     display: inline-block;
     position: fixed;
     right: 0;
-    padding: 0;
-    background-color: #2b2b2b;
+    top: 47px;
     height: 100%;
-    width: 25%;
+    background-color: #2b2b2b;
+    width: 15rem;
 }
 
 .user-nav li {
