@@ -23,8 +23,18 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
     overflow-x: auto;
+}
+
+.overlay {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(33, 47, 62, 0.7);
+    cursor: e-resize;
+    display: block;
 }
 
 /** Header */
@@ -212,8 +222,11 @@ header {
     list-style-type: none;
 }
 
-.user-nav.active > .container {
+.user-nav.active > .overlay {
     opacity: 1;
+}
+
+.user-nav.active > .container {
     overflow-y: hidden;
 }
 
