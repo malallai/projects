@@ -84,13 +84,13 @@ body[has_aside] .aside-bar {
 }
 
 @-webkit-keyframes show_aside {
-    from {padding:0;}
-    to {padding:16px;}
+    from {width:0;}
+    to {width:25rem;}
 }
 
 @keyframes show_aside {
-    from {padding:0;}
-    to {padding:16px;}
+    from {width:0;}
+    to {width:25rem;}
 }
 
 /** Header */

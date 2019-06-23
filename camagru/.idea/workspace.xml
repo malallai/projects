@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+            <state relative-caret-position="561">
+              <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -313,7 +313,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39822000" />
+    <option name="totallyTimeSpent" value="39866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,7 +328,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.17986578" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.17986578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.3286119" />
@@ -567,8 +567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="561">
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
         </state>
       </provider>
     </entry>
