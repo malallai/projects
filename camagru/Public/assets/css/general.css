@@ -64,7 +64,6 @@ body {
 .aside-bar .head .title {
     text-align: center;
     margin: auto;
-
 }
 
 .aside-bar li {
@@ -73,6 +72,7 @@ body {
 
 body[has_aside] .overlay, body[has_aside] .aside-bar {
     visibility: visible;
+    opacity: 1;
 }
 
 body[has_aside] .container {
