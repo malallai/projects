@@ -59,7 +59,7 @@ class UserSql extends Sql {
             Mail::newMail($mail, "Confirmation d'inscription",
                 "Merci de t'être inscrit sur Camagru.".
                 "</br>".
-                "Afin de pouvoir te connecter, merci de confirmer ton inscription cliquant <a href='$link'>ici</a>.".
+                "Afin de pouvoir te connecter, merci de confirmer ton inscription en cliquant <a href='$link'>ici</a>.".
                 "</br></br>".
                 "Merci de ta confiance et à bientôt sur Camagru.".
                 "</br></br>".
