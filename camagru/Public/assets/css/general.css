@@ -131,13 +131,13 @@ body .overlay {
 }
 
 @-webkit-keyframes hide_aside {
-    from {width:25rem;visibility: visible;}
-    to {width:0;visibility: hidden;}
+    from {width:25rem;visibility: visible;opacity:1;}
+    to {width:0;visibility: hidden;opacity:0;}
 }
 
 @keyframes hide_aside {
-    from {width:25rem;visibility: visible;}
-    to {width:0;visibility: hidden;}
+    from {width:25rem;visibility: visible;opacity:1;}
+    to {width:0;visibility: hidden;opacity:0;}
 }
 
 /** Header */
