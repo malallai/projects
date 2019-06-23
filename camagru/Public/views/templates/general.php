@@ -12,7 +12,7 @@
     <title>Camagru</title>
 </head>
 <body>
-    <div class="aside-bar active">
+    <div class="aside-bar" active="">
         <div class="head">
             <div class="title">Mon Compte</div>
         </div>
