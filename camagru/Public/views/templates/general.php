@@ -45,9 +45,6 @@
                                     <a href="/user">
                                         <i class='fas fa-user'></i>
                                     </a>
-                                    <ul class="user-nav">
-                                        <li><a>Se connecter</a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -55,6 +52,9 @@
                 </div>
             </div>
         </header>
+        <div class="user-nav">
+            <p>User test</p>
+        </div>
         <main id="inner" class="inner">
             <?= $content ?>
         </main>
