@@ -68,11 +68,11 @@ body {
     list-style-type: none;
 }
 
-.overlay:not(.aside-bar[active]) {
+.overlay:not(.aside-bar.active) {
     visibility: hidden;
 }
 
-.container:not(.aside-bar[active]) {
+.container:not(.aside-bar.active) {
     overflow-x: auto;
 }
 
