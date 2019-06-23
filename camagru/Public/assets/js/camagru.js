@@ -35,6 +35,7 @@ function sleep(ms, div) {
 }
 
 window.onload = function () {
+    console.log("test");
     var body = document.getElementsByTagName("body")[0];
     var overlay = document.getElementsByClassName("overlay")[0];
     var aside_button = document.getElementsByClassName("user-aside")[0];
