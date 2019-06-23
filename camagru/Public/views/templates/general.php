@@ -12,6 +12,9 @@
     <title>Camagru</title>
 </head>
 <body>
+    <div class="user-nav active">
+        <p>User test</p>
+    </div>
     <div class="container">
         <header>
             <div id="fix" class="fix"></div>
@@ -52,9 +55,6 @@
                 </div>
             </div>
         </header>
-        <div class="user-nav">
-            <p>User test</p>
-        </div>
         <main id="inner" class="inner">
             <?= $content ?>
         </main>
