@@ -24,7 +24,7 @@
                         <a class="link"><i class="far fa-heart"></i></a>
                     </div>
                     <div class="like-counts">
-                        <p>10 j'aimes</p>
+                        <p>0 j'aimes</p>
                     </div>
                 </div>
             </div>

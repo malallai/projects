@@ -11,7 +11,7 @@
     <script src='/Public/assets/js/camagru.js'></script>
     <title>Camagru</title>
 </head>
-<body has_aside="">
+<body>
     <div class="aside-bar">
         <div class="head">
             <div class="title">Mon Compte</div>
