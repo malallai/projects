@@ -17,7 +17,7 @@
             <div class="title">Mon Compte</div>
         </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" onclick="overlay()"></div>
     <div class="container">
         <header>
             <div id="fix" class="fix"></div>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="flex-icon user-icon">
                                 <div class="icon">
-                                    <a class="user-aside">
+                                    <a class="user-aside" onclick="user_aside()">
                                         <i class='fas fa-user'></i>
                                     </a>
                                 </div>
