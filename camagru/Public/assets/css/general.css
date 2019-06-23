@@ -70,7 +70,7 @@ body {
     list-style-type: none;
 }
 
-body[has_aside] .overlay {
+body[has_aside] .overlay, body[has_aside] .aside-bar {
     visibility: visible;
 }
 
