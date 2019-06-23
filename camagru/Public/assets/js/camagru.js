@@ -34,7 +34,7 @@ function sleep(ms, div) {
     return new Promise(resolve => (div.id = setTimeout(resolve, ms)));
 }
 
-document.onload = function () {
+window.onload = function () {
     var body = document.getElementsByTagName("body")[0];
     var overlay = document.getElementsByClassName("overlay")[0];
     var aside_button = document.getElementsByClassName("user-aside")[0];
