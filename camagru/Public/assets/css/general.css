@@ -159,6 +159,7 @@ header {
 .flex-component:nth-child(3) .icon {
     margin: auto 0;
     width: 100%;
+    position: relative;
 }
 
 .flex-component:nth-child(3) a {

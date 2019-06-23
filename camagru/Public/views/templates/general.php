@@ -61,13 +61,13 @@
         <footer>
             <div class="links align-left">
                 <p>
-                    <a class="link" href="https://twitter.com"><i class="fab fa-instagram"></i></a>
-                    <a class="link" href="https://instagram.com"><i class="fab fa-twitter"></i></a>
+                    <a class="link" href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a class="link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
                     <a class="link" href="https://facebook.com"><i class="fab fa-facebook"></i></a>
                 </p>
             </div>
             <div class="copyright text-align-right">
-                <p> © malallai 2019.</p>
+                <p>© malallai 2019.</p>
             </div>
         </footer>
     </div>
