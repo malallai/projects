@@ -198,10 +198,12 @@ header {
 .user-nav {
     z-index: 2;
     display: inline-block;
-    position: absolute;
+    position: fixed;
     right: 0;
     padding: 0;
     background-color: #2b2b2b;
+    height: 100%;
+    width: 25%;
 }
 
 .user-nav li {
