@@ -15,6 +15,7 @@
     <div class="user-nav active">
         <p>User test</p>
     </div>
+    <div class="overlay"></div>
     <div class="container">
         <header>
             <div id="fix" class="fix"></div>
