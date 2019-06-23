@@ -24,6 +24,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow-x: auto;
+    z-index: 2;
 }
 
 .overlay {
@@ -208,7 +209,7 @@ header {
 /** User sub nav */
 
 .user-nav {
-    z-index: 2;
+    z-index: 3;
     display: inline-block;
     position: fixed;
     right: 0;
