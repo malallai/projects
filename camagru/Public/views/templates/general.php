@@ -16,6 +16,11 @@
         <div class="aside-bar">
             <div class="head">
                 <div class="title">Mon Compte</div>
+                <div class="icon">
+                    <a href="" onclick="overlay()">
+                        <i class='fa fa-close'></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
