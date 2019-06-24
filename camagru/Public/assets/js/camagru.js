@@ -35,6 +35,7 @@ function sleep(ms, div) {
 }
 
 function overlay() {
+    console.log("overlay");
     var body = document.getElementsByTagName("body")[0];
     var overlay = document.getElementsByClassName("overlay")[0];
 
@@ -44,6 +45,7 @@ function overlay() {
 }
 
 function user_aside() {
+    console.log("user aside");
     event.preventDefault();
     var body = document.getElementsByTagName("body")[0];
     var aside_button = document.getElementsByClassName("user-aside")[0];
