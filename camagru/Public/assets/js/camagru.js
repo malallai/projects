@@ -35,22 +35,12 @@ function sleep(ms, div) {
 }
 
 function overlay() {
-    console.log("overlay");
     var body = document.getElementsByTagName("body")[0];
-    var overlay = document.getElementsByClassName("overlay")[0];
-
-    overlay.addEventListener("click", function () {
-        body.removeAttribute("has_aside");
-    });
+    body.removeAttribute("has_aside");
 }
 
 function user_aside() {
-    console.log("user aside");
     event.preventDefault();
     var body = document.getElementsByTagName("body")[0];
-    var aside_button = document.getElementsByClassName("user-aside")[0];
-
-    aside_button.addEventListener("click", function () {
-        body.setAttribute("has_aside", "");
-    });
+    body.setAttribute("has_aside", "");
 }
