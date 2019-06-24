@@ -106,8 +106,9 @@ body .aside-bar {
 }
 
 body .aside-row {
-    -webkit-animation: hide_row 1s;
-    animation: hide_row 1s;
+    -webkit-animation: hide_row 0;
+    animation: hide_row 0;
+    animation-delay: 1s;
 }
 
 body .overlay {
