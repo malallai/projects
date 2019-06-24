@@ -41,7 +41,7 @@ body {
 
 /** User sub nav */
 
-.aside-bar {
+.aside-row {
     z-index: 3;
     display: inline-block;
     position: fixed;
@@ -50,6 +50,10 @@ body {
     background-color: #fff;
     border-left: 1px solid rgba(0,0,0,.0975);
     width: 25rem;
+}
+
+.aside-bar {
+    width: 100%;
     visibility: hidden;
     opacity: 0;
 }
