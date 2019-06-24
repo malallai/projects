@@ -35,6 +35,7 @@ function sleep(ms, div) {
 }
 
 function overlay() {
+    event.preventDefault();
     var body = document.getElementsByTagName("body")[0];
     body.removeAttribute("has_aside");
 }
