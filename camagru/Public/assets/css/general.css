@@ -148,7 +148,7 @@ body .overlay {
 }
 
 @media only screen and (max-width: 500px) {
-    .aside-bar {
+    .aside-row {
         width: 100%;
     }
 }
