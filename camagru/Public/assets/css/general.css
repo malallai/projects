@@ -47,8 +47,6 @@ body {
     position: fixed;
     right: 0;
     height: 100%;
-    background-color: #fff;
-    border-left: 1px solid rgba(0,0,0,.0975);
     width: 25rem;
     visibility: hidden;
 }
@@ -58,6 +56,8 @@ body {
     height: 100%;
     visibility: hidden;
     opacity: 0;
+    background-color: #fff;
+    border-left: 1px solid rgba(0,0,0,.0975);
 }
 
 .aside-bar .head {
