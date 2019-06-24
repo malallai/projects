@@ -12,9 +12,11 @@
     <title>Camagru</title>
 </head>
 <body>
-    <div class="aside-bar">
-        <div class="head">
-            <div class="title">Mon Compte</div>
+    <div class="aside-row">
+        <div class="aside-bar">
+            <div class="head">
+                <div class="title">Mon Compte</div>
+            </div>
         </div>
     </div>
     <div class="overlay" onclick="overlay()"></div>
