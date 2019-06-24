@@ -43,12 +43,12 @@ body {
 
 .aside-row {
     z-index: 3;
-    display: inline-block;
     position: fixed;
     right: 0;
     height: 100%;
     width: 25rem;
     visibility: hidden;
+    display: none;
 }
 
 .aside-bar {
@@ -80,6 +80,10 @@ body {
 body[has_aside] .overlay, body[has_aside] .aside-bar {
     visibility: visible;
     opacity: 1;
+}
+
+body[has_aside] .aside-row {
+    display: inline-block;
 }
 
 body[has_aside] .container {
