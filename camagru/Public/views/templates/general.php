@@ -25,8 +25,7 @@
             <div class="container">
                 <?php
                     $page = new \Pages\UserPage($this->_url);
-                    $page->profile();
-                    echo $quick_content;
+                    echo $page->profile();
                 ?>
                 <div class="aside-button button-login">
                     <div class="button-content">
