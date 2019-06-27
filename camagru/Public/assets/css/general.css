@@ -113,8 +113,9 @@ body {
 }
 
 .aside-bar .aside-button a {
+    width: 100%;
+    height: 100%;
     padding: 0;
-    margin: auto;
     text-decoration: none;
     font-size: 1.25rem;
     text-align: center;
@@ -122,6 +123,9 @@ body {
 
 .aside-button.button-login .button-content {
     background-color: #2b3441;
+}
+
+.aside-button.button-login .button-content a {
     color: #fff;
 }
 

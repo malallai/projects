@@ -24,9 +24,9 @@
             </div>
             <div class="container">
                 <div class="aside-button button-login">
-                    <a href="/user" class="button-content">
-                       Connexion
-                    </a>
+                    <div class="button-content">
+                        <a href="/user">Connexion</a>
+                    </div>
                 </div>
             </div>
         </div>
