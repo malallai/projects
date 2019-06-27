@@ -30,4 +30,12 @@ class Page {
         require "Public/views/" . $this->_template . '.php';
     }
 
+    public function quickRender($params) {
+        Session::startSession();
+        ob_start();
+        require "Public/views/" . $params['content'] . '.php';
+        $content = ob_get_clean();
+        return $content;
+    }
+
 }

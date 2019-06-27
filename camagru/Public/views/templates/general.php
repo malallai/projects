@@ -23,6 +23,11 @@
                 </div>
             </div>
             <div class="container">
+                <?php
+                    $page = new \Pages\UserPage();
+                    $page->profile();
+                    echo $quick_content;
+                ?>
                 <div class="aside-button button-login">
                     <div class="button-content">
                         <a href="/user"><span>Connexion</span></a>
