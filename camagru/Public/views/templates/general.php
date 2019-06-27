@@ -22,7 +22,7 @@
                     </a>
                 </div>
             </div>
-            <div class="container">
+            <div class="aside-content">
                 <?php
                     $page = new \Pages\UserPage($this->_url);
                     echo $page->profile();
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </header>
-        <main id="inner" class="inner">
+        <main id="main-content" class="main-content">
             <?= $content ?>
         </main>
         <footer>
