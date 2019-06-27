@@ -14,6 +14,9 @@
 <body>
     <div class="loading-page">
         <div class="loading-content">
+            <div class="loading-title">
+                <h1>Camagru</h1>
+            </div>
             <div class="cube-grid">
                 <div class="cube"></div>
                 <div class="cube"></div>

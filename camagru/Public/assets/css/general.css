@@ -550,6 +550,11 @@ footer .links {
     overflow: hidden;
 }
 
+.loading-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
 .cube-grid {
     width: 3.5rem;
     height: 3.5rem;
