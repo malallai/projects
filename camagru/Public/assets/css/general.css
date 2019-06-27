@@ -560,8 +560,8 @@ footer .links {
     height: 33%;
     background-color: #fff;
     float: left;
-    -webkit-animation: cube-grid-scale 1.3s infinite ease-in-out;
-    animation: cube-grid-scale 1.3s infinite ease-in-out;
+    -webkit-animation: cube-grid-scale 2s infinite ease-in-out;
+    animation: cube-grid-scale 2s infinite ease-in-out;
 }
 
 .cube:nth-child(1) {
