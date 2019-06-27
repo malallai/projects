@@ -106,6 +106,7 @@ body {
     margin: 0 auto;
     width: 75%;
     position: relative;
+    display: flex;
 }
 
 .aside-bar .aside-button a {
