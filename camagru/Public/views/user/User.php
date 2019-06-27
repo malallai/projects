@@ -24,7 +24,7 @@
                 <input type="hidden" name="token" value="<?= $token ?>">
                 <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required="" autofocus="">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="">
-                <input classu="button black" name="login" value="Connexion" type="submit">
+                <input class="button black" name="login" value="Connexion" type="submit">
             </form>
         </div>
 
