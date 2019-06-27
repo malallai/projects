@@ -24,7 +24,7 @@
             </div>
             <div class="container">
                 <?php
-                    $page = new \Pages\UserPage($_url);
+                    $page = new \Pages\UserPage($this->_url);
                     $page->profile();
                     echo $quick_content;
                 ?>
