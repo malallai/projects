@@ -16,7 +16,7 @@ async function new_snackbar(message) {
     child.innerHTML = message;
     div.prepend(child);
     snacks.append(div);
-    document.getElementsByName("main")[0].prepend(snacks);
+    document.getElementsByTagName("main")[0].prepend(snacks);
     await sleep(500, div);
     div.className = div.className.replace("show-anim", "show");
     await sleep(4500, div);
