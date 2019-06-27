@@ -183,7 +183,7 @@ body .overlay {
     animation: hide_overlay 0.5s;
 }
 
-body:not(:hover) body .aside-bar {
+body .aside-bar:not(:hover) body .aside-bar {
     visibility: hidden;
     transition: visibility 0.01s 1s;
 }
