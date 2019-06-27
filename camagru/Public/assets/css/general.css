@@ -69,6 +69,19 @@ body {
 
 .aside-bar .head .title {
     text-align: center;
+    margin: 4rem 0 auto 0;
+    flex: 1;
+}
+
+.aside-bar .head .icon {
+    width: 4rem;
+    font-size: 1.25rem;
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.aside-bar .head .icon a {
     margin: auto;
 }
 
