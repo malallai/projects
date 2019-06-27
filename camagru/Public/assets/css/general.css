@@ -93,6 +93,10 @@ body {
     height: 100%;
 }
 
+.aside-bar .container {
+    overflow-y: auto;
+}
+
 .aside-bar li {
     list-style-type: none;
 }
