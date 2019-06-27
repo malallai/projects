@@ -119,7 +119,12 @@ class UserPage extends Page {
     }
 
     public function profile() {
-        $params = array('content' => 'profile/Profile');
+        $params = array();
+        if ($this->_controller->isLogged()) {
+            $params = array('content' => 'aside/Profile');
+        } else {
+            $params = array('content' => 'aside/Login');
+        }
         $quick_content = $this->quickRender($params);
         return $quick_content;
     }

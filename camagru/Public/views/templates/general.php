@@ -27,11 +27,6 @@
                     $page = new \Pages\UserPage($this->_url);
                     echo $page->profile();
                 ?>
-                <div class="aside-button button-login">
-                    <div class="button-content">
-                        <a href="/user"><span>Connexion</span></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
