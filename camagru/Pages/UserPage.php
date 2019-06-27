@@ -20,7 +20,7 @@ class UserPage extends Page {
             $params = array('content' => 'user/User');
             $this->render($params);
         } else {
-            $this->redirect("/profile");
+            $this->redirect("/");
         }
     }
 
@@ -30,7 +30,7 @@ class UserPage extends Page {
                 if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
                     $_SESSION['user'] = serialize(array("username" => $_POST['username'], "status" => UserStatus::connected));
                     Snackbar::send_snack("Connexion réussi.");
-                    $this->redirect("/profile");
+                    $this->redirect("/");
                 }
             }
         }
