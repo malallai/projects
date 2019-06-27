@@ -117,7 +117,7 @@ body {
     margin: auto;
 }
 
-.aside-button .button-login {
+.aside-button.button-login .button-content {
     background-color: limegreen;
 }
 
