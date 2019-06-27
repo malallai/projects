@@ -121,6 +121,7 @@ class UserPage extends Page {
     public function profile() {
         $params = array('content' => 'profile/Profile');
         $quick_content = $this->quickRender($params);
+        return $quick_content;
     }
 
 }
