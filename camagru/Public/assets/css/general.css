@@ -543,6 +543,7 @@ footer .links {
     display: flex;
     width: 100%;
     height: 100%;
+    visibility: hidden;
 }
 
 .loading-content {
@@ -561,7 +562,6 @@ footer .links {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-
 }
 
 .loading-title h1 {
