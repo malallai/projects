@@ -118,8 +118,11 @@ body {
     padding: 0;
     text-decoration: none;
     font-size: 1.25rem;
-    text-align: center;
-    vertical-align: center;
+    display: flex;
+}
+
+.aside-bar .aside-button span {
+    margin: auto;
 }
 
 .aside-button.button-login .button-content {
