@@ -104,12 +104,6 @@ body .aside-bar {
     animation: hide_aside 0.5s;
 }
 
-body .aside-row {
-    -webkit-animation: hide_row 0;
-    animation: hide_row 0;
-    animation-delay: 1s;
-}
-
 body .overlay {
     -webkit-animation: hide_overlay 0.5s;
     animation: hide_overlay 0.5s;
@@ -153,16 +147,6 @@ body .overlay {
 @keyframes hide_aside {
     from {width:100%;visibility: visible;opacity:1;}
     to {width:0;visibility: hidden;opacity:0;}
-}
-
-@-webkit-keyframes hide_row {
-    from {display:inline-block;}
-    to {display: none;}
-}
-
-@keyframes hide_row {
-    from {display:inline-block;}
-    to {display: none;}
 }
 
 @media only screen and (max-width: 500px) {
