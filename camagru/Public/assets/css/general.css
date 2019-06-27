@@ -91,10 +91,18 @@ body {
 .aside-bar .container {
     width: 100%;
     height: 100%;
+    overflow-y: auto !important;
 }
 
-.aside-bar .container {
-    overflow-y: auto;
+.aside-bar .aside-button {
+    width: 100%;
+    height: 2rem;
+
+}
+
+.aside-bar .aside-button a {
+    padding: 0;
+    margin: auto;
 }
 
 .aside-bar li {
