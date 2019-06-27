@@ -45,3 +45,7 @@ function user_aside() {
     var body = document.getElementsByTagName("body")[0];
     body.setAttribute("has_aside", "");
 }
+
+window.onload = function () {
+    document.getElementsByClassName("loading-page")[0].remove();
+};
