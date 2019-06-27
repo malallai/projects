@@ -183,6 +183,11 @@ body .overlay {
     animation: hide_overlay 0.5s;
 }
 
+body .aside-bar:not(:hover) body .aside-bar {
+    visibility: hidden;
+    transition: visibility 0.01s 1s;
+}
+
 @-webkit-keyframes show_aside {
     from {width:0;}
     to {width:100%;}
