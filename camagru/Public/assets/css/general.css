@@ -130,7 +130,7 @@ body {
 }
 
 .aside-button.button-login .button-content:hover {
-    background-color: rgba(43, 52, 50, .85);
+    background-color: black;
 }
 
 .aside-button.button-login .button-content a {
