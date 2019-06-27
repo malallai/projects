@@ -69,7 +69,7 @@ body {
 
 .aside-bar .head .title {
     text-align: center;
-    margin: 4rem 0 auto 0;
+    margin: auto 4rem auto 0;
     flex: 1;
 }
 
