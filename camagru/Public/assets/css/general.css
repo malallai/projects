@@ -121,6 +121,10 @@ body {
     text-align: center;
 }
 
+.aside-bar .aside-button span {
+    margin: auto;
+}
+
 .aside-button.button-login .button-content {
     background-color: #2b3441;
 }
