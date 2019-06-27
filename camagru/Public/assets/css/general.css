@@ -547,7 +547,6 @@ footer .links {
 
 .loading-content {
     margin: auto;
-    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -565,39 +564,39 @@ footer .links {
     animation: cube-grid-scale 1.3s infinite ease-in-out;
 }
 
-.cube:nth-child(0) {
+.cube:nth-child(1) {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
-.cube:nth-child(1) {
+.cube:nth-child(2) {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
-.cube:nth-child(2) {
+.cube:nth-child(3) {
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
-.cube:nth-child(3) {
+.cube:nth-child(4) {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
-.cube:nth-child(4) {
+.cube:nth-child(5) {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
-.cube:nth-child(5) {
+.cube:nth-child(6) {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
-.cube:nth-child(6) {
+.cube:nth-child(7) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
-.cube:nth-child(7) {
+.cube:nth-child(8) {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
-.cube:nth-child(8) {
+.cube:nth-child(9) {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
