@@ -100,10 +100,11 @@ body {
     display: flex;
     position: absolute;
     bottom: 0;
+    margin: 1rem 0;
 }
 
 .aside-button .button-content {
-    margin: 1rem auto;
+    margin: 0 auto;
     width: 75%;
     position: relative;
     display: flex;
