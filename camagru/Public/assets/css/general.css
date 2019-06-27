@@ -110,6 +110,12 @@ body {
     display: flex;
     background-color: #fafafa;
     border: 1px solid rgba(0,0,0,.0975);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+    -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+    transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
 }
 
 .aside-bar .aside-button a {
