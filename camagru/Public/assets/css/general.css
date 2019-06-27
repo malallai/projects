@@ -119,10 +119,7 @@ body {
     text-decoration: none;
     font-size: 1.25rem;
     text-align: center;
-}
-
-.aside-bar .aside-button span {
-    margin: auto;
+    vertical-align: center;
 }
 
 .aside-button.button-login .button-content {
