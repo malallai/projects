@@ -15,7 +15,7 @@ class ProfilePage extends Page {
 
     public function index() {
         if ($this->_controller->isLogged()) {
-            $params = array('content' => 'profile/Profile');
+            $params = array('content' => 'aside/Profile');
             $this->render($params);
         } else {
             Snackbar::send_snack("Connectez vous afin d'accéder à votre profile.");
