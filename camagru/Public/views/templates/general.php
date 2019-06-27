@@ -71,7 +71,7 @@
                 </div>
             </div>
         </header>
-        <main id="main-content" class="main-content">
+        <main id="inner" class="inner">
             <?= $content ?>
         </main>
         <footer>
