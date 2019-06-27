@@ -47,5 +47,6 @@ function user_aside() {
 }
 
 window.onload = function () {
+    console.log("DAFUK ?!!!");
     document.getElementsByClassName("loading-page")[0].remove();
 };
