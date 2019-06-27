@@ -103,7 +103,7 @@ body {
 }
 
 .aside-button .button-content {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 75%;
     position: relative;
     display: flex;
