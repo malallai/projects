@@ -8,7 +8,6 @@
                     <div class="main-infos-sub">
                         <div class="inline-flex">
                             <span class="fullname">Malo Allain</span>
-                            <span>, </span>
                             <span class="username">malallai</span>
                         </div>
                         <div class="usermail">malallai@student.42.fr</div>
