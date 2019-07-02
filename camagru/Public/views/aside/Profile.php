@@ -4,7 +4,9 @@
         <div class="infos">
             <div class="u-infos">
                 <div class="main-infos">
-                    <i class="fas fa-user-alt"></i>
+                    <div class="icons">
+                        <i class="fas fa-user-alt"></i>
+                    </div>
                     <div class="main-infos-sub">
                         <div class="inline-flex">
                             <span class="fullname">Malo Allain</span>

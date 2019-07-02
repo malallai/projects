@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/assets/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +54,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -172,8 +173,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+                <state relative-caret-position="233">
+                  <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -264,8 +265,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
-        <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
+        <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
       </list>
     </option>
   </component>
@@ -460,12 +461,12 @@
       <workItem from="1561357126558" duration="5013000" />
       <workItem from="1561377163395" duration="2362000" />
       <workItem from="1561621915242" duration="23799000" />
-      <workItem from="1562067058803" duration="3892000" />
+      <workItem from="1562067058803" duration="4048000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77337000" />
+    <option name="totallyTimeSpent" value="77493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -732,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="2516">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
@@ -751,17 +752,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+        <state relative-caret-position="233">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
+    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>

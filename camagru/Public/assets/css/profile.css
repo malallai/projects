@@ -44,6 +44,7 @@
 .aside-content .main-infos-sub {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
 }
 
 .aside-content .main-infos-sub .fullname {
