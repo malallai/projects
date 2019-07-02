@@ -5,12 +5,14 @@
             <div class="u-infos">
                 <div class="main-infos">
                     <i class="fas fa-user-alt"></i>
-                    <div class="inline-flex">
-                        <span class="fullname">Malo Allain</span>
-                        <span>, </span>
-                        <span class="username">malallai</span>
+                    <div class="main-infos-sub">
+                        <div class="inline-flex">
+                            <span class="fullname">Malo Allain</span>
+                            <span>, </span>
+                            <span class="username">malallai</span>
+                        </div>
+                        <div class="usermail">malallai@student.42.fr</div>
                     </div>
-                    <div class="usermail">malallai@student.42.fr</div>
                 </div>
                 <i class="fas fa-cog"></i>
             </div>
