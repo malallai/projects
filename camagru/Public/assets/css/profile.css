@@ -9,7 +9,6 @@
 .aside-content .user-row {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -19,7 +18,6 @@
     flex-direction: row;
     transition: 0.2s ease;
     transition-delay:  0.05s;
-    margin-bottom: 2rem;
 }
 
 .aside-content .infos {
