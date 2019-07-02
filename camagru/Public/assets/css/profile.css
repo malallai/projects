@@ -44,6 +44,18 @@
     flex-direction: column;
 }
 
+.aside-content .main-infos-sub {
+    width: 100%;
+}
+
+.aside-content .main-infos-sub .fullname {
+    text-transform: uppercase;
+}
+
+.aside-content .main-infos-sub .username {
+    color: #999;
+}
+
 .aside-content .inline-flex {
     display: flex;
     flex-direction: row;
