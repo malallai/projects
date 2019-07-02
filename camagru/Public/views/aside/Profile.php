@@ -14,6 +14,7 @@
                 </div>
 
                         <i class="fas fa-cog"></i>
+            </div>
         </div>
     </div>
 </div>
