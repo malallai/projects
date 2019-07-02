@@ -39,6 +39,11 @@
     display: flex;
 }
 
+.aside-content .main-infos-sub {
+    display: flex;
+    flex-direction: column;
+}
+
 .aside-content .inline-flex {
     display: flex;
     flex-direction: row;
