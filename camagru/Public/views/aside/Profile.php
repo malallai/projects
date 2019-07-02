@@ -2,10 +2,12 @@
 <div class="user-row">
     <div class="row user-infos-row">
         <div class="infos">
-            <div class="user-infos-pp">
-                <img src="/Public/assets/pictures/users/malo.jpg">
-            </div>
             <div class="u-infos">
+                <div class="main-infos">
+                    <i class="fas fa-user-alt"></i>
+                </div>
+
+
                 <div class="inline-flex">
                     <div class="u-infos-username">
                         <span>malallai</span>
