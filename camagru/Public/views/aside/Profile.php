@@ -12,8 +12,7 @@
                     </div>
                     <div class="usermail">malallai@student.42.fr</div>
                 </div>
-
-                        <i class="fas fa-cog"></i>
+                <i class="fas fa-cog"></i>
             </div>
         </div>
     </div>
