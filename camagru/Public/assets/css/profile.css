@@ -35,8 +35,13 @@
     width: 100%;
 }
 
-.aside-button .button-content {
+.aside-button .logout.button-content {
     margin: 0 2rem 0 auto;
+    width: 40%;
+}
+
+.aside-button .manage-pictures.button-content {
+    margin: 0 auto 0 2rem;
     width: 40%;
 }
 

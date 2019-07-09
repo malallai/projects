@@ -50,7 +50,7 @@
             <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="340">
-                  <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="32" />
+                  <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -117,8 +117,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="49" />
+                <state relative-caret-position="408">
+                  <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -203,8 +203,8 @@
         <option value="$PROJECT_DIR$/Public/assets/css/login.css" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
-        <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
       </list>
     </option>
   </component>
@@ -395,12 +395,12 @@
       <workItem from="1562067058803" duration="4348000" />
       <workItem from="1562146759564" duration="1343000" />
       <workItem from="1562666609306" duration="2203000" />
-      <workItem from="1562669648455" duration="2426000" />
+      <workItem from="1562669648455" duration="2457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83765000" />
+    <option name="totallyTimeSpent" value="83796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,14 +693,14 @@
     <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="32" />
+          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="49" />
+        <state relative-caret-position="408">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
         </state>
       </provider>
     </entry>
