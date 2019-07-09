@@ -258,6 +258,16 @@ body .overlay {
     margin-right: .75rem;
 }
 
+.posts-row .like-counts {
+    font-size: 10px;
+    color: #999;
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.posts-row .like-counts p {
+    margin: 0;
+}
+
 /** Header */
 
 header {
