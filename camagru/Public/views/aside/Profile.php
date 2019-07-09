@@ -18,18 +18,6 @@
     </a>
 </div>
 <div class="post">
-    <div class="author">
-        <div class="user">
-            <div class="user-pp">
-                <img src="/Public/assets/pictures/users/malo.jpg">
-            </div>
-            <div class="user-infos">
-                <div class="user-name">
-                    <a href="/user/id">Malo</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="picture">
         <img src="/Public/assets/pictures/posts/3.jpg">
     </div>
