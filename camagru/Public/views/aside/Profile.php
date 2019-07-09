@@ -1,6 +1,6 @@
 <link href="/Public/assets/css/profile.css" rel="stylesheet">
 <div class="user-row">
-    <div class="row user-infos-row">
+    <a href="/" class="row user-infos-row">
         <div class="u-infos">
             <div class="main-infos">
                 <div class="icons">
@@ -15,5 +15,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>
