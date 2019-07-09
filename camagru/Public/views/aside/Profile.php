@@ -17,8 +17,11 @@
         </div>
     </a>
 </div>
-<div class="aside-button button-logout">
-    <div class="button-content">
+<div class="aside-button button-logged">
+    <div class="manage-pictures button-content">
+        <a href="/user/logout"><span>Déconnexion</span></a>
+    </div>
+    <div class="logout button-content">
         <a href="/user/logout"><span>Déconnexion</span></a>
     </div>
 </div>
