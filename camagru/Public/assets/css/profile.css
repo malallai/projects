@@ -15,7 +15,6 @@
 }
 
 .aside-content .user-infos-row {
-    background-color: red;
     display: flex;
     flex-direction: row;
     transition: 0.2s ease;
