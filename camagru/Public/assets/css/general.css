@@ -230,13 +230,10 @@ body .overlay {
 }
 
 .aside-content .post {
-    flex: auto;
     width: 100%;
     position: relative;
-    margin: .25rem;
     overflow: hidden;
     display: inline-block;
-    max-width: 20rem;
     font-size: 0;
 }
 
