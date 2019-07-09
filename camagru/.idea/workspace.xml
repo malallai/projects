@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/user/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,7 +114,7 @@
             <entry file="file://$PROJECT_DIR$/Public/views/user/User.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="391">
-                  <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+                  <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -278,8 +278,8 @@
         <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
-        <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/login.css" />
+        <option value="$PROJECT_DIR$/Public/views/user/User.php" />
       </list>
     </option>
   </component>
@@ -477,12 +477,12 @@
       <workItem from="1562067058803" duration="4348000" />
       <workItem from="1562146759564" duration="1343000" />
       <workItem from="1562666609306" duration="2203000" />
-      <workItem from="1562669648455" duration="185000" />
+      <workItem from="1562669648455" duration="219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81524000" />
+    <option name="totallyTimeSpent" value="81558000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -754,17 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/user/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state relative-caret-position="2516">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
@@ -779,6 +772,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/user/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
         </state>
       </provider>
     </entry>

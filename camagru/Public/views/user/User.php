@@ -39,13 +39,13 @@
                 <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required="">
                 <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required="">
                 <div class="inline-flex">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="">
-                    <input type="password" name="password_repeat" id="password_repeat" class="form-control" placeholder="Répéter mot de passe" required="">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe *" required="">
+                    <input type="password" name="password_repeat" id="password_repeat" class="form-control" placeholder="Répéter mot de passe *" required="">
                 </div>
                 <input class="button black" name="register" value="Inscription" type="submit">
             </form>
             <div class="infos">
-                Veuillez mettre au moins : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
+                * : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
             </div>
         </div>
 
