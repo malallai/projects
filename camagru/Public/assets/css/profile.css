@@ -35,6 +35,10 @@
     width: 100%;
 }
 
+.aside-content .main-infos .icons i {
+    font-size: 1rem;
+}
+
 .aside-content .main-infos-sub {
     display: flex;
     flex-direction: column;
