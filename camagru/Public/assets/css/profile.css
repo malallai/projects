@@ -45,6 +45,18 @@
     width: 45%;
 }
 
+.aside-button.button-logged .button-content {
+    background-color: #2b3441;
+}
+
+.aside-button.button-logged .button-content:hover {
+    background-color: #202020;
+}
+
+.aside-button.button-logged .button-content a {
+    color: #fff;
+}
+
 .aside-button.button-logged .logout.button-content {
     background-color: #e53935;
 }
