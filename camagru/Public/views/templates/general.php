@@ -18,7 +18,7 @@
                 <div class="title">Mon Compte</div>
                 <div class="icon">
                     <a href="" onclick="overlay()">
-                        <i class='far fa-window-close'></i>
+                        <i class='fas fa-times'></i>
                     </a>
                 </div>
             </div>
