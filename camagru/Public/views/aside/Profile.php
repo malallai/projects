@@ -18,16 +18,21 @@
     </a>
 </div>
 <div class="post">
-    <div class="picture">
-        <img src="/Public/assets/pictures/posts/3.jpg">
-    </div>
-    <div class="infos">
-        <div class="icons">
-            <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-            <a class="link"><i class="far fa-heart"></i></a>
-        </div>
-        <div class="like-counts">
-            <p>10 j'aimes</p>
+    <span class="picture">
+        <img src="/Public/assets/pictures/posts/0.jpg">
+    </span>
+    <div class="details">
+        <div class="row">
+            <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+            </div>
         </div>
     </div>
 </div>
