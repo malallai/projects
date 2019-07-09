@@ -229,6 +229,11 @@ body .overlay {
     }
 }
 
+.aside-content .aside-middle-content {
+    overflow-y: auto;
+    flex: 1;
+}
+
 .aside-content .post {
     width: 10rem;
     position: relative;
