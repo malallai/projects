@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Pages/UserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/UserPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/user/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +42,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.5353618">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -63,8 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+                <state relative-caret-position="221">
+                  <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
                   <folding>
                     <element signature="e#24#52#0#PHP" expanded="true" />
                   </folding>
@@ -209,8 +208,8 @@
       <find>inner</find>
       <find>/profile</find>
       <find>.inner</find>
-      <find>chec</find>
       <find>check_pwd</find>
+      <find>chec</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -450,12 +449,12 @@
       <workItem from="1562067058803" duration="4348000" />
       <workItem from="1562146759564" duration="1343000" />
       <workItem from="1562666609306" duration="2203000" />
-      <workItem from="1562669648455" duration="780000" />
+      <workItem from="1562669648455" duration="891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82119000" />
+    <option name="totallyTimeSpent" value="82230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,7 +469,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.18389262" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.18389262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -654,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3366">
@@ -738,6 +730,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -747,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+        <state relative-caret-position="221">
+          <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
           <folding>
             <element signature="e#24#52#0#PHP" expanded="true" />
           </folding>
