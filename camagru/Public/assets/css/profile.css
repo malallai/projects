@@ -24,7 +24,7 @@
 }
 
 .aside-content .u-infos {
-    margin: 0 2rem;
+    margin: 0 1rem;
     transition: margin 0.2s ease;
     transition-delay:  0.05s;
     width: 100%;
@@ -35,8 +35,13 @@
     width: 100%;
 }
 
+.aside-content .main-infos .icons {
+    display: flex;
+}
+
 .aside-content .main-infos .icons i {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: auto;
 }
 
 .aside-content .main-infos-sub {
