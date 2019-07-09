@@ -45,7 +45,7 @@
                 <input class="button black" name="register" value="Inscription" type="submit">
             </form>
             <div class="infos">
-                * : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
+                * : 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
             </div>
         </div>
 
