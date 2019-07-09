@@ -21,6 +21,7 @@
     transition-delay:  0.05s;
     padding: .5rem 0;
     text-decoration: none;
+    color: black;
 }
 
 .aside-content .user-infos-row:hover {
