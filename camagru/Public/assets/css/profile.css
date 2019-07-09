@@ -36,7 +36,7 @@
 }
 
 .aside-button .button-content {
-    float: right;
+    margin: 0 0 0 auto;
     width: 50%;
 }
 
