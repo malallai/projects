@@ -17,8 +17,8 @@
         </div>
     </a>
 </div>
-<div class="aside-button button-login">
+<div class="aside-button button-logout">
     <div class="button-content">
-        <a href="/user"><span>Connexion</span></a>
+        <a href="/user/logout"><span>Déconnexion</span></a>
     </div>
 </div>

@@ -35,6 +35,18 @@
     width: 100%;
 }
 
+.aside-button.button-logout .button-content {
+    background-color: #e53935;
+}
+
+.aside-button.button-logout .button-content:hover {
+    background-color: #202020;
+}
+
+.aside-button.button-logout .button-content a {
+    color: #fff;
+}
+
 .aside-content .main-infos {
     display: flex;
     width: 100%;
