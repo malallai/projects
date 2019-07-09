@@ -35,6 +35,11 @@
     width: 100%;
 }
 
+.aside-button .button-content {
+    float: right;
+    width: 50%;
+}
+
 .aside-button.button-logout .button-content {
     background-color: #e53935;
 }
