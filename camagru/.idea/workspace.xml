@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -48,8 +49,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+                <state relative-caret-position="301">
+                  <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -88,8 +89,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="257">
-                  <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
+                <state relative-caret-position="442">
+                  <caret line="233" column="11" selection-start-line="233" selection-start-column="11" selection-end-line="233" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -211,8 +212,8 @@
         <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
-        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
       </list>
     </option>
   </component>
@@ -411,12 +412,12 @@
       <workItem from="1562146759564" duration="1343000" />
       <workItem from="1562666609306" duration="2203000" />
       <workItem from="1562669648455" duration="2713000" />
-      <workItem from="1562692631976" duration="3430000" />
+      <workItem from="1562692631976" duration="3659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87482000" />
+    <option name="totallyTimeSpent" value="87711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/aside/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -718,8 +712,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+        <state relative-caret-position="301">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="233" column="11" selection-start-line="233" selection-start-column="11" selection-end-line="233" selection-end-column="11" />
         </state>
       </provider>
     </entry>
