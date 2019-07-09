@@ -231,7 +231,7 @@ body .overlay {
 
 .aside-content .post {
     flex: auto;
-    width: 10rem;
+    width: 100%;
     position: relative;
     margin: .25rem;
     overflow: hidden;
