@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="picture">
-                    <img src="/Public/assets/pictures/posts/0.jpg">
+                    <img src="/Public/assets/pictures/posts/3.jpg">
                 </div>
                 <div class="infos">
                     <div class="icons">
