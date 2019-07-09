@@ -114,8 +114,8 @@ class UserPage extends Page {
         if ($this->_controller->isLogged()) {
             Session::resetSession();
             Snackbar::send_snack("Vous avez été déconnécté avec succès.");
-            $this->redirect("/");
         }
+        $this->redirect("/");
     }
 
     public function profile() {
