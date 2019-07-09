@@ -36,8 +36,8 @@
 }
 
 .aside-button .button-content {
-    margin: 0 0 0 auto;
-    width: 50%;
+    margin: 0 2rem 0 auto;
+    width: 40%;
 }
 
 .aside-button.button-logout .button-content {
