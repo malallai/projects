@@ -270,11 +270,11 @@ body .overlay {
     margin: auto;
 }
 
-.aside-content .posts .post:hover > .picture img {
+.aside-content .post:hover > .picture img {
     transform: scale(1.075);
 }
 
-.aside-content .posts .post:hover .details {
+.aside-content .post:hover .details {
     opacity: 1;
     transform: scale(1.1);
 }
