@@ -11,6 +11,7 @@
     flex-direction: column;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .aside-content .user-infos-row {
