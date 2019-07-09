@@ -92,7 +92,7 @@ class UserPage extends Page {
                         }
                     } else {
                         Snackbar::send_snack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::send_snack("Veuillez mettre au moins : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+                        Snackbar::send_snack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
                         $this->redirect("/user/resetpw/".$_POST['reset_token']);
                     }
                 } else {
