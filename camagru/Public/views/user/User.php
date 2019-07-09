@@ -44,6 +44,9 @@
                 </div>
                 <input class="button black" name="register" value="Inscription" type="submit">
             </form>
+            <div class="infos">
+                Veuillez mettre au moins : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
+            </div>
         </div>
 
         <div  id="reset-content" class="content content-reset">
