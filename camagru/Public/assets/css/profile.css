@@ -40,16 +40,12 @@
     width: 40%;
 }
 
-.aside-button.button-logout .button-content {
+.aside-button.button-logged .logout.button-content {
     background-color: #e53935;
 }
 
-.aside-button.button-logout .button-content:hover {
+.aside-button.button-logged .logout.button-content:hover {
     background-color: #b71c1c;
-}
-
-.aside-button.button-logout .button-content a {
-    color: #fff;
 }
 
 .aside-content .main-infos {
