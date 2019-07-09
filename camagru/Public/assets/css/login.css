@@ -81,6 +81,10 @@
     text-transform: uppercase;
 }
 
+.content .infos {
+    font-style: italic;
+}
+
 form {
     display: flex;
     flex-direction: column;
