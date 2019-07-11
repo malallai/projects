@@ -108,6 +108,7 @@
     overflow: hidden;
     display: inline-block;
     font-size: 0;
+    margin-bottom: 1rem;
 }
 
 .aside-content .post .picture img {
@@ -128,7 +129,6 @@
     opacity: 0;
     transition: 0.15s ease-in-out;
     font-size: 15px;
-    margin-bottom: 1rem;
 }
 
 .aside-content .details .row {
