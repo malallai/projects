@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +99,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+                <state relative-caret-position="153">
+                  <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
                 </state>
               </provider>
             </entry>
@@ -390,12 +389,12 @@
       <workItem from="1562692631976" duration="4192000" />
       <workItem from="1562760382792" duration="17000" />
       <workItem from="1562760668357" duration="509000" />
-      <workItem from="1562838251362" duration="314000" />
+      <workItem from="1562838251362" duration="374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89084000" />
+    <option name="totallyTimeSpent" value="89144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -697,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
