@@ -108,7 +108,7 @@
     overflow: hidden;
     display: inline-block;
     font-size: 0;
-    margin-bottom: 1rem;
+    margin: .25rem 0;
 }
 
 .aside-content .post .picture img {
