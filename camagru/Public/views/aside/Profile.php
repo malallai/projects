@@ -37,6 +37,120 @@
             </div>
         </div>
     </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <span class="picture">
+            <img src="/Public/assets/pictures/posts/0.jpg">
+        </span>
+        <div class="details">
+            <div class="row">
+                <div class="content">
+                <span class="like-count">
+                    <span>10</span>
+                    <i class="far fa-heart"></i>
+                </span>
+                    <span class="comments-count">
+                    <span>10</span>
+                    <i class="far fa-comment-alt"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="aside-button button-logged">
     <div class="manage-pictures button-content">
