@@ -103,7 +103,7 @@
 
 
 .aside-content .post {
-    width: 10rem;
+    width: 100%;
     position: relative;
     overflow: hidden;
     display: inline-block;
