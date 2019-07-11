@@ -131,6 +131,10 @@ body {
     display: flex;
 }
 
+.aside-bar .aside-button.button-logged {
+    position: relative;
+}
+
 .aside-bar .aside-button span {
     margin: auto;
 }
