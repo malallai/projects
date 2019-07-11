@@ -69,6 +69,8 @@ body {
 
 .aside-bar .aside-content {
     height: 92%;
+    display: flex;
+    flex-direction: column;
 }
 
 .aside-bar .head .title {
