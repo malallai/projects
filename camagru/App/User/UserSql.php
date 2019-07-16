@@ -176,6 +176,7 @@ class UserSql extends Sql {
             return null;
         }
         try {
+            Snackbar::send_snack($username);
             $result = self::prepare("SELECT id FROM users WHERE username = ?", array($username));
             if (!isset($result) || empty($result)) {
                 return null;
