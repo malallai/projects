@@ -27,7 +27,7 @@ class MontagePage extends Page  {
             } else {
                 Snackbar::send_snack("Error while uploading post");
             }
-            $this->redirect("/montage");
+            $this->redirect("/");
         } else {
             Snackbar::send_snack("Please log-in");
             $this->redirect("/");
