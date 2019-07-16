@@ -168,7 +168,7 @@ class UserSql extends Sql {
         return true;
     }
 
-    public function get_user($username) {
+    public function get_user_id($username) {
         try {
             self::init_db();
         } catch (SqlException $e) {
