@@ -168,4 +168,23 @@ class UserSql extends Sql {
         return true;
     }
 
+    public function get_user($username) {
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return null;
+        }
+        try {
+            $result = self::prepare("SELECT id FROM users WHERE username = ?", array($username));
+            if (!isset($result) || empty($result)) {
+                return null;
+            }
+            return $result['id'];
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return null;
+        }
+    }
+
 }
