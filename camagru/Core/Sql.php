@@ -46,7 +46,6 @@ class Sql {
         }
         try {
             self::$_conn = new \PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
-            Snackbar::send_snack("DB Connected");
         } catch (\PDOException $e) {
             throw new SqlException("Mysql Error during connection to database. Please contact us.");
         }
