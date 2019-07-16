@@ -22,6 +22,14 @@ class UserController extends Controller {
         return false;
     }
 
+    public function get_user_id($username) {
+        if ($this->isLogged()) {
+            return $this->getSql()->get_user_id($username);
+        } else {
+            return null;
+        }
+    }
+
     public function get_user() {
         if ($this->isLogged()) {
             return unserialize($_SESSION['user']);
