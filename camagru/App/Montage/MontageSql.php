@@ -17,7 +17,7 @@ class MontageSql extends Sql {
             return false;
         }
         try {
-            $result = self::prepare("INSERT INTO posts (user_id, image_path, date) VALUES (?,?,?)", array($user_id, $picture_path, date("dd-mm-YYYY HH:ii:ss")));
+            $result = self::prepare("INSERT INTO posts (user_id, image_path, date) VALUES (?,?,CURTIME())", array($user_id, $picture_path));
             Snackbar::send_snack("Picture send to DB");
             return true;
         } catch (SqlException $e) {
