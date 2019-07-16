@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Montage;
+
 use Core\Snackbar;
 use Core\Sql;
 use Exceptions\SqlException;

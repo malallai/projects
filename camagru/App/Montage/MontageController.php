@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Montage;
 
 use Core\Controller;
 
