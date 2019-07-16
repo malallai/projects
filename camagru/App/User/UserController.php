@@ -5,6 +5,7 @@ namespace App\User;
 use Core\Controller;
 use Core\Session;
 use Core\Snackbar;
+use Exceptions\SqlException;
 
 class UserController extends Controller {
 
@@ -21,4 +22,11 @@ class UserController extends Controller {
         return false;
     }
 
+    public function get_user() {
+        if ($this->isLogged()) {
+            return unserialize($_SESSION['user']);
+        } else {
+            return null;
+        }
+    }
 }
