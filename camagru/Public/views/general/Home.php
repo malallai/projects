@@ -42,7 +42,7 @@
             <div class="inputs">
                 <a class="input arrow" href="/page/1"><i class="fas fa-angle-left"></i></a>
                 <a class="input page active" href="/page/1">1</a>
-                <a class="input page" href="/page/2">2</a>
+                <a class="input page disable" href="/page/2">2</a>
                 <a class="input page" href="/page/3">3</a>
                 <a class="input arrow" href="/page/3"><i class="fas fa-angle-right"></i></a>
             </div>
