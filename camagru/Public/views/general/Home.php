@@ -46,7 +46,7 @@
             <div class="users">
                 <?php
                 foreach ($params['users'] as $user) {
-                    $details = $this->getUser($user['id']);
+                    $details = $this->getUserDetails($user['id']);
                     $userName = $details['username'];
                     $posts = $details['posts'];
                 ?>
