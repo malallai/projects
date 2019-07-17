@@ -1,2 +1,3 @@
 <?php
-echo "Content : ";
+$test = array("i" => 10);
+var_dump($test);
