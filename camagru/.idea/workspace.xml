@@ -72,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+              <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
               <folding>
                 <element signature="e#31#49#0#PHP" expanded="true" />
               </folding>
@@ -84,7 +84,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="1" />
+              <caret selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/Pages/MontagePage.php" />
         <option value="$PROJECT_DIR$/App/Montage/MontageSql.php" />
         <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
         <option value="$PROJECT_DIR$/Core/Sql.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
       </list>
     </option>
@@ -401,12 +401,12 @@
       <workItem from="1562838251362" duration="4313000" />
       <workItem from="1562937156304" duration="1465000" />
       <workItem from="1563281447520" duration="5531000" />
-      <workItem from="1563358289414" duration="3419000" />
+      <workItem from="1563358289414" duration="3562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103498000" />
+    <option name="totallyTimeSpent" value="103641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,14 +753,14 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="1" />
+          <caret selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
           <folding>
             <element signature="e#31#49#0#PHP" expanded="true" />
           </folding>
