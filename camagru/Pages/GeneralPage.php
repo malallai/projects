@@ -23,9 +23,6 @@ class GeneralPage extends Page {
 
     public function indexPage($page) {
         $posts = $this->_controller->getSql()->getPosts($page);
-        if (!$posts) {
-            $posts = $this->_controller->getSql()->getPosts(1);
-        }
         $users = $this->_controller->getUserController()->getSql()->getLastUsers();
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users);
         $this->render($params);

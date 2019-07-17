@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="" />
+    <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Pages/GeneralPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/GeneralPage.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#24#58#0#PHP" expanded="true" />
               </folding>
@@ -73,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="87" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
+            <state relative-caret-position="244">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#31#49#0#PHP" expanded="true" />
               </folding>
@@ -195,9 +197,9 @@
         <option value="$PROJECT_DIR$/App/User/UserSql.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
-        <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
+        <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
       </list>
     </option>
   </component>
@@ -411,12 +413,12 @@
       <workItem from="1562838251362" duration="4313000" />
       <workItem from="1562937156304" duration="1465000" />
       <workItem from="1563281447520" duration="5531000" />
-      <workItem from="1563358289414" duration="10974000" />
+      <workItem from="1563358289414" duration="11056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111053000" />
+    <option name="totallyTimeSpent" value="111135000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding>
-            <element signature="e#24#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ef81cb01-2f65-431e-b0bc-32b239bb4091/schema/camagru/table/posts">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -811,10 +803,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="87" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
+        <state relative-caret-position="244">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="e#31#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#24#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
