@@ -9,9 +9,9 @@
                 <div class="main-infos-sub">
                     <div class="inline-flex">
                         <span class="fullname"><?= $params['details']['user']['first_name']." ".$params['details']['user']['last_name'] ?></span>
-                        <span class="username">malallai</span>
+                        <span class="username"><?= $params['details']['user']['username']?></span>
                     </div>
-                    <div class="usermail">malallai@student.42.fr</div>
+                    <div class="usermail"><?= $params['details']['user']['email']?></div>
                 </div>
             </div>
         </div>
