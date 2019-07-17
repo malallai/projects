@@ -20,8 +20,6 @@ class GeneralPage extends Page {
 
     public function indexPage($page) {
         if ($page === 0) {
-            $posts = $this->_controller->getSql()->getPosts(1);
-            var_dump($posts);
             $params = array('content' => 'general/Home');
             $this->render($params);
         }
