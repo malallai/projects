@@ -20,8 +20,8 @@ class GeneralSql extends Sql {
             if(!($page > 0 AND $page <= $tot))
                 return false;
             Snackbar::send_snack($postsCount);
-            $end = $postsCount - ($postsPerPage * $page);
-            $start = $end - $postsPerPage;
+            $start = $postsCount - ($postsPerPage * $page);
+            $end = $start + $postsPerPage;
             $request = self::runList("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array($start, $end), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
