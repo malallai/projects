@@ -62,7 +62,10 @@ class Sql {
             $connection = self::getConn();
             $statement = $connection->prepare($request);
             $statement->execute($args);
-            $result = $statement->fetch($fetch);
+            $result = array();
+            while ($fetchResult = $statement->fetch($fetch)) {
+                array_push($result, $fetchResult);
+            }
             return array("result"=>$result, "statement"=>$statement);
         } catch (PDOException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
