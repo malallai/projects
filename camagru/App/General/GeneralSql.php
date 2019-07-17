@@ -31,7 +31,7 @@ class GeneralSql extends Sql {
         try {
             $posts = self::run("SELECT id FROM posts", array());
             $postsCount = $posts["statement"]->rowCount();
-            return $postsCount / 5;
+            return round($postsCount / 5, 0, PHP_ROUND_HALF_UP);
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
