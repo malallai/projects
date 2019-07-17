@@ -51,11 +51,16 @@
     color: #fff;
 }
 
+.posts-row .pagination .inputs .input.disable {
+    color: #ddd;
+    cursor: not-allowed;
+}
+
 .posts-row .pagination .input i {
     padding: 0;
 }
 
-.posts-row .pagination .inputs .input:hover {
+.posts-row .pagination .inputs .input:hover:not(.active):not(.disable) {
     background-color: rgba(0, 0, 0, .5);
     color: #fff;
 }
