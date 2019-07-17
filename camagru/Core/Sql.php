@@ -81,16 +81,16 @@ class Sql {
         }
     }
 
-    protected static function bindRun($request, $args = array(), $fetch = null) {
+    protected static function bindValueRun($request, $args = array(), $fetch = null) {
         try {
-            $response = self::bindRunList($request, $args, $fetch);
+            $response = self::bindValueRunList($request, $args, $fetch);
             return array("statement" => $response['statement'], 'result' => $response['result'][0]);
         } catch (SqlException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
         }
     }
 
-    protected static function bindRunList($request, $args = array(), $fetch = null) {
+    protected static function bindValueRunList($request, $args = array(), $fetch = null) {
         try {
             self::init_db();
         } catch (SqlException $e) {
@@ -99,13 +99,10 @@ class Sql {
         }
         try {
             $connection = self::getConn();
-            $connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
             $statement = $connection->prepare($request);
-            $key = 1;
-            foreach ($args as $value => $type) {
-                Snackbar::send_snack($value . " : " . $type . " - " . $key);
-                $statement->bindParam($key, $value, $type);
-                $key++;
+            foreach ($args as $key => $values) {
+                Snackbar::send_snack($values[0] . " : " . $values[1] . " - " . $key);
+                $statement->bindValue($key, $values[0], $values[1]);
             }
             $statement->execute();
             $result = array();
