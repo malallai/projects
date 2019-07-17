@@ -13,7 +13,8 @@ class GeneralSql extends Sql {
     public function getPosts($page = 1) {
         try {
             $postsPerPage = 5;
-            $postsCount = $this->getPages();
+            $posts = self::run("SELECT id FROM posts", array());
+            $postsCount = $posts["statement"]->rowCount();
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
@@ -30,7 +31,7 @@ class GeneralSql extends Sql {
         try {
             $posts = self::run("SELECT id FROM posts", array());
             $postsCount = $posts["statement"]->rowCount();
-            return $postsCount;
+            return $postsCount / 5;
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
