@@ -17,7 +17,7 @@ class GeneralPage extends Page {
         if (count($exploded) > 1) {
             $this->indexPage(intval($exploded[1]));
         } else {
-            $this->indexPage(0);
+            $this->indexPage(1);
         }
     }
 
