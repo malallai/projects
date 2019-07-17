@@ -54,7 +54,8 @@
 }
 
 .posts-row .pagination .inputs *:hover {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, .1);
+    color: #fff;
 }
 
 .posts-row .post {
