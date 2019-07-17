@@ -2,23 +2,23 @@
 
 namespace App\Montage;
 
-use App\User\UserController;
+use App\General\GeneralController;
 use Core\Controller;
 
 class MontageController extends Controller {
 
-    private $_user_controller;
+    private $_generalController;
 
     public function __construct() {
         $this->_sql = new MontageSql();
-        $this->_user_controller = new UserController();
+        $this->_generalController = new GeneralController();
     }
 
     /**
-     * @return UserController
+     * @return GeneralController
      */
-    public function getUserController() {
-        return $this->_user_controller;
+    public function getGeneralController() {
+        return $this->_generalController;
     }
 
 }
