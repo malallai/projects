@@ -51,7 +51,7 @@ class Sql {
         }
     }
 
-    protected static function run($request, $args = array()) {
+    protected static function run($request, $args = array(), $fetch = "") {
         try {
             self::init_db();
         } catch (SqlException $e) {
@@ -62,7 +62,7 @@ class Sql {
             $connection = self::getConn();
             $statement = $connection->prepare($request);
             $statement->execute($args);
-            $result = $statement->fetch();
+            $result = $statement->fetch($fetch);
             return array("result"=>$result, "statement"=>$statement);
         } catch (PDOException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
