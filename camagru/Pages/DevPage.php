@@ -26,7 +26,6 @@ class DevPage extends Page {
     }
 
     public static function renderArray($values) {
-        Snackbar::send_snack("renderArray");
         ob_start();
         require "Public/views/dev/Content.php";
         $content = ob_get_clean();
