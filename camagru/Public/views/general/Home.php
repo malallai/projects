@@ -39,20 +39,22 @@
         </div>
 
         <div class="pagination">
-            <div class="arrow">
-                <a href="/page/1"><i class="fas fa-angle-left"></i></a>
-            </div>
-            <div class="page active">
-                <a href="/page/1">1</a>
-            </div>
-            <div class="page">
-                <a href="/page/2">2</a>
-            </div>
-            <div class="page">
-                <a href="/page/3">3</a>
-            </div>
-            <div class="arrow">
-                <a href="/page/3"><i class="fas fa-angle-right"></i></a>
+            <div class="inputs">
+                <div class="arrow">
+                    <a href="/page/1"><i class="fas fa-angle-left"></i></a>
+                </div>
+                <div class="page active">
+                    <a href="/page/1">1</a>
+                </div>
+                <div class="page">
+                    <a href="/page/2">2</a>
+                </div>
+                <div class="page">
+                    <a href="/page/3">3</a>
+                </div>
+                <div class="arrow">
+                    <a href="/page/3"><i class="fas fa-angle-right"></i></a>
+                </div>
             </div>
         </div>
     </div>

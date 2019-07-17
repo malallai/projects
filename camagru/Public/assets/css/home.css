@@ -29,6 +29,14 @@
     flex-direction: column;
 }
 
+.posts-row .pagination {
+    display: flex;
+}
+
+.posts-row .pagination .inputs {
+    margin: 0 auto;
+}
+
 .posts-row .post {
     display: flex;
     flex-direction: column;
