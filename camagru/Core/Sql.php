@@ -51,7 +51,7 @@ class Sql {
         }
     }
 
-    protected static function prepare($request, $args = array()) {
+    protected static function run($request, $args = array()) {
         try {
             self::init_db();
         } catch (SqlException $e) {
