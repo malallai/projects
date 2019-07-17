@@ -12,7 +12,7 @@ $router = new Router();
 $router->addRoute("", "Pages\GeneralPage@index");
 $router->addRoute("index", "Pages\GeneralPage@index");
 
-$router->addRoute("page/(\d*)", "App\General\GeneralPage@index");
+$router->addRoute("page/(\d*)", "Pages\GeneralPage@index");
 
 $router->addRoute("user", "Pages\UserPage@index");
 
