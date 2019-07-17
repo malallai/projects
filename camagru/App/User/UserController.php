@@ -22,8 +22,8 @@ class UserController extends Controller {
         return false;
     }
 
-    public function get_user_id($username) {
-        if ($this->isLogged()) {
+    public function get_user_id($username, $force = false) {
+        if ($this->isLogged() || $force) {
             return $this->getSql()->get_user_id($username);
         } else {
             return null;
