@@ -19,25 +19,32 @@
 </div>
 <div class="aside-middle-content">
     <div class="posts">
-        <div class="post">
-            <span class="picture">
-                <img src="/Public/assets/pictures/posts/0.jpg">
-            </span>
-            <div class="details">
-                <div class="row">
-                    <div class="content">
-                    <span class="like-count">
-                        <span>10</span>
-                        <i class="far fa-heart"></i>
-                    </span>
-                        <span class="comments-count">
-                        <span>10</span>
-                        <i class="far fa-comment-alt"></i>
-                    </span>
+        <?php
+        foreach ($params['details']['posts'] as $post) {
+            $likes = $post['likes'];
+            $comments = $post['likes'];
+            $imagePath = $post['image_path'];
+            ?>
+            <div class="post">
+                <span class="picture">
+                    <img src="<?= $imagePath ?>">
+                </span>
+                <div class="details">
+                    <div class="row">
+                        <div class="content">
+                            <span class="like-count">
+                                <span><?= $ ?></span>
+                                <i class="far fa-heart"></i>
+                            </span>
+                            <span class="comments-count">
+                                <span><?= $imagePath ?></span>
+                                <i class="far fa-comment-alt"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
         <div class="post">
             <span class="picture">
                 <img src="/Public/assets/pictures/posts/0.jpg">
@@ -49,7 +56,7 @@
                         <span>10</span>
                         <i class="far fa-heart"></i>
                     </span>
-                        <span class="comments-count">
+                    <span class="comments-count">
                         <span>10</span>
                         <i class="far fa-comment-alt"></i>
                     </span>
