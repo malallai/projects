@@ -6,6 +6,8 @@ use Core\Sql;
 use Exceptions\SqlException;
 use Core\Snackbar;
 use Core\Mail;
+use PDO;
+
 class UserSql extends Sql {
 
     public function auth($username, $pwd) {
@@ -148,6 +150,16 @@ class UserSql extends Sql {
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return null;
+        }
+    }
+
+    public function getLastUsers() {
+        try {
+            $request = self::runList("SELECT * FROM users ORDER BY id DESC LIMIT 5",  array(), PDO::FETCH_ASSOC);
+            return $request['result'];
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
         }
     }
 
