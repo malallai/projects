@@ -9,8 +9,6 @@ use PDO;
 
 class GeneralSql extends Sql {
 
-    //$this->_controller->getSql()->prepare("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?");
-
     public function getPosts($page = 1) {
         try {
             $postsPerPage = 5;
@@ -21,9 +19,6 @@ class GeneralSql extends Sql {
                 return false;
             $start = $postsCount - ($postsPerPage * $page);
             $end = $start + $postsPerPage;
-            Snackbar::send_snack("Posts : ".$postsCount);
-            Snackbar::send_snack("Start : ".$start);
-            Snackbar::send_snack("End : ".$end);
             $request = self::runList("SELECT * FROM posts WHERE id BETWEEN ? AND ? ORDER BY id DESC",  array($start + 1, $end), PDO::FETCH_ASSOC);
             Snackbar::send_snack($request['result']);
             return $request['result'];
