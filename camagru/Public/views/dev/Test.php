@@ -5,7 +5,4 @@
 <div onclick="new_snackbar('<span style=\'color:deepskyblue;\'>Blue</span>')" style="color: deepskyblue">Blue</div>
 <?php
 
-use Core\Mail;
-
-\Core\Session::startSession();
-var_dump($_SESSION);
+var_dump($posts);
