@@ -10,7 +10,7 @@ class Sql {
 
     protected static $_conn;
 
-    public function compareTokens($token) {
+    public static function compareTokens($token) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
@@ -22,12 +22,12 @@ class Sql {
         return false;
     }
 
-    protected function init_no_db($clear = false) {
+    protected static function init_no_db($clear = false) {
         require 'config/database.php';
         if ($clear) {
             self::$_conn = null;
-        } else if (self::$_conn) {
-            return self::$_conn;
+        } else if (self::getConn()) {
+            return self::getConn();
         }
         try {
             $host = 'mysql:'.explode(';', $DB_DSN)[1];
@@ -37,12 +37,12 @@ class Sql {
         }
     }
 
-    protected function init_db($clear = false) {
+    protected static function init_db($clear = false) {
         require 'config/database.php';
         if ($clear) {
             self::$_conn = null;
-        } else if (self::$_conn) {
-            return self::$_conn;
+        } else if (self::getConn()) {
+            return self::getConn();
         }
         try {
             self::$_conn = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
@@ -51,7 +51,7 @@ class Sql {
         }
     }
 
-    protected function prepare($request, $args) {
+    protected static function prepare($request, $args = array()) {
         try {
             self::init_db();
         } catch (SqlException $e) {
@@ -59,7 +59,8 @@ class Sql {
             return false;
         }
         try {
-            $statement = self::$_conn->prepare($request);
+            $connection = self::getConn();
+            $statement = $connection->prepare($request);
             $statement->execute($args);
             $result = $statement->fetch();
             return $result;
@@ -67,4 +68,12 @@ class Sql {
             throw new SqlException("Error during sql statement. Please contact us.");
         }
     }
+
+    /**
+     * @return PDO
+     */
+    public static function getConn() {
+        return self::$_conn;
+    }
+
 }

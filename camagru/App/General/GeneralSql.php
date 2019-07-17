@@ -12,8 +12,6 @@ class GeneralSql extends Sql {
         try {
             $postsPerPage = 5;
             $posts = $this->prepare("SELECT id FROM posts", array());
-            if (!$posts)
-                return false;
             echo $posts;
             $postsCount = $posts->rowCount();
             $tot = ceil($postsCount / $postsPerPage);
@@ -21,7 +19,7 @@ class GeneralSql extends Sql {
                 return false;
             $start = ($page - 1) * $postsPerPage;
             //$this->_controller->getSql()->prepare("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?");
-            $result = $this->_controller->getSql()->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT ?,?", array($start, $postsPerPage));
+            $result = $this->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT ?,?", array($start, $postsPerPage));
             echo $result;
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
