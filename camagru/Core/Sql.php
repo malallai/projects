@@ -100,7 +100,7 @@ class Sql {
         try {
             $connection = self::getConn();
             $statement = $connection->prepare($request);
-            $key = 0;
+            $key = 1;
             foreach ($args as $value => $type) {
                 $statement->bindParam($key, $value, $type);
                 $key++;
