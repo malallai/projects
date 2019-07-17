@@ -69,7 +69,7 @@ class Sql {
         }
     }
 
-    protected static function runList($request, $args = array(), $fetch = "") {
+    protected static function runList($request, $args = array(), $fetch = null) {
         try {
             self::init_db();
         } catch (SqlException $e) {
