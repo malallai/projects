@@ -32,7 +32,7 @@ class Sql {
         try {
             $host = 'mysql:'.explode(';', $DB_DSN)[1];
             self::$_conn = new \PDO($host, $DB_USER, $DB_PASSWORD);
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             throw new SqlException("Mysql Error during connection to database. Please contact us.");
         }
     }
@@ -45,13 +45,19 @@ class Sql {
             return self::$_conn;
         }
         try {
-            self::$_conn = new \PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
-        } catch (\PDOException $e) {
+            self::$_conn = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
+        } catch (PDOException $e) {
             throw new SqlException("Mysql Error during connection to database. Please contact us.");
         }
     }
 
-    protected static function prepare($request, $args) {
+    protected function prepare($request, $args) {
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
         try {
             $statement = self::$_conn->prepare($request);
             $statement->execute($args);
