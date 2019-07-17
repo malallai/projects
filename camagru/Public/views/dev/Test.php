@@ -5,4 +5,5 @@
 <div onclick="new_snackbar('<span style=\'color:deepskyblue;\'>Blue</span>')" style="color: deepskyblue">Blue</div>
 <?php
 
-var_dump($params["posts"]);
+\Core\Session::startSession();
+var_dump($_SESSION);
