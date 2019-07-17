@@ -9,10 +9,11 @@ use Exceptions\SqlException;
 class GeneralSql extends Sql {
 
     public function getPosts($page = 1) {
-
         try {
             $postsPerPage = 5;
             $posts = $this->prepare("SELECT id FROM posts", array());
+            if (!$posts)
+                return false;
             echo $posts;
             $postsCount = $posts->rowCount();
             $tot = ceil($postsCount / $postsPerPage);
