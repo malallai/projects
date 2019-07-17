@@ -12,8 +12,7 @@ class UserSql extends Sql {
         $username = htmlspecialchars($username);
         $pwd = hash("whirlpool", $pwd);
         try {
-            $request = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
                     if ($result['confirmed'] == 0) {
@@ -23,7 +22,6 @@ class UserSql extends Sql {
                     return true;
                 }
             }
-            Snackbar::send_snack($result);
             Snackbar::send_snack("Wrong username or password.");
             return false;
         } catch (SqlException $e) {
@@ -40,8 +38,7 @@ class UserSql extends Sql {
         $pwd = hash("whirlpool", $pwd);
         $confirm_key = bin2hex(random_bytes(32));
         try {
-            $request = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail))["result"];
             if (isset($result) && !empty($result)) {
                 Snackbar::send_snack("Email or username already taken. ");
                 return false;
@@ -78,8 +75,7 @@ class UserSql extends Sql {
     public function confirm($token) {
         $token = htmlspecialchars(explode('/', $token)[2]);
         try {
-            $request = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
@@ -96,8 +92,7 @@ class UserSql extends Sql {
         $mail = htmlspecialchars($mail);
         $token = bin2hex(random_bytes(32));
         try {
-            $request = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
@@ -123,13 +118,11 @@ class UserSql extends Sql {
     public function edit_pwd($password, $token) {
         $password = hash('whirlpool', $password);
         try {
-            $request = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
-            $request = self::run("SELECT id, email FROM users WHERE id = ?", array($result['user_id']))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT id, email FROM users WHERE id = ?", array($result['user_id']))["result"];
             $link = "https://camagru.malallai.fr/user/resetpw/".$token;
             Mail::newMail($result['email'], "Changement de mot de passe",
                 "Ton mot de passe viens d'être modifié.".
@@ -148,8 +141,7 @@ class UserSql extends Sql {
     public function get_user_id($username) {
         try {
             Snackbar::send_snack("Get User ID " . $username);
-            $request = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
-            $result = $request[0];
+            $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
             foreach ($result as $r) {
                 Snackbar::send_snack($r);
             }
