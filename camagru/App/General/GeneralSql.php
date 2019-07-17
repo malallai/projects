@@ -21,9 +21,9 @@ class GeneralSql extends Sql {
                 return false;
             $start = $postsCount - ($postsPerPage * $page);
             $end = $start + $postsPerPage;
-            Snackbar::send_snack($postsCount);
-            Snackbar::send_snack($start);
-            Snackbar::send_snack($end);
+            Snackbar::send_snack("Posts : ".$postsCount);
+            Snackbar::send_snack("Start : ".$start);
+            Snackbar::send_snack("End : ".$end);
             $request = self::runList("SELECT * FROM posts DESC WHERE id BETWEEN ? AND ? ORDER BY id DESC",  array($start, $end), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
