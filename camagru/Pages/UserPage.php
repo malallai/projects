@@ -121,6 +121,7 @@ class UserPage extends Page {
     public function profile() {
         $params = array();
         if ($this->_controller->isLogged()) {
+            Snackbar::send_snack($this->_controller->get_user()['userid']);
             $user = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
             $params = array('content' => 'aside/Profile', "details" => $user);
         } else {
