@@ -33,11 +33,11 @@
                     <div class="row">
                         <div class="content">
                             <span class="like-count">
-                                <span><?= $ ?></span>
+                                <span><?= $likes ?></span>
                                 <i class="far fa-heart"></i>
                             </span>
                             <span class="comments-count">
-                                <span><?= $imagePath ?></span>
+                                <span><?= $comments ?></span>
                                 <i class="far fa-comment-alt"></i>
                             </span>
                         </div>
