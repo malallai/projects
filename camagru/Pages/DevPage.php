@@ -1,11 +1,13 @@
 <?php
 
 namespace Pages;
+use App\General\GeneralController;
 use Core\Page;
 class DevPage extends Page {
 
     public function __construct($url) {
         parent::__construct($url);
+        $this->_controller = new GeneralController();
         $this->_template = "templates/general";
 
     }
@@ -13,6 +15,8 @@ class DevPage extends Page {
     public function index() {
         $params = array('content' => 'dev/Test');
         $this->render($params);
+        $posts = $this->_controller->getSql()->getPosts(1);
+        var_dump($posts);
     }
 
     public function mail() {
