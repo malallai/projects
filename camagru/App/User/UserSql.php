@@ -11,7 +11,7 @@ use PDO;
 class UserSql extends Sql {
 
     public function auth($username, $pwd) {
-        $username = htmlspecialchars($username);
+        $username = htmlentities(htmlspecialchars($username));
         $pwd = hash("whirlpool", $pwd);
         try {
             $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
@@ -33,10 +33,10 @@ class UserSql extends Sql {
     }
 
     public function register($username, $mail, $pwd, $first, $last) {
-        $username = htmlspecialchars($username);
-        $mail = htmlspecialchars($mail);
-        $first = htmlspecialchars($first);
-        $last = htmlspecialchars($last);
+        $username = htmlentities(htmlspecialchars($username));
+        $mail = htmlentities(htmlspecialchars($mail));
+        $first = htmlentities(htmlspecialchars($first));
+        $last = htmlentities(htmlspecialchars($last));
         $pwd = hash("whirlpool", $pwd);
         $confirm_key = bin2hex(random_bytes(32));
         try {
@@ -75,7 +75,7 @@ class UserSql extends Sql {
     }
 
     public function confirm($token) {
-        $token = htmlspecialchars(explode('/', $token)[2]);
+        $token = htmlentities(htmlspecialchars(explode('/', $token)[2]));
         try {
             $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
@@ -91,7 +91,7 @@ class UserSql extends Sql {
     }
 
     public function send_reset($mail) {
-        $mail = htmlspecialchars($mail);
+        $mail = htmlentities(htmlspecialchars($mail));
         $token = bin2hex(random_bytes(32));
         try {
             $result = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];

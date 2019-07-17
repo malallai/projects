@@ -13,8 +13,12 @@ class GeneralPage extends Page {
     }
 
     public function index() {
-        $exploded = explode('/', $this->_url);
-        $this->indexPage(1);
+        $exploded = explode("/", $this->_url);
+        if (count($exploded) > 1) {
+            $this->indexPage(intval($exploded[1]));
+        } else {
+            $this->indexPage(0);
+        }
     }
 
     public function indexPage($page) {
