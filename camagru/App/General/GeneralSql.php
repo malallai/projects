@@ -13,13 +13,13 @@ class GeneralSql extends Sql {
     public function getPosts($page = 1) {
         try {
             $postsPerPage = 5;
-            $posts = $this->run("SELECT id FROM posts", array());
+            $posts = self::run("SELECT id FROM posts", array());
             $postsCount = $posts["statement"]->rowCount();
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
-            $request = $this->run("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array(0, 5));
+            $request = self::run("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array(0, 5));
             return $request["result"];
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
