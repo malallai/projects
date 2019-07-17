@@ -19,7 +19,7 @@ class GeneralSql extends Sql {
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
-            $start = $postsCount - ($postsPerPage * $page);
+            $start = $postsCount - ($postsPerPage * $page) + 1;
             $end = $start + $postsPerPage;
             Snackbar::send_snack("Posts : ".$postsCount);
             Snackbar::send_snack("Start : ".$start);
