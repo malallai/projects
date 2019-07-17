@@ -19,7 +19,7 @@ class GeneralSql extends Sql {
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
-            $request = self::run("SELECT * FROM posts",  array(0, 5));
+            $request = self::run("SELECT * FROM posts ORDER BY id LIMIT 0, 5",  array(0, 5));
             return $request;
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
