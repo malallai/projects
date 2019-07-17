@@ -42,15 +42,17 @@
     padding: .25rem .6rem;
     margin: 0 5px;
     border: 1px solid rgba(0,0,0,.0975);
-}
-
-.posts-row .pagination .inputs i {
-    padding: 0;
-}
-
-.posts-row .pagination .inputs a {
     text-decoration: none;
     color: #999;
+}
+
+.posts-row .pagination .inputs .input.active {
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+}
+
+.posts-row .pagination .input i {
+    padding: 0;
 }
 
 .posts-row .pagination .inputs .input:hover {
