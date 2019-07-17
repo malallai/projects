@@ -13,7 +13,6 @@ class UserSql extends Sql {
         $pwd = hash("whirlpool", $pwd);
         try {
             $request = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
-            var_dump($request);
             $result = $request[0];
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
@@ -24,6 +23,7 @@ class UserSql extends Sql {
                     return true;
                 }
             }
+            Snackbar::send_snack($result);
             Snackbar::send_snack("Wrong username or password.");
             return false;
         } catch (SqlException $e) {
