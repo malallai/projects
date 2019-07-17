@@ -3,6 +3,7 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
+use Core\Snackbar;
 
 class GeneralPage extends Page {
 
@@ -24,6 +25,7 @@ class GeneralPage extends Page {
     public function indexPage($page) {
         $posts = $this->_controller->getSql()->getPosts($page);
         $users = $this->_controller->getUserController()->getSql()->getLastUsers();
+        Snackbar::send_snack(DevPage::renderArray($posts));
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users);
         $this->render($params);
     }
