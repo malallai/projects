@@ -11,8 +11,8 @@ class GeneralSql extends Sql {
     public function getPosts($page = 1) {
         try {
             $postsPerPage = 5;
-            $posts = $this->prepare("SELECT id FROM posts", array());
-            echo $posts;
+            $posts = $this->run("SELECT id FROM posts", array());
+            var_dump($posts);
             $postsCount = $posts->rowCount();
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
