@@ -38,6 +38,10 @@
     display: flex;
 }
 
+.posts-row .pagination .inputs * {
+    padding: .25rem .5rem;
+}
+
 .posts-row .post {
     display: flex;
     flex-direction: column;
