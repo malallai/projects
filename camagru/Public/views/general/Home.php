@@ -41,7 +41,7 @@
         <div class="pagination">
             <div class="inputs">
                 <?php $page = $params['page']; $pages = $params['pages'] ?>
-                <a class="input arrow <?= $page == 1 ? "disable" : "" ?>" <?= $page == 1 ? "" : "href='/page/".($page + 1)."'"?>><i class="fas fa-angle-left"></i></a>
+                <a class="input arrow <?= $page == 1 ? "disable" : "" ?>" <?= $page == 1 ? "" : "href='/page/".($page - 1)."'"?>><i class="fas fa-angle-left"></i></a>
                 <?php
                     $s = ($page == 1 || $page == $pages ? ($page == $pages ? $page - 2 : $page) : $page - 1);
                     for ($i = $s; $i < $s + 3; $i++) {
