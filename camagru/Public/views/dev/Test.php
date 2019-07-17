@@ -5,4 +5,4 @@
 <div onclick="new_snackbar('<span style=\'color:deepskyblue;\'>Blue</span>')" style="color: deepskyblue">Blue</div>
 <?php
 
-var_dump($params["posts"]);
+var_dump($params["posts"]['statement']);
