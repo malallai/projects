@@ -18,7 +18,7 @@ class UserSql extends Sql {
             return false;
         }
         try {
-            $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username));
+            $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
                     if ($result['confirmed'] == 0) {
@@ -50,7 +50,7 @@ class UserSql extends Sql {
             return false;
         }
         try {
-            $result = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail));
+            $result = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail))["result"];
             if (isset($result) && !empty($result)) {
                 Snackbar::send_snack("Email or username already taken. ");
                 return false;
@@ -65,7 +65,7 @@ class UserSql extends Sql {
                 "</br></br>".
                 "<span style='color:#999'>Si le lien ne fonctionne pas voici le lien direct: $link</span>"
             );
-            $result = self::run("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirm_key));
+            self::run("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirm_key));
             Snackbar::send_snack("Account successfuly created.");
             Snackbar::send_snack("Please confirm your account. Don't forget to checks spams.");
             return true;
@@ -93,12 +93,12 @@ class UserSql extends Sql {
             return false;
         }
         try {
-            $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token));
+            $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
             $uid = $result['id'];
-            $result = self::run("UPDATE users SET confirmed = 1, conf_token = NULL WHERE id = ?", array($uid));
+            self::run("UPDATE users SET confirmed = 1, conf_token = NULL WHERE id = ?", array($uid));
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
@@ -116,7 +116,7 @@ class UserSql extends Sql {
             return false;
         }
         try {
-            $result = self::run("SELECT id FROM users WHERE email = ?", array($mail));
+            $result = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
@@ -148,11 +148,11 @@ class UserSql extends Sql {
             return false;
         }
         try {
-            $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token));
+            $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
             }
-            $result = self::run("SELECT id, email FROM users WHERE id = ?", array($result['user_id']));
+            $result = self::run("SELECT id, email FROM users WHERE id = ?", array($result['user_id']))["result"];
             $link = "https://camagru.malallai.fr/user/resetpw/".$token;
             Mail::newMail($result['email'], "Changement de mot de passe",
                 "Ton mot de passe viens d'être modifié.".
@@ -176,8 +176,7 @@ class UserSql extends Sql {
             return null;
         }
         try {
-            Snackbar::send_snack($username);
-            $result = self::run("SELECT id FROM users WHERE username = ?", array($username));
+            $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
             if (!isset($result) || empty($result)) {
                 return null;
             }
