@@ -102,6 +102,7 @@ class Sql {
             $statement = $connection->prepare($request);
             $key = 1;
             foreach ($args as $value => $type) {
+                Snackbar::send_snack($value . " : " . $type . " - " . $key);
                 $statement->bindParam($key, $value, $type);
                 $key++;
             }
