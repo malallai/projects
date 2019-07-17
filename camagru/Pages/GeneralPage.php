@@ -45,4 +45,10 @@ class GeneralPage extends Page {
         return $this->_controller->getSql()->getUser($user)['result'];
     }
 
+    public function pagination($globalParams) {
+        $params = array('content' => 'general/Pagination', 'page' => $globalParams['page'], 'pages' => $globalParams['pages']);
+        $quick_content = $this->quickRender($params);
+        return $quick_content;
+    }
+
 }
