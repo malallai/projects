@@ -19,8 +19,8 @@ class GeneralSql extends Sql {
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
-            $start = $postsCount - ($postsPerPage * $page);
-            $end = $start - $postsPerPage;
+            $end = $postsCount - ($postsPerPage * $page);
+            $start = $end - $postsPerPage;
             $request = self::runList("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array($start, $end), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
