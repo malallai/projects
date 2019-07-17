@@ -21,7 +21,7 @@ class GeneralSql extends Sql {
                 return false;
             $start = ($page - 1) * $postsPerPage;
             $request = self::run("SELECT * FROM posts ORDER BY id LIMIT 0, 5",  array(0, 5), PDO::FETCH_ASSOC);
-            return $request;
+            return $request['result'];
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
