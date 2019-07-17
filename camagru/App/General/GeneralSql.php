@@ -5,6 +5,7 @@ namespace App\General;
 use Core\Snackbar;
 use Core\Sql;
 use Exceptions\SqlException;
+use Pages\DevPage;
 use PDO;
 
 class GeneralSql extends Sql {
@@ -19,7 +20,7 @@ class GeneralSql extends Sql {
                 return false;
             $start = ($page - 1) * $postsPerPage;
             $request = self::bindRunList("SELECT * FROM posts ORDER BY date DESC LIMIT ?,?",  array("".$start => PDO::PARAM_INT, "".$postsPerPage => PDO::PARAM_INT), PDO::FETCH_ASSOC);
-            Snackbar::send_snack(var_dump($request['result']));
+            Snackbar::send_snack(DevPage::renderArray($request['result']));
             return $request['result'];
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
