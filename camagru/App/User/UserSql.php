@@ -171,7 +171,7 @@ class UserSql extends Sql {
     public function get_user_id($username) {
         try {
             $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
-            var_dump($result);
+            Snackbar::send_snack($result['id']);
             if (!isset($result) || empty($result)) {
                 return null;
             }
