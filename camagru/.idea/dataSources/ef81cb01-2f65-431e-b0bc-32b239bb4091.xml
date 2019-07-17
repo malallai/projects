@@ -1061,7 +1061,7 @@
     </column>
     <column id="262" parent="241" name="date">
       <Position>4</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
