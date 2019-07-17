@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/General/GeneralSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/General/GeneralSql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/User/UserSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserSql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Sql.php" afterDir="false" />
     </list>
@@ -95,23 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Core/Sql.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-              <folding>
-                <element signature="e#25#53#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -219,9 +207,9 @@
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
         <option value="$PROJECT_DIR$/Public/views/dev/Test.php" />
         <option value="$PROJECT_DIR$/App/Montage/MontageSql.php" />
-        <option value="$PROJECT_DIR$/App/User/UserSql.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
         <option value="$PROJECT_DIR$/Core/Sql.php" />
+        <option value="$PROJECT_DIR$/App/User/UserSql.php" />
       </list>
     </option>
   </component>
@@ -427,12 +415,12 @@
       <workItem from="1562838251362" duration="4313000" />
       <workItem from="1562937156304" duration="1465000" />
       <workItem from="1563281447520" duration="5531000" />
-      <workItem from="1563358289414" duration="6986000" />
+      <workItem from="1563358289414" duration="7174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107065000" />
+    <option name="totallyTimeSpent" value="107253000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -756,6 +744,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/Montage/MontageSql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#31#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="1226" column="39" selection-start-line="1226" selection-start-column="27" selection-end-line="1226" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="64" column="48" lean-forward="true" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+          <folding>
+            <element signature="e#25#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/dev/Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -777,23 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Montage/MontageSql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#31#49#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -804,20 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="1226" column="39" selection-start-line="1226" selection-start-column="27" selection-end-line="1226" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-          <folding>
-            <element signature="e#25#53#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
         </state>
       </provider>
     </entry>
