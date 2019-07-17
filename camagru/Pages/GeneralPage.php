@@ -19,7 +19,8 @@ class GeneralPage extends Page {
 
     public function indexPage($page) {
         $posts = $this->_controller->getSql()->getPosts($page);
-        $params = array('content' => 'general/Home', 'posts' => $posts);
+        $users = $this->_controller->getSql()->getLastUsers();
+        $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users);
         $this->render($params);
     }
 
@@ -30,6 +31,10 @@ class GeneralPage extends Page {
 
     public function getPostDetails($idPost) {
         return $this->_controller->getSql()->getPost($idPost)['result'];
+    }
+
+    public function getUserDetails($user) {
+        return $this->_controller->getSql()->getUser($user)['result'];
     }
 
 }
