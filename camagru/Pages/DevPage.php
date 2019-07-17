@@ -7,6 +7,7 @@ class DevPage extends Page {
     public function __construct($url) {
         parent::__construct($url);
         $this->_template = "templates/general";
+
     }
 
     public function index() {

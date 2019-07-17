@@ -21,8 +21,8 @@ class MontagePage extends Page  {
     }
 
     public function new_post($picture) {
-        if ($this->_controller->getUserController()->isLogged()) {
-            if ($this->_controller->getSql()->upload_picture($this->_controller->getUserController()->get_user()['userid'], $picture)) {
+        if ($this->_controller->getGeneralController()->getUserController()->isLogged()) {
+            if ($this->_controller->getSql()->upload_picture($this->_controller->getGeneralController()->getUserController()->get_user()['userid'], $picture)) {
                 Snackbar::send_snack("Post uploded");
             } else {
                 Snackbar::send_snack("Error while uploading post");
