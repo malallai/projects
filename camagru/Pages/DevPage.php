@@ -26,9 +26,7 @@ class DevPage extends Page {
     }
 
     public static function renderArray($values) {
-        ob_start();
-        var_dump($values);
-        $content = ob_get_clean();
+        $content = var_export($values, true);
         return $content;
     }
 
