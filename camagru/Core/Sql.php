@@ -60,6 +60,7 @@ class Sql {
         }
         try {
             $connection = self::getConn();
+            $connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
             $statement = $connection->prepare($request);
             $statement->execute($args);
             $result = $statement->fetch();
