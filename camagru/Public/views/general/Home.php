@@ -17,7 +17,7 @@
                         </div>
                         <div class="user-infos">
                             <div class="user-name">
-                                <a href="/user/id"><?= $userName ?></a>
+                                <a href="/user/id"><?= $userName ?> | <?= $post['id'] ?></a>
                             </div>
                         </div>
                     </div>
