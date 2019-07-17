@@ -16,8 +16,8 @@ class DevPage extends Page {
 
     public function index() {
         $posts = $this->_controller->getSql()->getPosts(1);
-        Snackbar::send_snack(DevPage::renderArray($posts));
         $params = array('content' => 'dev/Test', "posts" => $posts);
+        Snackbar::send_snack(DevPage::renderArray($params));
         $this->render($params);
     }
 
