@@ -53,18 +53,9 @@ class Sql {
 
     protected static function run($request, $args = array(), $fetch = null) {
         try {
-            self::init_db();
+            $response = self::runList($request, $args, $fetch);
+            return array("statement" => $response['statement'], 'result' => $response['result'][0]);
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
-        try {
-            $connection = self::getConn();
-            $statement = $connection->prepare($request);
-            $statement->execute($args);
-            $result = $statement->fetch($fetch);
-            return array("result"=>$result, "statement"=>$statement);
-        } catch (PDOException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
         }
     }
@@ -80,6 +71,41 @@ class Sql {
             $connection = self::getConn();
             $statement = $connection->prepare($request);
             $statement->execute($args);
+            $result = array();
+            while ($fetchResult = $statement->fetch($fetch)) {
+                array_push($result, $fetchResult);
+            }
+            return array("result"=>$result, "statement"=>$statement);
+        } catch (PDOException $e) {
+            throw new SqlException("Error during sql statement. Please contact us.");
+        }
+    }
+
+    protected static function bindRun($request, $args = array(), $fetch = null) {
+        try {
+            $response = self::bindRunList($request, $args, $fetch);
+            return array("statement" => $response['statement'], 'result' => $response['result'][0]);
+        } catch (SqlException $e) {
+            throw new SqlException("Error during sql statement. Please contact us.");
+        }
+    }
+
+    protected static function bindRunList($request, $args = array(), $fetch = null) {
+        try {
+            self::init_db();
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+        try {
+            $connection = self::getConn();
+            $statement = $connection->prepare($request);
+            $key = 0;
+            foreach ($args as $value => $type) {
+                $statement->bindParam($key, $value, $type);
+                $key++;
+            }
+            $statement->execute();
             $result = array();
             while ($fetchResult = $statement->fetch($fetch)) {
                 array_push($result, $fetchResult);
