@@ -31,7 +31,7 @@
                         <a class="link"><i class="far fa-heart"></i></a>
                     </div>
                     <div class="like-counts">
-                        <p><?= $likes ?> j'aimes</p>
+                        <p><?= $likes ?> j'aime<?= $likes > 1 ? "s" : "" ?></p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                             <a href="/user/id"><?= $userName ?></a>
                         </div>
                         <div class="posts-count">
-                            <p><?= $posts ?> photo</p>
+                            <p><?= $posts ?> photo<?= $posts > 1 ? "s" : "" ?></p>
                         </div>
                     </div>
                 </div>
