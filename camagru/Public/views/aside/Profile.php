@@ -22,7 +22,7 @@
         <?php
         foreach ($params['details']['posts'] as $post) {
             $likes = $post['likes'];
-            $comments = $post['likes'];
+            $comments = $post['comments'];
             $imagePath = $post['image_path'];
             ?>
             <div class="post">
