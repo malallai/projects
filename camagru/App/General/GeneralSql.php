@@ -20,8 +20,18 @@ class GeneralSql extends Sql {
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
-            $request = self::runList("SELECT * FROM posts ORDER BY id LIMIT 0, 5",  array(0, 5), PDO::FETCH_ASSOC);
+            $request = self::runList("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array($start, $postsPerPage), PDO::FETCH_ASSOC);
             return $request['result'];
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+    }
+
+    public function getPost($id) {
+        try {
+            $request = self::run("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?",  array($id));
+            return $request;
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
