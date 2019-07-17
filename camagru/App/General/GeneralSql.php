@@ -17,9 +17,8 @@ class GeneralSql extends Sql {
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
-            $start = $postsCount - ($postsPerPage * $page);
-            $end = $start + $postsPerPage;
-            $request = self::bindRunList("SELECT * FROM posts ORDER BY date DESC LIMIT ?,?",  array("".$start => PDO::PARAM_INT, "".$end => PDO::PARAM_INT), PDO::FETCH_ASSOC);
+            $start = ($page - 1) * $postsPerPage;
+            $request = self::bindRunList("SELECT * FROM posts ORDER BY date DESC LIMIT ?,?",  array("".$start => PDO::PARAM_INT, "".$postsPerPage => PDO::PARAM_INT), PDO::FETCH_ASSOC);
             Snackbar::send_snack($request['result']);
             return $request['result'];
         } catch (SqlException $e) {
