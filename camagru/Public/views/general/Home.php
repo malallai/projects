@@ -46,8 +46,9 @@
             <div class="users">
                 <?php
                 foreach ($params['users'] as $user) {
-                    $userName = $user['username'];
-                    $posts = $user['posts'];
+                    $details = $this->getUser($user['id']);
+                    $userName = $details['username'];
+                    $posts = $details['posts'];
                 ?>
                 <div class="user">
                     <a href="/user" class="user-pp">
