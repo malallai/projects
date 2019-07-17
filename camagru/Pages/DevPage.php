@@ -13,10 +13,9 @@ class DevPage extends Page {
     }
 
     public function index() {
+        $posts = $this->_controller->getSql()->getPosts(1);
         $params = array('content' => 'dev/Test');
         $this->render($params);
-        $posts = $this->_controller->getSql()->getPosts(1);
-        var_dump($posts);
     }
 
     public function mail() {
