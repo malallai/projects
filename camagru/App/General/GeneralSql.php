@@ -22,7 +22,7 @@ class GeneralSql extends Sql {
             Snackbar::send_snack($postsCount);
             $start = $postsCount - ($postsPerPage * $page);
             $end = $start + $postsPerPage;
-            $request = self::runList("SELECT * FROM posts DESC WHERE id BETWEEN ? AND ?",  array($start, $end), PDO::FETCH_ASSOC);
+            $request = self::runList("SELECT * FROM posts DESC WHERE id BETWEEN ? AND ? ORDER BY id DESC",  array($start, $end), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
