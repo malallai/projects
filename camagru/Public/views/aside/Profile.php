@@ -1,4 +1,5 @@
 <link href="/Public/assets/css/profile.css" rel="stylesheet">
+<?php var_dump($params) ?>
 <div class="user-row">
     <a class="row user-infos-row">
         <div class="u-infos">
