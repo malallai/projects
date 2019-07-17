@@ -6,4 +6,4 @@
 <?php
 
 \Core\Session::startSession();
-var_dump($_SESSION['snack']);
+var_dump($params['posts']);
