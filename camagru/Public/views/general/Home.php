@@ -40,21 +40,15 @@
 
         <div class="pagination">
             <div class="inputs">
-                <div class="input arrow">
-                    <a href="/page/1"><i class="fas fa-angle-left"></i></a>
-                </div>
-                <div class="input page active">
-                    <a href="/page/1">1</a>
-                </div>
-                <div class="input page">
-                    <a href="/page/2">2</a>
-                </div>
-                <div class="input page">
-                    <a href="/page/3">3</a>
-                </div>
-                <div class="input arrow">
-                    <a href="/page/3"><i class="fas fa-angle-right"></i></a>
-                </div>
+                <a class="input arrow" href="/page/1">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <a class="input page active" href="/page/1">1</a>
+                <a class="input page" href="/page/2">2</a>
+                <a class="input page" href="/page/3">3</a>
+                <a class="input arrow" href="/page/3">
+                    <i class="fas fa-angle-right"></i>
+                </a>
             </div>
         </div>
     </div>
