@@ -43,7 +43,7 @@
                 <?php $page = $params['page']; $pages = $params['pages'] ?>
                 <a class="input arrow <?= $page == 1 ? "disable" : "" ?>" href="/page/<?= $page - 1?>"><i class="fas fa-angle-left"></i></a>
                 <?php
-                    for ($page == 1 || $page == $pages ? ($page == $pages ? $i = $page - 2 : $i = $page - 1) : $i = $page; $page == $pages ? $i < $page : $i < $page + 3; $i++) {
+                    for ($page == 1 || $page == $pages ? ($page == $pages ? $i = $page - 2 : $i = $page) : $i = $page - 1; $page == $pages ? $i < $page : $i < $page + 3; $i++) {
                     ?>
                         <a class="input page <?= $i == $page ? "active" : "" ?>" href="/page/<?=$i?>"><?=$i?></a>
                     <?php
