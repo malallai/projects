@@ -13,7 +13,6 @@ class UserSql extends Sql {
         $pwd = hash("whirlpool", $pwd);
         try {
             $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
-            Snackbar::send_snack($result['password']);
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
                     if ($result['confirmed'] == 0) {
@@ -141,11 +140,7 @@ class UserSql extends Sql {
 
     public function get_user_id($username) {
         try {
-            Snackbar::send_snack("Get User ID " . $username);
             $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
-            foreach ($result as $r) {
-                Snackbar::send_snack($r);
-            }
             if (!isset($result) || empty($result)) {
                 return null;
             }
