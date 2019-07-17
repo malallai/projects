@@ -163,4 +163,16 @@ class UserSql extends Sql {
         }
     }
 
+    //            $request = self::run("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?",  array($id));
+
+    public function getUser($id) {
+        try {
+            $request = self::runList("SELECT posts.*, users.*, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE users.id = ? ORDER BY date DESC ",  array($id), PDO::FETCH_ASSOC);
+            return $request['result'];
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+    }
+
 }

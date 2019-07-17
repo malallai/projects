@@ -1,6 +1,6 @@
 <link href="/Public/assets/css/profile.css" rel="stylesheet">
 <div class="user-row">
-    <a href="/" class="row user-infos-row">
+    <a class="row user-infos-row">
         <div class="u-infos">
             <div class="main-infos">
                 <div class="icons">
@@ -8,7 +8,7 @@
                 </div>
                 <div class="main-infos-sub">
                     <div class="inline-flex">
-                        <span class="fullname">Malo Allain</span>
+                        <span class="fullname"><?= $params['user']['first_name'] + $params['user']['last_name'] ?></span>
                         <span class="username">malallai</span>
                     </div>
                     <div class="usermail">malallai@student.42.fr</div>
