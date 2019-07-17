@@ -1,6 +1,10 @@
 <link href="/Public/assets/css/home.css" rel="stylesheet">
 <div class="home-row">
     <div id="posts-row" class="row posts-row">
+        <?php
+            $page = new \Pages\GeneralPage($this->_url);
+            echo $page->pagination($params);
+        ?>
         <div class="posts">
             <?php
                 foreach ($params['posts'] as $post) {
