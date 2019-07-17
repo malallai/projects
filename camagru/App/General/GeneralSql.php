@@ -20,7 +20,7 @@ class GeneralSql extends Sql {
                 return false;
             $start = ($page - 1) * $postsPerPage;
             $request = $this->run("SELECT * FROM posts ORDER BY id DESC LIMIT ?,?", array($start, $postsPerPage));
-            echo $request["result"];
+            Snackbar::send_snack($request["result"]);
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
