@@ -23,4 +23,11 @@ class DevPage extends Page {
         $this->render($params);
     }
 
+    public static function renderArray($values) {
+        ob_start();
+        require "Public/views/dev/Content.php";
+        $content = ob_get_clean();
+        return $content;
+    }
+
 }
