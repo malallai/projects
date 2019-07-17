@@ -40,13 +40,15 @@
 
         <div class="pagination">
             <div class="inputs">
-                <a class="input arrow" href="/page/1"><i class="fas fa-angle-left"></i></a>
-                <a class="input page active" href="/page/1">1</a>
-                <a class="input page" href="/page/2">2</a>
-                <a class="input page disable">...</a>
-                <a class="input page" href="/page/4">4</a>
-                <a class="input page" href="/page/5">5</a>
-                <a class="input arrow" href="/page/5"><i class="fas fa-angle-right"></i></a>
+                <a class="input arrow" href="/page/<?= $params['page'] - 1?>"><i class="fas fa-angle-left"></i></a>
+                <?php
+                    for ($i = $params['page']; $i < $i + 3; $i++) {
+                    ?>
+                        <a class="input page <?= $i == $page ? "active" : "" ?>" href="/page/<?=$i?>"><?=$i?></a>
+                    <?php
+                    }
+                ?>
+                <a class="input arrow" href="/page/<?= $params['page'] + 1?>"><i class="fas fa-angle-right"></i></a>
             </div>
         </div>
     </div>

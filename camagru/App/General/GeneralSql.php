@@ -13,14 +13,24 @@ class GeneralSql extends Sql {
     public function getPosts($page = 1) {
         try {
             $postsPerPage = 5;
-            $posts = self::run("SELECT id FROM posts", array());
-            $postsCount = $posts["statement"]->rowCount();
+            $postsCount = $this->getPages();
             $tot = ceil($postsCount / $postsPerPage);
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
             $request = self::bindValueRunList("SELECT * FROM posts ORDER BY date DESC LIMIT :offset, :fetch",  array("offset" => array($start, PDO::PARAM_INT), "fetch" => array($postsPerPage, PDO::PARAM_INT)), PDO::FETCH_ASSOC);
             return $request['result'];
+        } catch (SqlException $e) {
+            Snackbar::send_snack($e->getMessage());
+            return false;
+        }
+    }
+
+    public function getPages() {
+        try {
+            $posts = self::run("SELECT id FROM posts", array());
+            $postsCount = $posts["statement"]->rowCount();
+            return $postsCount;
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
