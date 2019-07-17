@@ -3,7 +3,6 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
-use Core\Snackbar;
 
 class GeneralPage extends Page {
 
@@ -15,19 +14,22 @@ class GeneralPage extends Page {
 
     public function index() {
         $exploded = explode('/', $this->_url);
-        $this->indexPage(0);
+        $this->indexPage(1);
     }
 
     public function indexPage($page) {
-        if ($page === 0) {
-            $params = array('content' => 'general/Home');
-            $this->render($params);
-        }
+        $posts = $this->_controller->getSql()->getPosts($page);
+        $params = array('content' => 'general/Home', 'posts' => $posts);
+        $this->render($params);
     }
 
     public function dev() {
         $params = array('content' => 'dev/Test');
         $this->render($params);
+    }
+
+    public function getPostDetails($idPost) {
+        return $this->_controller->getSql()->getPost($idPost)['result'];
     }
 
 }

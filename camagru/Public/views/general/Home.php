@@ -2,136 +2,40 @@
 <div class="home-row">
     <div id="posts-row" class="row posts-row">
         <div class="posts">
-            <div class="post">
-                <div class="author">
-                    <div class="user">
-                        <div class="user-pp">
-                            <img src="/Public/assets/pictures/users/malo.jpg">
-                        </div>
-                        <div class="user-infos">
-                            <div class="user-name">
-                                <a href="/user/id">Malo</a>
+            <?php
+                foreach ($params['posts'] as $post) {
+                    $details = $this->getPostDetails($post['id']);
+                    $userName = $details['username'];
+                    $likes = $details['likes'];
+                    $imagePath = $details['image_path'];
+            ?>
+                <div class="post">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/<?= $userName ?>.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a href="/user/id"><?= $userName ?></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="picture">
-                    <img src="/Public/assets/pictures/posts/3.jpg">
-                </div>
-                <div class="infos">
-                    <div class="icons">
-                        <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-                        <a class="link"><i class="far fa-heart"></i></a>
+                    <div class="picture">
+                        <img src="<?= $imagePath ?>">
                     </div>
-                    <div class="like-counts">
-                        <p>0 j'aimes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="author">
-                    <div class="user">
-                        <div class="user-pp">
-                            <img src="/Public/assets/pictures/users/malo.jpg">
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
+                            <a class="link"><i class="far fa-heart"></i></a>
                         </div>
-                        <div class="user-infos">
-                            <div class="user-name">
-                                <a href="/user/id">Malo</a>
-                            </div>
+                        <div class="like-counts">
+                            <p><?= $likes ?> j'aimes</p>
                         </div>
                     </div>
                 </div>
-                <div class="picture">
-                    <img src="/Public/assets/pictures/posts/1.jpg">
-                </div>
-                <div class="infos">
-                    <div class="icons">
-                        <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-                        <a class="link"><i class="far fa-heart"></i></a>
-                    </div>
-                    <div class="like-counts">
-                        <p>10 j'aimes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="author">
-                    <div class="user">
-                        <div class="user-pp">
-                            <img src="/Public/assets/pictures/users/malo.jpg">
-                        </div>
-                        <div class="user-infos">
-                            <div class="user-name">
-                                <a href="/user/id">Malo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="picture">
-                    <img src="/Public/assets/pictures/posts/2.jpg">
-                </div>
-                <div class="infos">
-                    <div class="icons">
-                        <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-                        <a class="link"><i class="far fa-heart"></i></a>
-                    </div>
-                    <div class="like-counts">
-                        <p>10 j'aimes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="author">
-                    <div class="user">
-                        <div class="user-pp">
-                            <img src="/Public/assets/pictures/users/malo.jpg">
-                        </div>
-                        <div class="user-infos">
-                            <div class="user-name">
-                                <a href="/user/id">Malo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="picture">
-                    <img src="/Public/assets/pictures/posts/3.jpg">
-                </div>
-                <div class="infos">
-                    <div class="icons">
-                        <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-                        <a class="link"><i class="far fa-heart"></i></a>
-                    </div>
-                    <div class="like-counts">
-                        <p>10 j'aimes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="author">
-                    <div class="user">
-                        <div class="user-pp">
-                            <img src="/Public/assets/pictures/users/malo.jpg">
-                        </div>
-                        <div class="user-infos">
-                            <div class="user-name">
-                                <a href="/user/id">Malo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="picture">
-                    <img src="/Public/assets/pictures/posts/4.jpg">
-                </div>
-                <div class="infos">
-                    <div class="icons">
-                        <a class="link" href="/comment/id"><i class="far fa-comment-alt"></i></a>
-                        <a class="link"><i class="far fa-heart"></i></a>
-                    </div>
-                    <div class="like-counts">
-                        <p>10 j'aimes</p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
     <div id="users-row" class="row users-row">
