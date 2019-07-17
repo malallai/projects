@@ -20,8 +20,7 @@ class GeneralSql extends Sql {
                 return false;
             $start = ($page - 1) * $postsPerPage;
             $request = $this->run("SELECT * FROM posts WHERE id BETWEEN ? AND ?",  array(0, 5));
-            var_dump($request["statement"]);
-            var_dump($request["result"]);
+            return $request["result"];
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
             return false;
