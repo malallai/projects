@@ -25,7 +25,7 @@ class MontagePage extends Page  {
             if (!$this->_controller->getSql()->upload_picture($this->_controller->getGeneralController()->getUserController()->get_user()['userid'], $picture)) {
                 Snackbar::send_snack("Error while uploading post");
             }
-            //$this->redirect("/");
+            $this->redirect("/");
         } else {
             Snackbar::send_snack("Please log-in");
             $this->redirect("/");
