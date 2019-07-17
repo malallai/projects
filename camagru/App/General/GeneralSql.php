@@ -24,7 +24,7 @@ class GeneralSql extends Sql {
             Snackbar::send_snack("Posts : ".$postsCount);
             Snackbar::send_snack("Start : ".$start);
             Snackbar::send_snack("End : ".$end);
-            $request = self::runList("SELECT * FROM posts DESC WHERE id BETWEEN ? AND ?",  array($start, $end), PDO::FETCH_ASSOC);
+            $request = self::runList("SELECT * FROM posts WHERE id BETWEEN ? AND ? ORDER BY id DESC",  array($start, $end), PDO::FETCH_ASSOC);
             Snackbar::send_snack($request['result']);
             return $request['result'];
         } catch (SqlException $e) {
