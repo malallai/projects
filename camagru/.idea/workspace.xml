@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="315">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
               <folding>
                 <element signature="e#31#49#0#PHP" expanded="true" />
               </folding>
@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/Sql.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="543">
-              <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#25#53#0#PHP" expanded="true" />
               </folding>
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/App/Montage/MontageSql.php" />
         <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
-        <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
         <option value="$PROJECT_DIR$/Core/Sql.php" />
+        <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
       </list>
     </option>
   </component>
@@ -403,12 +403,12 @@
       <workItem from="1562838251362" duration="4313000" />
       <workItem from="1562937156304" duration="1465000" />
       <workItem from="1563281447520" duration="5531000" />
-      <workItem from="1563358289414" duration="4079000" />
+      <workItem from="1563358289414" duration="4209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104158000" />
+    <option name="totallyTimeSpent" value="104288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,6 +742,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#25#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -751,20 +761,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
           <folding>
             <element signature="e#31#49#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding>
-            <element signature="e#25#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
