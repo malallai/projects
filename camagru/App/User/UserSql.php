@@ -12,12 +12,6 @@ class UserSql extends Sql {
         $username = htmlspecialchars($username);
         $pwd = hash("whirlpool", $pwd);
         try {
-            self::init_db();
-        } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
-        try {
             $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
@@ -43,12 +37,6 @@ class UserSql extends Sql {
         $last = htmlspecialchars($last);
         $pwd = hash("whirlpool", $pwd);
         $confirm_key = bin2hex(random_bytes(32));
-        try {
-            self::init_db();
-        } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
         try {
             $result = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail))["result"];
             if (isset($result) && !empty($result)) {
@@ -87,12 +75,6 @@ class UserSql extends Sql {
     public function confirm($token) {
         $token = htmlspecialchars(explode('/', $token)[2]);
         try {
-            self::init_db();
-        } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
-        try {
             $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {
                 return false;
@@ -109,12 +91,6 @@ class UserSql extends Sql {
     public function send_reset($mail) {
         $mail = htmlspecialchars($mail);
         $token = bin2hex(random_bytes(32));
-        try {
-            self::init_db();
-        } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
         try {
             $result = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];
             if (!isset($result) || empty($result)) {
@@ -141,12 +117,6 @@ class UserSql extends Sql {
 
     public function edit_pwd($password, $token) {
         $password = hash('whirlpool', $password);
-        try {
-            self::init_db();
-        } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
-            return false;
-        }
         try {
             $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
             if (!isset($result) || empty($result)) {

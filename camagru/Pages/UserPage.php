@@ -28,7 +28,7 @@ class UserPage extends Page {
         if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
-                    $_SESSION['user'] = serialize(array("userid" => $this->_controller->get_user_id($_POST['username']), "username" => $_POST['username'], "status" => UserStatus::connected));
+                    $_SESSION['user'] = serialize(array("userid" => $this->_controller->get_user_id($_POST['username'], true), "username" => $_POST['username'], "status" => UserStatus::connected));
                     Snackbar::send_snack("Connexion réussi.");
                     $this->redirect("/");
                 }
