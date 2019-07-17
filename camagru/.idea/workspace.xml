@@ -63,14 +63,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.72434986">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="690">
-                  <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+                <state relative-caret-position="675">
+                  <caret line="45" column="130" selection-start-line="45" selection-start-column="130" selection-end-line="45" selection-end-column="130" />
                 </state>
               </provider>
             </entry>
@@ -87,7 +87,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/General/GeneralSql.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="510">
@@ -215,8 +215,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
         <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
+        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
       </list>
     </option>
   </component>
@@ -437,12 +437,12 @@
       <workItem from="1562838251362" duration="4313000" />
       <workItem from="1562937156304" duration="1465000" />
       <workItem from="1563281447520" duration="5531000" />
-      <workItem from="1563358289414" duration="18613000" />
+      <workItem from="1563358289414" duration="18637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118692000" />
+    <option name="totallyTimeSpent" value="118716000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,6 +503,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/App/General/GeneralSql.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
@@ -842,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -866,6 +869,13 @@
           <folding>
             <element signature="e#31#49#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="130" selection-start-line="45" selection-start-column="130" selection-end-line="45" selection-end-column="130" />
         </state>
       </provider>
     </entry>
