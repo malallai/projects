@@ -30,7 +30,7 @@ class DevPage extends Page {
         ob_start();
         require "Public/views/dev/Content.php";
         $content = ob_get_clean();
-        Snackbar::send_snack("renderArray rendered");
+        Snackbar::send_snack("renderArray rendered ".$content);
         return $content;
     }
 
