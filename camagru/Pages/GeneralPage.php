@@ -25,7 +25,6 @@ class GeneralPage extends Page {
     public function indexPage($page) {
         $posts = $this->_controller->getSql()->getPosts($page);
         $users = $this->_controller->getUserController()->getSql()->getLastUsers();
-        Snackbar::send_snack(DevPage::renderArray($posts));
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users);
         $this->render($params);
     }
