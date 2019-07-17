@@ -19,7 +19,7 @@ class GeneralSql extends Sql {
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
-            $request = $this->run("SELECT * FROM posts WHERE id = ?",  array(0, 5));
+            $request = $this->run("SELECT * FROM posts WHERE id = ?",  array(1, 5));
             var_dump($request["statement"]);
             var_dump($request["result"]);
         } catch (SqlException $e) {
