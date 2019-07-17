@@ -101,7 +101,6 @@ class Sql {
             $connection = self::getConn();
             $statement = $connection->prepare($request);
             foreach ($args as $key => $values) {
-                Snackbar::send_snack($values[0] . " : " . $values[1] . " - " . $key);
                 $statement->bindValue($key, $values[0], $values[1]);
             }
             $statement->execute();
