@@ -19,7 +19,8 @@ class GeneralSql extends Sql {
             if(!($page > 0 AND $page <= $tot))
                 return false;
             $start = ($page - 1) * $postsPerPage;
-            $request = $this->run("SELECT * FROM posts ORDER BY id DESC LIMIT ?,?", array($start, $postsPerPage));
+            $str = "SELECT * FROM posts ORDER BY id DESC LIMIT ".$start.",".$postsPerPage;
+            $request = $this->run($str);
             Snackbar::send_snack($request["result"]);
         } catch (SqlException $e) {
             Snackbar::send_snack($e->getMessage());
