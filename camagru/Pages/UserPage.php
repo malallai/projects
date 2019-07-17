@@ -122,7 +122,7 @@ class UserPage extends Page {
         $params = array();
         if ($this->_controller->isLogged()) {
             $user = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
-            $params = array('content' => 'aside/Profile', "user" => $user;
+            $params = array('content' => 'aside/Profile', "user" => $user);
         } else {
             $params = array('content' => 'aside/Login');
         }
