@@ -1,14 +1,6 @@
-function init_var() {
-    var login_button = document.getElementById('login-button');
-    var register_button = document.getElementById('register-button');
-    var reset_button = document.getElementById('reset-button');
-
-    var login_content = document.getElementById('login-content');
-    var register_content = document.getElementById('register-content');
-    var reset_content = document.getElementById('reset-content');
-}
-
 function login_click() {
+    let login_button = document.getElementById('login-button');
+    let login_content = document.getElementById('login-content');
     event.preventDefault();
     clear_active();
     login_button.classList.add("active");
@@ -16,6 +8,8 @@ function login_click() {
 }
 
 function register_click() {
+    let register_button = document.getElementById('register-button');
+    let register_content = document.getElementById('register-content');
     event.preventDefault();
     clear_active();
     register_button.classList.add("active");
@@ -23,6 +17,8 @@ function register_click() {
 }
 
 function reset_click() {
+    let reset_button = document.getElementById('reset-button');
+    let reset_content = document.getElementById('reset-content');
     event.preventDefault();
     clear_active();
     reset_button.classList.add("active");
@@ -30,7 +26,14 @@ function reset_click() {
 }
 
 function clear_active() {
-    init_var();
+    let login_button = document.getElementById('login-button');
+    let register_button = document.getElementById('register-button');
+    let reset_button = document.getElementById('reset-button');
+
+    let login_content = document.getElementById('login-content');
+    let register_content = document.getElementById('register-content');
+    let reset_content = document.getElementById('reset-content');
+
     login_button.classList.remove("active");
     register_button.classList.remove("active");
     reset_button.classList.remove("active");
