@@ -42,7 +42,7 @@
                 }
             } else {
                 ?>
-                <h1>Il n'y a aucun poste pour le moment.</h1>
+                <h2>Il n'y a aucun poste pour le moment.</h2>
                 <?php
             } ?>
         </div>
