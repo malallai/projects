@@ -992,12 +992,14 @@
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>posts</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="251" parent="239" name="comment_users_id_fk">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="252" parent="240" name="post_id">
       <Position>1</Position>
@@ -1011,11 +1013,11 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="254" parent="240" name="post_id">
+    <index id="254" parent="240" name="likes_ibfk_1">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="255" parent="240" name="user_id">
+    <index id="255" parent="240" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1024,12 +1026,14 @@
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>posts</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="257" parent="240" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="258" parent="241" name="id">
       <Position>1</Position>
