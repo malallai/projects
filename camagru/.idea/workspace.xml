@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/views/general/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +57,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/views/general/Pagination.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            <state relative-caret-position="1666">
+              <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -144,13 +153,11 @@
         <option value="$PROJECT_DIR$/Public/assets/css/login.css" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
-        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
         <option value="$PROJECT_DIR$/Core/Session.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/App/Montage/MontageController.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
         <option value="$PROJECT_DIR$/Public/views/dev/content.php" />
         <option value="$PROJECT_DIR$/Public/views/dev/ContentGet.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
@@ -171,6 +178,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Pagination.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql" />
+        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
       </list>
     </option>
   </component>
@@ -251,6 +260,13 @@
               <item name="camagru" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camagru" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
@@ -382,7 +398,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126141000" />
+    <option name="totallyTimeSpent" value="126502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,7 +413,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16107382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16107382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -412,7 +428,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6208054" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" auto_hide="true" id="Terminal" order="11" sideWeight="0.37919462" type="SLIDING" weight="0.38668555" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32846716" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -506,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4097">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Session.php" />
     <entry file="file://$PROJECT_DIR$/Public/assets/js/camagru.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -584,13 +593,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/dev/ContentGet.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -691,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -738,15 +733,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ef81cb01-2f65-431e-b0bc-32b239bb4091/schema/camagru/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
@@ -808,8 +794,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/general/Pagination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="136">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef81cb01-2f65-431e-b0bc-32b239bb4091/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ef81cb01-2f65-431e-b0bc-32b239bb4091/schema/camagru/table/posts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
         </state>
       </provider>
     </entry>
