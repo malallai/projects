@@ -1,3 +1,4 @@
+<?php header("Content-Type: text/plain") ?>
 <div class="aside-bar">
     <div class="head">
         <div class="title">Mon Compte</div>
