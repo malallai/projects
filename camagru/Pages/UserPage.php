@@ -24,6 +24,15 @@ class UserPage extends Page {
         }
     }
 
+    public function edit() {
+        if (!$this->_controller->isLogged()) {
+            $params = array('content' => 'user/Edit');
+            $this->render($params);
+        } else {
+            $this->redirect("/");
+        }
+    }
+
     public function login() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
@@ -123,18 +132,6 @@ class UserPage extends Page {
         if ($this->_controller->isLogged()) {
             $details = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
             $params = array('content' => 'aside/Profile', 'details' => $details);
-        } else {
-            $params = array('content' => 'aside/Login');
-        }
-        $quick_content = $this->quickRender($params);
-        return $quick_content;
-    }
-
-    public function edit_profile() {
-        $params = array();
-        if ($this->_controller->isLogged()) {
-            $details = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
-            $params = array('content' => 'aside/Edit', 'details' => $details);
         } else {
             $params = array('content' => 'aside/Login');
         }

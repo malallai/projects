@@ -23,6 +23,7 @@ $router->addRoute("user/resetpw", "Pages\UserPage@resetpw");
 $router->addRoute("user/resetpw/(.*)", "Pages\UserPage@resetpw_edit");
 $router->addRoute("user/confirm/(.*)", "Pages\UserPage@confirm");
 $router->addRoute("user/logout", "Pages\UserPage@logout");
+$router->addRoute("user/edit", "Pages\UserPage@edit");
 
 $router->addRoute("montage", "Pages\MontagePage@index");
 

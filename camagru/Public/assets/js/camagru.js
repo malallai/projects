@@ -2,7 +2,6 @@ window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
     await sleep(500, aside);
     aside.classList.remove("hide");
-    // aside.innerHTML = '<object type="text/html" data="/Public/views/aside/Aside.php"></object>';
 };
 
 async function new_snackbar(message) {
@@ -51,10 +50,4 @@ function user_aside() {
     event.preventDefault();
     var body = document.getElementsByTagName("body")[0];
     body.setAttribute("has_aside", "");
-}
-
-function user_edit() {
-    event.preventDefault();
-    var aside_content = document.getElementsByClassName("aside-middle-content")[0];
-    aside_content.innerHTML='<object type="text/html" data="/Public/views/user/Edit.php" ></object>';
 }
