@@ -60,8 +60,7 @@
                         </a>
                         <div class="user-infos">
                             <div class="user-name">
-                                <a href="/user/id"><?=$userName
-                                    ?></a>
+                                <a><?=$userName?></a>
                             </div>
                             <div class="posts-count">
                                 <p><?=$posts
