@@ -1,6 +1,6 @@
 <?php
     $pages = $params['pages']; $page = $params['page'];
-    if ($pages == 0) {
+    if ($pages > 0) {
         ?>
         <div class="pagination">
             <div class="inputs">
