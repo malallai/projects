@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/camagru.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/camagru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/aside/Aside.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Aside.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -117,11 +116,7 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/views/aside/Aside.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -490,7 +485,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130056000" />
+    <option name="totallyTimeSpent" value="130111000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,11 +917,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/aside/Aside.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
