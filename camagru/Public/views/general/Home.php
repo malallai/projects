@@ -1,10 +1,10 @@
 <link href="/Public/assets/css/home.css" rel="stylesheet">
 <div class="home-row">
-    <div id="posts-row" class="row posts-row">
-        <?=$this->pagination($params); ?>
-        <div class="posts">
-            <?php
-            if ($pages > 0) {
+    <?php if ($params['pages'] > 0) { ?>
+        <div id="posts-row" class="row posts-row">
+            <?=$this->pagination($params); ?>
+            <div class="posts">
+                <?php
                 foreach ($params['posts'] as $post) {
                     $details = $this->getPostDetails($post['id']);
                     $userName = $details['username'];
@@ -14,19 +14,19 @@
                         <div class="author">
                             <div class="user">
                                 <div class="user-pp">
-                                    <img src="/Public/assets/pictures/users/<?= $userName
+                                    <img src="/Public/assets/pictures/users/<?=$userName
                                     ?>.jpg">
                                 </div>
                                 <div class="user-infos">
                                     <div class="user-name">
-                                        <a href="/user/id"><?= $userName
-                                            ?> | <?= $post['id'] ?></a>
+                                        <a href="/user/id"><?=$userName
+                                            ?> | <?=$post['id'] ?></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="picture">
-                            <img src="<?= $imagePath ?>">
+                            <img src="<?=$imagePath ?>">
                         </div>
                         <div class="infos">
                             <div class="icons">
@@ -34,20 +34,22 @@
                                 <a class="link"><i class="far fa-heart"></i></a>
                             </div>
                             <div class="like-counts">
-                                <p><?= $likes ?><?= $likes > 1 ? " j'aimes" : " j'aime" ?></p>
+                                <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
                             </div>
                         </div>
                     </div>
                     <?php
-                }
-            } else {
-                ?>
-                <h2>Il n'y a aucun poste pour le moment.</h2>
-                <?php
-            } ?>
+                } ?>
+            </div>
+            <?=$this->pagination($params); ?>
         </div>
-        <?=$this->pagination($params); ?>
-    </div>
+        <?php
+    } else {
+        ?>
+        <h2>Aucun poste pour le moment.</h2>
+        <?php
+    }
+    ?>
     <div id="users-row" class="row users-row">
         <div class="content">
             <div class="row-title">
