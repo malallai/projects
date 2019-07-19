@@ -23,7 +23,10 @@
                 </div>
             </div>
             <div class="aside-content">
-                <object type="text/html" data="/Public/views/user/AsideProfile.php"></object>
+                <?php
+                    $page = new \Pages\UserPage($this->_url);
+                    echo $page->profile();
+                ?>
             </div>
         </div>
     </div>

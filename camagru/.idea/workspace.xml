@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Public/views/templates/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/templates/general.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/user/AsideProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/AsideProfile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -112,19 +113,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/views/user/AsideProfile.php">
+        <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
+        <entry file="file://$PROJECT_DIR$/Public/views/user/AsideProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" selection-start-line="15" selection-end-line="27" selection-end-column="14" />
+            <state>
+              <caret selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -229,11 +230,11 @@
         <option value="$PROJECT_DIR$/Public/views/aside/Edit.php" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/user_login.js" />
-        <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
         <option value="$PROJECT_DIR$/Public/views/aside/Aside.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/views/user/AsideProfile.php" />
+        <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
       </list>
     </option>
   </component>
@@ -468,7 +469,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131034000" />
+    <option name="totallyTimeSpent" value="131131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,7 +484,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16040269" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16040269" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -871,24 +872,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" selection-start-line="15" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/aside/Aside.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -899,10 +886,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/user/AsideProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
