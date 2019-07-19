@@ -46,7 +46,7 @@
         <?php
     } else {
         ?>
-        <h2>Aucun poste pour le moment.</h2>
+        <h2 style="margin: auto;">Il n'y a aucun poste pour le moment.</h2>
         <?php
     }
     ?>
