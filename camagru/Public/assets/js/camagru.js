@@ -1,6 +1,5 @@
 window.onload = function() {
     let aside = document.getElementsByClassName("aside-row")[0];
-    aside.innerHTML = '<object type="text/html" data="/Public/views/aside/Aside.php"></object>';
 };
 
 async function new_snackbar(message) {
