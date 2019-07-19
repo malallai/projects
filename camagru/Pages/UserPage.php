@@ -29,7 +29,7 @@ class UserPage extends Page {
             $params = array('content' => 'user/Edit');
             $this->render($params);
         } else {
-            $this->redirect("/");
+            $this->redirect("/user");
         }
     }
 
