@@ -45,3 +45,9 @@ function user_aside() {
     var body = document.getElementsByTagName("body")[0];
     body.setAttribute("has_aside", "");
 }
+
+function user_edit() {
+    event.preventDefault();
+    var aside_content = document.getElementsByClassName("aside-middle-content")[0];
+    aside_content.innerHTML='<object type="text/html" data="/Public/views/user/Edit.php" ></object>';
+}
