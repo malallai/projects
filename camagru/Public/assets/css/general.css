@@ -61,6 +61,10 @@ body {
     left: 100%;
 }
 
+.aside-row.hide {
+    visibility: hidden;
+}
+
 body[has_aside] .aside-bar {
     left: 0;
 }
