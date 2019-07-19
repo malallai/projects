@@ -6,6 +6,7 @@ $page = $params['page'];
     <div class="inputs">
         <a class="input arrow <?=$page == 1 ? "disable" : "" ?>" <?=$page == 1 ? "" : "href='/page/" . ($page - 1) . "'" ?>><i class="fas fa-angle-left"></i></a>
         <?php
+        \Core\Snackbar::send_snack($pages);
         $s = $pages > 2 ? ($page == 1 ? 1 : ($page == $pages ? $page - 2 : $page - 1)) : ($pages == 1 ? 1 : ($page == $pages ? $page - 1 : 1));
         $x = $pages > 2 ? 3 : ($pages == 1 ? 0 : 1);
         for ($i = $s; $i < $s + $x; $i++) {
