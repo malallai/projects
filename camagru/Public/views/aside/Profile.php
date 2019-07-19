@@ -49,7 +49,7 @@
 </div>
 <div class="aside-button button-logged">
     <div class="manage-pictures button-content">
-        <a onclick="user_edit()"><span>Édition du profile</span></a>
+        <a href="#" onclick="user_edit()"><span>Édition du profile</span></a>
     </div>
     <div class="logout button-content">
         <a href="/user/logout"><span>Déconnexion</span></a>
