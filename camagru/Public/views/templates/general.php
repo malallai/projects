@@ -42,15 +42,6 @@
                         </div>
                     </div>
                     <div class="flex-component">
-                        <div class="search-component">
-                            <div class="search-bar">
-                                <form class="bar">
-                                    <input id="searchinput" name="search" placeholder="Search" type="text">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-component">
                         <div class="icons">
                             <div class="flex-icon">
                                 <div class="icon">
