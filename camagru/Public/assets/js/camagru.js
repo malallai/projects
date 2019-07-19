@@ -1,3 +1,7 @@
+window.onload = function() {
+
+};
+
 async function new_snackbar(message) {
     let snacks;
     if (document.getElementsByClassName("snacks").length !== 0) {

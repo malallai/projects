@@ -4,15 +4,15 @@
     <div class="row-content">
         <div class="nav-content">
             <div class="nav">
-                <a id="login-button" class="active">
+                <a id="login-button" onclick="login_click()" class="active">
                     <span class="text active">Connexion</span>
                     <span class="icon"><i class="fas fa-unlock"></i></span>
                 </a>
-                <a id="register-button" class="">
+                <a id="register-button" onclick="register_click()" class="">
                     <span class="text active">Inscription</span>
                     <span class="icon"><i class="fas fa-pen"></i></span>
                 </a>
-                <a id="reset-button" class="">
+                <a id="reset-button" onclick="reset_click()" class="">
                     <span class="text active">Réinitialiser</span>
                     <span class="icon"><i class="fas fa-lock"></i></span>
                 </a>
