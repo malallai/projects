@@ -1,6 +1,6 @@
 window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
-    await sleep(500);
+    await sleep(500, aside);
     aside.classList.remove("hide");
 };
 
