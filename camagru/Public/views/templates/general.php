@@ -22,12 +22,7 @@
                     </a>
                 </div>
             </div>
-            <div class="aside-content">
-                <?php
-                    $page = new \Pages\UserPage($this->_url);
-                    echo $page->profile();
-                ?>
-            </div>
+            <div class="aside-content"></div>
         </div>
     </div>
     <div class="overlay" onclick="overlay()"></div>

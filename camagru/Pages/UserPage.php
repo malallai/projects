@@ -130,4 +130,16 @@ class UserPage extends Page {
         return $quick_content;
     }
 
+    public function edit_profile() {
+        $params = array();
+        if ($this->_controller->isLogged()) {
+            $details = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
+            $params = array('content' => 'aside/Edit', 'details' => $details);
+        } else {
+            $params = array('content' => 'aside/Login');
+        }
+        $quick_content = $this->quickRender($params);
+        return $quick_content;
+    }
+
 }
