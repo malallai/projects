@@ -51,7 +51,7 @@ body {
 }
 
 .aside-row.hide {
-    visibility: visible;
+    z-index: -1;
 }
 
 .aside-bar {
