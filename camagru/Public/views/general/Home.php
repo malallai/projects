@@ -54,17 +54,15 @@
                     $userName = $details['username'];
                     $posts = $details['posts']; ?>
                     <div class="user">
-                        <a href="/user" class="user-pp">
-                            <img src="/Public/assets/pictures/users/<?=$userName
-                            ?>.jpg">
+                        <a class="user-pp">
+                            <img src="/Public/assets/pictures/users/<?=$userName?>.jpg">
                         </a>
                         <div class="user-infos">
                             <div class="user-name">
                                 <a><?=$userName?></a>
                             </div>
                             <div class="posts-count">
-                                <p><?=$posts
-                                    ?><?=$posts > 1 ? " photos" : " photo" ?></p>
+                                <p><?=$posts?><?=$posts > 1 ? " photos" : " photo"?></p>
                             </div>
                         </div>
                     </div>
