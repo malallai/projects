@@ -2,6 +2,7 @@ window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
     await sleep(500, aside);
     aside.classList.remove("hide");
+    aside.innerHTML = '<object type="text/plain" data="/Public/views/aside/Aside.php"></object>';
 };
 
 async function new_snackbar(message) {
