@@ -3,7 +3,7 @@ window.onload = async function() {
     await sleep(500, aside);
     aside.classList.remove("hide");
 
-    let list = document.getElementsByTagName("img");
+    let list = document.getElementsByTagName("*");
     for (let item of list) {
         item.ondragstart = function () {return false;};
     }
@@ -47,12 +47,12 @@ function sleep(ms, div) {
 
 function overlay() {
     event.preventDefault();
-    var body = document.getElementsByTagName("body")[0];
+    let body = document.getElementsByTagName("body")[0];
     body.removeAttribute("has_aside");
 }
 
 function user_aside() {
     event.preventDefault();
-    var body = document.getElementsByTagName("body")[0];
+    let body = document.getElementsByTagName("body")[0];
     body.setAttribute("has_aside", "");
 }
