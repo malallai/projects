@@ -246,8 +246,12 @@ body .overlay {
 }
 
 .aside-content .aside-middle-content {
-    overflow-y: auto;
+    overflow: hidden;
     flex: 1;
+}
+
+.aside-content .aside-middle-content:hover {
+    overflow-y: auto;
 }
 
 

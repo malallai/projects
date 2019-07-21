@@ -7,8 +7,8 @@ use Core\Snackbar;
 
 class DevPage extends Page {
 
-    public function __construct($url) {
-        parent::__construct($url);
+    public function __construct($router, $url) {
+        parent::__construct($router, $url);
         $this->_controller = new GeneralController();
         $this->_template = "templates/general";
 

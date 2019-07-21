@@ -7,8 +7,8 @@ use Core\Snackbar;
 
 class GeneralPage extends Page {
 
-    public function __construct($url) {
-        parent::__construct($url);
+    public function __construct($router, $url) {
+        parent::__construct($router, $url);
         $this->_template = "templates/general";
         $this->_controller = new GeneralController();
     }
@@ -24,8 +24,10 @@ class GeneralPage extends Page {
 
     public function indexPage($page) {
         $pages = $this->_controller->getSql()->getPages();
-        if ($page > $pages)
+        if ($page > $pages) {
             $page = $pages;
+            $this->_router->notFound($this->_url, false);
+        }
         $posts = $this->_controller->getSql()->getPosts($page);
         $users = $this->_controller->getUserController()->getSql()->getLastUsers();
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users, 'page' => $page, 'pages' => $pages);

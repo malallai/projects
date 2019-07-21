@@ -9,8 +9,8 @@ use App\User\UserStatus;
 
 class UserPage extends Page {
 
-    public function __construct($url) {
-        parent::__construct($url);
+    public function __construct($router, $url) {
+        parent::__construct($router, $url);
         $this->_template = "templates/general";
         $this->_controller = new UserController();
     }

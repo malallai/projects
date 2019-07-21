@@ -3,15 +3,17 @@
 namespace Core;
 class Page {
 
+    protected $_router;
     protected $_url;
     protected $_template;
     protected $_controller;
 
-    public function __construct($url = "") {
+    public function __construct($router, $url = "") {
+        $this->_router = $router;
         $this->_url = $url;
     }
 
-    public function redirect($loc) {
+    public static function redirect($loc) {
         header("Location: " . $loc);
         die();
     }
