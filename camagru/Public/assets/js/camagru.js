@@ -3,10 +3,10 @@ window.onload = async function() {
     await sleep(500, aside);
     aside.classList.remove("hide");
 
-    document.getElementsByTagName('img').forEach(function() {
-        console.log(this);
-       this.ondragstart = function () {return false;};
-    });
+    let list = document.getElementsByTagName("img");
+    for (let item of list) {
+        item.ondragstart = function () {return false;};
+    }
 };
 
 async function new_snackbar(message) {
