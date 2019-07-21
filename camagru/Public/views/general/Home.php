@@ -13,8 +13,7 @@
                     <div class="author">
                         <div class="user">
                             <div class="user-pp">
-                                <img src="/Public/assets/pictures/users/<?=$userName
-                                ?>.jpg">
+                                <img src="/Public/assets/pictures/users/<?=$userName?>.jpg">
                             </div>
                             <div class="user-infos">
                                 <div class="user-name">
