@@ -2,6 +2,11 @@ window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
     await sleep(500, aside);
     aside.classList.remove("hide");
+
+    document.getElementsByTagName('img').forEach(function() {
+        console.log(this);
+       this.ondragstart = function () {return false;};
+    });
 };
 
 async function new_snackbar(message) {
