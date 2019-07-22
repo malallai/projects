@@ -29,14 +29,14 @@
                         <div class="comments">
                             <div class="row">
                                 <div class="content">
-                            <span class="like-count">
-                                <span><?= $likes ?></span>
-                                <i class="far fa-heart"></i>
-                            </span>
-                                    <span class="comments-count">
-                                <span>0</span>
-                                <i class="far fa-comment-alt"></i>
-                            </span>
+                                    <div class="comment">
+                                        <div class="author">
+                                            <a>malallai</a>
+                                        </div>
+                                        <div class="comment-message">
+                                            Blblbl
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
