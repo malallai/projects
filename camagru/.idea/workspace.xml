@@ -144,8 +144,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="166" column="13" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
+                <state relative-caret-position="172">
+                  <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -198,12 +198,12 @@
       <find>prepare(</find>
       <find>Snackbar::send_snack</find>
       <find>.posts</find>
-      <find>border</find>
       <find>&gt;</find>
       <find>main-</find>
       <find>nth-child(2</find>
       <find>aside-row</find>
       <find>.details</find>
+      <find>border</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -480,12 +480,12 @@
       <workItem from="1563281447520" duration="5531000" />
       <workItem from="1563358289414" duration="22451000" />
       <workItem from="1563751151629" duration="3145000" />
-      <workItem from="1563795499846" duration="6436000" />
+      <workItem from="1563795499846" duration="6590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141043000" />
+    <option name="totallyTimeSpent" value="141197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -920,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="166" column="13" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
+        <state relative-caret-position="172">
+          <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
         </state>
       </provider>
     </entry>
