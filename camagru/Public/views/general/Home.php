@@ -27,8 +27,6 @@
                             <img src="<?=$imagePath ?>">
                         </span>
                         <div class="comments">
-                            <div class="row">
-                                <div class="content">
                                     <div class="comment">
                                         <div class="content">
                                             <div class="author">
@@ -38,8 +36,6 @@
                                                 Blblbl
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
