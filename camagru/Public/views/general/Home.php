@@ -27,15 +27,19 @@
                             <img src="<?=$imagePath ?>">
                         </span>
                         <div class="comments">
+                            <div class="row">
+                                <div class="content">
                                     <div class="comment">
                                         <div class="content">
-                                            <div class="author">
+                                            <div class="comment-author">
                                                 <a>malallai</a>
                                             </div>
                                             <div class="comment-message">
                                                 Blblbl
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
