@@ -97,9 +97,20 @@
     text-transform: none;
 }
 
-.posts-row .post .picture img {
+.posts-row .post-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    margin: .25rem 0;
+}
+
+.posts-row .post-image .picture img {
     width: 100%;
     height: 100%;
+    transition: all ease .25s;
+    transform: scale(1.025);
 }
 
 .posts-row .infos {
@@ -127,7 +138,7 @@
     margin: 0;
 }
 
-.posts-row .post .details {
+.posts-row .details {
     width: 100%;
     height: 100%;
     display: flex;
