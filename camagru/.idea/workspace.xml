@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="51" />
+            <state relative-caret-position="408">
+              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -102,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="196" selection-start-line="196" selection-end-line="196" />
+            <state relative-caret-position="488">
+              <caret line="197" column="19" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -214,9 +215,9 @@
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/views/user/PwdReset.php" />
         <option value="$PROJECT_DIR$/Public/views/dev/Test.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
       </list>
     </option>
@@ -432,12 +433,12 @@
       <workItem from="1563281447520" duration="5531000" />
       <workItem from="1563358289414" duration="22451000" />
       <workItem from="1563751151629" duration="3145000" />
-      <workItem from="1563795499846" duration="11131000" />
+      <workItem from="1563795499846" duration="11364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145738000" />
+    <option name="totallyTimeSpent" value="145971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,7 +453,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16442953" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16442953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -822,16 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -856,17 +847,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/GeneralPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#24#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="51" />
+        <state relative-caret-position="408">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
+        <state relative-caret-position="488">
+          <caret line="197" column="19" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -191,9 +191,11 @@
 }
 
 .posts-row .post .add-comment {
-    display: flex;
-    position: relative;
     width: 100%;
+}
+
+.posts-row .post .add-comment .row {
+    margin: .25rem;
 }
 
 .posts-row .post .add-comment .comment-content {
