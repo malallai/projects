@@ -38,37 +38,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+                            <form action="/" method="post" class="add-comment">
+                                <input type="text" name="comment" id="comment" class="comment-content" placeholder="Commenter" required="">
+                                <a class="submit"><i class="fa fa-send"></i></a>
+                            </form>
                         </div>
                     </div>
                     <div class="infos">
