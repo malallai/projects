@@ -108,7 +108,7 @@
 .posts-row .post-image .picture img {
     width: 100%;
     height: 100%;
-    transition: all ease .25s;
+    transition: all ease 1s;
 }
 
 .posts-row .infos {
