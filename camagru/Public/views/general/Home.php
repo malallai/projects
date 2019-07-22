@@ -39,10 +39,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <form action="/" method="post" class="add-comment">
-                                <input type="text" name="comment" id="comment" class="comment-content" placeholder="Commenter" required="">
+                            <div class="add-comment">
+                                <textarea class="comment-content">Test</textarea>
                                 <a class="submit"><i class="fa fa-send"></i></a>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <div class="infos">
