@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="add-comment">
-                                <label class="comment-content">Test</label>
+                                <input class="comment-content" placeholder="test">
                                 <a class="submit"><i class="fa fa-send"></i></a>
                             </div>
                         </div>
