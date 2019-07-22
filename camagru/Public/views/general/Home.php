@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="add-comment">
-                                <textarea class="comment-content">Test</textarea>
+                                <label class="comment-content">Test</label>
                                 <a class="submit"><i class="fa fa-send"></i></a>
                             </div>
                         </div>
