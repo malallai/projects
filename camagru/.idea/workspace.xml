@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +63,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="30" selection-start-line="30" selection-end-line="30" />
+                <state relative-caret-position="578">
+                  <caret line="70" selection-start-line="70" selection-end-line="70" />
+                  <folding>
+                    <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -138,8 +145,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="73">
-                  <caret line="163" selection-start-line="163" selection-end-line="163" />
+                <state relative-caret-position="243">
+                  <caret line="167" selection-start-line="167" selection-end-line="167" />
                 </state>
               </provider>
             </entry>
@@ -258,8 +265,8 @@
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/Public/views/user/PwdReset.php" />
         <option value="$PROJECT_DIR$/Public/views/dev/Test.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
+        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
       </list>
     </option>
   </component>
@@ -474,12 +481,12 @@
       <workItem from="1563281447520" duration="5531000" />
       <workItem from="1563358289414" duration="22451000" />
       <workItem from="1563751151629" duration="3145000" />
-      <workItem from="1563795499846" duration="6338000" />
+      <workItem from="1563795499846" duration="6372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140945000" />
+    <option name="totallyTimeSpent" value="140979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,17 +906,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="243">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
+    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        <state relative-caret-position="578">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
