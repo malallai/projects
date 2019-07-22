@@ -136,30 +136,30 @@
     margin: 0;
 }
 
-.posts-row .details {
+.posts-row .comments {
     width: 100%;
     height: 100%;
     display: flex;
     position: absolute;
     bottom: 0;
-    background-color: rgba(43, 43, 43, .6);
+    background-color: rgba(255, 255, 255, .6);
     color: #fff;
     opacity: 0;
     transition: 0.15s ease-in-out;
     font-size: 15px;
 }
 
-.posts-row .details .row {
+.posts-row .comments .row {
     position: relative;
     width: 100%;
     display: flex;
 }
 
-.posts-row .details .row .content {
+.posts-row .comments .row .content {
     margin: auto;
 }
 
-.posts-row .post:hover .details {
+.posts-row .post:hover .comments {
     opacity: 1;
 }
 

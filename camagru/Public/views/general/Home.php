@@ -26,7 +26,7 @@
                         <span class="picture">
                             <img src="<?=$imagePath ?>">
                         </span>
-                        <div class="details">
+                        <div class="comments">
                             <div class="row">
                                 <div class="content">
                             <span class="like-count">
