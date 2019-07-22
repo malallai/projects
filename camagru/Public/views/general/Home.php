@@ -22,20 +22,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="picture">
-                        <img src="<?=$imagePath ?>">
-                    </div>
-                    <div class="details">
-                        <div class="row">
-                            <div class="content">
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="<?=$imagePath ?>">
+                        </span>
+                        <div class="details">
+                            <div class="row">
+                                <div class="content">
                             <span class="like-count">
                                 <span><?= $likes ?></span>
                                 <i class="far fa-heart"></i>
                             </span>
-                                <span class="comments-count">
+                                    <span class="comments-count">
                                 <span>0</span>
                                 <i class="far fa-comment-alt"></i>
                             </span>
+                                </div>
                             </div>
                         </div>
                     </div>
