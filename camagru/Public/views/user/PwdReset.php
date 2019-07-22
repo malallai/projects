@@ -3,8 +3,10 @@
     <div class="row-content">
         <div class="nav-content">
             <div class="nav">
-                <a id="reset-button" class="active nav-big">Édition du mot de passe</a>
-                <a id="reset-small-button" class="active nav-small"><i class="fas fa-lock"></i></a>
+                <a id="reset-button" class="active nav-big">
+                    <span class="text active">Réinitialiser</span>
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                </a>
             </div>
         </div>
         <div  id="reset-content" class="active content content-reset">
