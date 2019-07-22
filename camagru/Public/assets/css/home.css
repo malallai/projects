@@ -161,7 +161,6 @@
 
 .posts-row .comments .comment .content {
     display: flex;
-    flex-direction: column;
     width: 100%;
     background-color: #fff;
     color: black;
@@ -171,6 +170,12 @@
 
 .posts-row .comments .comment .comment-author {
     font-weight: bold;
+    margin: 0 .25rem;
+}
+
+.posts-row .comments .comment .comment-message {
+    margin: 0 .25rem;
+    flex: 1;
 }
 
 .posts-row .post:hover .comments {
