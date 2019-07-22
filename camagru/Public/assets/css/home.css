@@ -159,6 +159,14 @@
     flex-direction: column;
 }
 
+.posts-row .comments .comment {
+    margin-bottom: .5rem;
+}
+
+.posts-row .comments:last-child {
+    margin: 0;
+}
+
 .posts-row .comments .comment .content {
     display: flex;
     width: 100%;
