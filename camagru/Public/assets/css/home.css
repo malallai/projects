@@ -152,7 +152,7 @@
     font-size: 15px;
 }
 
-.posts-row .comments {
+.posts-row .comments .row {
     position: relative;
     width: 100%;
     display: flex;
