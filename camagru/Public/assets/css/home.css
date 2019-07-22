@@ -139,7 +139,7 @@
 .posts-row .comments {
     overflow-y: auto;
     overflow-x: hidden;
-    top: 75%;
+    top: 100%;
     width: 100%;
     height: 75%;
     display: flex;
@@ -186,7 +186,7 @@
 
 .posts-row .post:hover .comments {
     opacity: 1;
-    top: 0;
+    top: 25%;
 }
 
 /** Users row */
