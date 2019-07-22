@@ -190,6 +190,11 @@
     top: 50%;
 }
 
+.posts-row .post .comments .comment-content:focus > .comments {
+    width: 100%;
+    top: 0;
+}
+
 /** Users row */
 
 .users-row {
