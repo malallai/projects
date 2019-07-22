@@ -157,9 +157,16 @@
     display: flex;
 }
 
-.posts-row .comments .comment {
+.posts-row .comments .content {
     width: 100%;
-    background-color: #fff;
+    display: flex;
+}
+
+.posts-row .comments .comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #999;
     color: black;
     border: 1px solid rgba(0,0,0,.0975);
 }
