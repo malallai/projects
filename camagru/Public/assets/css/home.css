@@ -190,9 +190,14 @@
     top: 50%;
 }
 
-.posts-row .post .comments .comment-content:focus > .comments {
+.posts-row .post .add-comment {
+    display: flex;
+    position: relative;
     width: 100%;
-    top: 0;
+}
+
+.posts-row .post .add-comment .comment-content {
+    flex: 1;
 }
 
 /** Users row */
