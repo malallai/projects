@@ -34,7 +34,7 @@
                                             <a>malallai</a>
                                         </div>
                                         <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Et odio pellentesque diam volutpat commodo sed. Dictum sit amet justo donec. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in fermentum. Adipiscing elit ut aliquam purus. Non consectetur a erat nam at lectus urna. Tortor at auctor urna nunc id cursus metus. Id semper risus in hendrerit gravida. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Sed nisi lacus sed viverra tellus. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                                             <a>malallai</a>
                                         </div>
                                         <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Et odio pellentesque diam volutpat commodo sed. Dictum sit amet justo donec. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in fermentum. Adipiscing elit ut aliquam purus. Non consectetur a erat nam at lectus urna. Tortor at auctor urna nunc id cursus metus. Id semper risus in hendrerit gravida. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Sed nisi lacus sed viverra tellus. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </div>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                             <a>malallai</a>
                                         </div>
                                         <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Et odio pellentesque diam volutpat commodo sed. Dictum sit amet justo donec. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in fermentum. Adipiscing elit ut aliquam purus. Non consectetur a erat nam at lectus urna. Tortor at auctor urna nunc id cursus metus. Id semper risus in hendrerit gravida. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Sed nisi lacus sed viverra tellus. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                             <a>malallai</a>
                                         </div>
                                         <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Et odio pellentesque diam volutpat commodo sed. Dictum sit amet justo donec. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in fermentum. Adipiscing elit ut aliquam purus. Non consectetur a erat nam at lectus urna. Tortor at auctor urna nunc id cursus metus. Id semper risus in hendrerit gravida. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Sed nisi lacus sed viverra tellus. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </div>
                                     </div>
                                 </div>
