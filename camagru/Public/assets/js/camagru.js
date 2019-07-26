@@ -9,6 +9,18 @@ window.onload = async function() {
     }
 };
 
+function focusCommentInput() {
+    event.preventDefault();
+    let body = document.getElementsByTagName("body")[0];
+    body.setAttribute("focus_comment", "");
+}
+
+function outFocusCommentInput() {
+    event.preventDefault();
+    let body = document.getElementsByTagName("body")[0];
+    body.removeAttribute("focus_comment");
+}
+
 async function new_snackbar(message) {
     let snacks;
     if (document.getElementsByClassName("snacks").length !== 0) {
