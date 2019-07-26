@@ -91,7 +91,10 @@
                             </div>
                             <div class="add-comment">
                                 <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                    <form>
+                                        <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" value="Submit" type="submit">
+                                    </form>
                                     <a class="submit">
                                         <div class="submit-content">
                                             <i class="fa fa-send"></i>
