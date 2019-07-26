@@ -158,6 +158,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .posts-row .comments .comment {
