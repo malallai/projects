@@ -209,9 +209,10 @@ body[focus_comment] .posts-row .post .comments {
 
 .posts-row .post .add-comment .row form {
     width: 100%;
+    display: flex;
 }
 
-.posts-row .post .add-comment .row input, .posts-row .post .add-comment .row .submit * {
+.posts-row .post .add-comment .row input, .posts-row .post .add-comment .row .submit, .posts-row .post .add-comment .row .submit * {
     margin: .25rem;
 }
 
