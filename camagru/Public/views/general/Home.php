@@ -95,7 +95,7 @@
                                         <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
                                         <input hidden name="submit" value="Submit" type="submit">
                                     </form>
-                                    <a class="submit">
+                                    <a href="#" class="submit">
                                         <div class="submit-content">
                                             <i class="fa fa-send"></i>
                                         </div>
