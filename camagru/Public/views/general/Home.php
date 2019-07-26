@@ -38,16 +38,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="add-comment">
-                                <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="row">
                                 <div class="comment">
                                     <div class="content">
                                         <div class="comment-author">
@@ -58,16 +48,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="add-comment">
-                                <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="row">
                                 <div class="comment">
                                     <div class="content">
                                         <div class="comment-author">
@@ -78,16 +58,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="add-comment">
-                                <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="row">
                                 <div class="comment">
                                     <div class="content">
                                         <div class="comment-author">
@@ -98,16 +68,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="add-comment">
-                                <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="row">
                                 <div class="comment">
                                     <div class="content">
                                         <div class="comment-author">
@@ -118,16 +78,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="add-comment">
-                                <div class="row">
-                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="row">
                                 <div class="comment">
                                     <div class="content">
                                         <div class="comment-author">
