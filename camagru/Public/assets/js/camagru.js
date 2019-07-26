@@ -21,6 +21,12 @@ function outFocusCommentInput() {
     body.removeAttribute("focus_comment");
 }
 
+function showComments() {
+    event.preventDefault();
+    console.log(this);
+    console.log(event);
+}
+
 async function new_snackbar(message) {
     let snacks;
     if (document.getElementsByClassName("snacks").length !== 0) {
