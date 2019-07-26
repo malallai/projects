@@ -23,8 +23,11 @@ function outFocusCommentInput() {
 
 function showComments() {
     event.preventDefault();
-    console.log(this);
-    console.log(event);
+    if (event.srcElement.hasAttribute("show_comments")) {
+        event.srcElement.removeAttribute("show_comments");
+    } else {
+        event.srcElement.setAttribute("show_comments", "");
+    }
 }
 
 async function new_snackbar(message) {
