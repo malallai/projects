@@ -213,6 +213,9 @@ body[focus_comment] .posts-row .post .comments {
 
 .posts-row .post .add-comment .comment-content {
     flex: 1;
+    border: transparent;
+    background-color: inherit;
+    padding: .5rem 0;
 }
 
 /** Users row */

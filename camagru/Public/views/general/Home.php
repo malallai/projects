@@ -92,7 +92,11 @@
                             <div class="add-comment">
                                 <div class="row">
                                     <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                    <a class="submit"><i class="fa fa-send"></i></a>
+                                    <a class="submit">
+                                        <div class="submit-content">
+                                            <i class="fa fa-send"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
