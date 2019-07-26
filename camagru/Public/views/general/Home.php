@@ -41,7 +41,7 @@
                             </div>
                             <div class="add-comment">
                                 <div class="row">
-                                    <input class="comment-content" placeholder="test">
+                                    <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
                                     <a class="submit"><i class="fa fa-send"></i></a>
                                 </div>
                             </div>
