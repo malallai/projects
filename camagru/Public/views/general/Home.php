@@ -49,7 +49,7 @@
                     </div>
                     <div class="infos">
                         <div class="icons">
-                            <a class="link" href="#" onclick="showComments()" id="post <?= $post['id'] ?>"><i class="far fa-comment-alt"></i></a>
+                            <a class="link" href="#" onclick="showComments()"><i id="post <?= $post['id'] ?>" class="far fa-comment-alt"></i></a>
                             <a class="link"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="like-counts">
