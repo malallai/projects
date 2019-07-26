@@ -207,7 +207,7 @@ body[focus_comment] .posts-row .post .comments {
     flex-direction: row;
 }
 
-.posts-row .post .add-comment .row * {
+.posts-row .post .add-comment .row input, .posts-row .post .add-comment .row a, .posts-row .post .add-comment .row i {
     margin: .25rem;
 }
 
