@@ -190,7 +190,7 @@ body[focus_comment] .posts-row .post .comments {
     height: 100%;
 }
 
-.posts-row[show_comments] .post .comments {
+.posts-row .post[show_comments] .comments {
     opacity: 1;
     top: 50%;
 }

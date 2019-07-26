@@ -23,6 +23,7 @@ function outFocusCommentInput() {
 
 function showComments() {
     event.preventDefault();
+    console.log(event.srcElement);
     if (event.srcElement.hasAttribute("show_comments")) {
         event.srcElement.removeAttribute("show_comments");
     } else {
