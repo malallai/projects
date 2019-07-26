@@ -23,11 +23,11 @@ function outFocusCommentInput() {
 
 function showComments() {
     event.preventDefault();
-    console.log(event.srcElement);
-    if (event.srcElement.hasAttribute("show_comments")) {
-        event.srcElement.removeAttribute("show_comments");
+    let parent = document.getElementById("post " + event.srcElement.id);
+    if (parent.hasAttribute("show_comments")) {
+        parent.removeAttribute("show_comments");
     } else {
-        event.srcElement.setAttribute("show_comments", "");
+        parent.setAttribute("show_comments", "");
     }
 }
 
