@@ -9,7 +9,7 @@
                 $userName = $details['username'];
                 $likes = $details['likes'];
                 $imagePath = $details['image_path']; ?>
-                <div class="post">
+                <div class="post" id="post <?= $post['id'] ?>">
                     <div class="author">
                         <div class="user">
                             <div class="user-pp">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="infos">
                         <div class="icons">
-                            <a class="link" href="#" onclick="showComments()"><i class="far fa-comment-alt"></i></a>
+                            <a class="link" href="#" onclick="showComments()"><i id="<?= $post['id']?>" class="far fa-comment-alt"></></a>
                             <a class="link"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="like-counts">
