@@ -41,6 +41,7 @@
                                 <i class="far fa-comment-alt"></i>
                             </span>
                             <span class="delete-post">
+                                <span>&#160;</span>
                                 <a href="#"><i class="fas fa-trash"></i></a>
                             </span>
                         </div>
