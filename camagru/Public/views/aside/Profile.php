@@ -40,6 +40,9 @@
                                 <span><?= $comments ?></span>
                                 <i class="far fa-comment-alt"></i>
                             </span>
+                            <span class="delete-post">
+                                <a href="#"><i class="fas fa-trash"></i></a>
+                            </span>
                         </div>
                     </div>
                 </div>
