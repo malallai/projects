@@ -103,7 +103,6 @@
     flex: auto;
 }
 
-
 .aside-content .post {
     width: 100%;
     position: relative;
@@ -141,6 +140,11 @@
 
 .aside-content .details .row .content {
     margin: auto;
+}
+
+.aside-content .details .row .delete-post a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .aside-content .post:hover > .picture img {
