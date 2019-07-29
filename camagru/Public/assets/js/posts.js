@@ -86,6 +86,7 @@ function newComment() {
                 tmp.prepend((tmp = document.createElement("a")));
                 tmp.innerHTML = msg['author'];
                 row.append(commentParent);
+                post.value = "";
             }
         }
     });
