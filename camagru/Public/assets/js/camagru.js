@@ -8,10 +8,7 @@ window.onload = async function() {
         item.ondragstart = function () {return false;};
     }
 
-    let new_com = document.getElementsByClassName("new-comment");
-    for (let item of new_com) {
-        item.addEventListener("submit", newComment());
-    }
+    postLoad();
 };
 
 async function new_snackbar(message) {
