@@ -17,6 +17,7 @@ class Router {
                 $controller = $reflectionClass->newInstanceArgs([$this, $url]);
                 $method = $reflectionClass->getMethod($exploded[1]);
                 $method->invoke($controller);
+                Snackbar::sendSnack($url);
                 return;
             }
         }
