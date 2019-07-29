@@ -8,7 +8,7 @@ window.onload = async function() {
         item.ondragstart = function () {return false;};
     }
 
-    postLoad();
+    if (typeof postLoad === "function") postLoad();
 };
 
 async function new_snackbar(message) {
