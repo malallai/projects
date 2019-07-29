@@ -45,7 +45,8 @@ class PostPage extends Page {
             return false;
         }
         header("Content-type: text/plain");
-
+        $test = array("author" => "malallai", "message" => "jdwopajdpwa");
+        echo json_encode($test);
     }
 
     public function delete() {
