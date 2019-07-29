@@ -15,6 +15,7 @@ function like() {
     $.ajax({
         url: url,
         type: 'POST',
+        dataType: 'json',
         data: {
             id: post.id,
             token: token.value
@@ -22,12 +23,12 @@ function like() {
         success: function(msg) {
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
-            if (msg.split("/")[0] === "unlike") {
+            if (msg['status'] === "unlike") {
                 post.className = "far fa-heart";
-            } else if (msg.split("/")[0] === "like") {
+            } else if (msg['status'] === "like") {
                 post.className = "fas fa-heart red";
             }
-            count.id = msg.split("/")[1];
+            count.id = msg['likes'];
             count.innerHTML = count.id + (count.id == 0 || count.id == 1 ? " j'aime" : " j'aimes");
         }
     });
@@ -41,12 +42,13 @@ function deletePost() {
     $.ajax({
         url: url,
         type: 'POST',
+        dataType: 'json',
         data: {
             id: post.id,
             token: token.value
         },
         success: function (msg) {
-            if (msg === "deleted")
+            if (msg['status'] === "deleted")
                 location.reload();
         }
     });
@@ -68,22 +70,23 @@ function newComment() {
             comment: post.value
         },
         success: function(msg) {
-            console.log(msg);
-            let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
-            let newComment = document.createElement("div");
-            let commentParent = newComment;
-            let tmp;
-            newComment.className = "comment";
-            newComment.prepend((newComment = document.createElement("div")));
-            newComment.className = "content";
-            newComment.prepend((tmp = document.createElement("div")));
-            tmp.className = "comment-message";
-            tmp.innerHTML = "LE COMMENTAIRES";
-            newComment.prepend((tmp = document.createElement("div")));
-            tmp.className = "comment-author";
-            tmp.prepend((tmp = document.createElement("a")));
-            tmp.innerHTML = "test author";
-            row.append(commentParent);
+            if (msg['status'] === "ok") {
+                let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
+                let newComment = document.createElement("div");
+                let commentParent = newComment;
+                let tmp;
+                newComment.className = "comment";
+                newComment.prepend((newComment = document.createElement("div")));
+                newComment.className = "content";
+                newComment.prepend((tmp = document.createElement("div")));
+                tmp.className = "comment-message";
+                tmp.innerHTML = msg['message'];
+                newComment.prepend((tmp = document.createElement("div")));
+                tmp.className = "comment-author";
+                tmp.prepend((tmp = document.createElement("a")));
+                tmp.innerHTML = msg['author'];
+                row.append(commentParent);
+            }
         }
     });
 }

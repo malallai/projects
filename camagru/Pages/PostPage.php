@@ -35,8 +35,8 @@ class PostPage extends Page {
         $post = $_POST['id'];
         header("Content-type: text/plain");
         $result = $this->_controller->getSql()->like($post, $this->_controller->getGeneralController()->getUserController()->getSessionId());
-        echo $result;
-        return ($result);
+        echo json_encode($result);
+        return $result;
     }
 
     public function comment() {
@@ -44,25 +44,28 @@ class PostPage extends Page {
             echo 0;
             return false;
         }
+        $post = $_POST['id'];
         header("Content-type: text/plain");
-        $test = array("author" => "malallai", "message" => "jdwopajdpwa");
-        echo json_encode($test);
+        $result = $this->_controller->getSql()->newComment($post, $_POST['comment'], $this->_controller->getGeneralController()->getUserController()->getUser());
+        echo json_encode($result);
+        return $result;
     }
 
     public function delete() {
+        $nop = array("status" => 0);
         if (!$this->security($_POST)) {
-            echo 0;
-            return false;
+            echo json_encode($nop);
+            return $nop;
         }
         header("Content-type: text/plain");
         $post = $_POST['id'];
         if ($this->_controller->getGeneralController()->getSql()->getPost($post)['result']['user_id'] == $this->_controller->getGeneralController()->getUserController()->getSessionId()) {
             $result = $this->_controller->getSql()->delete($post);
-            echo $result;
+            echo json_encode($result);
             return $result;
         } else {
-            echo 0;
-            return false;
+            echo json_encode($nop);
+            return $nop;
         }
     }
 
