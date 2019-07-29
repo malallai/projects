@@ -26,7 +26,7 @@
             </div>
             <div class="aside-content">
                 <?php
-                    $page = new \Pages\UserPage($router, $this->_url);
+                    $page = new \Pages\UserPage($this->_router, $this->_url);
                     echo $page->profile();
                 ?>
             </div>
