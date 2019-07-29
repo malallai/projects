@@ -48,7 +48,7 @@ function newComment() {
     let input = event.srcElement;
     let url = '/post/comment';
     let token = document.getElementsByClassName("token")[0];
-    let post = document.getElementById("input " + input.id)[0];
+    let post = document.getElementById("input " + input.id);
     console.log(post);
     $.ajax({
         url: url,
