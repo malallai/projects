@@ -51,7 +51,7 @@ class GeneralSql extends Sql {
 
     public function getComments($id) {
         try {
-            $request = self::run("SELECT comments.comment, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE comments.post_id = ?",  array($id));
+            $request = self::runList("SELECT comments.comment, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE comments.post_id = ?",  array($id));
             return $request;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
