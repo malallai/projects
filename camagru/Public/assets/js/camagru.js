@@ -9,28 +9,6 @@ window.onload = async function() {
     }
 };
 
-function focusCommentInput() {
-    event.preventDefault();
-    let body = document.getElementsByTagName("body")[0];
-    body.setAttribute("focus_comment", "");
-}
-
-function outFocusCommentInput() {
-    event.preventDefault();
-    let body = document.getElementsByTagName("body")[0];
-    body.removeAttribute("focus_comment");
-}
-
-function showComments() {
-    event.preventDefault();
-    let parent = document.getElementById("post " + event.srcElement.id);
-    if (parent.hasAttribute("show_comments")) {
-        parent.removeAttribute("show_comments");
-    } else {
-        parent.setAttribute("show_comments", "");
-    }
-}
-
 async function new_snackbar(message) {
     let snacks;
     if (document.getElementsByClassName("snacks").length !== 0) {
