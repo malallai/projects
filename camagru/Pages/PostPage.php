@@ -17,8 +17,12 @@ class PostPage extends Page {
     }
 
     public function security($args) {
+        if (!$this->_controller->getGeneralController()->getUserController()->isLogged()){
+            $this->redirect("/user");
+            return false;
+        }
         if (!isset($args['id']) || !isset($args['token']) || !GeneralController::compareTokens($args['token'])
-            || !$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($args['id']))
+            || !$this->_controller->getSql()->postExist($args['id']))
             return false;
         return true;
     }
