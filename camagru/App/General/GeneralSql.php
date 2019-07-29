@@ -41,7 +41,7 @@ class GeneralSql extends Sql {
 
     public function getPost($id) {
         try {
-            $request = self::run("SELECT posts.*, users.username, count(likes.post_id) FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN likes AS likes ON likes.post_id = posts.id WHERE posts.id = ?",  array($id));
+            $request = self::run("SELECT posts.*, users.username, count(likes.post_id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN likes AS likes ON likes.post_id = posts.id WHERE posts.id = ?",  array($id));
             return $request;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
