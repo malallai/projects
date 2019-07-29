@@ -1,1 +1,1 @@
-<h1>Test <?= $params['details']['userid']; ?> </h1>
+<h1>Test <?= $params['details']['id']; ?> </h1>

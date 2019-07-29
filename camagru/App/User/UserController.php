@@ -4,8 +4,6 @@
 namespace App\User;
 use Core\Controller;
 use Core\Session;
-use Core\Snackbar;
-use Exceptions\SqlException;
 
 class UserController extends Controller {
 
@@ -39,7 +37,7 @@ class UserController extends Controller {
 
     public function getSessionId() {
         if ($this->isLogged())
-            return $this->getUser()['userid'];
+            return $this->getUser()['id'];
         return false;
     }
 
