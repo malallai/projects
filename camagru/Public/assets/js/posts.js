@@ -7,6 +7,7 @@ function like() {
         url: url,
         type: 'POST',
         success: function(msg) {
+            console.log(msg);
             if (msg === 1) {
                 post.className = "far fa-heart";
             } else if (msg === 2) {
