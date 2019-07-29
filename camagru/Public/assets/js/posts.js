@@ -43,6 +43,8 @@ function deletePost() {
     });
 }
 
+document.getElementsByClassName("new-comment")[0].addEventListener("submit", newComment());
+
 function newComment() {
     event.preventDefault();
     let input = event.srcElement;
