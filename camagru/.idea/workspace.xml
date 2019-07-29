@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,11 +69,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="212" selection-start-line="212" selection-end-line="212" />
             </state>
           </provider>
         </entry>
@@ -84,19 +94,6 @@
               <caret line="42" column="137" selection-start-line="42" selection-start-column="137" selection-end-line="42" selection-end-column="137" />
               <folding>
                 <element signature="e#24#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/views/dev/Test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,7 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chec</find>
       <find>button-login</find>
       <find>height: 92</find>
       <find>/Public/assets/css/</find>
@@ -157,6 +153,7 @@
       <find>['userid']</find>
       <find>[&quot;userid&quot;]</find>
       <find>['id</find>
+      <find>comments</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,7 +204,6 @@
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
-        <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
         <option value="$PROJECT_DIR$/Public/assets/js/posts.js" />
         <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
         <option value="$PROJECT_DIR$/Pages/PostPage.php" />
@@ -219,6 +215,7 @@
         <option value="$PROJECT_DIR$/Public/views/dev/Test.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
       </list>
     </option>
   </component>
@@ -447,12 +444,12 @@
       <workItem from="1564149172006" duration="1665000" />
       <workItem from="1564329989379" duration="738000" />
       <workItem from="1564341107204" duration="8368000" />
-      <workItem from="1564410702230" duration="13554000" />
+      <workItem from="1564410702230" duration="13861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176773000" />
+    <option name="totallyTimeSpent" value="177080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +464,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16845638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.16845638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -727,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="207" selection-start-line="207" selection-end-line="207" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/MontagePage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -858,6 +848,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
         </state>
       </provider>
     </entry>
