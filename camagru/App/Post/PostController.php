@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Montage;
+namespace App\General\Post;
 
 use App\General\GeneralController;
 use Core\Controller;
-
-class MontageController extends Controller {
+class PostController extends Controller {
 
     private $_generalController;
 
     public function __construct() {
-        $this->_sql = new MontageSql();
+        $this->_sql = new PostSql();
         $this->_generalController = new GeneralController();
     }
 
@@ -22,10 +21,9 @@ class MontageController extends Controller {
     }
 
     /**
-     * @return MontageSql
+     * @return PostSql
      */
     public function getSql() {
         return $this->_sql;
     }
-
 }

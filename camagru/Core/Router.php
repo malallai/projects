@@ -25,7 +25,7 @@ class Router {
 
     public function notFound($url, $redirect = true) {
         header('HTTP/1.0 404 Not Found');
-        Snackbar::send_snack("Error '".$url."' not found. Please contact us. (404)");
+        Snackbar::sendSnack("Error '".$url."' not found. Please contact us. (404)");
         if ($redirect) {
             Page::redirect("/");
         }

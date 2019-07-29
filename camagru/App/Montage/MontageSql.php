@@ -13,7 +13,7 @@ class MontageSql extends Sql {
             self::run("INSERT INTO posts (user_id, image_path) VALUES (?,?)", array($user_id, $picture_path));
             return true;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }

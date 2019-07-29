@@ -37,8 +37,8 @@ class UserPage extends Page {
         if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
-                    $_SESSION['user'] = serialize(array("userid" => $this->_controller->get_user_id($_POST['username'], true), "username" => $_POST['username'], "status" => UserStatus::connected));
-                    Snackbar::send_snack("Connexion réussi.");
+                    $_SESSION['user'] = serialize(array("userid" => $this->_controller->getUserId($_POST['username'], true), "username" => $_POST['username'], "status" => UserStatus::connected));
+                    Snackbar::sendSnack("Connexion réussi.");
                     $this->redirect("/");
                 }
             }
@@ -51,15 +51,15 @@ class UserPage extends Page {
         if (isset($_POST) && !empty($_POST) && isset($_POST['register']) && !empty($_POST['register'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_controller->getSql()->check_pwd($_POST['password'])) {
+                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
                         $this->_controller->getSql()->register($_POST['username'], $_POST['mail'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
                         $this->redirect("/user");
                     } else {
-                        Snackbar::send_snack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::send_snack("8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
+                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
                     }
                 } else {
-                    Snackbar::send_snack("Les mots de passes ne sont pas identique.");
+                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
                 }
             }
         }
@@ -68,20 +68,20 @@ class UserPage extends Page {
 
     public function confirm() {
         if ($this->_controller->getSql()->confirm($this->_url)) {
-            Snackbar::send_snack("Compte confirmé avec succes.");
-            Snackbar::send_snack("Vous pouvez désormais vous connecter.");
+            Snackbar::sendSnack("Compte confirmé avec succes.");
+            Snackbar::sendSnack("Vous pouvez désormais vous connecter.");
         } else {
-            Snackbar::send_snack("Token de confirmation inconnue.");
+            Snackbar::sendSnack("Token de confirmation inconnue.");
         }
         $this->redirect("/user");
     }
 
-    public function reset_ask() {
+    public function resetAsk() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
-                $this->_controller->getSql()->send_reset($_POST['mail']);
-                Snackbar::send_snack("Un email vous a été envoyé sur l'adresse indiqué est correct.");
-                Snackbar::send_snack("Vérifiez vos spam.");
+                $this->_controller->getSql()->sendReset($_POST['mail']);
+                Snackbar::sendSnack("Un email vous a été envoyé sur l'adresse indiqué est correct.");
+                Snackbar::sendSnack("Vérifiez vos spam.");
                 $this->redirect("/user");
             }
         }
@@ -91,21 +91,21 @@ class UserPage extends Page {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
             if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_controller->getSql()->check_pwd($_POST['password'])) {
-                        if ($this->_controller->getSql()->edit_pwd($_POST['password'], $_POST['reset_token'])) {
-                            Snackbar::send_snack("Votre mot de passe à été modifié.");
-                            Snackbar::send_snack("Vous pouvez vous connecter.");
+                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
+                        if ($this->_controller->getSql()->editPwd($_POST['password'], $_POST['reset_token'])) {
+                            Snackbar::sendSnack("Votre mot de passe à été modifié.");
+                            Snackbar::sendSnack("Vous pouvez vous connecter.");
                         } else {
-                            Snackbar::send_snack("Une erreur est survenue.");
+                            Snackbar::sendSnack("Une erreur est survenue.");
                             $this->redirect("/user/resetpw/".$_POST['reset_token']);
                         }
                     } else {
-                        Snackbar::send_snack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::send_snack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
+                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
                         $this->redirect("/user/resetpw/".$_POST['reset_token']);
                     }
                 } else {
-                    Snackbar::send_snack("Les mots de passes ne sont pas identique.");
+                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
                     $this->redirect("/user/resetpw/".$_POST['reset_token']);
                 }
                 $this->redirect("/user");
@@ -114,7 +114,7 @@ class UserPage extends Page {
         $this->redirect("/user");
     }
 
-    public function resetpw_edit() {
+    public function resetPwdEdit() {
         $params = array('content' => 'user/PwdReset');
         $this->render($params);
     }
@@ -122,7 +122,7 @@ class UserPage extends Page {
     public function logout() {
         if ($this->_controller->isLogged()) {
             Session::resetSession();
-            Snackbar::send_snack("Vous avez été déconnécté avec succès.");
+            Snackbar::sendSnack("Vous avez été déconnécté avec succès.");
         }
         $this->redirect("/");
     }
@@ -130,7 +130,7 @@ class UserPage extends Page {
     public function profile() {
         $params = array();
         if ($this->_controller->isLogged()) {
-            $details = $this->_controller->getSql()->getUser($this->_controller->get_user()['userid']);
+            $details = $this->_controller->getSql()->getUser($this->_controller->getSessionId());
             $params = array('content' => 'aside/Profile', 'details' => $details);
         } else {
             $params = array('content' => 'aside/Login');

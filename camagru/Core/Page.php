@@ -3,6 +3,9 @@
 namespace Core;
 class Page {
 
+    /**
+     * @type Router
+     */
     protected $_router;
     protected $_url;
     protected $_template;
@@ -25,8 +28,8 @@ class Page {
         ob_start();
         require "Public/views/" . $params['content'] . '.php';
         $content = ob_get_clean();
-        if (Snackbar::has_snack()) {
-            $content .= Snackbar::render_snacks();
+        if (Snackbar::hasSnack()) {
+            $content .= Snackbar::renderSnacks();
         }
         $_logged = isset($_SESSION['user']) ? true : false;
         require "Public/views/" . $this->_template . '.php';

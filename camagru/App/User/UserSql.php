@@ -18,16 +18,16 @@ class UserSql extends Sql {
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd) {
                     if ($result['confirmed'] == 0) {
-                        Snackbar::send_snack("Please confirm your account before using it.");
+                        Snackbar::sendSnack("Please confirm your account before using it.");
                         return false;
                     }
                     return true;
                 }
             }
-            Snackbar::send_snack("Wrong username or password.");
+            Snackbar::sendSnack("Wrong username or password.");
             return false;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
@@ -42,7 +42,7 @@ class UserSql extends Sql {
         try {
             $result = self::run("SELECT id FROM users WHERE username = ? OR email = ?", array($username, $mail))["result"];
             if (isset($result) && !empty($result)) {
-                Snackbar::send_snack("Email or username already taken. ");
+                Snackbar::sendSnack("Email or username already taken. ");
                 return false;
             }
             $link = "https://camagru.malallai.fr/user/confirm/".$confirm_key;
@@ -56,16 +56,16 @@ class UserSql extends Sql {
                 "<span style='color:#999'>Si le lien ne fonctionne pas voici le lien direct: $link</span>"
             );
             self::run("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirm_key));
-            Snackbar::send_snack("Account successfuly created.");
-            Snackbar::send_snack("Please confirm your account. Don't forget to checks spams.");
+            Snackbar::sendSnack("Account successfuly created.");
+            Snackbar::sendSnack("Please confirm your account. Don't forget to checks spams.");
             return true;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
 
-    public function check_pwd($pwd) {
+    public function checkPwd($pwd) {
         $upper = preg_match('#[A-Z]#', $pwd);
         $lower = preg_match('#[a-z]#', $pwd);
         $nbr = preg_match('#[\d]#', $pwd);
@@ -84,13 +84,13 @@ class UserSql extends Sql {
             $uid = $result['id'];
             self::run("UPDATE users SET confirmed = 1, conf_token = NULL WHERE id = ?", array($uid));
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
         return true;
     }
 
-    public function send_reset($mail) {
+    public function sendReset($mail) {
         $mail = htmlentities(htmlspecialchars($mail));
         $token = bin2hex(random_bytes(32));
         try {
@@ -111,13 +111,13 @@ class UserSql extends Sql {
             );
             self::run("INSERT INTO pwd_reset (user_id, token) VALUES (?,?)", array($result['id'], $token));
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
         return true;
     }
 
-    public function edit_pwd($password, $token) {
+    public function editPwd($password, $token) {
         $password = hash('whirlpool', $password);
         try {
             $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
@@ -134,13 +134,13 @@ class UserSql extends Sql {
             self::run("UPDATE users SET password = ? WHERE id = ?", array($password, $result['id']));
             self::run("DELETE FROM pwd_reset WHERE token LIKE ? ESCAPE '#'", array($token));
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
         return true;
     }
 
-    public function get_user_id($username) {
+    public function getUserId($username) {
         try {
             $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
             if (!isset($result) || empty($result)) {
@@ -148,7 +148,7 @@ class UserSql extends Sql {
             }
             return $result['id'];
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return null;
         }
     }
@@ -158,7 +158,7 @@ class UserSql extends Sql {
             $request = self::runList("SELECT * FROM users ORDER BY id DESC LIMIT 5",  array(), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
@@ -171,7 +171,7 @@ class UserSql extends Sql {
             $user = self::run("SELECT users.username, users.first_name, users.last_name, users.email FROM users WHERE id = ?", array($id));
             return array('posts' => $posts['result'], 'user' => $user['result']);
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }

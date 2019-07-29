@@ -22,7 +22,7 @@ class GeneralSql extends Sql {
             $request = self::bindValueRunList("SELECT * FROM posts ORDER BY date DESC LIMIT :offset, :fetch",  array("offset" => array($start, PDO::PARAM_INT), "fetch" => array($postsPerPage, PDO::PARAM_INT)), PDO::FETCH_ASSOC);
             return $request['result'];
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
@@ -34,7 +34,7 @@ class GeneralSql extends Sql {
             $pages = ceil($postsCount / 5);
             return $pages;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
@@ -44,7 +44,7 @@ class GeneralSql extends Sql {
             $request = self::run("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?",  array($id));
             return $request;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
@@ -54,7 +54,7 @@ class GeneralSql extends Sql {
             $request = self::run("SELECT users.*, (SELECT COUNT(*) FROM posts WHERE posts.user_id = ?) AS posts FROM users WHERE users.id = ?",  array($id, $id));
             return $request;
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
