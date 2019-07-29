@@ -44,7 +44,7 @@ class Sql {
     protected static function run($request, $args = array(), $fetch = null) {
         try {
             $response = self::runList($request, $args, $fetch);
-            return array("statement" => $response['statement'], 'result' => $response['result'][0] ? $response['result'][0] : $response['result']);
+            return array("statement" => $response['statement'], 'result' => sizeof($response['result']) > 0 ? $response['result'][0] : $response['result']);
         } catch (SqlException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
         }
