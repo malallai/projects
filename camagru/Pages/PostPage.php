@@ -4,8 +4,7 @@
 namespace Pages;
 
 use Core\Page;
-use App\General\Post\PostController;
-use Core\Router;
+use App\Post\PostController;
 
 class PostPage extends Page {
 

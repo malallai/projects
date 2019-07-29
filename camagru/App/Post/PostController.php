@@ -1,6 +1,6 @@
 <?php
 
-namespace App\General\Post;
+namespace App\Post;
 
 use App\General\GeneralController;
 use Core\Controller;
