@@ -40,7 +40,7 @@ class GeneralPage extends Page {
     }
 
     public function getPostDetails($idPost) {
-        return $this->_controller->getSql()->getPost($idPost)['result'];
+        return array("post" => $this->_controller->getSql()->getPost($idPost)['result'], "comments" => $this->_controller->getSql()->getComments($idPost)['result']);
     }
 
     public function getUserDetails($user) {

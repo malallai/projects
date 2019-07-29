@@ -6,7 +6,8 @@
         <div class="posts">
             <?php
             foreach ($params['posts'] as $post) {
-                $details = $this->getPostDetails($post['id']);
+                $d = $this->getPostDetails($post['id']);
+                $details = $d['post'];
                 $userName = $details['username'];
                 $likes = $details['likes'];
                 $imagePath = $details['image_path'];
@@ -30,6 +31,22 @@
                         </span>
                         <div class="comments">
                             <div class="row">
+                                <?php
+                                foreach ($d['comments'] as $comment) {
+                                    $message = $comment['comment'];
+                                    $author = $comment['username'];?>
+                                    <div class="comment">
+                                        <div class="row">
+                                            <div class="author-comment">
+                                                <a><?=$author?></a>
+                                            </div>
+                                            <div class="comment-message">
+                                                <?=$message?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }?>
                             </div>
                             <div class="add-comment">
                                 <div class="row">
