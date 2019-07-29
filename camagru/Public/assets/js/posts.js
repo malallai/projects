@@ -55,6 +55,7 @@ function deletePost() {
 function newComment() {
     event.preventDefault();
     let input = event.srcElement;
+    console.log(input);
     let url = '/post/comment';
     let token = document.getElementsByClassName("token")[0];
     let post = document.getElementById("input " + input.id);
