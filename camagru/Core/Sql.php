@@ -45,7 +45,7 @@ class Sql {
         try {
             $response = self::runList($request, $args, $fetch);
             ob_start();
-            var_dump($response['result'][0]);
+            var_dump($response['result']);
             $test = ob_get_clean();
             Snackbar::sendSnack($response['statement']);
             Snackbar::sendSnack($test);
