@@ -33,6 +33,8 @@
                             <div class="row">
                                 <?php
                                 foreach ($d['comments'] as $comment) {
+                                    var_dump($comment);
+                                    var_dump($d['comments']);
                                     $message = $comment['comment'];
                                     $author = $comment['username'];?>
                                     <div class="comment">
