@@ -3,6 +3,7 @@
 
 namespace Pages;
 
+use App\General\GeneralController;
 use Core\Page;
 use App\Post\PostController;
 use Core\Snackbar;
@@ -16,7 +17,7 @@ class PostPage extends Page {
     }
 
     public function like() {
-        if (!isset($_POST['id']) || !isset($_POST['token']) || !$this->_controller->getGeneralController()->compareTokens($_POST['token'])) {
+        if (!isset($_POST['id']) || !isset($_POST['token']) || !GeneralController::compareTokens($_POST['token'])) {
             echo 0;
             return false;
         }

@@ -27,7 +27,7 @@ class GeneralController extends Controller {
         return $this->_sql;
     }
 
-    public function compareTokens($token) {
+    public static function compareTokens($token) {
         Session::startSession();
         if (isset($_SESSION['token']) && !empty($_SESSION['token'])) {
             if ($_SESSION['token'] === $token) {

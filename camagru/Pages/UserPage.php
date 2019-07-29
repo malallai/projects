@@ -1,6 +1,7 @@
 <?php
 
 namespace Pages;
+use App\General\GeneralController;
 use App\User\UserController;
 use Core\Page;
 use Core\Session;
@@ -35,7 +36,7 @@ class UserPage extends Page {
 
     public function login() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
-            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
                 if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
                     $_SESSION['user'] = serialize(array("userid" => $this->_controller->getUserId($_POST['username'], true), "username" => $_POST['username'], "status" => UserStatus::connected));
                     Snackbar::sendSnack("Connexion réussi.");
@@ -49,7 +50,7 @@ class UserPage extends Page {
 
     public function register() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['register']) && !empty($_POST['register'])) {
-            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
                     if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
                         $this->_controller->getSql()->register($_POST['username'], $_POST['mail'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
@@ -78,7 +79,7 @@ class UserPage extends Page {
 
     public function resetAsk() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
                 $this->_controller->getSql()->sendReset($_POST['mail']);
                 Snackbar::sendSnack("Un email vous a été envoyé sur l'adresse indiqué est correct.");
                 Snackbar::sendSnack("Vérifiez vos spam.");
@@ -89,7 +90,7 @@ class UserPage extends Page {
 
     public function resetpw() {
         if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && $this->_controller->getSql()->compareTokens($_POST['token'])) {
+            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
                     if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
                         if ($this->_controller->getSql()->editPwd($_POST['password'], $_POST['reset_token'])) {
