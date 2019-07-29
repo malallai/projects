@@ -21,7 +21,7 @@ class PostSql extends Sql {
     public function getLikeCount($post) {
         try {
             $result = self::run("SELECT COUNT(*) FROM likes WHERE post_id = ?", array($post));
-            return ($result[0]);
+            return ($result['result'][0]);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
