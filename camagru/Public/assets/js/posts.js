@@ -2,12 +2,10 @@ function like() {
     event.preventDefault();
     let post = event.srcElement;
     let url = '/post/' + post.id + '/like';
-    console.log(url);
     $.ajax({
         url: url,
         type: 'POST',
         success: function(msg) {
-            console.log(msg);
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
             if (msg.split("/")[0] === "unlike") {
