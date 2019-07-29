@@ -44,4 +44,13 @@ class PostSql extends Sql {
         }
     }
 
+    public function delete($post) {
+        try {
+            $result = self::run("DELETE FROM posts WHERE id = ?", array($post));
+            return "deleted";
+        } catch (SqlException $exception) {
+            Snackbar::sendSnack($exception->getMessage());
+        }
+    }
+
 }

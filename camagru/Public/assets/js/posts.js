@@ -24,6 +24,25 @@ function like() {
     });
 }
 
+function deletePost() {
+    event.preventDefault();
+    let post = event.srcElement;
+    let url = '/post/delete';
+    let token = document.getElementsByClassName("token")[0];
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            id: post.id,
+            token: token.value
+        },
+        success: function (msg) {
+            if (msg === "deleted")
+                location.reload();
+        }
+    });
+}
+
 function focusCommentInput() {
     event.preventDefault();
     let body = document.getElementsByTagName("body")[0];
