@@ -205,10 +205,11 @@ body[focus_comment] .posts-row .post .comments {
 }
 
 .posts-row .post .add-comment .row {
-    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
+    position: absolute;
+    bottom: 0;
 }
 
 .posts-row .post .add-comment .row form {
