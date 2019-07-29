@@ -44,8 +44,11 @@ class Sql {
     protected static function run($request, $args = array(), $fetch = null) {
         try {
             $response = self::runList($request, $args, $fetch);
+            ob_start();
+            var_dump($response['result'][0]);
+            $test = ob_get_clean();
             Snackbar::sendSnack($response['statement']);
-            Snackbar::sendSnack($response['result'][0]);
+            Snackbar::sendSnack($test);
             return array("statement" => $response['statement'], 'result' => $response['result'][0]);
         } catch (SqlException $e) {
             throw new SqlException("Error during sql statement. Please contact us.");
