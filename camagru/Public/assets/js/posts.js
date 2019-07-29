@@ -7,12 +7,15 @@ function like() {
         url: url,
         type: 'POST',
         success: function(msg) {
-            console.log(msg);
-            if (msg === "unlike") {
+            let postParent = document.getElementById("post " + post.id);
+            let count = postParent.getElementsByClassName("like-counts")[0];
+            if (msg.split("/")[0] === "unlike") {
                 post.className = "far fa-heart";
-            } else if (msg === "like") {
+            } else if (msg.split("/")[0] === "like") {
                 post.className = "fas fa-heart red";
             }
+            count.id = msg.split("/")[1];
+            count.innerHTML = count.id + (count.id == 0 || count.id == 1 ? " j'aime" : " j'aimes");
         }
     });
 }
