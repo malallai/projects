@@ -211,7 +211,7 @@ body[focus_comment] .posts-row .post .comments {
     flex-direction: row;
 }
 
-.posts-row .post .add-comment .row form {
+.posts-row .post .add-comment .row {
     width: 100%;
     display: flex;
 }
