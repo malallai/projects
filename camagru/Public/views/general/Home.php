@@ -29,76 +29,12 @@
                             <img src="<?=$imagePath ?>">
                         </span>
                         <div class="comments">
-                            <div class="row">
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="content">
-                                        <div class="comment-author">
-                                            <a>malallai</a>
-                                        </div>
-                                        <div class="comment-message">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="row"></div>
                             <div class="add-comment">
                                 <div class="row">
-                                    <form>
-                                        <input class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                        <input hidden name="submit" value="Submit" type="submit">
-                                    </form>
-                                    <a href="#" class="submit">
-                                        <div class="submit-content">
+                                    <input id="input <?=$post['id']?>" class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div id="<?=$post['id']?>" class="submit-content">
                                             <i class="fa fa-send"></i>
                                         </div>
                                     </a>
