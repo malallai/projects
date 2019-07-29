@@ -11,7 +11,7 @@ class PostSql extends Sql {
     public function postExist($id) {
         try {
             $result = self::run("SELECT COUNT(id) FROM posts WHERE id = ?", array($id));
-            Snackbar::sendSnack($result);
+            var_dump($result);
             return ($result == 1 ? true : false);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
