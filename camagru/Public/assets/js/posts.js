@@ -55,20 +55,21 @@ function deletePost() {
 function newComment() {
     event.preventDefault();
     let input = event.srcElement;
-    console.log(input);
     let url = '/post/comment';
     let token = document.getElementsByClassName("token")[0];
     let post = document.getElementById("input " + input.id);
-    console.log(post);
     $.ajax({
         url: url,
         type: 'POST',
         data: {
             id: input.id,
-            token: token.value
+            token: token.value,
+            comment: post.value
         },
         success: function(msg) {
-
+            console.log(msg);
+            let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
+            let newComment =
         }
     });
 }
