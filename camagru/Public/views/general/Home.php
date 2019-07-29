@@ -34,7 +34,7 @@
                                 <div class="row">
                                     <form class="new-comment">
                                         <input id="input <?=$post['id']?>" class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
-                                        <input hidden type="submit" value="submit">
+                                        <input hidden name="submit" type="submit" value="submit">
                                     </form>
                                     <a href="#" onclick="newComment()" class="submit">
                                         <div id="<?=$post['id']?>" class="submit-content">
