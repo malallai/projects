@@ -43,6 +43,26 @@ function deletePost() {
     });
 }
 
+function newComment() {
+    event.preventDefault();
+    let input = event.srcElement;
+    let url = '/post/comment';
+    let token = document.getElementsByClassName("token")[0];
+    let post = document.getElementById("input " + input.id)[0];
+    console.log(post);
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            id: input.id,
+            token: token.value
+        },
+        success: function(msg) {
+
+        }
+    });
+}
+
 function focusCommentInput() {
     event.preventDefault();
     let body = document.getElementsByTagName("body")[0];
