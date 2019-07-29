@@ -25,9 +25,9 @@ $router->addRoute("user/confirm/(.*)", "Pages\UserPage@confirm");
 $router->addRoute("user/logout", "Pages\UserPage@logout");
 $router->addRoute("user/edit", "Pages\UserPage@edit");
 
-$router->addRoute("post/(\d*)/like", "Pages\PostPage@like");
-$router->addRoute("post/(\d*)/comment", "Pages\PostPage@comment");
-$router->addRoute("post/(\d*)/delete", "Pages\PostPage@delete");
+$router->addRoute("post/like", "Pages\PostPage@like");
+$router->addRoute("post/comment", "Pages\PostPage@comment");
+$router->addRoute("post/delete", "Pages\PostPage@delete");
 
 $router->addRoute("montage", "Pages\MontagePage@index");
 
