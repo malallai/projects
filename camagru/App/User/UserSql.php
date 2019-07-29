@@ -156,7 +156,7 @@ class UserSql extends Sql {
     public function getLastUsers() {
         try {
             $request = self::runList("SELECT * FROM users ORDER BY id DESC LIMIT 5",  array(), PDO::FETCH_ASSOC);
-            return $request['result'][0];
+            return $request['result'];
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
@@ -169,7 +169,7 @@ class UserSql extends Sql {
         try {
             $posts = self::runList("SELECT posts.*, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments FROM posts INNER JOIN users ON posts.user_id = users.id WHERE users.id = ? ORDER BY date DESC",  array($id), PDO::FETCH_ASSOC);
             $user = self::run("SELECT users.username, users.first_name, users.last_name, users.email FROM users WHERE id = ?", array($id));
-            return array('posts' => $posts['result'][0], 'user' => $user['result']);
+            return array('posts' => $posts['result'], 'user' => $user['result']);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;

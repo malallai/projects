@@ -40,11 +40,11 @@ class GeneralPage extends Page {
     }
 
     public function getPostDetails($idPost) {
-        return $this->_controller->getSql()->getPost($idPost)['result'][0];
+        return $this->_controller->getSql()->getPost($idPost)['result'];
     }
 
     public function getUserDetails($user) {
-        return $this->_controller->getSql()->getUser($user)['result'][0];
+        return $this->_controller->getSql()->getUser($user)['result'];
     }
 
     public function pagination($globalParams) {
