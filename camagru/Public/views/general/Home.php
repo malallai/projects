@@ -1,4 +1,5 @@
 <link href="/Public/assets/css/home.css" rel="stylesheet">
+<script src='/Public/assets/js/posts.js'></script>
 <div class="home-row">
     <div id="posts-row" class="row posts-row">
         <?=$this->pagination($params); ?>
@@ -107,7 +108,7 @@
                     <div class="infos">
                         <div class="icons">
                             <a class="link" href="#" onclick="showComments()"><i id="<?= $post['id'] ?>" class="far fa-comment-alt"></i></a>
-                            <a class="link"><i class="far fa-heart"></i></a>
+                            <a class="link" href="#" onclick="like()" id="<?=$post['id']?>"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="like-counts">
                             <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
