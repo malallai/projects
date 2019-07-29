@@ -32,7 +32,10 @@
                             <div class="row"></div>
                             <div class="add-comment">
                                 <div class="row">
-                                    <input id="input <?=$post['id']?>" class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                    <form class="new-comment">
+                                        <input id="input <?=$post['id']?>" class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden type="submit" value="submit">
+                                    </form>
                                     <a href="#" onclick="newComment()" class="submit">
                                         <div id="<?=$post['id']?>" class="submit-content">
                                             <i class="fa fa-send"></i>
