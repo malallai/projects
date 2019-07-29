@@ -4,3 +4,9 @@
 <div onclick="new_snackbar('<span style=\'color:red;\'>Red</span>')" style="color:red;">Red</div>
 <div onclick="new_snackbar('<span style=\'color:deepskyblue;\'>Blue</span>')" style="color: deepskyblue">Blue</div>
 
+<?php
+
+$controller = new \App\General\GeneralController();
+$result = $controller->getSql()->getComments(10);
+
+var_dump($result);
