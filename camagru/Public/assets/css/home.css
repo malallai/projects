@@ -136,6 +136,10 @@
     margin: 0;
 }
 
+.posts-row .like-button i.red {
+    color: red;
+}
+
 .posts-row .comments {
     overflow-y: auto;
     overflow-x: hidden;

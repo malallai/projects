@@ -108,7 +108,7 @@
                     <div class="infos">
                         <div class="icons">
                             <a class="link" href="#" onclick="showComments()"><i id="<?= $post['id'] ?>" class="far fa-comment-alt"></i></a>
-                            <a class="link" href="#" onclick="like()"><i id="<?=$post['id']?>" class="far fa-heart"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="<?=$post['id']?>" class="far fa-heart"></i></a>
                         </div>
                         <div class="like-counts">
                             <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
