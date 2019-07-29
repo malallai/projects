@@ -70,6 +70,19 @@ function newComment() {
             console.log(msg);
             let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
             let newComment = document.createElement("div");
+            let commentParent = newComment;
+            let tmp;
+            newComment.className = "comment";
+            newComment.prepend((newComment = document.createElement("div")));
+            newComment.className = "content";
+            newComment.prepend((tmp = document.createElement("div")));
+            tmp.className = "comment-author";
+            tmp.prepend((tmp = document.createElement("a")));
+            tmp.innerHTML = "test author";
+            newComment.prepend((tmp = document.createElement("div")));
+            tmp.className = "comment-message";
+            tmp.innerHTML = "LE COMMENTAIRES";
+            row.append(commentParent);
         }
     });
 }
