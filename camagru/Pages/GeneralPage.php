@@ -47,6 +47,12 @@ class GeneralPage extends Page {
         return $this->_controller->getSql()->getUser($user)['result'];
     }
 
+    public function isLiked($idpost) {
+        if (!$this->_controller->getUserController()->isLogged())
+            return false;
+        return $this->_controller->getSql()->isLiked($idpost, $this->_controller->getUserController()->getSessionId());
+    }
+
     public function pagination($globalParams) {
         $params = array('content' => 'general/Pagination', 'page' => $globalParams['page'], 'pages' => $globalParams['pages']);
         $quick_content = $this->quickRender($params);

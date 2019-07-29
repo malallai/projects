@@ -8,9 +8,9 @@ function like() {
         type: 'POST',
         success: function(msg) {
             console.log(msg);
-            if (msg === "1") {
+            if (msg === "unlike") {
                 post.className = "far fa-heart";
-            } else if (msg === "2") {
+            } else if (msg === "like") {
                 post.className = "fas fa-heart red";
             }
         }
