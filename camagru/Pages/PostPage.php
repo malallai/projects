@@ -16,28 +16,49 @@ class PostPage extends Page {
         $this->_controller = new PostController();
     }
 
+    public function security($args) {
+        if (!isset($args['id']) || !isset($args['token']) || !GeneralController::compareTokens($args['token'])
+            || !$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($args['id']))
+            return false;
+        return true;
+    }
+
     public function like() {
-        if (!isset($_POST['id']) || !isset($_POST['token']) || !GeneralController::compareTokens($_POST['token'])) {
+        if (!$this->security($_POST)) {
             echo 0;
             return false;
         }
-    $postid = $_POST['id'];
+        $post = $_POST['id'];
         header("Content-type: text/plain");
-        if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid)) {
-            echo 0;
-            return false;
-        }
-        $result = $this->_controller->getSql()->like($postid, $this->_controller->getGeneralController()->getUserController()->getSessionId());
-        echo $result.'';
+        $result = $this->_controller->getSql()->like($post, $this->_controller->getGeneralController()->getUserController()->getSessionId());
+        echo $result;
         return ($result);
     }
 
     public function comment() {
+        if (!$this->security($_POST)) {
+            echo 0;
+            return false;
+        }
+        header("Content-type: text/plain");
 
     }
 
     public function delete() {
-
+        if (!$this->security($_POST)) {
+            echo 0;
+            return false;
+        }
+        header("Content-type: text/plain");
+        $post = $_POST['id'];
+        if ($this->_controller->getGeneralController()->getSql()->getPost($post)['result']['user_id'] == $this->_controller->getGeneralController()->getUserController()->getSessionId()) {
+            $result = $this->_controller->getSql()->delete($post);
+            echo $result;
+            return $result;
+        } else {
+            echo 0;
+            return false;
+        }
     }
 
 }
