@@ -61,6 +61,7 @@ function newComment() {
     $.ajax({
         url: url,
         type: 'POST',
+        dataType: 'json',
         data: {
             id: input.id,
             token: token.value,
