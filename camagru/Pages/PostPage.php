@@ -16,6 +16,7 @@ class PostPage extends Page {
     }
 
     public function like() {
+        header("Content-type: text/plain");
         $exploded = explode("/", $this->_url);
         $postid = $exploded[1];
         Snackbar::sendSnack("like post ".$postid);
