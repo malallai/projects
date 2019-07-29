@@ -76,12 +76,12 @@ function newComment() {
             newComment.prepend((newComment = document.createElement("div")));
             newComment.className = "content";
             newComment.prepend((tmp = document.createElement("div")));
+            tmp.className = "comment-message";
+            tmp.innerHTML = "LE COMMENTAIRES";
+            newComment.prepend((tmp = document.createElement("div")));
             tmp.className = "comment-author";
             tmp.prepend((tmp = document.createElement("a")));
             tmp.innerHTML = "test author";
-            newComment.prepend((tmp = document.createElement("div")));
-            tmp.className = "comment-message";
-            tmp.innerHTML = "LE COMMENTAIRES";
             row.append(commentParent);
         }
     });
