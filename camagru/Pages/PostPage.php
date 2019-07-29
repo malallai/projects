@@ -18,9 +18,13 @@ class PostPage extends Page {
     public function like() {
         $exploded = explode("/", $this->_url);
         $postid = $exploded[1];
-        if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid))
-            return (false);
-        return ($this->_controller->getSql()->like($postid, $this->_controller->getGeneralController()->getUserController()->getSessionId()));
+        if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid)) {
+            echo false;
+            return false;
+        }
+        $result = $this->_controller->getSql()->like($postid, $this->_controller->getGeneralController()->getUserController()->getSessionId());
+        echo $result;
+        return ($result);
     }
 
     public function comment() {
