@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Public/assets/js/camagru.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/camagru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/js/camagru.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -125,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
@@ -251,7 +252,6 @@
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
-        <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/posts.js" />
@@ -260,6 +260,7 @@
         <option value="$PROJECT_DIR$/App/User/UserController.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Edit.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
+        <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
       </list>
     </option>
   </component>
@@ -488,12 +489,12 @@
       <workItem from="1564149172006" duration="1665000" />
       <workItem from="1564329989379" duration="738000" />
       <workItem from="1564341107204" duration="8368000" />
-      <workItem from="1564410702230" duration="11268000" />
+      <workItem from="1564410702230" duration="11384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174487000" />
+    <option name="totallyTimeSpent" value="174603000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -826,13 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/js/camagru.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -909,6 +903,13 @@
           <folding>
             <element signature="e#28#48#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/js/camagru.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
