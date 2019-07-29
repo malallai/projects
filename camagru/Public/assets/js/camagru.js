@@ -7,6 +7,11 @@ window.onload = async function() {
     for (let item of list) {
         item.ondragstart = function () {return false;};
     }
+
+    let new_com = document.getElementsByClassName("new-comment");
+    for (let item of new_com) {
+        item.addEventListener("submit", newComment());
+    }
 };
 
 async function new_snackbar(message) {
