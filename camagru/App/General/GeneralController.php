@@ -3,6 +3,7 @@
 namespace App\General;
 use Core\Controller;
 use App\User\UserController;
+use Core\Session;
 
 class GeneralController extends Controller {
     private $_user_controller;
@@ -24,6 +25,16 @@ class GeneralController extends Controller {
      */
     public function getSql() {
         return $this->_sql;
+    }
+
+    public function compareTokens($token) {
+        Session::startSession();
+        if (isset($_SESSION['token']) && !empty($_SESSION['token'])) {
+            if ($_SESSION['token'] === $token) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

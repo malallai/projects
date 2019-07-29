@@ -16,9 +16,12 @@ class PostPage extends Page {
     }
 
     public function like() {
+        if (!isset($_POST['id']) || !isset($_POST['token']) || !$this->_controller->getGeneralController()->compareTokens($_POST['token'])) {
+            echo 0;
+            return false;
+        }
+    $postid = $_POST['id'];
         header("Content-type: text/plain");
-        $exploded = explode("/", $this->_url);
-        $postid = $exploded[1];
         if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid)) {
             echo 0;
             return false;
