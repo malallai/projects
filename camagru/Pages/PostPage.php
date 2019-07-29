@@ -19,7 +19,6 @@ class PostPage extends Page {
         header("Content-type: text/plain");
         $exploded = explode("/", $this->_url);
         $postid = $exploded[1];
-        Snackbar::sendSnack("like post ".$postid);
         if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid)) {
             echo 0;
             return false;
