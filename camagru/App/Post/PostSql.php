@@ -12,7 +12,7 @@ class PostSql extends Sql {
         try {
             $result = self::run("SELECT COUNT(*) FROM posts WHERE id = ?", array($id));
             var_dump($result);
-            echo "\n\n\n";
+            printf("\n\n\n");
             return ($result['result'][0][0] == 1 ? true : false);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
@@ -24,7 +24,7 @@ class PostSql extends Sql {
         try {
             $result = self::run("SELECT COUNT(*) FROM likes WHERE user_id = ? AND post_id = ?", array($user, $id));
             var_dump($result);
-            echo "\n\n\n";
+            printf("\n\n\n");
             if ($result['result'][0][0] == 1) {
                 self::run("DELETE FROM likes WHERE post_id = ? AND user_id = ?", array($id, $user));
             } else {
