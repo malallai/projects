@@ -36,13 +36,11 @@
                                     $message = $comment['comment'];
                                     $author = $comment['username'];?>
                                     <div class="comment">
-                                        <div class="row">
-                                            <div class="author-comment">
-                                                <a><?=$author?></a>
-                                            </div>
-                                            <div class="comment-message">
-                                                <?=$message?>
-                                            </div>
+                                        <div class="author-comment">
+                                            <a><?=$author?></a>
+                                        </div>
+                                        <div class="comment-message">
+                                            <?=$message?>
                                         </div>
                                     </div>
                                     <?php
