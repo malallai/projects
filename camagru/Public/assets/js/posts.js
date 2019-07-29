@@ -1,3 +1,12 @@
+function postLoad() {
+    let new_com = document.getElementsByClassName("new-comment");
+    for (let item of new_com) {
+        item.addEventListener("submit", function (event) {
+            newComment(event);
+        });
+    }
+}
+
 function like() {
     event.preventDefault();
     let post = event.srcElement;
@@ -43,26 +52,24 @@ function deletePost() {
     });
 }
 
-function newComment() {
-    if (event) {
-        event.preventDefault();
-        let input = event.srcElement;
-        let url = '/post/comment';
-        let token = document.getElementsByClassName("token")[0];
-        let post = document.getElementById("input " + input.id);
-        console.log(post);
-        $.ajax({
-            url: url,
-            type: 'POST',
-            data: {
-                id: input.id,
-                token: token.value
-            },
-            success: function(msg) {
+function newComment(event) {
+    event.preventDefault();
+    let input = event.srcElement;
+    let url = '/post/comment';
+    let token = document.getElementsByClassName("token")[0];
+    let post = document.getElementById("input " + input.id);
+    console.log(post);
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            id: input.id,
+            token: token.value
+        },
+        success: function(msg) {
 
-            }
-        });
-    }
+        }
+    });
 }
 
 function focusCommentInput() {
