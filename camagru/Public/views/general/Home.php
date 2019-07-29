@@ -29,7 +29,18 @@
                             <img src="<?=$imagePath ?>">
                         </span>
                         <div class="comments">
-                            <div class="row"></div>
+                            <div class="row">
+                                <div class="comment">
+                                    <div class="content">
+                                        <div class="comment-author">
+                                            <a>malallai</a>
+                                        </div>
+                                        <div class="comment-message">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="add-comment">
                                 <div class="row">
                                     <form class="new-comment" id="<?=$post['id']?>">
