@@ -21,6 +21,7 @@ class PostPage extends Page {
         Snackbar::sendSnack("like post ".$postid);
         if (!$this->_controller->getGeneralController()->getUserController()->isLogged() || !$this->_controller->getSql()->postExist($postid)) {
             echo false;
+            Snackbar::sendSnack("false");
             return false;
         }
         $result = $this->_controller->getSql()->like($postid, $this->_controller->getGeneralController()->getUserController()->getSessionId());
