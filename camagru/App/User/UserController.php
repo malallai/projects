@@ -9,6 +9,13 @@ use Exceptions\SqlException;
 
 class UserController extends Controller {
 
+    /**
+     * @return UserSql
+     */
+    public function getSql() {
+        return $this->_sql;
+    }
+
     public function __construct() {
         $this->_sql = new UserSql();
     }
@@ -22,15 +29,21 @@ class UserController extends Controller {
         return false;
     }
 
-    public function get_user_id($username, $force = false) {
+    public function getUserId($username, $force = false) {
         if ($this->isLogged() || $force) {
-            return $this->getSql()->get_user_id($username);
+            return $this->getSql()->getUserId($username);
         } else {
             return null;
         }
     }
 
-    public function get_user() {
+    public function getSessionId() {
+        if ($this->isLogged())
+            return $this->getUser()['userid'];
+        return false;
+    }
+
+    public function getUser() {
         if ($this->isLogged()) {
             return unserialize($_SESSION['user']);
         } else {

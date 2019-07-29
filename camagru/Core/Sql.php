@@ -22,7 +22,7 @@ class Sql {
         return false;
     }
 
-    protected static function init_no_db($clear = false) {
+    protected static function initNoDb($clear = false) {
         require 'config/database.php';
         if ($clear) {
             self::$_conn = null;
@@ -35,9 +35,10 @@ class Sql {
         } catch (PDOException $e) {
             throw new SqlException("Mysql Error during connection to database. Please contact us.");
         }
+        return true;
     }
 
-    protected static function init_db($clear = false) {
+    protected static function initDb($clear = false) {
         require 'config/database.php';
         if ($clear) {
             self::$_conn = null;
@@ -49,6 +50,7 @@ class Sql {
         } catch (PDOException $e) {
             throw new SqlException("Mysql Error during connection to database. Please contact us.");
         }
+        return true;
     }
 
     protected static function run($request, $args = array(), $fetch = null) {
@@ -62,9 +64,9 @@ class Sql {
 
     protected static function runList($request, $args = array(), $fetch = null) {
         try {
-            self::init_db();
+            self::initDb();
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
         try {
@@ -92,9 +94,9 @@ class Sql {
 
     protected static function bindValueRunList($request, $args = array(), $fetch = null) {
         try {
-            self::init_db();
+            self::initDb();
         } catch (SqlException $e) {
-            Snackbar::send_snack($e->getMessage());
+            Snackbar::sendSnack($e->getMessage());
             return false;
         }
         try {

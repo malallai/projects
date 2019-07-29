@@ -19,4 +19,11 @@ class GeneralController extends Controller {
         return $this->_user_controller;
     }
 
+    /**
+     * @return GeneralSql
+     */
+    public function getSql() {
+        return $this->_sql;
+    }
+
 }

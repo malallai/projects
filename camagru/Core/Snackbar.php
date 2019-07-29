@@ -4,44 +4,44 @@ namespace Core;
 
 class Snackbar {
 
-    public static function send_snack($message) {
+    public static function sendSnack($message) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
         $snacks = array();
-        if (self::has_snack()) {
-            $snacks = self::get_snack();
+        if (self::hasSnack()) {
+            $snacks = self::getSnack();
         }
         array_push($snacks, $message);
         $_SESSION['snack'] = $snacks;
     }
 
-    public static function get_snack() {
-        if (self::has_snack()) {
+    public static function getSnack() {
+        if (self::hasSnack()) {
             return $_SESSION['snack'];
         }
     }
 
-    public static function has_snack() {
+    public static function hasSnack() {
         return isset($_SESSION['snack']) && !empty($_SESSION['snack']) && sizeof($_SESSION['snack']) !== 0;
     }
 
-    public static function reset_snack() {
+    public static function resetSnack() {
         unset($_SESSION['snack']);
     }
 
-    public static function render_snacks() {
+    public static function renderSnacks() {
         $result = "";
-        $snacks = self::get_snack();
+        $snacks = self::getSnack();
         foreach ($snacks as $key => $snack) {
-            $result .= self::render_snack($snack);
+            $result .= self::renderSnack($snack);
             unset($snacks[$key]);
         }
         $_SESSION['snack'] = $snacks;
         return $result;
     }
 
-    public static function render_snack($message) {
+    public static function renderSnack($message) {
         return "<script>new_snackbar(\"$message\")</script>";
     }
 
