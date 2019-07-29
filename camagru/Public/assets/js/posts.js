@@ -1,10 +1,15 @@
 function like() {
     event.preventDefault();
     let post = event.srcElement;
-    let url = '/post/' + post.id + '/like';
+    let url = '/post/like';
+    let token = document.getElementsByClassName("token")[0];
     $.ajax({
         url: url,
         type: 'POST',
+        data: {
+            id: post.id,
+            token: token.value
+        },
         success: function(msg) {
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
