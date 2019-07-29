@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Post/PostSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Post/PostSql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/PostPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/PostPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="403">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#28#46#0#PHP" expanded="true" />
               </folding>
@@ -358,7 +357,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="U:/tmp/ctf" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -425,12 +424,12 @@
       <workItem from="1563795499846" duration="11582000" />
       <workItem from="1564149172006" duration="1665000" />
       <workItem from="1564329989379" duration="738000" />
-      <workItem from="1564341107204" duration="7665000" />
+      <workItem from="1564341107204" duration="7799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162516000" />
+    <option name="totallyTimeSpent" value="162650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,7 +459,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6208054" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" auto_hide="true" id="Terminal" order="11" sideWeight="0.37919462" type="SLIDING" weight="0.38668555" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -853,8 +852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="403">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="e#28#46#0#PHP" expanded="true" />
           </folding>
