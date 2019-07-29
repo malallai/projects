@@ -69,7 +69,7 @@ function newComment() {
         success: function(msg) {
             console.log(msg);
             let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
-            let newComment =
+            let newComment = document.createElement("div");
         }
     });
 }
