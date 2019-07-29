@@ -49,6 +49,16 @@ class GeneralSql extends Sql {
         }
     }
 
+    public function isLiked($id, $user) {
+        try {
+            $request = self::run("SELECT COUNT(*) FROM likes WHERE likes.post_id = ? AND likes.user_id = ?", array($id, $user));
+            return ($request['result'][0] == 1 ? true : false);
+        } catch (SqlException $e) {
+            Snackbar::sendSnack($e->getMessage());
+            return false;
+        }
+    }
+
     public function getUser($id) {
         try {
             $request = self::run("SELECT users.*, (SELECT COUNT(*) FROM posts WHERE posts.user_id = ?) AS posts FROM users WHERE users.id = ?",  array($id, $id));

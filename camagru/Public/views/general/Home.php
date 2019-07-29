@@ -9,7 +9,8 @@
                 $details = $this->getPostDetails($post['id']);
                 $userName = $details['username'];
                 $likes = $details['likes'];
-                $imagePath = $details['image_path']; ?>
+                $imagePath = $details['image_path'];
+                $islike = $this->isLiked($post['id']);?>
                 <div class="post" id="post <?= $post['id'] ?>">
                     <div class="author">
                         <div class="user">
@@ -108,7 +109,7 @@
                     <div class="infos">
                         <div class="icons">
                             <a class="link" href="#" onclick="showComments()"><i id="<?= $post['id'] ?>" class="far fa-comment-alt"></i></a>
-                            <a class="link like-button" href="#" onclick="like()"><i id="<?=$post['id']?>" class="far fa-heart"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="<?=$post['id']?>" class="<?= $islike ? "fas fa-heart red" : "far fa-heart" ?>"></i></a>
                         </div>
                         <div class="like-counts">
                             <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
