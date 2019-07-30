@@ -97,7 +97,7 @@ class UserPage extends Page {
             if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
                 if ($_POST['password'] === $_POST['password_repeat']) {
                     if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
-                        if ($this->_controller->getSql()->editPwd($_POST['password'], $_POST['reset_token'])) {
+                        if ($this->_controller->getSql()->editPwd($_POST['password'], 0, $_POST['reset_token'])) {
                             Snackbar::sendSnack("Votre mot de passe à été modifié.");
                             Snackbar::sendSnack("Vous pouvez vous connecter.");
                         } else {
@@ -180,7 +180,7 @@ class UserPage extends Page {
             if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
                 if ($args['new_password'] === $args['repeat']) {
                     if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
-                        if ($this->_controller->getSql()->editPwd($_POST['password'], $_POST['reset_token'])) {
+                        if ($this->_controller->getSql()->editPwd($_POST['password'], $this->_controller->getSessionId())) {
                             Snackbar::sendSnack("Votre mot de passe à été modifié.");
                             Snackbar::sendSnack("Vous pouvez vous connecter.");
                         } else {
