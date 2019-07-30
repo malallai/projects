@@ -205,10 +205,10 @@ class UserSql extends Sql {
         }
     }
 
-    public function getLastUsers() {
+    public function getLastUsers($count) {
         try {
-            $request = self::runList("SELECT * FROM users ORDER BY id DESC LIMIT 5",  array(), PDO::FETCH_ASSOC);
-            return $request['result'];
+            $request = self::runList("SELECT * FROM users ORDER BY id DESC LIMIT ?",  array($count), PDO::FETCH_ASSOC);
+            return $request;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;

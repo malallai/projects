@@ -13,19 +13,10 @@ class PostPage extends Page {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new PostController();
+        $this->_controller = new PostController($this);
     }
 
-    public function security($args) {
-        if (!$this->_controller->getGeneralController()->getUserController()->isLogged()){
-            $this->redirect("/user");
-            return false;
-        }
-        if (!isset($args['id']) || !isset($args['token']) || !GeneralController::compareTokens($args['token'])
-            || !$this->_controller->getSql()->postExist($args['id']))
-            return false;
-        return true;
-    }
+
 
     public function like() {
         header("Content-type: text/plain");
