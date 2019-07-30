@@ -1,24 +1,24 @@
 <link href="/Public/assets/css/login.css" rel="stylesheet">
 <script src='/Public/assets/js/form.js'></script>
-<div class="row">
+<div id="form-row" class="row">
     <div class="row-content">
         <div class="nav-content">
             <div class="nav">
-                <a id="login-button" onclick="login_click()" class="active">
+                <a id="login-button login-content" class="nav-form-button active">
                     <span class="text active">Connexion</span>
                     <span class="icon"><i class="fas fa-unlock"></i></span>
                 </a>
-                <a id="register-button" onclick="register_click()" class="">
+                <a id="register-button register-content" class="nav-form-button">
                     <span class="text active">Inscription</span>
                     <span class="icon"><i class="fas fa-edit"></i></span>
                 </a>
-                <a id="reset-button" onclick="reset_click()" class="">
+                <a id="reset-button reset-content" class="nav-form-button">
                     <span class="text active">Réinitialiser</span>
                     <span class="icon"><i class="fas fa-sync-alt"></i></span>
                 </a>
             </div>
         </div>
-        <div  id="login-content" class="content content-login active">
+        <div id="login-content" class="form-content content content-login active">
             <h2 class="title">Veuillez vous identifier</h2>
             <form method="POST" action="/user/login">
                 <input type="hidden" name="token" value="<?= $token ?>">
@@ -28,7 +28,7 @@
             </form>
         </div>
 
-        <div  id="register-content" class="content content-register">
+        <div id="register-content" class="form-content content content-register">
             <h2 class="title">Veuillez vous enregistrer</h2>
             <form method="POST" action="/user/register">
                 <input type="hidden" name="token" value="<?= $token ?>">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div  id="reset-content" class="content content-reset">
+        <div id="reset-content" class="form-content content content-reset">
             <h2 class="title">Veuillez indiquer votre adresse</h2>
             <form method="POST" action="/user/resetpw_ask">
                 <input type="hidden" name="token" value="<?= $token ?>">
