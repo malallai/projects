@@ -146,7 +146,7 @@ class UserPage extends Page {
 
     protected function checkPost($args) {
         if (isset($args['type']) && $args['type'] === "global") {
-            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['username']) || !isset($args['old_username']) || !isset($args['password']) || !isset($args['mail']))
+            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['notifications']) || !isset($args['username']) || !isset($args['old_username']) || !isset($args['password']) || !isset($args['mail']))
                 return false;
             return true;
         } else if (isset($args['type']) && $args['type'] === "password") {
@@ -164,7 +164,7 @@ class UserPage extends Page {
         }
         if ($args['type'] === "global") {
             if ($this->_controller->getSql()->tryPass($args['old_username'], $args['password'])) {
-                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail']))) {
+                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail']), $args['notifications'])) {
                     $this->logout(false, false);
                     if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
                         $_SESSION['user'] = serialize(array("id" => $this->_controller->getUserId($args['username'], true), "username" => $args['username'], "status" => UserStatus::connected));

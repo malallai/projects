@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/views/user/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/Edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/User/UserSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserSql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/UserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/UserPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,11 +67,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="253">
                   <caret line="32" column="175" selection-start-line="32" selection-start-column="175" selection-end-line="32" selection-end-column="175" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="185">
+                  <caret line="166" column="68" selection-start-line="166" selection-start-column="68" selection-end-line="166" selection-end-column="68" />
                 </state>
               </provider>
             </entry>
@@ -88,20 +98,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Public/assets/js/form.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="204">
                   <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
                 </state>
               </provider>
             </entry>
@@ -118,11 +119,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="395">
-                  <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+                <state relative-caret-position="423">
+                  <caret line="181" column="184" selection-start-line="181" selection-start-column="184" selection-end-line="181" selection-end-column="184" />
                   <folding>
                     <element signature="e#28#41#0#PHP" expanded="true" />
                   </folding>
@@ -231,12 +232,12 @@
         <option value="$PROJECT_DIR$/Pages/PostPage.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/editprofile.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
-        <option value="$PROJECT_DIR$/Pages/UserPage.php" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/form.css" />
         <option value="$PROJECT_DIR$/Public/assets/js/form.js" />
-        <option value="$PROJECT_DIR$/App/User/UserSql.php" />
         <option value="$PROJECT_DIR$/Public/views/user/Edit.php" />
+        <option value="$PROJECT_DIR$/Pages/UserPage.php" />
+        <option value="$PROJECT_DIR$/App/User/UserSql.php" />
       </list>
     </option>
   </component>
@@ -445,12 +446,12 @@
       <workItem from="1564329989379" duration="738000" />
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
-      <workItem from="1564493681123" duration="5999000" />
+      <workItem from="1564493681123" duration="6089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187198000" />
+    <option name="totallyTimeSpent" value="187288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,36 +836,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
           <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
           <folding>
             <element signature="e#28#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
-          <folding>
-            <element signature="e#28#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -880,6 +857,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="32" column="175" selection-start-line="32" selection-start-column="175" selection-end-line="32" selection-end-column="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="166" column="68" selection-start-line="166" selection-start-column="68" selection-end-line="166" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="181" column="184" selection-start-line="181" selection-start-column="184" selection-end-line="181" selection-end-column="184" />
+          <folding>
+            <element signature="e#28#41#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

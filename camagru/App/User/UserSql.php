@@ -158,7 +158,7 @@ class UserSql extends Sql {
         return true;
     }
 
-    public function editProfile($id, $username, $first, $last, $mail) {
+    public function editProfile($id, $username, $first, $last, $mail, $notifications) {
         $username = htmlentities(htmlspecialchars($username));
         $mail = htmlentities(htmlspecialchars($mail));
         $first = htmlentities(htmlspecialchars($first));
@@ -179,7 +179,7 @@ class UserSql extends Sql {
                     return false;
                 }
             }
-            self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ? WHERE id = ?", array($first, $last, $mail, $username, $id));
+            self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ?, notifications = ? WHERE id = ?", array($first, $last, $mail, $username, $notifications, $id));
             Mail::newMail($mail, "Édition du profile",
                 "Votres profile viens d'être modifié.".
                 "</br></br>".
