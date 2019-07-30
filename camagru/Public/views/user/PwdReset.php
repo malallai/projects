@@ -5,7 +5,7 @@
             <div class="nav">
                 <a id="reset-button" class="active nav-big">
                     <span class="text active">Réinitialiser</span>
-                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <span class="icon"><i class="fas fa-sync-alt"></i></span>
                 </a>
             </div>
         </div>
