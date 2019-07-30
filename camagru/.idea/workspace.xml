@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Pages/UserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/UserPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/user/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/Edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -67,16 +66,16 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="253">
-                  <caret line="33" column="149" selection-start-line="33" selection-start-column="149" selection-end-line="33" selection-end-column="149" />
+                  <caret line="33" column="207" selection-start-line="33" selection-start-column="207" selection-end-line="33" selection-end-column="207" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
@@ -227,8 +226,8 @@
         <option value="$PROJECT_DIR$/Public/assets/css/form.css" />
         <option value="$PROJECT_DIR$/App/User/UserSql.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/form.js" />
-        <option value="$PROJECT_DIR$/Public/views/user/Edit.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
+        <option value="$PROJECT_DIR$/Public/views/user/Edit.php" />
       </list>
     </option>
   </component>
@@ -437,12 +436,12 @@
       <workItem from="1564329989379" duration="738000" />
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
-      <workItem from="1564493681123" duration="6899000" />
+      <workItem from="1564493681123" duration="6964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188098000" />
+    <option name="totallyTimeSpent" value="188163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -827,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="33" column="149" selection-start-line="33" selection-start-column="149" selection-end-line="33" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -872,6 +864,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="166" column="227" selection-start-line="166" selection-start-column="227" selection-end-line="166" selection-end-column="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="33" column="207" selection-start-line="33" selection-start-column="207" selection-end-line="33" selection-end-column="207" />
         </state>
       </provider>
     </entry>
