@@ -10,29 +10,23 @@ use PDO;
 
 class GeneralSql extends Sql {
 
-    public function getPosts($page = 1) {
+    public function getLimitPostList($offset, $fetch) {
         try {
-            $postsPerPage = 5;
-            $posts = self::run("SELECT id FROM posts", array());
-            $postsCount = $posts["statement"]->rowCount();
-            $tot = ceil($postsCount / $postsPerPage);
-            if(!($page > 0 AND $page <= $tot))
-                return false;
-            $start = ($page - 1) * $postsPerPage;
-            $request = self::bindValueRunList("SELECT * FROM posts ORDER BY date DESC LIMIT :offset, :fetch",  array("offset" => array($start, PDO::PARAM_INT), "fetch" => array($postsPerPage, PDO::PARAM_INT)), PDO::FETCH_ASSOC);
-            return $request['result'];
+            $request = self::bindValueRunList("SELECT * FROM posts ORDER BY date DESC LIMIT :offset, :fetch",  array("offset" => array($offset, PDO::PARAM_INT), "fetch" => array($fetch, PDO::PARAM_INT)), PDO::FETCH_ASSOC);
+            return $request;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
         }
     }
 
-    public function getPages() {
+    public function getPostsCount() {
+        /** @var $statement \PDOStatement */
         try {
             $posts = self::run("SELECT id FROM posts", array());
-            $postsCount = $posts["statement"]->rowCount();
-            $pages = ceil($postsCount / 5);
-            return $pages;
+            $statement = $posts['statement'];
+            $postsCount = $statement->rowCount();
+            return $postsCount;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;

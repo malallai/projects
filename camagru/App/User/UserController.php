@@ -3,7 +3,11 @@
 
 namespace App\User;
 use Core\Controller;
+use Core\Page;
 use Core\Session;
+use Core\Snackbar;
+use Exceptions\SqlException;
+use PDO;
 
 class UserController extends Controller {
 
@@ -14,8 +18,16 @@ class UserController extends Controller {
         return $this->_sql;
     }
 
-    public function __construct() {
+    public function __construct($page) {
         $this->_sql = new UserSql();
+        $this->_page = $page;
+    }
+
+    /**
+     * @return Page
+     */
+    public function getPage() {
+        return $this->_page;
     }
 
     public function isLogged() {
@@ -53,5 +65,9 @@ class UserController extends Controller {
         if ($this->isLogged()) {
             return $this->getSql()->getUserDetails($this->getSessionId());
         } else return null;
+    }
+
+    public function getLastUsers() {
+        return $this->getSql()->getLastUsers(5)['result'];
     }
 }

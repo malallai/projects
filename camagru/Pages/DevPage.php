@@ -9,7 +9,7 @@ class DevPage extends Page {
 
     public function __construct($router, $url) {
         parent::__construct($router, $url);
-        $this->_controller = new GeneralController();
+        $this->_controller = new GeneralController($this);
         $this->_template = "templates/general";
 
     }

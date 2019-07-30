@@ -31,7 +31,6 @@ class Page {
         if (Snackbar::hasSnack()) {
             $content .= Snackbar::renderSnacks();
         }
-        $_logged = isset($_SESSION['user']) ? true : false;
         require "Public/views/" . $this->_template . '.php';
     }
 

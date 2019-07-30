@@ -13,7 +13,7 @@ class UserPage extends Page {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new UserController();
+        $this->_controller = new UserController($this);
     }
 
     public function index() {

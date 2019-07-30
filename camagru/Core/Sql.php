@@ -41,6 +41,10 @@ class Sql {
         return true;
     }
 
+    /**
+     * @return array
+     * @throws SqlException
+     * */
     protected static function run($request, $args = array(), $fetch = null) {
         try {
             $response = self::runList($request, $args, $fetch);

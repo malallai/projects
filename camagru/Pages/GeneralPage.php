@@ -10,7 +10,7 @@ class GeneralPage extends Page {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new GeneralController();
+        $this->_controller = new GeneralController($this);
     }
 
     public function index() {
@@ -23,13 +23,13 @@ class GeneralPage extends Page {
     }
 
     public function indexPage($page) {
-        $pages = $this->_controller->getSql()->getPages();
+        $pages = $this->_controller->getPagesCount();
         if ($page > $pages) {
             $page = $pages;
             $this->_router->notFound($this->_url, false);
         }
-        $posts = $this->_controller->getSql()->getPosts($page);
-        $users = $this->_controller->getUserController()->getSql()->getLastUsers();
+        $posts = $this->_controller->getPosts($page);
+        $users = $this->_controller->getUserController()->getLastUsers();
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users, 'page' => $page, 'pages' => $pages);
         $this->render($params);
     }
@@ -37,20 +37,6 @@ class GeneralPage extends Page {
     public function dev() {
         $params = array('content' => 'dev/Test');
         $this->render($params);
-    }
-
-    public function getPostDetails($idPost) {
-        return array("post" => $this->_controller->getSql()->getPost($idPost)['result'], "comments" => $this->_controller->getSql()->getComments($idPost)['result']);
-    }
-
-    public function getUserDetails($user) {
-        return $this->_controller->getSql()->getUser($user)['result'];
-    }
-
-    public function isLiked($idpost) {
-        if (!$this->_controller->getUserController()->isLogged())
-            return false;
-        return $this->_controller->getSql()->isLiked($idpost, $this->_controller->getUserController()->getSessionId());
     }
 
     public function pagination($globalParams) {
