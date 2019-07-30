@@ -14,14 +14,14 @@ function formReady() {
         items.addEventListener("click", function(event){
             event.preventDefault();
             let checkbox = document.getElementById("input " + event.srcElement.id);
-            if (checkbox.checked) {
-                event.srcElement.className = "fas fa-toggle-off red";
-                checkbox.checked = false;
-                checkbox.value = false;
-            } else {
-                event.srcElement.className = "fas fa-toggle-on green";
-                checkbox.checked = true;
-                checkbox.value = true;
+            if (checkbox) {
+                if (checkbox.value === "true") {
+                    event.srcElement.className = "fas fa-toggle-off red";
+                    checkbox.value = false;
+                } else {
+                    event.srcElement.className = "fas fa-toggle-on green";
+                    checkbox.value = true;
+                }
             }
         });
     }
