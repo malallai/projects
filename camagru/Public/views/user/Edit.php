@@ -24,7 +24,7 @@
                     <input type="text" name="first_name" id="first_name" class="form-control" value="<?=$params['user']['first_name']?>">
                 </div>
                 <input type="email" name="mail" id="mail" class="form-control" value="<?=$params['user']['email']?>">
-                <input type="text" name="username" id="username" class="form-control" value="<?=$params['user']['username']?>" disabled>
+                <input type="text" name="username" id="username" class="form-control" value="<?=$params['user']['username']?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
             </form>
