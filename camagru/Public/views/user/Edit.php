@@ -30,8 +30,8 @@
                 <div class="inline-flex">
                     <div class="select-box">
                         <span>Notifications</span>
-                        <a href="#" class="link"><i class="fas fa-toggle-on green"></i></a>
-                        <input type="checkbox" name="notifications" id="notifications" required hidden>
+                        <a href="#" class="link checkbox"><i id="notifications" class="fas fa-toggle-on green"></i></a>
+                        <input type="checkbox" name="notifications" id="notifications" checked="<?php $params['user']['notifications'] ? true : false ?>" required hidden>
                     </div>
                 </div>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">

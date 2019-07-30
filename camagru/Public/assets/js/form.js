@@ -8,6 +8,21 @@ function formReady() {
             switchButtons(navItems, formItems, items);
         });
     }
+
+    let checkbox = rowParent.getElementsByClassName("checkbox");
+    for (let items of checkbox) {
+        items.addEventListener("click", function(event){
+            event.preventDefault();
+            let checkbox = document.getElementById(event.srcElement.id);
+            if (checkbox.checked) {
+                event.srcElement.className = "fas fa-toggle-off red";
+                checkbox.checked = false;
+            } else {
+                event.srcElement.className = "fas fa-toggle-on green";
+                checkbox.checked = true;
+            }
+        });
+    }
 }
 
 function switchButtons(navItems, formItems, event) {
