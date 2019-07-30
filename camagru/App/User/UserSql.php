@@ -117,6 +117,22 @@ class UserSql extends Sql {
         return true;
     }
 
+    public function tryPass($username, $pwd) {
+        $pwd = hash("whirlpool", $pwd);
+        try {
+            $result = self::run("SELECT password, confirmed FROM users WHERE username = ?", array($username))["result"];
+            if (isset($result) && !empty($result)) {
+                if ($result['password'] === $pwd) {
+                    return true;
+                }
+            }
+            return false;
+        } catch (SqlException $e) {
+            Snackbar::sendSnack($e->getMessage());
+            return false;
+        }
+    }
+
     public function editPwd($password, $token) {
         $password = hash('whirlpool', $password);
         try {
@@ -138,6 +154,20 @@ class UserSql extends Sql {
             return false;
         }
         return true;
+    }
+
+    public function editProfile($id, $username, $first, $last, $mail) {
+        $username = htmlentities(htmlspecialchars($username));
+        $mail = htmlentities(htmlspecialchars($mail));
+        $first = htmlentities(htmlspecialchars($first));
+        $last = htmlentities(htmlspecialchars($last));
+        try {
+            self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ? WHERE id = ?", array($first, $last, $mail, $username, $id));
+            return true;
+        } catch (SqlException $e) {
+            Snackbar::sendSnack($e->getMessage());
+            return false;
+        }
     }
 
     public function getUserId($username) {
@@ -162,8 +192,6 @@ class UserSql extends Sql {
             return false;
         }
     }
-
-    //            $request = self::run("SELECT posts.*, users.username, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = ?",  array($id));
 
     public function getUser($id) {
         try {

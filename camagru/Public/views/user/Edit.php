@@ -17,7 +17,9 @@
         </div>
         <div id="global-content" class="form-content content content-global active">
             <h2 class="title">Modifier vos informations</h2>
-            <form>
+            <form method="POST" action="/user/edit">
+                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="type" value="password">
                 <div class="inline-flex">
                     <input type="text" name="last_name" id="last_name" class="form-control" value="<?=$params['user']['last_name']?>" autofocus>
                     <input type="text" name="first_name" id="first_name" class="form-control" value="<?=$params['user']['first_name']?>">
@@ -30,7 +32,9 @@
         </div>
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">
             <h2 class="title">Édition du mot de passe</h2>
-            <form>
+            <form method="POST" action="/user/edit">
+                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="type" value="password">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required>
                 <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required>

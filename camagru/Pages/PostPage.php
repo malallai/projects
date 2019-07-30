@@ -28,36 +28,38 @@ class PostPage extends Page {
     }
 
     public function like() {
+        header("Content-type: text/plain");
+        $nop = array("status" => 0);
         if (!$this->security($_POST)) {
-            echo 0;
-            return false;
+            echo json_encode($nop);
+            return $nop;
         }
         $post = $_POST['id'];
-        header("Content-type: text/plain");
         $result = $this->_controller->getSql()->like($post, $this->_controller->getGeneralController()->getUserController()->getSessionId());
         echo json_encode($result);
         return $result;
     }
 
     public function comment() {
+        header("Content-type: text/plain");
+        $nop = array("status" => 0);
         if (!$this->security($_POST)) {
-            echo 0;
-            return false;
+            echo json_encode($nop);
+            return $nop;
         }
         $post = $_POST['id'];
-        header("Content-type: text/plain");
         $result = $this->_controller->getSql()->newComment($post, $_POST['comment'], $this->_controller->getGeneralController()->getUserController()->getUser());
         echo json_encode($result);
         return $result;
     }
 
     public function delete() {
+        header("Content-type: text/plain");
         $nop = array("status" => 0);
         if (!$this->security($_POST)) {
             echo json_encode($nop);
             return $nop;
         }
-        header("Content-type: text/plain");
         $post = $_POST['id'];
         if ($this->_controller->getGeneralController()->getSql()->getPost($post)['result']['user_id'] == $this->_controller->getGeneralController()->getUserController()->getSessionId()) {
             $result = $this->_controller->getSql()->delete($post);

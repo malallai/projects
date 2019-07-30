@@ -22,6 +22,7 @@ function editProfile(type) {
             last_name: form['last_name'].value,
             mail: form['mail'].value,
             password: form['password'].value,
+            username: form['username'].value,
             type: type
         };
     } else if (type === "password") {
