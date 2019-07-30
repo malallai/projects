@@ -31,7 +31,7 @@
                     <div class="select-box">
                         <span>Notifications</span>
                         <a href="#" class="link checkbox"><i id="notifications" class="<?= $params['user']['notifications'] ? "fas fa-toggle-on green" : "fas fa-toggle-off red" ?>"></i></a>
-                        <input type="checkbox" name="notifications" id="input notifications" <?= $params['user']['notifications'] ? "checked" : ""?>required hidden>
+                        <input type="checkbox" name="notifications" id="input notifications" <?= $params['user']['notifications'] ? "checked" : ""?> required hidden>
                     </div>
                 </div>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
