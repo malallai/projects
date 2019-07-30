@@ -1,6 +1,6 @@
 <link href="/Public/assets/css/login.css" rel="stylesheet">
 <script src='/Public/assets/js/form.js'></script>
-<div class="row">
+<div id="form-row" class="row">
     <div class="row-content">
         <div class="nav-content">
             <div class="nav">

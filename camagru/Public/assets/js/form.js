@@ -1,6 +1,6 @@
 function formReady() {
     console.log("ready form");
-    let rowParent = document.getElementsByClassName("row")[0];
+    let rowParent = document.getElementById("form-row");
     let navItems = rowParent.getElementsByClassName("nav-form-button");
     let formItems = rowParent.getElementsByClassName("form-content");
     for (let items of navItems)
