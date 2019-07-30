@@ -14,7 +14,7 @@
                 </a>
             </div>
         </div>
-        <div  id="global-content" class="form-content content content-global active">
+        <div id="global-content" class="form-content content content-global active">
             <h2 class="title">Modifier vos informations</h2>
             <form>
                 <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" autofocus="">
@@ -22,7 +22,7 @@
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
             </form>
         </div>
-        <div  id="edit-pwd-content" class="form-content content content-edit-pwd">
+        <div id="edit-pwd-content" class="form-content content content-edit-pwd">
             <h2 class="title">Édition du mot de passe</h2>
             <form>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="" autofocus="">

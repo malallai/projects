@@ -19,7 +19,7 @@ function switchButtons(navItems, formItems, event) {
     for (let forms of formItems) {
         forms.classList.remove("active");
     }
-    for (let navs of formItems) {
+    for (let navs of navItems) {
         navs.classList.remove("active");
     }
     let formId = document.getElementById(event.id.split(' ')[1]);
