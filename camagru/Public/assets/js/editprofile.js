@@ -9,13 +9,12 @@ function editProfileReady() {
     });
 }
 
-function editProfile(type, form) {
+function editProfile(type) {
     event.preventDefault();
-    console.log(event);
-    console.log(form);
-    let data;
+    let form = event.target;
     let url = '/user/edit';
     let token = document.getElementsByClassName("token")[0];
+    let data;
     if (type === "global") {
         data = {
             token: token,
