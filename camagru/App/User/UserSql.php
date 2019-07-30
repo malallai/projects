@@ -179,13 +179,13 @@ class UserSql extends Sql {
                     return false;
                 }
             }
+            Snackbar::sendSnack("".$notifications);
             self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ?, notifications = ? WHERE id = ?", array($first, $last, $mail, $username, $notifications, $id));
             Mail::newMail($mail, "Édition du profile",
                 "Votres profile viens d'être modifié.".$notifications.
                 "</br></br>".
                 "Merci de ta confiance et à bientôt sur Camagru."
             );
-            Snackbar::sendSnack("".$notifications);
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
