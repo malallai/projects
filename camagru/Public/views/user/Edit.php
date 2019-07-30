@@ -28,9 +28,11 @@
                 <input type="text" name="username" id="username" class="form-control" value="<?=$params['user']['username']?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <div class="inline-flex">
-                    <h2 class="title">Notifications</h2>
-                    <input type="checkbox" name="notifications" id="notifications" required hidden>
-                    <a href="#"><i class="fas fa-toggle-on"></i></a>
+                    <div class="select-box">
+                        <span>Notifications</span>
+                        <a href="#"><i class="fas fa-toggle-on"></i></a>
+                        <input type="checkbox" name="notifications" id="notifications" required hidden>
+                    </div>
                 </div>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
             </form>
