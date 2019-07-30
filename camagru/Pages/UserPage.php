@@ -163,7 +163,7 @@ class UserPage extends Page {
             $this->redirect("/user/edit");
         }
         if ($args['type'] === "global") {
-            if ($this->_controller->getSql()->tryPass($this->_controller->getUser()['old_username'], $args['password'])) {
+            if ($this->_controller->getSql()->tryPass($args['old_username'], $args['password'])) {
                 if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail']))) {
                     $this->logout(false, false);
                     if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
