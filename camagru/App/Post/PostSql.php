@@ -59,7 +59,7 @@ class PostSql extends Sql {
         try {
             $result = self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user['id'], $message));
             $author = $this->getPostAuthor($post);
-            if ($author['notifications']) {
+            if ($author['notifications'] && $author['username'] !== $user['username']) {
                 Mail::newMail($author['email'], "Nouveau commentaire",
                     "Un commentaire à été ajouté sur l'une de vos images.".
                     "</br></br>".
