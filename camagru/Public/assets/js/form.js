@@ -13,7 +13,7 @@ function formReady() {
     for (let items of checkbox) {
         items.addEventListener("click", function(event){
             event.preventDefault();
-            let checkbox = document.getElementById(event.srcElement.id);
+            let checkbox = document.getElementById("input " + event.srcElement.id);
             if (checkbox.checked) {
                 event.srcElement.className = "fas fa-toggle-off red";
                 checkbox.checked = false;
