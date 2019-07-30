@@ -10,8 +10,7 @@ function formReady() {
     for (let items of navItems) {
         items.addEventListener("click", function(event) {
             event.preventDefault();
-            console.log("click");
-            switchButtons(navItems, formItems, event);
+            switchButtons(navItems, formItems, items);
         });
     }
 }
@@ -23,9 +22,7 @@ function switchButtons(navItems, formItems, event) {
     for (let navs of formItems) {
         navs.classList.remove("active");
     }
-    let navId = event.srcElement;
-    console.log(event);
-    let formId = document.getElementById(navId.id.split(' ')[1]);
-    navId.classList.add("active");
+    let formId = document.getElementById(event.id.split(' ')[1]);
+    event.classList.add("active");
     formId.classList.add("active");
 }
