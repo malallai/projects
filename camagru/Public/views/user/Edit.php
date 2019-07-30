@@ -19,11 +19,11 @@
             <h2 class="title">Modifier vos informations</h2>
             <form>
                 <div class="inline-flex">
-                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="<?=$params['user']['last_name']?>" autofocus>
-                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="<?=$params['user']['first_name']?>">
+                    <input type="text" name="last_name" id="last_name" class="form-control" value="<?=$params['user']['last_name']?>" autofocus>
+                    <input type="text" name="first_name" id="first_name" class="form-control" value="<?=$params['user']['first_name']?>">
                 </div>
-                <input type="email" name="mail" id="mail" class="form-control" placeholder="<?=$params['user']['email']?>">
-                <input type="text" name="username" id="username" class="form-control" placeholder="<?=$params['user']['username']?>" disabled>
+                <input type="email" name="mail" id="mail" class="form-control" value="<?=$params['user']['email']?>">
+                <input type="text" name="username" id="username" class="form-control" value="<?=$params['user']['username']?>" disabled>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
             </form>
