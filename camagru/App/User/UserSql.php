@@ -164,6 +164,21 @@ class UserSql extends Sql {
         $first = htmlentities(htmlspecialchars($first));
         $last = htmlentities(htmlspecialchars($last));
         try {
+            $details = self::run("SELECT username, email FROM users WHERE id = ?", array($id))['result'];
+            if ($username !== $details['username']) {
+                $result = self::run("SELECT id FROM users WHERE username = ?", array($username))["result"];
+                if (isset($result) && !empty($result)) {
+                    Snackbar::sendSnack("Le nom d'utilisateur est déjà pris.");
+                    return false;
+                }
+            }
+            if ($mail !== $details['email']) {
+                $result = self::run("SELECT id FROM users WHERE email = ?", array($mail))["result"];
+                if (isset($result) && !empty($result)) {
+                    Snackbar::sendSnack("L'email est déjà pris.");
+                    return false;
+                }
+            }
             self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ? WHERE id = ?", array($first, $last, $mail, $username, $id));
             return true;
         } catch (SqlException $e) {
