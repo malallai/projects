@@ -1,4 +1,4 @@
-function postLoad() {
+function postReady() {
     let new_com = document.getElementsByClassName("new-comment");
     for (let item of new_com) {
         item.addEventListener("submit", function (event) {
