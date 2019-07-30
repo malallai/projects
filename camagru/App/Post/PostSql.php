@@ -47,7 +47,7 @@ class PostSql extends Sql {
 
     public function getPostAuthor($post) {
         try {
-            $result = self::run("SELECT posts.user_id, users.email, users.notifications FROM posts INNER JOIN users ON users.id = posts.user_id WHERE posts.id = ?", array($post));
+            $result = self::run("SELECT posts.user_id, users.username, users.email, users.notifications FROM posts INNER JOIN users ON users.id = posts.user_id WHERE posts.id = ?", array($post));
             return ($result['result']);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
