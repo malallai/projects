@@ -17,7 +17,7 @@ function editProfile(type) {
     let data;
     if (type === "global") {
         data = {
-            token: token,
+            token: token.value,
             first_name: form['first_name'].value,
             last_name: form['last_name'].value,
             mail: form['mail'].value,
@@ -26,7 +26,7 @@ function editProfile(type) {
         };
     } else if (type === "password") {
         data = {
-            token: token,
+            token: token.value,
             password: form['password'].value,
             new_password: form['new_password'].value,
             repeat: form['repeat'].value,
