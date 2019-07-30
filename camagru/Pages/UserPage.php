@@ -179,8 +179,8 @@ class UserPage extends Page {
         } else if ($args['type'] === "password") {
             if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
                 if ($args['new_password'] === $args['repeat']) {
-                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
-                        if ($this->_controller->getSql()->editPwd($_POST['password'], $this->_controller->getSessionId())) {
+                    if ($this->_controller->getSql()->checkPwd($_POST['new_password'])) {
+                        if ($this->_controller->getSql()->editPwd($_POST['new_password'], $this->_controller->getSessionId())) {
                             Snackbar::sendSnack("Votre mot de passe à été modifié.");
                         } else {
                             Snackbar::sendSnack("Une erreur est survenue.");
