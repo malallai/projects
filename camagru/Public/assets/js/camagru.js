@@ -8,8 +8,9 @@ window.onload = async function() {
         item.ondragstart = function () {return false;};
     }
 
-    if (typeof postLoad === "function") postLoad();
+    if (typeof postReady === "function") postReady();
     if (typeof formReady === "function") formReady();
+    if (typeof editProfileReady === "function") editProfileReady();
 };
 
 async function new_snackbar(message) {
