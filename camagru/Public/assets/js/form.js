@@ -20,6 +20,7 @@ function formReady() {
                 checkbox.value = false;
             } else {
                 event.srcElement.className = "fas fa-toggle-on green";
+                checkbox.checked = true;
                 checkbox.value = true;
             }
         });
