@@ -1,10 +1,16 @@
 function formReady() {
+    console.log("ready form");
     let rowParent = document.getElementsByClassName("row")[0];
     let navItems = rowParent.getElementsByClassName("nav-form-button");
     let formItems = rowParent.getElementsByClassName("form-content");
+    for (let items of navItems)
+        console.log(items);
+    for (let items of formItems)
+        console.log(items);
     for (let items of navItems) {
         items.addEventListener("click", function(event) {
             event.preventDefault();
+            console.log("click");
             switchButtons(navItems, formItems, event);
         });
     }
