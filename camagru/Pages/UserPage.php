@@ -146,11 +146,11 @@ class UserPage extends Page {
 
     protected function checkPost($args) {
         if (isset($args['type']) && $args['type'] === "global") {
-            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['username']) || !isset($args['password']) || !isset($args['mail']))
+            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['username']) || !isset($args['old_username']) || !isset($args['password']) || !isset($args['mail']))
                 return false;
             return true;
         } else if (isset($args['type']) && $args['type'] === "password") {
-            if (!isset($args['password']) || !isset($args['new_password']) || !isset($args['repeat']))
+            if (!isset($args['password']) || !isset($args['new_password']) || !isset($args['repeat']) || !isset($args['username']))
                 return false;
             return true;
         }
@@ -163,7 +163,7 @@ class UserPage extends Page {
             $this->redirect("/user/edit");
         }
         if ($args['type'] === "global") {
-            if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
+            if ($this->_controller->getSql()->tryPass($this->_controller->getUser()['old_username'], $args['password'])) {
                 if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail']))) {
                     $this->logout(false, false);
                     if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
