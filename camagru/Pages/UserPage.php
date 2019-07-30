@@ -27,8 +27,12 @@ class UserPage extends Page {
 
     public function edit() {
         if ($this->_controller->isLogged()) {
-            $params = array('content' => 'user/Edit', 'user' => $this->_controller->getUserDetails()['result']);
-            $this->render($params);
+            if (isset($_POST['token']) && isset($_POST['type']) && GeneralController::compareTokens($_POST['token'])) {
+                return $this->editProfile($_POST);
+            } else {
+                $params = array('content' => 'user/Edit', 'user' => $this->_controller->getUserDetails()['result']);
+                $this->render($params);
+            }
         } else {
             $this->redirect("/user");
         }
@@ -120,12 +124,12 @@ class UserPage extends Page {
         $this->render($params);
     }
 
-    public function logout() {
+    public function logout($ask = true, $redirect = true) {
         if ($this->_controller->isLogged()) {
             Session::resetSession();
-            Snackbar::sendSnack("Vous avez été déconnécté avec succès.");
+            if ($ask) Snackbar::sendSnack("Vous avez été déconnécté avec succès.");
         }
-        $this->redirect("/");
+        if ($redirect) $this->redirect("/");
     }
 
     public function profile() {
@@ -138,6 +142,62 @@ class UserPage extends Page {
         }
         $quick_content = $this->quickRender($params);
         return $quick_content;
+    }
+
+    protected function checkPost($args) {
+        if (isset($args['type']) && $args['type'] === "global") {
+            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['username']) || !isset($args['password']) || !isset($args['mail']))
+                return false;
+            return true;
+        } else if (isset($args['type']) && $args['type'] === "password") {
+            if (!isset($args['password']) || !isset($args['new_password']) || !isset($args['repeat']))
+                return false;
+            return true;
+        }
+        return false;
+    }
+
+    public function editProfile($args) {
+        Session::startSession();
+        if (!$this->checkPost($args)) {
+            $this->redirect("/user/edit");
+        }
+        if ($args['type'] === "global") {
+            if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
+                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail']))) {
+                    $this->logout(false, false);
+                    if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
+                        $_SESSION['user'] = serialize(array("id" => $this->_controller->getUserId($args['username'], true), "username" => $args['username'], "status" => UserStatus::connected));
+                    }
+                    Snackbar::sendSnack("Profile édité avec succès.");
+                } else {
+                    Snackbar::sendSnack("Une erreur est survenue.");
+                }
+            } else {
+                Snackbar::sendSnack("Mauvais mot de passe");
+            }
+        } else if ($args['type'] === "password") {
+            if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
+                if ($args['new_password'] === $args['repeat']) {
+                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
+                        if ($this->_controller->getSql()->editPwd($_POST['password'], $_POST['reset_token'])) {
+                            Snackbar::sendSnack("Votre mot de passe à été modifié.");
+                            Snackbar::sendSnack("Vous pouvez vous connecter.");
+                        } else {
+                            Snackbar::sendSnack("Une erreur est survenue.");
+                        }
+                    } else {
+                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
+                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+                    }
+                } else {
+                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
+                }
+            } else {
+                Snackbar::sendSnack("Mauvais mot de passe");
+            }
+        }
+        $this->redirect("/user/edit");
     }
 
 }
