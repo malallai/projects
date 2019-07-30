@@ -24,6 +24,7 @@ function switchButtons(navItems, formItems, event) {
         navs.classList.remove("active");
     }
     let navId = event.srcElement;
+    console.log(navId);
     let formId = document.getElementById(navId.id.split(' ')[1]);
     navId.classList.add("active");
     formId.classList.add("active");
