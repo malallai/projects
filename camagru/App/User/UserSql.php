@@ -55,6 +55,7 @@ class UserSql extends Sql {
                 "</br></br>".
                 "<span style='color:#999'>Si le lien ne fonctionne pas voici le lien direct: $link</span>"
             );
+            Snackbar::sendSnack("test");
             self::run("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirm_key));
             Snackbar::sendSnack("Account successfuly created.");
             Snackbar::sendSnack("Please confirm your account. Don't forget to checks spams.");
