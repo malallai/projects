@@ -12,6 +12,7 @@ function editProfileReady() {
 function editProfile(type, form) {
     event.preventDefault();
     console.log(event);
+    console.log(form);
     let data;
     let url = '/user/edit';
     let token = document.getElementsByClassName("token")[0];
