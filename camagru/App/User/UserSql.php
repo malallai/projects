@@ -180,6 +180,11 @@ class UserSql extends Sql {
                 }
             }
             self::run("UPDATE users SET first_name = ?, last_name = ?, email = ?, username = ? WHERE id = ?", array($first, $last, $mail, $username, $id));
+            Mail::newMail($mail, "Édition du profile",
+                "Votres profile viens d'être modifié.".
+                "</br></br>".
+                "Merci de ta confiance et à bientôt sur Camagru."
+            );
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());

@@ -196,6 +196,7 @@ class UserPage extends Page {
                 Snackbar::sendSnack("Mauvais mot de passe");
             }
         }
+
         $this->redirect("/user/edit");
     }
 
