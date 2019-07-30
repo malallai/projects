@@ -22,8 +22,8 @@
             <h2 class="title">Veuillez vous identifier</h2>
             <form method="POST" action="/user/login">
                 <input type="hidden" name="token" value="<?= $token ?>">
-                <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required="" autofocus="">
-                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="">
+                <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input class="button black" name="login" value="Connexion" type="submit">
             </form>
         </div>
@@ -33,14 +33,14 @@
             <form method="POST" action="/user/register">
                 <input type="hidden" name="token" value="<?= $token ?>">
                 <div class="inline-flex">
-                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Nom"  required="">
-                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Prénom" autofocus="" required="">
+                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Nom"  required>
+                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Prénom" required>
                 </div>
-                <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required="">
-                <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required="">
+                <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required>
                 <div class="inline-flex">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe *" required="">
-                    <input type="password" name="password_repeat" id="password_repeat" class="form-control" placeholder="Répéter mot de passe *" required="">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe *" required>
+                    <input type="password" name="password_repeat" id="password_repeat" class="form-control" placeholder="Répéter mot de passe *" required>
                 </div>
                 <input class="button black" name="register" value="Inscription" type="submit">
             </form>
@@ -53,7 +53,7 @@
             <h2 class="title">Veuillez indiquer votre adresse</h2>
             <form method="POST" action="/user/resetpw_ask">
                 <input type="hidden" name="token" value="<?= $token ?>">
-                <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required="" autofocus="">
+                <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required>
                 <input class="button black" name="reset" value="Réinitialiser" type="submit">
             </form>
         </div>

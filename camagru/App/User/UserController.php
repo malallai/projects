@@ -48,4 +48,10 @@ class UserController extends Controller {
             return null;
         }
     }
+
+    public function getUserDetails() {
+        if ($this->isLogged()) {
+            return $this->getSql()->getUserDetails($this->getSessionId());
+        } else return null;
+    }
 }
