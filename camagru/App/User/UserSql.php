@@ -227,7 +227,7 @@ class UserSql extends Sql {
 
     public function getUserDetails($id) {
         try {
-            $user = self::run("SELECT users.username, users.first_name, users.last_name, users.email FROM users WHERE id = ?", array($id));
+            $user = self::run("SELECT users.username, users.first_name, users.last_name, users.email, users.notifications FROM users WHERE id = ?", array($id));
             return $user;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
