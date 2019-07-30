@@ -17,9 +17,10 @@ function formReady() {
             if (checkbox.checked) {
                 event.srcElement.className = "fas fa-toggle-off red";
                 checkbox.checked = false;
+                checkbox.value = false;
             } else {
                 event.srcElement.className = "fas fa-toggle-on green";
-                checkbox.checked = true;
+                checkbox.value = true;
             }
         });
     }
