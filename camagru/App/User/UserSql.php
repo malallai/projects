@@ -185,7 +185,7 @@ class UserSql extends Sql {
                 "</br></br>".
                 "Merci de ta confiance et à bientôt sur Camagru."
             );
-            Snackbar::sendSnack($notifications);
+            Snackbar::sendSnack("".$notifications);
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
