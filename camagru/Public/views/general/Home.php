@@ -51,7 +51,7 @@
                             <div class="add-comment">
                                 <div class="row">
                                     <form class="new-comment" id="<?=$post['id']?>">
-                                        <input id="input <?=$post['id']?>" class="comment-content" placeholder="test" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input id="input <?=$post['id']?>" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
                                         <input hidden name="submit" type="submit" value="submit">
                                     </form>
                                     <a href="#" onclick="newComment()" class="submit">
