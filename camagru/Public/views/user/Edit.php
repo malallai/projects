@@ -34,6 +34,7 @@
             <form method="POST" action="/user/edit">
                 <input type="hidden" name="token" value="<?= $token ?>">
                 <input type="hidden" name="type" value="password">
+                <input type="hidden" name="username" value="<?=$params['user']['username']?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required>
                 <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required>
