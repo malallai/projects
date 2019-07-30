@@ -133,22 +133,24 @@ class UserSql extends Sql {
         }
     }
 
-    public function editPwd($password, $token) {
+    public function editPwd($password, $id, $token = null) {
         $password = hash('whirlpool', $password);
         try {
-            $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
-            if (!isset($result) || empty($result)) {
-                return false;
+            if ($token !== null) {
+                $result = self::run("SELECT user_id FROM pwd_reset WHERE token = ?", array($token))["result"];
+                $id = $result['user_id'];
+                if (!isset($result) || empty($result)) {
+                    return false;
+                }
+                self::run("DELETE FROM pwd_reset WHERE token LIKE ? ESCAPE '#'", array($token));
             }
-            $result = self::run("SELECT id, email FROM users WHERE id = ?", array($result['user_id']))["result"];
-            $link = "https://camagru.malallai.fr/user/resetpw/".$token;
+            $result = self::run("SELECT id, email FROM users WHERE id = ?", array($id))["result"];
             Mail::newMail($result['email'], "Changement de mot de passe",
                 "Ton mot de passe viens d'être modifié.".
                 "</br></br>".
                 "Merci de ta confiance et à bientôt sur Camagru."
             );
             self::run("UPDATE users SET password = ? WHERE id = ?", array($password, $result['id']));
-            self::run("DELETE FROM pwd_reset WHERE token LIKE ? ESCAPE '#'", array($token));
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
