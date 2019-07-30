@@ -27,7 +27,7 @@ class UserPage extends Page {
 
     public function edit() {
         if ($this->_controller->isLogged()) {
-            $params = array('content' => 'user/Edit');
+            $params = array('content' => 'user/Edit', 'user' => $this->_controller->getUserDetails()['result']);
             $this->render($params);
         } else {
             $this->redirect("/user");

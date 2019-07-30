@@ -17,17 +17,22 @@
         <div id="global-content" class="form-content content content-global active">
             <h2 class="title">Modifier vos informations</h2>
             <form>
-                <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" autofocus="">
-                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="">
+                <div class="inline-flex">
+                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="<?=$params['user']['last_name']?>" autofocus>
+                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="<?=$params['user']['first_name']?>">
+                </div>
+                <input type="email" name="mail" id="mail" class="form-control" placeholder="<?=$params['user']['email']?>">
+                <input type="text" name="username" id="username" class="form-control" placeholder="<?=$params['user']['username']?>" disabled>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input class="button black" name="login" value="Mettres à jour" type="submit">
             </form>
         </div>
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">
             <h2 class="title">Édition du mot de passe</h2>
             <form>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="" autofocus="">
-                <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required="" autofocus="">
-                <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required="">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
+                <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required>
+                <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required>
                 <input class="button black" name="update" value="Mettres à jour" type="submit">
             </form>
             <div class="infos">
