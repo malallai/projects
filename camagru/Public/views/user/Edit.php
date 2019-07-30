@@ -4,8 +4,8 @@
         <div class="nav-content">
             <div class="nav">
                 <a id="edit-button" class="active nav-big">
-                    <a id="edit-button" class="active nav-big">Édition du profile</a>
-                    <a id="edit-small-button" class="active nav-small"><i class="fas fa-pen"></i></a>
+                    <span class="text active">Édition du profile</span>
+                    <span class="icon"><i class="fas fa-pen"></i></span>
                 </a>
             </div>
         </div>
