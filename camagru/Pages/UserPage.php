@@ -164,7 +164,7 @@ class UserPage extends Page {
         }
         if ($args['type'] === "global") {
             if ($this->_controller->getSql()->tryPass($args['old_username'], $args['password'])) {
-                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail'], $args['notifications']))) {
+                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail'], ($args['notifications'] === "true" ? 1 : 0)))) {
                     $this->logout(false, false);
                     if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
                         $_SESSION['user'] = serialize(array("id" => $this->_controller->getUserId($args['username'], true), "username" => $args['username'], "status" => UserStatus::connected));
