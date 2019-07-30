@@ -10,11 +10,11 @@
                 </a>
                 <a id="register-button" onclick="register_click()" class="">
                     <span class="text active">Inscription</span>
-                    <span class="icon"><i class="fas fa-pen"></i></span>
+                    <span class="icon"><i class="fas fa-edit"></i></span>
                 </a>
                 <a id="reset-button" onclick="reset_click()" class="">
                     <span class="text active">Réinitialiser</span>
-                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <span class="icon"><i class="fas fa-sync-alt"></i></span>
                 </a>
             </div>
         </div>
