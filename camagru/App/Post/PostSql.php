@@ -2,6 +2,7 @@
 
 namespace App\Post;
 
+use Core\Mail;
 use Core\Snackbar;
 use Core\Sql;
 use Exceptions\SqlException;
@@ -44,9 +45,29 @@ class PostSql extends Sql {
         }
     }
 
+    public function getPostAuthor($post) {
+        try {
+            $result = self::run("SELECT posts.user_id, users.email, users.notifications FROM posts INNER JOIN users ON users.id = posts.user_id WHERE posts.id = ?", array($post));
+            return ($result['result'][0]);
+        } catch (SqlException $e) {
+            Snackbar::sendSnack($e->getMessage());
+            return false;
+        }
+    }
+
     public function newComment($post, $message, $user) {
         try {
             $result = self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user['id'], $message));
+            $author = $this->getPostAuthor($post);
+            if ($author['notifications']) {
+                Mail::newMail($author['email'], "Nouveau commentaire",
+                    "Un commentaire à été ajouté sur l'une de vos images.".
+                    "</br></br>".
+                    "".$user['username']." : ".$message.
+                    "</br></br>".
+                    "Merci de ta confiance et à bientôt sur Camagru."
+                );
+            }
             return array("status" => "ok", "message" => $message, "author" => $user['username']);
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());

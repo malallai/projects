@@ -233,7 +233,6 @@ class UserSql extends Sql {
             Snackbar::sendSnack($e->getMessage());
             return false;
         }
-
     }
 
 }
