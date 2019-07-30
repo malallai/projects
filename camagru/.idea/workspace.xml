@@ -66,16 +66,16 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
-                  <caret line="32" column="175" selection-start-line="32" selection-start-column="175" selection-end-line="32" selection-end-column="175" />
+                <state relative-caret-position="287">
+                  <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
@@ -121,8 +121,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="187" column="35" selection-start-line="187" selection-start-column="35" selection-end-line="187" selection-end-column="35" />
+                <state relative-caret-position="253">
+                  <caret line="183" column="69" selection-start-line="183" selection-start-column="69" selection-end-line="183" selection-end-column="69" />
                   <folding>
                     <element signature="e#28#41#0#PHP" expanded="true" />
                   </folding>
@@ -445,12 +445,12 @@
       <workItem from="1564329989379" duration="738000" />
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
-      <workItem from="1564493681123" duration="6280000" />
+      <workItem from="1564493681123" duration="6333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187479000" />
+    <option name="totallyTimeSpent" value="187532000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="32" column="175" selection-start-line="32" selection-start-column="175" selection-end-line="32" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -873,10 +866,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/user/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="187" column="35" selection-start-line="187" selection-start-column="35" selection-end-line="187" selection-end-column="35" />
+        <state relative-caret-position="253">
+          <caret line="183" column="69" selection-start-line="183" selection-start-column="69" selection-end-line="183" selection-end-column="69" />
           <folding>
             <element signature="e#28#41#0#PHP" expanded="true" />
           </folding>
