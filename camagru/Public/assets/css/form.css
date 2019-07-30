@@ -122,8 +122,12 @@
     justify-content: space-between;
 }
 
-.main-content .inline-flex * {
+.main-content .inline-flex input {
     flex-basis: 49%;
+}
+
+.main-content .select-box {
+    margin: .25rem 0;
 }
 
 .main-content .blue:not(.disabled):hover {
