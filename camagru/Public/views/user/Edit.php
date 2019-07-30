@@ -1,6 +1,5 @@
 <link href="/Public/assets/css/form.css" rel="stylesheet">
 <script src='/Public/assets/js/form.js'></script>
-<script src='/Public/assets/js/editprofile.js'></script>
 <div id="form-row" class="row">
     <div class="row-content">
         <div class="nav-content">
