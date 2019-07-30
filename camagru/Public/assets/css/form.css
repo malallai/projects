@@ -130,6 +130,14 @@
     margin: .5rem 0;
 }
 
+.main-content .select-box .green {
+    color: limegreen;
+}
+
+.main-content .select-box .red {
+    color: red;
+}
+
 .main-content .blue:not(.disabled):hover {
     background-color: rgba(95, 172, 255, 0.25);
 }

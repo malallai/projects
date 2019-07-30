@@ -30,7 +30,7 @@
                 <div class="inline-flex">
                     <div class="select-box">
                         <span>Notifications</span>
-                        <a href="#"><i class="fas fa-toggle-on"></i></a>
+                        <a href="#" class="link"><i class="fas fa-toggle-on green"></i></a>
                         <input type="checkbox" name="notifications" id="notifications" required hidden>
                     </div>
                 </div>
