@@ -182,7 +182,6 @@ class UserPage extends Page {
                     if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
                         if ($this->_controller->getSql()->editPwd($_POST['password'], $this->_controller->getSessionId())) {
                             Snackbar::sendSnack("Votre mot de passe à été modifié.");
-                            Snackbar::sendSnack("Vous pouvez vous connecter.");
                         } else {
                             Snackbar::sendSnack("Une erreur est survenue.");
                         }
