@@ -1,4 +1,4 @@
-.row {
+.main-content .row {
     display: flex;
     padding: 0 1rem;
     max-width: 500px;
@@ -8,60 +8,60 @@
     flex-direction: column;
 }
 
-.row-content {
+.main-content .row-content {
     border: 1px solid rgba(0,0,0,.0975);
     border-radius: 2px;
 }
 
-.content input, .content .button, .content a, .content p, .content .title {
+.main-content .content input, .main-content .content .button, .main-content .content a, .main-content .content p, .main-content .content .title {
     transition: margin 0.2s ease;
     transition-delay:  0.1s;
 }
 
-.nav {
+.main-content .nav {
     display: flex;
     transition: margin 0.2s ease;
     transition-delay:  0.05s;
 }
 
-.nav a:nth-child(1) {
+.main-content .nav a:nth-child(1) {
     border-radius: 2px 0 0 0;
 }
 
-.nav a:nth-child(3) {
+.main-content .nav a:nth-child(3) {
     border-radius: 0 2px 0 0;
 }
 
-.nav a {
+.main-content .nav a {
     text-decoration: none;
     flex: 1;
     padding: 15px 30px;
     text-align: center;
 }
 
-.nav a {
+.main-content .nav a {
     background-color: #f5f5f5;
 }
 
-.nav a.active {
+.main-content .nav a.active {
     background-color: #fff;
 }
 
-.nav a:not(.active):hover {
+.main-content .nav a:not(.active):hover {
     background-color: #e8e8e8;
     cursor: pointer;
 }
 
-.nav-content {
+.main-content .nav-content {
     padding: 0 !important;
 }
 
-.nav .icon {
+.main-content .nav .icon {
     display: none;
     font-size: 10px;
 }
 
-.content {
+.main-content .content {
     transition: margin 0.2s ease;
     transition-delay:  0.05s;
     background-color: #fff;
@@ -72,25 +72,25 @@
     padding: 1rem;
 }
 
-.content:not(.active) {
+.main-content .content:not(.active) {
     display: none;
 }
 
-.content .title {
+.main-content .content .title {
     text-align: center;
     text-transform: uppercase;
 }
 
-.content .infos {
+.main-content .content .infos {
     color: #999;
 }
 
-form {
+.main-content form {
     display: flex;
     flex-direction: column;
 }
 
-input, .button {
+.main-content input, .main-content .button {
     text-align: center;
     font-size: inherit;
     padding: .5rem 0;
@@ -104,70 +104,70 @@ input, .button {
     border-radius: .25rem;
 }
 
-input:focus, .button:focus {
+.main-content input:focus, .button:focus {
     border: 1px solid rgba(0,0,0,.275);
 }
 
-.button {
+.main-content .button {
     text-decoration: none;
 }
 
-.button:hover {
+.main-content .button:hover {
     cursor: pointer;
 }
 
-.inline-flex {
+.main-content .inline-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.inline-flex * {
+.main-content .inline-flex * {
     flex-basis: 49%;
 }
 
-.blue:not(.disabled):hover {
+.main-content .blue:not(.disabled):hover {
     background-color: rgba(95, 172, 255, 0.25);
 }
 
-.white:not(.disabled):hover {
+.main-content .white:not(.disabled):hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.black:not(.disabled):hover {
+.main-content .black:not(.disabled):hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.green:not(.disabled):hover {
+.main-content .green:not(.disabled):hover {
     background-color: rgba(76, 172, 80, 0.25);
 }
 
 @media only screen and (max-width: 450px) {
-    .nav .icon {
+    .main-content .nav .icon {
         display: block;
     }
 
-    .nav .text {
+    .main-content .nav .text {
         display: none;
     }
 
-    .inline-flex {
+    .main-content .inline-flex {
         flex-direction: column;
     }
 
-    .inline-flex * {
+    .main-content .inline-flex * {
         flex: 1;
     }
 
-    input, a, p {
+    .main-content input, .main-content a, .main-content p {
         font-size: 12px;
     }
 
-    .title {
+    .main-content .title {
         font-size: 16px;
     }
 
-    .row {
+    .main-content .row {
         padding: 0 .25rem;
     }
 }

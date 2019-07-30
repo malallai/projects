@@ -1,4 +1,4 @@
-<link href="/Public/assets/css/login.css" rel="stylesheet">
+<link href="/Public/assets/css/form.css" rel="stylesheet">
 <script src='/Public/assets/js/form.js'></script>
 <div id="form-row" class="row">
     <div class="row-content">
