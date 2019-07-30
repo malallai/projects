@@ -19,6 +19,7 @@
             <form method="POST" action="/user/edit">
                 <input type="hidden" name="token" value="<?= $token ?>">
                 <input type="hidden" name="type" value="global">
+                <input type="hidden" name="old_username" value="<?=$params['user']['username']?>">
                 <div class="inline-flex">
                     <input type="text" name="last_name" id="last_name" class="form-control" value="<?=$params['user']['last_name']?>" autofocus>
                     <input type="text" name="first_name" id="first_name" class="form-control" value="<?=$params['user']['first_name']?>">
