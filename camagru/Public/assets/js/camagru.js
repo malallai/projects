@@ -9,6 +9,7 @@ window.onload = async function() {
     }
 
     if (typeof postLoad === "function") postLoad();
+    if (typeof formReady === "function") formReady();
 };
 
 async function new_snackbar(message) {

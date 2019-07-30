@@ -1,5 +1,5 @@
 <link href="/Public/assets/css/login.css" rel="stylesheet">
-<script src='/Public/assets/js/user_login.js'></script>
+<script src='/Public/assets/js/form.js'></script>
 <div class="row">
     <div class="row-content">
         <div class="nav-content">
