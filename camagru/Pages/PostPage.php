@@ -15,7 +15,7 @@ class PostPage extends Page {
     }
 
     public function security($args) {
-        if (!$this->_controller->getGeneralController()->getUserController()->isLogged()){
+        if (!$this->_controller->getUserController()->isLogged()){
             $this->redirect("/user");
             return false;
         }
@@ -33,7 +33,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        $result = $this->_controller->like($post, $this->_controller->getGeneralController()->getUserController()->getSessionId());
+        $result = $this->_controller->like($post, $this->_controller->getUserController()->getSessionId());
         echo json_encode($result);
         return $result;
     }
@@ -46,7 +46,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        $result = $this->_controller->comment($post, $_POST['comment'], $this->_controller->getGeneralController()->getUserController()->getUserById($this->_controller->getGeneralController()->getUserController()->getSessionId()));
+        $result = $this->_controller->comment($post, $_POST['comment'], $this->_controller->getUserController()->getUserById($this->_controller->getUserController()->getSessionId()));
         echo json_encode($result);
         return $result;
     }
@@ -59,7 +59,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        if ($this->_controller->getPost($post)['result']['user_id'] == $this->_controller->getGeneralController()->getUserController()->getSessionId()) {
+        if ($this->_controller->getPost($post)['result']['user_id'] == $this->_controller->getUserController()->getSessionId()) {
             $result = $this->_controller->delete($post);
             echo json_encode($result);
             return $result;
