@@ -13,7 +13,7 @@ class GeneralController extends Controller {
     public function __construct($page) {
         $this->_sql = new GeneralSql();
         $this->_user_controller = new UserController($page);
-        $this->_post_controller = new PostController($page);
+        $this->_post_controller = new PostController($page, $this->getUserController());
         $this->_page = $page;
     }
 

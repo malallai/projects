@@ -2,19 +2,21 @@
 
 namespace App\Post;
 
-use App\General\GeneralController;
+use App\User\UserController;
 use Core\Controller;
 use Core\Mail;
 use Core\Page;
 
 class PostController extends Controller {
 
-    private $_generalController;
+    private $_userController;
 
-    public function __construct($page) {
+    public function __construct($page, $userController = null) {
         $this->_sql = new PostSql();
-        $this->_generalController = new GeneralController($page);
         $this->_page = $page;
+        if ($userController === null)
+            $this->_userController = new UserController($page);
+        else $this->_userController = $userController;
     }
 
     /**
@@ -25,10 +27,10 @@ class PostController extends Controller {
     }
 
     /**
-     * @return GeneralController
+     * @return UserController
      */
-    public function getGeneralController() {
-        return $this->_generalController;
+    public function getUserController() {
+        return $this->_userController;
     }
 
     /**
