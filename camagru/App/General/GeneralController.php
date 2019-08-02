@@ -5,10 +5,6 @@ use App\Post\PostController;
 use Core\Controller;
 use App\User\UserController;
 use Core\Page;
-use Core\Session;
-use Core\Snackbar;
-use Exceptions\SqlException;
-use PDO;
 
 class GeneralController extends Controller {
     private $_user_controller;

@@ -2,7 +2,6 @@
 
 namespace App\Post;
 
-use Core\Mail;
 use Core\Snackbar;
 use Core\Sql;
 use Exceptions\SqlException;
