@@ -27,7 +27,6 @@ class DevPage extends Page {
 
     public function debug() {
         header("Content-type: text/plain");
-        $this->getController()->getUserController()->auth("malallai", "jwiof");
     }
 
     public function mail() {
