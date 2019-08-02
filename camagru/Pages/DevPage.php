@@ -3,7 +3,6 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
-use Core\Snackbar;
 
 class DevPage extends Page {
 
@@ -11,7 +10,6 @@ class DevPage extends Page {
         parent::__construct($router, $url);
         $this->_controller = new GeneralController($this);
         $this->_template = "templates/general";
-
     }
 
     /**
