@@ -24,7 +24,6 @@ class UserSql extends Sql {
     }
 
     public function checkPasswords($id, $pwd) {
-        $pwd = hash("whirlpool", $pwd);
         try {
             $result = self::run("SELECT password FROM users WHERE id = ?", array($id))["result"];
             if (isset($result) && !empty($result)) {
