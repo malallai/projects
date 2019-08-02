@@ -18,8 +18,10 @@ class Snackbar {
 
     public static function sendSnacks(...$messages) {
         $array = func_get_args();
-        foreach ($array as $message)
+        var_dump($array);
+        foreach ($array as $message) {
             self::sendSnack($message);
+        }
     }
 
     public static function getSnack() {
