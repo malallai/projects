@@ -11,7 +11,7 @@
                 $userName = $details['username'];
                 $likes = $details['likes'];
                 $imagePath = $details['image_path'];
-                $islike = $this->getController()->getPostController()->isLiked($post['id']);?>
+                $islike = $this->getController()->getPostController()->isLiked($post['id'], $this->getController()->getUserController()->getSessionId());?>
                 <div class="post" id="post <?= $post['id'] ?>">
                     <div class="author">
                         <div class="user">

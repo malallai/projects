@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/Montage/MontageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Montage/MontageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/DevPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/DevPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/GeneralPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/GeneralPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/MontagePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/MontagePage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/PostPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/PostPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/UserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/UserPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/general/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -71,15 +65,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/PostPage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -103,11 +88,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="238">
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="27" />
               <folding>
                 <element signature="e#28#56#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="151" selection-start-line="13" selection-start-column="151" selection-end-line="13" selection-end-column="151" />
             </state>
           </provider>
         </entry>
@@ -160,7 +154,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/DevPage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -197,7 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>['result']</find>
       <find>like-</find>
       <find>redirect</find>
       <find>form</find>
@@ -227,6 +220,7 @@
       <find>getResetUser</find>
       <find>UserController</find>
       <find>-&gt;_controller</find>
+      <find>isLiked</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -286,13 +280,13 @@
         <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/App/Post/PostController.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/App/Montage/MontageController.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
         <option value="$PROJECT_DIR$/Pages/PostPage.php" />
         <option value="$PROJECT_DIR$/Pages/MontagePage.php" />
         <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
+        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
       </list>
     </option>
   </component>
@@ -461,7 +455,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202692000" />
+    <option name="totallyTimeSpent" value="202796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,27 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="88" column="33" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="33" />
-          <folding>
-            <element signature="e#28#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-476">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -830,16 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#28#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -854,16 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/PostPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="e#26#40#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,6 +851,43 @@
           <folding>
             <element signature="e#24#58#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+          <folding>
+            <element signature="e#28#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/PostPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#26#40#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="27" />
+          <folding>
+            <element signature="e#28#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/general/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="151" selection-start-line="13" selection-start-column="151" selection-end-line="13" selection-end-column="151" />
         </state>
       </provider>
     </entry>
