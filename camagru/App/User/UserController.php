@@ -76,7 +76,7 @@ class UserController extends Controller {
     public function auth($username, $pwd) {
         $username = Security::convertHtmlEntities($username);
         Snackbar::sendSnack($pwd);
-        $pwd = hash("whirlpool", Security::convertHtmlEntities($pwd));
+        $pwd = hash("whirlpool", $pwd);
         Snackbar::sendSnack($pwd);
         $id = $this->getUserByUsername($username)['id'];
         Snackbar::sendSnacks($id, $username);
