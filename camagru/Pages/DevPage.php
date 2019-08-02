@@ -24,7 +24,7 @@ class DevPage extends Page {
         $posts = $this->getController()->getPosts(1);
         var_dump($this->getController()->getUserController());
         $params = array('content' => 'dev/Test', "posts" => $posts, "users" => $this->getController()->getUserController()->getLastUsers());
-        $this->render($params);
+        $this->quickRender($params);
     }
 
     public function mail() {
