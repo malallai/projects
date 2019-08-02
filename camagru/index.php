@@ -3,7 +3,6 @@
 require 'Core/Autoloader.php';
 Autoloader::register();
 
-use Pages\GeneralPage;
 use Core\Router;
 
 $url = $_GET['url'];
@@ -16,14 +15,14 @@ $router->addRoute("page/(\d*)", "Pages\GeneralPage@index");
 
 $router->addRoute("user", "Pages\UserPage@index");
 
-$router->addRoute("user/login", "Pages\UserPage@login");
-$router->addRoute("user/register", "Pages\UserPage@register");
-$router->addRoute("user/resetpw_ask", "Pages\UserPage@resetAsk");
-$router->addRoute("user/resetpw", "Pages\UserPage@resetpw");
-$router->addRoute("user/resetpw/(.*)", "Pages\UserPage@resetPwdEdit");
+$router->addRoute("user/ask_reset", "Pages\UserPage@askPasswordReset");
 $router->addRoute("user/confirm/(.*)", "Pages\UserPage@confirm");
-$router->addRoute("user/logout", "Pages\UserPage@logout");
 $router->addRoute("user/edit", "Pages\UserPage@edit");
+$router->addRoute("user/login", "Pages\UserPage@login");
+$router->addRoute("user/logout", "Pages\UserPage@logout");
+$router->addRoute("user/register", "Pages\UserPage@register");
+$router->addRoute("user/reset_password", "Pages\UserPage@editPassword");
+$router->addRoute("user/reset_password/(.*)", "Pages\UserPage@resetPassword");
 
 $router->addRoute("post/like", "Pages\PostPage@like");
 $router->addRoute("post/comment", "Pages\PostPage@comment");

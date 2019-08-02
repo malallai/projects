@@ -16,6 +16,12 @@ class Snackbar {
         $_SESSION['snack'] = $snacks;
     }
 
+    public static function sendSnacks(...$messages) {
+        $array = func_get_args();
+        foreach ($array as $message)
+            self::sendSnack($message);
+    }
+
     public static function getSnack() {
         if (self::hasSnack()) {
             return $_SESSION['snack'];

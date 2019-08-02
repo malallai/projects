@@ -1,6 +1,8 @@
 <?php
 
 namespace Core;
+use App\General\GeneralController;
+
 class Page {
 
     /**
@@ -16,7 +18,9 @@ class Page {
         $this->_url = $url;
     }
 
-    public static function redirect($loc) {
+    public static function redirect($loc, ...$snack) {
+        if ($snack)
+            Snackbar::sendSnacks($snack);
         header("Location: " . $loc);
         die();
     }
@@ -40,6 +44,25 @@ class Page {
         require "Public/views/" . $params['content'] . '.php';
         $content = ob_get_clean();
         return $content;
+    }
+
+    public function checkToken($post) {
+        if (isset($post) && isset($post['token']) && GeneralController::compareTokens($post['token']))
+            return true;
+        return false;
+    }
+
+    public function checkPostValues($post, ...$values) {
+        if (!isset($post))
+            return false;
+        else {
+            $array = func_get_args();
+            foreach ($array as $value) {
+                if (!isset($post[$value]) || empty($post[$value]))
+                    return false;
+            }
+        }
+        return true;
     }
 
 }
