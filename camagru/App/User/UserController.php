@@ -75,16 +75,13 @@ class UserController extends Controller {
 
     public function auth($username, $pwd) {
         $username = Security::convertHtmlEntities($username);
-        Snackbar::sendSnack($pwd);
         $pwd = hash("whirlpool", $pwd);
-        Snackbar::sendSnack($pwd);
         $id = $this->getUserByUsername($username)['id'];
-        Snackbar::sendSnacks($id, $username);
         if ($id === null) {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
         }
         if (!$this->getSql()->checkPasswords($id, $pwd)) {
-            return array("status" => false, "message" => "Le mot de passe est incorrect. Blbl");
+            return array("status" => false, "message" => "Le mot de passe est incorrect.");
         }
         if (!$this->getSql()->checkConfirmation($id)) {
             return array("status" => false, "message" => "Merci de confirmer votres mot compte avant de continuer.");
