@@ -57,7 +57,9 @@ class Page {
             return false;
         else {
             $array = func_get_args();
+            var_dump($array);
             foreach ($array as $value) {
+                echo $value;
                 if (!isset($post[''.$value.'']) || empty($post[''.$value.'']))
                     return false;
             }
