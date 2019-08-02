@@ -77,7 +77,7 @@ class UserController extends Controller {
         $username = Security::convertHtmlEntities($username);
         $pwd = hash("whirlpool", $pwd);
         $id = $this->getUserByUsername($username)['id'];
-        Snackbar::sendSnack($id);
+        Snackbar::sendSnacks($id, $username);
         if ($id === null) {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
         }
