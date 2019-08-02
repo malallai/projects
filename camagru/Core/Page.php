@@ -19,8 +19,12 @@ class Page {
     }
 
     public static function redirect($loc, ...$snack) {
-        if ($snack)
-            Snackbar::sendSnacks($snack);
+        if ($snack) {
+            $array = func_get_args();
+            unset($array[0]);
+            foreach ($array as $message)
+                Snackbar::sendSnack($message);
+        }
         header("Location: " . $loc);
         die();
     }
