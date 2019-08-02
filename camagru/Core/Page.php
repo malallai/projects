@@ -58,7 +58,7 @@ class Page {
         else {
             $array = func_get_args();
             foreach ($array as $value) {
-                if (!isset($post[$value]) || empty($post[$value]))
+                if (!isset($post[''.$value.'']) || empty($post[''.$value.'']))
                     return false;
             }
         }
