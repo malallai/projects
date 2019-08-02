@@ -6,7 +6,4 @@
 
 <?php
 
-$controller = new \App\General\GeneralController();
-$result = $controller->getSql()->getComments(10);
-
-var_dump($result);
+var_dump($params);
