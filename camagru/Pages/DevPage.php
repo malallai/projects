@@ -25,9 +25,7 @@ class DevPage extends Page {
     }
 
     public function debug() {
-        header("Content-type: test/plain");
-        $params = array("content" => "dev/Blank");
-        echo $this->quickRender($params);
+        header("Content-type: text/plain");
         $request = $this->getController()->getUserController()->getSql()->getLastUsers(5);
         var_dump($request);
     }
