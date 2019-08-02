@@ -60,6 +60,7 @@ class Page {
             var_dump($array[0]);
             foreach ($array[0] as $value) {
                 echo $value;
+                echo $post[$value.''];
                 if (!isset($post[''.$value.'']) || empty($post[''.$value.'']))
                     return false;
             }
