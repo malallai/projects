@@ -23,7 +23,7 @@ class DevPage extends Page {
         header("Content-type: text/plain");
         $posts = $this->getController()->getPosts(1);
         $params = array('content' => 'dev/Test', "posts" => $posts, "users" => $this->getController()->getUserController()->getLastUsers());
-        $this->quickRender($params);
+        echo $this->quickRender($params);
     }
 
     public function mail() {
