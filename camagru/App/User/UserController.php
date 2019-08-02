@@ -85,7 +85,7 @@ class UserController extends Controller {
             return array("status" => false, "message" => "Le mot de passe est incorrect. Blbl");
         }
         if (!$this->getSql()->checkConfirmation($id)) {
-            return array("status" => false, "message" => "Merci de confirmer votres mot de passe avant de continuer.");
+            return array("status" => false, "message" => "Merci de confirmer votres mot compte avant de continuer.");
         }
         $_SESSION['user'] = serialize(array("id" => $id, "username" => $username, "status" => UserStatus::connected));
         return array("status" => true, "message" => "Authentification réussi.");
