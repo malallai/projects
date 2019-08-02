@@ -68,6 +68,10 @@ class UserController extends Controller {
         return $this->getSql()->getLastUsers(5)['result'];
     }
 
+    public function getUserHomeDetails($userId) {
+        return $this->getSql()->getUserHomeDetails($userId);
+    }
+
     public function auth($username, $pwd) {
         $username = Security::convertHtmlEntities($username);
         $pwd = hash("whirlpool", $pwd);
