@@ -142,8 +142,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/Page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+            <state relative-caret-position="437">
+              <caret line="63" column="69" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -443,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205126000" />
+    <option name="totallyTimeSpent" value="205154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -868,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="437">
+          <caret line="63" column="69" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
         </state>
       </provider>
     </entry>
