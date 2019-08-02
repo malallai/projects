@@ -29,7 +29,7 @@ class UserSql extends Sql {
             $result = self::run("SELECT password FROM users WHERE id = ?", array($id))["result"];
             if (isset($result) && !empty($result)) {
                 if ($result['password'] === $pwd)
-                    return false;
+                    return true;
             }
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
