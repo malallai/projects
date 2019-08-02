@@ -54,6 +54,14 @@ class PostController extends Controller {
         return $this->getSql()->like($post, $user);
     }
 
+    public function getPostsCount() {
+        return $this->getSql()->getPostsCount();
+    }
+
+    public function getLimitPostList($start, $limit) {
+        return $this->getSql()->getLimitPostList($start, $limit);
+    }
+
     public function comment($post, $message, $user) {
         if ($this->getSql()->comment($post, $message, $user['id'])) {
             $author = $this->getSql()->getPostAuthor($post);
