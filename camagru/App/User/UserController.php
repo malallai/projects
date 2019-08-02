@@ -69,7 +69,7 @@ class UserController extends Controller {
     }
 
     public function getUserHomeDetails($userId) {
-        return $this->getSql()->getUserHomeDetails($userId);
+        return $this->getSql()->getUserHomeDetails($userId)['result'];
     }
 
     public function auth($username, $pwd) {
