@@ -3,6 +3,7 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
+use Core\Snackbar;
 
 class DevPage extends Page {
 
@@ -26,8 +27,7 @@ class DevPage extends Page {
 
     public function debug() {
         header("Content-type: text/plain");
-        $test = array("a" => "va", "b" => "vb");
-        $this->checkPostValues($test, "a", "b");
+        Snackbar::sendSnacks("Test1", "test2");
     }
 
     public function mail() {
