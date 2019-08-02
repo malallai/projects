@@ -22,8 +22,8 @@ class DevPage extends Page {
     }
 
     public function index() {
-        $posts = $this->getController()->getSql()->getPosts(1);
-        $params = array('content' => 'dev/Test', "posts" => $posts);
+        $posts = $this->getController()->getPosts(1);
+        $params = array('content' => 'dev/Test', "posts" => $posts, "users" => $this->getController()->getUserController()->getLastUsers());
         $this->render($params);
     }
 
