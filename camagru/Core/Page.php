@@ -57,8 +57,8 @@ class Page {
             return false;
         else {
             $array = func_get_args();
-            var_dump($array[0]);
-            foreach ($array[0] as $key => $value) {
+            unset($array[0]);
+            foreach ($array as $key => $value) {
                 if (!isset($post[''.$key]) || empty($post[''.$key]))
                     return false;
             }
