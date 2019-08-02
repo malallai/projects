@@ -28,14 +28,14 @@ class UserSql extends Sql {
         try {
             $result = self::run("SELECT password FROM users WHERE id = ?", array($id))["result"];
             if (isset($result) && !empty($result)) {
-                if ($result['password'] !== $pwd)
+                if ($result['password'] === $pwd)
                     return false;
             }
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
         }
-        return true;
+        return false;
     }
 
     public function userExist($username, $mail) {

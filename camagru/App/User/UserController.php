@@ -7,6 +7,7 @@ use Core\Mail;
 use Core\Page;
 use Core\Security;
 use Core\Session;
+use Core\Snackbar;
 
 class UserController extends Controller {
 
@@ -76,6 +77,7 @@ class UserController extends Controller {
         $username = Security::convertHtmlEntities($username);
         $pwd = hash("whirlpool", $pwd);
         $id = $this->getUserByUsername($username)['id'];
+        Snackbar::sendSnack($id);
         if ($id === null) {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
         }
