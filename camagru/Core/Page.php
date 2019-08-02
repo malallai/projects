@@ -47,7 +47,7 @@ class Page {
     }
 
     public function checkToken($post) {
-        if (isset($post) && isset($post['token']) && GeneralController::compareTokens($post['token']))
+        if (isset($post) && isset($post['token']) && Security::compareTokens($post['token']))
             return true;
         return false;
     }
