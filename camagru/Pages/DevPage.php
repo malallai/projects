@@ -27,7 +27,7 @@ class DevPage extends Page {
 
     public function debug() {
         header("Content-type: text/plain");
-        test("Test1", "test2");
+        $this->test("Test1", "test2");
     }
 
     public function test(...$test){
