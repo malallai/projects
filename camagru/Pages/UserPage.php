@@ -21,107 +21,70 @@ class UserPage extends Page {
             $params = array('content' => 'user/User');
             $this->render($params);
         } else {
-            $this->redirect("/");
+            Page::redirect("/");
         }
+    }
+
+    public function askPasswordReset() {
+        if ($this->checkToken($_POST)) {
+            if ($this->checkPostValues($_POST, "reset", "mail")) {
+                $result = $this->_controller->askReset($_POST['mail']);
+                Page::redirect("/user", $result['message']);
+            }
+        }
+        Page::redirect("/user");
+    }
+
+    public function confirm() {
+        $result = $this->_controller->confirmAccount($this->_url);
+        Page::redirect("/user", $result['message']);
     }
 
     public function edit() {
         if ($this->_controller->isLogged()) {
-            if (isset($_POST['token']) && isset($_POST['type']) && GeneralController::compareTokens($_POST['token'])) {
-                return $this->editProfile($_POST);
+            if ($this->checkPostValues($_POST, "update", "type")) {
+                $this->editProfile($_POST);
             } else {
                 $params = array('content' => 'user/Edit', 'user' => $this->_controller->getUserDetails()['result']);
                 $this->render($params);
             }
         } else {
-            $this->redirect("/user");
+            Page::redirect("/user", "Merci de vous connecter.");
         }
+    }
+
+    public function editProfile($post) {
+        if (!$this->_controller->isLogged()) {
+            if ($this->checkToken($post)) {
+                if ($this->checkPostValues($post, "type")) {
+                    if ($post['type'] === "global") {
+                        if ($this->checkPostValues($post, "old_username", "password", "username", "first_name", "last_name", "mail", "notifications")) {
+                            $result = $this->_controller->editGlobalProfile($post['old_username'], $post['username'], $post['mail'], $post['first_name'], $post['last_name'], $post['notifications'], $post['password']);
+                            Page::redirect("/user/edit", $result['message']);
+                        }
+                    } else if ($post['type'] === "password") {
+                        if ($this->checkPostValues($post, "username", "password", "new_password", "repeat")) {
+                            $result = $this->_controller->editPasswordProfile($post['username'], $post['password'], $post['new_password'], $post['repeat']);
+                            Page::redirect("/user/edit", $result['message']);
+                        }
+                    }
+                }
+            }
+            Page::redirect("/user/edit");
+        } else Page::redirect("/user", "Merci de vous connecter.");
     }
 
     public function login() {
-        if (isset($_POST) && !empty($_POST) && isset($_POST['login']) && !empty($_POST['login'])) {
-            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
-                if ($this->_controller->getSql()->auth($_POST['username'], $_POST['password'])) {
-                    $_SESSION['user'] = serialize(array("id" => $this->_controller->getUserId($_POST['username'], true), "username" => $_POST['username'], "status" => UserStatus::connected));
-                    Snackbar::sendSnack("Connexion réussi.");
-                    $this->redirect("/");
+        if (!$this->_controller->isLogged()) {
+            if ($this->checkToken($_POST)) {
+                if ($this->checkPostValues($_POST, "login")) {
+                    if (($result = $this->_controller->auth($_POST['username'], $_POST['password']))['status'] === true) {
+                        Page::redirect("/", $result['message']);
+                    } else Page::redirect("/user", $result['message']);
                 }
             }
-        }
-
-        $this->redirect("/user");
-    }
-
-    public function register() {
-        if (isset($_POST) && !empty($_POST) && isset($_POST['register']) && !empty($_POST['register'])) {
-            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
-                if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
-                        $this->_controller->getSql()->register($_POST['username'], $_POST['mail'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
-                        $this->redirect("/user");
-                    } else {
-                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
-                    }
-                } else {
-                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
-                }
-            }
-        }
-        $this->redirect("/user");
-    }
-
-    public function confirm() {
-        if ($this->_controller->getSql()->confirm($this->_url)) {
-            Snackbar::sendSnack("Compte confirmé avec succes.");
-            Snackbar::sendSnack("Vous pouvez désormais vous connecter.");
-        } else {
-            Snackbar::sendSnack("Token de confirmation inconnue.");
-        }
-        $this->redirect("/user");
-    }
-
-    public function resetAsk() {
-        if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
-                $this->_controller->getSql()->sendReset($_POST['mail']);
-                Snackbar::sendSnack("Un email vous a été envoyé sur l'adresse indiqué est correct.");
-                Snackbar::sendSnack("Vérifiez vos spam.");
-                $this->redirect("/user");
-            }
-        }
-    }
-
-    public function resetpw() {
-        if (isset($_POST) && !empty($_POST) && isset($_POST['reset']) && !empty($_POST['reset'])) {
-            if (isset($_POST['token']) && GeneralController::compareTokens($_POST['token'])) {
-                if ($_POST['password'] === $_POST['password_repeat']) {
-                    if ($this->_controller->getSql()->checkPwd($_POST['password'])) {
-                        if ($this->_controller->getSql()->editPwd($_POST['password'], 0, $_POST['reset_token'])) {
-                            Snackbar::sendSnack("Votre mot de passe à été modifié.");
-                            Snackbar::sendSnack("Vous pouvez vous connecter.");
-                        } else {
-                            Snackbar::sendSnack("Une erreur est survenue.");
-                            $this->redirect("/user/resetpw/".$_POST['reset_token']);
-                        }
-                    } else {
-                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
-                        $this->redirect("/user/resetpw/".$_POST['reset_token']);
-                    }
-                } else {
-                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
-                    $this->redirect("/user/resetpw/".$_POST['reset_token']);
-                }
-                $this->redirect("/user");
-            }
-        }
-        $this->redirect("/user");
-    }
-
-    public function resetPwdEdit() {
-        $params = array('content' => 'user/PwdReset');
-        $this->render($params);
+        } else Page::redirect("/");
+        Page::redirect("/user");
     }
 
     public function logout($ask = true, $redirect = true) {
@@ -129,75 +92,48 @@ class UserPage extends Page {
             Session::resetSession();
             if ($ask) Snackbar::sendSnack("Vous avez été déconnécté avec succès.");
         }
-        if ($redirect) $this->redirect("/");
+        if ($redirect) Page::redirect("/");
+    }
+
+    public function register() {
+        if (!$this->_controller->isLogged()) {
+            if ($this->checkToken($_POST)) {
+                if ($this->checkPostValues($_POST, "register", "password", "repeat", "username", "mail")) {
+                   $result = $this->_controller->register($_POST['username'], $_POST['mail'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['repeat']);
+                   Page::redirect("/user", $result['message']);
+                }
+            }
+        }
+        Page::redirect("/user");
+    }
+
+    public function resetPassword() {
+        if (!$this->_controller->isLogged()) {
+            if ($this->checkToken($_POST)) {
+                if ($this->checkPostValues($_POST, "password", "repeat", "reset_token")) {
+                    $result = $this->_controller->resetPassword($_POST['password'], $_POST['repeat'], $_POST['reset_token']);
+                    Page::redirect(isset($result['redirect']) ? $result['redirect'] : "/user", $result['message']);
+                }
+            }
+        }
+        Page::redirect("/user");
+    }
+
+    public function editPassword() {
+        $params = array('content' => 'user/PwdReset');
+        $this->render($params);
     }
 
     public function profile() {
-        $params = array();
+        $params = null;
         if ($this->_controller->isLogged()) {
-            $details = $this->_controller->getSql()->getUser($this->_controller->getSessionId());
+            $details = $this->_controller->getUserById($this->_controller->getSessionId());
             $params = array('content' => 'aside/Profile', 'details' => $details);
         } else {
             $params = array('content' => 'aside/Login');
         }
         $quick_content = $this->quickRender($params);
         return $quick_content;
-    }
-
-    protected function checkPost($args) {
-        if (isset($args['type']) && $args['type'] === "global") {
-            if (!isset($args['first_name']) || !isset($args['last_name']) || !isset($args['notifications']) || !isset($args['username']) || !isset($args['old_username']) || !isset($args['password']) || !isset($args['mail']))
-                return false;
-            return true;
-        } else if (isset($args['type']) && $args['type'] === "password") {
-            if (!isset($args['password']) || !isset($args['new_password']) || !isset($args['repeat']) || !isset($args['username']))
-                return false;
-            return true;
-        }
-        return false;
-    }
-
-    public function editProfile($args) {
-        Session::startSession();
-        if (!$this->checkPost($args)) {
-            $this->redirect("/user/edit");
-        }
-        if ($args['type'] === "global") {
-            if ($this->_controller->getSql()->tryPass($args['old_username'], $args['password'])) {
-                if (($request = $this->_controller->getSql()->editProfile($this->_controller->getSessionId(), $args['username'], $args['first_name'], $args['last_name'], $args['mail'], ($args['notifications'] === "true" ? 1 : 0)))) {
-                    $this->logout(false, false);
-                    if ($this->_controller->getSql()->auth($args['username'], $args['password'])) {
-                        $_SESSION['user'] = serialize(array("id" => $this->_controller->getUserId($args['username'], true), "username" => $args['username'], "status" => UserStatus::connected));
-                    }
-                    Snackbar::sendSnack("Profile édité avec succès.");
-                } else {
-                    Snackbar::sendSnack("Une erreur est survenue.");
-                }
-            } else {
-                Snackbar::sendSnack("Mauvais mot de passe");
-            }
-        } else if ($args['type'] === "password") {
-            if ($this->_controller->getSql()->tryPass($args['username'], $args['password'])) {
-                if ($args['new_password'] === $args['repeat']) {
-                    if ($this->_controller->getSql()->checkPwd($_POST['new_password'])) {
-                        if ($this->_controller->getSql()->editPwd($_POST['new_password'], $this->_controller->getSessionId())) {
-                            Snackbar::sendSnack("Votre mot de passe à été modifié.");
-                        } else {
-                            Snackbar::sendSnack("Une erreur est survenue.");
-                        }
-                    } else {
-                        Snackbar::sendSnack("Votre mot de passe n'est pas suffisamment sécurisé!");
-                        Snackbar::sendSnack("8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
-                    }
-                } else {
-                    Snackbar::sendSnack("Les mots de passes ne sont pas identique.");
-                }
-            } else {
-                Snackbar::sendSnack("Mauvais mot de passe");
-            }
-        }
-
-        $this->redirect("/user/edit");
     }
 
 }

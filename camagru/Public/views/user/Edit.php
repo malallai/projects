@@ -34,7 +34,7 @@
                         <input type="text" name="notifications" id="input notifications" value="<?=$params['user']['notifications'] ? "true" : "false"?>" hidden required>
                     </div>
                 </div>
-                <input class="button black" name="login" value="Mettres à jour" type="submit">
+                <input class="button black" name="update" value="Mettres à jour" type="submit">
             </form>
         </div>
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">

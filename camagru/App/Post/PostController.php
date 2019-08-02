@@ -5,6 +5,7 @@ namespace App\Post;
 use App\General\GeneralController;
 use Core\Controller;
 use Core\Page;
+use Core\Security;
 
 class PostController extends Controller {
 
@@ -12,7 +13,7 @@ class PostController extends Controller {
 
     public function __construct($page) {
         $this->_sql = new PostSql();
-        $this->_generalController = new GeneralController();
+        $this->_generalController = new GeneralController($page);
         $this->_page = $page;
     }
 
@@ -37,14 +38,16 @@ class PostController extends Controller {
         return $this->_sql;
     }
 
-    public function checkPost($args) {
-        if (!$this->getGeneralController()->getUserController()->isLogged()) {
-            $this->getPage()->redirect("/user");
-            return false;
-        }
-        if (!isset($args['id']) || !isset($args['token']) || !GeneralController::compareTokens($args['token'])
-            || !$this->getSql()->postExist($args['id']))
-            return false;
-        return true;
+    public function postExist($id) {
+        return $this->getSql()->postExist($id);
     }
+
+    public function getPostDetails($postId) {
+        return array("post" => $this->getSql()->getPost($postId)['result'], "comments" => $this->getSql()->getComments($postId)['result']);
+    }
+
+    public function isLiked($postId, $userId) {
+        return $this->getSql()->isLiked($postId, $userId);
+    }
+
 }
