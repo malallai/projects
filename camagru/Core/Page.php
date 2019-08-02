@@ -59,8 +59,6 @@ class Page {
             $array = func_get_args();
             unset($array[0]);
             foreach ($array as $key => $value) {
-                echo $value;
-                echo $post[''.$value];
                 if (!isset($post[''.$value]) || empty($post[''.$value]))
                     return false;
             }
