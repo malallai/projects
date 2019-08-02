@@ -3,11 +3,8 @@
 
 namespace Pages;
 
-use App\General\GeneralController;
 use Core\Page;
 use App\Post\PostController;
-use Core\Security;
-use Core\Snackbar;
 
 class PostPage extends Page {
 
@@ -49,7 +46,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        $result = $this->_controller->newComment($post, $_POST['comment'], $this->_controller->getGeneralController()->getUserController()->getUser());
+        $result = $this->_controller->comment($post, $_POST['comment'], $this->_controller->getGeneralController()->getUserController()->getUserById($this->_controller->getGeneralController()->getUserController()->getSessionId()));
         echo json_encode($result);
         return $result;
     }

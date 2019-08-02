@@ -56,20 +56,10 @@ class PostSql extends Sql {
         }
     }
 
-    public function newComment($post, $message, $user) {
+    public function comment($post, $message, $user) {
         try {
-            $result = self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user['id'], $message));
-            $author = $this->getPostAuthor($post);
-            if ($author['notifications'] && $author['username'] !== $user['username']) {
-                Mail::newMail($author['email'], "Nouveau commentaire",
-                    "Un commentaire à été ajouté sur l'une de vos images.".
-                    "</br></br>".
-                    "".$user['username']." : ".$message.
-                    "</br></br>".
-                    "Merci de ta confiance et à bientôt sur Camagru."
-                );
-            }
-            return array("status" => "ok", "message" => $message, "author" => $user['username']);
+            self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user, $message));
+            return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
@@ -78,7 +68,7 @@ class PostSql extends Sql {
 
     public function delete($post) {
         try {
-            $result = self::run("DELETE FROM posts WHERE id = ?", array($post));
+            self::run("DELETE FROM posts WHERE id = ?", array($post));
             return array("status" => "deleted");
         } catch (SqlException $exception) {
             Snackbar::sendSnack($exception->getMessage());
