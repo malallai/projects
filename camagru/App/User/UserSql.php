@@ -190,7 +190,7 @@ class UserSql extends Sql {
 
     public function getUserHomeDetails($userId) {
         try {
-            $request = self::run("SELECT users.username, count(user_id) AS posts FROM users LEFT JOIN posts AS posts ON posts.user_id = users.id WHERE users.id = ?", array($userId));
+            $request = self::run("SELECT users.username, count(user_id) AS posts FROM users LEFT JOIN posts ON posts.user_id = users.id WHERE users.id = ?", array($userId));
             return $request;
         } catch (SqlException $exception) {
             Snackbar::sendSnack($exception->getMessage());
