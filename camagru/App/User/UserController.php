@@ -82,7 +82,7 @@ class UserController extends Controller {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
         }
         if (!$this->getSql()->checkPasswords($id, $pwd)) {
-            return array("status" => false, "message" => "Le mot de passe est incorrect.");
+            return array("status" => false, "message" => "Le mot de passe est incorrect. Blbl");
         }
         if (!$this->getSql()->checkConfirmation($id)) {
             return array("status" => false, "message" => "Merci de confirmer votres mot de passe avant de continuer.");
