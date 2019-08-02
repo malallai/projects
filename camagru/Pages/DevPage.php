@@ -22,7 +22,6 @@ class DevPage extends Page {
     public function index() {
         header("Content-type: text/plain");
         $posts = $this->getController()->getPosts(1);
-        var_dump($this->getController()->getUserController());
         $params = array('content' => 'dev/Test', "posts" => $posts, "users" => $this->getController()->getUserController()->getLastUsers());
         $this->quickRender($params);
     }
