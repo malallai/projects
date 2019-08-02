@@ -27,7 +27,11 @@ class DevPage extends Page {
 
     public function debug() {
         header("Content-type: text/plain");
-        Snackbar::sendSnacks("Test1", "test2");
+        test("Test1", "test2");
+    }
+
+    public function test(...$test){
+        Snackbar::sendSnacks($test);
     }
 
     public function mail() {
