@@ -27,6 +27,10 @@ class DevPage extends Page {
     public function debug() {
         header("Content-type: text/plain");
         $request = $this->getController()->getUserController()->getSql()->getLastUsers(5);
+        foreach ($request['result'] as $user) {
+            $details = $this->getController()->getUserController()->getUserHomeDetails($user['id']);
+            var_dump($details);
+        }
         var_dump($request);
     }
 
