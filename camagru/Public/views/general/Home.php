@@ -86,7 +86,7 @@
             <div class="users">
                 <?php
                 foreach ($params['users'] as $user) {
-                    $details = $this->getUserDetails($user['id']);
+                    $details = $this->getController()->getUserController()->getUserById($user['id']);
                     $userName = $details['username'];
                     $posts = $details['posts']; ?>
                     <div class="user">
