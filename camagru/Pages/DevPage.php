@@ -14,8 +14,15 @@ class DevPage extends Page {
 
     }
 
+    /**
+     * @return GeneralController
+     */
+    public function getController() {
+        return $this->_controller;
+    }
+
     public function index() {
-        $posts = $this->_controller->getSql()->getPosts(1);
+        $posts = $this->getController()->getSql()->getPosts(1);
         $params = array('content' => 'dev/Test', "posts" => $posts);
         $this->render($params);
     }

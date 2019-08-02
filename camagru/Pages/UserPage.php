@@ -16,8 +16,15 @@ class UserPage extends Page {
         $this->_controller = new UserController($this);
     }
 
+    /**
+     * @return UserController
+     */
+    public function getController() {
+        return $this->_controller;
+    }
+
     public function index() {
-        if (!$this->_controller->isLogged()) {
+        if (!$this->getController()->isLogged()) {
             $params = array('content' => 'user/User');
             $this->render($params);
         } else {
@@ -28,7 +35,7 @@ class UserPage extends Page {
     public function askPasswordReset() {
         if ($this->checkToken($_POST)) {
             if ($this->checkPostValues($_POST, "reset", "mail")) {
-                $result = $this->_controller->askReset($_POST['mail']);
+                $result = $this->getController()->askReset($_POST['mail']);
                 Page::redirect("/user", $result['message']);
             }
         }
@@ -36,16 +43,16 @@ class UserPage extends Page {
     }
 
     public function confirm() {
-        $result = $this->_controller->confirmAccount($this->_url);
+        $result = $this->getController()->confirmAccount($this->_url);
         Page::redirect("/user", $result['message']);
     }
 
     public function edit() {
-        if ($this->_controller->isLogged()) {
+        if ($this->getController()->isLogged()) {
             if ($this->checkPostValues($_POST, "update", "type")) {
                 $this->editProfile($_POST);
             } else {
-                $params = array('content' => 'user/Edit', 'user' => $this->_controller->getUserDetails()['result']);
+                $params = array('content' => 'user/Edit', 'user' => $this->getController()->getUserDetails()['result']);
                 $this->render($params);
             }
         } else {
@@ -54,17 +61,17 @@ class UserPage extends Page {
     }
 
     public function editProfile($post) {
-        if (!$this->_controller->isLogged()) {
+        if (!$this->getController()->isLogged()) {
             if ($this->checkToken($post)) {
                 if ($this->checkPostValues($post, "type")) {
                     if ($post['type'] === "global") {
                         if ($this->checkPostValues($post, "old_username", "password", "username", "first_name", "last_name", "mail", "notifications")) {
-                            $result = $this->_controller->editGlobalProfile($post['old_username'], $post['username'], $post['mail'], $post['first_name'], $post['last_name'], $post['notifications'], $post['password']);
+                            $result = $this->getController()->editGlobalProfile($post['old_username'], $post['username'], $post['mail'], $post['first_name'], $post['last_name'], $post['notifications'], $post['password']);
                             Page::redirect("/user/edit", $result['message']);
                         }
                     } else if ($post['type'] === "password") {
                         if ($this->checkPostValues($post, "username", "password", "new_password", "repeat")) {
-                            $result = $this->_controller->editPasswordProfile($post['username'], $post['password'], $post['new_password'], $post['repeat']);
+                            $result = $this->getController()->editPasswordProfile($post['username'], $post['password'], $post['new_password'], $post['repeat']);
                             Page::redirect("/user/edit", $result['message']);
                         }
                     }
@@ -75,10 +82,10 @@ class UserPage extends Page {
     }
 
     public function login() {
-        if (!$this->_controller->isLogged()) {
+        if (!$this->getController()->isLogged()) {
             if ($this->checkToken($_POST)) {
                 if ($this->checkPostValues($_POST, "login")) {
-                    if (($result = $this->_controller->auth($_POST['username'], $_POST['password']))['status'] === true) {
+                    if (($result = $this->getController()->auth($_POST['username'], $_POST['password']))['status'] === true) {
                         Page::redirect("/", $result['message']);
                     } else Page::redirect("/user", $result['message']);
                 }
@@ -88,7 +95,7 @@ class UserPage extends Page {
     }
 
     public function logout($ask = true, $redirect = true) {
-        if ($this->_controller->isLogged()) {
+        if ($this->getController()->isLogged()) {
             Session::resetSession();
             if ($ask) Snackbar::sendSnack("Vous avez été déconnécté avec succès.");
         }
@@ -96,10 +103,10 @@ class UserPage extends Page {
     }
 
     public function register() {
-        if (!$this->_controller->isLogged()) {
+        if (!$this->getController()->isLogged()) {
             if ($this->checkToken($_POST)) {
                 if ($this->checkPostValues($_POST, "register", "password", "repeat", "username", "mail")) {
-                   $result = $this->_controller->register($_POST['username'], $_POST['mail'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['repeat']);
+                   $result = $this->getController()->register($_POST['username'], $_POST['mail'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['repeat']);
                    Page::redirect("/user", $result['message']);
                 }
             }
@@ -108,10 +115,10 @@ class UserPage extends Page {
     }
 
     public function resetPassword() {
-        if (!$this->_controller->isLogged()) {
+        if (!$this->getController()->isLogged()) {
             if ($this->checkToken($_POST)) {
                 if ($this->checkPostValues($_POST, "password", "repeat", "reset_token")) {
-                    $result = $this->_controller->resetPassword($_POST['password'], $_POST['repeat'], $_POST['reset_token']);
+                    $result = $this->getController()->resetPassword($_POST['password'], $_POST['repeat'], $_POST['reset_token']);
                     Page::redirect(isset($result['redirect']) ? $result['redirect'] : "/user", $result['message']);
                 }
             }
@@ -126,8 +133,8 @@ class UserPage extends Page {
 
     public function profile() {
         $params = null;
-        if ($this->_controller->isLogged()) {
-            $details = $this->_controller->getUserById($this->_controller->getSessionId());
+        if ($this->getController()->isLogged()) {
+            $details = $this->getController()->getUserById($this->getController()->getSessionId());
             $params = array('content' => 'aside/Profile', 'details' => $details);
         } else {
             $params = array('content' => 'aside/Login');

@@ -15,6 +15,13 @@ class MontagePage extends Page  {
         $this->_controller = new MontageController($this);
     }
 
+    /**
+     * @return MontageController
+     */
+    public function getController() {
+        return $this->_controller;
+    }
+
     public function index() {
         $params = array('content' => 'general/Montage');
         $this->render($params);

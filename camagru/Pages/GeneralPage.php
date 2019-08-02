@@ -13,6 +13,13 @@ class GeneralPage extends Page {
         $this->_controller = new GeneralController($this);
     }
 
+    /**
+     * @return GeneralController
+     */
+    public function getController() {
+        return $this->_controller;
+    }
+
     public function index() {
         $exploded = explode("/", $this->_url);
         if (count($exploded) > 1) {
@@ -23,13 +30,13 @@ class GeneralPage extends Page {
     }
 
     public function indexPage($page) {
-        $pages = $this->_controller->getPagesCount();
+        $pages = $this->getController()->getPagesCount();
         if ($page > $pages) {
             $page = $pages;
             $this->_router->notFound($this->_url, false);
         }
-        $posts = $this->_controller->getPosts($page);
-        $users = $this->_controller->getUserController()->getLastUsers();
+        $posts = $this->getController()->getPosts($page);
+        $users = $this->getController()->getUserController()->getLastUsers();
         $params = array('content' => 'general/Home', 'posts' => $posts, 'users' => $users, 'page' => $page, 'pages' => $pages);
         $this->render($params);
     }

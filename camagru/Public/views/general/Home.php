@@ -6,12 +6,12 @@
         <div class="posts">
             <?php
             foreach ($params['posts'] as $post) {
-                $d = $this->getPostController()->getPost($post['id']);
+                $d = $this->getController()->getPostController()->getPost($post['id']);
                 $details = $d['post'];
                 $userName = $details['username'];
                 $likes = $details['likes'];
                 $imagePath = $details['image_path'];
-                $islike = $this->getPostController()->isLiked($post['id']);?>
+                $islike = $this->getController()->getPostController()->isLiked($post['id']);?>
                 <div class="post" id="post <?= $post['id'] ?>">
                     <div class="author">
                         <div class="user">

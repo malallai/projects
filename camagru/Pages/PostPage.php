@@ -14,12 +14,19 @@ class PostPage extends Page {
         $this->_controller = new PostController($this);
     }
 
+    /**
+     * @return PostController
+     */
+    public function getController() {
+        return $this->_controller;
+    }
+
     public function security($args) {
-        if (!$this->_controller->getUserController()->isLogged()){
+        if (!$this->getController()->getUserController()->isLogged()){
             $this->redirect("/user");
             return false;
         }
-        if (!$this->checkToken($args) || !$this->checkPostValues($args, "id") || !$this->_controller->postExist($args['id']))
+        if (!$this->checkToken($args) || !$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
             return false;
         return true;
     }
@@ -33,7 +40,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        $result = $this->_controller->like($post, $this->_controller->getUserController()->getSessionId());
+        $result = $this->getController()->like($post, $this->getController()->getUserController()->getSessionId());
         echo json_encode($result);
         return $result;
     }
@@ -46,7 +53,7 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        $result = $this->_controller->comment($post, $_POST['comment'], $this->_controller->getUserController()->getUserById($this->_controller->getUserController()->getSessionId()));
+        $result = $this->getController()->comment($post, $_POST['comment'], $this->getController()->getUserController()->getUserById($this->getController()->getUserController()->getSessionId()));
         echo json_encode($result);
         return $result;
     }
@@ -59,8 +66,8 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        if ($this->_controller->getPost($post)['result']['user_id'] == $this->_controller->getUserController()->getSessionId()) {
-            $result = $this->_controller->delete($post);
+        if ($this->getController()->getPost($post)['result']['user_id'] == $this->getController()->getUserController()->getSessionId()) {
+            $result = $this->getController()->delete($post);
             echo json_encode($result);
             return $result;
         } else {

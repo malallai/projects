@@ -13,7 +13,7 @@ class MontageController extends Controller {
 
     public function __construct($page) {
         $this->_sql = new MontageSql();
-        $this->_generalController = new GeneralController();
+        $this->_generalController = new GeneralController($page);
         $this->_page = $page;
     }
 
