@@ -31,7 +31,7 @@ class DevPage extends Page {
     }
 
     public function test(...$test){
-        Snackbar::sendSnacks($test);
+        Snackbar::sendSnacks($test[0]);
     }
 
     public function mail() {
