@@ -3,6 +3,7 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
+use Core\Session;
 use Core\Snackbar;
 
 class DevPage extends Page {
@@ -27,6 +28,8 @@ class DevPage extends Page {
 
     public function debug() {
         header("Content-type: text/plain");
+        Session::startSession();
+        var_dump($_SESSION);
     }
 
     public function mail() {
