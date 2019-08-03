@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/App/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/User/UserSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserSql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="179" column="28" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="28" />
+            <state relative-caret-position="341">
+              <caret line="256" column="35" lean-forward="true" selection-start-line="256" selection-start-column="35" selection-end-line="256" selection-end-column="35" />
               <folding>
                 <element signature="e#28#56#0#PHP" expanded="true" />
               </folding>
@@ -180,7 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getUserId</find>
       <find>securi</find>
       <find>secu</find>
       <find>sec</find>
@@ -210,6 +208,7 @@
       <find>resetpassword</find>
       <find>resetPassword</find>
       <find>resetpwd</find>
+      <find>checkPwd</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -486,12 +485,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="5566000" />
+      <workItem from="1564766967225" duration="5606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211412000" />
+    <option name="totallyTimeSpent" value="211452000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,6 +503,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.14026846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -912,8 +912,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="179" column="28" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="28" />
+        <state relative-caret-position="341">
+          <caret line="256" column="35" lean-forward="true" selection-start-line="256" selection-start-column="35" selection-end-line="256" selection-end-column="35" />
           <folding>
             <element signature="e#28#56#0#PHP" expanded="true" />
           </folding>
