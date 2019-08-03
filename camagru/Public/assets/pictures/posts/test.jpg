@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="malallai">
+    <link rel="icon" href="/Public/assets/ico/favicon.ico">
+    <link href="/Public/assets/css/general.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='/Public/assets/js/camagru.js'></script>
+    <title>Camagru</title>
+</head>
+<body>
+    <input hidden class="token" value="01281e993fad5d3e32db44fa1dac9a3ce596e7864e19e5addd340ecd154519e68bfc5cb539e57def00af86011e6d6e05f826">
+    <div class="aside-row hide">
+        <div class="aside-bar">
+            <div class="head">
+                <div class="title">Mon Compte</div>
+                <div class="icon">
+                    <a href="" onclick="overlay()">
+                        <i class='fas fa-times'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="aside-content">
+                <div class="aside-button button-login">
+    <div class="button-content">
+        <a href="/user"><span>Connexion</span></a>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="overlay" onclick="overlay()"></div>
+    <div class="container">
+        <header>
+            <div id="fix" class="fix"></div>
+            <div id="top-header" class="top-header">
+                <div id="flex-content" class="flex-content">
+                    <div class="flex-component">
+                        <div class="logo">
+                            <a href="/">Camagru</a>
+                        </div>
+                    </div>
+                    <div class="flex-component">
+                        <div class="icons">
+                            <div class="flex-icon">
+                                <div class="icon">
+                                    <a href="/montage">
+                                        <i class='fas fa-camera'></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex-icon user-icon">
+                                <div class="icon">
+                                    <a href="" class="user-aside" onclick="user_aside()">
+                                        <i class='fas fa-user'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main-content" class="main-content">
+            <link href="/Public/assets/css/home.css" rel="stylesheet">
+<script src='/Public/assets/js/posts.js'></script>
+<div class="home-row">
+    <div id="posts-row" class="row posts-row">
+        <div class="pagination">
+    <div class="inputs">
+        <a class="input arrow disable" ><i class="fas fa-angle-left"></i></a>
+                    <a class="input page active" href="/page/1">1</a>
+                        <a class="input page " href="/page/2">2</a>
+                    <a class="input arrow " href='/page/2'><i class="fas fa-angle-right"></i></a>
+    </div>
+</div>
+        <div class="posts">
+                            <div class="post" id="post 12">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/5.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a>malallai</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="/Public/assets/pictures/posts/test.jpg">
+                        </span>
+                        <div class="comments">
+                            <div class="row">
+                                                            </div>
+                            <div class="add-comment">
+                                <div class="row">
+                                    <form class="new-comment" id="12">
+                                        <input id="input 12" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" type="submit" value="submit">
+                                    </form>
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div class="submit-content">
+                                            <i id="12" class="fa fa-send"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="#" onclick="showComments()"><i id="12" class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="12" class="far fa-heart"></i></a>
+                        </div>
+                        <div class="like-counts">
+                            <p>0 j'aime</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="post" id="post 11">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/5.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a>malallai</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="/Public/assets/pictures/posts/2.jpg">
+                        </span>
+                        <div class="comments">
+                            <div class="row">
+                                                                    <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                Salut bg                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                Salut V2 bg                                            </div>
+                                        </div>
+                                    </div>
+                                                                </div>
+                            <div class="add-comment">
+                                <div class="row">
+                                    <form class="new-comment" id="11">
+                                        <input id="input 11" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" type="submit" value="submit">
+                                    </form>
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div class="submit-content">
+                                            <i id="11" class="fa fa-send"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="#" onclick="showComments()"><i id="11" class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="11" class="far fa-heart"></i></a>
+                        </div>
+                        <div class="like-counts">
+                            <p>1 j'aime</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="post" id="post 10">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/5.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a>malallai</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="/Public/assets/pictures/posts/0.jpg">
+                        </span>
+                        <div class="comments">
+                            <div class="row">
+                                                                    <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                dwjao                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                Blbl ?                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>BLBL</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                dnlwa                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>malallai</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                BBL                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="comment">
+                                        <div class="content">
+                                            <div class="comment-author">
+                                                <a>malallai</a>
+                                            </div>
+                                            <div class="comment-message">
+                                                iowaiofhia                                            </div>
+                                        </div>
+                                    </div>
+                                                                </div>
+                            <div class="add-comment">
+                                <div class="row">
+                                    <form class="new-comment" id="10">
+                                        <input id="input 10" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" type="submit" value="submit">
+                                    </form>
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div class="submit-content">
+                                            <i id="10" class="fa fa-send"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="#" onclick="showComments()"><i id="10" class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="10" class="far fa-heart"></i></a>
+                        </div>
+                        <div class="like-counts">
+                            <p>1 j'aime</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="post" id="post 8">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/7.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a>Gtesla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="/Public/assets/pictures/posts/3.jpg">
+                        </span>
+                        <div class="comments">
+                            <div class="row">
+                                                            </div>
+                            <div class="add-comment">
+                                <div class="row">
+                                    <form class="new-comment" id="8">
+                                        <input id="input 8" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" type="submit" value="submit">
+                                    </form>
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div class="submit-content">
+                                            <i id="8" class="fa fa-send"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="#" onclick="showComments()"><i id="8" class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="8" class="far fa-heart"></i></a>
+                        </div>
+                        <div class="like-counts">
+                            <p>3 j'aimes</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="post" id="post 7">
+                    <div class="author">
+                        <div class="user">
+                            <div class="user-pp">
+                                <img src="/Public/assets/pictures/users/6.jpg">
+                            </div>
+                            <div class="user-infos">
+                                <div class="user-name">
+                                    <a>Alf</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <span class="picture">
+                            <img src="/Public/assets/pictures/posts/0.jpg">
+                        </span>
+                        <div class="comments">
+                            <div class="row">
+                                                            </div>
+                            <div class="add-comment">
+                                <div class="row">
+                                    <form class="new-comment" id="7">
+                                        <input id="input 7" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
+                                        <input hidden name="submit" type="submit" value="submit">
+                                    </form>
+                                    <a href="#" onclick="newComment()" class="submit">
+                                        <div class="submit-content">
+                                            <i id="7" class="fa fa-send"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="icons">
+                            <a class="link" href="#" onclick="showComments()"><i id="7" class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" href="#" onclick="like()"><i id="7" class="far fa-heart"></i></a>
+                        </div>
+                        <div class="like-counts">
+                            <p>1 j'aime</p>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+        <div class="pagination">
+    <div class="inputs">
+        <a class="input arrow disable" ><i class="fas fa-angle-left"></i></a>
+                    <a class="input page active" href="/page/1">1</a>
+                        <a class="input page " href="/page/2">2</a>
+                    <a class="input arrow " href='/page/2'><i class="fas fa-angle-right"></i></a>
+    </div>
+</div>
+    </div>
+    <div id="users-row" class="row users-row">
+        <div class="content">
+            <div class="row-title">
+                <p>Utilisateurs</p>
+            </div>
+            <div class="users">
+                                    <div class="user">
+                        <a class="user-pp">
+                            <img src="/Public/assets/pictures/users/0.jpg">
+                        </a>
+                        <div class="user-infos">
+                            <div class="user-name">
+                                <a>BLBL</a>
+                            </div>
+                            <div class="posts-count">
+                                <p>0 photo</p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="user">
+                        <a class="user-pp">
+                            <img src="/Public/assets/pictures/users/7.jpg">
+                        </a>
+                        <div class="user-infos">
+                            <div class="user-name">
+                                <a>Gtesla</a>
+                            </div>
+                            <div class="posts-count">
+                                <p>2 photos</p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="user">
+                        <a class="user-pp">
+                            <img src="/Public/assets/pictures/users/6.jpg">
+                        </a>
+                        <div class="user-infos">
+                            <div class="user-name">
+                                <a>Alf</a>
+                            </div>
+                            <div class="posts-count">
+                                <p>1 photo</p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="user">
+                        <a class="user-pp">
+                            <img src="/Public/assets/pictures/users/5.jpg">
+                        </a>
+                        <div class="user-infos">
+                            <div class="user-name">
+                                <a>malallai</a>
+                            </div>
+                            <div class="posts-count">
+                                <p>3 photos</p>
+                            </div>
+                        </div>
+                    </div>
+                                </div>
+        </div>
+    </div>
+</div>
+        </main>
+        <footer>
+            <div class="links align-left">
+                <p>
+                    <a class="link" href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a class="link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a class="link" href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                </p>
+            </div>
+            <div class="copyright text-align-right">
+                <p>© malallai 2019.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html><html>
+<head>
+    <title>Php code compress the image</title>
+</head>
+<body>
+<fieldset class="well">
+    <legend>Upload Image:</legend>
+    <form action="test.php" name="img_compress" id="img_compress" method="post" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label>Upload:</label>
+                <input type="file" name="file" id="file"/>
+            </li>
+            <li>
+                <input type="submit" name="submit" id="submit" class="submit btn-success"/>
+            </li>
+        </ul>
+    </form>
+</fieldset>
+<center>
+            <h3>Image Compressed successfully</h3>
+    </center>
+</body>
+</html>
