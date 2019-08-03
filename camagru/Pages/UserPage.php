@@ -52,7 +52,7 @@ class UserPage extends Page {
             if ($this->checkPostValues($_POST, "update", "type")) {
                 $this->editProfile($_POST);
             } else {
-                $params = array('content' => 'user/Edit', 'user' => $this->getController()->getUserDetails()['result']);
+                $params = array('content' => 'user/Edit', 'user' => $this->getController()->getUserById($this->getController()->getSessionId()));
                 $this->render($params);
             }
         } else {
