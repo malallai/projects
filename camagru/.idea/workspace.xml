@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/General/GeneralController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/General/GeneralController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Montage/MontageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Montage/MontageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Post/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Post/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Post/PostSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Post/PostSql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/UserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/UserPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="78" column="100" selection-start-line="78" selection-start-column="100" selection-end-line="78" selection-end-column="100" />
+            <state relative-caret-position="374">
+              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding>
                 <element signature="e#28#46#0#PHP" expanded="true" />
               </folding>
@@ -109,17 +103,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+            <state relative-caret-position="83">
+              <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
+            <state relative-caret-position="255">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="e#28#56#0#PHP" expanded="true" />
               </folding>
@@ -258,8 +252,8 @@
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/App/User/UserController.php" />
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
-        <option value="$PROJECT_DIR$/App/Post/PostController.php" />
         <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
+        <option value="$PROJECT_DIR$/App/Post/PostController.php" />
       </list>
     </option>
   </component>
@@ -463,12 +457,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="2210000" />
+      <workItem from="1564766967225" duration="2322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208056000" />
+    <option name="totallyTimeSpent" value="208168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -851,23 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
-          <folding>
-            <element signature="e#28#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -890,10 +867,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="78" column="100" selection-start-line="78" selection-start-column="100" selection-end-line="78" selection-end-column="100" />
+        <state relative-caret-position="374">
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding>
             <element signature="e#28#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Post/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#28#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
