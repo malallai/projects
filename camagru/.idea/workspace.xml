@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="78" column="92" selection-start-line="78" selection-start-column="92" selection-end-line="78" selection-end-column="92" />
+            <state relative-caret-position="142">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#28#46#0#PHP" expanded="true" />
               </folding>
@@ -185,7 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>comments</find>
       <find>reset</find>
       <find>user_login</find>
       <find>autofocus=&quot;&quot;</find>
@@ -215,6 +214,7 @@
       <find>getLastUsers</find>
       <find>compareTokens</find>
       <find>profile(</find>
+      <find>left joi</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -484,12 +484,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="2731000" />
+      <workItem from="1564766967225" duration="3462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208577000" />
+    <option name="totallyTimeSpent" value="209308000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -911,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="78" column="92" selection-start-line="78" selection-start-column="92" selection-end-line="78" selection-end-column="92" />
+        <state relative-caret-position="142">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#28#46#0#PHP" expanded="true" />
           </folding>
