@@ -12,7 +12,7 @@ class MontagePage extends Page  {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new MontageController($this);
+        $this->_controller = MontageController::get($this);
     }
 
     /**

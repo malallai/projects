@@ -10,7 +10,7 @@ class GeneralPage extends Page {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new GeneralController($this);
+        $this->_controller = GeneralController::get($this);
     }
 
     /**
