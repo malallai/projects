@@ -76,7 +76,7 @@ class PostSql extends Sql {
 
     public function getUserPosts($id) {
         try {
-            $request = self::runList("SELECT * FROM posts WHERE posts.user_id = ? ORDER BY date DESC", array($id));
+            $request = self::runList("SELECT *, count(likes.post_id), count(comments.post_id) FROM posts LEFT JOIN likes AS likes ON likes.post_id = posts.id LEFT JOIN comments AS comments ON comments.post_id = posts.id WHERE posts.user_id = ? ORDER BY date DESC", array($id));
             return $request;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
