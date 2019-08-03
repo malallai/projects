@@ -21,8 +21,8 @@ $router->addRoute("user/edit", "Pages\UserPage@edit");
 $router->addRoute("user/login", "Pages\UserPage@login");
 $router->addRoute("user/logout", "Pages\UserPage@logout");
 $router->addRoute("user/register", "Pages\UserPage@register");
-$router->addRoute("user/reset_password", "Pages\UserPage@editPassword");
-$router->addRoute("user/reset_password/(.*)", "Pages\UserPage@resetPassword");
+$router->addRoute("user/reset_password", "Pages\UserPage@resetPassword");
+$router->addRoute("user/reset_password/(.*)", "Pages\UserPage@editPassword");
 
 $router->addRoute("post/like", "Pages\PostPage@like");
 $router->addRoute("post/comment", "Pages\PostPage@comment");
