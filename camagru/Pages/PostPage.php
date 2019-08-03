@@ -11,7 +11,7 @@ class PostPage extends Page {
     public function __construct($router, $url) {
         parent::__construct($router, $url);
         $this->_template = "templates/general";
-        $this->_controller = new PostController($this);
+        $this->_controller = PostController::get($this);
     }
 
     /**
