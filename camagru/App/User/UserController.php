@@ -160,7 +160,7 @@ class UserController extends Controller {
         $mail = Security::convertHtmlEntities($mail);
         $token = Security::newToken(32);
         if ($this->getSql()->sendReset($mail, $token)) {
-            $link = "https://camagru.malallai.fr/user/resetpw/".$token;
+            $link = "https://camagru.malallai.fr/user/reset_password/".$token;
             Mail::newMail($mail, "Changement de mot de passe",
                 "Tu as fais une demande pour changer ton mot de passe.".
                 "</br>".
@@ -195,7 +195,7 @@ class UserController extends Controller {
             );
             return array("status" => true, "message" => "Votre mot de passe à été modifié.");
         } else {
-            return array("status" => true, "message" => "Une erreur est survenue.", "redirect" => "/user/resetpassword/".$resetToken);
+            return array("status" => true, "message" => "Une erreur est survenue.", "redirect" => "/user/reset_password/".$resetToken);
         }
     }
 
