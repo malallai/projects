@@ -13,11 +13,11 @@ class GeneralController extends Controller {
 
     public function __construct($page) {
         if (self::$_instance === null) {
+            self::$_instance = $this;
             $this->_sql = new GeneralSql();
             $this->_page = $page;
             $this->_user_controller = UserController::get($page);
             $this->_post_controller = PostController::get($page);
-            self::$_instance = $this;
         }
     }
 

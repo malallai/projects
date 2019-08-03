@@ -14,10 +14,10 @@ class MontageController extends Controller {
 
     public function __construct($page) {
         if (self::$_instance === null) {
+            self::$_instance = $this;
             $this->_sql = new MontageSql();
             $this->_page = $page;
             $this->_generalController = GeneralController::get($page);
-            self::$_instance = $this;
         }
     }
 

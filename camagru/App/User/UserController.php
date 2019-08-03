@@ -23,10 +23,10 @@ class UserController extends Controller {
 
     public function __construct($page) {
         if (self::$_instance === null) {
+            self::$_instance = $this;
             $this->_sql = new UserSql();
             $this->_page = $page;
             $this->_postController = PostController::get($page);
-            self::$_instance = $this;
         }
     }
 
