@@ -77,15 +77,6 @@ class UserSql extends Sql {
         }
     }
 
-    public function checkPwd($pwd) {
-        $upper = preg_match('#[A-Z]#', $pwd);
-        $lower = preg_match('#[a-z]#', $pwd);
-        $nbr = preg_match('#[\d]#', $pwd);
-        $special = preg_match('#[^a-zA-Z\d]#', $pwd);
-        $len = strlen($pwd);
-        return ($upper >= 1 && $lower >= 1 && $nbr >= 1 && $special >= 1 && $len >= 8);
-    }
-
     public function confirm($token) {
         try {
             $result = self::run("SELECT id FROM users WHERE conf_token = ?", array($token))["result"];
