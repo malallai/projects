@@ -13,7 +13,7 @@ class PostController extends Controller {
     protected static $_instance = null;
 
     public function __construct($page) {
-        if (self::$_instance !== null) {
+        if (self::$_instance === null) {
             $this->_sql = new PostSql();
             $this->_page = $page;
             $this->_userController = UserController::get($page);
