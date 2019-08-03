@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/user/PwdReset.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/PwdReset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="197" column="119" selection-start-line="197" selection-start-column="119" selection-end-line="197" selection-end-column="119" />
+            <state relative-caret-position="171">
+              <caret line="235" column="42" selection-start-line="235" selection-start-column="42" selection-end-line="235" selection-end-column="42" />
               <folding>
                 <element signature="e#28#56#0#PHP" expanded="true" />
               </folding>
@@ -91,8 +92,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+            <state relative-caret-position="209">
+              <caret line="120" column="67" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/views/user/PwdReset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -118,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="408">
+              <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -132,15 +142,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="539">
               <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -179,9 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit()</find>
-      <find>checkP</find>
-      <find>$this-&gt;redirect</find>
       <find>getUserId</find>
       <find>securi</find>
       <find>secu</find>
@@ -209,6 +207,9 @@
       <find>editProf</find>
       <find>hash(&quot;whirlpool&quot;</find>
       <find>Security::convertHtmlEntities($p</find>
+      <find>resetpassword</find>
+      <find>resetpwd</find>
+      <find>resetPassword</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -247,7 +248,6 @@
         <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Edit.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
-        <option value="$PROJECT_DIR$/Public/views/user/PwdReset.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/posts.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/editprofile.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
@@ -258,7 +258,6 @@
         <option value="$PROJECT_DIR$/Core/Security.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
         <option value="$PROJECT_DIR$/Public/views/dev/Test.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Core/Snackbar.php" />
         <option value="$PROJECT_DIR$/Core/Page.php" />
@@ -275,6 +274,8 @@
         <option value="$PROJECT_DIR$/Pages/UserPage.php" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/App/User/UserController.php" />
+        <option value="$PROJECT_DIR$/Public/views/user/PwdReset.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -485,12 +486,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="5001000" />
+      <workItem from="1564766967225" duration="5141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210847000" />
+    <option name="totallyTimeSpent" value="210987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,13 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/user/PwdReset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -872,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -903,20 +890,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="197" column="119" selection-start-line="197" selection-start-column="119" selection-end-line="197" selection-end-column="119" />
+        <state relative-caret-position="171">
+          <caret line="235" column="42" selection-start-line="235" selection-start-column="42" selection-end-line="235" selection-end-column="42" />
           <folding>
             <element signature="e#28#56#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/UserPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="120" column="67" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/user/PwdReset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
         </state>
       </provider>
     </entry>
