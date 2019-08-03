@@ -33,7 +33,17 @@ if (isset($_POST['submit'])) {
 
         $fianl_file = compress($source_img, $destination_url, 50);
 
-    $error = "Image Compressed successfully";
+        $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
+        header('Content-Description: File Transfer');
+        header('Content-Type: image/jpeg');
+        header('Content-Disposition: attachment; filename='.basename($file_url));
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: public');
+        header('Pragma: public');
+        ob_clean();
+
+        $error = "Image Compressed successfully";
 
     }else {
         $error = "Uploaded image should be jpg or gif or png";
