@@ -32,6 +32,13 @@ if (isset($_POST['submit'])) {
         $source_img = $_FILES["file"]["tmp_name"];
 
         $fianl_file = compress($source_img, $destination_url, 50);
+
+        $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
+        header('Content-Type: application/octet-stream');
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\"");
+        readfile($file_url);
+
         $error = "Image Compressed successfully";
 
     }else {
