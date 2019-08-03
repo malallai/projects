@@ -98,6 +98,7 @@ class UserController extends Controller {
     }
 
     public function auth($username, $pwd) {
+        Session::startSession();
         $username = Security::convertHtmlEntities($username);
         $pwd = hash("whirlpool", Security::convertHtmlEntities($pwd));
         $id = $this->getUserByUsername($username)['id'];
