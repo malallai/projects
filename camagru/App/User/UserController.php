@@ -192,7 +192,7 @@ class UserController extends Controller {
         if ($password !== $repeat) {
             return array("status" => false, "message" => "Les mots de passe ne sont pas identique.", "redirect" => "/user/reset_password/".$resetToken);
         }
-        if ($this->checkPwd($password)) {
+        if (!$this->checkPwd($password)) {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.", "redirect" => "/user/reset_password/".$resetToken);
         }
         $password = hash("whirlpool", $password);
