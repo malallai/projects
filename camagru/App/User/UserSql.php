@@ -107,7 +107,6 @@ class UserSql extends Sql {
     }
 
     public function editPassword($password, $id, $token = null) {
-        $password = hash('whirlpool', $password);
         try {
             if ($token !== null) {
                 $id = $this->getResetUserId($token);
