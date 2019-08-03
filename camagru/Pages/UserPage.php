@@ -61,7 +61,7 @@ class UserPage extends Page {
     }
 
     public function editProfile($post) {
-        if (!$this->getController()->isLogged()) {
+        if ($this->getController()->isLogged()) {
             if ($this->checkToken($post)) {
                 if ($this->checkPostValues($post, "type")) {
                     if ($post['type'] === "global") {
