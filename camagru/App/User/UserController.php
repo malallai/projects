@@ -177,14 +177,25 @@ class UserController extends Controller {
         }
     }
 
+    public function checkPwd($pwd) {
+        $upper = preg_match('#[A-Z]#', $pwd);
+        $lower = preg_match('#[a-z]#', $pwd);
+        $nbr = preg_match('#[\d]#', $pwd);
+        $special = preg_match('#[^a-zA-Z\d]#', $pwd);
+        $len = strlen($pwd);
+        return ($upper >= 1 && $lower >= 1 && $nbr >= 1 && $special >= 1 && $len >= 8);
+    }
+
     function resetPassword($password, $repeat, $resetToken) {
+        $password = Security::convertHtmlEntities($password);
+        $repeat = Security::convertHtmlEntities($repeat);
         if ($password !== $repeat) {
-            return array("status" => false, "message" => "Les mots de passe ne sont pas identique.");
+            return array("status" => false, "message" => "Les mots de passe ne sont pas identique.", "redirect" => "/user/reset_password/".$resetToken);
         }
-        if ($this->getSql()->checkPwd($password)) {
-            return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
+        if ($this->checkPwd($password)) {
+            return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.", "redirect" => "/user/reset_password/".$resetToken);
         }
-        $password = hash("whirlpool", Security::convertHtmlEntities($password));
+        $password = hash("whirlpool", $password);
         $resetToken = Security::convertHtmlEntities($resetToken);
         $user = $this->getSql()->getResetUserId($resetToken);
         if ($this->getSql()->editPassword($password, 0, $resetToken)) {
@@ -238,7 +249,7 @@ class UserController extends Controller {
         if ($newPassword !== $repeatPassword) {
             return array("status" => false, "message" => "Les mots de passes ne sont pas identiques.");
         }
-        if (!$this->getSql()->checkPwd($newPassword)) {
+        if (!$this->checkPwd($newPassword)) {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
         }
         $newPassword = hash("whirlpool", Security::convertHtmlEntities($password));
