@@ -218,13 +218,14 @@ class UserController extends Controller {
         $firstName = Security::convertHtmlEntities($firstName);
         $lastName = Security::convertHtmlEntities($lastName);
         $notifications = Security::convertHtmlEntities($notifications);
+        $tmpPassword = $password;
         $password = hash("whirlpool", Security::convertHtmlEntities($password));
         if (!$this->getSql()->checkPasswords($id, $password)) {
             return array("status" => false, "message" => "Mauvais mot de passe");
         }
         if ($this->getSql()->editProfile($id, $username, $firstName, $lastName, $mail, ($notifications === "true" ? 1 : 0))) {
             Session::resetSession();
-            if (($auth = $this->auth($username, $password))) {
+            if (($auth = $this->auth($username, $tmpPassword))) {
                 Mail::newMail($mail, "Edition du profile",
                     "Votres profile viens d'être modifié.".
                     "</br></br>".
