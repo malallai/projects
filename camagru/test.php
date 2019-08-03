@@ -36,13 +36,12 @@ if (isset($_POST['submit'])) {
         $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
         header('Content-Description: File Transfer');
         header('Content-Type: image/jpeg');
-        header('Content-Disposition: attachment; filename="'.basename($file_url).'"');
+        header('Content-Disposition: attachment; filename='.basename($file_url));
+        header('Content-Transfer-Encoding: binary');
         header('Expires: 0');
-        header('Cache-Control: must-revalidate');
+        header('Cache-Control: public');
         header('Pragma: public');
-        header('Content-Length: ' . filesize($file_url));
-        flush(); // Flush system output buffer
-        readfile($file_url);
+        ob_clean();
 
         $error = "Image Compressed successfully";
 
