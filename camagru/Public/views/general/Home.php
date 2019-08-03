@@ -16,7 +16,7 @@
                     <div class="author">
                         <div class="user">
                             <div class="user-pp">
-                                <img src="/Public/assets/pictures/users/<?=$userName?>.jpg">
+                                <img src="/Public/assets/pictures/users/<?=$details['avatar']?>.jpg">
                             </div>
                             <div class="user-infos">
                                 <div class="user-name">
@@ -91,7 +91,7 @@
                     $posts = $details['posts']; ?>
                     <div class="user">
                         <a class="user-pp">
-                            <img src="/Public/assets/pictures/users/<?=$userName?>.jpg">
+                            <img src="/Public/assets/pictures/users/<?=$details['avatar']?>.jpg">
                         </a>
                         <div class="user-infos">
                             <div class="user-name">
