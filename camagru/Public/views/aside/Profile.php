@@ -8,10 +8,10 @@
                 </div>
                 <div class="main-infos-sub">
                     <div class="inline-flex">
-                        <span class="fullname"><?= $params['details']['user']['first_name']." ".$params['details']['user']['last_name'] ?></span>
-                        <span class="username"><?= " ".$params['details']['user']['username']?></span>
+                        <span class="fullname"><?= $params['details']['first_name']." ".$params['details']['last_name'] ?></span>
+                        <span class="username"><?= " ".$params['details']['username']?></span>
                     </div>
-                    <div class="usermail"><?= $params['details']['user']['email']?></div>
+                    <div class="usermail"><?= $params['details']['email']?></div>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
 <div class="aside-middle-content">
     <div class="posts">
         <?php
-        foreach ($params['details']['posts'] as $post) {
+        foreach ($params['posts'] as $post) {
             $likes = $post['likes'];
             $comments = $post['comments'];
             $imagePath = $post['image_path'];

@@ -10,11 +10,25 @@ use Core\Snackbar;
 class MontageController extends Controller {
 
     private $_generalController;
+    protected static $_instance = null;
 
     public function __construct($page) {
-        $this->_sql = new MontageSql();
-        $this->_generalController = new GeneralController($page);
-        $this->_page = $page;
+        if (self::$_instance === null) {
+            $this->_sql = new MontageSql();
+            $this->_page = $page;
+            $this->_generalController = GeneralController::get($page);
+            self::$_instance = $this;
+        }
+    }
+
+    /**
+     * @var page Page
+     * @return MontageController
+     */
+    public static function get($page) {
+        if (self::$_instance === null)
+            return new MontageController($page);
+        return self::$_instance;
     }
 
     /**

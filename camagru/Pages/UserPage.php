@@ -135,7 +135,8 @@ class UserPage extends Page {
         $params = null;
         if ($this->getController()->isLogged()) {
             $details = $this->getController()->getUserById($this->getController()->getSessionId());
-            $params = array('content' => 'aside/Profile', 'details' => $details);
+            $posts = $this->getController()->getPostController()->getUserPosts($this->getController()->getSessionId());
+            $params = array('content' => 'aside/Profile', 'details' => $details, 'posts' => $posts);
         } else {
             $params = array('content' => 'aside/Login');
         }

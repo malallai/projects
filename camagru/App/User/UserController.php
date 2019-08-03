@@ -2,14 +2,17 @@
 
 
 namespace App\User;
+use App\Post\PostController;
 use Core\Controller;
 use Core\Mail;
 use Core\Page;
 use Core\Security;
 use Core\Session;
-use Core\Snackbar;
 
 class UserController extends Controller {
+
+    protected static $_instance = null;
+    private $_postController;
 
     /**
      * @return UserSql
@@ -19,8 +22,29 @@ class UserController extends Controller {
     }
 
     public function __construct($page) {
-        $this->_sql = new UserSql();
-        $this->_page = $page;
+        if (self::$_instance === null) {
+            $this->_sql = new UserSql();
+            $this->_page = $page;
+            $this->_postController = PostController::get($page);
+            self::$_instance = $this;
+        }
+    }
+
+    /**
+     * @var page Page
+     * @return UserController
+     */
+    public static function get($page) {
+        if (self::$_instance === null)
+            return new UserController($page);
+        return self::$_instance;
+    }
+
+    /**
+     * @return PostController
+     */
+    public function getPostController() {
+        return $this->_postController;
     }
 
     /**
