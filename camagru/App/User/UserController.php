@@ -99,7 +99,7 @@ class UserController extends Controller {
 
     public function auth($username, $pwd) {
         $username = Security::convertHtmlEntities($username);
-        $pwd = hash("whirlpool", $pwd);
+        $pwd = hash("whirlpool", Security::convertHtmlEntities($pwd));
         $id = $this->getUserByUsername($username)['id'];
         if ($id === null) {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
