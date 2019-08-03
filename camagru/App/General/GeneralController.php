@@ -9,12 +9,26 @@ use Core\Page;
 class GeneralController extends Controller {
     private $_user_controller;
     private $_post_controller;
+    protected static $_instance = null;
 
     public function __construct($page) {
-        $this->_sql = new GeneralSql();
-        $this->_user_controller = new UserController($page);
-        $this->_post_controller = new PostController($page, $this->getUserController());
-        $this->_page = $page;
+        if (self::$_instance === null) {
+            $this->_sql = new GeneralSql();
+            $this->_page = $page;
+            $this->_user_controller = UserController::get($page);
+            $this->_post_controller = PostController::get($page);
+            self::$_instance = $this;
+        }
+    }
+
+    /**
+     * @var page Page
+     * @return GeneralController
+     */
+    public static function get($page) {
+        if (self::$_instance === null)
+            return new GeneralController($page);
+        return self::$_instance;
     }
 
     /**

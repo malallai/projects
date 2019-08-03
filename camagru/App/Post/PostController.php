@@ -10,13 +10,25 @@ use Core\Page;
 class PostController extends Controller {
 
     private $_userController;
+    protected static $_instance = null;
 
-    public function __construct($page, $userController = null) {
-        $this->_sql = new PostSql();
-        $this->_page = $page;
-        if ($userController === null)
-            $this->_userController = new UserController($page);
-        else $this->_userController = $userController;
+    public function __construct($page) {
+        if (self::$_instance !== null) {
+            $this->_sql = new PostSql();
+            $this->_page = $page;
+            $this->_userController = UserController::get($page);
+            self::$_instance = $this;
+        }
+    }
+
+    /**
+     * @var page Page
+     * @return PostController
+     */
+    public static function get($page) {
+        if (self::$_instance === null)
+            return new PostController($page);
+        return self::$_instance;
     }
 
     /**
@@ -84,6 +96,11 @@ class PostController extends Controller {
 
     public function delete($post) {
         return $this->getSql()->delete($post);
+    }
+
+    public function getUserPosts($id) {
+        $result = $this->getSql()->getUserPosts($id);
+        return $result['result'];
     }
 
 }

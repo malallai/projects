@@ -74,7 +74,15 @@ class PostSql extends Sql {
         }
     }
 
-
+    public function getUserPosts($id) {
+        try {
+            $request = self::runList("SELECT * FROM posts WHERE posts.user_id = ? ORDER BY date DESC", array($id));
+            return $request;
+        } catch (SqlException $e) {
+            Snackbar::sendSnack($e->getMessage());
+            return null;
+        }
+    }
 
     public function getLimitPostList($offset, $fetch) {
         try {
