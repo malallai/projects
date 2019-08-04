@@ -28,153 +28,64 @@
         </div>
     </div>
     <div id="pics-row" class="row pics-row">
-        <link href="/Public/assets/css/home.css" rel="stylesheet">
-
         <div class="content">
             <div class="row-title">
-                <p>Utilisateurs</p>
+                <p>Photos précédentes</p>
             </div>
-            <div class="users">
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/0.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>sltcmwa</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>0 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/0.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>jschotte</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>0 photo</p>
+            <div class="pics">
+                <div class="pic">
+                    <span class="picture">
+                        <img src="/Public/assets/pictures/posts/test.jpg">
+                    </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/0.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Test</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>0 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/7.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Gtesla</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>2 photos</p>
+                <div class="pic">
+                    <span class="picture">
+                        <img src="/Public/assets/pictures/posts/0.jpg">
+                    </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
+                <div class="pic">
+                    <span class="picture">
+                        <img src="/Public/assets/pictures/posts/1.jpg">
+                    </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="user">
-                    <a class="user-pp">
-                        <img src="/Public/assets/pictures/users/6.jpg">
-                    </a>
-                    <div class="user-infos">
-                        <div class="user-name">
-                            <a>Alf</a>
-                        </div>
-                        <div class="posts-count">
-                            <p>1 photo</p>
+                <div class="pic">
+                    <span class="picture">
+                        <img src="/Public/assets/pictures/posts/2.jpg">
+                    </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
