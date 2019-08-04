@@ -54,6 +54,10 @@
     margin: auto auto 0 auto;
 }
 
+.video .video-overlay .row .content.hidden {
+    opacity: 0;
+}
+
 .video .video-overlay .row .overlay-button {
     padding-bottom: 1rem;
     margin: auto .25rem 0 .25rem;
