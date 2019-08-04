@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/assets/css/montage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/montage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/montage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/montage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -443,12 +442,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="20190000" />
+      <workItem from="1564766967225" duration="20569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226036000" />
+    <option name="totallyTimeSpent" value="226415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
         </state>
       </provider>
     </entry>
