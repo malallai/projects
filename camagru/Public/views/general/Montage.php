@@ -1,4 +1,5 @@
 <link href="/Public/assets/css/montage.css" rel="stylesheet">
+<script src='/Public/assets/js/montage.js'></script>
 <div class="montage-row">
     <div id="main-row" class="row main-row">
         <div class="camera">
