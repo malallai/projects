@@ -18,6 +18,19 @@ function compress($source, $destination, $quality) {
     return $destination;
 }
 
+if (isset($_GET) && isset($_GET['dl'])) {
+    $url = $_GET['dl'];
+    header('Content-Description: File Transfer');
+    header('Content-Type: image/jpeg');
+    header('Content-Disposition: attachment; filename='.basename($url));
+    header('Content-Transfer-Encoding: binary');
+    header('Expires: 0');
+    header('Cache-Control: public');
+    header('Pragma: public');
+    ob_clean();
+    die();
+}
+
 if (isset($_POST['submit'])) {
     if ($_FILES["file"]["error"] > 0)
     {
@@ -35,8 +48,10 @@ if (isset($_POST['submit'])) {
 
         $error = "Image Compressed successfully";
 
-    }else {
-        $error = "Uploaded image should be jpg or gif or png";
+    } else {
+        $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
+        header('locations: /test.php?dl='.$file_url);
+        die();
     }
 }
 ?>
