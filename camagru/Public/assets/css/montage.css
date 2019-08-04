@@ -92,7 +92,21 @@
 }
 
 @media only screen and (max-width: 750px) {
+    .montage-row {
+        flex-direction: column;
+        max-width: 500px;
+    }
 
+    .main-row {
+        order: 2;
+        margin: 0 0 1rem 0;
+    }
+
+    .pics-row {
+        order: 1;
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
 }
 
 @media only screen and (max-width: 500px) {
