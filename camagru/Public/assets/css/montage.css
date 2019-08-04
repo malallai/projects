@@ -1,7 +1,7 @@
 .montage-row {
     display: flex;
     padding: 0 1rem;
-    max-width: 750px;
+    max-width: 850px;
     margin: 0 auto;
     justify-content: space-between;
     transition: 0.2s ease;
@@ -15,7 +15,7 @@
 }
 
 .montage-row .main-row {
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
 
 .main-row .camera #render, .main-row .camera #video {
@@ -78,7 +78,7 @@
 }
 
 .pics-row {
-    flex-basis: 35%;
+    flex-basis: 45%;
     background-color: #fff;
     border-radius: 2px;
 }
