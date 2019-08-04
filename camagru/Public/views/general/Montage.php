@@ -33,6 +33,11 @@
                 <p>Photos précédentes</p>
             </div>
             <div class="pics">
+                <div class="pic">
+                    <span class="picture">
+                        <img src="/Public/assets/pictures/posts/test.jpg">
+                    </span>
+                </div>
             </div>
         </div>
     </div>
