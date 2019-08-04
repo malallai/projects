@@ -40,7 +40,7 @@
                 <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required>
                 <div class="inline-flex">
                     <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe *" required>
-                    <input type="password" name="password_repeat" id="password_repeat" class="form-control" placeholder="Répéter mot de passe *" required>
+                    <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter mot de passe *" required>
                 </div>
                 <input class="button black" name="register" value="Inscription" type="submit">
             </form>
