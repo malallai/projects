@@ -15,7 +15,7 @@
                                 <a href="" onclick="test()"><i id="0" class="far fa-circle"></i></a>
                             </div>
                             <div class="overlay-button reverse-cam">
-                                <a href="" onclick="test()"><i id="0" class="far fa-circle"></i></a>
+                                <a href="" onclick="test()"><i class="material-icons">repeat</i></a>
                             </div>
                         </div>
                     </div>
