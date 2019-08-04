@@ -5,7 +5,6 @@ namespace Pages;
 
 use Core\Page;
 use App\Montage\MontageController;
-use Core\Snackbar;
 
 class MontagePage extends Page  {
 
