@@ -7,7 +7,7 @@
                 <video id="video" width="1280" height="720" autoplay></video>
                 <div class="video-overlay">
                     <div class="row">
-                        <div class="content">
+                        <div class="content hidden">
                             <div class="overlay-button force-send">
                                 <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>
