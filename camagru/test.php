@@ -19,15 +19,10 @@ function compress($source, $destination, $quality) {
 }
 
 if (isset($_GET) && isset($_GET['dl'])) {
-    $url = $_GET['dl'];
-    header('Content-Description: File Transfer');
+    $file = $_GET['dl'];
     header('Content-Type: image/jpeg');
-    header('Content-Disposition: attachment; filename='.basename($url));
-    header('Content-Transfer-Encoding: binary');
-    header('Expires: 0');
-    header('Cache-Control: public');
-    header('Pragma: public');
-    ob_clean();
+    header('Content-Length: ' . filesize($file));
+    readfile($file);
     die();
 }
 
@@ -48,7 +43,7 @@ if (isset($_POST['submit'])) {
 
         $final_file = compress($source_img, $destination_url, 50);
 
-        $file_url = 'uploads/demo.jpg';
+        $file_url = '/uploads/demo.jpg';
         header('Location: /test.php?dl='.$file_url);
         die();
 
