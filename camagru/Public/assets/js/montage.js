@@ -1,5 +1,6 @@
 var front = false;
 function montageReady() {
+    document.getElementsByClassName("content hidden")[0].classList.remove("hidden");
     if (!mobileDevice)
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
     setupCamera();
