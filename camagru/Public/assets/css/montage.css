@@ -23,11 +23,38 @@
     height: 100%;
 }
 
+.video .details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(43, 43, 43, .6);
+    color: #fff;
+    opacity: 1;
+    transition: 0.15s ease-in-out;
+    font-size: 15px;
+}
+
+.video .details .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.video .details .row .content {
+    margin: auto;
+}
+
+.video .details .row .delete-post a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .pics-row {
     flex-basis: 35%;
     background-color: #fff;
     border-radius: 2px;
-    margin-top: 4em;
 }
 
 .pics-row .content {
