@@ -8,8 +8,14 @@
                 <div class="video-overlay">
                     <div class="row">
                         <div class="content">
+                            <div class="force-send">
+                                <a href="" onclick="test()"><i class="fas fa-cloud-upload-alt"></i></a>
+                            </div>
                             <div class="take-picture">
-                                <a href="#" onclick="test()"><i id="0" class="fas fa-circle"></i></a>
+                                <a href="" onclick="test()"><i id="0" class="far fa-circle"></i></a>
+                            </div>
+                            <div class="reverse-cam">
+                                <a href="" onclick  ="test()"><i id="0" class="far fa-circle"></i></a>
                             </div>
                         </div>
                     </div>
