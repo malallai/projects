@@ -174,11 +174,11 @@
     }
 
     .pics-row .pic:first-child {
-        margin: .25rem 0 .25rem .25rem;
+        margin: .25rem .25rem .25rem 0;
     }
 
     .pics-row .pic:last-child {
-        margin: .25rem .25rem .25rem 0;
+        margin: .25rem 0 .25rem .25rem;
     }
 
     .pics-row .pics {
