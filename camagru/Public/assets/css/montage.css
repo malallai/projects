@@ -49,6 +49,11 @@
     display: flex;
 }
 
+.video .video-overlay .row .content {
+    margin: 0 auto;
+    bottom: 0;
+}
+
 .video .video-overlay .row .take-picture a {
     text-decoration: none;
     color: #fff;
