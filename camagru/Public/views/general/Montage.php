@@ -2,7 +2,7 @@
 <div class="montage-row">
     <div id="main-row" class="row main-row">
         <div class="camera">
-            <canvas width="100%" height="100%"></canvas>
+            <canvas id="video" width="1280px" height="720px"></canvas>
         </div>
         <div class="filters">
 
