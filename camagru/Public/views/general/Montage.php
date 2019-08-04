@@ -1,16 +1,19 @@
-<link href="/Public/assets/css/home.css" rel="stylesheet">
-<script src='/Public/assets/js/posts.js'></script>
-<div class="home-row">
-    <div id="posts-row" class="row posts-row">
-        <div class="posts">
+<link href="/Public/assets/css/montage.css" rel="stylesheet">
+<div class="montage-row">
+    <div id="main-row" class="row main-row">
+        <div class="camera">
+            <canvas width="100%" height="100%"></canvas>
+        </div>
+        <div class="filters">
+
         </div>
     </div>
-    <div id="users-row" class="row users-row">
+    <div id="pics-row" class="row pics-row">
         <div class="content">
             <div class="row-title">
-                <p>Utilisateurs</p>
+                <p>Photos précédentes</p>
             </div>
-            <div class="users">
+            <div class="pics">
             </div>
         </div>
     </div>
