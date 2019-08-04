@@ -102,7 +102,9 @@
 
 .pics-row .pics {
     max-height: 70vh;
-    overflow: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .pics-row .pic {
