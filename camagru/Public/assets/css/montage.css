@@ -64,6 +64,10 @@
     color: #fff;
 }
 
+.video .video-overlay .row .reverse-cam i {
+    font-size: 1rem;
+}
+
 .video .video-overlay .row .take-picture i {
     font-size: 2.5rem;
 }
