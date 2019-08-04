@@ -1,4 +1,4 @@
-.main-row {
+.montage-row {
     display: flex;
     padding: 0 1rem;
     max-width: 750px;
@@ -12,6 +12,10 @@
 .row {
     transition: margin 0.2s ease;
     transition-delay:  0.05s;
+}
+
+.montage-row .main-row {
+    flex-basis: 60%;
 }
 
 .pics-row {
