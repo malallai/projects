@@ -1,3 +1,5 @@
+var mobileDevice = false;
+
 window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
     await sleep(500, aside);
@@ -6,6 +8,10 @@ window.onload = async function() {
     let list = document.getElementsByTagName("*");
     for (let item of list) {
         item.ondragstart = function () {return false;};
+    }
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        mobileDevice = true;
     }
 
     if (typeof postReady === "function") postReady();

@@ -1,24 +1,20 @@
 var front = false;
 function montageReady() {
-    let video = document.getElementById("video");
-    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-            video.srcObject = stream;
-            video.play();
-        }).catch(function (err) {
-            console.log("no camera");
-        });
-    } else {
-        console.log("no camera");
+    setupCamera();
+}
+
+function switchDevice() {
+    event.preventDefault();
+    if (mobileDevice) {
+        front = !front;
+        setupCamera();
     }
 }
 
-function test() {
-    event.preventDefault();
-    front = !front;
+function setupCamera() {
     let video = document.getElementById("video");
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: {facingMode: (front? "user" : "environment")} }).then(function(stream) {
+        navigator.mediaDevices.getUserMedia({ video: (mobileDevice ? {facingMode: (front? "user" : "environment")} : true) }).then(function(stream) {
             video.srcObject = stream;
             video.play();
         }).catch(function (err) {
