@@ -104,7 +104,7 @@
     max-height: 70vh;
     overflow-y: auto;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
 }
 
 .pics-row .pic {
@@ -125,7 +125,7 @@
 
 .pics-row .pic .details {
     width: 100%;
-    height: 100%;
+    height: 2.5rem;
     display: flex;
     position: absolute;
     bottom: 0;
