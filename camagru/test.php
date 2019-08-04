@@ -21,7 +21,7 @@ function compress($source, $destination, $quality) {
 if (isset($_GET) && isset($_GET['dl'])) {
     $file = $_GET['dl'];
     header('Content-Type: image/jpeg');
-    header('Content-Length: ' . filesize($file));
+    header('X-Sendfile: ' . $file);
     readfile($file);
     die();
 }
