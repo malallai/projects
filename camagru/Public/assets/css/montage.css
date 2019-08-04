@@ -149,11 +149,11 @@
     color: #fff;
 }
 
-.pics-row .pic .pic:hover > .picture img {
+.pics-row .pic:hover > .picture img {
     transform: scale(1.075);
 }
 
-.pics-row .pic .pic:hover .details {
+.pics-row .pic:hover .details {
     opacity: 1;
     transform: scale(1.1);
 }
