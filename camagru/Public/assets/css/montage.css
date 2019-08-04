@@ -108,12 +108,13 @@
 }
 
 .pics-row .pic {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    font-size: 0;
-    margin: .25rem 0;
+    display: flex;
+    /*width: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*display: inline-block;*/
+    /*font-size: 0;*/
+    /*margin: .25rem 0;*/
 }
 
 .pics-row .pic .picture img {
