@@ -326,8 +326,12 @@ body[focus_comment] .posts-row .post .comments {
         width: 100%;
     }
 
-    .row {
-        margin: 1rem 0;
+    .posts-row {
+        margin: 0 0 1rem 0;
+    }
+
+    .users-row {
+        margin: 1rem 0 0 0;
     }
 
     .users-row .row-title, .users-row .user-infos {
