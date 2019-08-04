@@ -50,7 +50,16 @@
 }
 
 .video .video-overlay .row .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.video .video-overlay .row .take-picture {
     margin: 0 auto;
+}
+
+.video .video-overlay .row .take-picture .content {
     bottom: 0;
 }
 

@@ -8,9 +8,11 @@
                 <div class="video-overlay">
                     <div class="row">
                         <div class="content">
-                            <span class="take-picture">
-                                <a href="#" onclick="test()"><i id="0" class="fas fa-trash"></i></a>
-                            </span>
+                            <div class="take-picture">
+                                <div class="content">
+                                    <a href="#" onclick="test()"><i id="0" class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
