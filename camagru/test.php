@@ -48,12 +48,12 @@ if (isset($_POST['submit'])) {
 
         $final_file = compress($source_img, $destination_url, 50);
 
-        $error = "Image Compressed successfully";
-
-    } else {
         $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
         header('locations: /test.php?dl='.$file_url);
         die();
+
+    } else {
+        $error = "Uploaded image should be jpg or gif or png";
     }
 }
 ?>
