@@ -11,3 +11,7 @@ function montageReady() {
         console.log("no camera");
     }
 }
+
+function test() {
+    console.log("test");
+}
