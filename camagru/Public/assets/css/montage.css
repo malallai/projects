@@ -51,16 +51,15 @@
 
 .video .video-overlay .row .content {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
 }
 
-.video .video-overlay .row .take-picture {
+.video .video-overlay .row .overlay-button {
     padding-bottom: 1rem;
-    margin: auto auto 0 auto;
+    margin: auto .25rem 0 .25rem;
 }
 
-.video .video-overlay .row .take-picture a {
+.video .video-overlay .row .overlay-button a {
     text-decoration: none;
     color: #fff;
 }
