@@ -37,21 +37,57 @@
                     <span class="picture">
                         <img src="/Public/assets/pictures/posts/test.jpg">
                     </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pic">
                     <span class="picture">
                         <img src="/Public/assets/pictures/posts/0.jpg">
                     </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pic">
                     <span class="picture">
                         <img src="/Public/assets/pictures/posts/1.jpg">
                     </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pic">
                     <span class="picture">
                         <img src="/Public/assets/pictures/posts/2.jpg">
                     </span>
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
