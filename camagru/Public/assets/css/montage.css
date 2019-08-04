@@ -56,12 +56,17 @@
 }
 
 .video .video-overlay .row .take-picture {
+    padding-bottom: 1rem;
     margin: auto auto 0 auto;
 }
 
 .video .video-overlay .row .take-picture a {
     text-decoration: none;
     color: #fff;
+}
+
+.video .video-overlay .row .take-picture i {
+    font-size: 20px;
 }
 
 .pics-row {
