@@ -3,7 +3,8 @@
 <div class="montage-row">
     <div id="main-row" class="row main-row">
         <div class="camera">
-            <canvas id="video" width="1280px" height="720px"></canvas>
+            <video id="video" width="1280" height="720" autoplay></video>
+            <canvas id="render" width="1280" height="720"></canvas>
         </div>
         <div class="filters">
 
