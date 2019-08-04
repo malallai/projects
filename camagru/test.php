@@ -41,10 +41,12 @@ if (isset($_POST['submit'])) {
         ($_FILES["file"]["type"] == "image/png") ||
         ($_FILES["file"]["type"] == "image/pjpeg"))
     {
+        if (!file_exists("uploads"))
+            mkdir("uploads");
         $destination_url = 'uploads/demo.jpg';
         $source_img = $_FILES["file"]["tmp_name"];
 
-        $fianl_file = compress($source_img, $destination_url, 50);
+        $final_file = compress($source_img, $destination_url, 50);
 
         $error = "Image Compressed successfully";
 
