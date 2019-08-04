@@ -68,6 +68,11 @@
     font-size: 2.5rem;
 }
 
+.video-overlay .overlay-button.disable {
+    cursor: not-allowed;
+    color: #999;
+}
+
 .pics-row {
     flex-basis: 35%;
     background-color: #fff;

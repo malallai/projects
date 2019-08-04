@@ -9,10 +9,10 @@
                     <div class="row">
                         <div class="content">
                             <div class="overlay-button force-send">
-                                <a href="" onclick="test()"><i class="fas fa-cloud-upload-alt"></i></a>
+                                <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>
                             <div class="overlay-button take-picture">
-                                <a href="" onclick="test()"><i id="0" class="far fa-circle"></i></a>
+                                <a href="" onclick="takePicture()"><i id="0" class="far fa-circle"></i></a>
                             </div>
                             <div class="overlay-button reverse-cam">
                                 <a href="" onclick="switchDevice()"><i id="0" class="fas fa-retweet"></i></a>
