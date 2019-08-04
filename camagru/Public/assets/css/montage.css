@@ -177,7 +177,7 @@
         margin: 1rem 0 0 0;
     }
 
-    .pics {
+    .pics-row .pics {
         flex-direction: row;
         overflow-x: auto;
     }
