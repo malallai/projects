@@ -4,11 +4,10 @@ function montageReady() {
         navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
             video.srcObject = stream;
             video.play();
-            camera_setup();
         }).catch(function (err) {
-            no_camera();
+            console.log("no camera");
         });
     } else {
-        no_camera();
+        console.log("no camera");
     }
 }
