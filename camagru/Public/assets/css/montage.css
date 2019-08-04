@@ -109,10 +109,9 @@
 
 .pics-row .pic {
     display: flex;
-    margin: .25rem 0;
-    /*position: relative;*/
-    /*display: inline-block;*/
-    /*font-size: 0;*/
+    margin: .25rem;
+    position: relative;
+    font-size: 0;
 }
 
 .pics-row .pic .picture {
@@ -154,7 +153,6 @@
 
 .pics-row .pic:hover .details {
     opacity: 1;
-    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 750px) {
@@ -175,7 +173,7 @@
     }
 
     .pics-row .pics {
-        flex-direction: row;
+        flex-flow: row nowrap;
         overflow-x: auto;
     }
 }
