@@ -55,7 +55,7 @@
 }
 
 .video .video-overlay .row .content.hidden {
-    opacity: 0;
+    display: none;
 }
 
 .video .video-overlay .row .overlay-button {
