@@ -109,7 +109,7 @@
 
 .pics-row .pic {
     display: flex;
-    margin: .25rem;
+    margin: .25rem 0;
     position: relative;
     font-size: 0;
 }
@@ -169,6 +169,18 @@
         margin: 1rem 0 0 0;
     }
 
+    .pics-row .pic {
+        margin: .25rem;
+    }
+
+    .pics-row .pic:first-child {
+        margin: .25rem 0 .25rem .25rem;
+    }
+
+    .pics-row .pic:last-child {
+        margin: .25rem .25rem .25rem 0;
+    }
+
     .pics-row .pics {
         flex-flow: row nowrap;
         overflow-x: auto;
@@ -178,7 +190,7 @@
         height: 10rem;
     }
 
-    .pics-row .picture img {
+    .pics-row .pic .picture img {
         width: auto;
     }
 }
