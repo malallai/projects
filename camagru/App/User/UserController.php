@@ -119,7 +119,7 @@ class UserController extends Controller {
         if ($password !== $repeat) {
             return array("status" => false, "message" => "Les mots de passes ne sont pas identique.");
         }
-        if (!$this->getSql()->checkPwd($password)) {
+        if (!$this->checkPwd($password)) {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
         }
         $username = Security::convertHtmlEntities($username);
