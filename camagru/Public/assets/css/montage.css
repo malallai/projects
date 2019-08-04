@@ -70,7 +70,7 @@
 
 .video-overlay .overlay-button.disable a {
     cursor: not-allowed;
-    color: #555;
+    color: #999 !important;
 }
 
 .pics-row {
