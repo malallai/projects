@@ -114,10 +114,6 @@
     font-size: 0;
 }
 
-.pics-row .pic .picture {
-    height: 10rem;
-}
-
 .pics-row .pic .picture img {
     height: 100%;
     transition: all ease .25s;
