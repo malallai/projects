@@ -59,7 +59,7 @@
     margin: auto .25rem 0 .25rem;
 }
 
-.video .video-overlay .row .overlay-button a {
+.video .video-overlay .row .overlay-button:not(.disable) a {
     text-decoration: none;
     color: #fff;
 }
@@ -70,7 +70,7 @@
 
 .video-overlay .overlay-button.disable a {
     cursor: not-allowed;
-    color: #999 !important;
+    color: #999;
 }
 
 .pics-row {
