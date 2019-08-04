@@ -56,11 +56,7 @@
 }
 
 .video .video-overlay .row .take-picture {
-    margin: 0 auto;
-}
-
-.video .video-overlay .row .take-picture .content {
-    bottom: 0;
+    margin: auto auto 0 auto;
 }
 
 .video .video-overlay .row .take-picture a {

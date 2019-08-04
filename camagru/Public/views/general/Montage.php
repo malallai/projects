@@ -9,9 +9,7 @@
                     <div class="row">
                         <div class="content">
                             <div class="take-picture">
-                                <div class="content">
-                                    <a href="#" onclick="test()"><i id="0" class="fas fa-trash"></i></a>
-                                </div>
+                                <a href="#" onclick="test()"><i id="0" class="fas fa-trash"></i></a>
                             </div>
                         </div>
                     </div>
