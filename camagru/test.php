@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 
         $final_file = compress($source_img, $destination_url, 50);
 
-        $file_url = 'https://camagru.malallai.fr/uploads/demo.jpg';
+        $file_url = 'uploads/demo.jpg';
         header('Location: /test.php?dl='.$file_url);
         die();
 
