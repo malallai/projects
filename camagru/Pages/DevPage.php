@@ -4,7 +4,6 @@ namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
 use Core\Session;
-use Core\Snackbar;
 
 class DevPage extends Page {
 
