@@ -57,23 +57,10 @@ class PostSql extends Sql {
 
     public function comment($post, $message, $user) {
         try {
-            $time = microtime();
+            $time = microtime(true);
             self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user, $message));
-            Snackbar::sendSnacks($time);
             self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?) ON DUPLICATE KEY UPDATE last_comment = ?", array($user, $time, $time));
             return true;
-        } catch (SqlException $e) {
-            Snackbar::sendSnack($e->getMessage());
-            return false;
-        }
-    }
-
-    public function test($user) {
-        try {
-            $time = microtime();
-            Snackbar::sendSnacks((float) $time);
-            $result = self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?)", array($user, (float) $time));
-            return $result;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
@@ -83,7 +70,7 @@ class PostSql extends Sql {
     public function canComment($user) {
         try {
             $result = self::run("SELECT last_comment FROM timer WHERE user_id = ?", array($user));
-            if ((!isset($result['result']) || empty($result['result'])) || microtime() - $result['result']['last_comment'] > 5000)
+            if ((!isset($result['result']) || empty($result['result'])) || microtime(true) - $result['result']['last_comment'] > 5000)
                     return true;
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
