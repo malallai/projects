@@ -25,6 +25,7 @@ function setupCamera() {
             video.play();
             cameraReady();
         }).catch(function (err) {
+            console.log(err);
             console.log("no camera");
         });
     } else {
