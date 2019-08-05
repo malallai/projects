@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/general/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/mail/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/mail/Template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/templates/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/templates/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/user/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/Edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/user/PwdReset.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/PwdReset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/user/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/user/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,10 +92,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+            <state relative-caret-position="272">
+              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -231,8 +234,8 @@
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
-        <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
+        <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
       </list>
     </option>
   </component>
@@ -436,12 +439,12 @@
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
       <workItem from="1564766967225" duration="30160000" />
-      <workItem from="1565018529858" duration="5539000" />
+      <workItem from="1565018529858" duration="5607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241545000" />
+    <option name="totallyTimeSpent" value="241613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -699,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -833,6 +829,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -840,10 +843,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/Public/views/templates/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+        <state relative-caret-position="493">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
         </state>
       </provider>
     </entry>

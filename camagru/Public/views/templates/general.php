@@ -66,7 +66,7 @@
             </div>
         </header>
         <main id="main-content" class="main-content">
-            <?= \Core\Security::convertHtmlEntities($content) ?>
+            <?= $content ?>
         </main>
         <footer>
             <div class="links align-left">
