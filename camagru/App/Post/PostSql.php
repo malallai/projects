@@ -72,7 +72,7 @@ class PostSql extends Sql {
         try {
             $time = microtime();
             Snackbar::sendSnacks($time);
-            $result = self::run("INSERT INTO timer (user_id, last_comment) VALUES (5,0) ON DUPLICATE KEY UPDATE last_comment = ?", array($time));
+            $result = self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?) ON DUPLICATE KEY UPDATE last_comment = ?", array($user, $time, $time));
             return $result;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
