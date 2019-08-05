@@ -71,8 +71,8 @@ class PostSql extends Sql {
     public function test($user) {
         try {
             $time = microtime();
-            Snackbar::sendSnacks($time);
-            $result = self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?)", array($user, $time));
+            Snackbar::sendSnacks((float) $time);
+            $result = self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?)", array($user, (float) $time));
             return $result;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
