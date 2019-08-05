@@ -71,6 +71,7 @@ class PostSql extends Sql {
         try {
             $time = round(microtime(true) * 1000);
             $result = self::run("SELECT last_comment FROM timer WHERE user_id = ?", array($user));
+            Snackbar::sendSnacks($result['result']['last_comment']);
             if ((!isset($result['result']) || empty($result['result'])) || $time - $result['result']['last_comment'] > 5000)
                     return true;
         } catch (SqlException $e) {
