@@ -69,13 +69,13 @@ class PostSql extends Sql {
 
     public function canComment($user) {
         try {
-            $result = self::run("Select * from timer where date_add(timer.last_comment, INTERVAL 5 SECOND) < current_timestamp and user_id = ?", array($user));
+            $result = self::run("SELECT last_comment FROM timer INNER JOIN users ON users.id = ? WHERE date_add(last_comment, INTERVAL 5 SECOND) > current_timestamp AND user_id = users.id AND EXISTS(SELECT * FROM timer WHERE user_id = users.id)", array($user));
             if (!isset($result['result']) || empty($result['result']))
-                    return false;
+                return true;
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
         }
-        return true;
+        return false;
     }
 
     public function delete($post) {
