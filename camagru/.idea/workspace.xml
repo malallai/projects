@@ -148,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/PostPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+            <state relative-caret-position="221">
+              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
                 <element signature="e#26#40#0#PHP" expanded="true" />
               </folding>
@@ -481,12 +481,12 @@
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
       <workItem from="1564766967225" duration="30160000" />
-      <workItem from="1565018529858" duration="615000" />
+      <workItem from="1565018529858" duration="656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236621000" />
+    <option name="totallyTimeSpent" value="236662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/PostPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+        <state relative-caret-position="221">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
             <element signature="e#26#40#0#PHP" expanded="true" />
           </folding>
