@@ -57,8 +57,9 @@ class PostSql extends Sql {
 
     public function comment($post, $message, $user) {
         try {
+            $time = microtime();
             self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user, $message));
-            self::run("UPDATE timer SET last_comment = ? WHERE user_id = ?", array(microtime(), $user));
+            self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?) ON DUPLICATE KEY UPDATE last_comment = ?", array($user, $time, $time));
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
