@@ -70,8 +70,8 @@ class PostSql extends Sql {
     public function canComment($user) {
         try {
             $result = self::run("SELECT last_comment FROM timer WHERE user_id = ?", array($user));
-            if (microtime() - $result > 5000)
-                return true;
+            if (empty($result) && microtime() - $result['last_comment'] > 5000)
+                    return true;
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
         }
