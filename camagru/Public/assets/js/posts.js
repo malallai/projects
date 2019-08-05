@@ -8,7 +8,7 @@ function postReady() {
 }
 
 function checkLogged(msg) {
-    if (msg === "not_logged") {
+    if (msg['status'] === "not_logged") {
         window.location = "/user";
         return true;
     }
@@ -29,7 +29,6 @@ function like() {
             token: token.value
         },
         success: function(msg) {
-            console.log(msg);
             if (checkLogged(msg))
                 return;
             let postParent = document.getElementById("post " + post.id);
