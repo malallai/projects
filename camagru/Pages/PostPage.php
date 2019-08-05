@@ -33,7 +33,7 @@ class PostPage extends Page {
 
     public function like() {
         header("Content-type: text/plain");
-        if (!$nop = $this->security($_POST)) {
+        if ($nop = $this->security($_POST) !== true) {
             echo json_encode($nop);
             return $nop;
         }
@@ -45,7 +45,7 @@ class PostPage extends Page {
 
     public function comment() {
         header("Content-type: text/plain");
-        if (!$nop = $this->security($_POST)) {
+        if (!$nop = $this->security($_POST) !== true) {
             echo json_encode($nop);
             return $nop;
         }
@@ -61,7 +61,7 @@ class PostPage extends Page {
 
     public function delete() {
         header("Content-type: text/plain");
-        if (!$nop = $this->security($_POST)) {
+        if (!$nop = $this->security($_POST) !== true) {
             echo json_encode($nop);
             return $nop;
         }
