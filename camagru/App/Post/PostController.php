@@ -77,20 +77,24 @@ class PostController extends Controller {
     }
 
     public function comment($post, $message, $user) {
-        if ($this->getSql()->comment($post, $message, $user['id'])) {
-            $author = $this->getSql()->getPostAuthor($post);
-            if ($author['notifications'] && $author['username'] !== $user['username']) {
-                Mail::newMail($author['email'], "Nouveau commentaire",
-                    "Un commentaire à été ajouté sur l'une de vos images.".
-                    "</br></br>".
-                    "".$user['username']." : ".$message.
-                    "</br></br>".
-                    "Merci de ta confiance et à bientôt sur Camagru."
-                );
+        if ($this->getSql()->canComment($user['id'])) {
+            if ($this->getSql()->comment($post, $message, $user['id'])) {
+                $author = $this->getSql()->getPostAuthor($post);
+                if ($author['notifications'] && $author['username'] !== $user['username']) {
+                    Mail::newMail($author['email'], "Nouveau commentaire",
+                        "Un commentaire à été ajouté sur l'une de vos images.".
+                        "</br></br>".
+                        "".$user['username']." : ".$message.
+                        "</br></br>".
+                        "Merci de ta confiance et à bientôt sur Camagru."
+                    );
+                }
+                return array("status" => "ok", "message" => $message, "author" => $user['username']);
+            } else {
+                return array("status" => false);
             }
-            return array("status" => "ok", "message" => $message, "author" => $user['username']);
         } else {
-            return array("status" => false);
+            return array("status" => "spam");
         }
     }
 
