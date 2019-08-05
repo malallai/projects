@@ -57,7 +57,6 @@ class PostSql extends Sql {
 
     public function comment($post, $message, $user) {
         try {
-            $time = round(microtime(true) * 1000);
             self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user, $message));
             self::run("INSERT INTO timer (user_id) VALUES (?) ON DUPLICATE KEY UPDATE last_comment = current_timestamp", array($user));
             return true;
