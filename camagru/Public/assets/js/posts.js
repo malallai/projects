@@ -7,6 +7,14 @@ function postReady() {
     }
 }
 
+function checkLogged(msg) {
+    if (msg === "not_logged") {
+        window.location = "/user";
+        return true;
+    }
+    return false;
+}
+
 function like() {
     event.preventDefault();
     let post = event.srcElement;
@@ -21,6 +29,8 @@ function like() {
             token: token.value
         },
         success: function(msg) {
+            if (checkLogged(msg))
+                return;
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
             if (msg['status'] === "unlike") {
@@ -48,6 +58,8 @@ function deletePost() {
             token: token.value
         },
         success: function (msg) {
+            if (checkLogged(msg))
+                return;
             if (msg['status'] === "deleted")
                 location.reload();
         }
@@ -70,6 +82,8 @@ function newComment() {
             comment: post.value
         },
         success: function(msg) {
+            if (checkLogged(msg))
+                return;
             if (msg['status'] === "ok") {
                 let row = document.getElementById("post " + input.id).getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
                 let newComment = document.createElement("div");
