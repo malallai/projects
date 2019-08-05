@@ -29,6 +29,8 @@ class DevPage extends Page {
     public function debug() {
         header("Content-type: text/plain");
         Session::startSession();
+        $result = $this->getController()->getPostController()->getSql()->test(5);
+        var_dump($result);
         var_dump($_SESSION);
     }
 
