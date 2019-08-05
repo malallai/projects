@@ -59,7 +59,7 @@ class PostSql extends Sql {
         try {
             $time = round(microtime(true) * 1000);
             self::run("INSERT INTO comments (post_id, user_id, comment) VALUES(?,?,?)", array($post, $user, $message));
-            self::run("INSERT INTO timer (user_id, last_comment) VALUES (?,?) ON DUPLICATE KEY UPDATE last_comment = ?", array($user, $time, $time));
+            self::run("INSERT INTO timer (user_id) VALUES (?) ON DUPLICATE KEY UPDATE last_comment = current_timestamp", array($user));
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
@@ -69,15 +69,13 @@ class PostSql extends Sql {
 
     public function canComment($user) {
         try {
-            $time = round(microtime(true) * 1000);
-            $result = self::run("SELECT last_comment FROM timer WHERE user_id = ?", array($user));
-            Snackbar::sendSnacks($result['result']['last_comment']);
-            if ((!isset($result['result']) || empty($result['result'])) || $time - $result['result']['last_comment'] > 5000)
-                    return true;
+            $result = self::run("Select * from timer where date_add(timer.last_comment, INTERVAL 5 SECOND) < current_timestamp and user_id = ?", array($user));
+            if (!isset($result['result']) || empty($result['result']))
+                    return false;
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
         }
-        return false;
+        return true;
     }
 
     public function delete($post) {
