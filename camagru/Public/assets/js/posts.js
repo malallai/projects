@@ -126,6 +126,8 @@ function showComments() {
     if (parent.hasAttribute("show_comments")) {
         parent.removeAttribute("show_comments");
     } else {
+        let comments = parent.getElementsByClassName("comments")[0].getElementsByClassName("row")[0];
         parent.setAttribute("show_comments", "");
+        comments.scrollTop = comments.scrollHeight;
     }
 }
