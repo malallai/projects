@@ -75,6 +75,7 @@ class PostSql extends Sql {
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
         }
+        return false;
     }
 
     public function delete($post) {
