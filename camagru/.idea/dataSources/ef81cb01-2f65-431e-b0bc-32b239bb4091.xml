@@ -1309,208 +1309,230 @@
     <table id="328" parent="2" name="likes"/>
     <table id="329" parent="2" name="posts"/>
     <table id="330" parent="2" name="pwd_reset"/>
-    <table id="331" parent="2" name="users"/>
-    <column id="332" parent="327" name="post_id">
+    <table id="331" parent="2" name="timer"/>
+    <table id="332" parent="2" name="users"/>
+    <column id="333" parent="327" name="post_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="327" name="user_id">
+    <column id="334" parent="327" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="327" name="comment">
+    <column id="335" parent="327" name="comment">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="327" name="date">
+    <column id="336" parent="327" name="date">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="336" parent="327" name="comment_posts_id_fk">
+    <index id="337" parent="327" name="comment_posts_id_fk">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="337" parent="327" name="comment_users_id_fk">
+    <index id="338" parent="327" name="comment_users_id_fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="338" parent="327" name="comment_posts_id_fk">
+    <foreign-key id="339" parent="327" name="comment_posts_id_fk">
       <ColNames>post_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>posts</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="339" parent="327" name="comment_users_id_fk">
+    <foreign-key id="340" parent="327" name="comment_users_id_fk">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="340" parent="328" name="post_id">
+    <column id="341" parent="328" name="post_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="328" name="user_id">
+    <column id="342" parent="328" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="342" parent="328" name="likes_ibfk_1">
+    <index id="343" parent="328" name="likes_ibfk_1">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="343" parent="328" name="likes_ibfk_2">
+    <index id="344" parent="328" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="344" parent="328" name="likes_ibfk_1">
+    <foreign-key id="345" parent="328" name="likes_ibfk_1">
       <ColNames>post_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>posts</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="345" parent="328" name="likes_ibfk_2">
+    <foreign-key id="346" parent="328" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="346" parent="329" name="id">
+    <column id="347" parent="329" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="329" name="user_id">
+    <column id="348" parent="329" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="329" name="image_path">
+    <column id="349" parent="329" name="image_path">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="329" name="date">
+    <column id="350" parent="329" name="date">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="350" parent="329" name="user_id">
+    <index id="351" parent="329" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="351" parent="329" name="PRIMARY">
+    <key id="352" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="352" parent="329" name="posts_ibfk_1">
+    <foreign-key id="353" parent="329" name="posts_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="353" parent="330" name="user_id">
+    <column id="354" parent="330" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="330" name="token">
+    <column id="355" parent="330" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="355" parent="330" name="pwd_reset_users_id_fk">
+    <index id="356" parent="330" name="pwd_reset_users_id_fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="356" parent="330" name="pwd_reset_users_id_fk">
+    <foreign-key id="357" parent="330" name="pwd_reset_users_id_fk">
       <ColNames>user_id</ColNames>
       <RefSchemaName>camagru</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="357" parent="331" name="id">
+    <column id="358" parent="331" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="331" name="last_comment">
+      <Position>2</Position>
+      <DataType>float|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="360" parent="331" name="timer_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="361" parent="331" name="timer_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>camagru</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="362" parent="332" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="331" name="username">
+    <column id="363" parent="332" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="331" name="first_name">
+    <column id="364" parent="332" name="first_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="331" name="last_name">
+    <column id="365" parent="332" name="last_name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="331" name="email">
+    <column id="366" parent="332" name="email">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="331" name="password">
+    <column id="367" parent="332" name="password">
       <Position>6</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="331" name="notifications">
+    <column id="368" parent="332" name="notifications">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="331" name="conf_token">
+    <column id="369" parent="332" name="conf_token">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="331" name="confirmed">
+    <column id="370" parent="332" name="confirmed">
       <Position>9</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="331" name="avatar">
+    <column id="371" parent="332" name="avatar">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="367" parent="331" name="PRIMARY">
+    <key id="372" parent="332" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
