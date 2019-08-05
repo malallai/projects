@@ -8,10 +8,10 @@
                 </div>
                 <div class="main-infos-sub">
                     <div class="inline-flex">
-                        <span class="fullname"><?= $params['details']['first_name']." ".$params['details']['last_name'] ?></span>
-                        <span class="username"><?= " ".$params['details']['username']?></span>
+                        <span class="fullname"><?= \Core\Security::convertHtmlEntities($params['details']['first_name'])." ".\Core\Security::convertHtmlEntities($params['details']['last_name']) ?></span>
+                        <span class="username"><?= " ".\Core\Security::convertHtmlEntities($params['details']['username'])?></span>
                     </div>
-                    <div class="usermail"><?= $params['details']['email']?></div>
+                    <div class="usermail"><?= \Core\Security::convertHtmlEntities($params['details']['email'])?></div>
                 </div>
             </div>
         </div>
@@ -27,22 +27,22 @@
             ?>
             <div class="post">
                 <span class="picture">
-                    <img src="<?= $imagePath ?>">
+                    <img src="<?= \Core\Security::convertHtmlEntities($imagePath) ?>">
                 </span>
                 <div class="details">
                     <div class="row">
                         <div class="content">
                             <span class="like-count">
-                                <span><?= $likes ?></span>
+                                <span><?= \Core\Security::convertHtmlEntities($likes) ?></span>
                                 <i class="far fa-heart"></i>
                             </span>
                             <span class="comments-count">
-                                <span><?= $comments ?></span>
+                                <span><?= \Core\Security::convertHtmlEntities($comments) ?></span>
                                 <i class="far fa-comment-alt"></i>
                             </span>
                             <span class="delete-post">
                                 <span>&#160;</span>
-                                <a href="#" onclick="deletePost()"><i id="<?= $post['id'] ?>" class="fas fa-trash"></i></a>
+                                <a href="#" onclick="deletePost()"><i id="<?= \Core\Security::convertHtmlEntities($post['id']) ?>" class="fas fa-trash"></i></a>
                             </span>
                         </div>
                     </div>

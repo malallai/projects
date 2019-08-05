@@ -11,10 +11,10 @@
     <div class="mail-body-content">
         <div class="head">
             <h1>Camagru</h1>
-            <p class="object"><?= $object ?></p>
+            <p class="object"><?= \Core\Security::convertHtmlEntities($object) ?></p>
         </div>
         <hr>
-        <div class="content"><?= $mail_content ?></div>
+        <div class="content"><?= \Core\Security::convertHtmlEntities($mail_content) ?></div>
         <hr>
         <div class="foot">
             <p class="cop">Camagru - malallai 2019</p>

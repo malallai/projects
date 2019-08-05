@@ -17,15 +17,15 @@
         <div id="global-content" class="form-content content content-global active">
             <h2 class="title">Modifier vos informations</h2>
             <form method="POST" action="/user/edit">
-                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="token" value="<?= \Core\Security::convertHtmlEntities($token) ?>">
                 <input type="hidden" name="type" value="global">
-                <input type="hidden" name="old_username" value="<?=$params['user']['username']?>">
+                <input type="hidden" name="old_username" value="<?=\Core\Security::convertHtmlEntities($params['user']['username'])?>">
                 <div class="inline-flex">
-                    <input type="text" name="last_name" id="last_name" class="form-control" value="<?=$params['user']['last_name']?>" autofocus>
-                    <input type="text" name="first_name" id="first_name" class="form-control" value="<?=$params['user']['first_name']?>">
+                    <input type="text" name="last_name" id="last_name" class="form-control" value="<?=\Core\Security::convertHtmlEntities($params['user']['last_name'])?>" autofocus>
+                    <input type="text" name="first_name" id="first_name" class="form-control" value="<?=\Core\Security::convertHtmlEntities($params['user']['first_name'])?>">
                 </div>
-                <input type="email" name="mail" id="mail" class="form-control" value="<?=$params['user']['email']?>">
-                <input type="text" name="username" id="username" class="form-control" value="<?=$params['user']['username']?>">
+                <input type="email" name="mail" id="mail" class="form-control" value="<?=\Core\Security::convertHtmlEntities($params['user']['email'])?>">
+                <input type="text" name="username" id="username" class="form-control" value="<?=\Core\Security::convertHtmlEntities($params['user']['username'])?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <div class="inline-flex">
                     <div class="select-box">
@@ -40,9 +40,9 @@
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">
             <h2 class="title">Édition du mot de passe</h2>
             <form method="POST" action="/user/edit">
-                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="token" value="<?= \Core\Security::convertHtmlEntities($token) ?>">
                 <input type="hidden" name="type" value="password">
-                <input type="hidden" name="username" value="<?=$params['user']['username']?>">
+                <input type="hidden" name="username" value="<?=\Core\Security::convertHtmlEntities($params['user']['username'])?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required>
                 <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required>
