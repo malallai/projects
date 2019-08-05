@@ -29,6 +29,7 @@ function like() {
             token: token.value
         },
         success: function(msg) {
+            console.log(msg);
             if (checkLogged(msg))
                 return;
             let postParent = document.getElementById("post " + post.id);
