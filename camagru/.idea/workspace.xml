@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/Post/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Post/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Post/PostSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Post/PostSql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/User/UserSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserSql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/camagru.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/camagru.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,11 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="72" column="111" selection-start-line="72" selection-start-column="111" selection-end-line="72" selection-end-column="111" />
+            <state relative-caret-position="-97">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#28#41#0#PHP" expanded="true" />
               </folding>
@@ -89,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="59" column="119" lean-forward="true" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
+            <state relative-caret-position="226">
+              <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
               <folding>
                 <element signature="e#28#46#0#PHP" expanded="true" />
               </folding>
@@ -277,8 +274,8 @@
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/posts.js" />
         <option value="$PROJECT_DIR$/App/Post/PostController.php" />
-        <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
         <option value="$PROJECT_DIR$/App/User/UserSql.php" />
+        <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
       </list>
     </option>
   </component>
@@ -475,12 +472,12 @@
       <workItem from="1564341107204" duration="8368000" />
       <workItem from="1564410702230" duration="17980000" />
       <workItem from="1564493681123" duration="8746000" />
-      <workItem from="1564766967225" duration="25009000" />
+      <workItem from="1564766967225" duration="25316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230855000" />
+    <option name="totallyTimeSpent" value="231162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,7 +492,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.14026846" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6203966" visible="true" weight="0.14026846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -882,22 +879,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
+    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="59" column="119" lean-forward="true" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
+        <state relative-caret-position="-97">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
-            <element signature="e#28#46#0#PHP" expanded="true" />
+            <element signature="e#28#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/User/UserSql.php">
+    <entry file="file://$PROJECT_DIR$/App/Post/PostSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="72" column="111" selection-start-line="72" selection-start-column="111" selection-end-line="72" selection-end-column="111" />
+        <state relative-caret-position="226">
+          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
           <folding>
-            <element signature="e#28#41#0#PHP" expanded="true" />
+            <element signature="e#28#46#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

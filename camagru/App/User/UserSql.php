@@ -70,7 +70,6 @@ class UserSql extends Sql {
     public function register($username, $mail, $pwd, $first, $last, $confirmKey) {
         try {
             self::run("INSERT INTO users (username, first_name, last_name, email, password, conf_token) VALUES (?,?,?,?,?,?)", array($username, $first, $last, $mail, $pwd, $confirmKey));
-            self::run("INSERT INTO timer (user_id) VALUES (?)", array($this->getUserByUsername($username)['id']));
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
