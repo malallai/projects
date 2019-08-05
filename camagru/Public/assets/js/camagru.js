@@ -1,4 +1,5 @@
 var mobileDevice = false;
+var lastComment = 0;
 
 window.onload = async function() {
     let aside = document.getElementsByClassName("aside-row")[0];
