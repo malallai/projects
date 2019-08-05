@@ -60,6 +60,10 @@ function newComment() {
     let url = '/post/comment';
     let token = document.getElementsByClassName("token")[0];
     let post = document.getElementById("input " + input.id);
+    if (new Date() - lastComment < 5000) {
+        new_snackbar("Merci de ne pas abuser des commentaires.");
+        return ;
+    }
     $.ajax({
         url: url,
         type: 'POST',
@@ -87,6 +91,7 @@ function newComment() {
                 tmp.innerHTML = msg['author'];
                 row.append(commentParent);
                 post.value = "";
+                lastComment = new Date();
             }
         }
     });
