@@ -23,19 +23,17 @@ class PostPage extends Page {
 
     public function security($args) {
         if (!$this->getController()->getUserController()->isLogged()){
-            $this->redirect("/user");
-            return false;
+            return array("status" => "not_logged");
         }
         if (!$this->checkToken($args) || !$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
-            return false;
+            return array("status" => "errors");
         return true;
     }
 
 
     public function like() {
         header("Content-type: text/plain");
-        $nop = array("status" => 0);
-        if (!$this->security($_POST)) {
+        if (!$nop = $this->security($_POST)) {
             echo json_encode($nop);
             return $nop;
         }
@@ -47,9 +45,12 @@ class PostPage extends Page {
 
     public function comment() {
         header("Content-type: text/plain");
-        $nop = array("status" => 0);
-        if (!$this->security($_POST)) {
+        if (!$nop = $this->security($_POST)) {
             echo json_encode($nop);
+            return $nop;
+        }
+        if (empty($_POST['comment'])) {
+            echo json_encode($nop = array("status" => "empty_comment"));
             return $nop;
         }
         $post = $_POST['id'];
@@ -60,8 +61,7 @@ class PostPage extends Page {
 
     public function delete() {
         header("Content-type: text/plain");
-        $nop = array("status" => 0);
-        if (!$this->security($_POST)) {
+        if (!$nop = $this->security($_POST)) {
             echo json_encode($nop);
             return $nop;
         }
@@ -71,7 +71,7 @@ class PostPage extends Page {
             echo json_encode($result);
             return $result;
         } else {
-            echo json_encode($nop);
+            echo json_encode($nop = array("status" => "error"));
             return $nop;
         }
     }
