@@ -166,7 +166,7 @@
     .pics-row {
         order: 1;
         width: 100%;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0;
     }
 
     .pics-row .pic {
