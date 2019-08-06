@@ -13,7 +13,7 @@ function montageReady() {
 }
 
 function cameraReady() {
-    sleep(500, canvas);
+    sleep(1000, canvas);
     document.getElementsByClassName("content hidden")[0].classList.remove("hidden");
     console.log(video.videoWidth);
     console.log(video.videoHeight);
