@@ -24,10 +24,15 @@ function switchDevice() {
     }
 }
 
-function takePicture() {
-    event.preventDefault();
+function updateSizes() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
+    document.getElementsByClassName("pics")[0].style.maxHeight = document.getElementsByClassName("")[0].clientHeight + "px";
+}
+
+function takePicture() {
+    event.preventDefault();
+    updateSizes();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 }
 
