@@ -1,9 +1,12 @@
 var front = false;
-var video = document.getElementById('video');
-var canvas = document.getElementById('render');
-var context = canvas.getContext('2d');
+var video = null;
+var canvas = null;
+var context = null;
 
 function montageReady() {
+    video = document.getElementById('video');
+    canvas = document.getElementById('render');
+    context = canvas.getContext('2d');
     if (!mobileDevice)
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
     setupCamera();
