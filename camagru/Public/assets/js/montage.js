@@ -1,4 +1,8 @@
 var front = false;
+var video = document.getElementById('video');
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+
 function montageReady() {
     if (!mobileDevice)
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
@@ -7,6 +11,8 @@ function montageReady() {
 
 function cameraReady() {
     document.getElementsByClassName("content hidden")[0].classList.remove("hidden");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 }
 
 function switchDevice() {
@@ -17,8 +23,12 @@ function switchDevice() {
     }
 }
 
+function takePicture() {
+    event.preventDefault();
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+}
+
 function setupCamera() {
-    let video = document.getElementById("video");
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: (mobileDevice ? {facingMode: (front? "user" : "environment")} : true) }).then(function(stream) {
             video.srcObject = stream;
