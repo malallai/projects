@@ -12,10 +12,8 @@ function montageReady() {
     setupCamera();
 }
 
-async function cameraReady() {
+ function cameraReady() {
     document.getElementsByClassName("content hidden")[0].classList.remove("hidden");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
 }
 
 function switchDevice() {
@@ -28,6 +26,8 @@ function switchDevice() {
 
 function takePicture() {
     event.preventDefault();
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 }
 
