@@ -27,7 +27,7 @@ function switchDevice() {
 function updateSizes() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    document.getElementsByClassName("pics")[0].style.maxHeight = (document.getElementsByClassName("montage-row")[0].clientHeight - 30) + "px";
+    document.getElementsByClassName("pics")[0].style.maxHeight = (document.getElementsByClassName("camera")[0].clientHeight - 30) + "px";
 }
 
 function takePicture() {
