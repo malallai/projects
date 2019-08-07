@@ -16,10 +16,9 @@ function montageReady() {
     for (let items of buttons) {
         items.addEventListener("click", function(event) {
             event.preventDefault();
-            if (filter) filter.removeProperty("selected");
+            if (filter) filter.removeAttribute("selected");
             filter = items;
-            console.log(filter);
-            filter.setProperty("selected", "");
+            filter.setAttribute("selected", "");
         });
     }
 
