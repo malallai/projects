@@ -41,7 +41,7 @@ function setupCamera() {
             video.srcObject = stream;
             video.play();
             video.oncanplay = function () {
-                console.log('ready');
+                updateSizes();
             };
             cameraReady();
         }).catch(function (err) {
