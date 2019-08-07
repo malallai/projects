@@ -58,11 +58,9 @@ function updateFilter() {
             case "void":
                 break;
             case "sepia":
-                reloadImage();
                 turn_gray(context);
                 break;
             case "gray":
-                reloadImage();
                 turn_gray(context);
                 break;
             case "42":
