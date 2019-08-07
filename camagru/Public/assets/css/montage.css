@@ -84,13 +84,17 @@
     color: #fff;
 }
 
-.montage-overlay .row .take-picture i {
+.video-overlay .take-picture i {
     font-size: 2.5rem;
 }
 
 .montage-overlay .overlay-button.disable a {
     cursor: not-allowed;
     color: #999;
+}
+
+.render-overlay form input {
+    display: none;
 }
 
 .pics-row {
