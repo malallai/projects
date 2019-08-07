@@ -18,6 +18,7 @@
 .montage-row .main-row {
     order: 2;
     margin: 0 0 1rem 0;
+    width: 100%;
 }
 
 .main-row .camera #render, .main-row .camera #video {
