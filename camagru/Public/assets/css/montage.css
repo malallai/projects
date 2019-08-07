@@ -97,7 +97,7 @@
     display: none;
 }
 
-.render-overlay form .filter {
+.render-overlay .filter {
     width: 2rem;
     border-radius: 50%;
     overflow: hidden;
@@ -105,7 +105,7 @@
 
 }
 
-.render-overlay form .filter img {
+.render-overlay .filter img {
     width: 100%;
 }
 

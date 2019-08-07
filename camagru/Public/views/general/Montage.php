@@ -27,14 +27,9 @@
                     <div class="row">
                         <div class="content">
                             <div class="overlay-button">
-                                <form action="." id="form_filter">
-                                    <input type="radio" name="filter" id="gray">
-                                    <label for="gray">
-                                        <div class="filter">
-                                            <img src="/Public/assets/pictures/filters/gray.jpg">
-                                        </div>
-                                    </label>
-                                </form>
+                                <div class="filter" id="gray">
+                                    <img src="/Public/assets/pictures/filters/gray.jpg">
+                                </div>
                             </div>
                         </div>
                     </div>
