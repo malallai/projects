@@ -2,13 +2,26 @@ var front = false;
 var video = null;
 var canvas = null;
 var context = null;
+var filter = null;
 
 function montageReady() {
+    let parent = document.getElementsByClassName("render-overlay")[0];
     video = document.getElementById('video');
     canvas = document.getElementById('render');
     context = canvas.getContext('2d');
     if (!mobileDevice)
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
+
+    let buttons = parent.getElementsByClassName("overlay-button");
+    for (let items of buttons) {
+        items.addEventListener("click", function(event) {
+            event.preventDefault();
+            filter.removeProperty("selected");
+            filter = items;
+            filter.setProperty("selected", "");
+        });
+    }
+
     setupCamera();
 }
 
