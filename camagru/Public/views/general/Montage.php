@@ -7,7 +7,7 @@
                 <video id="video" width="1280" height="720" autoplay></video>
                 <div class="montage-overlay video-overlay">
                     <div class="row">
-                        <div class="content hidden">
+                        <div class="content">
                             <div class="overlay-button force-send">
                                 <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>
@@ -25,7 +25,7 @@
                 <canvas id="render" width="1280" height="720"></canvas>
                 <div class="montage-overlay render-overlay">
                     <div class="row">
-                        <div class="content hidden">
+                        <div class="content">
                             <div class="overlay-button force-send">
                                 <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>

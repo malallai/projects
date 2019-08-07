@@ -13,7 +13,6 @@ function montageReady() {
 }
 
  function cameraReady() {
-    document.getElementsByClassName("content hidden")[0].classList.remove("hidden");
 }
 
 function switchDevice() {
