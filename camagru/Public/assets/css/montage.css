@@ -23,11 +23,12 @@
 .main-row .camera #render, .main-row .camera #video {
     width: 100%;
     height: 100%;
+    flex-basis: 45%;
 }
 
 .main-row .camera {
-    flex-direction: column;
     display: flex;
+    justify-content: space-between;
 }
 
 .video {
