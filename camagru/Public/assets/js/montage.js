@@ -28,7 +28,11 @@ function montageReady() {
 
 function reloadImage() {
     let temp = document.getElementsByClassName("pics")[0].children[0].children[0].children[0].src;
-    context.drawImage(temp, 0, 0, canvas.width, canvas.height);
+    let img = new Image();
+    img.src = temp;
+    img.onload = function () {
+        context.drawImage(temp, 0, 0, canvas.width, canvas.height);
+    };
 }
 
 function turn_gray(my_context) {
