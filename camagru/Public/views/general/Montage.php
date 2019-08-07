@@ -27,8 +27,23 @@
                     <div class="row">
                         <div class="content">
                             <div class="overlay-button">
+                                <div class="filter" id="void">
+                                    <img src="">
+                                </div>
+                            </div>
+                            <div class="overlay-button">
                                 <div class="filter" id="gray">
                                     <img src="/Public/assets/pictures/filters/gray.jpg">
+                                </div>
+                            </div>
+                            <div class="overlay-button">
+                                <div class="filter" id="sepia">
+                                    <img src="/Public/assets/pictures/filters/sepia.jpg">
+                                </div>
+                            </div>
+                            <div class="overlay-button">
+                                <div class="filter" id="42">
+                                    <img src="/Public/assets/pictures/filters/42.png">
                                 </div>
                             </div>
                         </div>
