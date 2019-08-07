@@ -26,14 +26,11 @@
                 <div class="montage-overlay render-overlay">
                     <div class="row">
                         <div class="content">
-                            <div class="overlay-button force-send">
-                                <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
-                            </div>
-                            <div class="overlay-button take-picture">
-                                <a href="" onclick="takePicture()"><i id="0" class="far fa-circle"></i></a>
-                            </div>
-                            <div class="overlay-button reverse-cam">
-                                <a href="" onclick="switchDevice()"><i id="0" class="fas fa-retweet"></i></a>
+                            <div class="overlay-button">
+                                <form action="." id="form_filter">
+                                    <input type="radio" name="filter" id="gray">
+                                    <label for="gray"><img src="/Public/Filters/grayscale.jpg"></label>
+                                </form>
                             </div>
                         </div>
                     </div>

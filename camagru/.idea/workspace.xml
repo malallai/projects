@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/montage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/montage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -131,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="323">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -460,12 +459,12 @@
       <workItem from="1564766967225" duration="30160000" />
       <workItem from="1565018529858" duration="6348000" />
       <workItem from="1565121142378" duration="5350000" />
-      <workItem from="1565180057961" duration="5040000" />
+      <workItem from="1565180057961" duration="5274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252744000" />
+    <option name="totallyTimeSpent" value="252978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="323">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
         </state>
       </provider>
     </entry>
