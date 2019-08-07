@@ -31,7 +31,7 @@ function reloadImage() {
     let img = new Image();
     img.src = temp;
     img.onload = function () {
-        context.drawImage(temp, 0, 0, canvas.width, canvas.height);
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
 }
 
