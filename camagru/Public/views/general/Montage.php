@@ -5,7 +5,7 @@
         <div class="camera">
             <div class="video">
                 <video id="video" width="1280" height="720" autoplay></video>
-                <div class="video-overlay">
+                <div class="montage-overlay video-overlay">
                     <div class="row">
                         <div class="content hidden">
                             <div class="overlay-button force-send">
@@ -21,7 +21,24 @@
                     </div>
                 </div>
             </div>
-            <canvas class="render" id="render" width="1280" height="720"></canvas>
+            <div class="render">
+                <canvas id="render" width="1280" height="720"></canvas>
+                <div class="montage-overlay render-overlay">
+                    <div class="row">
+                        <div class="content hidden">
+                            <div class="overlay-button force-send">
+                                <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
+                            </div>
+                            <div class="overlay-button take-picture">
+                                <a href="" onclick="takePicture()"><i id="0" class="far fa-circle"></i></a>
+                            </div>
+                            <div class="overlay-button reverse-cam">
+                                <a href="" onclick="switchDevice()"><i id="0" class="fas fa-retweet"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="filters">
 
