@@ -25,6 +25,11 @@
     height: 100%;
 }
 
+.main-row .camera {
+    flex-direction: column;
+    display: flex;
+}
+
 .video {
     width: 100%;
     position: relative;
