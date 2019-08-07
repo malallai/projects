@@ -103,7 +103,11 @@
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid white;
+}
 
+.render-overlay .overlay-button[selected] .filter {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .render-overlay .filter img {
