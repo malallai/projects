@@ -50,7 +50,7 @@ function turn_gray(my_context) {
 
 function updateFilter() {
     if (filter) {
-        switch (filter.children.id) {
+        switch (filter.children[0].id) {
             case "void":
                 break;
             case "sepia":
