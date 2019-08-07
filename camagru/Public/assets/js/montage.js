@@ -24,14 +24,8 @@ function switchDevice() {
     }
 }
 
-function updateSizes() {
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-}
-
 function takePicture() {
     event.preventDefault();
-    updateSizes();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 }
 
@@ -41,7 +35,8 @@ function setupCamera() {
             video.srcObject = stream;
             video.play();
             video.oncanplay = function () {
-                updateSizes();
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
             };
             cameraReady();
         }).catch(function (err) {
