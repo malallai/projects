@@ -15,7 +15,8 @@
 }
 
 .montage-row .main-row {
-    flex-basis: 50%;
+    order: 2;
+    margin: 0 0 1rem 0;
 }
 
 .main-row .camera #render, .main-row .camera #video {
@@ -78,9 +79,11 @@
 }
 
 .pics-row {
-    flex-basis: 45%;
     background-color: #fff;
     border-radius: 2px;
+    order: 1;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 .pics-row .content {
@@ -102,21 +105,33 @@
 
 .pics-row .pics {
     max-height: 70vh;
-    overflow-y: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    overflow-x: auto;
 }
 
 .pics-row .pic {
     display: flex;
-    margin: .25rem 0;
     position: relative;
     font-size: 0;
+    margin: .25rem;
+}
+
+.pics-row .pic:first-child {
+    margin: .25rem .25rem .25rem 0;
+}
+
+.pics-row .pic:last-child {
+    margin: .25rem 0 .25rem .25rem;
+}
+
+.pics-row .picture {
+    height: 10rem;
 }
 
 .pics-row .pic .picture img {
     height: 100%;
-    width: 100%;
+    width: auto;
     transition: all ease .25s;
 }
 
@@ -156,42 +171,6 @@
     .montage-row {
         flex-direction: column;
         max-width: 500px;
-    }
-
-    .main-row {
-        order: 2;
-        margin: 0 0 1rem 0;
-    }
-
-    .pics-row {
-        order: 1;
-        width: 100%;
-        margin: 1rem 0;
-    }
-
-    .pics-row .pic {
-        margin: .25rem;
-    }
-
-    .pics-row .pic:first-child {
-        margin: .25rem .25rem .25rem 0;
-    }
-
-    .pics-row .pic:last-child {
-        margin: .25rem 0 .25rem .25rem;
-    }
-
-    .pics-row .pics {
-        flex-flow: row nowrap;
-        overflow-x: auto;
-    }
-
-    .pics-row .picture {
-        height: 10rem;
-    }
-
-    .pics-row .pic .picture img {
-        width: auto;
     }
 }
 
