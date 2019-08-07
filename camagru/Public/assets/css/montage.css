@@ -29,6 +29,7 @@
 .main-row .camera {
     display: flex;
     justify-content: space-between;
+
 }
 
 .video {
