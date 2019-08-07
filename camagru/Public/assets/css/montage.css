@@ -39,7 +39,7 @@
     justify-content: space-between;
 }
 
-.video {
+.video, .render {
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -47,7 +47,7 @@
     font-size: 0;
 }
 
-.video .montage-overlay {
+.montage-overlay {
     width: 100%;
     height: 100%;
     display: flex;
@@ -59,32 +59,32 @@
     font-size: 15px;
 }
 
-.video .montage-overlay .row {
+.montage-overlay .row {
     position: relative;
     width: 100%;
     display: flex;
 }
 
-.video .montage-overlay .row .content {
+.montage-overlay .row .content {
     display: flex;
     margin: auto auto 0 auto;
 }
 
-.video .montage-overlay .row .content.hidden {
+.montage-overlay .row .content.hidden {
     display: none;
 }
 
-.video .montage-overlay .row .overlay-button {
+.montage-overlay .row .overlay-button {
     padding-bottom: 1rem;
     margin: auto .25rem 0 .25rem;
 }
 
-.video .montage-overlay .row .overlay-button:not(.disable) a {
+.montage-overlay .row .overlay-button:not(.disable) a {
     text-decoration: none;
     color: #fff;
 }
 
-.video .montage-overlay .row .take-picture i {
+.montage-overlay .row .take-picture i {
     font-size: 2.5rem;
 }
 
