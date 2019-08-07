@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <canvas id="render" width="1280" height="720"></canvas>
+            <canvas class="render" id="render" width="1280" height="720"></canvas>
         </div>
         <div class="filters">
 
