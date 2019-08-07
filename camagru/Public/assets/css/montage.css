@@ -97,6 +97,12 @@
     display: none;
 }
 
+.render-overlay form label {
+    width: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .pics-row {
     background-color: #fff;
     border-radius: 2px;
