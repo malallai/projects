@@ -26,7 +26,7 @@
 }
 
 .main-row .camera .render, .main-row .camera .video {
-    flex-basis: 45%;
+    flex-basis: 49.5%;
 }
 
 .main-row .camera {
@@ -178,6 +178,17 @@
 }
 
 @media only screen and (max-width: 750px) {
+    .montage-row .camera {
+        flex-direction: column;
+    }
+
+    .montage-row .camera .render, .montage-row .camera .video {
+        flex: 1;
+    }
+
+    .montage-row .camera .render {
+        margin-bottom: 1rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
