@@ -29,7 +29,11 @@
                             <div class="overlay-button">
                                 <form action="." id="form_filter">
                                     <input type="radio" name="filter" id="gray">
-                                    <label for="gray"><img src="/Public/assets/pictures/filters/gray.jpg"></label>
+                                    <label for="gray">
+                                        <div class="filter">
+                                            <img src="/Public/assets/pictures/filters/gray.jpg">
+                                        </div>
+                                    </label>
                                 </form>
                             </div>
                         </div>
