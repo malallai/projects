@@ -97,10 +97,16 @@
     display: none;
 }
 
-.render-overlay form label {
-    width: 1rem;
+.render-overlay form .filter {
+    width: 2rem;
     border-radius: 50%;
     overflow: hidden;
+    border: 3px solid white;
+
+}
+
+.render-overlay form .filter img {
+    width: 100%;
 }
 
 .pics-row {
