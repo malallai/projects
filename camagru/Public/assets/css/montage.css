@@ -26,15 +26,12 @@
     height: 100%;
 }
 
-.main-row .camera .render {
+.main-row .camera .render, .main-row .camera .video {
+    flex-basis: 49.5%;
     border: 1px solid rgba(0,0,0,.0975);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-}
-
-.main-row .camera .render, .main-row .camera .video {
-    flex-basis: 49.5%;
 }
 
 .main-row .camera {
