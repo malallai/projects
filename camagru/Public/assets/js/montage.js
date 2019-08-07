@@ -40,6 +40,9 @@ function setupCamera() {
         navigator.mediaDevices.getUserMedia({ video: (mobileDevice ? {facingMode: (front? "user" : "environment")} : true) }).then(function(stream) {
             video.srcObject = stream;
             video.play();
+            video.onload = function () {
+                console.log('ready');
+            };
             cameraReady();
         }).catch(function (err) {
             console.log(err);
