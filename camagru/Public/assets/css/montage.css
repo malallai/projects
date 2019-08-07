@@ -47,7 +47,7 @@
     font-size: 0;
 }
 
-.video .video-overlay {
+.video .montage-overlay {
     width: 100%;
     height: 100%;
     display: flex;
@@ -59,36 +59,36 @@
     font-size: 15px;
 }
 
-.video .video-overlay .row {
+.video .montage-overlay .row {
     position: relative;
     width: 100%;
     display: flex;
 }
 
-.video .video-overlay .row .content {
+.video .montage-overlay .row .content {
     display: flex;
     margin: auto auto 0 auto;
 }
 
-.video .video-overlay .row .content.hidden {
+.video .montage-overlay .row .content.hidden {
     display: none;
 }
 
-.video .video-overlay .row .overlay-button {
+.video .montage-overlay .row .overlay-button {
     padding-bottom: 1rem;
     margin: auto .25rem 0 .25rem;
 }
 
-.video .video-overlay .row .overlay-button:not(.disable) a {
+.video .montage-overlay .row .overlay-button:not(.disable) a {
     text-decoration: none;
     color: #fff;
 }
 
-.video .video-overlay .row .take-picture i {
+.video .montage-overlay .row .take-picture i {
     font-size: 2.5rem;
 }
 
-.video-overlay .overlay-button.disable a {
+.montage-overlay .overlay-button.disable a {
     cursor: not-allowed;
     color: #999;
 }
