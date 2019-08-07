@@ -84,7 +84,6 @@ function switchDevice() {
 function takePicture() {
     event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    document.getElementsByClassName("pics")[0].children[0].children[0].children[0].src = context.src;
 }
 
 function setupCamera() {
@@ -96,7 +95,6 @@ function setupCamera() {
                 canvas.width = video.videoWidth;
                 canvas.height = video.videoHeight;
             };
-            cameraReady();
         }).catch(function (err) {
             console.log(err);
             console.log("no camera");
