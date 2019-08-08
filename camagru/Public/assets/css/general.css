@@ -114,7 +114,7 @@ body[has_aside] .aside-bar {
     overflow-y: auto !important;
 }
 
-.button {
+.aside-bar .aside-button {
     width: 100%;
     height: 3rem;
     display: flex;
@@ -123,7 +123,7 @@ body[has_aside] .aside-bar {
     margin: 1rem 0;
 }
 
-.button .button-content {
+.aside-button .button-content {
     margin: 0 auto;
     width: 75%;
     position: relative;
@@ -138,7 +138,7 @@ body[has_aside] .aside-bar {
     transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
 }
 
-.button a {
+.aside-bar .aside-button a {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -147,23 +147,23 @@ body[has_aside] .aside-bar {
     display: flex;
 }
 
-.button span {
+.aside-bar .aside-button span {
     margin: auto;
 }
 
-.button.button-login .button-content {
+.aside-button.button-login .button-content {
     background-color: #2b3441;
 }
 
-.button.button-login .button-content:hover {
+.aside-button.button-login .button-content:hover {
     background-color: #202020;
 }
 
-.button.button-login .button-content a {
+.aside-button.button-login .button-content a {
     color: #fff;
 }
 
-.button:hover {
+.aside-button:hover {
 }
 
 .aside-bar li {
