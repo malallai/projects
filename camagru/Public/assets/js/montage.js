@@ -28,22 +28,14 @@ function montageReady() {
     }
 
     canvas.addEventListener("mousemove", e => {
-        let rect = canvas.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let y = e.clientY - rect.top;
-        let top = 100 * y / canvas.offsetHeight;
-        let left = 100 * x / canvas.offsetWidth;
-        console.log(top + ' ' + left);
         if (filter_pick) {
             let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
             let y = e.clientY - rect.top;
-            let top = 100 * y / canvas.height;
-            let left = 100 * x / canvas.width;
+            let top = 100 * y / canvas.offsetHeight;
+            let left = 100 * x / canvas.offsetWidth;
             filter_img.style.top = top + '%';
             filter_img.style.left = left + '%';
-            console.log(top);
-            console.log(left);
         }
     });
 
