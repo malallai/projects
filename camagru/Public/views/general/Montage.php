@@ -44,7 +44,6 @@
                             <div class="overlay-button">
                                 <div class="filter" id="42">
                                     <img src="/Public/assets/pictures/filters/42.png">
-                                    <img src="/Public/assets/pictures/filters/42-filter.png" class="hidden">
                                 </div>
                             </div>
                         </div>
