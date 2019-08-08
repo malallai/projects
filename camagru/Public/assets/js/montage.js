@@ -4,6 +4,7 @@ var canvas = null;
 var context = null;
 var filter = null;
 var picture = null;
+var filters = true;
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -38,6 +39,17 @@ function montageReady() {
     }
 
     setupCamera();
+}
+
+function switchFilters() {
+    event.preventDefault();
+    let render = document.getElementsByClassName("render")[0];
+    let button = document.getElementsByClassName("filters-button")[0];
+    if (!filters)
+        render.setAttribute("hide_filters", "");
+    else render.removeAttribute("hide_filters");
+    button.className = button.className.replace(filters ? "green" : "red", filters ? "red" : "green");
+    filters = !filters;
 }
 
 function reloadImage() {
