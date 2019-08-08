@@ -39,6 +39,10 @@ body {
     opacity: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 /** Aside */
 
 .aside-row {
