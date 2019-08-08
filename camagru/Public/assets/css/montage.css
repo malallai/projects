@@ -103,7 +103,7 @@
     opacity: 0;
 }
 
-.render:hover .render-overlay {
+.render-overlay:hover {
     opacity: 1;
 }
 
