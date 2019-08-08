@@ -28,6 +28,7 @@ function montageReady() {
     }
 
     canvas.addEventListener("mousemove", e => {
+        console.log("move");
         if (filter_pick) {
             filter_img.style.top = (100 * e.clientY / canvas.top) + '%';
             filter_img.style.left = (100 * e.clientX / canvas.left) + '%';
@@ -90,12 +91,10 @@ function updateFilter() {
                 img.style.width = '50%';
                 img.style.left = '25%';
                 img.style.bottom = '0';
+                filter_img = img;
                 img.addEventListener("click", () => {
                     filter_pick = !filter_pick;
-                    if (!filter_pick)
-                        console.log(img);
                 });
-                filter_img = img;
                 document.getElementsByClassName("render")[0].prepend(img);
                 break;
             default: break;
