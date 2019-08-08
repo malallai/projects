@@ -93,6 +93,14 @@
     color: #999;
 }
 
+.render-overlay {
+    opacity: 0;
+}
+
+.render:hover .render-overlay {
+    opacity: 1;
+}
+
 .render-overlay form input {
     display: none;
 }
