@@ -79,10 +79,10 @@
     <div id="buttons-row" class="row buttons-row">
         <div class="montage-button button-blue">
             <div class="button-content">
-                <a href="/user"><span>Button 1</span></a>
+                <a href="/user"><span>Envoyer l'image</span></a>
             </div>
             <div class="button-content">
-                <a href="/user"><span>Button 1</span></a>
+                <a href="/user"><span>Ajouter depuis l'ordinateur</span></a>
             </div>
         </div>
     </div>
