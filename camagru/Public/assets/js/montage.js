@@ -39,6 +39,11 @@ function montageReady() {
         }
     });
 
+    document.getElementsByClassName("render")[0].addEventListener("mousedown", e => {
+        if (filter_pick)
+            filter_pick = !filter_pick;
+    });
+
     setupCamera();
 }
 
