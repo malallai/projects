@@ -34,6 +34,7 @@ function montageReady() {
         let top = 100 * canvas.offsetTop / y;
         let left = 100 * canvas.offsetLeft / x;
         console.log(top + ' ' + left);
+        console.log(x + ' ' + y);
         if (filter_pick) {
             let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
