@@ -33,7 +33,7 @@ function montageReady() {
         x -= canvas.offsetLeft;
         y -= canvas.offsetTop;
 
-        alert("x:" + x + " y:" + y);
+        console.log("x:" + x + " y:" + y);
     }
 
     setupCamera();
