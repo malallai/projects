@@ -260,6 +260,22 @@
     background-color: #202020;
 }
 
+.montage-button.button-red .button-content {
+    background-color: #e53935;
+}
+
+.montage-button.button-red .button-content:hover {
+    background-color: #b71c1c;
+}
+
+.montage-button.button-green .button-content {
+    background-color: #35e552;
+}
+
+.montage-button.button-green .button-content:hover {
+    background-color: #1cb742;
+}
+
 .montage-button.button-blue .button-content a {
     color: #fff;
 }
