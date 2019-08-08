@@ -29,9 +29,9 @@ function montageReady() {
 
     canvas.addEventListener("mousemove", e => {
         if (filter_pick) {
-            console.log(e);
-            let x = e.clientX - canvas.left;
-            let y = e.clientY - canvas.top;
+            let rect = context.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
             let top = 100 * canvas.offsetTop / y;
             let left = 100 * canvas.offsetLeft / x;
             filter_img.style.top = top + '%';
