@@ -38,8 +38,8 @@ function montageReady() {
             let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
             let y = e.clientY - rect.top;
-            let top = 100 * canvas.offsetTop / y;
-            let left = 100 * canvas.offsetLeft / x;
+            let top = 100 * canvas.height / y;
+            let left = 100 * canvas.width / x;
             filter_img.style.top = top + '%';
             filter_img.style.left = left + '%';
             console.log(top);
