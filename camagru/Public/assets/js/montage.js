@@ -66,7 +66,7 @@ function updateFilter() {
                 let img = new Image();
                 img.src = filter.children[0].children[1].src;
                 img.onload = function(){
-                    context.drawImage(img, (canvas.width / 2) - (img.width / 2), canvas.height - (img.height / 2), img.width / 2, img.height / 2);
+                    context.drawImage(img, (canvas.width / 2), canvas.height - (img.height / 2), img.width / 2, img.height / 2);
                 };
                 break;
             default: break;
