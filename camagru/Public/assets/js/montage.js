@@ -5,7 +5,8 @@ var context = null;
 var filter = null;
 var picture = null;
 var filters = true;
-var overlay_pic = null;
+var filter_pick = false;
+var filter_img = null;
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -26,22 +27,12 @@ function montageReady() {
         });
     }
 
-    canvas.addEventListener("mousedown", getPosition, false);
-    function getPosition(event) {
-        if (overlay_pic) {
-            let x = event.x;
-            let y = event.y;
-            let ox = overlay_pic.x;
-            let oy = overlay_pic.y;
-
-            x -= canvas.offsetLeft;
-            y -= canvas.offsetTop;
-            ox -= overlay_pic.offsetLeft;
-            oy -= overlay_pic.offsetTop;
-            console.log("ox:" + ox + " oy:" + oy);
-            console.log("x:" + x + " y:" + y);
+    canvas.addEventListener("mousemove", e => {
+        if (filter_pick) {
+            filter_img.style.top = (100 * e.clientY / canvas.top) + '%';
+            filter_img.style.left = (100 * e.clientX / canvas.left) + '%';
         }
-    }
+    });
 
     setupCamera();
 }
@@ -96,11 +87,16 @@ function updateFilter() {
                 let img = new Image();
                 img.src = filter.children[0].children[1].src;
                 img.classList.add("filter-img");
-                img.style.width = (img.width / 2) + 'px';
-                img.style.left = ((canvas.width / 2) - (img.width / 4)) + 'px';
-                img.style.bottom = (canvas.height - (img.height / 2)) + 'px';
+                img.style.width = '50%';
+                img.style.left = '25%';
+                img.style.bottom = '0';
+                img.addEventListener("click", () => {
+                    filter_pick = !filter_pick;
+                    if (!filter_pick)
+                        console.log(img);
+                });
+                filter_img = img;
                 document.getElementsByClassName("render")[0].prepend(img);
-                overlay_pic = img;
                 break;
             default: break;
         }
