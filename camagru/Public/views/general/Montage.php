@@ -62,7 +62,7 @@
             </div>
             <div class="pics">
                 <div id="default-details" class="hidden">
-                    <div class="details">
+                    <div class="details" onclick="deletePic(this)">
                         <div class="row">
                             <div class="content">
                                 <span class="delete-post">
