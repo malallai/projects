@@ -213,17 +213,15 @@
 }
 
 .montage-button {
-    width: 100%;
+    width: 50%;
     height: 3rem;
     display: flex;
-    position: absolute;
     bottom: 0;
-    margin: 1rem 0;
 }
 
 .montage-button .button-content {
     margin: 0 auto;
-    width: 75%;
+    width: 44%;
     position: relative;
     display: flex;
     background-color: #fafafa;
@@ -272,6 +270,10 @@
 
     .montage-row .camera .video {
         margin-bottom: 1rem;
+    }
+
+    .montage-button {
+        width: 100%;
     }
 }
 
