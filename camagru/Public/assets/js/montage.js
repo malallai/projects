@@ -86,11 +86,11 @@ function takePicture() {
     event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     let pictures = document.getElementsByClassName("pics")[0];
-    let newPic = pictures.createElement("div");
-    newPic.classList.add("pic");
-    let pic = newPic.createElement("canvas");
+    let newPic = document.createElement("div");
+    let pic = document.createElement("canvas");
     pic.width = video.videoWidth;
     pic.height = video.videoHeight;
+    newPic.classList.add("pic");
     newPic.append(pic);
     pictures.append(newPic);
     picture = newPic;
