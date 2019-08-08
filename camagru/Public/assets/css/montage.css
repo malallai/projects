@@ -10,6 +10,10 @@
     flex-direction: column;
 }
 
+.buttons-row {
+    order: 3;
+}
+
 .row {
     transition: margin 0.2s ease;
     transition-delay:  0.05s;
