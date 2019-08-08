@@ -113,7 +113,7 @@ function takePicture() {
             picture.removeAttribute("selected");
         picture = newPic.children[0];
         picture.setAttribute("selected", "");
-        reloadImage();
+        updateFilter();
     });
 }
 
