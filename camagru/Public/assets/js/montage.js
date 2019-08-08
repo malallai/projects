@@ -5,6 +5,7 @@ var context = null;
 var filter = null;
 var picture = null;
 var filters = true;
+var overlay_pic = null;
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -27,13 +28,20 @@ function montageReady() {
 
     canvas.addEventListener("mousedown", getPosition, false);
     function getPosition(event) {
-        let x = event.x;
-        let y = event.y;
+        if (overlay_pic) {
+            let x = event.x;
+            let y = event.y;
+            let ox = overlay_pic.x;
+            let oy = overlay_pic.y;
 
-        x -= canvas.offsetLeft;
-        y -= canvas.offsetTop;
+            x -= canvas.offsetLeft;
+            y -= canvas.offsetTop;
 
-        console.log("x:" + x + " y:" + y);
+            if (x >= ox && x < x + overlay_pic.width && y >= oy && y < overlay_pic.height)
+                console.log(overlay_pic);
+
+            console.log("x:" + x + " y:" + y);
+        }
     }
 
     setupCamera();
@@ -88,6 +96,7 @@ function updateFilter() {
             case "42":
                 let img = new Image();
                 img.src = filter.children[0].children[1].src;
+                overlay_pic = img;
                 img.onload = function(){
                     context.drawImage(img, (canvas.width / 2) - (img.width / 4), canvas.height - (img.height / 2), img.width / 2, img.height / 2);
                 };
