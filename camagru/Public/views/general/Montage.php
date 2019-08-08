@@ -52,9 +52,6 @@
                 </div>
             </div>
         </div>
-        <div class="filters">
-
-        </div>
     </div>
     <div id="pics-row" class="row pics-row">
         <div class="content">
