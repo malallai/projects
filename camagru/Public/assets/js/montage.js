@@ -28,8 +28,17 @@ function montageReady() {
     }
 
     canvas.addEventListener("mousemove", e => {
+        let rect = canvas.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        let top = 100 * canvas.offsetTop / y;
+        let left = 100 * canvas.offsetLeft / x;
+        filter_img.style.top = top + '%';
+        filter_img.style.left = left + '%';
+        console.log(top);
+        console.log(left);
         if (filter_pick) {
-            let rect = context.getBoundingClientRect();
+            let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
             let y = e.clientY - rect.top;
             let top = 100 * canvas.offsetTop / y;
