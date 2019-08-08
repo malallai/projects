@@ -81,8 +81,6 @@
             <div class="button-content">
                 <a href="/user"><span>Button 1</span></a>
             </div>
-        </div>
-        <div class="montage-button button-blue">
             <div class="button-content">
                 <a href="/user"><span>Button 1</span></a>
             </div>
