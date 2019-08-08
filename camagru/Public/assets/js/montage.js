@@ -82,6 +82,14 @@ function switchDevice() {
     }
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+function deletePic(pic) {
+    document.getElementById(pic.id).remove();
+}
+
 function takePicture() {
     event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -89,9 +97,12 @@ function takePicture() {
     let newPic = document.createElement("div");
     let pic = document.createElement("canvas");
     let details = document.getElementById("default-details").children[0].cloneNode(true);
+    let id = getRandomInt(9999);
     pic.width = video.videoWidth;
     pic.height = video.videoHeight;
     newPic.classList.add("pic");
+    newPic.id = id + '';
+    details.id = id + '';
     newPic.append(pic);
     newPic.append(details);
     pictures.append(newPic);
