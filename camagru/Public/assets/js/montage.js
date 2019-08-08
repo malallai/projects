@@ -31,8 +31,12 @@ function montageReady() {
         if (filter_pick) {
             console.log("move");
             console.log(filter_img);
-            filter_img.style.top = (100 * e.clientY / canvas.top) + '%';
-            filter_img.style.left = (100 * e.clientX / canvas.left) + '%';
+            let top = 100 * e.clientY / canvas.top;
+            let left = 100 * e.clientX / canvas.left;
+            filter_img.style.top = top + '%';
+            filter_img.style.left = left + '%';
+            console.log(top);
+            console.log(left);
         }
     });
 
@@ -91,7 +95,7 @@ function updateFilter() {
                 img.classList.add("filter-img");
                 img.style.width = '50%';
                 img.style.left = '25%';
-                img.style.bottom = '0';
+                img.style.top = '100%';
                 filter_img = img;
                 img.addEventListener("click", () => {
                     filter_pick = !filter_pick;
