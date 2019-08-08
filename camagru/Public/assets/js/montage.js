@@ -3,6 +3,7 @@ var video = null;
 var canvas = null;
 var context = null;
 var filter = null;
+var picture = null;
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -27,12 +28,9 @@ function montageReady() {
 }
 
 function reloadImage() {
-    let temp = document.getElementsByClassName("pics")[0].children[0].children[0].children[0].src;
-    let img = new Image();
-    img.src = temp;
-    img.onload = function () {
-        context.drawImage(img, 0, 0, canvas.width, canvas.height);
-    };
+    let image = new Image();
+    image.src = picture.src;
+    context.drawImage(picture, 0, 0, canvas.width, canvas.height);
 }
 
 function turn_gray(my_context) {
@@ -54,6 +52,7 @@ function turn_gray(my_context) {
 
 function updateFilter() {
     if (filter) {
+        reloadImage();
         switch (filter.children[0].id) {
             case "void":
                 break;
@@ -86,6 +85,23 @@ function switchDevice() {
 function takePicture() {
     event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    let pictures = document.getElementsByClassName("pics")[0];
+    let newPic = pictures.createElement("div");
+    newPic.classList.add("pic");
+    let pic = newPic.createElement("canvas");
+    pic.width = video.videoWidth;
+    pic.height = video.videoHeight;
+    newPic.append(pic);
+    pictures.append(newPic);
+    picture = newPic;
+    pic.getContext('2d').drawImage(context, 0, 0, pic.width, pic.height);
+    newPic.addEventListener("click", () => {
+        if (picture)
+            picture.removeAttribute("selected");
+        picture = newPic;
+        picture.setAttribute("selected", "");
+        reloadImage();
+    });
 }
 
 function setupCamera() {
