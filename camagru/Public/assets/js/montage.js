@@ -36,10 +36,7 @@ function montageReady() {
 
             x -= canvas.offsetLeft;
             y -= canvas.offsetTop;
-
-            if (x >= ox && x < x + overlay_pic.width && y >= oy && y < overlay_pic.height)
-                console.log(overlay_pic);
-
+            console.log("ox:" + ox + " oy:" + oy);
             console.log("x:" + x + " y:" + y);
         }
     }
