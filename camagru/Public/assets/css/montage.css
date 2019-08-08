@@ -82,6 +82,7 @@
 .montage-overlay .row .overlay-button {
     padding-bottom: 1rem;
     margin: auto .25rem 0 .25rem;
+    cursor: pointer;
 }
 
 .montage-overlay .row .overlay-button:not(.disable) a {
