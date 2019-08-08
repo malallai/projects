@@ -88,10 +88,12 @@ function takePicture() {
     let pictures = document.getElementsByClassName("pics")[0];
     let newPic = document.createElement("div");
     let pic = document.createElement("canvas");
+    let details = document.getElementById("default-details").children[0].cloneNode(true);
     pic.width = video.videoWidth;
     pic.height = video.videoHeight;
     newPic.classList.add("pic");
     newPic.append(pic);
+    newPic.append(details);
     pictures.append(newPic);
     picture = newPic.children[0];
     pic.getContext('2d').drawImage(video, 0, 0, pic.width, pic.height);
