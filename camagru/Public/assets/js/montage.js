@@ -27,7 +27,7 @@ function montageReady() {
         });
     }
 
-    canvas.addEventListener("mousemove", e => {
+    document.getElementsByClassName("render")[0].addEventListener("mousemove", e => {
         if (filter_pick) {
             let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
