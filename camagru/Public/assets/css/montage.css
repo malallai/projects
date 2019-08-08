@@ -218,6 +218,7 @@
     height: 3rem;
     display: flex;
     bottom: 0;
+    justify-content: space-between;
 }
 
 .montage-button .button-content {
@@ -225,7 +226,6 @@
     display: flex;
     background-color: #fafafa;
     border: 1px solid rgba(0,0,0,.0975);
-    justify-content: space-between;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
