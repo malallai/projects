@@ -51,7 +51,7 @@
         <?php } ?>
     </div>
 </div>
-<div class="aside-button button-logged">
+<div class="button button-logged">
     <div class="manage-pictures button-content">
         <a href="/user/edit"><span>Édition du profile</span></a>
     </div>
