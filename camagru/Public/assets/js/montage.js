@@ -28,8 +28,9 @@ function montageReady() {
     }
 
     canvas.addEventListener("mousemove", e => {
-        console.log("move");
         if (filter_pick) {
+            console.log("move");
+            console.log(filter_img);
             filter_img.style.top = (100 * e.clientY / canvas.top) + '%';
             filter_img.style.left = (100 * e.clientX / canvas.left) + '%';
         }
