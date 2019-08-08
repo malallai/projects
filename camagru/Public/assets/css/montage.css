@@ -151,6 +151,7 @@
     position: relative;
     font-size: 0;
     margin: .25rem;
+    height: 10rem;
 }
 
 .pics-row .pic:first-child {
@@ -161,11 +162,7 @@
     margin: .25rem 0 .25rem .25rem;
 }
 
-.pics-row .picture {
-    height: 10rem;
-}
-
-.pics-row .pic .picture img {
+.pics-row .pic canvas {
     height: 100%;
     width: auto;
     transition: all ease .25s;
