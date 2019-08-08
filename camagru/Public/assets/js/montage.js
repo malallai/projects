@@ -31,15 +31,15 @@ function montageReady() {
         let rect = canvas.getBoundingClientRect();
         let x = e.clientX - rect.left;
         let y = e.clientY - rect.top;
-        let top = 100 * canvas.height / y;
-        let left = 100 * canvas.width / x;
+        let top = 100 * y / canvas.height;
+        let left = 100 * x / canvas.width;
         console.log(top + ' ' + left);
         if (filter_pick) {
             let rect = canvas.getBoundingClientRect();
             let x = e.clientX - rect.left;
             let y = e.clientY - rect.top;
-            let top = 100 * canvas.height / y;
-            let left = 100 * canvas.width / x;
+            let top = 100 * y / canvas.height;
+            let left = 100 * x / canvas.width;
             filter_img.style.top = top + '%';
             filter_img.style.left = left + '%';
             console.log(top);
