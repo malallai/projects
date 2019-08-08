@@ -105,7 +105,7 @@ function takePicture() {
     details.id = id + '';
     newPic.append(pic);
     newPic.append(details);
-    pictures.append(newPic);
+    pictures.prepend(newPic);
     picture = newPic.children[0];
     pic.getContext('2d').drawImage(video, 0, 0, pic.width, pic.height);
     newPic.addEventListener("click", () => {
