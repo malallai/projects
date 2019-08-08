@@ -93,12 +93,12 @@ function takePicture() {
     newPic.classList.add("pic");
     newPic.append(pic);
     pictures.append(newPic);
-    picture = newPic;
+    picture = newPic.children[0];
     pic.getContext('2d').drawImage(video, 0, 0, pic.width, pic.height);
     newPic.addEventListener("click", () => {
         if (picture)
             picture.removeAttribute("selected");
-        picture = newPic;
+        picture = newPic.children[0];
         picture.setAttribute("selected", "");
         reloadImage();
     });
