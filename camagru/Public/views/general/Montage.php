@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="content">
                                 <span class="delete-post">
-                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                    <a href="#"><i class="fas fa-trash"></i></a>
                                 </span>
                             </div>
                         </div>
