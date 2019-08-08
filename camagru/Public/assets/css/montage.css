@@ -13,6 +13,7 @@
 .buttons-row {
     order: 3;
     width: 100%;
+    display: flex;
 }
 
 .row {
@@ -269,14 +270,14 @@
 }
 
 .montage-button.button-green .button-content {
-    background-color: #35e552;
+    background-color: #30c849;
 }
 
 .montage-button.button-green .button-content:hover {
-    background-color: #1cb742;
+    background-color: #189937;
 }
 
-.montage-button.button-blue .button-content a {
+.montage-button .button-content a {
     color: #fff;
 }
 
