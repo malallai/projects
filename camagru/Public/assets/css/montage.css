@@ -53,6 +53,10 @@
     font-size: 0;
 }
 
+.render[hide_filters] {
+    display: none;
+}
+
 .montage-overlay {
     width: 100%;
     height: 100%;
