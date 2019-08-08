@@ -248,6 +248,10 @@
     margin: auto;
 }
 
+.filters-button, .filters-button .button-content {
+    margin-left: auto;
+}
+
 .montage-button.button-blue .button-content {
     background-color: #2b3441;
 }
