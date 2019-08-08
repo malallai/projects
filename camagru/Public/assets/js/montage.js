@@ -94,7 +94,7 @@ function updateFilter() {
                 img.classList.add("filter-img");
                 img.style.width = '50%';
                 img.style.left = '25%';
-                img.style.top = '100%';
+                img.style.top = '0';
                 filter_img = img;
                 img.addEventListener("click", () => {
                     filter_pick = !filter_pick;
