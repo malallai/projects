@@ -95,11 +95,12 @@ function updateFilter() {
             case "42":
                 let img = new Image();
                 img.src = filter.children[0].children[1].src;
+                img.classList.add("filter-img");
+                img.style.width = (img.width / 2) + 'px';
+                img.style.left = ((canvas.width / 2) - (img.width / 4)) + 'px';
+                img.style.bottom = (canvas.height - (img.height / 2)) + 'px';
+                document.getElementsByClassName("render")[0].prepend(img);
                 overlay_pic = img;
-                document.getElementsByClassName("render")[0].append(img);
-                img.onload = function(){
-                    context.drawImage(img, (canvas.width / 2) - (img.width / 4), canvas.height - (img.height / 2), img.width / 2, img.height / 2);
-                };
                 break;
             default: break;
         }
