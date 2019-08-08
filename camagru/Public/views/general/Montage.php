@@ -61,6 +61,17 @@
                 <p>Photos précédentes</p>
             </div>
             <div class="pics">
+                <div id="default-details" class="hidden">
+                    <div class="details">
+                        <div class="row">
+                            <div class="content">
+                                <span class="delete-post">
+                                    <a href="#" onclick="deletePost()"><i class="fas fa-trash"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
