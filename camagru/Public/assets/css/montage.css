@@ -57,6 +57,10 @@
     display: none;
 }
 
+.filter-img {
+    position: absolute;
+}
+
 .montage-overlay {
     width: 100%;
     height: 100%;
