@@ -45,11 +45,11 @@ function switchFilters() {
     event.preventDefault();
     let render = document.getElementsByClassName("render")[0];
     let button = document.getElementsByClassName("filters-button")[0];
+    filters = !filters;
     if (!filters)
         render.setAttribute("hide_filters", "");
     else render.removeAttribute("hide_filters");
-    button.className = button.className.replace(filters ? "green" : "red", filters ? "red" : "green");
-    filters = !filters;
+    button.className = button.className.replace(filters ? "red" : "green", filters ? "green" : "red");
 }
 
 function reloadImage() {
