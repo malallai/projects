@@ -27,8 +27,8 @@ function montageReady() {
 
     canvas.addEventListener("mousedown", getPosition, false);
     function getPosition(event) {
-        var x = event.x;
-        var y = event.y;
+        let x = event.x;
+        let y = event.y;
 
         x -= canvas.offsetLeft;
         y -= canvas.offsetTop;
