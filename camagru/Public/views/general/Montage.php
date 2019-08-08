@@ -77,12 +77,12 @@
         </div>
     </div>
     <div id="buttons-row" class="row buttons-row">
-        <div class="button button-login">
+        <div class="button button-add-picture">
             <div class="button-content">
                 <a href="/user"><span>Button 1</span></a>
             </div>
         </div>
-        <div class="button button-login">
+        <div class="button button-send">
             <div class="button-content">
                 <a href="/user"><span>Button 1</span></a>
             </div>
