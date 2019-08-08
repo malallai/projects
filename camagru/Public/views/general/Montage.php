@@ -82,5 +82,10 @@
                 <a href="/user"><span>Importer</span></a>
             </div>
         </div>
+        <div class="montage-button button-blue align-right">
+            <div class="button-content">
+                <a href="/user"><span>Masquer les filtres</span></a>
+            </div>
+        </div>
     </div>
 </div>
