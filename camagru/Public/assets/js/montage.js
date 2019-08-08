@@ -94,11 +94,7 @@ function takePicture() {
     newPic.append(pic);
     pictures.append(newPic);
     picture = newPic;
-    let image = new Image();
-    image.src = context.src;
-    image.onload = () => {
-        pic.getContext('2d').drawImage(image, 0, 0, pic.width, pic.height);
-    };
+    pic.getContext('2d').drawImage(video, 0, 0, pic.width, pic.height);
     newPic.addEventListener("click", () => {
         if (picture)
             picture.removeAttribute("selected");
