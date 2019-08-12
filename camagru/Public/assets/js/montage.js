@@ -59,7 +59,6 @@ function montageReady() {
                         return;
                     }
                 }
-                input.reset();
             };
         };
     });
