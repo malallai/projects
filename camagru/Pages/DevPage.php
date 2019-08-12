@@ -28,7 +28,7 @@ class DevPage extends Page {
     public function debug() {
         Session::startSession();
         var_dump($_SESSION);
-        echo '<img src="' . $_SESSION['img'] . '" />';
+        echo base64_decode($_SESSION['img']);
     }
 
     public function mail() {

@@ -174,10 +174,11 @@ function uploadMontage() {
         return;
     let token = document.getElementsByClassName("token")[0];
     let tmp = document.createElement('canvas');
-    let context = tmp.getContext('2d');
     tmp.height = pictureFilter.img.naturalHeight;
     tmp.width = pictureFilter.img.naturalWidth;
-    context.drawImage(pictureFilter.img, 0, 0);
+    tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
+    let uri = tmp.toDataURL('image/jpeg');
+    let b64 = uri.replace(/^data:image.+;base64,/, '');
     $.ajax({
         url: '/montage/upload',
         type: 'POST',
@@ -185,7 +186,7 @@ function uploadMontage() {
         data: {
             img: canvas.toDataURL("image/jpeg"),
             filter: montage.filterId,
-            filterPicture: tmp.toDataURL('image/jpeg'),
+            filterPicture: b64,
             filterPictureSize: pictureFilter.width,
             filterPictureX: pictureFilter.x,
             filterPictureY: pictureFilter.y,
