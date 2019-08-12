@@ -2,8 +2,7 @@ var front = false;
 var video = null;
 var canvas = null;
 var context = null;
-var selectedFilter = null;
-var selectedPicture = null;
+var montage = {selectedFilter:null, selectedPicture:null, took:false, filterId:0}
 var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, width:50, x:25, y:0};
 
 function montageReady() {
@@ -18,9 +17,9 @@ function montageReady() {
     for (let items of buttons) {
         items.addEventListener("click", function(event) {
             event.preventDefault();
-            if (selectedFilter) selectedFilter.removeAttribute("selected");
-            selectedFilter = items;
-            selectedFilter.setAttribute("selected", "");
+            if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
+            montage.selectedFilter = items;
+            montage.selectedFilter.setAttribute("selected", "");
             updateFilter();
         });
     }
@@ -75,15 +74,15 @@ function switchFilters() {
 
 function reloadImage() {
     let image = new Image();
-    image.src = selectedPicture.src;
-    context.drawImage(selectedPicture, 0, 0, canvas.width, canvas.height);
+    image.src = montage.selectedFilter.src;
+    context.drawImage(montage.selectedFilter, 0, 0, canvas.width, canvas.height);
 }
 
 function updateFilter() {
-    if (selectedFilter) {
-        let id = selectedFilter.children[0].id;
+    if (montage.selectedFilter) {
+        montage.filterId = montage.selectedFilter.children[0].id;
         checkFilters();
-        switch (id) {
+        switch (montage.filterId) {
             case "sepia":
                 document.getElementById('render').style.filter = "sepia(1)";
                 break;
@@ -135,6 +134,7 @@ function takePicture() {
 }
 
 function newPicture() {
+    montage.took = true;
     let pictures = document.getElementsByClassName("pics")[0];
     let newPic = document.createElement("div");
     let pic = document.createElement("canvas");
@@ -148,16 +148,16 @@ function newPicture() {
     newPic.append(pic);
     newPic.append(details);
     pictures.prepend(newPic);
-    selectedPicture = newPic.children[0];
+    montage.selectedFilter = newPic.children[0];
     let tmp = new Image();
     tmp.src = canvas.toDataURL();
     tmp.onload = () => {
         pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
     };
     newPic.addEventListener("click", () => {
-        if (selectedPicture) selectedPicture.removeAttribute("selected");
-        selectedPicture = newPic.children[0];
-        selectedPicture.setAttribute("selected", "");
+        if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
+        montage.selectedFilter = newPic.children[0];
+        montage.selectedFilter.setAttribute("selected", "");
         reloadImage();
     });
 }
@@ -167,6 +167,29 @@ function switchCamera() {
         front = !front;
         setupCamera();
     }
+}
+
+function uploadMontage() {
+    if (!montage.took)
+        return;
+    let token = document.getElementsByClassName("token")[0];
+    $.ajax({
+        url: '/montage/upload',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            img: canvas.toDataURL("image/jpeg"),
+            filter: montage.filterId,
+            filterPicture: pictureFilter.img.toDataURL("image/jpeg"),
+            filterPictureSize: pictureFilter.width,
+            filterPictureX: pictureFilter.x,
+            filterPictureY: pictureFilter.y,
+            token: token.value
+        },
+        success: function (msg) {
+            console.log(msg);
+        }
+    });
 }
 
 function setupCamera() {
