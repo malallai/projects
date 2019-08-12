@@ -66,3 +66,7 @@ function user_aside() {
     let body = document.getElementsByTagName("body")[0];
     body.setAttribute("has_aside", "");
 }
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}

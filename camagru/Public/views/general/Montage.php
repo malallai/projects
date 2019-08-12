@@ -50,8 +50,8 @@
                             </div>
                             <div class="overlay-button">
                                 <div class="filter" id="42">
-                                    <img src="/Public/assets/pictures/filters/42.png">
-                                    <img src="/Public/assets/pictures/filters/42-filter.png" class="hidden">
+                                    <img id='icon-42' src="/Public/assets/pictures/filters/42.png">
+                                    <img id='pic-42' src="/Public/assets/pictures/filters/42-filter.png" class="hidden">
                                 </div>
                             </div>
                         </div>
