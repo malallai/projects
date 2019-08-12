@@ -103,6 +103,15 @@
     background-color: rgba(43, 43, 43, .6);
 }
 
+.no-cam-overlay .row {
+    display: flex;
+}
+
+.no-cam-overlay .row .content {
+    margin: auto;
+    color: #fff;
+}
+
 .video-overlay .take-picture i {
     font-size: 2.5rem;
 }
