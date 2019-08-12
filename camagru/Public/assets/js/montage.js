@@ -48,8 +48,8 @@ function montageReady() {
             let img = new Image();
             img.src = reader.result;
             img.onload = () => {
-                canvas.width = src.width;
-                canvas.height = src.height;
+                canvas.width = img.width;
+                canvas.height = img.height;
                 context.drawImage(img, 0, 0, canvas.width, canvas.height);
             };
         };
