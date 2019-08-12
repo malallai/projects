@@ -152,7 +152,7 @@
     width: 100%;
 }
 
-.render .filter-img:hover {
+.render .filter-img {
     cursor: move;
     border: 2px transparent;
 }
