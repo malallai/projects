@@ -86,7 +86,7 @@
                 <a href="#"><span>Envoyer</span></a>
             </div>
             <div class="button-content">
-                <a href="#"><span>Importer</span></a>
+                <input type="file" id="import" name="picture" accept="image/*">
             </div>
         </div>
         <div class="montage-button filters-button button-green">

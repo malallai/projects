@@ -59,6 +59,8 @@ function switchFilters() {
 }
 
 function reloadImage() {
+    if (filter_img)
+        filter_img.remove();
     let image = new Image();
     image.src = picture.src;
     context.drawImage(picture, 0, 0, canvas.width, canvas.height);
