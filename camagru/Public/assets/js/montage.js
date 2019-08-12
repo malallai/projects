@@ -53,6 +53,7 @@ function montageReady() {
                 context.drawImage(img, 0, 0, canvas.width, canvas.height);
             };
         };
+        newPicture();
     });
 
     document.getElementsByClassName("render")[0].addEventListener("mousedown", e => {
@@ -148,13 +149,17 @@ function deletePic(pic) {
 function takePicture() {
     event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    newPicture();
+}
+
+function newPicture() {
     let pictures = document.getElementsByClassName("pics")[0];
     let newPic = document.createElement("div");
     let pic = document.createElement("canvas");
     let details = document.getElementById("default-details").children[0].cloneNode(true);
     let id = getRandomInt(9999);
-    pic.width = video.videoWidth;
-    pic.height = video.videoHeight;
+    pic.width = canvas.width;
+    pic.height = canvas.height;
     newPic.classList.add("pic");
     newPic.id = id + '';
     details.id = id + '';
@@ -162,7 +167,7 @@ function takePicture() {
     newPic.append(details);
     pictures.prepend(newPic);
     picture = newPic.children[0];
-    pic.getContext('2d').drawImage(video, 0, 0, pic.width, pic.height);
+    pic.getContext('2d').drawImage(canvas, 0, 0, pic.width, pic.height);
     newPic.addEventListener("click", () => {
         if (picture)
             picture.removeAttribute("selected");
