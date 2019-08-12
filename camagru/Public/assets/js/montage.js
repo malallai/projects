@@ -206,7 +206,7 @@ function uploadMontage() {
         dataType: 'json',
         data: data,
         success: function (msg) {
-            console.log(msg);
+            document.location = "/";
         }
     });
 }
