@@ -29,7 +29,7 @@ class DevPage extends Page {
         header("Content-type: text/plain");
         Session::startSession();
         var_dump($_SESSION);
-        echo $_SESSION['img'];
+        echo '<img src="' . $_SESSION['img'] . '" />';
     }
 
     public function mail() {
