@@ -98,6 +98,7 @@
 .montage-overlay .row .overlay-button:not(.disable) a {
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .no-cam-overlay {

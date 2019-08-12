@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/js/montage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/montage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/montage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/montage.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="195">
+              <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -91,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="295">
+              <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -122,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>insert into</find>
       <find>INNER JOI</find>
       <find>&lt;?=</find>
       <find>sleep</find>
@@ -152,6 +150,7 @@
       <find>.montage-button</find>
       <find>filters</find>
       <find>.render</find>
+      <find>.overlay-button</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -215,9 +214,9 @@
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
-        <option value="$PROJECT_DIR$/Public/assets/css/montage.css" />
         <option value="$PROJECT_DIR$/Public/assets/js/montage.js" />
         <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/montage.css" />
       </list>
     </option>
   </component>
@@ -425,12 +424,12 @@
       <workItem from="1565180057961" duration="16577000" />
       <workItem from="1565281537729" duration="4103000" />
       <workItem from="1565611546168" duration="7637000" />
-      <workItem from="1565624094550" duration="1652000" />
+      <workItem from="1565624094550" duration="1691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277673000" />
+    <option name="totallyTimeSpent" value="277712000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/js/montage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -758,8 +750,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="195">
+          <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
         </state>
       </provider>
     </entry>
