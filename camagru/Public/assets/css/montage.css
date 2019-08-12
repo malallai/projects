@@ -158,7 +158,7 @@
 }
 
 .render .filter-img:hover {
-    border: 2px dashed white;
+    border-color: white;
 }
 
 .pics-row {
