@@ -26,7 +26,7 @@ class DevPage extends Page {
     }
 
     public function debug() {
-        header("Content-type: image/jpg");
+        header("Content-type: text/plain");
         Session::startSession();
         echo base64_decode($_SESSION['img']);
     }
