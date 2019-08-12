@@ -2,14 +2,11 @@ var front = false;
 var video = null;
 var canvas = null;
 var context = null;
-var filter = null;
-var picture = null;
-var filters = true;
-var filter_pick = false;
-var filter_img = null;
+var selectedFilter = null;
+var selectedPicture = null;
+var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0};
 
 function montageReady() {
-    let input = document.getElementById('import');
     let parent = document.getElementsByClassName("render-overlay")[0];
     video = document.getElementById('video');
     canvas = document.getElementById('render');
@@ -21,53 +18,52 @@ function montageReady() {
     for (let items of buttons) {
         items.addEventListener("click", function(event) {
             event.preventDefault();
-            if (filter) filter.removeAttribute("selected");
-            filter = items;
-            filter.setAttribute("selected", "");
+            if (selectedFilter) selectedFilter.removeAttribute("selected");
+            selectedFilter = items;
+            selectedFilter.setAttribute("selected", "");
             updateFilter();
         });
     }
 
-    document.getElementsByClassName("render")[0].addEventListener("mousemove", e => {
-        if (filter_pick) {
-            let rect = canvas.getBoundingClientRect();
-            let x = e.clientX - rect.left;
-            let y = e.clientY - rect.top;
-            let top = 100 * y / canvas.offsetHeight;
-            let left = 100 * x / canvas.offsetWidth;
-            filter_img.style.top = top + '%';
-            filter_img.style.left = left + '%';
-        }
-    });
-
-    input.addEventListener('input', e => {
-        let file = input.files[0];
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => {
-            let img = new Image();
-            img.src = reader.result;
-            img.onload = () => {
-                canvas.width = img.width;
-                canvas.height = img.height;
-                context.drawImage(img, 0, 0, canvas.width, canvas.height);
-                newPicture();
-            };
-        };
-    });
-
-    document.getElementsByClassName("render")[0].addEventListener("mousedown", e => {
-        if (filter_pick)
-            filter_pick = !filter_pick;
-    });
+    document.getElementsByClassName("render")[0].addEventListener("mousemove", movePicture);
+    document.getElementById('import').addEventListener('input', importPic);
 
     setupCamera();
 }
 
+function movePicture(event) {
+    if (pictureFilter.picked) {
+        let rect = canvas.getBoundingClientRect();
+        let x = event.clientX - rect.left + pictureFilter.clickedX;
+        let y = event.clientY - rect.top + pictureFilter.clickedY;
+        let top = 100 * y / canvas.offsetHeight;
+        let left = 100 * x / canvas.offsetWidth;
+        pictureFilter.img.style.top = top + '%';
+        pictureFilter.img.style.left = left + '%';
+    }
+}
+
+function importPic() {
+    let input =  document.getElementById('import');
+    let file = input.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+        let img = new Image();
+        img.src = reader.result;
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+            newPicture();
+        };
+    };
+}
+
 function switchFilters() {
-    event.preventDefault();
     let render = document.getElementsByClassName("render")[0];
     let button = document.getElementsByClassName("filters-button")[0];
+    let filters = button.classList.contains('green');
     filters = !filters;
     if (!filters)
         render.setAttribute("hide_filters", "");
@@ -76,70 +72,49 @@ function switchFilters() {
 }
 
 function reloadImage() {
-    if (filter_img)
-        filter_img.remove();
+    if (pictureFilter.img)
+        pictureFilter.img.remove();
     let image = new Image();
-    image.src = picture.src;
-    context.drawImage(picture, 0, 0, canvas.width, canvas.height);
-}
-
-function turn_gray(my_context) {
-    var imageData = my_context.getImageData(0, 0, canvas.width, canvas.height);
-    for (j = 0; j < imageData.height; j++) {
-        for (i = 0; i < imageData.width; i++) {
-            var index = (j * 4) * imageData.width + (i * 4);
-            var red = imageData.data[index];
-            var green = imageData.data[index + 1];
-            var blue = imageData.data[index + 2];
-            var average = (red + green + blue) / 3;
-            imageData.data[index] = average;
-            imageData.data[index + 1] = average;
-            imageData.data[index + 2] = average;
-        }
-    }
-    my_context.putImageData(imageData, 0, 0);
+    image.src = selectedPicture.src;
+    context.drawImage(selectedPicture, 0, 0, canvas.width, canvas.height);
 }
 
 function updateFilter() {
-    if (filter) {
+    if (selectedFilter) {
+        let id = selectedFilter.children[0].id;
         reloadImage();
-        switch (filter.children[0].id) {
+        switch (id) {
             case "void":
                 break;
             case "sepia":
-                turn_gray(context);
                 break;
             case "gray":
-                turn_gray(context);
                 break;
             case "42":
-                let img = new Image();
-                img.src = filter.children[0].children[1].src;
-                img.classList.add("filter-img");
-                img.style.width = '50%';
-                img.style.left = '25%';
-                img.style.top = '0';
-                filter_img = img;
-                img.addEventListener("click", () => {
-                    filter_pick = !filter_pick;
-                });
-                document.getElementsByClassName("render")[0].prepend(img);
+                picFilter(selectedFilter.getElementById('pic-' + id));
                 break;
             default: break;
         }
     }
 }
 
-function switchDevice() {
-    event.preventDefault();
-    if (mobileDevice) {
-        front = !front;
-        setupCamera();
-    }
-}
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+function picFilter(parent) {
+    let img = new Image();
+    img.src = parent.src;
+    img.classList.add("filter-img");
+    img.style.width = '50%';
+    img.style.left = '25%';
+    img.style.top = '0';
+    pictureFilter.img = img;
+    img.addEventListener("mousedown", event => {
+        pictureFilter.picked = true;
+        pictureFilter.clickedX = event.clientX;
+        pictureFilter.clickedY = event.clientY;
+    });
+    img.addEventListener("mouseup", event => {
+        pictureFilter.picked = false;
+    });
+    document.getElementsByClassName("render")[0].prepend(img);
 }
 
 function deletePic(pic) {
@@ -147,7 +122,6 @@ function deletePic(pic) {
 }
 
 function takePicture() {
-    event.preventDefault();
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     newPicture();
 }
@@ -166,19 +140,25 @@ function newPicture() {
     newPic.append(pic);
     newPic.append(details);
     pictures.prepend(newPic);
-    picture = newPic.children[0];
+    selectedPicture = newPic.children[0];
     let tmp = new Image();
     tmp.src = canvas.toDataURL();
     tmp.onload = () => {
         pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
     };
     newPic.addEventListener("click", () => {
-        if (picture)
-            picture.removeAttribute("selected");
-        picture = newPic.children[0];
-        picture.setAttribute("selected", "");
+        if (selectedPicture) selectedPicture.removeAttribute("selected");
+        selectedPicture = newPic.children[0];
+        selectedPicture.setAttribute("selected", "");
         updateFilter();
     });
+}
+
+function switchCamera() {
+    if (mobileDevice) {
+        front = !front;
+        setupCamera();
+    }
 }
 
 function setupCamera() {
