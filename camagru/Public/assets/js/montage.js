@@ -39,6 +39,10 @@ function montageReady() {
         }
     });
 
+    document.getElementById("import").addEventListener('input', e => {
+        console.log(e);
+    });
+
     document.getElementsByClassName("render")[0].addEventListener("mousedown", e => {
         if (filter_pick)
             filter_pick = !filter_pick;
