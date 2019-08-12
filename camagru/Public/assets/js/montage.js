@@ -51,9 +51,10 @@ function montageReady() {
                 canvas.width = img.width;
                 canvas.height = img.height;
                 context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                newPicture();
+
             };
         };
-        newPicture();
     });
 
     document.getElementsByClassName("render")[0].addEventListener("mousedown", e => {
