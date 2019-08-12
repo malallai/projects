@@ -72,8 +72,6 @@ function switchFilters() {
 }
 
 function reloadImage() {
-    if (pictureFilter.img)
-        pictureFilter.img.remove();
     let image = new Image();
     image.src = selectedPicture.src;
     context.drawImage(selectedPicture, 0, 0, canvas.width, canvas.height);
@@ -82,13 +80,13 @@ function reloadImage() {
 function updateFilter() {
     if (selectedFilter) {
         let id = selectedFilter.children[0].id;
-        reloadImage();
         switch (id) {
             case "void":
                 break;
             case "sepia":
                 break;
             case "gray":
+                document.getElementById('render').style.filter = "gray(1)";
                 break;
             case "42":
                 picFilter(document.getElementById('pic-' + id));
@@ -150,7 +148,7 @@ function newPicture() {
         if (selectedPicture) selectedPicture.removeAttribute("selected");
         selectedPicture = newPic.children[0];
         selectedPicture.setAttribute("selected", "");
-        updateFilter();
+        reloadImage();
     });
 }
 
