@@ -83,7 +83,7 @@
     <div id="buttons-row" class="row buttons-row">
         <div class="montage-button button-blue">
             <div class="button-content">
-                <a class="a-button"><span>Envoyer</span></a>
+                <a class="a-button" onclick="uploadMontage()"><span>Envoyer</span></a>
             </div>
             <div class="button-content">
                 <label for="import"><span>Importer</span></label>

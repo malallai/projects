@@ -29,6 +29,7 @@ $router->addRoute("post/comment", "Pages\PostPage@comment");
 $router->addRoute("post/delete", "Pages\PostPage@delete");
 
 $router->addRoute("montage", "Pages\MontagePage@index");
+$router->addRoute("montage/upload", "Pages\MontagePage@upload");
 
 
 $router->addRoute("dev", "Pages\DevPage@index");

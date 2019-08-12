@@ -5,6 +5,7 @@ namespace Pages;
 
 use Core\Page;
 use App\Montage\MontageController;
+use Core\Session;
 
 class MontagePage extends Page  {
 
@@ -26,6 +27,10 @@ class MontagePage extends Page  {
         $this->render($params);
     }
 
-
+    public function upload() {
+        Session::startSession();
+        $_SESSION['img'] = $_POST['img'];
+        Page::redirect('/dev/debug');
+    }
 
 }
