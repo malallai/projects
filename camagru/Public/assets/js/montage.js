@@ -99,7 +99,7 @@ function updateFilter() {
 }
 
 function checkFilters(id) {
-    if (id === '42' && pictureFilter.img)
+    if (id === "42" && pictureFilter.img)
         return;
     document.getElementById('render').style.filter = "";
     pictureFilter.img.remove();
