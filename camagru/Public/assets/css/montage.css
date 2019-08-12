@@ -99,6 +99,10 @@
     color: #fff;
 }
 
+.no-cam-overlay {
+    background-color: rgba(43, 43, 43, .6);
+}
+
 .video-overlay .take-picture i {
     font-size: 2.5rem;
 }
