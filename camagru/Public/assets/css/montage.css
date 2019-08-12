@@ -154,6 +154,10 @@
 
 .render .filter-img:hover {
     cursor: move;
+    border: 2px transparent;
+}
+
+.render .filter-img:hover {
     border: 2px dashed white;
 }
 
