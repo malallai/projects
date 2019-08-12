@@ -168,7 +168,7 @@ function newPicture() {
     pictures.prepend(newPic);
     picture = newPic.children[0];
     let tmp = new Image();
-    tmp.src = canvas.src;
+    tmp.src = canvas;
     tmp.onload = () => {
         pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
     };
