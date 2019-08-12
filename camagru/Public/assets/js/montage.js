@@ -80,15 +80,13 @@ function reloadImage() {
 function updateFilter() {
     if (selectedFilter) {
         let id = selectedFilter.children[0].id;
+        checkFilters(id);
         switch (id) {
             case "void":
-                checkPictureFilter();
                 break;
             case "sepia":
-                checkPictureFilter();
                 break;
             case "gray":
-                checkPictureFilter();
                 document.getElementById('render').style.filter = "grayscale(1)";
                 break;
             case "42":
@@ -99,9 +97,13 @@ function updateFilter() {
     }
 }
 
-function checkPictureFilter() {
-    if (pictureFilter.img)
-        pictureFilter.img.remove();
+function checkFilters(id) {
+    if (id === "42" || id === "void")
+        document.getElementById('render').style.filter = "";
+    else {
+        if (pictureFilter.img)
+            pictureFilter.img.remove();
+    }
 }
 
 function picFilter(parent) {
