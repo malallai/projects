@@ -84,8 +84,6 @@ function updateFilter() {
         let id = selectedFilter.children[0].id;
         checkFilters();
         switch (id) {
-            case "void":
-                break;
             case "sepia":
                 document.getElementById('render').style.filter = "sepia(1)";
                 break;
