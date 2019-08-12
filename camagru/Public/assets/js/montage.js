@@ -99,15 +99,11 @@ function updateFilter() {
 }
 
 function checkFilters(id) {
-    if (id === "42" || id === "void")
-        document.getElementById('render').style.filter = "";
-    else {
-        if (pictureFilter.img) {
-            pictureFilter.img.remove();
-            pictureFilter.img = null;
-        }
-    }
-
+    if (id === '42' && pictureFilter.img)
+        return;
+    document.getElementById('render').style.filter = "";
+    pictureFilter.img.remove();
+    pictureFilter.img = null;
 }
 
 function picFilter(parent) {
