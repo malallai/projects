@@ -154,7 +154,9 @@
 
 .render .filter-img {
     cursor: move;
-    border: 2px transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .render .filter-img:hover {
