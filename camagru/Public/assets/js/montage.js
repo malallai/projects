@@ -90,7 +90,7 @@ function updateFilter() {
                 document.getElementById('render').style.filter = "grayscale(1)";
                 break;
             case "42":
-                picFilter(document.getElementById('pic-' + id));
+                picFilter(document.getElementById('pic-' + montage.filterId));
                 break;
             default: break;
         }
