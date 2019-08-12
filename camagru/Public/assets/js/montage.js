@@ -113,7 +113,7 @@ function picFilter(parent) {
     img.classList.add("filter-img");
     img.style.width = pictureFilter.width + '%';
     img.style.left = pictureFilter.x + '%';
-    img.style.top = pictureFilter.y;
+    img.style.top = pictureFilter.y + '%';
     pictureFilter.img = img;
     img.addEventListener("mousedown", event => {
         pictureFilter.picked = true;
