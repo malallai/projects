@@ -16,7 +16,6 @@ function montageReady() {
     let buttons = parent.getElementsByClassName("overlay-button");
     for (let items of buttons) {
         items.addEventListener("click", function(event) {
-            event.preventDefault();
             if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
             montage.selectedFilter = items;
             montage.selectedFilter.setAttribute("selected", "");
@@ -96,6 +95,10 @@ function updateFilter() {
                 break;
             default: break;
         }
+    } else {
+        montage.selectedFilter = document.getElementsByClassName("render-overlay")[0].getElementsByClassName("overlay-buttons")[0];
+        montage.selectedFilter.setAttribute("selected", "");
+        updateFilter();
     }
 }
 
