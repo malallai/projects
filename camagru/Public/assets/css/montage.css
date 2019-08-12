@@ -152,6 +152,11 @@
     width: 100%;
 }
 
+.render .filter-img {
+    cursor: crosshair;
+    border: 2px dashed black;
+}
+
 .pics-row {
     background-color: #fff;
     border-radius: 2px;
