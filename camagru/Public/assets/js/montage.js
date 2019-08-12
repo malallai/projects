@@ -102,9 +102,12 @@ function checkFilters(id) {
     if (id === "42" || id === "void")
         document.getElementById('render').style.filter = "";
     else {
-        if (pictureFilter.img)
+        if (pictureFilter.img) {
             pictureFilter.img.remove();
+            pictureFilter.img = null;
+        }
     }
+
 }
 
 function picFilter(parent) {
