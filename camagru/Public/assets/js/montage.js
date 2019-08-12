@@ -52,6 +52,8 @@ function montageReady() {
                 let base_image = new Image();
                 base_image.src = filters[i].nextElementSibling.childNodes[0].src;
                 base_image.onload = function() {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
                     context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
                 };
             };
