@@ -77,6 +77,7 @@ function reloadImage() {
     image.src = montage.selectedFilter.src;
     canvas.width = image.width;
     canvas.height = image.height;
+    console.log(image);
     context.drawImage(montage.selectedFilter, 0, 0, canvas.width, canvas.height);
 }
 
