@@ -167,7 +167,11 @@ function newPicture() {
     newPic.append(details);
     pictures.prepend(newPic);
     picture = newPic.children[0];
-    pic.getContext('2d').drawImage(canvas, 0, 0, pic.width, pic.height);
+    let tmp = new Image();
+    tmp.src = canvas.src;
+    tmp.onload(() => {
+        pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
+    });
     newPic.addEventListener("click", () => {
         if (picture)
             picture.removeAttribute("selected");
