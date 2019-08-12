@@ -181,7 +181,7 @@ function uploadMontage() {
     let filterB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
     uri = canvas.toDataURL("image/jpeg");
     let imgB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
-    
+
     $.ajax({
         url: '/montage/upload',
         type: 'POST',
