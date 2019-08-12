@@ -110,6 +110,7 @@
 .no-cam-overlay .row .content {
     margin: auto;
     color: #fff;
+    font-size: 1.5rem;
 }
 
 .video-overlay .take-picture i {
