@@ -272,6 +272,7 @@
     font-size: 1.25rem;
     display: flex;
     cursor: pointer;
+    color: #fff;
 }
 
 .montage-button span {
@@ -304,10 +305,6 @@
 
 .montage-button.button-green .button-content:hover {
     background-color: #189937;
-}
-
-.montage-button .button-content a {
-    color: #fff;
 }
 
 @media only screen and (max-width: 750px) {
