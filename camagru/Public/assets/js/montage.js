@@ -82,11 +82,14 @@ function updateFilter() {
         let id = selectedFilter.children[0].id;
         switch (id) {
             case "void":
+                checkPictureFilter();
                 break;
             case "sepia":
+                checkPictureFilter();
                 break;
             case "gray":
-                document.getElementById('render').style.filter = "gray(1)";
+                checkPictureFilter();
+                document.getElementById('render').style.filter = "grayscale(1)";
                 break;
             case "42":
                 picFilter(document.getElementById('pic-' + id));
@@ -94,6 +97,11 @@ function updateFilter() {
             default: break;
         }
     }
+}
+
+function checkPictureFilter() {
+    if (pictureFilter.img)
+        pictureFilter.img.remove();
 }
 
 function picFilter(parent) {
