@@ -110,6 +110,7 @@ function picFilter(parent) {
         pictureFilter.picked = true;
         pictureFilter.clickedX = event.clientX;
         pictureFilter.clickedY = event.clientY;
+        console.log(event);
     });
     img.addEventListener("mouseup", event => {
         pictureFilter.picked = false;
