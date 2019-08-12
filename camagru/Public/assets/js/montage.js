@@ -43,24 +43,17 @@ function montageReady() {
     input.addEventListener('input', e => {
         let file = input.files[0];
         let reader = new FileReader();
-        let img = new Image();
         reader.readAsDataURL(file);
-        console.log(reader);
         reader.onload = () => {
-            console.log("upload");
+            let img = new Image();
             img.src = reader.result;
             img.onload = () => {
-                for (let i = 0; i < filters.length; i++) {
-                    if (filters[i].checked) {
-                        context.drawImage(img, 0, 0, canvas.width, canvas.height);
-                        let base_image = new Image();
-                        base_image.src = filters[i].nextElementSibling.childNodes[0].src;
-                        base_image.onload = function() {
-                            context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
-                        };
-                        return;
-                    }
-                }
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                let base_image = new Image();
+                base_image.src = filters[i].nextElementSibling.childNodes[0].src;
+                base_image.onload = function() {
+                    context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
+                };
             };
         };
     });
