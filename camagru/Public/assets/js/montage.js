@@ -34,8 +34,8 @@ function montageReady() {
 function movePicture(event) {
     if (pictureFilter.picked) {
         let rect = canvas.getBoundingClientRect();
-        let x = event.clientX - rect.left + pictureFilter.clickedX;
-        let y = event.clientY - rect.top + pictureFilter.clickedY;
+        let x = event.clientX - rect.left - pictureFilter.clickedX;
+        let y = event.clientY - rect.top - pictureFilter.clickedY;
         let top = 100 * y / canvas.offsetHeight;
         let left = 100 * x / canvas.offsetWidth;
         pictureFilter.img.style.top = top + '%';
