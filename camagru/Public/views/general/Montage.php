@@ -9,13 +9,13 @@
                     <div class="row">
                         <div class="content">
                             <div class="overlay-button force-send">
-                                <a href="" onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
+                                <a onclick="forceSendPicture()"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>
                             <div class="overlay-button take-picture">
-                                <a href="" onclick="takePicture()"><i id="0" class="far fa-circle"></i></a>
+                                <a onclick="takePicture()"><i id="0" class="far fa-circle"></i></a>
                             </div>
                             <div class="overlay-button reverse-cam">
-                                <a href="" onclick="switchDevice()"><i id="0" class="fas fa-retweet"></i></a>
+                                <a onclick="switchCamera()"><i id="0" class="fas fa-retweet"></i></a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="row">
                             <div class="content">
                                 <span class="delete-post">
-                                    <a href="#"><i class="fas fa-trash"></i></a>
+                                    <a><i class="fas fa-trash"></i></a>
                                 </span>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
     <div id="buttons-row" class="row buttons-row">
         <div class="montage-button button-blue">
             <div class="button-content">
-                <a href="#"><span>Envoyer</span></a>
+                <a><span>Envoyer</span></a>
             </div>
             <div class="button-content">
                 <label for="import"><span>Importer</span></label>
@@ -92,7 +92,7 @@
         </div>
         <div class="montage-button filters-button button-green">
             <div class="button-content">
-                <a href="#" onclick="switchFilters()"><span>Filtres</span></a>
+                <a onclick="switchFilters()"><span>Filtres</span></a>
             </div>
         </div>
     </div>
