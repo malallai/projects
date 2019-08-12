@@ -4,7 +4,7 @@ var canvas = null;
 var context = null;
 var selectedFilter = null;
 var selectedPicture = null;
-var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0};
+var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, width:50, x:25, y:0};
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -38,8 +38,10 @@ function movePicture(event) {
         let y = event.clientY - rect.top - pictureFilter.clickedY;
         let top = 100 * y / canvas.offsetHeight;
         let left = 100 * x / canvas.offsetWidth;
-        pictureFilter.img.style.top = top + '%';
-        pictureFilter.img.style.left = left + '%';
+        pictureFilter.x = left;
+        pictureFilter.y = top;
+        pictureFilter.img.style.top = pictureFilter.y + '%';
+        pictureFilter.img.style.left = pictureFilter.x + '%';
     }
 }
 
@@ -80,7 +82,7 @@ function reloadImage() {
 function updateFilter() {
     if (selectedFilter) {
         let id = selectedFilter.children[0].id;
-        checkFilters(id);
+        checkFilters();
         switch (id) {
             case "void":
                 break;
@@ -90,29 +92,28 @@ function updateFilter() {
                 document.getElementById('render').style.filter = "grayscale(1)";
                 break;
             case "42":
-                if (!pictureFilter.img)
-                    picFilter(document.getElementById('pic-' + id));
+                picFilter(document.getElementById('pic-' + id));
                 break;
             default: break;
         }
     }
 }
 
-function checkFilters(id) {
-    if (id == "42" && pictureFilter.img)
-        return;
+function checkFilters() {
     document.getElementById('render').style.filter = "";
-    pictureFilter.img.remove();
-    pictureFilter.img = null;
+    if (pictureFilter.img) {
+        pictureFilter.img.remove();
+        pictureFilter.img = null;
+    }
 }
 
 function picFilter(parent) {
     let img = new Image();
     img.src = parent.src;
     img.classList.add("filter-img");
-    img.style.width = '50%';
-    img.style.left = '25%';
-    img.style.top = '0';
+    img.style.width = pictureFilter.width + '%';
+    img.style.left = pictureFilter.x + '%';
+    img.style.top = pictureFilter.y;
     pictureFilter.img = img;
     img.addEventListener("mousedown", event => {
         pictureFilter.picked = true;
