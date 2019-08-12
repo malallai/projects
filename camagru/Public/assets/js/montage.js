@@ -114,7 +114,7 @@ function picFilter(parent) {
     img.addEventListener("mouseup", event => {
         pictureFilter.picked = false;
     });
-    img.addEventListener("mousewheel", event => {
+    img.addEventListener("DOMMouseScroll", event => {
         console.log(event);
     });
     document.getElementsByClassName("render")[0].prepend(img);

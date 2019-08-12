@@ -78,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/js/montage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="117" column="27" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
+            <state relative-caret-position="730">
+              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -417,12 +417,12 @@
       <workItem from="1565121142378" duration="5350000" />
       <workItem from="1565180057961" duration="16577000" />
       <workItem from="1565281537729" duration="4103000" />
-      <workItem from="1565611546168" duration="6691000" />
+      <workItem from="1565611546168" duration="6759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275075000" />
+    <option name="totallyTimeSpent" value="275143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/js/montage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="117" column="27" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
+        <state relative-caret-position="730">
+          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
         </state>
       </provider>
     </entry>
