@@ -9,6 +9,7 @@ var filter_pick = false;
 var filter_img = null;
 
 function montageReady() {
+    let input = document.getElementById('import');
     let parent = document.getElementsByClassName("render-overlay")[0];
     video = document.getElementById('video');
     canvas = document.getElementById('render');
@@ -39,8 +40,8 @@ function montageReady() {
         }
     });
 
-    document.getElementById("import").addEventListener('input', e => {
-        let file = e.files[0];
+    input.addEventListener('input', e => {
+        let file = input.files[0];
         let reader = new FileReader();
         let img = new Image();
         reader.readAsDataURL(file);
@@ -58,7 +59,7 @@ function montageReady() {
                         return;
                     }
                 }
-                e.reset();
+                input.reset();
             };
         };
     });
