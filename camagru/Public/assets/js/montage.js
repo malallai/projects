@@ -14,6 +14,9 @@ function montageReady() {
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
 
     let buttons = parent.getElementsByClassName("overlay-button");
+    montage.selectedFilter = buttons[0];
+    montage.selectedFilter.setAttribute("selected", "");
+    console.log(montage.selectedFilter);
     for (let items of buttons) {
         items.addEventListener("click", function(event) {
             if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
@@ -95,10 +98,6 @@ function updateFilter() {
                 break;
             default: break;
         }
-    } else {
-        montage.selectedFilter = document.getElementsByClassName("render-overlay")[0].getElementsByClassName("overlay-button")[0];
-        montage.selectedFilter.setAttribute("selected", "");
-        updateFilter();
     }
 }
 
