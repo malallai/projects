@@ -164,10 +164,14 @@ function setupCamera() {
                 canvas.height = video.videoHeight;
             };
         }).catch(function (err) {
-            console.log(err);
-            console.log("no camera");
+            noCamera();
         });
     } else {
-        console.log("no camera");
+        noCamera();
     }
+}
+
+function noCamera() {
+    document.getElementsByClassName("video-overlay")[0].classList.add("hidden");
+    document.getElementsByClassName("no-cam-overlay")[0].classList.remove("hidden");
 }

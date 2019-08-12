@@ -20,6 +20,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="montage-overlay no-cam-overlay hidden">
+                    <div class="row">
+                        <div class="content"></div>
+                    </div>
+                </div>
             </div>
             <div class="render">
                 <canvas id="render" width="1280" height="720"></canvas>
