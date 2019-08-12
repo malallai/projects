@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="content">
                             <div class="overlay-button force-send">
-                                <a onclick="forceSendPicture()" class="a-button"><i class="fas fa-cloud-upload-alt"></i></a>
+                                <a onclick="hideCamera()" class="a-button"><i class="fas fa-cloud-upload-alt"></i></a>
                             </div>
                             <div class="overlay-button take-picture">
                                 <a onclick="takePicture()" class="a-button"><i id="0" class="far fa-circle"></i></a>
