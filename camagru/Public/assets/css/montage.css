@@ -152,9 +152,9 @@
     width: 100%;
 }
 
-.render .filter-img {
-    cursor: crosshair;
-    border: 2px dashed black;
+.render .filter-img:hover {
+    cursor: move;
+    border: 2px dashed white;
 }
 
 .pics-row {
