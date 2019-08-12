@@ -52,7 +52,6 @@ function montageReady() {
                 canvas.height = img.height;
                 context.drawImage(img, 0, 0, canvas.width, canvas.height);
                 newPicture();
-
             };
         };
     });
