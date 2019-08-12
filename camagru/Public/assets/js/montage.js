@@ -96,7 +96,7 @@ function updateFilter() {
             default: break;
         }
     } else {
-        montage.selectedFilter = document.getElementsByClassName("render-overlay")[0].getElementsByClassName("overlay-buttons")[0];
+        montage.selectedFilter = document.getElementsByClassName("render-overlay")[0].getElementsByClassName("overlay-button")[0];
         montage.selectedFilter.setAttribute("selected", "");
         updateFilter();
     }
