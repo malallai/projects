@@ -45,7 +45,9 @@ function montageReady() {
         let reader = new FileReader();
         let img = new Image();
         reader.readAsDataURL(file);
+        console.log(reader);
         reader.onload = () => {
+            console.log("upload");
             img.src = reader.result;
             img.onload = () => {
                 for (let i = 0; i < filters.length; i++) {
