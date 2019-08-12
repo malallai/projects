@@ -87,6 +87,7 @@ function updateFilter() {
             case "void":
                 break;
             case "sepia":
+                document.getElementById('render').style.filter = "sepia(1)";
                 break;
             case "gray":
                 document.getElementById('render').style.filter = "grayscale(1)";
