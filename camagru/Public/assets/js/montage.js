@@ -91,7 +91,7 @@ function updateFilter() {
             case "gray":
                 break;
             case "42":
-                picFilter(selectedFilter.getElementById('pic-' + id));
+                picFilter(document.getElementById('pic-' + id));
                 break;
             default: break;
         }
