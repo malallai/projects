@@ -178,7 +178,7 @@ function uploadMontage() {
     tmp.width = pictureFilter.img.naturalWidth;
     tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
     let uri = tmp.toDataURL('image/jpeg');
-    let b64 = uri.replace(/^data:image.+;base64,/, '');
+    let b64 = uri.replace(/^data:image\/jpeg;base64,/, '');
     $.ajax({
         url: '/montage/upload',
         type: 'POST',
