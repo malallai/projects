@@ -192,8 +192,8 @@ function noCamera() {
 }
 
 function hideCamera() {
-    if (document.getElementById('video').filter.opacity == 1)
-        document.getElementById('video').filter.opacity = '0';
+    if (document.getElementById('video').style.opacity == 1)
+        document.getElementById('video').style.opacity = '0';
     else
-        document.getElementById('video').filter.opacity = '1';
+        document.getElementById('video').style.opacity = '1';
 }
