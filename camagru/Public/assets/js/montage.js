@@ -173,28 +173,35 @@ function uploadMontage() {
     if (!montage.took)
         return;
     let token = document.getElementsByClassName("token")[0];
-    let tmp = document.createElement('canvas');
-    tmp.height = pictureFilter.img.naturalHeight;
-    tmp.width = pictureFilter.img.naturalWidth;
-    tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
-    let uri = tmp.toDataURL('image/jpeg');
-    let filterB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
-    uri = canvas.toDataURL("image/jpeg");
+    let uri = canvas.toDataURL("image/jpeg");
     let imgB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
-
+    let data = {
+        img: imgB64,
+        filter: montage.filterId,
+        token: token.value
+    };
+    if (pictureFilter.img) {
+        let tmp = document.createElement('canvas');
+        tmp.height = pictureFilter.img.naturalHeight;
+        tmp.width = pictureFilter.img.naturalWidth;
+        tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
+        uri = tmp.toDataURL('image/jpeg');
+        let filterB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
+        data = {
+            img: imgB64,
+            filter: montage.filterId,
+            filterPicture: filterB64,
+            filterSize: pictureFilter.width,
+            filterX: pictureFilter.x,
+            filterY: pictureFilter.y,
+            token: token.value
+        };
+    }
     $.ajax({
         url: '/montage/upload',
         type: 'POST',
         dataType: 'json',
-        data: {
-            img: imgB64,
-            filter: montage.filterId,
-            filterPicture: filterB64,
-            filterPictureSize: pictureFilter.width,
-            filterPictureX: pictureFilter.x,
-            filterPictureY: pictureFilter.y,
-            token: token.value
-        },
+        data: data,
         success: function (msg) {
             console.log(msg);
         }
