@@ -40,7 +40,7 @@ function montageReady() {
     });
 
     document.getElementById("import").addEventListener('input', e => {
-        let file = this.files[0];
+        let file = e.files[0];
         let reader = new FileReader();
         let img = new Image();
         reader.readAsDataURL(file);
@@ -58,7 +58,7 @@ function montageReady() {
                         return;
                     }
                 }
-                this.reset();
+                e.reset();
             };
         };
     });
