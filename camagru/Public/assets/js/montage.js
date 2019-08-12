@@ -190,3 +190,10 @@ function noCamera() {
     document.getElementsByClassName("video-overlay")[0].classList.add("hidden");
     document.getElementsByClassName("no-cam-overlay")[0].classList.remove("hidden");
 }
+
+function hideCamera() {
+    if (document.getElementById('video').filter.opacity == 1)
+        document.getElementById('video').filter.opacity = '0';
+    else
+        document.getElementById('video').filter.opacity = '1';
+}
