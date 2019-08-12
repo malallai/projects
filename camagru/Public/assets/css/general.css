@@ -250,14 +250,9 @@ body .overlay {
 }
 
 .aside-content .aside-middle-content {
-    overflow: hidden;
+    overflow-y: auto;
     flex: 1;
 }
-
-.aside-content .aside-middle-content:hover {
-    overflow-y: auto;
-}
-
 
 /** Header */
 
