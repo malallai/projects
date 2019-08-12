@@ -22,7 +22,9 @@
                 </div>
                 <div class="montage-overlay no-cam-overlay hidden">
                     <div class="row">
-                        <div class="content"></div>
+                        <div class="content">
+                            <h1>La caméra est inaccessible.</h1>
+                        </div>
                     </div>
                 </div>
             </div>
