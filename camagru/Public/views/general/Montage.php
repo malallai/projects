@@ -86,6 +86,7 @@
                 <a href="#"><span>Envoyer</span></a>
             </div>
             <div class="button-content">
+                <label for="import"><span>Importer</span></label>
                 <input type="file" id="import" name="picture" accept="image/*">
             </div>
         </div>
