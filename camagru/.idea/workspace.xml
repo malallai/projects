@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/views/aside/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="249" column="31" lean-forward="true" selection-start-line="249" selection-start-column="31" selection-end-line="249" selection-end-column="31" />
+            <state relative-caret-position="-5">
+              <caret line="221" column="25" lean-forward="true" selection-start-line="221" selection-start-column="25" selection-end-line="221" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -138,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="481">
+              <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -255,8 +253,8 @@
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/montage.js" />
         <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
-        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
         <option value="$PROJECT_DIR$/Public/assets/css/montage.css" />
+        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
       </list>
     </option>
   </component>
@@ -486,7 +484,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283514000" />
+    <option name="totallyTimeSpent" value="283688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,17 +815,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="-5">
+          <caret line="221" column="25" lean-forward="true" selection-start-line="221" selection-start-column="25" selection-end-line="221" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="249" column="31" lean-forward="true" selection-start-line="249" selection-start-column="31" selection-end-line="249" selection-end-column="31" />
+        <state relative-caret-position="481">
+          <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
         </state>
       </provider>
     </entry>
