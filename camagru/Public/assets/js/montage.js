@@ -189,7 +189,7 @@ function uploadMontage() {
         tmp.height = pictureFilter.img.naturalHeight;
         tmp.width = pictureFilter.img.naturalWidth;
         tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
-        uri = tmp.toDataURL('image/jpeg');
+        uri = tmp.toDataURL('image/png');
         let filterB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
         data = {
             img: imgB64,
