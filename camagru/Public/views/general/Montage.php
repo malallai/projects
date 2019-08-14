@@ -81,17 +81,17 @@
         </div>
     </div>
     <div id="buttons-row" class="row buttons-row">
-        <div class="c-button button-blue">
-            <div class="button-content">
+        <div class="c-button">
+            <div class="button-content button-blue">
                 <a class="a-button" onclick="uploadMontage()"><span>Envoyer</span></a>
             </div>
-            <div class="button-content">
+            <div class="button-content button-blue">
                 <label for="import"><span>Importer</span></label>
                 <input type="file" id="import" name="picture" accept="image/*">
             </div>
         </div>
-        <div class="c-button filters-button button-green">
-            <div class="button-content">
+        <div class="c-button filters-button">
+            <div class="button-content button-green">
                 <a onclick="switchFilters()" class="a-button"><span>Filtres</span></a>
             </div>
         </div>

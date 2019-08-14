@@ -51,15 +51,11 @@
         <?php } ?>
     </div>
 </div>
-<div class="aside-profile-buttons">
-    <div class="c-button button-blue">
-        <div class="manage-pictures button-content">
-            <a href="/user/edit"><span>Édition du profile</span></a>
-        </div>
+<div class="c-button aside-profile-buttons">
+    <div class="button-blue button-content">
+        <a href="/user/edit"><span>Édition du profile</span></a>
     </div>
-    <div class="c-button button-red">
-        <div class="logout button-content">
-            <a href="/user/logout"><span>Déconnexion</span></a>
-        </div>
+    <div class="button-red button-content">
+        <a href="/user/logout"><span>Déconnexion</span></a>
     </div>
 </div>
