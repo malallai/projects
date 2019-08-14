@@ -10,7 +10,8 @@ class MontageSql extends Sql {
 
     public function upload_picture($user_id, $picture_path) {
         try {
-            self::run("INSERT INTO posts (user_id, image_path) VALUES (?,?)", array($user_id, $picture_path));
+            $file = '/Public/assets/pictures/posts/'.$picture_path.'.jpeg';
+            self::run("INSERT INTO posts (user_id, image_path) VALUES (?,?)", array($user_id, $file));
             return true;
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
