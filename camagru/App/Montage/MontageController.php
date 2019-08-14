@@ -76,7 +76,7 @@ class MontageController extends Controller {
         $sx = 100 * $post['offWF'] / imagesx($filter);
 //        $sy = ((100 * $post['offH'] / imagesy($img)) + (100 * $post['offHF'] / imagesy($filter))) / 2;
         $sy = 100 * $post['offHF'] / imagesy($filter);
-        $filter = imagescale($filter, $post['offWF'] * $sx, $post['offHF'] * $sy);
+        $filter = imagescale($filter, $post['offWF'], $post['offHF']);
         $x = $px * imagesx($img) / 100;
         $y = $py * imagesy($img) / 100;
         imagecopy($img, $filter, $x, $y, 0, 0, imagesx($filter), imagesy($filter));
