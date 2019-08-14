@@ -3,13 +3,16 @@
 namespace App\Montage;
 
 use App\General\GeneralController;
+use App\User\UserController;
 use Core\Controller;
 use Core\Page;
+use Core\Security;
 use Core\Snackbar;
 
 class MontageController extends Controller {
 
     private $_generalController;
+    private $_userController;
     protected static $_instance = null;
 
     public function __construct($page) {
@@ -18,6 +21,7 @@ class MontageController extends Controller {
             $this->_sql = new MontageSql();
             $this->_page = $page;
             $this->_generalController = GeneralController::get($page);
+            $this->_userController = UserController::get($page);
         }
     }
 
@@ -39,6 +43,13 @@ class MontageController extends Controller {
     }
 
     /**
+     * @return UserController
+     */
+    public function getUserController() {
+        return $this->_userController;
+    }
+
+    /**
      * @return Page
      */
     public function getPage() {
@@ -52,15 +63,40 @@ class MontageController extends Controller {
         return $this->_sql;
     }
 
-    public function newPost($picture) {
-        if ($this->getGeneralController()->getUserController()->isLogged()) {
-            if (!$this->getSql()->upload_picture($this->getGeneralController()->getUserController()->getSessionId(), $picture)) {
-                Snackbar::sendSnack("Error while uploading post");
-            }
+    public function merge42($post) {
+
+    }
+
+    public function mergeSimple($post) {
+        $img = imagecreatefromjpeg($this->base64_to_jpeg($post['img']));
+        $output = 'tmp/'.Security::newToken(8).'.jpeg';
+        if ($post['filter'] !== 'void')
+            imagefilter($img,  IMG_FILTER_GRAYSCALE);
+        if ($post['filter'] === 'sepia')
+            imagefilter($img, IMG_FILTER_COLORIZE, 100, 50, 0);
+        imagepng($img, $output);
+        imagedestroy($img);
+        return $output;
+    }
+
+    public function base64_to_jpeg($string) {
+        if (!file_exists("tmp"))
+            mkdir("tmp");
+        $output_file = 'tmp/'.Security::newToken(8).'.jpeg';
+        $ifp = fopen($output_file, 'wb' );
+        fwrite($ifp, base64_decode($string));
+        fclose($ifp);
+        return $output_file;
+    }
+
+    public function newPost($post) {
+        if ($post['filter'] === "42") {
+
         } else {
-            Snackbar::sendSnack("Please log-in");
+            if ($output = $this->mergeSimple($post)) {
+                return array("status" => "ok", "file" => $output);
+            }
         }
-        $this->getPage()->redirect("/");
     }
 
 }
