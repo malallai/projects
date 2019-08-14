@@ -265,11 +265,12 @@
     width: 49.5%;
 }
 
-.c-button.montage-button .button-content, .c-button.filters-button .button-content {
-    margin: 0;
+.c-button.filters-button .button-content {
+    margin-left: auto;
 }
 
-.c-button.montage-button .button-content {
+.c-button.montage-button .button-content, .c-button.filters-button .button-content {
+    margin: 0;
     width: 48%;
 }
 
