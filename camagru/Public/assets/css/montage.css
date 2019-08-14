@@ -274,7 +274,7 @@
     z-index: -1;
 }
 
-.filters-button, .filters-button .button-content {
+.c-button.filters-button, .c-button.filters-button .button-content {
     margin-left: auto;
 }
 
