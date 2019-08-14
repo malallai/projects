@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/aside/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -95,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+            <state relative-caret-position="423">
+              <caret line="93" column="51" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -104,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="352">
+              <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -119,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+            <state relative-caret-position="209">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -140,17 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+            <state relative-caret-position="1008">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/views/aside/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="17">
+              <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -168,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.pic</find>
       <find>hidden</find>
       <find>.render-overlay</find>
       <find>button-login</find>
@@ -188,16 +189,17 @@
       <find>token</find>
       <find>.overlay-button</find>
       <find>selectedPicture</find>
-      <find>button-blue</find>
       <find>button-cont</find>
       <find>aside-but</find>
       <find>.aside-button</find>
-      <find>.c-button</find>
       <find>button-con</find>
       <find>.montage-button</find>
       <find>aside-button</find>
       <find>montage-button</find>
       <find>.c-button a</find>
+      <find>.c-button</find>
+      <find>button-blue</find>
+      <find>button-gree</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -254,17 +256,17 @@
         <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
         <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
-        <option value="$PROJECT_DIR$/Public/views/aside/Login.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
-        <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Pages/MontagePage.php" />
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/montage.js" />
         <option value="$PROJECT_DIR$/Public/assets/css/montage.css" />
-        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
-        <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/profile.css" />
+        <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/general.css" />
+        <option value="$PROJECT_DIR$/Public/views/general/Montage.php" />
+        <option value="$PROJECT_DIR$/Public/views/aside/Login.php" />
       </list>
     </option>
   </component>
@@ -494,7 +496,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284032000" />
+    <option name="totallyTimeSpent" value="284307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -735,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/js/camagru.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -776,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -811,31 +799,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/aside/Login.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
+    <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="1008">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="209">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/general/Montage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="93" column="51" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/aside/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/aside/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
         </state>
       </provider>
     </entry>

@@ -138,27 +138,27 @@ body[has_aside] .aside-bar {
     transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
 }
 
-.c-button.button-blue .button-content {
+.c-button .button-blue.button-content {
     background-color: #2b3441;
 }
 
-.c-button.button-blue .button-content:hover {
+.c-button .button-blue.button-content:hover {
     background-color: #202020;
 }
 
-.c-button.button-red .button-content {
+.c-button .button-red.button-content {
     background-color: #e53935;
 }
 
-.c-button.button-red .button-content:hover {
+.c-button .button-red.button-content:hover {
     background-color: #b71c1c;
 }
 
-.c-button.button-green .button-content {
+.c-button .button-green.button-content {
     background-color: #30c849;
 }
 
-.c-button.button-green .button-content:hover {
+.c-button .button-green.button-content:hover {
     background-color: #189937;
 }
 
