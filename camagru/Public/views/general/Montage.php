@@ -81,7 +81,7 @@
         </div>
     </div>
     <div id="buttons-row" class="row buttons-row">
-        <div class="c-button">
+        <div class="c-button montage-button">
             <div class="button-content button-blue">
                 <a class="a-button" onclick="uploadMontage()"><span>Envoyer</span></a>
             </div>
