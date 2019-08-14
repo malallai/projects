@@ -72,7 +72,7 @@ class MontageController extends Controller {
         $scale = 1;
         $img = imagecreatefromjpeg($tmp);
         if (($diff  = (100 - (100 * $post['offW'] / imagesx($img))) > 25))
-            $scale = $diff + 1;
+            $scale = ($diff / 25) + 1;
         $img = imagescale($img, $post['offW'] * $scale, $post['offH'] * $scale);
         $filter = imagecreatefrompng($tmpFilter);
         $filter = imagescale($filter, $post['offWF'] * $scale, $post['offHF'] * $scale);
