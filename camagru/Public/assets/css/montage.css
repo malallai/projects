@@ -297,30 +297,6 @@
     margin-left: auto;
 }
 
-.montage-button.button-blue .button-content {
-    background-color: #2b3441;
-}
-
-.montage-button.button-blue .button-content:hover {
-    background-color: #202020;
-}
-
-.montage-button.button-red .button-content {
-    background-color: #e53935;
-}
-
-.montage-button.button-red .button-content:hover {
-    background-color: #b71c1c;
-}
-
-.montage-button.button-green .button-content {
-    background-color: #30c849;
-}
-
-.montage-button.button-green .button-content:hover {
-    background-color: #189937;
-}
-
 @media only screen and (max-width: 750px) {
     .montage-row .camera {
         flex-direction: column;
