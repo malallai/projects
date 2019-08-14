@@ -64,25 +64,42 @@ class MontageController extends Controller {
     }
 
     public function merge42($post) {
-
+        $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.jpeg');
+        $tmpFilter = $this->base64_to_img($post['filterPicture'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
+        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
+        $size = $post['width'];
+        $x = $post['x'];
+        $y = $post['y'];
+        $img = imagecreatefromjpeg($tmp);
+        $filter = imagecreatefromjpeg($tmpFilter);
+        imagealphablending($filter, false);
+        imagesavealpha($filter, true);
+        imagecopymerge($img, $filter, 10, 9, 0, 0, 181, 180, 100);
+        imagepng($img, $output);
+        imagedestroy($img);
+        imagedestroy($filter);
+        unlink($tmp);
+        unlink($tmpFilter);
+        return $output;
     }
 
     public function mergeSimple($post) {
-        $img = imagecreatefromjpeg($this->base64_to_jpeg($post['img']));
-        $output = 'tmp/'.Security::newToken(8).'.jpeg';
+        $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.jpeg');
+        $img = imagecreatefromjpeg($tmp);
+        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
         if ($post['filter'] !== 'void')
             imagefilter($img,  IMG_FILTER_GRAYSCALE);
         if ($post['filter'] === 'sepia')
             imagefilter($img, IMG_FILTER_COLORIZE, 100, 50, 0);
         imagepng($img, $output);
         imagedestroy($img);
+        unlink($tmp);
         return $output;
     }
 
-    public function base64_to_jpeg($string) {
-        if (!file_exists("tmp"))
-            mkdir("tmp");
-        $output_file = 'tmp/'.Security::newToken(8).'.jpeg';
+    public function base64_to_img($string, $output_file) {
+        if (!file_exists("Public/assets/pictures/tmp"))
+            mkdir("Public/assets/pictures/tmp");
         $ifp = fopen($output_file, 'wb' );
         fwrite($ifp, base64_decode($string));
         fclose($ifp);
@@ -91,7 +108,9 @@ class MontageController extends Controller {
 
     public function newPost($post) {
         if ($post['filter'] === "42") {
-
+            if ($output = $this->merge42($post)) {
+                return array("status" => "ok", "file" => $output);
+            }
         } else {
             if ($output = $this->mergeSimple($post)) {
                 return array("status" => "ok", "file" => $output);
