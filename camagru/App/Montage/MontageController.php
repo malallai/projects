@@ -78,8 +78,8 @@ class MontageController extends Controller {
         imagepng($img, $output);
         imagedestroy($img);
         imagedestroy($filter);
-        unlink($tmp);
-        unlink($tmpFilter);
+        //unlink($tmp);
+        //unlink($tmpFilter);
         return $output;
     }
 
