@@ -64,14 +64,16 @@ class MontageController extends Controller {
     }
 
     public function merge42($post) {
-        $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.jpeg');
+        $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
         $tmpFilter = $this->base64_to_img($post['filterPicture'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
         $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
         $size = $post['width'];
         $x = $post['x'];
         $y = $post['y'];
-        $img = imagecreatefromjpeg($tmp);
+        $img = imagecreatefrompng($tmp);
         $filter = imagecreatefrompng($tmpFilter);
+        imagealphablending($img, false);
+        imagesavealpha($img, true);
         imagealphablending($filter, false);
         imagesavealpha($filter, true);
         imagecopymerge($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter), 100);
