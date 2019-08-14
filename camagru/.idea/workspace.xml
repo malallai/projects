@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Public/assets/js/montage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/js/montage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/js/montage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state relative-caret-position="493">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -473,7 +472,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292644000" />
+    <option name="totallyTimeSpent" value="292711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -488,7 +487,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.1671141" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.1671141" />
       <window_info id="Structure" order="1" sideWeight="0.44744524" side_tool="true" weight="0.22252497" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -825,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/js/montage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="493">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
