@@ -163,9 +163,7 @@ function newPicture() {
         pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
     };
     newPic.addEventListener("click", () => {
-        if (montage.selectedPicture) montage.selectedPicture.removeAttribute("selected");
         montage.selectedPicture = newPic.children[0];
-        montage.selectedPicture.setAttribute("selected", "");
         reloadImage();
     });
 }
