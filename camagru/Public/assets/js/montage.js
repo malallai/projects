@@ -27,6 +27,7 @@ function montageReady() {
 
     document.getElementById('ratio').oninput = function() {
         pictureFilter.ratio = this.value;
+        updateFilter();
     };
 
     document.getElementsByClassName("render")[0].addEventListener("mousemove", movePicture);
