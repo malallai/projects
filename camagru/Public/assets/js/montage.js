@@ -16,7 +16,7 @@ function montageReady() {
     let buttons = parent.getElementsByClassName("overlay-button");
     montage.selectedFilter = buttons[0];
     montage.selectedFilter.setAttribute("selected", "");
-    for (let items gof buttons) {
+    for (let items of buttons) {
         items.addEventListener("click", function(event) {
             if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
             montage.selectedFilter = items;
