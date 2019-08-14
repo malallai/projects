@@ -187,6 +187,8 @@ function uploadMontage() {
     let data = {
         img: imgB64,
         filter: montage.filterId,
+        offW: canvas.offsetWidth,
+        offH: canvas.offsetHeight,
         token: token.value
     };
     if (pictureFilter.img) {
@@ -199,11 +201,14 @@ function uploadMontage() {
         data = {
             img: imgB64,
             filter: montage.filterId,
+            offW: canvas.offsetWidth,
+            offH: canvas.offsetHeight,
             filterPicture: filterB64,
             filterRatio: pictureFilter.ratio,
-            filterWidth: pictureFilter.width,
             filterX: pictureFilter.x,
             filterY: pictureFilter.y,
+            offWF: pictureFilter.img.offsetWidth,
+            offHF: pictureFilter.img.offsetHeight,
             token: token.value
         };
     }
