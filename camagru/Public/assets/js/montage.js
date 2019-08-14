@@ -79,8 +79,6 @@ function switchFilters() {
 }
 
 function reloadImage() {
-    let image = new Image();
-    image.src = montage.selectedPicture.src;
     canvas.width = montage.selectedPicture.width;
     canvas.height = montage.selectedPicture.height;
     context.drawImage(montage.selectedPicture, 0, 0, canvas.width, canvas.height);
