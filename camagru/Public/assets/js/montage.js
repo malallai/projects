@@ -3,7 +3,7 @@ var video = null;
 var canvas = null;
 var context = null;
 var montage = {selectedFilter:null, selectedPicture:null, took:false, filterId:0}
-var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, width:50, x:25, y:0};
+var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, ratio:1, width:100, x:25, y:0};
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -37,8 +37,8 @@ function movePicture(event) {
         let x = event.clientX - rect.left - pictureFilter.clickedX;
         let y = event.clientY - rect.top - pictureFilter.clickedY;
         let top = 100 * y / canvas.offsetHeight;
-        let left = 100 * x / canvas.offsetWidth;
-        pictureFilter.x = left;
+        let l = 100 * x / canvas.offsetWidth;
+        pictureFilter.x = l;
         pictureFilter.y = top;
         pictureFilter.img.style.top = pictureFilter.y + '%';
         pictureFilter.img.style.left = pictureFilter.x + '%';
@@ -112,6 +112,8 @@ function picFilter(parent) {
     let img = new Image();
     img.src = parent.src;
     img.classList.add("filter-img");
+    let width = ((100*canvas.width/canvas.offsetWidth) + (100*canvas.height/canvas.offsetHeight)) / 2;
+    pictureFilter.width = (width * pictureFilter.ratio) + '%';
     img.style.width = pictureFilter.width + '%';
     img.style.left = pictureFilter.x + '%';
     img.style.top = pictureFilter.y + '%';
