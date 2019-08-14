@@ -217,12 +217,12 @@ function uploadMontage() {
         dataType: 'json',
         data: data,
         success: function (msg) {
-            if (msg.includes('error')) {
-                if (msg.includes('log'))
+            if (msg['status'].includes('error')) {
+                if (msg['status'].includes('log'))
                     window.location = "/user";
                 else
                     new_snackbar("Une erreur est survenue. Merci de réessayer.");
-            } else if (msg === "ok") {
+            } else if (msg['status'] === "ok") {
                 window.location = "/";
             }
         }
