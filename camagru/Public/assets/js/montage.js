@@ -2,7 +2,7 @@ var front = false;
 var video = null;
 var canvas = null;
 var context = null;
-var montage = {filters:null,selectedFilter:null, selectedPicture:null, took:false, filterId:0};
+var montage = {filters:null,selectedFilter:null, selectedPicture:null, took:false, filterId:"void"};
 var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, ratio:1, width:100, x:25, y:0};
 
 function montageReady() {
