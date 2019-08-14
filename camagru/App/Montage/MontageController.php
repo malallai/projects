@@ -69,14 +69,13 @@ class MontageController extends Controller {
         $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
         $px = $post['filterX'];
         $py = $post['filterY'];
-        $ratio = $post['filterRatio'];
+        $scale = 1;
         $img = imagecreatefromjpeg($tmp);
+        if (($diff  = (100 - (100 * $post['offW'] / imagesx($img))) > 25))
+            $scale = $diff + 1;
+        $img = imagescale($img, $post['offW'] * $scale, $post['offH'] * $scale);
         $filter = imagecreatefrompng($tmpFilter);
-//        $sx = ((100 * $post['offW'] / imagesx($img)) + (100 * $post['offWF'] / imagesx($filter))) / 2;
-        $sx = 100 * $post['offWF'] / imagesx($filter);
-//        $sy = ((100 * $post['offH'] / imagesy($img)) + (100 * $post['offHF'] / imagesy($filter))) / 2;
-        $sy = 100 * $post['offHF'] / imagesy($filter);
-        $filter = imagescale($filter, $post['offWF'], $post['offHF']);
+        $filter = imagescale($filter, $post['offWF'] * $scale, $post['offHF'] * $scale);
         $x = $px * imagesx($img) / 100;
         $y = $py * imagesy($img) / 100;
         imagecopy($img, $filter, $x, $y, 0, 0, imagesx($filter), imagesy($filter));
