@@ -266,7 +266,7 @@
 }
 
 .c-button.filters-button .button-content {
-    margin-left: auto;
+    margin-left: auto !important;
 }
 
 .c-button.montage-button .button-content, .c-button.filters-button .button-content {
