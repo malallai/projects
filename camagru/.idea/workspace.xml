@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="266" column="51" selection-start-line="266" selection-start-column="51" selection-end-line="266" selection-end-column="51" />
+            <state relative-caret-position="321">
+              <caret line="270" column="83" selection-start-line="270" selection-start-column="83" selection-end-line="270" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -493,7 +493,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286435000" />
+    <option name="totallyTimeSpent" value="286573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="266" column="51" selection-start-line="266" selection-start-column="51" selection-end-line="266" selection-end-column="51" />
+        <state relative-caret-position="321">
+          <caret line="270" column="83" selection-start-line="270" selection-start-column="83" selection-end-line="270" selection-end-column="83" />
         </state>
       </provider>
     </entry>

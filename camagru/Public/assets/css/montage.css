@@ -265,8 +265,11 @@
 }
 
 .c-button.montage-button, .c-button.filters-button {
-    margin: 0;
     position: relative;
+}
+
+.c-button.montage-button .button-content, .c-button.filters-button .button-content {
+    margin: 0;
 }
 
 .c-button.montage-button .button-content {
@@ -277,10 +280,6 @@
     opacity: 0;
     position: absolute;
     z-index: -1;
-}
-
-.c-button.filters-button, .c-button.filters-button .button-content {
-    margin-left: auto;
 }
 
 @media only screen and (max-width: 750px) {
