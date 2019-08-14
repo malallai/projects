@@ -204,7 +204,6 @@ function uploadMontage() {
             offW: canvas.offsetWidth,
             offH: canvas.offsetHeight,
             filterPicture: filterB64,
-            filterRatio: pictureFilter.ratio,
             filterX: pictureFilter.x,
             filterY: pictureFilter.y,
             offWF: pictureFilter.img.offsetWidth,
@@ -218,7 +217,14 @@ function uploadMontage() {
         dataType: 'json',
         data: data,
         success: function (msg) {
-            console.log(msg);
+            if (msg.contains('error')) {
+                if (msg.contains('log'))
+                    window.location = "/user";
+                else
+                    new_snackbar("Une erreur est survenue. Merci de réessayer.");
+            } else if (msg === "ok") {
+                window.location = "/";
+            }
         }
     });
 }

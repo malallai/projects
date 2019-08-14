@@ -78,9 +78,12 @@ class MontageController extends Controller {
         $filter = imagescale($filter, $post['offWF'] * $scale, $post['offHF'] * $scale);
         $x = $px * imagesx($img) / 100;
         $y = $py * imagesy($img) / 100;
-        imagecopy($img, $filter, $x, $y, 0, 0, imagesx($filter), imagesy($filter));
-        imagepng($img, $output);
-        imagedestroy($img);
+        $result = imagecopy($img, $filter, $x, $y, 0, 0, imagesx($filter), imagesy($filter));
+        if (!$result)
+            return false;
+        $result = imagepng($img, $output);
+        if (!$result)
+            return false;imagedestroy($img);
         imagedestroy($filter);
         unlink($tmp);
         unlink($tmpFilter);
@@ -112,14 +115,15 @@ class MontageController extends Controller {
 
     public function newPost($post) {
         if ($post['filter'] === "42") {
-            if ($output = $this->merge42($post)) {
-                return array("status" => "ok", "file" => $output);
-            }
+            $output = $this->merge42($post);
         } else {
-            if ($output = $this->mergeSimple($post)) {
-                return array("status" => "ok", "file" => $output);
-            }
+            $output = $this->mergeSimple($post);
         }
+        if ($output) {
+            if ($this->getSql()->upload_picture($this->getUserController()->getSessionId(), $output))
+                return array("status" => "ok");
+        }
+        return array("status" => "error");
     }
 
 }
