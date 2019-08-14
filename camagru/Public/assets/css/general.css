@@ -136,7 +136,6 @@ body[has_aside] .aside-bar {
     -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
     -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
     transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
-    color: white;
 }
 
 .c-button.button-blue .button-content {
@@ -171,6 +170,7 @@ body[has_aside] .aside-bar {
     font-size: 1.25rem;
     display: flex;
     cursor: pointer;
+    color: white;
 }
 
 .c-button span {
