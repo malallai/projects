@@ -178,7 +178,7 @@ function uploadMontage() {
         return;
     let token = document.getElementsByClassName("token")[0];
     let uri = canvas.toDataURL("image/jpeg");
-    let imgB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
+    let imgB64 = uri.replace(/^data:image.+;base64,/, '');
     let data = {
         img: imgB64,
         filter: montage.filterId,
@@ -190,7 +190,7 @@ function uploadMontage() {
         tmp.width = pictureFilter.img.naturalWidth;
         tmp.getContext('2d').drawImage(pictureFilter.img, 0, 0);
         uri = tmp.toDataURL('image/png');
-        let filterB64 = uri.replace(/^data:image.+jpeg;base64,/, '');
+        let filterB64 = uri.replace(/^data:image.+;base64,/, '');
         data = {
             img: imgB64,
             filter: montage.filterId,
