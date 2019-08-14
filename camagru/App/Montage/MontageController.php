@@ -72,7 +72,7 @@ class MontageController extends Controller {
         $ratio = $post['filterRatio'];
         $img = imagecreatefromjpeg($tmp);
         $filter = imagecreatefrompng($tmpFilter);
-        $img = imagescale($filter, $post['offW'], $post['offH']);
+        $img = imagescale($img, $post['offW'], $post['offH']);
         $filter = imagescale($filter, $post['offWF'], $post['offHF']);
         $x = $px * imagesx($img) / 100;
         $y = $py * imagesy($img) / 100;
