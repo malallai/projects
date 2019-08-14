@@ -3,7 +3,7 @@ var video = null;
 var canvas = null;
 var context = null;
 var montage = {selectedFilter:null, selectedPicture:null, took:false, filterId:0};
-var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, ratio:1, width:18, x:25, y:0};
+var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, ratio:1, width:100, x:25, y:0};
 
 function montageReady() {
     let parent = document.getElementsByClassName("render-overlay")[0];
@@ -117,8 +117,7 @@ function picFilter(parent) {
     let img = new Image();
     img.src = parent.src;
     img.classList.add("filter-img");
-    pictureFilter.width = 18;
-    img.style.width = (pictureFilter.width * pictureFilter.ratio) + '%';
+    img.style.width = (pictureFilter.width / pictureFilter.ratio) + '%';
     img.style.left = pictureFilter.x + '%';
     img.style.top = pictureFilter.y + '%';
     pictureFilter.img = img;
