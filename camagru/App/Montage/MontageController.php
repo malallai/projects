@@ -67,17 +67,22 @@ class MontageController extends Controller {
         $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.jpeg');
         $tmpFilter = $this->base64_to_img($post['filterPicture'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
         $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
-        $size = $post['width'];
-        $x = $post['x'];
-        $y = $post['y'];
+        $width = $post['filterWidth'];
+        $px = $post['filterX'];
+        $py = $post['filterY'];
+        $ratio = $post['filterRatio'];
         $img = imagecreatefromjpeg($tmp);
         $filter = imagecreatefrompng($tmpFilter);
-        imagecopy($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter));
+        $w = ($width * $ratio) * imagesx($filter) / 100;
+        $h = ($width * $ratio) * imagesy($filter) / 100;
+        $x = $px * imagesx($img) / 100;
+        $y = $py * imagesy($img) / 100;
+        imagecopy($img, $filter, $x, $y, 0, 0, $w, $h);
         imagepng($img, $output);
         imagedestroy($img);
         imagedestroy($filter);
-        //unlink($tmp);
-        //unlink($tmpFilter);
+        unlink($tmp);
+        unlink($tmpFilter);
         return $output;
     }
 
