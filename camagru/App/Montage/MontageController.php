@@ -66,7 +66,7 @@ class MontageController extends Controller {
     public function merge42($post) {
         $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
         $tmpFilter = $this->base64_to_img($post['filterPicture'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
-        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
+        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.png';
         $size = $post['width'];
         $x = $post['x'];
         $y = $post['y'];
