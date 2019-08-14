@@ -64,7 +64,7 @@ function importPic() {
 
 function switchFilters() {
     let render = document.getElementsByClassName("render")[0];
-    let button = document.getElementsByClassName("filters-button")[0];
+    let button = document.getElementsByClassName("filters-button")[0].getElementsByClassName("button-content")[0];
     let filters = button.classList.contains('button-green');
     filters = !filters;
     if (!filters)
