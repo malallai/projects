@@ -74,8 +74,8 @@ class MontageController extends Controller {
         $filter = imagecreatefromjpeg($tmpFilter);
         imagealphablending($filter, false);
         imagesavealpha($filter, true);
-        imagecopymerge($img, $filter, 10, 9, 0, 0, 181, 180, 100);
-        imagepng($img, $output);
+        imagecopymerge($filter, $img, 10, 9, 0, 0, 181, 180, 100);
+        imagepng($filter, $output);
         imagedestroy($img);
         imagedestroy($filter);
         //unlink($tmp);
