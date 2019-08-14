@@ -202,7 +202,8 @@ function uploadMontage() {
             img: imgB64,
             filter: montage.filterId,
             filterPicture: filterB64,
-            filterSize: pictureFilter.width,
+            filterRatio: pictureFilter.ratio,
+            filterWidth: pictureFilter.width,
             filterX: pictureFilter.x,
             filterY: pictureFilter.y,
             token: token.value
