@@ -112,7 +112,7 @@ function picFilter(parent) {
     let img = new Image();
     img.src = parent.src;
     img.classList.add("filter-img");
-    let width = ((100*canvas.width/canvas.offsetWidth) + (100*canvas.height/canvas.offsetHeight)) / 2;
+    let width = ((100*canvas.offsetWidth/canvas.width) + (100*canvas.offsetHeight/canvas.height)) / 2;
     pictureFilter.width = (width * pictureFilter.ratio) + '%';
     img.style.width = pictureFilter.width + '%';
     img.style.left = pictureFilter.x + '%';
