@@ -83,7 +83,7 @@ function reloadImage() {
     image.src = montage.selectedFilter.src;
     canvas.width = montage.selectedFilter.width;
     canvas.height = montage.selectedFilter.height;
-    context.drawImage(montage.selectedFilter, 0, 0, canvas.width, canvas.height);
+    context.drawImage(montage.selectedPicture, 0, 0, canvas.width, canvas.height);
 }
 
 function updateFilter() {
@@ -156,18 +156,16 @@ function newPicture() {
     newPic.append(pic);
     newPic.append(details);
     pictures.prepend(newPic);
-    montage.selectedFilter = montage.filters[0];
-    montage.filterId = "void";
+    montage.selectedPicture = newPic.children[0];
     let tmp = new Image();
     tmp.src = canvas.toDataURL();
     tmp.onload = () => {
         pic.getContext('2d').drawImage(tmp, 0, 0, pic.width, pic.height);
     };
     newPic.addEventListener("click", () => {
-        if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
-        montage.selectedFilter = montage.filters[0];
-        montage.filterId = "void";
-        montage.selectedFilter.setAttribute("selected", "");
+        if (montage.selectedPicture) montage.selectedPicture.removeAttribute("selected");
+        montage.selectedPicture = newPic.children[0];
+        montage.selectedPicture.setAttribute("selected", "");
         reloadImage();
     });
 }
