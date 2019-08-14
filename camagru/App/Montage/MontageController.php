@@ -78,7 +78,7 @@ class MontageController extends Controller {
         imagealphablending($filter, false);
         imagesavealpha($filter, true);
         imagecolortransparent($filter);
-        imagecopymerge($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter), 100);
+        imagecopymerge($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter), 0);
         imagepng($img, $output);
         imagedestroy($img);
         imagedestroy($filter);
