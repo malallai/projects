@@ -219,7 +219,7 @@ function uploadMontage() {
                 if (msg['status'].includes('log'))
                     window.location = "/user";
                 else
-                    new_snackbar("Une erreur est survenue. Merci de réessayer.");
+                    new_snackbar("Une erreur est survenue. Merci de réessayer. (" + msg['status'] + ")");
             } else if (msg['status'] === "ok") {
                 window.location = "/";
             }
