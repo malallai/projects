@@ -177,7 +177,7 @@ function uploadMontage() {
     if (!montage.took)
         return;
     let token = document.getElementsByClassName("token")[0];
-    let uri = canvas.toDataURL("image/png");
+    let uri = canvas.toDataURL("image/jpeg");
     let imgB64 = uri.replace(/^data:image.+;base64,/, '');
     let data = {
         img: imgB64,
