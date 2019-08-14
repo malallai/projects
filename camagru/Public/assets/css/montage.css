@@ -261,7 +261,12 @@
 .c-button.montage-button {
     width: 49.5%;
     justify-content: space-between;
+
+}
+
+.c-button.montage-button, .c-button.filters-button {
     margin: 0;
+    position: relative;
 }
 
 .c-button.montage-button .button-content {
