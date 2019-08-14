@@ -34,38 +34,18 @@
     width: 100%;
 }
 
-.aside-button .logout.button-content {
+.c-button .logout.button-content {
     margin: 0 1rem 0 auto;
     width: 44%;
 }
 
-.aside-button .manage-pictures.button-content {
+.c-button .manage-pictures.button-content {
     margin: 0 auto 0 1rem;
     width: 44%;
 }
 
-.aside-bar .aside-button.button-logged {
+.aside-bar .c-button.button-logged {
     position: relative;
-}
-
-.aside-button.button-logged .button-content {
-    background-color: #2b3441;
-}
-
-.aside-button.button-logged .button-content:hover {
-    background-color: #202020;
-}
-
-.aside-button.button-logged .button-content a {
-    color: #fff;
-}
-
-.aside-button.button-logged .logout.button-content {
-    background-color: #e53935;
-}
-
-.aside-button.button-logged .logout.button-content:hover {
-    background-color: #b71c1c;
 }
 
 .aside-content .main-infos {
