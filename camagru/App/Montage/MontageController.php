@@ -72,7 +72,7 @@ class MontageController extends Controller {
         $y = $post['y'];
         $img = imagecreatefrompng($tmp);
         $filter = imagecreatefrompng($tmpFilter);
-        imagecopymerge($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter), 100);
+        imagecopy($img, $filter, 10, 9, 0, 0, imagesx($filter), imagesy($filter));
         imagepng($img, $output);
         imagedestroy($img);
         imagedestroy($filter);
