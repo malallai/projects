@@ -257,15 +257,11 @@
     z-index: -1;
 }
 
-
-.c-button.montage-button {
-    width: 49.5%;
-    justify-content: space-between;
-
-}
-
 .c-button.montage-button, .c-button.filters-button {
     position: relative;
+    margin: 0;
+    justify-content: space-between;
+    width: 49.5%;
 }
 
 .c-button.montage-button .button-content, .c-button.filters-button .button-content {
