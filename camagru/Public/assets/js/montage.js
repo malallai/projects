@@ -2,7 +2,7 @@ var front = false;
 var video = null;
 var canvas = null;
 var context = null;
-var montage = {selectedFilter:null, selectedPicture:null, took:false, filterId:0};
+var montage = {filters:null,selectedFilter:null, selectedPicture:null, took:false, filterId:0};
 var pictureFilter = {picked:false, img:null, clickedX:0, clickedY:0, ratio:1, width:100, x:25, y:0};
 
 function montageReady() {
@@ -13,10 +13,10 @@ function montageReady() {
     if (!mobileDevice)
         document.getElementsByClassName("reverse-cam")[0].classList.add("disable");
 
-    let buttons = parent.getElementsByClassName("overlay-button");
-    montage.selectedFilter = buttons[0];
+    montage.filters = parent.getElementsByClassName("overlay-button");
+    montage.selectedFilter = montage.filters[0];
     montage.selectedFilter.setAttribute("selected", "");
-    for (let items of buttons) {
+    for (let items of montage.filters) {
         items.addEventListener("click", function(event) {
             if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
             montage.selectedFilter = items;
@@ -156,7 +156,8 @@ function newPicture() {
     newPic.append(pic);
     newPic.append(details);
     pictures.prepend(newPic);
-    montage.selectedFilter = newPic.children[0];
+    montage.selectedFilter = montage.filters[0];
+    montage.filterId = "void";
     let tmp = new Image();
     tmp.src = canvas.toDataURL();
     tmp.onload = () => {
@@ -164,7 +165,8 @@ function newPicture() {
     };
     newPic.addEventListener("click", () => {
         if (montage.selectedFilter) montage.selectedFilter.removeAttribute("selected");
-        montage.selectedFilter = newPic.children[0];
+        montage.selectedFilter = montage.filters[0];
+        montage.filterId = "void";
         montage.selectedFilter.setAttribute("selected", "");
         reloadImage();
     });
