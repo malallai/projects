@@ -34,12 +34,12 @@
     width: 100%;
 }
 
-.c-button .logout.button-content {
+.c-button.aside-profile-buttons .button-content:last-child {
     margin: 0 1rem 0 auto;
     width: 44%;
 }
 
-.c-button .manage-pictures.button-content {
+.c-button.aside-profile-buttons .button-content:first-child {
     margin: 0 auto 0 1rem;
     width: 44%;
 }
