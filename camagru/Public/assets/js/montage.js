@@ -25,6 +25,10 @@ function montageReady() {
         });
     }
 
+    document.getElementById('ratio').oninput = function() {
+        pictureFilter.ratio = this.value;
+    };
+
     document.getElementsByClassName("render")[0].addEventListener("mousemove", movePicture);
     document.getElementById('import').addEventListener('input', importPic);
 

@@ -91,6 +91,9 @@
             </div>
         </div>
         <div class="c-button filters-button">
+            <div class="range-slider button-blue">
+                <input type="range" min="1" max="10" value="1" class="slider" id="ratio">
+            </div>
             <div class="button-content button-green">
                 <a onclick="switchFilters()" class="a-button"><span>Filtres</span></a>
             </div>
