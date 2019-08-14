@@ -26,7 +26,7 @@ class MontagePage extends Page  {
         if (!$this->getController()->getUserController()->isLogged()){
             return array("status" => "not_logged");
         }
-        if (!$this->checkToken($args) || !$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
+        if (!$this->checkToken($args))
             return array("status" => "errors");
         return true;
     }
