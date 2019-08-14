@@ -64,9 +64,10 @@ class MontageController extends Controller {
     }
 
     public function merge42($post) {
+        $filename = Security::newToken(8);
         $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.jpeg');
         $tmpFilter = $this->base64_to_img($post['filterPicture'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
-        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
+        $output = 'Public/assets/pictures/posts/'.$filename.'.jpeg';
         $px = $post['filterX'];
         $py = $post['filterY'];
         $scale = 1;
@@ -87,13 +88,14 @@ class MontageController extends Controller {
         imagedestroy($filter);
         unlink($tmp);
         unlink($tmpFilter);
-        return $output;
+        return $filename;
     }
 
     public function mergeSimple($post) {
+        $filename = Security::newToken(8);
         $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
         $img = imagecreatefromjpeg($tmp);
-        $output = 'Public/assets/pictures/posts/'.Security::newToken(8).'.jpeg';
+        $output = 'Public/assets/pictures/posts/'.$filename.'.jpeg';
         if ($post['filter'] !== 'void')
             imagefilter($img,  IMG_FILTER_GRAYSCALE);
         if ($post['filter'] === 'sepia')
@@ -101,7 +103,7 @@ class MontageController extends Controller {
         imagepng($img, $output);
         imagedestroy($img);
         unlink($tmp);
-        return $output;
+        return $filename;
     }
 
     public function base64_to_img($string, $output_file) {
