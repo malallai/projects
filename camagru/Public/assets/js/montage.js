@@ -217,8 +217,8 @@ function uploadMontage() {
         dataType: 'json',
         data: data,
         success: function (msg) {
-            if (msg.contains('error')) {
-                if (msg.contains('log'))
+            if (msg.includes('error')) {
+                if (msg.includes('log'))
                     window.location = "/user";
                 else
                     new_snackbar("Une erreur est survenue. Merci de réessayer.");
