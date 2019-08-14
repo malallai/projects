@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/montage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/montage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/aside/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/aside/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/aside/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Montage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Montage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="253" selection-start-line="253" selection-end-line="253" />
+            <state relative-caret-position="267">
+              <caret line="249" column="31" lean-forward="true" selection-start-line="249" selection-start-column="31" selection-end-line="249" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -160,14 +160,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>propert</find>
       <find>.pic</find>
       <find>hidden</find>
       <find>.render-overlay</find>
       <find>button-login</find>
       <find>button-lo</find>
       <find>button-logged</find>
-      <find>aside-button</find>
       <find>overlay-button</find>
       <find>montage-over</find>
       <find>render-over</find>
@@ -190,6 +188,8 @@
       <find>button-con</find>
       <find>.montage-button</find>
       <find>.c-button a</find>
+      <find>aside-button</find>
+      <find>montage-button</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -197,6 +197,7 @@
       <replace>Security::converHtmlEntities(</replace>
       <replace>convertHtmlEntities</replace>
       <replace>-&gt;getController()</replace>
+      <replace>c-button</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -485,7 +486,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283411000" />
+    <option name="totallyTimeSpent" value="283514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/montage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="253" selection-start-line="253" selection-end-line="253" />
+        <state relative-caret-position="267">
+          <caret line="249" column="31" lean-forward="true" selection-start-line="249" selection-start-column="31" selection-end-line="249" selection-end-column="31" />
         </state>
       </provider>
     </entry>

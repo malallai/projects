@@ -81,7 +81,7 @@
         </div>
     </div>
     <div id="buttons-row" class="row buttons-row">
-        <div class="montage-button button-blue">
+        <div class="c-button button-blue">
             <div class="button-content">
                 <a class="a-button" onclick="uploadMontage()"><span>Envoyer</span></a>
             </div>
@@ -90,7 +90,7 @@
                 <input type="file" id="import" name="picture" accept="image/*">
             </div>
         </div>
-        <div class="montage-button filters-button button-green">
+        <div class="c-button filters-button button-green">
             <div class="button-content">
                 <a onclick="switchFilters()" class="a-button"><span>Filtres</span></a>
             </div>
