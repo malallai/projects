@@ -173,6 +173,7 @@ function switchCamera() {
 }
 
 function uploadMontage() {
+    event.preventDefault();
     if (!montage.took)
         return;
     let token = document.getElementsByClassName("token")[0];
