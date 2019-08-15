@@ -315,6 +315,14 @@ body[focus_comment] .posts-row .post .comments {
     color: #999;
 }
 
+.post-link {
+    margin: 0 .5rem .5rem .5rem;
+}
+
+.post-link input {
+    width: 50%;
+}
+
 @media only screen and (max-width: 750px) {
     .home-row:not(.full-row) {
         flex-direction: column;
