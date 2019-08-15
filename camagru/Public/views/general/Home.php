@@ -72,6 +72,9 @@
                         <div class="like-counts">
                             <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
                         </div>
+                        <div id="post-link-<?= \Core\Security::convertHtmlEntities($post['id'])?>" class="post-link hidden">
+                            <input value="https://<?=$_SERVER['HTTP_HOST']?>/post/<?=$post['id']?>">
+                        </div>
                     </div>
                 </div>
                 <?php
