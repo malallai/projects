@@ -67,6 +67,9 @@
                         <a class="link like-button" href="#" onclick="like()"><i id="<?=\Core\Security::convertHtmlEntities($post['id'])?>" class="<?= $islike ? "fas fa-heart red" : "far fa-heart" ?>"></i></a>
                         <a class="link" href="#" onclick="copyLink()"><i id="<?=\Core\Security::convertHtmlEntities($post['id'])?>" class="fas fa-share"></i></a>
                     </div>
+                    <div id="post-link-<?= \Core\Security::convertHtmlEntities($post['id'])?>" class="post-link hidden">
+                        <input value="https://<?=$_SERVER['HTTP_HOST']?>/post/<?=$post['id']?>">
+                    </div>
                     <div class="like-counts">
                         <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
                     </div>

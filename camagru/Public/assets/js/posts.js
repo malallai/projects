@@ -116,11 +116,8 @@ function newComment() {
 function copyLink() {
     event.preventDefault();
     let input = event.srcElement;
-    let host = window.location.hostname;
     let post = document.getElementById("input " + input.id);
-    post.addEventListener("copy", copy);
-    document.execCommand("copy");
-    new_snackbar("Lien copié dans le presse papier.");
+    document.getElementById("post-link-" + post).classList.remove("hidden");
 }
 
 function focusCommentInput() {
