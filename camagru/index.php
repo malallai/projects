@@ -27,6 +27,7 @@ $router->addRoute("user/reset_password/(.*)", "Pages\UserPage@editPassword");
 $router->addRoute("post/like", "Pages\PostPage@like");
 $router->addRoute("post/comment", "Pages\PostPage@comment");
 $router->addRoute("post/delete", "Pages\PostPage@delete");
+$router->addRoute("post/(\d*)", "Pages\PostPage@post");
 
 $router->addRoute("montage", "Pages\MontagePage@index");
 $router->addRoute("montage/upload", "Pages\MontagePage@upload");
