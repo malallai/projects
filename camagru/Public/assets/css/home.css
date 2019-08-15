@@ -22,6 +22,7 @@
 
 .posts-row.full-post {
     flex: 1;
+    margin: 1rem 0;
 }
 
 .posts-row .posts {
