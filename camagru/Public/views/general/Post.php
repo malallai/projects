@@ -4,7 +4,7 @@
     <div id="posts-row" class="row posts-row">
         <div class="posts">
             <?php
-            $post = $params['post'];
+            $post = $params['post']['post'];
             $userName = $post['username'];
             $likes = $post['likes'];
             $imagePath = $post['image_path'];
@@ -30,7 +30,7 @@
                     <div class="comments">
                         <div class="row">
                             <?php
-                            foreach ($post['comments'] as $comment) {
+                            foreach ($post['post']['comments'] as $comment) {
                                 $message = $comment['comment'];
                                 $author = $comment['username'];?>
                                 <div class="comment">
