@@ -8,7 +8,7 @@
             $userName = $post['username'];
             $likes = $post['likes'];
             $imagePath = $post['image_path'];
-            $user = $this->getController()->getUserController()->getUserHomeDetails($post['user_ids']);
+            $user = $this->getController()->getUserController()->getUserHomeDetails($post['user_id']);
             $islike = $this->getController()->getPostController()->isLiked($post['id'], $this->getController()->getUserController()->getSessionId());?>
             <div class="post" id="post <?= \Core\Security::convertHtmlEntities($post['id']) ?>">
                 <div class="author">
