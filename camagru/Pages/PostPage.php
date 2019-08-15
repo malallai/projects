@@ -23,10 +23,12 @@ class PostPage extends Page {
 
     public function security($args) {
         if (!$this->getController()->getUserController()->isLogged()){
-            return array("status" => "not_logged");
+            return array("status" => "log error");
         }
-        if (!$this->checkToken($args) || !$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
-            return array("status" => "errors");
+        if (!$this->checkToken($args))
+            return array("status" => "token error");
+        if (!$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
+            return array("status" => "post error");
         return true;
     }
 
