@@ -20,6 +20,10 @@
     flex-basis: 60%;
 }
 
+.posts-row.full-post {
+    flex: 1;
+}
+
 .posts-row .posts {
     display: flex;
     flex-direction: column;
@@ -312,7 +316,7 @@ body[focus_comment] .posts-row .post .comments {
 }
 
 @media only screen and (max-width: 750px) {
-    .home-row {
+    .home-row:not(.full-row) {
         flex-direction: column;
         max-width: 500px;
     }
