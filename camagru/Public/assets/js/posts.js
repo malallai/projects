@@ -113,6 +113,17 @@ function newComment() {
     });
 }
 
+function copyLink() {
+    event.preventDefault();
+    let input = event.srcElement;
+    let post = document.getElementById("input " + input.id);
+    let host = window.location.hostname;
+    if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
+    }
+    new_snackbar("Lien copié dans le presse papier.");
+}
+
 function focusCommentInput() {
     event.preventDefault();
     let body = document.getElementsByTagName("body")[0];
