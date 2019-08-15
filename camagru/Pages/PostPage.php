@@ -52,7 +52,7 @@ class PostPage extends Page {
             return $nop;
         }
         if (empty($_POST['comment'])) {
-            echo json_encode($nop = array("status" => "empty_comment"));
+            echo json_encode($nop = array("status" => "empty comment"));
             return $nop;
         }
         $post = $_POST['id'];
@@ -68,12 +68,12 @@ class PostPage extends Page {
             return $nop;
         }
         $post = $_POST['id'];
-        if ($this->getController()->getPost($post)['result']['user_id'] == $this->getController()->getUserController()->getSessionId()) {
+        if ($this->getController()->getPost($post)['post']['user_id'] == $this->getController()->getUserController()->getSessionId()) {
             $result = $this->getController()->delete($post);
             echo json_encode($result);
             return $result;
         } else {
-            echo json_encode($nop = array("status" => "error ".$this->getController()->getPost($post)['result']['user_id'].' '.$this->getController()->getUserController()->getSessionId()));
+            echo json_encode($nop = array("status" => "delete error"));
             return $nop;
         }
     }
