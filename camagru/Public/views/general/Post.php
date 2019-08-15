@@ -1,7 +1,7 @@
 <link href="/Public/assets/css/home.css" rel="stylesheet">
 <script src='/Public/assets/js/posts.js'></script>
-<div class="home-row">
-    <div id="posts-row" class="row posts-row">
+<div class="home-row full-row">
+    <div id="posts-row" class="row posts-row full-post">
         <div class="posts">
             <?php
             $post = $params['post']['post'];
