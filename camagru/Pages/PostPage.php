@@ -73,7 +73,7 @@ class PostPage extends Page {
             echo json_encode($result);
             return $result;
         } else {
-            echo json_encode($nop = array("status" => "error"));
+            echo json_encode($nop = array("status" => "error ".$this->getController()->getPost($post)['result']['user_id'].' '.$this->getController()->getUserController()->getSessionId()));
             return $nop;
         }
     }
