@@ -52,7 +52,7 @@ class PostPage extends Page {
             return $nop;
         }
         if (empty($_POST['comment'])) {
-            echo json_encode($nop = array("status" => "empty comment"));
+            echo json_encode($nop = array("status" => "empty comment error"));
             return $nop;
         }
         $post = $_POST['id'];
