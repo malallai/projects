@@ -120,12 +120,12 @@ function copyLink() {
     let post = document.getElementById("input " + input.id);
     post.addEventListener("copy", copy);
     document.execCommand("copy");
-    post.removeEventListener("copy", copy);
     new_snackbar("Lien copié dans le presse papier.");
     function copy() {
         if (event.clipboardData)
             event.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
-    }}
+    }
+}
 
 function focusCommentInput() {
     event.preventDefault();
