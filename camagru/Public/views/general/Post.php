@@ -65,6 +65,7 @@
                     <div class="icons">
                         <a class="link" href="#" onclick="showComments()"><i id="<?= \Core\Security::convertHtmlEntities($post['id']) ?>" class="far fa-comment-alt"></i></a>
                         <a class="link like-button" href="#" onclick="like()"><i id="<?=\Core\Security::convertHtmlEntities($post['id'])?>" class="<?= $islike ? "fas fa-heart red" : "far fa-heart" ?>"></i></a>
+                        <a class="link" href="#" onclick="copyLink()"><i id="<?=\Core\Security::convertHtmlEntities($post['id'])?>" class="fas fa-share"></i></a>
                     </div>
                     <div class="like-counts">
                         <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
