@@ -21,6 +21,21 @@ class PostPage extends Page {
         return $this->_controller;
     }
 
+    function post() {
+        $exploded = explode("/", $this->_url);
+        if (count($exploded) > 1) {
+            $this->seePost(intval($exploded[1]));
+        } else {
+            Page::redirect("/");
+        }
+    }
+
+    function seePost($post) {
+        $post = $this->getController()->getPost($post);
+        $params = array('content' => 'general/Post', 'post' => $post);
+        $this->render($params);
+    }
+
     public function security($args) {
         if (!$this->getController()->getUserController()->isLogged()){
             return array("status" => "log error");
