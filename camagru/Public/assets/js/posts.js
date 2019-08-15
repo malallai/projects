@@ -116,15 +116,16 @@ function newComment() {
 function copyLink() {
     event.preventDefault();
     let input = event.srcElement;
+    let host = window.location.hostname;
     let post = document.getElementById("input " + input.id);
-    post.addEventListener("copy", ev => {
-       if (ev.clipboardData)
-           ev.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
-        post.removeEventListener("copy", this);
-    });
+    post.addEventListener("copy", copy);
     document.execCommand("copy");
+    post.removeEventListener("copy", copy);
     new_snackbar("Lien copié dans le presse papier.");
-}
+    function copy() {
+        if (event.clipboardData)
+            event.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
+    }}
 
 function focusCommentInput() {
     event.preventDefault();
