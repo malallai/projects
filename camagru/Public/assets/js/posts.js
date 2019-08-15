@@ -117,10 +117,12 @@ function copyLink() {
     event.preventDefault();
     let input = event.srcElement;
     let post = document.getElementById("input " + input.id);
-    let host = window.location.hostname;
-    if (window.clipboardData) {
-        window.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
-    }
+    post.addEventListener("copy", ev => {
+       if (ev.clipboardData)
+           ev.clipboardData.setData("text/plain", "https://" + host + "/post/" + post);
+        post.removeEventListener("copy", this);
+    });
+    document.execCommand("copy");
     new_snackbar("Lien copié dans le presse papier.");
 }
 
