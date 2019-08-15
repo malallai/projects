@@ -116,8 +116,7 @@ function newComment() {
 function copyLink() {
     event.preventDefault();
     let input = event.srcElement;
-    let post = document.getElementById("input " + input.id);
-    document.getElementById("post-link-" + post).classList.remove("hidden");
+    document.getElementById("post-link-" + input.id).classList.remove("hidden");
 }
 
 function focusCommentInput() {
