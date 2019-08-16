@@ -31,7 +31,7 @@ function montageReady() {
     };
 
     document.getElementsByClassName("render")[0].addEventListener("mousemove", movePicture);
-    //document.getElementsByClassName("render")[0].addEventListener("touchmove", movePicture);
+    document.getElementsByClassName("render")[0].addEventListener("touchmove", movePicture);
     document.getElementById('import').addEventListener('input', importPic);
 
     setupCamera();
