@@ -38,6 +38,7 @@ function montageReady() {
 }
 
 function movePicture(event) {
+    event.preventDefault();
     if (pictureFilter.picked) {
         let rect = canvas.getBoundingClientRect();
         let x = event.clientX - rect.left - pictureFilter.clickedX;
@@ -128,12 +129,14 @@ function picFilter(parent) {
 }
 
 function select() {
+    event.preventDefault();
     pictureFilter.picked = true;
     pictureFilter.clickedX = event.layerX;
     pictureFilter.clickedY = event.layerY;
 }
 
 function uselect() {
+    event.preventDefault();
     pictureFilter.picked = false;
 }
 
