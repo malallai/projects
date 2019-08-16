@@ -123,8 +123,6 @@ function picFilter(parent) {
     pictureFilter.img = img;
     img.addEventListener("mousedown", select);
     img.addEventListener("mouseup", uselect);
-    img.addEventListener("touchstart", select);
-    img.addEventListener("touchend", uselect);
     document.getElementsByClassName("render")[0].prepend(img);
 }
 
