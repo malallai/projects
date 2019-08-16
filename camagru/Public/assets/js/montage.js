@@ -31,6 +31,7 @@ function montageReady() {
     };
 
     document.getElementsByClassName("render")[0].addEventListener("mousemove", movePicture);
+    document.getElementsByClassName("render")[0].addEventListener("touchmove", movePicture);
     document.getElementById('import').addEventListener('input', importPic);
 
     setupCamera();
@@ -119,15 +120,21 @@ function picFilter(parent) {
     img.style.left = pictureFilter.x + '%';
     img.style.top = pictureFilter.y + '%';
     pictureFilter.img = img;
-    img.addEventListener("mousedown", event => {
-        pictureFilter.picked = true;
-        pictureFilter.clickedX = event.layerX;
-        pictureFilter.clickedY = event.layerY;
-    });
-    img.addEventListener("mouseup", event => {
-        pictureFilter.picked = false;
-    });
+    img.addEventListener("mousedown", select);
+    img.addEventListener("mouseup", uselect);
+    img.addEventListener("touchstart", select);
+    img.addEventListener("touchend", uselect);
     document.getElementsByClassName("render")[0].prepend(img);
+}
+
+function select() {
+    pictureFilter.picked = true;
+    pictureFilter.clickedX = event.layerX;
+    pictureFilter.clickedY = event.layerY;
+}
+
+function uselect() {
+    pictureFilter.picked = false;
 }
 
 function deletePic(pic) {
