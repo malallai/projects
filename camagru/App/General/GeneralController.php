@@ -76,4 +76,8 @@ class GeneralController extends Controller {
         return $request['result'];
     }
 
+    public function testDb() {
+        return $this->_sql->testDb();
+    }
+
 }
