@@ -21,7 +21,7 @@ class Sql {
             $host = 'mysql:'.explode(';', $DB_DSN)[1];
             self::$_conn = new \PDO($host, $DB_USER, $DB_PASSWORD);
         } catch (PDOException $e) {
-            throw new SqlException("Mysql Error during connection to database. Please contact us.");
+            throw new SqlException("Mysql Error during connection to database. Please contact us. (".$e->getMessage().")");
         }
         return true;
     }
@@ -36,7 +36,7 @@ class Sql {
         try {
             self::$_conn = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         } catch (PDOException $e) {
-            throw new SqlException("Mysql Error during connection to database. Please contact us.");
+            throw new SqlException("Mysql Error during connection to database. Please contact us. (".$e->getMessage().")");
         }
         return true;
     }
