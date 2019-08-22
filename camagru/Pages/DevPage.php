@@ -4,6 +4,7 @@ namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
 use Core\Session;
+use Core\Sql;
 
 class DevPage extends Page {
 
@@ -26,9 +27,8 @@ class DevPage extends Page {
     }
 
     public function debug() {
-        header('Content-type: image/jpeg');
-        Session::startSession();
-        echo base64_decode($_SESSION['img']);
+        header('Content-type: text/plain');
+        var_dump($this->getController()->testDb());
     }
 
     public function mail() {
