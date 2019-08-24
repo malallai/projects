@@ -25,8 +25,6 @@ class SetupPage extends Page {
             if ($this->checkPostValues($_POST, "submit")) {
                 if ($this->getController()->setup())
                     Page::redirect("/");
-                else
-                    Page::redirect("/setup");
                 return;
             }
         }
