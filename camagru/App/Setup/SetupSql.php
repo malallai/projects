@@ -14,6 +14,7 @@ class SetupSql extends Sql {
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
             Page::redirect("/setup");
+            return false;
         }
         try {
             $config = self::getConfig()['db_dsn'];
@@ -21,13 +22,14 @@ class SetupSql extends Sql {
         } catch (SqlException $e) {
             Snackbar::sendSnacks($e->getMessage());
             Page::redirect("/setup");
+            return false;
         }
         try {
             self::initDb(true);
         } catch (SqlException $e) {
-
             Snackbar::sendSnacks($e->getMessage());
             Page::redirect("/setup");
+            return false;
         }
         $queries = [
             "CREATE TABLE users (
@@ -76,6 +78,7 @@ class SetupSql extends Sql {
                 Page::redirect("/setup");
             }
         }
+        return true;
     }
 
 }
