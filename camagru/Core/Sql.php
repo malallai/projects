@@ -10,6 +10,11 @@ class Sql {
 
     protected static $_conn;
 
+    protected static function getConfig() {
+        require 'config/database.php';
+        return array("db_dsn" => $DB_DSN, "db_user" => $DB_USER, "db_password" => $DB_PASSWORD);
+    }
+
     protected static function initNoDb($clear = false) {
         require 'config/database.php';
         if ($clear) {
