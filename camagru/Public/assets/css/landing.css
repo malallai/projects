@@ -104,6 +104,20 @@ body .overlay {
     display: flex;
 }
 
+.left .infos {
+    margin-bottom: 2rem;
+}
+
+.left .infos .title {
+    font-size: 3rem;
+    margin: auto;
+    text-align: center;
+}
+
+.left .infos p {
+    text-align: justify;
+}
+
 .left .content {
     display: flex;
     margin: auto;
