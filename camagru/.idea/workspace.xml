@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Pages/DevPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/DevPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/mail/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/mail/Template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/setup/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/setup/setup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
@@ -78,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="131">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -419,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310916000" />
+    <option name="totallyTimeSpent" value="311416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="131">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
