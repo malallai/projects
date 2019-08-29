@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
         $final_file = compress($source_img, $destination_url, 50);
 
         $file_url = 'uploads/demo.jpg';
-        $error = "Good";
         header('Location: /test.php?dl='.$file_url);
         die();
     } else {
