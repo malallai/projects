@@ -8,29 +8,8 @@
         margin: auto;
         width: 50%;
     }
-    .c-button {
-        width: 100%;
-        height: 3rem;
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        margin: 1rem 0;
-    }
-
-    .c-button .button-content {
-        margin: 0 auto;
-        width: 75%;
-        position: relative;
-        display: flex;
-        background-color: #fafafa;
-        border: 1px solid rgba(0,0,0,.0975);
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
-        -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
-        transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
-    }
     .button {
+        cursor: pointer;
         width: 100%;
         text-align: center;
         font-size: inherit;
@@ -41,6 +20,9 @@
         color: #fff;
         border: 1px solid rgba(0,0,0,.0975);
         border-radius: 2px;
+    }
+    .button:hover {
+        background-color: #202020;
     }
 </style>
 <div class="form">
