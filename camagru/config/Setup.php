@@ -26,7 +26,6 @@
         border: 1px solid rgba(0,0,0,.0975);
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
-        border-radius: 2px;
         -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
         -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
         transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
@@ -41,7 +40,7 @@
         background-color: #2b3441;
         color: #fff;
         border: 1px solid rgba(0,0,0,.0975);
-        border-radius: .25rem;
+        border-radius: 2px;
     }
 </style>
 <div class="form">
