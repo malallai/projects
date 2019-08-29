@@ -94,6 +94,7 @@ body .overlay {
 .left {
     flex: 1;
     display: flex;
+    position: relative;
 }
 
 .left .infos {
@@ -123,5 +124,8 @@ body .overlay {
 }
 
 @media only screen and (max-width: 1536px) {
-
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
 }
