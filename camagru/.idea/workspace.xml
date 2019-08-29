@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Public/assets/css/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/landing.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/setup/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/setup/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/templates/landing.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/templates/landing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,16 +65,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="34">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/views/templates/landing.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/Public/views/general/Landing.php" />
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
         <option value="$PROJECT_DIR$/Core/Page.php" />
-        <option value="$PROJECT_DIR$/Public/assets/css/landing.css" />
         <option value="$PROJECT_DIR$/Public/views/templates/landing.php" />
+        <option value="$PROJECT_DIR$/Public/assets/css/landing.css" />
       </list>
     </option>
   </component>
@@ -441,12 +441,12 @@
       <workItem from="1565960088112" duration="261000" />
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
-      <workItem from="1567079867305" duration="3960000" />
+      <workItem from="1567079867305" duration="4014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318529000" />
+    <option name="totallyTimeSpent" value="318583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,6 +866,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/templates/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -875,15 +882,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/views/templates/landing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
