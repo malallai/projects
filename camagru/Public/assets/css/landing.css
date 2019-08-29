@@ -105,7 +105,7 @@ body .overlay {
 }
 
 .left .infos {
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
 }
 
 .left .infos .title {
@@ -116,12 +116,14 @@ body .overlay {
 
 .left .infos p {
     text-align: justify;
-    margin: auto;
 }
 
 .left .content {
     margin: auto 1rem;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .left .c-button {

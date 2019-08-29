@@ -102,7 +102,7 @@
             <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="386">
-                  <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
+                  <caret line="118" selection-start-line="118" selection-end-line="118" />
                 </state>
               </provider>
             </entry>
@@ -489,12 +489,12 @@
       <workItem from="1565960088112" duration="261000" />
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
-      <workItem from="1567079867305" duration="13095000" />
+      <workItem from="1567079867305" duration="13260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327664000" />
+    <option name="totallyTimeSpent" value="327829000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -935,7 +935,7 @@
     <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
-          <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
     </entry>
