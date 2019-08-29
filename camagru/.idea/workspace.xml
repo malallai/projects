@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Public/assets/css/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/assets/css/landing.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/setup/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/setup/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/views/templates/landing.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/templates/landing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,8 +100,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="522">
-                  <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+                <state relative-caret-position="437">
+                  <caret line="121" selection-start-line="121" selection-end-line="121" />
                 </state>
               </provider>
             </entry>
@@ -160,8 +158,8 @@
       <find>.home-row</find>
       <find>posts-row</find>
       <find>c-button</find>
-      <find>button</find>
       <find>overlay</find>
+      <find>button</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -490,12 +488,12 @@
       <workItem from="1565960088112" duration="261000" />
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
-      <workItem from="1567079867305" duration="13025000" />
+      <workItem from="1567079867305" duration="13045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327594000" />
+    <option name="totallyTimeSpent" value="327614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -935,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/landing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        <state relative-caret-position="437">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>

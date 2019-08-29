@@ -119,7 +119,6 @@ body .overlay {
 }
 
 .left .content {
-    display: flex;
     margin: auto;
 }
 
