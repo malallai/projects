@@ -63,10 +63,6 @@ body .overlay {
     height: 59%;
 }
 
-.web .page img {
-    height: 100%;
-}
-
 .device {
     position: relative;
 }
@@ -76,6 +72,12 @@ body .overlay {
     position: absolute;
     left: 62%;
     top: 40%;
+}
+
+.phone .page {
+    position: absolute;
+    width: 96%;
+    top: 4%;
 }
 
 .overlay {
