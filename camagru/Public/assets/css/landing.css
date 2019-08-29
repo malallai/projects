@@ -50,7 +50,7 @@ body .overlay {
 }
 
 .web {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     position: relative;
 }
@@ -68,7 +68,7 @@ body .overlay {
 }
 
 .phone {
-    width: 13%;
+    width: 15%;
     position: absolute;
     left: 58%;
     top: 25%;
