@@ -27,8 +27,7 @@ class DevPage extends Page {
     }
 
     public function debug() {
-        header('Content-type: text/plain');
-        var_dump($this->getController()->testDb());
+	header('Content-type: text/plain');
     }
 
     public function mail() {
