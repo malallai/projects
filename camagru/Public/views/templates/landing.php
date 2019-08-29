@@ -15,7 +15,7 @@
     <input hidden class="token" value="<?=\Core\Security::convertHtmlEntities($token)?>">
     <div class="container">
         <main id="main-content" class="main-content">
-            <?= $content ?>
+
         </main>
         <footer>
             <div class="copyright text-align-center">
