@@ -25,10 +25,11 @@ body .overlay {
 
 .main-content {
     height: 100%;
+    display: flex;
 }
 
 .right {
-    width: 65%;
+    flex-basis: 65%;
     height: 100%;
     overflow: hidden;
 }
@@ -96,6 +97,10 @@ body .overlay {
     top: 0;
     background: #2b3441;
     display: block;
+}
+
+.left {
+    flex: 1;
 }
 
 footer {
