@@ -38,6 +38,10 @@ body .overlay {
     height: 100%;
 }
 
+.demo img {
+    width: 100%;
+}
+
 .landing-content {
     display: flex;
     margin: auto;
