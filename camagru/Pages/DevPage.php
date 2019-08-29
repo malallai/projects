@@ -3,8 +3,6 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
-use Core\Session;
-use Core\Sql;
 
 class DevPage extends Page {
 
@@ -32,6 +30,11 @@ class DevPage extends Page {
 
     public function mail() {
         $params = array('content' => 'mail/Template');
+        $this->render($params);
+    }
+
+    public function landing() {
+        $params = array('content' => 'general/landing');
         $this->render($params);
     }
 
