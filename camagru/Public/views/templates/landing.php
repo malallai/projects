@@ -16,7 +16,7 @@
     <input hidden class="token" value="<?=\Core\Security::convertHtmlEntities($token)?>">
     <div class="background">
         <div class="overlay"></div>
-        <div class="background-image"><img src="/Public/assets/pictures/landing/landing.jpg"></div>
+        <div class="background-image"></div>
         <div class="left-overlay"></div>
     </div>
     <div class="container">
