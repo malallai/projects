@@ -21,13 +21,19 @@
     </div>
     <div class="container">
         <main id="main-content" class="main-content">
+            <div class="right">
+                <div class="title">CAMAGRU</div>
+                <div class="phones">
+                    <div class="aside">
+                        <img src="/Public/assets/pictures/landing/phone.png">
+                    </div>
+                    <div class="home">
 
-        </main>
-        <footer>
-            <div class="copyright text-align-center">
-                <p>© malallai 2019.</p>
+                    </div>
+                </div>
             </div>
-        </footer>
+            <div class="left"></div>
+        </main>
     </div>
 </body>
 </html>
