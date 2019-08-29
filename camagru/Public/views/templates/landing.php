@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div id="right" class="right">
-                <div class="left-overlay"></div>
+                <div class="right-overlay"></div>
                 <div class="content">
                     <div class="infos">
                         <h1 class="title">Camagru</h1>
