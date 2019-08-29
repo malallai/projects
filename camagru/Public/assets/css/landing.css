@@ -119,7 +119,8 @@ body .overlay {
 }
 
 .left .content {
-    margin: auto;
+    margin: auto 1rem;
+    color: #fff;
 }
 
 .left .c-button {
