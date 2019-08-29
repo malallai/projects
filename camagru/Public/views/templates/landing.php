@@ -26,7 +26,7 @@
                 <div class="demo">
                     <div class="landing-content">
                         <div class="web">
-                            <img src="/Public/assets/pictures/landing/web.png">
+                            <img src="/Public/assets/pictures/landing/web.jpg">
                         </div>
                         <div class="phone">
                             <img src="/Public/assets/pictures/landing/phone.png">
