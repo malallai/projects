@@ -19,6 +19,8 @@ body .overlay {
     width: 100%;
     height: 100%;
     background-image: url("/Public/assets/pictures/landing/landing.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .overlay {
