@@ -17,7 +17,7 @@
     <input hidden class="token" value="<?=\Core\Security::convertHtmlEntities($token)?>">
     <div class="container">
         <main id="main-content" class="main-content">
-            <div class="right">
+            <div id="left" class="left">
                 <div class="demo">
                     <div class="landing-content">
                         <div class="web">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="left">
+            <div id="right" class="right">
                 <div class="left-overlay"></div>
                 <div class="content">
                     <div class="infos">
@@ -60,5 +60,15 @@
             </div>
         </main>
     </div>
+    <script>
+        window.onload = () => {
+            document.getElementById("left").style.minHeight = window.innerHeight + 'px';
+            document.getElementById("right").style.minHeight = window.innerHeight + 'px';
+        };
+        window.onresize = () => {
+            document.getElementById("left").style.minHeight = window.innerHeight + 'px';
+            document.getElementById("right").style.minHeight = window.innerHeight + 'px';
+        };
+    </script>
 </body>
 </html>

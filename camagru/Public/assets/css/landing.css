@@ -19,7 +19,7 @@ body .overlay {
     display: flex;
 }
 
-.right {
+.left {
     flex-basis: 65%;
     overflow: hidden;
     min-height: 100%;
@@ -80,7 +80,7 @@ body .overlay {
     opacity: 1;
 }
 
-.left-overlay {
+.right-overlay {
     bottom: 0;
     width: 100%;
     position: absolute;
@@ -91,28 +91,28 @@ body .overlay {
     z-index: -1;
 }
 
-.left {
+.right {
     flex: 1;
     display: flex;
     position: relative;
     min-height: 100%;
 }
 
-.left .infos {
+.right .infos {
     margin: 0 auto 2rem auto;
 }
 
-.left .infos .title {
+.right .infos .title {
     font-size: 3rem;
     margin: auto;
     text-align: center;
 }
 
-.left .infos p {
+.right .infos p {
     text-align: justify;
 }
 
-.left .content {
+.right .content {
     margin: auto 1rem;
     color: #fff;
     display: flex;
@@ -120,7 +120,7 @@ body .overlay {
     width: 100%;
 }
 
-.left .c-button {
+.right .c-button {
     position: relative;
 }
 
