@@ -34,8 +34,9 @@ class DevPage extends Page {
     }
 
     public function landing() {
-        $params = array('content' => 'general/Landing');
-        $this->quickRender($params);
+        $this->_template = "templates/landing";
+        $params = array('content' => 'landing/Landing');
+        $this->render($params);
     }
 
 }
