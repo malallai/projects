@@ -160,6 +160,13 @@ body[has_aside] .aside-bar {
     background-color: #202020;
 }
 
+.c-button .button-light-blue.button-content, .c-button-input.button-light-blue {
+    background-color: #2f3b4c;
+}
+
+.c-button .button-light-blue.button-content:hover, .c-button-input.button-light-blue:hover {
+    background-color: #373737;
+}
 
 .c-button .button-red.button-content, .c-button-input.button-red {
     background-color: #e53935;
