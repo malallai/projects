@@ -27,13 +27,11 @@ class DevPage extends Page {
     }
 
     public function debug() {
-	header('Content-type: text/plain');
+	    header('Content-type: text/plain');
     }
 
     public function mail() {
         $params = array('content' => 'mail/Template');
-        $object = "Dev";
-        $mail_content = "Test";
         $this->render($params);
     }
 
