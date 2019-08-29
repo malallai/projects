@@ -5,6 +5,10 @@ $mail_content = "Test";?>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+        body {margin: 0; padding: 0; min-width: 100%!important;}
+        .content {width: 100%; max-width: 600px;}
+    </style>
 </head>
 
 <body>
