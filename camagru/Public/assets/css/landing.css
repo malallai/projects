@@ -48,11 +48,10 @@ body .overlay {
 }
 
 .web .page {
-    width: 60%;
+    width: 60.5%;
     top: 18%;
     position: absolute;
     left: 19%;
-    height: 59%;
 }
 
 .device {
