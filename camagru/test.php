@@ -37,7 +37,7 @@ if (isset($_GET) && isset($_GET['dl'])) {
 if (isset($_POST['submit'])) {
     if ($_FILES["file"]["error"] > 0)
     {
-        $error = $_FILES["file"]["error"];
+        $error = "Error > 0 ".$_FILES["file"]["error"];
     }
     else if (($_FILES["file"]["type"] == "image/gif") ||
         ($_FILES["file"]["type"] == "image/jpeg") ||
