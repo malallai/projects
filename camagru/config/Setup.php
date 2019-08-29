@@ -7,16 +7,38 @@
     form {
         margin: auto;
     }
-    input {
+    .c-button {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        margin: 1rem 0;
+    }
+
+    .c-button .button-content {
+        margin: 0 auto;
+        width: 75%;
+        position: relative;
+        display: flex;
+        background-color: #fafafa;
+        border: 1px solid rgba(0,0,0,.0975);
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+        -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+        transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+    }
+    .button {
         text-align: center;
         font-size: inherit;
-        padding: .5rem 0;
-        margin-bottom: .7rem;
+        padding: 1rem 0;
         width: 100%;
         color: inherit;
         transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         box-sizing: border-box;
-        background-color: transparent;
+        background-color: #fafafa;
         border: 1px solid rgba(0,0,0,.0975);
         border-radius: .25rem;
     }
