@@ -52,6 +52,11 @@ body .overlay {
 .web {
     width: 80%;
     margin: 0 auto;
+    position: relative;
+}
+
+.device {
+    position: absolute;
 }
 
 .phone {
