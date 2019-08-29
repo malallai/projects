@@ -1,11 +1,12 @@
 <style>
     .form {
         display: flex;
-        max-width: 50vw;
+        max-width: 500px;
         margin: 0 auto;
     }
     form {
         margin: auto;
+        width: 100%;
     }
     .c-button {
         width: 100%;
@@ -34,11 +35,10 @@
         text-align: center;
         font-size: inherit;
         padding: 1rem 0;
-        width: 100%;
-        color: inherit;
         transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         box-sizing: border-box;
-        background-color: #fafafa;
+        background-color: #2b3441;
+        color: #fff;
         border: 1px solid rgba(0,0,0,.0975);
         border-radius: .25rem;
     }
