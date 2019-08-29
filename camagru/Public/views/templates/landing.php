@@ -23,12 +23,12 @@
         <main id="main-content" class="main-content">
             <div class="right">
                 <div class="title">CAMAGRU</div>
-                <div class="phones">
-                    <div class="aside">
-                        <img src="/Public/assets/pictures/landing/phone.png">
+                <div class="demo">
+                    <div class="web">
+                        <img src="/Public/assets/pictures/landing/web.png">
                     </div>
-                    <div class="home">
-
+                    <div class="phone">
+                        <img src="/Public/assets/pictures/landing/phone.png">
                     </div>
                 </div>
             </div>
