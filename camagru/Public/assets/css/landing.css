@@ -24,7 +24,7 @@ body .overlay {
 }
 
 .overlay {
-    background: rgba(33, 47, 62, 0.9);
+    background: rgba(33, 47, 62, 0.95);
     z-index: auto;
     visibility: visible;
     opacity: 1;
