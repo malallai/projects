@@ -32,6 +32,7 @@ $router->addRoute("post/(\d*)", "Pages\PostPage@post");
 $router->addRoute("montage", "Pages\MontagePage@index");
 $router->addRoute("montage/upload", "Pages\MontagePage@upload");
 
+$router->addRoute("setup", "Pages\SetupPage@setup");
 
 $router->addRoute("dev", "Pages\DevPage@index");
 $router->addRoute("dev/mail", "Pages\DevPage@mail");
