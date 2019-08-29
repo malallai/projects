@@ -45,19 +45,19 @@ body .overlay {
 .landing-content {
     display: flex;
     margin: auto;
+    position: relative;
 }
 
 .web {
     width: 80%;
-    position: relative;
     margin: 0 auto;
 }
 
 .phone {
     width: 15%;
-    position: relative;
-    right: 20%;
-    margin: 0 auto;
+    position: absolute;
+    left: 72%;
+    top: 10%;
 }
 
 .overlay {
