@@ -45,8 +45,10 @@
             </div>
             <div class="left">
                 <div class="content">
-                    <h1 class="title">Camagru</h1>
-                    <p>Bienvenue sur Camagru. Aucune photo n'a encore été posté. Lances toi.</p>
+                    <div class="infos">
+                        <h1 class="title">Camagru</h1>
+                        <p>Bienvenue sur Camagru. Aucune photo n'a encore été posté. Lances toi.</p>
+                    </div>
                     <div class="c-button">
                         <div class="button-blue button-content">
                             <a href="/user/edit"><span>Édition du profile</span></a>
