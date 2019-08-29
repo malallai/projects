@@ -32,6 +32,7 @@
         transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
     }
     .button {
+        width: 100%;
         text-align: center;
         font-size: inherit;
         padding: 1rem 0;
