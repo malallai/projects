@@ -34,7 +34,7 @@
                         <input type="text" name="notifications" id="input notifications" value="<?=$params['user']['notifications'] ? "true" : "false"?>" hidden required>
                     </div>
                 </div>
-                <input class="button black" name="update" value="Mettres à jour" type="submit">
+                <input class="c-button-input button-blue" name="update" value="Mettres à jour" type="submit">
             </form>
         </div>
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">
@@ -46,7 +46,7 @@
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
                 <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Nouveau mot de passe *" required>
                 <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter *" required>
-                <input class="button black" name="update" value="Mettres à jour" type="submit">
+                <input class="c-button-input button-blue" name="update" value="Mettres à jour" type="submit">
             </form>
             <div class="infos">
                 * : 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.

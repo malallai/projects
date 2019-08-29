@@ -24,7 +24,7 @@
                 <input type="hidden" name="token" value="<?= \Core\Security::convertHtmlEntities($token) ?>">
                 <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
-                <input class="button black" name="login" value="Connexion" type="submit">
+                <input class="c-button-input button-blue" name="login" value="Connexion" type="submit">
             </form>
         </div>
 
@@ -42,7 +42,7 @@
                     <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe *" required>
                     <input type="password" name="repeat" id="repeat" class="form-control" placeholder="Répéter mot de passe *" required>
                 </div>
-                <input class="button black" name="register" value="Inscription" type="submit">
+                <input class="c-button-input button-blue" name="register" value="Inscription" type="submit">
             </form>
             <div class="infos">
                 * : 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.
@@ -54,7 +54,7 @@
             <form method="POST" action="/user/ask_reset">
                 <input type="hidden" name="token" value="<?= \Core\Security::convertHtmlEntities($token) ?>">
                 <input type="email" name="mail" id="mail" class="form-control" placeholder="Adresse mail" required>
-                <input class="button black" name="reset" value="Réinitialiser" type="submit">
+                <input class="c-button-input button-blue" name="reset" value="Réinitialiser" type="submit">
             </form>
         </div>
     </div>
