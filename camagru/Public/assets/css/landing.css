@@ -1,5 +1,4 @@
 footer {
-    margin-top: auto;
-    display: block;
-    font-size: 15px;
+    background-color: transparent;
+    border: none;
 }
