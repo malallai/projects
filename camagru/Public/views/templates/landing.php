@@ -26,19 +26,19 @@
                 <div class="demo">
                     <div class="landing-content">
                         <div class="web">
-                            <div class="device">
-                                <img src="/Public/assets/pictures/landing/web.png">
-                            </div>
                             <div class="page">
                                 <img src="/Public/assets/pictures/landing/web-home.jpg">
                             </div>
+                            <div class="device">
+                                <img src="/Public/assets/pictures/landing/web.png">
+                            </div>
                         </div>
                         <div class="phone">
-                            <div class="device">
-                                <img src="/Public/assets/pictures/landing/phone.png">
-                            </div>
                             <div class="page">
                                 <img src="/Public/assets/pictures/landing/phone-home.jpg">
+                            </div>
+                            <div class="device">
+                                <img src="/Public/assets/pictures/landing/phone.png">
                             </div>
                         </div>
                     </div>

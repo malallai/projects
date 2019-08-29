@@ -55,8 +55,20 @@ body .overlay {
     position: relative;
 }
 
-.device {
+.web .page {
+    width: 60%;
+    top: 18%;
     position: absolute;
+    left: 19%;
+    height: 59%;
+}
+
+.web .page img {
+    height: 100%;
+}
+
+.device {
+    position: relative;
 }
 
 .phone {
