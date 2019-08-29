@@ -33,7 +33,7 @@ class DevPage extends Page {
     public function mail() {
         $params = array('content' => 'mail/Template');
         $object = "Dev";
-        $content = "Test";
+        $mail_content = "Test";
         $this->render($params);
     }
 
