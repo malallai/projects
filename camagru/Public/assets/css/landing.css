@@ -116,6 +116,7 @@ body .overlay {
 
 .left .infos p {
     text-align: justify;
+    margin: auto;
 }
 
 .left .content {
