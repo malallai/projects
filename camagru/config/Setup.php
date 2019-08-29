@@ -7,6 +7,9 @@
     form {
         margin: auto;
     }
+    input {
+        padding: 1rem;
+    }
 </style>
 <div class="form">
     <form action="/setup" method="post">
