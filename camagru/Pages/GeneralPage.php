@@ -21,6 +21,12 @@ class GeneralPage extends Page {
     }
 
     public function index() {
+        $posts = 1 ? 0 : $this->getController()->getPostController()->getPostsCount();
+        if ($posts === 0) {
+            $this->_template = "templates/landing";
+            $this->render(array());
+            return;
+        }
         $exploded = explode("/", $this->_url);
         if (count($exploded) > 1) {
             $this->indexPage(intval($exploded[1]));
