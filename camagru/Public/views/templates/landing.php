@@ -13,12 +13,8 @@
     <title>Camagru</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <input hidden class="token" value="<?=\Core\Security::convertHtmlEntities($token)?>">
-    <div class="background">
-        <div class="overlay"></div>
-        <div class="background-image"></div>
-        <div class="left-overlay"></div>
-    </div>
     <div class="container">
         <main id="main-content" class="main-content">
             <div class="right">
@@ -44,6 +40,7 @@
                 </div>
             </div>
             <div class="left">
+                <div class="left-overlay"></div>
                 <div class="content">
                     <div class="infos">
                         <h1 class="title">Camagru</h1>
