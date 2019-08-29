@@ -50,13 +50,13 @@
                         <p>Bienvenue sur Camagru. Aucune photo n'a encore été posté. Lances toi.</p>
                     </div>
                     <div class="c-button">
-                        <div class="button-blue button-content">
-                            <a href="/user/edit"><span>Édition du profile</span></a>
+                        <div class="button-cyan button-content">
+                            <a href="/user"><span>Connexion/Inscription</span></a>
                         </div>
                     </div>
                     <div class="c-button">
-                        <div class="button-red button-content">
-                            <a href="/user/logout"><span>Déconnexion</span></a>
+                        <div class="button-cyan button-content">
+                            <a href="/montage"><span>Poster</span></a>
                         </div>
                     </div>
                 </div>
