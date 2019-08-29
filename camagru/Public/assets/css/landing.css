@@ -101,6 +101,16 @@ body .overlay {
 
 .left {
     flex: 1;
+    display: flex;
+}
+
+.left .content {
+    display: flex;
+    margin: auto;
+}
+
+.left .c-button {
+    position: relative;
 }
 
 footer {
