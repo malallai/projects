@@ -6,7 +6,7 @@
     }
     form {
         margin: auto;
-        width: 100%;
+        width: 50%;
     }
     .c-button {
         width: 100%;
