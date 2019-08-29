@@ -104,6 +104,10 @@
     border-radius: .25rem;
 }
 
+.main-content .c-button-input {
+    padding: .5rem 0;
+}
+
 .main-content input:focus {
     border: 1px solid rgba(0,0,0,.275);
 }
