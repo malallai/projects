@@ -24,11 +24,13 @@
             <div class="right">
                 <div class="title">CAMAGRU</div>
                 <div class="demo">
-                    <div class="web">
-                        <img src="/Public/assets/pictures/landing/web.png">
-                    </div>
-                    <div class="phone">
-                        <img src="/Public/assets/pictures/landing/phone.png">
+                    <div class="landing-content">
+                        <div class="web">
+                            <img src="/Public/assets/pictures/landing/web.png">
+                        </div>
+                        <div class="phone">
+                            <img src="/Public/assets/pictures/landing/phone.png">
+                        </div>
                     </div>
                 </div>
             </div>

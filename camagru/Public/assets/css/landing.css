@@ -23,6 +23,39 @@ body .overlay {
     background-size: cover;
 }
 
+.main-content {
+    height: 100%;
+}
+
+.right {
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.demo {
+    width: 100%;
+    height: 100%;
+}
+
+.landing-content {
+    display: flex;
+    margin: auto;
+}
+
+.web {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.phone {
+    width: 15%;
+    position: relative;
+    right: 20%;
+    margin: 0 auto;
+}
+
 .overlay {
     background: rgba(33, 47, 62, 0.95);
     z-index: auto;
