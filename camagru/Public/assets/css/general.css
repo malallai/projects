@@ -114,6 +114,20 @@ body[has_aside] .aside-bar {
     overflow-y: auto !important;
 }
 
+.c-button-input {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: inherit;
+    padding: 1rem 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 2px;
+}
+
 .c-button {
     width: 100%;
     height: 3rem;
@@ -138,27 +152,27 @@ body[has_aside] .aside-bar {
     transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
 }
 
-.c-button .button-blue.button-content {
+.c-button .button-blue.button-content, .c-button-input.button-blue {
     background-color: #2b3441;
 }
 
-.c-button .button-blue.button-content:hover {
+.c-button .button-blue.button-content:hover, .c-button-input.button-blue:hover {
     background-color: #202020;
 }
 
-.c-button .button-red.button-content {
+.c-button .button-red.button-content, .c-button-input.button-red {
     background-color: #e53935;
 }
 
-.c-button .button-red.button-content:hover {
+.c-button .button-red.button-content:hover, .c-button-input.button-red:hover{
     background-color: #b71c1c;
 }
 
-.c-button .button-green.button-content {
+.c-button .button-green.button-content, .c-button-input.button-green {
     background-color: #30c849;
 }
 
-.c-button .button-green.button-content:hover {
+.c-button .button-green.button-content:hover, .c-button-input.button-green:hover {
     background-color: #189937;
 }
 
