@@ -68,16 +68,17 @@ body .overlay {
 }
 
 .phone {
-    width: 10%;
+    width: 13%;
     position: absolute;
-    left: 62%;
-    top: 40%;
+    left: 58%;
+    top: 25%;
 }
 
 .phone .page {
     position: absolute;
-    width: 96%;
-    top: 4%;
+    width: 86.25%;
+    top: 3%;
+    left: 6.7%;
 }
 
 .overlay {
