@@ -131,13 +131,15 @@ body .overlay {
 }
 
 @-webkit-keyframes start_anim {
-    from {left:150%;opacity:0;}
-    to {left:0;opacity:1;}
+    0% {left:150%;}
+    50% {opacity: 0}
+    100% {left:0;opacity:1;}
 }
 
 @keyframes start_anim {
-    from {left:150%;opacity:0;}
-    to {left:0;opacity:1;}
+    0% {left:150%;}
+    50% {opacity: 0}
+    100% {left:0;opacity:1;}
 }
 
 @media only screen and (max-width: 850px) {
