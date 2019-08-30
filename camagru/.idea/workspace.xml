@@ -123,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/config/Setup.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -469,12 +469,12 @@
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
-      <workItem from="1567159580453" duration="15492000" />
+      <workItem from="1567159580453" duration="15564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346817000" />
+    <option name="totallyTimeSpent" value="346889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -920,7 +920,7 @@
     <entry file="file://$PROJECT_DIR$/config/Setup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 <?php
-if (@$token !== true)
+if (empty($token))
     \Core\Page::redirect("/setup");
 ?>
 <style>
