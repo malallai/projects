@@ -26,7 +26,8 @@ class Security {
     }
 
     public static function convertHtmlEntities($value) {
-        return htmlentities(htmlspecialchars($value));
+        $value = htmlspecialchars($value);
+        return htmlentities($value);
     }
 
 }
