@@ -158,6 +158,9 @@ body .overlay {
     .main-content {
         flex-direction: column;
         height: auto;
+    }
+
+    .container {
         overflow-x: auto;
     }
 }
