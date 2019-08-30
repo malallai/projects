@@ -46,6 +46,10 @@ class UserController extends Controller {
             $user = unserialize($_SESSION['user']);
             if ($this->getSql()->getUserById($user['id']))
                 return true;
+            else {
+                Session::resetSession();
+                return false;
+            }
         }
         return false;
     }
