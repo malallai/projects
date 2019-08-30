@@ -40,7 +40,7 @@ class SetupSql extends Sql {
             email VARCHAR(255) NOT NULL,
             password VARCHAR(255) NOT NULL,
             notifications BOOLEAN DEFAULT 1,
-            conf_token VARCHAR(255),
+            conf_token VARCHAR(255) NULL,
             confirmed BOOLEAN DEFAULT 0,
             avatar VARCHAR(255) DEFAULT '0')",
             "CREATE TABLE pwd_reset (
