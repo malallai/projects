@@ -99,8 +99,8 @@ class UserController extends Controller {
 
     public function auth($username, $pwd) {
         Session::startSession();
-        $username = Security::convertHtmlEntities($username);
-        $pwd = hash("whirlpool", Security::convertHtmlEntities($pwd));
+        $username = Security::convertChars($username);
+        $pwd = hash("whirlpool", Security::convertPassword($pwd));
         $id = $this->getUserByUsername($username)['id'];
         if ($id === null) {
             return array("status" => false, "message" => "Erreur lors de l'authentification.");
@@ -122,11 +122,11 @@ class UserController extends Controller {
         if (!$this->checkPwd($password)) {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
         }
-        $username = Security::convertHtmlEntities($username);
-        $mail = Security::convertHtmlEntities($mail);
-        $first = Security::convertHtmlEntities($first_name);
-        $last = Security::convertHtmlEntities($last_name);
-        $password = hash("whirlpool", Security::convertHtmlEntities($password));
+        $username = Security::convertChars($username);
+        $mail = Security::convertChars($mail);
+        $first = Security::convertChars($first_name);
+        $last = Security::convertChars($last_name);
+        $password = hash("whirlpool", Security::convertPassword($password));
         if ($this->getSql()->userExist($username, $mail)) {
             return array("status" => false, "message" => "L'utilisateur éxiste déjà.");
         }
@@ -149,7 +149,7 @@ class UserController extends Controller {
     }
 
     public function confirmAccount($url) {
-        $token = Security::convertHtmlEntities(explode('/', $url)[2]);
+        $token = Security::convertChars(explode('/', $url)[2]);
         if ($this->getSql()->confirm($token)) {
             return array("status" => true, "message" => "Compte confirmé avec succès.");
         } else {
@@ -158,7 +158,7 @@ class UserController extends Controller {
     }
 
     public function askReset($mail) {
-        $mail = Security::convertHtmlEntities($mail);
+        $mail = Security::convertChars($mail);
         $token = Security::newToken(32);
         if ($this->getSql()->sendReset($mail, $token)) {
             $link = "https://camagru.malallai.fr/user/reset_password/".$token;
@@ -188,8 +188,8 @@ class UserController extends Controller {
     }
 
     function resetPassword($password, $repeat, $resetToken) {
-        $password = Security::convertHtmlEntities($password);
-        $repeat = Security::convertHtmlEntities($repeat);
+        $password = Security::convertPassword($password);
+        $repeat = Security::convertPassword($repeat);
         if ($password !== $repeat) {
             return array("status" => false, "message" => "Les mots de passe ne sont pas identique.", "redirect" => "/user/reset_password/".$resetToken);
         }
@@ -197,7 +197,7 @@ class UserController extends Controller {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.", "redirect" => "/user/reset_password/".$resetToken);
         }
         $password = hash("whirlpool", $password);
-        $resetToken = Security::convertHtmlEntities($resetToken);
+        $resetToken = Security::convertChars($resetToken);
         $user = $this->getSql()->getResetUserId($resetToken);
         if ($this->getSql()->editPassword($password, 0, $resetToken)) {
             Mail::newMail($this->getUserById($user)['email'], "Changement de mot de passe",
@@ -212,15 +212,15 @@ class UserController extends Controller {
     }
 
     public function editGlobalProfile($oldUsername, $username, $mail, $firstName, $lastName, $notifications, $password) {
-        $oldUsername = Security::convertHtmlEntities($oldUsername);
+        $oldUsername = Security::convertChars($oldUsername);
         $id = $this->getUserByUsername($oldUsername)['id'];
-        $username = Security::convertHtmlEntities($username);
-        $mail = Security::convertHtmlEntities($mail);
-        $firstName = Security::convertHtmlEntities($firstName);
-        $lastName = Security::convertHtmlEntities($lastName);
-        $notifications = Security::convertHtmlEntities($notifications);
+        $username = Security::convertChars($username);
+        $mail = Security::convertChars($mail);
+        $firstName = Security::convertChars($firstName);
+        $lastName = Security::convertChars($lastName);
+        $notifications = Security::convertChars($notifications);
         $tmpPassword = $password;
-        $password = hash("whirlpool", Security::convertHtmlEntities($password));
+        $password = hash("whirlpool", Security::convertPassword($password));
         if (!$this->getSql()->checkPasswords($id, $password)) {
             return array("status" => false, "message" => "Mauvais mot de passe");
         }
@@ -242,9 +242,9 @@ class UserController extends Controller {
     }
 
     public function editPasswordProfile($username, $password, $newPassword, $repeatPassword) {
-        $username = Security::convertHtmlEntities($username);
+        $username = Security::convertChars($username);
         $id = $this->getUserByUsername($username)['id'];
-        $password = hash("whirlpool", Security::convertHtmlEntities($password));
+        $password = hash("whirlpool", Security::convertPassword($password));
         if (!$this->getSql()->checkPasswords($id, $password)) {
             return array("status" => false, "message" => "Mauvais mot de passe");
         }
@@ -254,7 +254,7 @@ class UserController extends Controller {
         if (!$this->checkPwd($newPassword)) {
             return array("status" => false, "message" => "Votre mot de passe doit contenir: 8 caractères dont 1 majuscule, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial.");
         }
-        $newPassword = hash("whirlpool", Security::convertHtmlEntities($password));
+        $newPassword = hash("whirlpool", Security::convertPassword($password));
         if ($this->getSql()->editPassword($newPassword, $id)) {
             Mail::newMail($this->getUserById($id)['email'], "Edition du profile",
                 "Votres profile viens d'être modifié.".

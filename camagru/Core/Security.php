@@ -25,8 +25,12 @@ class Security {
         }
     }
 
-    public static function convertHtmlEntities($value) {
+    public static function convertChars($value) {
         return htmlspecialchars($value);
+    }
+
+    public static function convertPassword($value) {
+        return htmlspecialchars(htmlentities($value));
     }
 
 }
