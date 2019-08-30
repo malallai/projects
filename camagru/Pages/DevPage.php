@@ -28,7 +28,7 @@ class DevPage extends Page {
     public function debug() {
 //	    header('Content-type: text/plain');
         $alert = "<script>alert(\"test\")</script>";
-        echo htmlentities($alert);
+        echo Security::convertHtmlEntities($alert);
     }
 
     public function mail() {
