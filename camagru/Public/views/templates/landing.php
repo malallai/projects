@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <input hidden class="token" value="<?=$token?>">
+    <input hidden class="token" value="<?=\Core\Security::getToken()?>">
     <div class="container">
         <main id="main-content" class="main-content">
             <div id="left" class="left">
