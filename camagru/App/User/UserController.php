@@ -134,7 +134,7 @@ class UserController extends Controller {
     }
 
     public function confirmAccount($url) {
-        $token = explode('/', $url)[2];
+        $token = Security::convertChars(explode('/', $url)[2]);
         if ($this->getSql()->confirm($token)) {
             return array("status" => true, "message" => "Compte confirmé avec succès.");
         } else {
