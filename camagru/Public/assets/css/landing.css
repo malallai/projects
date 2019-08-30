@@ -128,7 +128,7 @@ body .overlay {
     width: 100%;
 }
 
-.right .c-button {
+.c-button, .c-button-input {
     position: relative;
     -webkit-animation: start_2 1s;
     animation: start_2 1s;
