@@ -1,13 +1,9 @@
 <?php
 
 namespace Core;
-use App\General\GeneralController;
 
 class Page {
 
-    /**
-     * @type Router
-     */
     protected $_router;
     protected $_url;
     protected $_template;

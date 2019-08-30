@@ -34,8 +34,4 @@ $router->addRoute("montage/upload", "Pages\MontagePage@upload");
 
 $router->addRoute("setup", "Pages\SetupPage@setup");
 
-$router->addRoute("dev", "Pages\DevPage@index");
-$router->addRoute("dev/mail", "Pages\DevPage@mail");
-$router->addRoute("dev/debug", "Pages\DevPage@debug");
-$router->addRoute("dev/landing", "Pages\DevPage@landing");
 $router->route($url);

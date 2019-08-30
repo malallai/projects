@@ -187,14 +187,4 @@ class UserSql extends Sql {
         }
     }
 
-//    public function getUser($id) {
-//        try {
-//            $posts = self::runList("SELECT posts.*, (SELECT COUNT(*) FROM likes WHERE likes.post_id = posts.id) AS likes, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments FROM posts INNER JOIN users ON posts.user_id = users.id WHERE users.id = ? ORDER BY date DESC",  array($id), PDO::FETCH_ASSOC);
-//            return array('posts' => $posts['result'], 'user' => $this->getUserDetails($id)['result']);
-//        } catch (SqlException $e) {
-//            Snackbar::sendSnack($e->getMessage());
-//            return false;
-//        }
-//    }
-
 }

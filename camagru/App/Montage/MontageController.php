@@ -5,9 +5,7 @@ namespace App\Montage;
 use App\General\GeneralController;
 use App\User\UserController;
 use Core\Controller;
-use Core\Page;
 use Core\Security;
-use Core\Snackbar;
 
 class MontageController extends Controller {
 
@@ -25,40 +23,24 @@ class MontageController extends Controller {
         }
     }
 
-    /**
-     * @var page Page
-     * @return MontageController
-     */
     public static function get($page) {
         if (self::$_instance === null)
             return new MontageController($page);
         return self::$_instance;
     }
 
-    /**
-     * @return GeneralController
-     */
     public function getGeneralController() {
         return $this->_generalController;
     }
 
-    /**
-     * @return UserController
-     */
     public function getUserController() {
         return $this->_userController;
     }
 
-    /**
-     * @return Page
-     */
     public function getPage() {
         return $this->_page;
     }
 
-    /**
-     * @return MontageSql
-     */
     public function getSql() {
         return $this->_sql;
     }

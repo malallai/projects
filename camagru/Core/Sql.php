@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Core;
 
 use Exceptions\SqlException;
@@ -46,10 +45,6 @@ class Sql {
         return true;
     }
 
-    /**
-     * @return array
-     * @throws SqlException
-     * */
     protected static function run($request, $args = array(), $fetch = null) {
         try {
             $response = self::runList($request, $args, $fetch);
@@ -113,9 +108,6 @@ class Sql {
         }
     }
 
-    /**
-     * @return PDO
-     */
     public static function getConn() {
         return self::$_conn;
     }

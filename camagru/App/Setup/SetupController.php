@@ -3,7 +3,6 @@
 namespace App\Setup;
 
 use Core\Controller;
-use Core\Page;
 
 class SetupController extends Controller {
     protected static $_instance = null;
@@ -16,26 +15,20 @@ class SetupController extends Controller {
         }
     }
 
-    /**
-     * @var page Page
-     * @return SetupController
-     */
+    public static function isSetup() {
+        return SetupSql::tryConnection();
+    }
+
     public static function get($page) {
         if (self::$_instance === null)
             return new SetupController($page);
         return self::$_instance;
     }
 
-    /**
-     * @return Page
-     */
     public function getPage() {
         return $this->_page;
     }
 
-    /**
-     * @return SetupSql
-     */
     protected function getSql() {
         return $this->_sql;
     }

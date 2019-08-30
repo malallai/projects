@@ -18,13 +18,4 @@ class GeneralSql extends Sql {
         }
     }
 
-    public function testDb() {
-        try {
-            self::initDb(true);
-        } catch (SqlException $e) {
-            return $e;
-        }
-        return true;
-    }
-
 }

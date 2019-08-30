@@ -13,19 +13,11 @@ class Mail {
         $this->_from = $from;
     }
 
-    /**
-     * @param mixed $object
-     */
-    public function setObject($object)
-    {
+    public function setObject($object) {
         $this->_object = $object;
     }
 
-    /**
-     * @param mixed $message
-     */
-    public function setMessage($message)
-    {
+    public function setMessage($message) {
         $this->_message = $message;
     }
 

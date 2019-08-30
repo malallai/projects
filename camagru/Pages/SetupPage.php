@@ -3,7 +3,6 @@
 namespace Pages;
 use Core\Page;
 use App\Setup\SetupController;
-use Core\Security;
 
 class SetupPage extends Page {
 
@@ -13,9 +12,6 @@ class SetupPage extends Page {
         $this->_controller = SetupController::get($this);
     }
 
-    /**
-     * @return SetupController
-     */
     public function getController() {
         return $this->_controller;
     }
