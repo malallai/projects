@@ -32,7 +32,7 @@
                     <div class="comments">
                         <div class="row">
                             <?php
-                            foreach ($post['post']['comments'] as $comment) {
+                            foreach ($params['post']['comments'] as $comment) {
                                 $message = $comment['comment'];
                                 $author = $comment['username'];?>
                                 <div class="comment">
