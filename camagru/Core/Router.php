@@ -3,6 +3,7 @@
 namespace Core;
 
 use App\Setup\SetupController;
+use App\User\UserController;
 use ReflectionException;
 use ReflectionClass;
 
@@ -14,6 +15,7 @@ class Router {
     }
 
     public function route($url) {
+        UserController::checkSession();
         foreach ($this->_routes as $key => $value) {
             if (preg_match("#^" . $key . "(\/?)$#", $url) === 1) {
                 if (SetupController::isSetup() || (!SetupController::isSetup() && $value['bypassSetup'])) {

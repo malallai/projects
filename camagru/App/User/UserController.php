@@ -40,16 +40,19 @@ class UserController extends Controller {
         return $this->_page;
     }
 
-    public function isLogged() {
+    public static function checkSession() {
         Session::startSession();
         if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             $user = unserialize($_SESSION['user']);
-            if ($this->getSql()->getUserById($user['id']))
-                return true;
-            else {
+            if (!UserSql::getUserById($user['id']))
                 Session::resetSession();
-                return false;
-            }
+        }
+    }
+
+    public function isLogged() {
+        self::checkSession();
+        if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+            return true;
         }
         return false;
     }
