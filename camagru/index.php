@@ -8,8 +8,8 @@ use Core\Router;
 $url = $_GET['url'];
 
 $router = new Router();
-$router->addRoute("", "Pages\GeneralPage@index");
-$router->addRoute("index", "Pages\GeneralPage@index");
+$router->addRoute("", "Pages\GeneralPage@index", true);
+$router->addRoute("index", "Pages\GeneralPage@index", true);
 
 $router->addRoute("page/(\d*)", "Pages\GeneralPage@index");
 
@@ -32,6 +32,6 @@ $router->addRoute("post/(\d*)", "Pages\PostPage@post");
 $router->addRoute("montage", "Pages\MontagePage@index");
 $router->addRoute("montage/upload", "Pages\MontagePage@upload");
 
-$router->addRoute("setup", "Pages\SetupPage@setup");
+$router->addRoute("setup", "Pages\SetupPage@setup", true);
 
 $router->route($url);
