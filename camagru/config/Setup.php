@@ -1,6 +1,6 @@
 <style>
     .c-button-input {
-        width: 50%;
+        width: 25%;
     }
 </style>
 <div class="form">
@@ -10,6 +10,6 @@
     </div>
     <form action="/setup" method="post">
         <input type="hidden" name="token" value="<?= $token ?>">
-        <input class="c-button-input button-light-blue" type="submit" name="submit" value="Setup Camagru ?">
+        <input class="c-button-input button-light-blue" type="submit" name="submit" value="Ok">
     </form>
 </div>
