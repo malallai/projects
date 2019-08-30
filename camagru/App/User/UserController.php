@@ -43,7 +43,9 @@ class UserController extends Controller {
     public function isLogged() {
         Session::startSession();
         if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-            return true;
+            $user = unserialize($_SESSION['user']);
+            if ($this->getSql()->getUserById($user['id']))
+                return true;
         }
         return false;
     }
