@@ -38,17 +38,6 @@ class Page {
         require "Public/views/" . $this->_template . '.php';
     }
 
-    public function simpleRender() {
-        $content = null;
-        Session::startSession();
-        $token = bin2hex(random_bytes(50));
-        $_SESSION['token'] = $token;
-        if (Snackbar::hasSnack()) {
-            $content .= Snackbar::renderSnacks();
-        }
-        require "Public/views/" . $this->_template . '.php';
-    }
-
     public function quickRender($params) {
         Session::startSession();
         ob_start();
