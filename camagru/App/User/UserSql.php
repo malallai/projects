@@ -147,7 +147,7 @@ class UserSql extends Sql {
         }
     }
 
-    public function getUserById($id) {
+    public static function getUserById($id) {
         try {
             $request = self::run("SELECT * FROM users WHERE id = ?", array($id));
             return $request;
