@@ -104,8 +104,8 @@ body .overlay {
 .right .infos {
     margin: 0 auto 2rem auto;
     position: relative;
-    -webkit-animation: start_anim 1.5s;
-    animation: start_anim 1.5s;
+    -webkit-animation: start_anim 1s;
+    animation: start_anim 1s;
 }
 
 .right .infos .title {
