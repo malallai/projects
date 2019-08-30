@@ -3,6 +3,7 @@
 namespace Pages;
 use App\General\GeneralController;
 use Core\Page;
+use Core\Security;
 
 class DevPage extends Page {
 
@@ -26,7 +27,8 @@ class DevPage extends Page {
 
     public function debug() {
 //	    header('Content-type: text/plain');
-        echo "<script>alert(\"test\")</script>";
+        $alert = "<script>alert(\"test\")</script>";
+        echo Security::convertHtmlEntities($alert);
     }
 
     public function mail() {
