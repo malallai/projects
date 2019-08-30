@@ -14,6 +14,10 @@ body .overlay {
     z-index: -1;
 }
 
+.container {
+    overflow: hidden;
+}
+
 .main-content {
     height: 100%;
     display: flex;
@@ -99,6 +103,7 @@ body .overlay {
 
 .right .infos {
     margin: 0 auto 2rem auto;
+    position: relative;
 }
 
 .right .infos .title {
@@ -121,6 +126,16 @@ body .overlay {
 
 .right .c-button {
     position: relative;
+}
+
+@-webkit-keyframes start_anim {
+    from {left:150%;opacity:0;}
+    to {left:0;opacity:1;}
+}
+
+@keyframes start_anim {
+    from {left:150%;opacity:0;}
+    to {left:0;opacity:1;}
 }
 
 @media only screen and (max-width: 850px) {
