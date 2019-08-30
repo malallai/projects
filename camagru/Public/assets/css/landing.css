@@ -137,7 +137,7 @@ body .overlay {
 }
 
 @keyframes start_anim {
-    0% {left:150%;}
+    0% {left:150%;opacity:0}
     50% {opacity: 0}
     100% {left:0;opacity:1;}
 }
