@@ -30,4 +30,9 @@ class SetupPage extends Page {
         $this->render($params);
     }
 
+    public function debug() {
+        header("Content-Type: text/plain");
+        var_dump($_SERVER);
+    }
+
 }

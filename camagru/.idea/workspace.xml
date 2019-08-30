@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Pages/SetupPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/SetupPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/landing/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/landing/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/Setup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/Setup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -140,8 +141,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="556">
+              <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pages/SetupPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+              <folding>
+                <element signature="e#24#38#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -234,14 +247,12 @@
         <option value="$PROJECT_DIR$/Core/Sql.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralController.php" />
         <option value="$PROJECT_DIR$/App/Setup/SetupController.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Public/assets/js/camagru.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/snackbar.js" />
         <option value="$PROJECT_DIR$/Public/views/landing/Home.php" />
         <option value="$PROJECT_DIR$/Pages/GeneralPage.php" />
         <option value="$PROJECT_DIR$/Core/Page.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/landing.css" />
-        <option value="$PROJECT_DIR$/Pages/SetupPage.php" />
         <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/App/Setup/SetupSql.php" />
@@ -258,6 +269,8 @@
         <option value="$PROJECT_DIR$/Public/views/templates/general.php" />
         <option value="$PROJECT_DIR$/Public/views/templates/landing.php" />
         <option value="$PROJECT_DIR$/config/Setup.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Pages/SetupPage.php" />
       </list>
     </option>
   </component>
@@ -469,12 +482,12 @@
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
-      <workItem from="1567159580453" duration="16070000" />
+      <workItem from="1567159580453" duration="16151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347395000" />
+    <option name="totallyTimeSpent" value="347476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,7 +502,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.18389262" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.18389262" />
       <window_info id="Structure" order="1" sideWeight="0.44744524" side_tool="true" weight="0.22252497" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -767,16 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/SetupPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding>
-            <element signature="e#24#38#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -893,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Setup/SetupSql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -919,8 +915,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/Setup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/SetupPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#38#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
