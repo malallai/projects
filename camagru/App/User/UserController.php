@@ -117,7 +117,7 @@ class UserController extends Controller {
         }
         $confirmKey = Security::newToken(32);
         if ($this->getSql()->register($username, $mail, $password, $first, $last, $confirmKey)) {
-            $link = $_SERVER['HTTP_HOST']."/user/confirm/".$confirmKey;
+            $link = Security::getHost()."/user/confirm/".$confirmKey;
             Mail::newMail($mail, "Confirmation d'inscription",
                 "Merci de t'être inscrit sur Camagru.".
                 "</br>".
@@ -146,7 +146,7 @@ class UserController extends Controller {
         $mail = Security::convertChars($mail);
         $token = Security::newToken(32);
         if ($this->getSql()->sendReset($mail, $token)) {
-            $link = $_SERVER['HTTP_HOST']."/user/reset_password/".$token;
+            $link = Security::getHost()."/user/reset_password/".$token;
             Mail::newMail($mail, "Changement de mot de passe",
                 "Tu as fais une demande pour changer ton mot de passe.".
                 "</br>".
