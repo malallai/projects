@@ -41,17 +41,8 @@ class UserController extends Controller {
         return $this->_page;
     }
 
-    public static function checkSession() {
-        Session::startSession();
-        if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-            $user = unserialize($_SESSION['user']);
-            if (!SetupController::isSetup() || !UserSql::getUserById($user['id']))
-                Session::resetSession();
-        }
-    }
-
     public function isLogged() {
-        self::checkSession();
+        Session::startSession();
         if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             return true;
         }
