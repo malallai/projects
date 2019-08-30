@@ -8,7 +8,7 @@ class SetupPage extends Page {
 
     public function __construct($router, $url) {
         parent::__construct($router, $url);
-        $this->_template = "templates/general";
+        $this->_template = "templates/landing";
         $this->_controller = SetupController::get($this);
     }
 
@@ -24,7 +24,7 @@ class SetupPage extends Page {
                 return;
             }
         }
-        $params = array('content' => 'setup/setup');
+        $params = array('content' => 'landing/setup');
         $this->render($params);
     }
 
