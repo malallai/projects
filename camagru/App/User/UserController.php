@@ -3,6 +3,7 @@
 
 namespace App\User;
 use App\Post\PostController;
+use App\Setup\SetupController;
 use Core\Controller;
 use Core\Mail;
 use Core\Security;
@@ -44,7 +45,7 @@ class UserController extends Controller {
         Session::startSession();
         if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             $user = unserialize($_SESSION['user']);
-            if (!UserSql::getUserById($user['id']))
+            if (!SetupController::isSetup() || !UserSql::getUserById($user['id']))
                 Session::resetSession();
         }
     }
