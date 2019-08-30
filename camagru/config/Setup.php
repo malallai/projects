@@ -1,11 +1,12 @@
 <style>
     .c-button-input {
-        width: 25%;
+        width: 50%;
+        margin: 0 auto;
     }
 </style>
 <div class="infos">
     <h1 class="title">Camagru</h1>
-    <p>Configurer Camagru ?</p>
+    <p>Configurer Camagru ? Cette action aura pour effets d'initialiser une base de donnée vide.</p>
 </div>
 <div class="form">
     <form action="/setup" method="post">
