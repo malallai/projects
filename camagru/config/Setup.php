@@ -1,3 +1,7 @@
+<?php
+if (!$token)
+    \Core\Page::redirect("/setup");
+?>
 <style>
     .c-button-input {
         width: 50%;
