@@ -85,7 +85,7 @@ class UserSql extends Sql {
             }
             $uid = $result['id'];
             Snackbar::sendSnacks("".$uid);
-            self::run("UPDATE users SET confirmed = 1, conf_token = NULL WHERE id = ?", array($uid));
+            self::run("UPDATE users SET confirmed = 1, conf_token = \"\" WHERE id = ?", array($uid));
         } catch (SqlException $e) {
             Snackbar::sendSnack($e->getMessage());
             return false;
