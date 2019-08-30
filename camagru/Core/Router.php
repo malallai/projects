@@ -29,6 +29,7 @@ class Router {
                         Page::redirect("/");
                     }
                 } else {
+                    Snackbar::sendSnacks("La BDD n'a pas été configuré correctement. Merci de contacter un administrateur.");
                     Page::redirect("/");
                 }
             }
