@@ -2,6 +2,7 @@
     .c-button-input {
         width: 50%;
         margin: 0 auto;
+        display: flex;
     }
 </style>
 <div class="infos">
