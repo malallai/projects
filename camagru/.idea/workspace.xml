@@ -122,11 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/Setup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-              <folding>
-                <element signature="e#6#24#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -472,12 +469,12 @@
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
-      <workItem from="1567159580453" duration="15822000" />
+      <workItem from="1567159580453" duration="15930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347147000" />
+    <option name="totallyTimeSpent" value="347255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,11 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/Setup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-          <folding>
-            <element signature="e#6#24#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>

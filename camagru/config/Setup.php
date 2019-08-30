@@ -1,8 +1,6 @@
 <?php
-use Core\Security;
-use Core\Page;
-if (!Security::getToken())
-    Page::redirect("/setup");
+if ($_SERVER['REQUEST_URI'] !== 'setup')
+    header('Location: /setup');
 ?>
 <style>
     .c-button-input {
@@ -17,7 +15,7 @@ if (!Security::getToken())
 </div>
 <div class="form">
     <form action="/setup" method="post">
-        <input type="hidden" name="token" value="<?= Security::getToken() ?>">
+        <input type="hidden" name="token" value="<?= \Core\Security::getToken() ?>">
         <input class="c-button-input button-light-blue" type="submit" name="submit" value="Ok">
     </form>
 </div>
