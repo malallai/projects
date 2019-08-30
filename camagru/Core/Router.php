@@ -15,10 +15,6 @@ class Router {
     }
 
     public function route($url) {
-        if (!SetupController::isSetup())
-            Session::resetSession();
-        else
-            UserController::checkSession();
         foreach ($this->_routes as $key => $value) {
             if (preg_match("#^" . $key . "(\/?)$#", $url) === 1) {
                 if (SetupController::isSetup() || (!SetupController::isSetup() && $value['bypassSetup'])) {
