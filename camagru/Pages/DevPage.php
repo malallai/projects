@@ -25,7 +25,8 @@ class DevPage extends Page {
     }
 
     public function debug() {
-	    header('Content-type: text/plain');
+//	    header('Content-type: text/plain');
+        echo "<script>alert(\"test\")</script>";
     }
 
     public function mail() {
