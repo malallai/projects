@@ -14,7 +14,7 @@
     <title>Camagru</title>
 </head>
 <body>
-    <input hidden class="token" value="<?=\Core\Security::convertHtmlEntities($token)?>">
+    <input hidden class="token" value="<?=$token?>">
     <div class="aside-row hide">
         <div class="aside-bar">
             <div class="head">
