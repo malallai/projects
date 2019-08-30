@@ -4,5 +4,3 @@ libft.a
 .vscode
 piscines/rush/*
 camagru/Public/assets/pictures/posts/*
-camagru/Public/assets/pictures/users/*
-!camagru/Public/assets/pictures/users/0.jpg
