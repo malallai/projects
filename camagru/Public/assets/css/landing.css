@@ -161,6 +161,6 @@ body .overlay {
     }
 
     .container {
-        overflow-x: auto;
+        overflow: auto;
     }
 }
