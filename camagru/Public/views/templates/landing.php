@@ -58,6 +58,7 @@
                     </div>
                 </div>
             </div>
+            <?= $content ?>
         </main>
     </div>
     <script>
