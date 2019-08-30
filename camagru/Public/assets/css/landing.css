@@ -131,9 +131,8 @@ body .overlay {
 }
 
 @-webkit-keyframes start_anim {
-    0% {left:150%;opacity: 0}
-    25% {opacity: 0}
-    100% {left:0;opacity:1;}
+    from {left:105%;opacity: 0}
+    to {left:0;opacity:1;}
 }
 
 @keyframes start_anim {
