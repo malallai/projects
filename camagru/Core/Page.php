@@ -29,12 +29,9 @@ class Page {
         Session::startSession();
         $token = bin2hex(random_bytes(50));
         $_SESSION['token'] = $token;
-        $content = "";
-        if (isset($params['content'])) {
-            ob_start();
-            require "Public/views/" . $params['content'] . '.php';
-            $content = ob_get_clean();
-        }
+        ob_start();
+        require "Public/views/" . $params['content'] . '.php';
+        $content = ob_get_clean();
         if (Snackbar::hasSnack()) {
             $content .= Snackbar::renderSnacks();
         }
