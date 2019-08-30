@@ -17,7 +17,7 @@
         <div id="global-content" class="form-content content content-global active">
             <h2 class="title">Modifier vos informations</h2>
             <form method="POST" action="/user/edit">
-                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="token" value="<?= \Core\Security::getToken() ?>">
                 <input type="hidden" name="type" value="global">
                 <input type="hidden" name="old_username" value="<?=\Core\Security::convertChars($params['user']['username'])?>">
                 <div class="inline-flex">
@@ -40,7 +40,7 @@
         <div id="edit-pwd-content" class="form-content content content-edit-pwd">
             <h2 class="title">Édition du mot de passe</h2>
             <form method="POST" action="/user/edit">
-                <input type="hidden" name="token" value="<?= $token ?>">
+                <input type="hidden" name="token" value="<?= \Core\Security::getToken() ?>">
                 <input type="hidden" name="type" value="password">
                 <input type="hidden" name="username" value="<?=\Core\Security::convertChars($params['user']['username'])?>">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>

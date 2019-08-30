@@ -35,4 +35,12 @@ class Security {
         return htmlspecialchars(htmlentities($value));
     }
 
+    public static function getToken() {
+        Session::startSession();
+        if (isset($_SESSION['token']))
+            return $_SESSION['token'];
+        else
+            return false;
+    }
+
 }

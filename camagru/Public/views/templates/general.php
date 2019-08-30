@@ -15,7 +15,7 @@
     <title>Camagru</title>
 </head>
 <body>
-    <input hidden class="token" value="<?=$token?>">
+    <input hidden class="token" value="<?=\Core\Security::getToken()?>">
     <div class="aside-row hide">
         <div class="aside-bar">
             <div class="head">

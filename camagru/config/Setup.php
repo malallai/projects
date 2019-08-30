@@ -1,6 +1,8 @@
 <?php
-if (empty($token))
-    \Core\Page::redirect("/setup");
+use Core\Security;
+use Core\Page;
+if (!Security::getToken())
+    Page::redirect("/setup");
 ?>
 <style>
     .c-button-input {
@@ -15,7 +17,7 @@ if (empty($token))
 </div>
 <div class="form">
     <form action="/setup" method="post">
-        <input type="hidden" name="token" value="<?= $token ?>">
+        <input type="hidden" name="token" value="<?= \Core\Security::getToken() ?>">
         <input class="c-button-input button-light-blue" type="submit" name="submit" value="Ok">
     </form>
 </div>
