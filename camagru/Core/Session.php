@@ -21,9 +21,10 @@ class Session {
     }
 
     public static function resetSession() {
-        self::startSession();
-        $_SESSION = array();
-        self::destroySession();
+        if (self::isStart()) {
+            $_SESSION = array();
+            self::destroySession();
+        }
     }
 
 }
