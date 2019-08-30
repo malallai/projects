@@ -14,9 +14,6 @@ class PostPage extends Page {
         $this->_controller = PostController::get($this);
     }
 
-    /**
-     * @return PostController
-     */
     public function getController() {
         return $this->_controller;
     }

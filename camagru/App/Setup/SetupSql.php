@@ -81,4 +81,13 @@ class SetupSql extends Sql {
         return true;
     }
 
+    public static function tryConnection() {
+        try {
+            self::initDb(true);
+            return true;
+        } catch (SqlException $e) {
+            return false;
+        }
+    }
+
 }

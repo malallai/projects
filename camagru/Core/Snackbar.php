@@ -1,7 +1,6 @@
 <?php
 
 namespace Core;
-
 class Snackbar {
 
     public static function sendSnack($message) {

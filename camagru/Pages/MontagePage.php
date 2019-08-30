@@ -5,8 +5,6 @@ namespace Pages;
 
 use Core\Page;
 use App\Montage\MontageController;
-use Core\Session;
-
 class MontagePage extends Page  {
 
     public function __construct($router, $url) {
@@ -15,9 +13,6 @@ class MontagePage extends Page  {
         $this->_controller = MontageController::get($this);
     }
 
-    /**
-     * @return MontageController
-     */
     public function getController() {
         return $this->_controller;
     }

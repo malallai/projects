@@ -5,7 +5,6 @@ namespace App\Post;
 use App\User\UserController;
 use Core\Controller;
 use Core\Mail;
-use Core\Page;
 
 class PostController extends Controller {
 
@@ -21,33 +20,20 @@ class PostController extends Controller {
         }
     }
 
-    /**
-     * @var page Page
-     * @return PostController
-     */
     public static function get($page) {
         if (self::$_instance === null)
             return new PostController($page);
         return self::$_instance;
     }
 
-    /**
-     * @return Page
-     */
     public function getPage() {
         return $this->_page;
     }
 
-    /**
-     * @return UserController
-     */
     public function getUserController() {
         return $this->_userController;
     }
 
-    /**
-     * @return PostSql
-     */
     public function getSql() {
         return $this->_sql;
     }

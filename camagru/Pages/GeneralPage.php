@@ -2,8 +2,8 @@
 
 namespace Pages;
 use App\General\GeneralController;
+use App\Setup\SetupController;
 use Core\Page;
-use Core\Snackbar;
 
 class GeneralPage extends Page {
 
@@ -13,15 +13,12 @@ class GeneralPage extends Page {
         $this->_controller = GeneralController::get($this);
     }
 
-    /**
-     * @return GeneralController
-     */
     public function getController() {
         return $this->_controller;
     }
 
     public function index() {
-        $posts = $this->getController()->getPostController()->getPostsCount();
+        $posts = !SetupController::isSetup() ? 0 : $this->getController()->getPostController()->getPostsCount();
         if ($posts === 0) {
             $this->_template = "templates/landing";
             $this->render(array());

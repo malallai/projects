@@ -5,7 +5,6 @@ namespace App\User;
 use App\Post\PostController;
 use Core\Controller;
 use Core\Mail;
-use Core\Page;
 use Core\Security;
 use Core\Session;
 
@@ -14,9 +13,6 @@ class UserController extends Controller {
     protected static $_instance = null;
     private $_postController;
 
-    /**
-     * @return UserSql
-     */
     public function getSql() {
         return $this->_sql;
     }
@@ -30,26 +26,16 @@ class UserController extends Controller {
         }
     }
 
-    /**
-     * @var page Page
-     * @return UserController
-     */
     public static function get($page) {
         if (self::$_instance === null)
             return new UserController($page);
         return self::$_instance;
     }
 
-    /**
-     * @return PostController
-     */
     public function getPostController() {
         return $this->_postController;
     }
 
-    /**
-     * @return Page
-     */
     public function getPage() {
         return $this->_page;
     }
@@ -57,8 +43,7 @@ class UserController extends Controller {
     public function isLogged() {
         Session::startSession();
         if (isset($_SESSION) && isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-            $user = unserialize($_SESSION['user']);
-            if ($user['status'] === UserStatus::connected) return true;
+            return true;
         }
         return false;
     }
@@ -111,7 +96,7 @@ class UserController extends Controller {
         if (!$this->getSql()->checkConfirmation($id)) {
             return array("status" => false, "message" => "Merci de confirmer votres mot compte avant de continuer.");
         }
-        $_SESSION['user'] = serialize(array("id" => $id, "username" => $username, "status" => UserStatus::connected));
+        $_SESSION['user'] = serialize(array("id" => $id, "username" => $username));
         return array("status" => true, "message" => "Authentification réussi.");
     }
 

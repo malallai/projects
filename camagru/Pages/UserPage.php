@@ -1,12 +1,10 @@
 <?php
 
 namespace Pages;
-use App\General\GeneralController;
 use App\User\UserController;
 use Core\Page;
 use Core\Session;
 use Core\Snackbar;
-use App\User\UserStatus;
 
 class UserPage extends Page {
 
@@ -16,9 +14,6 @@ class UserPage extends Page {
         $this->_controller = UserController::get($this);
     }
 
-    /**
-     * @return UserController
-     */
     public function getController() {
         return $this->_controller;
     }

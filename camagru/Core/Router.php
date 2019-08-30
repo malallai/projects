@@ -2,6 +2,9 @@
 
 namespace Core;
 
+use App\Setup\SetupController;
+use Pages\GeneralPage;
+
 class Router {
     private $_routes = [];
 
@@ -10,6 +13,11 @@ class Router {
     }
 
     public function route($url) {
+        if (!SetupController::isSetup()) {
+            $general = new GeneralPage($this, "/");
+            $general->index();
+            return;
+        }
         foreach ($this->_routes as $key => $value) {
             if (preg_match("#^" . $key . "(\/?)$#", $url) === 1) {
                 $exploded = explode("@", $value);
