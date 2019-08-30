@@ -1,6 +1,3 @@
-<?php
-$object = "Dev";
-$mail_content = "Test";?>
 <html lang="en">
 
 <head>

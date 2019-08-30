@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Pages/SetupPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/SetupPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/landing/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/landing/setup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/mail/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/mail/Template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,16 +65,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/SetupPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="99" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+            <state relative-caret-position="255">
+              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding>
                 <element signature="e#24#38#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/Mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -146,7 +160,6 @@
         <option value="$PROJECT_DIR$/Public/assets/js/posts.js" />
         <option value="$PROJECT_DIR$/Public/assets/js/montage.js" />
         <option value="$PROJECT_DIR$/Public/assets/css/home.css" />
-        <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
         <option value="$PROJECT_DIR$/Public/views/user/User.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/form.css" />
         <option value="$PROJECT_DIR$/Public/views/general/Landing.php" />
@@ -188,6 +201,7 @@
         <option value="$PROJECT_DIR$/config/Setup.php" />
         <option value="$PROJECT_DIR$/Public/assets/css/landing.css" />
         <option value="$PROJECT_DIR$/Pages/SetupPage.php" />
+        <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
       </list>
     </option>
   </component>
@@ -273,6 +287,13 @@
               <item name="Public" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camagru" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
@@ -385,12 +406,12 @@
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
-      <workItem from="1567159580453" duration="10127000" />
+      <workItem from="1567159580453" duration="10759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341452000" />
+    <option name="totallyTimeSpent" value="342084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -453,13 +474,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/assets/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/assets/css/form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -604,13 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -828,13 +835,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/SetupPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="99" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+        <state relative-caret-position="255">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#24#38#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/views/mail/Template.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
