@@ -43,6 +43,8 @@ body .overlay {
     display: flex;
     margin: auto;
     position: relative;
+    -webkit-animation: start_2 1s;
+    animation: start_2 1s;
 }
 
 .web {
@@ -104,8 +106,8 @@ body .overlay {
 .right .infos {
     margin: 0 auto 2rem auto;
     position: relative;
-    -webkit-animation: start_anim 1s;
-    animation: start_anim 1s;
+    -webkit-animation: start_infos 1s;
+    animation: start_infos 1s;
 }
 
 .right .infos .title {
@@ -128,16 +130,28 @@ body .overlay {
 
 .right .c-button {
     position: relative;
+    -webkit-animation: start_2 1s;
+    animation: start_2 1s;
 }
 
-@-webkit-keyframes start_anim {
+@-webkit-keyframes start_infos {
     from {left:105%;opacity: 0}
     to {left:0;opacity:1;}
 }
 
-@keyframes start_anim {
+@keyframes start_infos {
     from {left:105%;opacity: 0}
     to {left:0;opacity:1;}
+}
+
+@-webkit-keyframes start_2 {
+    from {bottom:-25%;opacity: 0}
+    to {bottom:0;opacity:1;}
+}
+
+@keyframes start_2 {
+    from {bottom:-25%;opacity: 0}
+    to {bottom:0;opacity:1;}
 }
 
 @media only screen and (max-width: 850px) {
