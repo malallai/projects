@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_URI'] !== 'setup') {
+if ($_SERVER['REQUEST_URI'] !== "setup") {
     header("Location: /setup");
     die();
 }
