@@ -17,6 +17,8 @@ class SetupPage extends Page {
     }
 
     public function setup() {
+        if (SetupController::isSetup())
+            Page::redirect("/", "Camagru est déjà configuré. Vous pouvez en profiter plainement.");
         if ($this->checkToken($_POST)) {
             if ($this->checkPostValues($_POST, "submit")) {
                 if ($this->getController()->setup())
