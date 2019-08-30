@@ -23,6 +23,10 @@ class Security {
         }
     }
 
+    public static function getHost() {
+        return "http://".$_SERVER['HTTP_HOST'];
+    }
+
     public static function convertChars($value) {
         return htmlspecialchars($value);
     }

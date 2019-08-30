@@ -9,7 +9,9 @@
             $likes = $post['likes'];
             $imagePath = $post['image_path'];
             $user = $this->getController()->getUserController()->getUserHomeDetails($post['user_id']);
-            $islike = $this->getController()->isLiked($post['id'], $this->getController()->getUserController()->getSessionId());?>
+            $islike = $this->getController()->isLiked($post['id'], $this->getController()->getUserController()->getSessionId());
+
+            use Core\Security; ?>
             <div class="post" id="post <?= $post['id'] ?>">
                 <div class="author">
                     <div class="user">
@@ -68,7 +70,7 @@
                         <a class="link" href="#" onclick="copyLink()"><i id="<?=$post['id']?>" class="fas fa-share"></i></a>
                     </div>
                     <div id="post-link-<?= $post['id']?>" class="post-link hidden">
-                        <input value="https://<?=$_SERVER['HTTP_HOST']?>/post/<?=$post['id']?>">
+                        <input value="<?=Security::getHost()?>/post/<?=$post['id']?>">
                     </div>
                     <div class="like-counts">
                         <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>

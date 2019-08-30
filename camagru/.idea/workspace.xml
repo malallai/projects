@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Setup/SetupSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setup/SetupSql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Security.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Security.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/views/general/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/general/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/views/landing/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/views/landing/setup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../piscines/php/rush00" beforeDir="false" afterPath="$PROJECT_DIR$/../piscines/php/rush00" afterDir="false" />
     </list>
@@ -70,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/Public/views/general/Post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -99,14 +101,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Setup/SetupSql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="69" column="90" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+            <state relative-caret-position="323">
+              <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding>
                 <element signature="e#29#43#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core/Security.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -124,8 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.c-button a</find>
-      <find>.c-button</find>
       <find>button-blue</find>
       <find>button-gree</find>
       <find>button-</find>
@@ -154,6 +163,8 @@
       <find>UserSt</find>
       <find>config</find>
       <find>camagru.malallai.fr</find>
+      <find>$_SERVER</find>
+      <find>$_SERVER['HTTP_HOST']</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -163,6 +174,7 @@
       <replace>-&gt;getController()</replace>
       <replace>c-button</replace>
       <replace>$token</replace>
+      <replace>\Core\Security::getHost()</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -187,8 +199,6 @@
         <option value="$PROJECT_DIR$/Public/views/user/Edit.php" />
         <option value="$PROJECT_DIR$/Public/views/user/PwdReset.php" />
         <option value="$PROJECT_DIR$/Public/views/aside/Profile.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
-        <option value="$PROJECT_DIR$/Public/views/general/Post.php" />
         <option value="$PROJECT_DIR$/App/Post/PostSql.php" />
         <option value="$PROJECT_DIR$/App/Montage/MontageSql.php" />
         <option value="$PROJECT_DIR$/App/General/GeneralSql.php" />
@@ -196,7 +206,6 @@
         <option value="$PROJECT_DIR$/App/Post/PostController.php" />
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/Core/Mail.php" />
-        <option value="$PROJECT_DIR$/Core/Security.php" />
         <option value="$PROJECT_DIR$/Core/Snackbar.php" />
         <option value="$PROJECT_DIR$/Pages/DevPage.php" />
         <option value="$PROJECT_DIR$/Pages/MontagePage.php" />
@@ -220,8 +229,11 @@
         <option value="$PROJECT_DIR$/Public/views/mail/Template.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/App/User/UserSql.php" />
-        <option value="$PROJECT_DIR$/App/User/UserController.php" />
         <option value="$PROJECT_DIR$/App/Setup/SetupSql.php" />
+        <option value="$PROJECT_DIR$/Core/Security.php" />
+        <option value="$PROJECT_DIR$/App/User/UserController.php" />
+        <option value="$PROJECT_DIR$/Public/views/general/Home.php" />
+        <option value="$PROJECT_DIR$/Public/views/general/Post.php" />
       </list>
     </option>
   </component>
@@ -433,12 +445,12 @@
       <workItem from="1565989389251" duration="864000" />
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
-      <workItem from="1567159580453" duration="13662000" />
+      <workItem from="1567159580453" duration="13922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344987000" />
+    <option name="totallyTimeSpent" value="345247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,9 +463,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.18389262" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5525547" visible="true" weight="0.18389262" />
       <window_info id="Structure" order="1" sideWeight="0.44744524" side_tool="true" weight="0.22252497" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -588,13 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Security.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -854,7 +858,7 @@
     <entry file="file://$PROJECT_DIR$/Public/views/general/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -880,11 +884,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Setup/SetupSql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="69" column="90" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+        <state relative-caret-position="323">
+          <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
           <folding>
             <element signature="e#29#43#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="46" />
         </state>
       </provider>
     </entry>

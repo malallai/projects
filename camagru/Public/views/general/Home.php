@@ -1,3 +1,8 @@
+<?php
+
+use Core\Security;
+
+?>
 <link href="/Public/assets/css/home.css" rel="stylesheet">
 <script src='/Public/assets/js/posts.js'></script>
 <div class="home-row">
@@ -70,7 +75,7 @@
                             <a class="link" href="#" onclick="copyLink()"><i id="<?=$post['id']?>" class="fas fa-share"></i></a>
                         </div>
                         <div id="post-link-<?= $post['id']?>" class="post-link hidden">
-                            <input value="https://<?=$_SERVER['HTTP_HOST']?>/post/<?=$post['id']?>">
+                            <input value="<?=Security::getHost()?>/post/<?=$post['id']?>">
                         </div>
                         <div class="like-counts">
                             <p><?=$likes ?><?=$likes > 1 ? " j'aimes" : " j'aime" ?></p>
