@@ -3,29 +3,34 @@
 namespace Core;
 
 use App\Setup\SetupController;
-use Pages\GeneralPage;
+use ReflectionException;
+use ReflectionClass;
 
 class Router {
     private $_routes = [];
 
-    public function addRoute($url, $params) {
-        $this->_routes[$url] = $params;
+    public function addRoute($url, $params, $bypassSetup = false) {
+        $this->_routes[$url] = array('params' => $params, 'bypassSetup' => $bypassSetup);
     }
 
     public function route($url) {
-        if (!SetupController::isSetup()) {
-            $general = new GeneralPage($this, "/");
-            $general->index();
-            return;
-        }
         foreach ($this->_routes as $key => $value) {
             if (preg_match("#^" . $key . "(\/?)$#", $url) === 1) {
-                $exploded = explode("@", $value);
-                $reflectionClass = new \ReflectionClass($exploded[0]);
-                $controller = $reflectionClass->newInstanceArgs([$this, $url]);
-                $method = $reflectionClass->getMethod($exploded[1]);
-                $method->invoke($controller);
-                return;
+                if (SetupController::isSetup() || (!SetupController::isSetup() && $value['bypassSetup'])) {
+                    $exploded = explode("@", $value['params']);
+                    try {
+                        $reflectionClass = new ReflectionClass($exploded[0]);
+                        $controller = $reflectionClass->newInstanceArgs([$this, $url]);
+                        $method = $reflectionClass->getMethod($exploded[1]);
+                        $method->invoke($controller);
+                        return;
+                    } catch (ReflectionException $e) {
+                        Snackbar::sendSnacks($e->getMessage());
+                        Page::redirect("/");
+                    }
+                } else {
+                    Page::redirect("/");
+                }
             }
         }
         $this->notFound($url);
