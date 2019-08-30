@@ -21,7 +21,7 @@ class GeneralPage extends Page {
         $posts = !SetupController::isSetup() ? 0 : $this->getController()->getPostController()->getPostsCount();
         if ($posts === 0) {
             $this->_template = "templates/landing";
-            $this->render(array());
+            $this->simpleRender();
             return;
         }
         $exploded = explode("/", $this->_url);
