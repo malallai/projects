@@ -122,19 +122,17 @@ function picFilter(parent) {
     img.style.top = pictureFilter.y + '%';
     pictureFilter.img = img;
     img.addEventListener("mousedown", select);
-    img.addEventListener("mouseup", uselect);
+    img.addEventListener("mouseup", unselect);
     document.getElementsByClassName("render")[0].prepend(img);
 }
 
-function select() {
-    event.preventDefault();
+function select(event) {
     pictureFilter.picked = true;
     pictureFilter.clickedX = event.layerX;
     pictureFilter.clickedY = event.layerY;
 }
 
-function uselect() {
-    event.preventDefault();
+function unselect() {
     pictureFilter.picked = false;
 }
 
@@ -182,7 +180,6 @@ function switchCamera() {
 }
 
 function uploadMontage() {
-    event.preventDefault();
     if (!montage.took)
         return;
     let token = document.getElementsByClassName("token")[0];
