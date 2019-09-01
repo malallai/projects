@@ -2,7 +2,7 @@ function postReady() {
     let new_com = document.getElementsByClassName("new-comment");
     for (let item of new_com) {
         item.addEventListener("submit", function (event) {
-            newComment(item);
+            newComment(item, event);
         });
     }
 }
@@ -63,7 +63,7 @@ function deletePost(post) {
     });
 }
 
-function newComment(input) {
+function newComment(input, event) {
     if (event)
         event.preventDefault();
     let url = '/post/comment';
