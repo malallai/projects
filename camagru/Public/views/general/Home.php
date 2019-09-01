@@ -59,9 +59,9 @@ use Core\Security;
                                         <input id="input <?=$post['id']?>" class="comment-content" placeholder="Ajouter un commentaire" onfocusin="focusCommentInput()" onfocusout="outFocusCommentInput()">
                                         <input hidden name="submit" type="submit" value="submit">
                                     </form>
-                                    <a href="#" onclick="newComment()" class="submit">
+                                    <a onclick="newComment(this)" class="submit" id="<?=$post['id']?>">
                                         <div class="submit-content">
-                                            <i id="<?=$post['id']?>" class="fa fa-send"></i>
+                                            <i class="fa fa-send"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -70,9 +70,9 @@ use Core\Security;
                     </div>
                     <div class="infos">
                         <div class="icons">
-                            <a class="link" href="#" onclick="showComments()"><i id="<?= $post['id'] ?>" class="far fa-comment-alt"></i></a>
-                            <a class="link like-button" href="#" onclick="like()"><i id="<?=$post['id']?>" class="<?= $islike ? "fas fa-heart red" : "far fa-heart" ?>"></i></a>
-                            <a class="link" href="#" onclick="copyLink()"><i id="<?=$post['id']?>" class="fas fa-share"></i></a>
+                            <a class="link" onclick="showComments(this)" id="<?= $post['id'] ?>"><i class="far fa-comment-alt"></i></a>
+                            <a class="link like-button" onclick="like(this)" id="<?=$post['id']?>" ><i class="<?= $islike ? "fas fa-heart red" : "far fa-heart" ?>"></i></a>
+                            <a class="link" onclick="copyLink(this)" id="<?= $post['id'] ?>"><i id="<?=$post['id']?>" class="fas fa-share"></i></a>
                         </div>
                         <div id="post-link-<?= $post['id']?>" class="post-link hidden">
                             <input value="<?=Security::getHost()?>/post/<?=$post['id']?>">

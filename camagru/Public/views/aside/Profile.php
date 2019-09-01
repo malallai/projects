@@ -42,7 +42,7 @@
                             </span>
                             <span class="delete-post">
                                 <span>&#160;</span>
-                                <a href="#" onclick="deletePost()"><i id="<?= $post['id'] ?>" class="fas fa-trash"></i></a>
+                                <a onclick="deletePost(this)" id="<?= $post['id'] ?>"><i class="fas fa-trash"></i></a>
                             </span>
                         </div>
                     </div>
