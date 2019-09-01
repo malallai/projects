@@ -15,6 +15,7 @@ class Router {
     }
 
     public function route($url) {
+        error_log("Connection on ".$url, 0);
         foreach ($this->_routes as $key => $value) {
             if (preg_match("#^" . $key . "(\/?)$#", $url) === 1) {
                 if (SetupController::isSetup() || (!SetupController::isSetup() && $value['bypassSetup'])) {
