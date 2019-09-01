@@ -28,6 +28,7 @@ class Page {
     public function render($params) {
         Session::startSession();
         $token = bin2hex(random_bytes(50));
+        error_log($token." connected.", 0);
         $_SESSION['token'] = $token;
         ob_start();
         require "Public/views/" . $params['content'] . '.php';
