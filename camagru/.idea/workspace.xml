@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4365f035-700c-48c1-b52d-93eda1b02fb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,7 +97,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Public/assets/pictures/landing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Public/assets/pictures" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -111,16 +112,16 @@
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\views\landing" />
-      <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\views\aside" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Public/assets/pictures" />
       <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\assets\pictures\landing" />
       <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\assets\pictures" />
       <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\views\templates" />
       <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\assets\pictures\filters" />
-      <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\assets\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\views\landing" />
+      <recent name="C:\Users\Malo\Desktop\projects\camagru\Public\views\aside" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -184,7 +185,7 @@
       <workItem from="1566651845136" duration="2991000" />
       <workItem from="1567079867305" duration="16756000" />
       <workItem from="1567159580453" duration="16185000" />
-      <workItem from="1567348296079" duration="1838000" />
+      <workItem from="1567348296079" duration="2055000" />
     </task>
     <servers />
   </component>
