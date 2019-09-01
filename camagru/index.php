@@ -9,8 +9,8 @@ $url = $_GET['url'];
 
 $router = new Router();
 
+$router->addRoute("Public/assets/pictures/default", "Assets\AssetsController@defaultPic");
 $router->addRoute("Public/assets/pictures/(.*)", "Assets\AssetsController@route");
-$router->addRoute("Public/assets/default", "Assets\AssetsController@defaultPic");
 
 $router->addRoute("", "Pages\GeneralPage@index", true);
 $router->addRoute("index", "Pages\GeneralPage@index", true);
