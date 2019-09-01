@@ -19,8 +19,11 @@ class AssetsController {
     }
 
     public function defaultPic() {
-        if (!file_exists("Public/assets/pictures/default.jpg"))
+        $default = "Public/assets/pictures/default.jpg";
+        if (!file_exists($default))
             die();
+        header('Content-type: image/jpeg');
+        readfile($default);
     }
 
 }
