@@ -28,7 +28,7 @@ function like(post) {
             }
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
-            let child = post.nextElementSibling;
+            let child = post.firstChild;
             if (msg['status'] === "unlike") {
                 child.className = "far fa-heart";
             } else if (msg['status'] === "like") {
