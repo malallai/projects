@@ -21,7 +21,7 @@
             <div class="head">
                 <div class="title">Mon Compte</div>
                 <div class="icon">
-                    <a href="" onclick="overlay()">
+                    <a onclick="overlay()">
                         <i class='fas fa-times'></i>
                     </a>
                 </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="flex-icon user-icon">
                                 <div class="icon">
-                                    <a href="" class="user-aside" onclick="user_aside()">
+                                    <a class="user-aside" onclick="user_aside()">
                                         <i class='fas fa-user'></i>
                                     </a>
                                 </div>

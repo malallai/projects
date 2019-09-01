@@ -7,9 +7,7 @@ function postReady() {
     }
 }
 
-function like() {
-    event.preventDefault();
-    let post = event.srcElement;
+function like(post) {
     let url = '/post/like';
     let token = document.getElementsByClassName("token")[0];
     $.ajax({
@@ -41,9 +39,7 @@ function like() {
     });
 }
 
-function deletePost() {
-    event.preventDefault();
-    let post = event.srcElement;
+function deletePost(post) {
     let url = '/post/delete';
     let token = document.getElementsByClassName("token")[0];
     $.ajax({
@@ -66,9 +62,7 @@ function deletePost() {
     });
 }
 
-function newComment() {
-    event.preventDefault();
-    let input = event.srcElement;
+function newComment(input) {
     let url = '/post/comment';
     let token = document.getElementsByClassName("token")[0];
     let post = document.getElementById("input " + input.id);
@@ -113,27 +107,22 @@ function newComment() {
     });
 }
 
-function copyLink() {
-    event.preventDefault();
-    let input = event.srcElement;
+function copyLink(input) {
     document.getElementById("post-link-" + input.id).classList.remove("hidden");
 }
 
 function focusCommentInput() {
-    event.preventDefault();
     let body = document.getElementsByTagName("body")[0];
     body.setAttribute("focus_comment", "");
 }
 
 function outFocusCommentInput() {
-    event.preventDefault();
     let body = document.getElementsByTagName("body")[0];
     body.removeAttribute("focus_comment");
 }
 
-function showComments() {
-    event.preventDefault();
-    let parent = document.getElementById("post " + event.srcElement.id);
+function showComments(element) {
+    let parent = document.getElementById("post " + element.id);
     if (parent.hasAttribute("show_comments")) {
         parent.removeAttribute("show_comments");
     } else {

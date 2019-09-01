@@ -1,1 +1,0 @@
-<h1>Test <?= $params['details']['id']; ?> </h1>

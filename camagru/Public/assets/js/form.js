@@ -36,5 +36,5 @@ function switchButtons(navItems, formItems, event) {
     }
     let formId = document.getElementById(event.id.split(' ')[1]);
     event.classList.add("active");
-    formId.classList.add("active");
+    if (formId) formId.classList.add("active");
 }

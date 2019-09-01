@@ -24,15 +24,13 @@ function sleep(ms, div) {
 }
 
 function overlay() {
-    event.preventDefault();
-    let body = document.getElementsByTagName("body")[0];
-    body.removeAttribute("has_aside");
+    let body = document.getElementsByTagName("body");
+    if (body) body[0].removeAttribute("has_aside");
 }
 
 function user_aside() {
-    event.preventDefault();
-    let body = document.getElementsByTagName("body")[0];
-    body.setAttribute("has_aside", "");
+    let body = document.getElementsByTagName("body");
+    if (body) body[0].setAttribute("has_aside", "");
 }
 
 function getRandomInt(max) {
