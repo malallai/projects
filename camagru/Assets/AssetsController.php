@@ -19,7 +19,7 @@ class AssetsController {
     }
 
     public function defaultPic() {
-        if (!file_exists("/Public/assets/pictures/default.jpg"))
+        if (!file_exists("Public/assets/pictures/default.jpg"))
             die();
     }
 
