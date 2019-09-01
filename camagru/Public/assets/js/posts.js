@@ -28,10 +28,11 @@ function like(post) {
             }
             let postParent = document.getElementById("post " + post.id);
             let count = postParent.getElementsByClassName("like-counts")[0];
+            let child = post.nextElementSibling;
             if (msg['status'] === "unlike") {
-                post.className = "far fa-heart";
+                child.className = "far fa-heart";
             } else if (msg['status'] === "like") {
-                post.className = "fas fa-heart red";
+                child.className = "fas fa-heart red";
             }
             count.id = msg['likes'];
             count.innerHTML = count.id + (count.id == 0 || count.id == 1 ? " j'aime" : " j'aimes");
