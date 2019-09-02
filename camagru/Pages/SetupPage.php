@@ -3,6 +3,7 @@
 namespace Pages;
 use Core\Page;
 use App\Setup\SetupController;
+use Core\Security;
 
 class SetupPage extends Page {
 
@@ -32,7 +33,7 @@ class SetupPage extends Page {
 
     public function debug() {
         header("Content-Type: text/plain");
-        var_dump($_SERVER);
+        echo Security::newToken(8);
     }
 
 }
