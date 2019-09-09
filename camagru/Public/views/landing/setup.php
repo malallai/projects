@@ -1,1 +1,1 @@
-../../../config/Setup.php
+../../../config/setup.php
