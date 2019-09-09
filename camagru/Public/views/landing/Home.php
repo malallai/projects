@@ -12,3 +12,8 @@
         <a href="/montage"><span>Poster</span></a>
     </div>
 </div>
+<div class="c-button">
+    <div class="button-red button-content">
+        <a href="/user/logout"><span>Déconnexion</span></a>
+    </div>
+</div>
