@@ -182,7 +182,7 @@ function switchCamera() {
 
 function uploadMontage() {
     let token = document.getElementsByClassName("token")[0];
-    let imgB64 = "dhwiadhiowa".toDataURL("image/jpeg");
+    let imgB64 = "ZHdhZHdhZHdhZGF3";
     let data = {
         img: imgB64,
         filter: montage.filterId,
