@@ -53,11 +53,15 @@ class MontageController extends Controller {
         $px = $post['filterX'];
         $py = $post['filterY'];
         $scale = 1;
-        $img = imagecreatefromjpeg($tmp);
+        $img = @imagecreatefromjpeg($tmp);
+        if (!$img)
+            return false;
         if (($diff  = (100 - (100 * $post['offW'] / imagesx($img)))) > 25)
             $scale = ($diff / 25) + 1;
         $img = imagescale($img, $post['offW'] * $scale, $post['offH'] * $scale);
-        $filter = imagecreatefrompng($tmpFilter);
+        $filter = @imagecreatefrompng($tmpFilter);
+        if (!$filter)
+            return false;
         $filter = imagescale($filter, $post['offWF'] * $scale, $post['offHF'] * $scale);
         $x = $px * imagesx($img) / 100;
         $y = $py * imagesy($img) / 100;
@@ -66,7 +70,8 @@ class MontageController extends Controller {
             return false;
         $result = imagepng($img, $output);
         if (!$result)
-            return false;imagedestroy($img);
+            return false;
+        imagedestroy($img);
         imagedestroy($filter);
         unlink($tmp);
         unlink($tmpFilter);
@@ -76,7 +81,9 @@ class MontageController extends Controller {
     public function mergeSimple($post) {
         $filename = Security::newToken(8);
         $tmp = $this->base64_to_img($post['img'], 'Public/assets/pictures/tmp/' . Security::newToken(8) . '.png');
-        $img = imagecreatefromjpeg($tmp);
+        $img = @imagecreatefromjpeg($tmp);
+        if (!$img)
+            return false;
         $output = 'Public/assets/pictures/posts/'.$filename.'.jpeg';
         if ($post['filter'] !== 'void')
             imagefilter($img,  IMG_FILTER_GRAYSCALE);
