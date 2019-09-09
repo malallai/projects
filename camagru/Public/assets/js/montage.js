@@ -179,36 +179,7 @@ function switchCamera() {
     }
 }
 
-
 function uploadMontage() {
-    let token = document.getElementsByClassName("token")[0];
-    let imgB64 = "ZHdhZHdhZHdhZGF3";
-    let data = {
-        img: imgB64,
-        filter: montage.filterId,
-        offW: canvas.offsetWidth,
-        offH: canvas.offsetHeight,
-        token: token.value
-    };
-    $.ajax({
-        url: '/montage/upload',
-        type: 'POST',
-        dataType: 'json',
-        data: data,
-        success: function (msg) {
-            if (msg['status'].includes('error')) {
-                if (msg['status'].includes('log'))
-                    window.location = "/user";
-                else
-                    new_snackbar("Une erreur est survenue. Merci de réessayer. (" + msg['status'] + ")");
-            } else if (msg['status'] === "ok") {
-                window.location = "/";
-            }
-        }
-    });
-}
-
-function uploasdMontage() {
     if (!montage.took)
         return;
     let token = document.getElementsByClassName("token")[0];
