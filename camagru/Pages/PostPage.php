@@ -20,7 +20,7 @@ class PostPage extends Page {
 
     function post() {
         $exploded = explode("/", $this->_url);
-        if (count($exploded) > 1) {
+        if (count($exploded) > 1 && $this->getController()->postExist(intval($exploded[1]))) {
             $this->seePost(intval($exploded[1]));
         } else {
             Page::redirect("/");
