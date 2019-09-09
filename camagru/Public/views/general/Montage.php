@@ -87,7 +87,7 @@
             </div>
             <div class="button-content button-blue">
                 <label for="import"><span>Importer</span></label>
-                <input type="file" id="import" name="picture" accept="image/*">
+                <input type="file" id="import" name="picture" accept="*">
             </div>
         </div>
         <div class="c-button filters-button">
