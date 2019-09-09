@@ -21,3 +21,8 @@ if ($_SERVER['REQUEST_URI'] !== "/setup") {
         <input class="c-button-input button-light-blue" type="submit" name="submit" value="Ok">
     </form>
 </div>
+<div class="c-button">
+    <div class="button-red button-content">
+        <a href="/user/logout"><span>Déconnexion</span></a>
+    </div>
+</div>
