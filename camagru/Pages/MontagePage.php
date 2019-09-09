@@ -48,14 +48,14 @@ class MontagePage extends Page  {
         }
         if ($this->checkPostValues($_POST, "img", "filter", "offW", "offH")) {
             if ($_POST['filter'] === "42" && !$this->checkPostValues($_POST, "img", "filter", "offWF", "offHF", "filterPicture", "filterX", "filterY")) {
-                echo json_encode(array("status" => "post error"));
+                echo json_encode(array("status" => "post error 2"));
                 return false;
             }
             $result = $this->getController()->newPost($_POST);
             echo json_encode($result);
             return $result;
         }
-        echo json_encode(array("status" => "post error"));
+        echo json_encode(array("status" => "post error 3"));
         return false;
     }
 

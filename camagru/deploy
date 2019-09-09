@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh -p 2201 malallai@malallai.fr "rm -rf /var/www/correction.42.malallai.fr/*; sudo rm -rf /var/www/logs/correction.42.malallai.fr/*; mysql -u root -p -e 'DROP DATABASE ttdeploy'"
+ssh -p 2201 malallai@malallai.fr "rm -rf /var/www/correction.42.malallai.fr/*; sudo rm -rf /var/www/logs/correction.42.malallai.fr/*; mysql -u root -p -e 'DROP DATABASE camagru'"
 scp -r -P 2201 ./* malallai@malallai.fr:/var/www/correction.42.malallai.fr/
-ssh -p 2201 malallai@malallai.fr "chmod 775 -R /var/www/correction.42.malallai.fr; sudo service nginx restart"
+ssh -p 2201 malallai@malallai.fr "sudo chown -R malallai:media /var/www/correction.42.malallai.fr/; sudo chmod -R 775 /var/www/correction.42.malallai.fr/; sudo service nginx restart"
 

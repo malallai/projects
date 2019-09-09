@@ -105,6 +105,8 @@ class MontageController extends Controller {
     }
 
     public function newPost($post) {
+        if (!file_exists("Public/assets/pictures/posts"))
+            mkdir("Public/assets/pictures/posts");
         if ($post['filter'] === "42") {
             $output = $this->merge42($post);
         } else {
@@ -114,7 +116,7 @@ class MontageController extends Controller {
             if ($this->getSql()->upload_picture($this->getUserController()->getSessionId(), $output))
                 return array("status" => "ok");
         }
-        return array("status" => "error");
+        return array("status" => "merge error");
     }
 
 }

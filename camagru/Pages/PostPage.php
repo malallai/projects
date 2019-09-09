@@ -40,7 +40,7 @@ class PostPage extends Page {
         if (!$this->checkToken($args))
             return array("status" => "token error");
         if (!$this->checkPostValues($args, "id") || !$this->getController()->postExist($args['id']))
-            return array("status" => "post error");
+            return array("status" => "post error 1");
         return true;
     }
 
