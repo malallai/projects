@@ -1,0 +1,182 @@
+.main-content .row {
+    display: flex;
+    padding: 0 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+    flex-direction: column;
+}
+
+.main-content .row-content {
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 2px;
+}
+
+.main-content .content input, .main-content .content .button, .main-content .content a, .main-content .content p, .main-content .content .title {
+    transition: margin 0.2s ease;
+    transition-delay:  0.1s;
+}
+
+.main-content .nav {
+    display: flex;
+    transition: margin 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.main-content .nav a:nth-child(1) {
+    border-radius: 2px 0 0 0;
+}
+
+.main-content .nav a:nth-child(3) {
+    border-radius: 0 2px 0 0;
+}
+
+.main-content .nav a {
+    text-decoration: none;
+    flex: 1;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.main-content .nav a {
+    background-color: #f5f5f5;
+}
+
+.main-content .nav a.active {
+    background-color: #fff;
+}
+
+.main-content .nav a:not(.active):hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+
+.main-content .nav-content {
+    padding: 0 !important;
+}
+
+.main-content .nav .icon {
+    display: none;
+    font-size: 10px;
+}
+
+.main-content .content {
+    transition: margin 0.2s ease;
+    transition-delay:  0.05s;
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.main-content .content:not(.active) {
+    display: none;
+}
+
+.main-content .content .title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-content .content .infos {
+    color: #999;
+}
+
+.main-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content input:not(.c-button-input) {
+    text-align: center;
+    font-size: inherit;
+    padding: .5rem 0;
+    margin-bottom: .7rem;
+    width: 100%;
+    color: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: .25rem;
+}
+
+.main-content .c-button-input {
+    padding: .5rem 0;
+}
+
+.main-content input:focus {
+    border: 1px solid rgba(0,0,0,.275);
+}
+
+.main-content .inline-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-content .inline-flex input {
+    flex-basis: 49%;
+}
+
+.main-content .select-box {
+    margin: .5rem 0;
+}
+
+.main-content .select-box .green {
+    color: limegreen;
+}
+
+.main-content .select-box .red {
+    color: red;
+}
+
+.main-content .blue:not(.disabled):hover {
+    background-color: rgba(95, 172, 255, 0.25);
+}
+
+.main-content .white:not(.disabled):hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.main-content .black:not(.disabled):hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main-content .green:not(.disabled):hover {
+    background-color: rgba(76, 172, 80, 0.25);
+}
+
+@media only screen and (max-width: 450px) {
+    .main-content .nav .icon {
+        display: block;
+    }
+
+    .main-content .nav .text {
+        display: none;
+    }
+
+    .main-content .inline-flex {
+        flex-direction: column;
+    }
+
+    .main-content .inline-flex * {
+        flex: 1;
+    }
+
+    .main-content input, .main-content a, .main-content p {
+        font-size: 12px;
+    }
+
+    .main-content .title {
+        font-size: 16px;
+    }
+
+    .main-content .row {
+        padding: 0 .25rem;
+    }
+}
+

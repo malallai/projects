@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -n "$1" ] ; then 
+	rsync -rvz -e 'ssh -p 2201' --progress ./* mentor@malallai.fr:/var/www/piscines.42.malallai.fr/corrections/$1
+	echo "File copied, access: https://piscines.42.malallai.fr/corrections/$1"
+else
+	echo "Please provide a folder in which you want to access data."
+fi
