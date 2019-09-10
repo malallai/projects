@@ -1,0 +1,556 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/** Body */
+
+body {
+    display: flex;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', serif;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+}
+
+.overlay {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(33, 47, 62, 0.7);
+    display: block;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/** Aside */
+
+.aside-row {
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 25rem;
+    visibility: hidden;
+}
+
+.aside-row.hide {
+    opacity: 0;
+}
+
+.aside-bar {
+    float: right;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #fff;
+    border-left: 1px solid rgba(0,0,0,.0975);
+    position: absolute;
+    left: 100%;
+}
+
+body[has_aside] .aside-bar {
+    left: 0;
+}
+
+.aside-bar .head {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    -webkit-box-shadow: 0 0.1rem 0.2rem 0 rgba(123, 104, 104, 0.2);
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(123, 104, 104, 0.2);
+}
+
+.aside-bar .aside-content {
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-bar .head .title {
+    text-align: center;
+    margin: auto 0 auto 4rem;
+    flex: 1;
+}
+
+.aside-bar .head .icon {
+    width: 4rem;
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.aside-bar .head .icon a {
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #000;
+    text-align: center;
+}
+
+.aside-bar .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto !important;
+}
+
+.c-button-input {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: inherit;
+    padding: 1rem 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 2px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.c-button {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 1rem 0;
+}
+
+.c-button .button-content {
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+    display: flex;
+    background-color: #fafafa;
+    border: 1px solid rgba(0,0,0,.0975);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+    -o-transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+    transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, width 0.6s ease-out;
+}
+
+.c-button .button-blue.button-content, .c-button-input.button-blue {
+    background-color: #2b3441;
+}
+
+.c-button .button-blue.button-content:hover, .c-button-input.button-blue:hover {
+    background-color: #202020;
+}
+
+.c-button .button-light-blue.button-content, .c-button-input.button-light-blue {
+    background-color: #2f3b4c;
+}
+
+.c-button .button-light-blue.button-content:hover, .c-button-input.button-light-blue:hover {
+    background-color: #373737;
+}
+
+.c-button .button-red.button-content, .c-button-input.button-red {
+    background-color: #e53935;
+}
+
+.c-button .button-red.button-content:hover, .c-button-input.button-red:hover{
+    background-color: #b71c1c;
+}
+
+.c-button .button-green.button-content, .c-button-input.button-green {
+    background-color: #30c849;
+}
+
+.c-button .button-green.button-content:hover, .c-button-input.button-green:hover {
+    background-color: #189937;
+}
+
+.c-button a, .c-button label {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: flex;
+    cursor: pointer;
+    color: white;
+}
+
+.c-button span {
+    margin: auto;
+}
+
+.aside-bar li {
+    list-style-type: none;
+}
+
+body[has_aside] .overlay, body[has_aside] .aside-bar {
+    visibility: visible;
+    opacity: 1;
+}
+
+body[has_aside] .aside-row {
+    display: inline-block;
+}
+
+body[has_aside] .container {
+    overflow-y: hidden;
+}
+
+body[has_aside] .aside-bar {
+    -webkit-animation: show_aside 0.5s;
+    animation: show_aside 0.5s;
+}
+
+body[has_aside] .overlay {
+    -webkit-animation: show_overlay 0.5s;
+    animation: show_overlay 0.5s;
+}
+
+body .aside-bar {
+    -webkit-animation: hide_aside 0.5s;
+    animation: hide_aside 0.5s;
+}
+
+body .overlay {
+    -webkit-animation: hide_overlay 0.5s;
+    animation: hide_overlay 0.5s;
+}
+
+@-webkit-keyframes show_aside {
+    from {left:100%;}
+    to {left:0;}
+}
+
+@keyframes show_aside {
+    from {left:100%;}
+    to {left:0;}
+}
+
+@-webkit-keyframes show_overlay {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes show_overlay {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@-webkit-keyframes hide_overlay {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@keyframes hide_overlay {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@-webkit-keyframes hide_aside {
+    from {left:0;visibility: visible;opacity:1;}
+    to {left:100%;visibility: hidden;opacity:0;}
+}
+
+@keyframes hide_aside {
+    from {left:0;visibility: visible;opacity:1;}
+    to {left:100%;visibility: hidden;opacity:0;}
+}
+
+@media only screen and (max-width: 500px) {
+    .aside-row {
+        width: 100%;
+    }
+}
+
+.aside-content .aside-middle-content {
+    overflow-y: auto;
+    flex: 1;
+}
+
+/** Header */
+
+header {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    padding: 0;
+    margin-bottom: auto;
+}
+
+.fix {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 47px;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-content {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 800px;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-component {
+    display: flex;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.flex-component * {
+    transition: 0.4s ease;
+    transition-delay:  0.1s;
+}
+
+/** Camagru top left*/
+
+.flex-component:nth-child(1) {
+    flex: 1;
+}
+
+.flex-component:nth-child(1) .logo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-component:nth-child(1) a {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+/** Icons top right*/
+
+.flex-component:nth-child(2) {
+    flex: 1;
+}
+
+.flex-component:nth-child(2) .icons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.flex-component:nth-child(2) .flex-icon {
+    box-sizing: border-box;
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+}
+
+.flex-component:nth-child(2) .icon {
+    margin: auto 0;
+    width: 100%;
+    position: relative;
+}
+
+.flex-component:nth-child(2) a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1001px) {
+    .flex-component:nth-child(1) {
+        margin-left: 1rem;
+    }
+
+    .flex-component:nth-child(2) {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .flex-component:nth-child(2) a {
+        font-size: 20px;
+    }
+
+    .fix {
+        height: 35px;
+    }
+}
+
+/** Footer */
+
+footer {
+    margin-top: auto;
+    background-color: #fff;
+    border-top: 1px solid rgba(0,0,0,.0975);
+    display: block;
+    font-size: 15px;
+}
+
+footer .links {
+    margin-left: 1rem;
+}
+
+.copyright {
+    margin-right: 1rem;
+}
+
+/** Aligns */
+
+.align-left {
+    float: left !important;
+    text-align: left;
+}
+
+.align-right {
+    float: right !important;
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.align-tab-left {
+    margin-left: 1rem;
+}
+
+/** Links */
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+/** Snackbar */
+
+.snacks {
+    visibility: hidden;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.snackflex {
+    margin: .25rem auto;
+    position: relative;
+}
+
+.snackbar {
+    min-width: 15rem;
+    text-align: center;
+    color: #fff;
+    background-color: #2b2b2b;
+    margin: 0 auto;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.snackflex.show-anim > .snackbar {
+    -webkit-animation: pop 0.5s;
+    animation: pop 0.5s;
+}
+
+.snackflex.show {
+    visibility: visible;
+    bottom: 30px;
+}
+
+.snackflex.show > .snackbar, .snackflex.hide-anim > .snackbar {
+    padding: 16px;
+}
+
+.snackflex.show-anim {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+.snackflex.hide-anim {
+    visibility: visible;
+    -webkit-animation: fadeout 0.5s;
+    animation: fadeout 0.5s;
+}
+
+@-webkit-keyframes pop {
+    from {padding:0;}
+    to {padding:16px;}
+}
+
+@keyframes pop {
+    from {padding:0;}
+    to {padding:16px;}
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+

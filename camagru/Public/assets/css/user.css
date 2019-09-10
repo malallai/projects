@@ -1,0 +1,167 @@
+.aside-content .icons {
+    font-size: 15px;
+}
+
+.aside-content .inner {
+    margin: 2rem 0;
+}
+
+.aside-content .user-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aside-content .user-infos-row {
+    display: flex;
+    flex-direction: row;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+    margin-bottom: 2rem;
+}
+
+.aside-content .infos {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+    width: 100%;
+}
+
+.aside-content .infos .u-infos {
+    margin: 2rem 0;
+    transition: margin 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.aside-content .u-infos-global {
+    margin: .5rem 0;
+}
+
+.aside-content .u-infos-fullname {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.aside-content .u-infos-global .posts .count {
+    font-weight: bold;
+}
+
+.aside-content .infos .user-infos-pp {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 3rem;
+    transition: 0.2s ease;
+    transition-delay:  0.05s;
+}
+
+.aside-content .infos .user-infos-pp img {
+    width: 100%;
+}
+
+.aside-content .u-infos-username {
+    margin-right: .5rem;
+}
+
+.aside-content .posts {
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+}
+
+.aside-content .post {
+    flex: auto;
+    width: 10rem;
+    position: relative;
+    margin: .25rem;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 20rem;
+    font-size: 0;
+}
+
+.aside-content .post .picture img {
+    width: 100%;
+    height: 100%;
+    transition: all ease .25s;
+    transform: scale(1.025);
+}
+
+.aside-content .post .details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(43, 43, 43, .6);
+    color: #fff;
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+    font-size: 15px;
+}
+
+.aside-content .details .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.aside-content .details .row .content {
+    margin: auto;
+}
+
+.aside-content .posts .post:hover > .picture img {
+    transform: scale(1.075);
+}
+
+.aside-content .posts .post:hover .details {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.aside-content .inline-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.aside-content .inline-flex * {
+    flex: 1;
+}
+
+@media only screen and (max-width: 450px) {
+    .aside-content .infos .user-infos-pp {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    .aside-content .infos .u-infos {
+        margin: 0;
+    }
+
+    .aside-content .user-row {
+        padding: 0;
+    }
+
+    .aside-content .post {
+        width: 15rem;
+        max-width: 30rem;
+        margin: .25rem 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .aside-content .u-infos {
+        display: none;
+    }
+
+    .aside-content .user-infos-pp {
+        margin: 0 auto !important;
+        width: 35vw !important;
+        height: 35vw !important;
+    }
+}
