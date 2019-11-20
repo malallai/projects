@@ -1,26 +1,26 @@
-NAME = fillit
-PROJECT_NAME = Fillit
+ifndef VERBOSE
+MAKEFLAGS += --no-print-directory
+endif
 
-SOURCES_FOLDER = ./
+NAME = marie
+PROJECT_NAME = marie
+
+SOURCES_FOLDER = ./sources/
 INCLUDES_FOLDER = ./
-OBJECTS_FOLDER = ./
+OBJECTS_FOLDER = ./objects/
 
 LIBS = libft
 
 SOURCES = \
-	fillit.c \
-	map.c \
-	solver.c \
-	tetrimino.c \
-	utils.c \
-	maths.c \
-	params.c \
-
-MAIN = main.c
+	main.c \
 
 OBJECTS = $(SOURCES:.c=.o)
+OBJECTS := $(subst /,__,$(OBJECTS))
+OBJECTS := $(addprefix $(OBJECTS_FOLDER),$(OBJECTS))
+SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 
 FSANITIZE = -fsanitize=address
+#FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
 FLAGS = -Wall -Wextra -Werror
 CC = clang
 
@@ -36,21 +36,23 @@ INFO_COLOR =	\033[38;5;140m
 all: $(NAME)
 
 $(LIBS):
-	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
 	@printf "\n$(NO_COLOR)-------- $(INFO_COLOR)Libft $(NO_COLOR)--------\n"
 	@make -C $(@)
 	@printf "$(NO_COLOR)-----------------------\n\n"
 
-$(NAME): $(OBJECTS) $(LIBS)
+$(NAME): $(LIBS) $(OBJECTS)
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
+	@printf "%-50s \r"
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 
 force: $(OBJECTS)
 	@printf "$(NO_COLOR)All objects for $(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)where successfully created.\n"
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
+	@printf "%-50s \r"
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 
-%.o: %.c
+$(OBJECTS_FOLDER)%.o: $(SOURCES_FOLDER)%.c
+	@mkdir -p $(OBJECTS_FOLDER)
 	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -c $< -o $@
 	@printf "$(NO_COLOR)Creating $(INFO_COLOR)%-30s $(OK_COLOR)✓$(NO_COLOR)\r" "$@"
 
@@ -62,6 +64,7 @@ clean:
 fclean: clean
 	@make -C $(LIBS) fclean
 	@rm -f $(NAME)
+	@rm -rf $(OBJECTS_FOLDER)
 	@printf "$(INFO_COLOR)$(PROJECT_NAME) $(NO_COLOR)Removed $(INFO_COLOR)$(NAME)$(NO_COLOR).\n"
 
 doclean: all clean
