@@ -22,6 +22,7 @@ SOURCES := $(addprefix $(SOURCES_FOLDER),$(SOURCES))
 FSANITIZE = -fsanitize=address
 #FLAGS = -Wall -Wextra -Werror $(FSANITIZE)
 FLAGS = -Wall -Wextra -Werror
+MLX = -lXext -lX11 -lmlx
 CC = clang
 
 NO_COLOR =		\033[38;5;15m
@@ -41,7 +42,7 @@ $(LIBS):
 	@printf "$(NO_COLOR)-----------------------\n\n"
 
 $(NAME): $(LIBS) $(OBJECTS)
-	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft
+	@$(CC) $(FLAGS) -I$(INCLUDES_FOLDER) -o $(NAME) $(OBJECTS) -L libft/ -lft $(MLX)
 	@printf "%-50s \r"
 	@printf "$(INFO_COLOR)$(NAME) $(NO_COLOR)successfully compiled. $(OK_COLOR)✓$(NO_COLOR)\n"
 

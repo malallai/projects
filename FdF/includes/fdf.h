@@ -6,13 +6,14 @@
 /*   By: malallai <malallai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 13:28:31 by malallai          #+#    #+#             */
-/*   Updated: 2019/04/16 13:38:20 by malallai         ###   ########.fr       */
+/*   Updated: 2019/11/20 15:23:54 by malallai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 # include <mlx.h>
+# include "../libft/libft.h"
 
 # define DEBUG printf
 #endif

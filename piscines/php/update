@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd /Users/malallai/42/projects && /Users/malallai/gpush
-expect -c 'spawn ssh -p 2201 updater@malallai.fr "sudo -u mentor /home/mentor/update_42"; expect "assword:"; send "1239282\r"; interact'

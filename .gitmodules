@@ -1,6 +1,0 @@
-[submodule "matcha"]
-	path = matcha
-	url = git@gitlab.com:malallai/matcha.git
-[submodule "hypertube"]
-	path = hypertube
-	url = git@gitlab.com:malallai/hypertube.git
